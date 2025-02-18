@@ -1,4 +1,4 @@
-```markdown
+
 # **Heur0oBeaT**
 
 ## **Decoding Heur0oBeaT: A Symbolic Nexus**
