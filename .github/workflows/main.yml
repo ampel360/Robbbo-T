@@ -1,1 +1,40 @@
+name: CI
 
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate-documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install XML Lint (xmllint)
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
+      # (Optional) Set up Python if a specific version or venv is needed for BREX script
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Validate XML against S1000D Schema
+        run: |
+          # Validate the data module XML against the S1000D Issue 6.0 schema
+          xmllint --noout --schema schemas/S1000D_6.0_Schema.xsd data/ATA71.xml
+      # You can repeat the above xmllint command for other XML modules or use a loop if needed.
+
+      - name: Run BREX Compliance Check
+        run: |
+          # Run a BREX compliance validation (using a custom script or tool).
+          # This script should parse the BREX XML and the target data module, 
+          # and print any rule violations as warnings/errors.
+          python tools/brex_check.py rules/ProjectBREX.xml data/ATA71.xml
+      # The brex_check.py script should exit with non-zero status if critical BREX violations are found.
+      # Ensure the script prints clear messages for any non-conformance.
