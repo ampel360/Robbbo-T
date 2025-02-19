@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.s1000d.org/S1000DIssue6.0"
+           xmlns="http://www.s1000d.org/S1000DIssue6.0"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <!-- Root element for S1000D data modules -->
+  <xs:element name="dmodule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="identAndStatusSection" type="identAndStatusSectionType"/>
+        <xs:element name="content" type="contentType"/>
+      </xs:sequence>
+      <xs:attribute name="schemaVersion" type="xs:string" use="required" fixed="6.0"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Identification and status section -->
+  <xs:complexType name="identAndStatusSectionType">
+    <xs:sequence>
+      <xs:element name="dmAddress" type="dmAddressType"/>
+      <xs:element name="dmCode" type="dmCodeType"/>
+      <xs:element name="issueNumber" type="xs:string"/>
+      <xs:element name="issueDate" type="xs:date"/>
+      <xs:element name="securityClassification" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Data module address -->
+  <xs:complexType name="dmAddressType">
+    <xs:sequence>
+      <xs:element name="modelIdentCode" type="xs:string"/>
+      <xs:element name="systemDiffCode" type="xs:string"/>
+      <xs:element name="systemCode" type="xs:string"/>
+      <xs:element name="subSystemCode" type="xs:string"/>
+      <xs:element name="assyCode" type="xs:string"/>
+      <xs:element name="disassyCode" type="xs:string"/>
+      <xs:element name="disassyCodeVariant" type="xs:string"/>
+      <xs:element name="infoCode" type="xs:string"/>
+      <xs:element name="infoCodeVariant" type="xs:string"/>
+      <xs:element name="itemLocationCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Data module code -->
+  <xs:complexType name="dmCodeType">
+    <xs:sequence>
+      <xs:element name="modelIdentCode" type="xs:string"/>
+      <xs:element name="systemDiffCode" type="xs:string"/>
+      <xs:element name="systemCode" type="xs:string"/>
+      <xs:element name="subSystemCode" type="xs:string"/>
+      <xs:element name="assyCode" type="xs:string"/>
+      <xs:element name="disassyCode" type="xs:string"/>
+      <xs:element name="disassyCodeVariant" type="xs:string"/>
+      <xs:element name="infoCode" type="xs:string"/>
+      <xs:element name="infoCodeVariant" type="xs:string"/>
+      <xs:element name="itemLocationCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Content section -->
+  <xs:complexType name="contentType">
+    <xs:sequence>
+      <xs:element name="description" type="descriptionType"/>
+      <xs:element name="procedures" type="proceduresType"/>
+      <xs:element name="illustrations" type="illustrationsType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Description -->
+  <xs:complexType name="descriptionType">
+    <xs:sequence>
+      <xs:element name="para" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Procedures -->
+  <xs:complexType name="proceduresType">
+    <xs:sequence>
+      <xs:element name="step" type="stepType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Step -->
+  <xs:complexType name="stepType">
+    <xs:sequence>
+      <xs:element name="para" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Illustrations -->
+  <xs:complexType name="illustrationsType">
+    <xs:sequence>
+      <xs:element name="graphic" type="graphicType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Graphic -->
+  <xs:complexType name="graphicType">
+    <xs:sequence>
+      <xs:element name="graphicTitle" type="xs:string"/>
+      <xs:element name="graphicFile" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

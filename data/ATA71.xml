@@ -1,0 +1,56 @@
+<dmodule
+    xmlns="http://www.s1000d.org/S1000DIssue6.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.s1000d.org/S1000DIssue6.0 schemas/S1000D_6.0_Schema.xsd">
+
+  <identAndStatusSection>
+    <dmAddress>
+      <modelIdentCode>ATA</modelIdentCode>
+      <systemDiffCode>71</systemDiffCode>
+      <systemCode>00</systemCode>
+      <subSystemCode>00</subSystemCode>
+      <assyCode>00</assyCode>
+      <disassyCode>00</disassyCode>
+      <disassyCodeVariant>00</disassyCodeVariant>
+      <infoCode>00</infoCode>
+      <infoCodeVariant>00</infoCodeVariant>
+      <itemLocationCode>00</itemLocationCode>
+    </dmAddress>
+    <dmCode>
+      <modelIdentCode>ATA</modelIdentCode>
+      <systemDiffCode>71</systemDiffCode>
+      <systemCode>00</systemCode>
+      <subSystemCode>00</subSystemCode>
+      <assyCode>00</assyCode>
+      <disassyCode>00</disassyCode>
+      <disassyCodeVariant>00</disassyCodeVariant>
+      <infoCode>00</infoCode>
+      <infoCodeVariant>00</infoCodeVariant>
+      <itemLocationCode>00</itemLocationCode>
+    </dmCode>
+    <issueNumber>1</issueNumber>
+    <issueDate>2023-01-01</issueDate>
+    <securityClassification>Unclassified</securityClassification>
+  </identAndStatusSection>
+
+  <content>
+    <description>
+      <para>This is a sample data module for ATA chapter 71.</para>
+    </description>
+    <procedures>
+      <step>
+        <para>Step 1: Do something.</para>
+      </step>
+      <step>
+        <para>Step 2: Do something else.</para>
+      </step>
+    </procedures>
+    <illustrations>
+      <graphic>
+        <graphicTitle>Sample Graphic</graphicTitle>
+        <graphicFile>sample_graphic.png</graphicFile>
+      </graphic>
+    </illustrations>
+  </content>
+
+</dmodule>
