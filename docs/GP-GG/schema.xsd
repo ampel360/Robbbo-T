@@ -129,3 +129,44 @@ The **S1000D_6.0_Schema.xsd** file is the **foundation for validating** any S100
 - **Compliance** (the schema ensures your document meets S1000D’s structural rules).
 
 Simply reference this main schema in your data module’s `xsi:schemaLocation`. Then, run your favorite XML validation tool to confirm that your module’s structure is correct. For advanced project-specific rules, rely on **BREX** modules. If absolutely necessary, you can create a **custom XSD** that **imports** `S1000D_6.0_Schema.xsd`—but typically, **BREX** is the recommended, standards-based approach for additional constraints.
+
+---
+
+## Purpose of XML Schema
+
+XML Schema (XSD) defines the structure and rules for an XML document. It ensures that the XML data adheres to a predefined format, making it easier to validate and process.
+
+---
+
+## Validation Process
+
+1. **Define the Schema**: Create an XSD file that outlines the structure, elements, and attributes of your XML document.
+2. **Reference the Schema**: In your XML document, reference the XSD file using the `xsi:schemaLocation` attribute.
+3. **Validate the XML**: Use an XML parser or editor to validate the XML document against the XSD file.
+
+---
+
+## Example of an XML Document Referencing the Schema
+
+```xml
+<dmodule
+  xmlns="http://www.s1000d.org/S1000DIssue6.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.s1000d.org/S1000DIssue6.0 C:/schemas/S1000D_6.0_Schema.xsd">
+  <identAndStatusSection>
+    ...
+  </identAndStatusSection>
+  <content>
+    ...
+  </content>
+</dmodule>
+```
+
+---
+
+## Tools for Validation
+
+You can use various tools to validate XML documents against XSD files, such as:
+
+- XML editors like Oxygen XML Editor or Altova XMLSpy.
+- Command-line tools like `xmllint` or `xerces`.
