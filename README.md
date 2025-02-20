@@ -1302,7 +1302,8 @@ This section would cover systems and components common to multiple space vehicle
 
 </details>
 
-<details id="part-vi-summary"><b>Part VI: Project Management and Operations (GP-PMO)</b></summary>
+<details>
+   <summary id="part-vi-summary"><b>Part VI: Project Management and Operations (GP-PMO)</b></summary>
 
 [Back to Top](#cosmic-omnidevelopable-aero-foresights-index-coafi---complete-table-of-contents)
 
@@ -1412,7 +1413,8 @@ This section would cover systems and components common to multiple space vehicle
 
 </details>
 
-<details id="part-viii-summary"><b>Part VIII: Appendices</b></summary>
+<details>
+<summary id="part-viii-summary"><b>Part VIII: Appendices</b></summary>
 
 [Back to Top](#cosmic-omnidevelopable-aero-foresights-index-coafi---complete-table-of-contents)
 
@@ -1457,9 +1459,9 @@ This section would cover systems and components common to multiple space vehicle
 
 </details>
 
-<details id="part-ix-summary">
-<summary><b>Part IX: GAIA GALACTIC MINING OPERATIONS (GGMO)</b></summary>
-
+<details>
+   <summary id="part-ix-summary"><b>Part IX: GAIA GALACTIC MINING OPERATIONS (GGMO)</b></summary>
+   
 [Back to Top](#cosmic-omnidevelopable-aero-foresights-index-coafi---complete-table-of-contents)
 
 **Part Name:** Galactic Mining Operations
@@ -1549,7 +1551,7 @@ This section would cover systems and components common to multiple space vehicle
     -   **AEHCS as "Quantum Exciter and Focusing Antenna":** The AEHCS is *hypothesized* to act as a "quantum exciter and focusing antenna." It *theoretically* directs the harvested atmospheric photons, which are *thought to* possess specific quantum properties (e.g., a specific, narrow range of frequencies and polarizations). These photons are *theorized* to trigger a resonant interaction with the quantum vacuum.
     -   **Q-01 as "Quantum Resonant Amplifier Cavity":** The Q-01, and particularly the QEE, is *envisioned* as a resonant cavity for vacuum energy fluctuations. The incoming, specially prepared photons from the AEHCS are *thought to* stimulate or amplify these fluctuations within the QEE.
     -   **Concave Shape of Solar Panels: "Quantum Focusing Antenna":** The concave shape of the AEHCS's solar panels (and potentially the overall geometry of other AEHCS components) is *theorized* to play a role. It is not simply focusing sunlight, but also *hypothetically* "focusing" other forms of atmospheric energy (including the hypothesized coherent photons) onto the Q-01, enhancing the proposed quantum resonance.
-
+</details>
 ---
 
 ### Fin
