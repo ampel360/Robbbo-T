@@ -1,0 +1,131 @@
+Below is the **S1000D_6.0_Schema.xsd** summary—how it fits into the **S1000D Issue 6.0** standards, and how you typically use it to validate your data modules. Keep in mind the **actual file** is part of the official S1000D distribution and can be quite large, referencing multiple sub-schemas. This overview explains its role and usage:
+
+---
+
+## 1. **Purpose of `S1000D_6.0_Schema.xsd`**
+
+1. **Core Schema for Data Modules**  
+   - Defines the **S1000D elements** (e.g., `<dmodule>`, `<dmAddress>`, `<content>`) and attributes (like `dmType`, `issueNumber`).
+   - Ensures data modules follow the **structural rules** and sequence that Issue 6.0 prescribes.
+
+2. **Imports Sub-Schemas**  
+   - Typically references or imports other XSDs:
+     - `descript.xsd` → Descriptive content (e.g., `<description>`, `<para>`, `<illustration>`).
+     - `proced.xsd` → Procedural data modules.
+     - `brex.xsd` → BREX modules for project-specific business rules.
+     - `dc.xsd` → Data Codes for identification fields (like `<modelIdentCode>`, `<systemDiffCode>`, etc.).
+
+3. **Validation Foundation**  
+   - It’s the **main entry point** for validating an S1000D data module. When you specify `xmlns="http://www.s1000d.org/S1000DIssue6.0"` and `xsi:schemaLocation="http://www.s1000d.org/S1000DIssue6.0 S1000D_6.0_Schema.xsd"`, the editor or parser looks up this file (and all it imports) to verify your XML structure.
+
+---
+
+## 2. **Key Elements Defined by the Schema**
+
+1. **`<dmodule>`**  
+   - The root element for any S1000D data module.
+2. **`<identAndStatusSection>`**, **`<dmAddress>`**, **`<dmCode>`**  
+   - Structural metadata: identifies the data module code, issue numbers, revision, classification, etc.
+3. **`<content>`**  
+   - Encompasses the main body of the module: **descriptions, tables, procedures, etc.**
+4. **`<techCreditSection>`** or **`<applicCrossRef>`**  
+   - Additional sections for references, author credits, or cross-references to other modules.
+
+---
+
+## 3. **Typical Usage in Your XML (`ATA71.xml`)**
+
+Inside your data module, you’d have something like:
+
+```xml
+<dmodule
+    xmlns="http://www.s1000d.org/S1000DIssue6.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.s1000d.org/S1000DIssue6.0 S1000D_6.0_Schema.xsd">
+
+  <identAndStatusSection>
+    ...
+  </identAndStatusSection>
+
+  <content>
+    ...
+  </content>
+
+</dmodule>
+```
+
+When validating, the parser sees `schemaLocation="... S1000D_6.0_Schema.xsd"`. It attempts to load that file (and whatever it imports) to confirm your data module is structured correctly.
+
+---
+
+## 4. **Validation Steps**
+
+1. **Obtain the Official S1000D Issue 6.0 Schema Package**  
+   - Usually distributed by the S1000D Council or your vendor.  
+   - It will contain `S1000D_6.0_Schema.xsd` plus sub-schemas: `descript.xsd`, `proced.xsd`, `common.xsd`, etc.
+
+2. **Place Them in a Known Directory**  
+   - Keep all `.xsd` files together or replicate the recommended folder hierarchy so that imports are resolved properly.
+
+3. **Reference in Your Data Module**  
+   - As shown above, set the namespace (`xmlns`) to `http://www.s1000d.org/S1000DIssue6.0` and `xsi:schemaLocation` to your local path, e.g. `"http://www.s1000d.org/S1000DIssue6.0 file:///C:/schemas/s1000d/S1000D_6.0_Schema.xsd"`.
+
+4. **Validate**  
+   - Use an XML editor (e.g., Oxygen XML Editor, Altova XMLSpy) or command-line tool (`xmllint`, `xerces`) to validate:
+     ```bash
+     xmllint --noout --schema S1000D_6.0_Schema.xsd ATA71.xml
+     ```
+   - If the data module is valid, no errors are reported. If errors appear, correct them in the data module.
+
+---
+
+## 5. **What If You Need Customization?**
+
+- **BREX Module**  
+  - The recommended approach for **project-specific constraints** is a Business Rules EXchange file (`.brex`). This **does not** replace the official schema but **extends** or **constrains** it with rules that your data modules must follow (e.g., mandatory items, enumerations).
+- **Custom XSD**  
+  - If you really need to redefine or extend certain elements beyond the standard, you can **import** `S1000D_6.0_Schema.xsd` into your own `ATA71.xsd`. But be aware that S1000D licensing typically discourages direct modifications of the core XSD.  
+  - Usually, the BREX approach is more flexible and standard-compliant than rewriting or extending the official schema.
+
+---
+
+## 6. **Next Steps for S1000D 6.0 Compliance**
+
+1. **Confirm your data modules** (like `ATA71.xml`) **reference the official namespace**:  
+   ```xml
+   xmlns="http://www.s1000d.org/S1000DIssue6.0"
+   ```
+2. **Validate** each module with `S1000D_6.0_Schema.xsd`.
+3. **Check** if you have any local custom constraints (like enumerations or mandatory fields). If so, prefer a **BREX** file.
+4. **Import** or link the relevant sub-schemas if you have descriptive or procedural content (like `<procedSteps>` in `proced.xsd`).
+
+---
+
+### Example `S1000D_6.0_Schema.xsd` Usage in a Data Module:
+
+```xml
+<dmodule
+  xmlns="http://www.s1000d.org/S1000DIssue6.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.s1000d.org/S1000DIssue6.0 C:/schemas/S1000D_6.0_Schema.xsd">
+  <identAndStatusSection>
+    ...
+  </identAndStatusSection>
+  <content>
+    ...
+  </content>
+</dmodule>
+```
+
+---
+
+## Conclusion
+
+The **S1000D_6.0_Schema.xsd** file is the **foundation for validating** any S1000D Issue 6.0 data module. It provides a comprehensive structure for:
+
+- **Metadata** (identification, security classifications, status).
+- **Content** (descriptive, procedural, illustrated).
+- **References** (cross-references, external graphics).
+- **Compliance** (the schema ensures your document meets S1000D’s structural rules).
+
+Simply reference this main schema in your data module’s `xsi:schemaLocation`. Then, run your favorite XML validation tool to confirm that your module’s structure is correct. For advanced project-specific rules, rely on **BREX** modules. If absolutely necessary, you can create a **custom XSD** that **imports** `S1000D_6.0_Schema.xsd`—but typically, **BREX** is the recommended, standards-based approach for additional constraints.

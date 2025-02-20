@@ -1,0 +1,11 @@
+<dmodule
+  xmlns="http://www.s1000d.org/S1000DIssue6.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.s1000d.org/S1000DIssue6.0 C:/schemas/S1000D_6.0_Schema.xsd">
+  <identAndStatusSection>
+    ...
+  </identAndStatusSection>
+  <content>
+    ...
+  </content>
+</dmodule>
