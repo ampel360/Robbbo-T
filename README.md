@@ -1,3 +1,29 @@
+# 🌍 Amedeo Pelliccia – Aerospace, AI, and Digital Engineering
+
+🚀 **Welcome to my open-source projects!**  
+I specialize in AI-driven aerospace solutions, digital twins, and automation. One of my key initiatives is **GENDOC & GEN-Dimensions**, a framework for automated technical documentation and CAD metadata extraction.
+
+## 🔹 Featured Open-Source Project: GENDOC & GEN-Dimensions
+
+📌 **What is it?**  
+GENDOC & GEN-Dimensions automates:
+- 📄 **UML/SysML documentation** generation from models.
+- 📏 **CAD dimensional analysis** for engineering traceability.
+- 🔄 **Real-time documentation updates** in GitHub.
+
+📌 **Why does it matter?**  
+This framework helps **engineers, designers, and developers** maintain up-to-date, structured documentation **without manual effort**.
+
+📌 **🚀 Get Started Now!**  
+🔗 **[GENDOC & GEN-Dimensions Repository](https://github.com/yourusername/gendoc-gen-dimensions)**  
+📖 **[Quick Setup Guide](https://github.com/yourusername/gendoc-gen-dimensions#installation)**  
+
+---
+## 🌐 More Open-Source Projects
+🔸 **[GAIA AIR](https://github.com/yourusername/GAIA-AIR)** – Quantum-driven aerospace intelligence  
+🔸 **[IP SKILLED ATMOSPHERIC AI](https://github.com/yourusername/IP-Skilled-Atmospheric-AI)** – AI-based atmospheric predictions  
+
+🚀 **Stay tuned for more AI-powered automation!**
 # Cosmic Omnidevelopable Aero Foresights Index (COAFI) - Documentación Organizada por Módulos Operacionales - VERSIÓN FINAL - SIMPLIFICADA
 
 **¡Bienvenido a la Documentación del Proyecto GAIA AIR!**
