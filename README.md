@@ -1,5 +1,5 @@
 # Cosmic Structured Order 
-```markdown
+
 # Cosmic Omnidevelopable Aero Foresights Index (COAFI) - Complete Structured Documentation
 
 **Welcome to the GAIA AIR Project Documentation!**
