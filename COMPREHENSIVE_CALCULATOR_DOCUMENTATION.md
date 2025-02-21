@@ -446,10 +446,9 @@ This system maximizes **thrust, range, and efficiency**, while producing **zero 
 🚀 The **HYDROIAGENCY H2-TF-X** will revolutionize commercial aviation by achieving unprecedented **power, efficiency, and sustainability**.
 
 ```mermaid
-
 flowchart TD
-    H2["Liquid H2 Storage\n(-253°C)"] --> |"Cryogenic Feed"| FC["H2 Fuel Cells\n(Electric Generation)"]
-    H2 --> |"Fuel Feed"| RDE["Rotating Detonation\nEngine"]
+    H2["Liquid H₂ Storage\n(-253°C)"] --> |"Cryogenic Feed"| FC["H₂ Fuel Cells\n(Electric Generation)"]
+    H2 --> |"Fuel Feed"| RDE["Rotating Detonation\nEngine (RDE)"]
     
     FC --> |"Electric Power"| SCM["Superconducting\nMotors"]
     SCM --> |"Mechanical Power"| DEF["Distributed Electric\nFans (DEFs)"]
@@ -460,8 +459,8 @@ flowchart TD
     AI --> |"Efficiency Control"| FC
     AI --> |"Power Distribution"| SCM
     
-    MC["Moisture Capture"] --> |"H2O Collection"| RG["H2 Regeneration"]
-    RG --> |"Supplementary H2"| H2
+    MC["Moisture Capture"] --> |"H₂O Collection"| RG["H₂ Regeneration"]
+    RG --> |"Supplementary H₂"| H2
 ```
 
 # DETAILED INDEX OF UNITS, CHAPTERS, SECTIONS, SUBSECTIONS, SYSTEMS AND SUBCOMPONENTS - GAIA AIR & HYDROIAGENCY PROJECT (CoAFI)
