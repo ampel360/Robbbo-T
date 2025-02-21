@@ -17,42 +17,85 @@ GAIA iMadRep es una aplicación avanzada de inteligencia artificial generativa (
 ## **🔹 Arquitectura del Sistema**
 ```mermaid
 flowchart TD
-    subgraph Entrada["🔹 Captura y Análisis de Datos"]
-        Sensores["📡 Sensores Industriales\nIoT & Edge Computing"]
-        CAD["🖥️ Modelado CAD & Simulación"]
-        Historial["📊 Datos de Fallos & Mantenimiento"]
+    %% Leyenda de Colores
+    subgraph Leyenda["🎨 Leyenda"]
+        L1["🔷 Entrada: Captura de Datos"]
+        L2["🔮 IA: Procesamiento Inteligente"]
+        L3["🌱 Simulación: Validación"]
+        L4["⭐ Blockchain: Gobernanza"]
     end
 
-    subgraph IA_Generativa["🔹 Módulo de IA Generativa"]
-        ML["🧠 Aprendizaje Automático\nRedes Generativas Adversarias (GANs)"]
-        RL["⚙️ Optimización por Refuerzo\nDeep Reinforcement Learning"]
-        QC["🔬 Computación Cuántica\nSimulación Molecular"]
+    subgraph Entrada["🔹 Captura Avanzada de Datos"]
+        direction TB
+        Sensores["📡 Sensores Industriales\n- IoT Avanzado\n- Edge Computing\n- Redes Neuronales"]
+        SensorData["📊 Datos de Sensores\n- Vibraciones\n- Temperatura\n- Presión\n- Espectros\n- Frecuencia: Tiempo Real"]
+        Historial["📚 Historial Operativo\n- Fallos Previos\n- Mantenimiento\n- Rendimiento\n- Ciclos de Vida\n- Frecuencia: Batch"]
+        CAD["💻 Modelos CAD\n- Geometría 3D\n- Materiales\n- Restricciones\n- Análisis Topológico"]
     end
 
-    subgraph Replica_Digital["🔹 Digital Twin & Simulación"]
-        Simulación["🔍 Modelado & Simulación Física"]
-        Análisis["📈 Evaluación de Estrés & Resistencia"]
-        Feedback["🔄 Retroalimentación para Optimización"]
+    subgraph IA_Core["🔹 Núcleo IA & Computación"]
+        direction TB
+        GANs["🧠 Redes Generativas\n- StyleGAN/CycleGAN\n- Optimización Topológica\n- Síntesis de Diseños"]
+        DRL["⚙️ Deep Reinforcement\n- PPO/SAC\n- Políticas Adaptativas\n- Optimización Continua"]
+        QComp["⚛️ Computación Cuántica\n- QML/VQE\n- Optimización Molecular\n- Estados Cuánticos"]
+        DTwins["🔄 Digital Twins\n- Simulación Real-Time\n- Predicción de Fallos\n- Optimización Online"]
     end
 
-    subgraph Producción["🔹 Fabricación & Implementación"]
-        AM["🏭 Manufactura Aditiva\nImpresión 3D & Ensamblaje"]
-        QA["✅ Control de Calidad & Certificación"]
-        Blockchain["🔗 Blockchain & Gobernanza"]
+    subgraph Simulación["🔹 Simulación & Validación"]
+        direction TB
+        Physics["🔬 Simulación Física\n- Estrés Mecánico\n- Deformación\n- Fatiga\n- CFD Avanzado"]
+        QSim["⚡ Simulación Cuántica\n- Comportamiento Molecular\n- Estados Energéticos\n- Transiciones de Fase"]
+        Valid["✅ Validación Multi-Nivel\n- Precisión: >95%\n- Normativas ISO/IEC\n- Robustez: σ6\n- Optimización: KPIs"]
     end
 
-    Sensores --> ML
-    CAD --> ML
-    Historial --> RL
-    ML --> QC
-    RL --> Simulación
-    QC --> Análisis
-    Simulación --> Feedback
-    Feedback --> ML
-    Feedback --> RL
-    Análisis --> QA
-    AM --> QA
-    QA --> Blockchain
+    subgraph Blockchain["🔹 Gobernanza & Trazabilidad"]
+        direction TB
+        Smart["📜 Contratos Inteligentes\n- Validación Automática\n- Certificación Digital\n- Auditoría Continua"]
+        Trace["🔗 Trazabilidad Integral\n- Versiones Hash-Chain\n- Cambios Verificados\n- Auditoría Temporal"]
+        Gov["⚖️ Gobernanza Ética\n- ISO 27001/9001\n- Certificación Verde\n- Compliance Global"]
+    end
+
+    %% Conexiones con frecuencia y tipo de datos
+    Sensores -->|"Stream Continuo\n1KHz"| SensorData
+    SensorData -->|"Entrenamiento\nBatch 10min"| GANs
+    Historial -->|"Actualización\nDiaria"| DRL
+    CAD -->|"Modelos Base\nPor Diseño"| DTwins
+
+    %% Conexiones IA Core
+    GANs -->|"Diseños\nOptimizados"| QComp
+    DRL -->|"Políticas\nAdaptativas"| DTwins
+    QComp -->|"Estados\nCuánticos"| QSim
+    DTwins -->|"Simulación\nTiempo Real"| Physics
+
+    %% Validación y Blockchain
+    Physics -->|"Resultados\nFísicos"| Valid
+    QSim -->|"Resultados\nCuánticos"| Valid
+    Valid -->|"Diseños\nValidados"| Smart
+
+    %% Ciclos de Retroalimentación
+    Valid -->|"Mejora\nContinua"| GANs
+    Valid -->|"Optimización\nPolíticas"| DRL
+    Gov -->|"Actualización\nEstándares"| Valid
+
+    %% Trazabilidad
+    Smart -->|"Registro\nInmutable"| Trace
+    Trace -->|"Políticas\nVerificadas"| Gov
+
+    %% Estilos
+    classDef entrada fill:#e6f3ff,stroke:#333,stroke-width:2px
+    classDef ia fill:#f3e5f5,stroke:#333,stroke-width:2px
+    classDef sim fill:#e8f5e9,stroke:#333,stroke-width:2px
+    classDef block fill:#ffd700,stroke:#333,stroke-width:3px
+    classDef legend fill:none,stroke:none
+
+    class Sensores,SensorData,Historial,CAD entrada
+    class GANs,DRL,QComp,DTwins ia
+    class Physics,QSim,Valid sim
+    class Smart,Trace,Gov block
+    class L1,L2,L3,L4 legend
+
+    %% Estilo de conexiones
+    linkStyle default stroke:#666,stroke-width:2px
 ```
 🔹 Aplicaciones Clave
 
