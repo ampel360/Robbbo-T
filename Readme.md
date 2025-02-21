@@ -3,7 +3,61 @@
 ## **🔹 Introducción**  
 GAIA iMadRep es una aplicación avanzada de inteligencia artificial generativa (GenAI) diseñada para la **optimización, replicación y mejora de diseños industriales** en el ámbito de la **ingeniería aeroespacial, manufactura avanzada y sistemas ciberfísicos**. Utiliza modelos de **IA evolutiva, simulación cuántica y aprendizaje adaptativo**, integrando blockchain para trazabilidad y gobernanza ética.
 
----
+```mermaid
+flowchart TD
+    subgraph Current["Sistema Actual"]
+        direction TB
+        P1["Performance\n✅ Empuje 350kN+\n✅ Eficiencia +40%"]
+        S1["Sostenibilidad\n✅ 0g/kN CO₂\n✅ -50% Ruido"]
+        O1["Operaciones\n✅ IA Predictiva\n✅ 99.9% Uptime"]
+        V1["Validación\n✅ Digital Twin\n✅ Blockchain"]
+    end
+
+    subgraph Next["Próxima Evolución"]
+        direction TB
+        P2["Quantum Enhanced\nSimulaciones Avanzadas"]
+        S2["Bio-Inspired\nDiseños Biomiméticos"]
+        O2["AI Autonomy\nOptimización Autónoma"]
+        V2["Advanced Validation\nIA Auto-evolutiva"]
+    end
+
+    subgraph Optimization["Ciclo de Optimización"]
+        direction TB
+        Sim["Simulación\nQuantum + Digital Twin"]
+        Learn["Aprendizaje\nIA + Biomimético"]
+        Valid["Validación\nBlockchain + KPIs"]
+        Adapt["Adaptación\nMejora Continua"]
+    end
+
+    %% Conexiones actuales
+    P1 -->|"Rendimiento"| Sim
+    S1 -->|"Impacto"| Learn
+    O1 -->|"Eficiencia"| Valid
+    V1 -->|"Certificación"| Adapt
+
+    %% Evolución futura
+    Sim -->|"Mejora"| P2
+    Learn -->|"Evolución"| S2
+    Valid -->|"Autonomía"| O2
+    Adapt -->|"IA"| V2
+
+    %% Ciclo de optimización
+    Sim --> Learn --> Valid --> Adapt --> Sim
+
+    %% Retroalimentación
+    P2 -.->|"Enhanced\nPerformance"| P1
+    S2 -.->|"Bio\nOptimization"| S1
+    O2 -.->|"AI\nControl"| O1
+    V2 -.->|"Advanced\nValidation"| V1
+
+    classDef current fill:#e6f3ff,stroke:#333
+    classDef next fill:#f3e5f5,stroke:#333
+    classDef opt fill:#e8f5e9,stroke:#333
+
+    class P1,S1,O1,V1 current
+    class P2,S2,O2,V2 next
+    class Sim,Learn,Valid,Adapt opt
+```
 
 ## **🔹 Objetivos Principales**
 1. **Automatización del Diseño Generativo:** Creación y optimización de **réplicas de diseño industrial** basadas en IA adaptativa.  
