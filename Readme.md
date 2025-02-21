@@ -73,6 +73,15 @@ flowchart TD
     class GAIA,AMPEL nivel3
     class SP,CS nivel4
     class TS,RG,PS nivel5
+,stroke:#333,stroke-width:2px
+    classDef nivel4 fill:#fff3e0,stroke:#333,stroke-width:2px
+    classDef nivel5 fill:#fce4ec,stroke:#333,stroke-width:2px
+
+    class IA,CQ,SA,BC nivel1
+    class HC,ATF nivel2
+    class GAIA,AMPEL nivel3
+    class SP,CS nivel4
+    class TS,RG,PS nivel5
 ```
 
 ---
@@ -132,8 +141,3 @@ Define el impacto esperado de las tecnologías desarrolladas:
 El diagrama muestra un flujo estructurado donde la **base teórica** guía el desarrollo de **proyectos aplicados**, los cuales generan **innovaciones tecnológicas** con un impacto directo en la **visión estratégica de futuro**.
 ```
 
-4. Guarda el archivo.
-
-Esto creará el archivo README.md con el contenido y el diagrama proporcionado.
-
-**Amedeo Pelliccia** es un ingeniero e investigador especializado en áreas como la inteligencia artificial, la computación cuántica y la tecnología aeroespacial. Es conocido por liderar proyectos innovadores, como el ecosistema GAIA, que integra tecnologías avanzadas de IA, blockchain, y aeroespaciales, con un enfoque en sostenibilidad y gobernanza ética. Su trabajo se extiende a la creación de sistemas complejos y la investigación en temas como la optimización de propulsión, la minería galáctica, y la comunicación cuántica en entornos espaciales.
