@@ -17,85 +17,61 @@ GAIA iMadRep es una aplicación avanzada de inteligencia artificial generativa (
 ## **🔹 Arquitectura del Sistema**
 ```mermaid
 flowchart TD
-    %% Leyenda de Colores
-    subgraph Leyenda["🎨 Leyenda"]
-        L1["🔷 Entrada: Captura de Datos"]
-        L2["🔮 IA: Procesamiento Inteligente"]
-        L3["🌱 Simulación: Validación"]
-        L4["⭐ Blockchain: Gobernanza"]
-    end
-
-    subgraph Entrada["🔹 Captura Avanzada de Datos"]
+    subgraph ATA["ATA 00-00-00 GENERAL"]
         direction TB
-        Sensores["📡 Sensores Industriales\n- IoT Avanzado\n- Edge Computing\n- Redes Neuronales"]
-        SensorData["📊 Datos de Sensores\n- Vibraciones\n- Temperatura\n- Presión\n- Espectros\n- Frecuencia: Tiempo Real"]
-        Historial["📚 Historial Operativo\n- Fallos Previos\n- Mantenimiento\n- Rendimiento\n- Ciclos de Vida\n- Frecuencia: Batch"]
-        CAD["💻 Modelos CAD\n- Geometría 3D\n- Materiales\n- Restricciones\n- Análisis Topológico"]
+        ANT["00-00-01\nAntecedentes"]
+        OBJ["00-00-02\nObjetivos del Estudio"]
+        ALC["00-00-03\nAlcance y Delimitaciones"]
+        MET["00-00-04\nMetodología"]
+        RES["00-00-05\nResumen Ejecutivo"]
     end
 
-    subgraph IA_Core["🔹 Núcleo IA & Computación"]
+    subgraph Preparación["1. Análisis Esencial"]
         direction TB
-        GANs["🧠 Redes Generativas\n- StyleGAN/CycleGAN\n- Optimización Topológica\n- Síntesis de Diseños"]
-        DRL["⚙️ Deep Reinforcement\n- PPO/SAC\n- Políticas Adaptativas\n- Optimización Continua"]
-        QComp["⚛️ Computación Cuántica\n- QML/VQE\n- Optimización Molecular\n- Estados Cuánticos"]
-        DTwins["🔄 Digital Twins\n- Simulación Real-Time\n- Predicción de Fallos\n- Optimización Online"]
+        A1["Configuración Inicial\n- Parámetros Base\n- Calibración"]
+        A2["Preparación del Modelo\n- Geometría\n- Propiedades"]
+        A3["Selección de Material\n- Características\n- Comportamiento"]
     end
 
-    subgraph Simulación["🔹 Simulación & Validación"]
+    subgraph Restricciones["2. Definición de Restricciones"]
         direction TB
-        Physics["🔬 Simulación Física\n- Estrés Mecánico\n- Deformación\n- Fatiga\n- CFD Avanzado"]
-        QSim["⚡ Simulación Cuántica\n- Comportamiento Molecular\n- Estados Energéticos\n- Transiciones de Fase"]
-        Valid["✅ Validación Multi-Nivel\n- Precisión: >95%\n- Normativas ISO/IEC\n- Robustez: σ6\n- Optimización: KPIs"]
+        B1["Geometría Fija\n- Puntos de Anclaje\n- Interfaces"]
+        B2["Restricciones Movimiento\n- Grados de Libertad\n- Límites"]
+        B3["Condiciones Contacto\n- Superficies\n- Fricción"]
     end
 
-    subgraph Blockchain["🔹 Gobernanza & Trazabilidad"]
+    subgraph Cargas["3. Cargas Avanzadas"]
         direction TB
-        Smart["📜 Contratos Inteligentes\n- Validación Automática\n- Certificación Digital\n- Auditoría Continua"]
-        Trace["🔗 Trazabilidad Integral\n- Versiones Hash-Chain\n- Cambios Verificados\n- Auditoría Temporal"]
-        Gov["⚖️ Gobernanza Ética\n- ISO 27001/9001\n- Certificación Verde\n- Compliance Global"]
+        C1["Fuerzas Externas\n- Impacto\n- Presión"]
+        C2["Cargas Térmicas\n- Temperatura\n- Flujo Calor"]
+        C3["Cargas Dinámicas\n- Vibración\n- Fatiga"]
     end
 
-    %% Conexiones con frecuencia y tipo de datos
-    Sensores -->|"Stream Continuo\n1KHz"| SensorData
-    SensorData -->|"Entrenamiento\nBatch 10min"| GANs
-    Historial -->|"Actualización\nDiaria"| DRL
-    CAD -->|"Modelos Base\nPor Diseño"| DTwins
+    %% Conexiones principales
+    ANT --> OBJ --> ALC --> MET --> RES
+    RES --> A1
+    
+    A1 --> A2 --> A3
+    A3 --> B1
+    B1 --> B2 --> B3
+    B3 --> C1
+    C1 --> C2 --> C3
 
-    %% Conexiones IA Core
-    GANs -->|"Diseños\nOptimizados"| QComp
-    DRL -->|"Políticas\nAdaptativas"| DTwins
-    QComp -->|"Estados\nCuánticos"| QSim
-    DTwins -->|"Simulación\nTiempo Real"| Physics
-
-    %% Validación y Blockchain
-    Physics -->|"Resultados\nFísicos"| Valid
-    QSim -->|"Resultados\nCuánticos"| Valid
-    Valid -->|"Diseños\nValidados"| Smart
-
-    %% Ciclos de Retroalimentación
-    Valid -->|"Mejora\nContinua"| GANs
-    Valid -->|"Optimización\nPolíticas"| DRL
-    Gov -->|"Actualización\nEstándares"| Valid
-
-    %% Trazabilidad
-    Smart -->|"Registro\nInmutable"| Trace
-    Trace -->|"Políticas\nVerificadas"| Gov
+    %% Conexiones cruzadas
+    A2 -.->|"Validación\nGeométrica"| B1
+    A3 -.->|"Propiedades\nMateriales"| C2
+    B2 -.->|"Límites\nDinámicos"| C3
 
     %% Estilos
-    classDef entrada fill:#e6f3ff,stroke:#333,stroke-width:2px
-    classDef ia fill:#f3e5f5,stroke:#333,stroke-width:2px
-    classDef sim fill:#e8f5e9,stroke:#333,stroke-width:2px
-    classDef block fill:#ffd700,stroke:#333,stroke-width:3px
-    classDef legend fill:none,stroke:none
+    classDef ata fill:#e6f3ff,stroke:#333,stroke-width:2px
+    classDef prep fill:#f3e5f5,stroke:#333,stroke-width:2px
+    classDef rest fill:#e8f5e9,stroke:#333,stroke-width:2px
+    classDef load fill:#fff3e0,stroke:#333,stroke-width:2px
 
-    class Sensores,SensorData,Historial,CAD entrada
-    class GANs,DRL,QComp,DTwins ia
-    class Physics,QSim,Valid sim
-    class Smart,Trace,Gov block
-    class L1,L2,L3,L4 legend
-
-    %% Estilo de conexiones
-    linkStyle default stroke:#666,stroke-width:2px
+    class ANT,OBJ,ALC,MET,RES ata
+    class A1,A2,A3 prep
+    class B1,B2,B3 rest
+    class C1,C2,C3 load
 ```
 🔹 Aplicaciones Clave
 
