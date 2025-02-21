@@ -217,8 +217,63 @@ flowchart TD
     class GAIA,AMPEL nivel3
     class SP,CS nivel4
     class TS,RG,PS nivel5
-```
+```mermaid
+flowchart TD
+    subgraph ATA["ATA 00-00-00 GENERAL"]
+        direction TB
+        ANT["00-00-01\nAntecedentes"]
+        OBJ["00-00-02\nObjetivos del Estudio"]
+        ALC["00-00-03\nAlcance y Delimitaciones"]
+        MET["00-00-04\nMetodología"]
+        RES["00-00-05\nResumen Ejecutivo"]
+    end
 
+    subgraph Preparación["1. Análisis Esencial"]
+        direction TB
+        A1["Configuración Inicial\n- Parámetros Base\n- Calibración"]
+        A2["Preparación del Modelo\n- Geometría\n- Propiedades"]
+        A3["Selección de Material\n- Características\n- Comportamiento"]
+    end
+
+    subgraph Restricciones["2. Definición de Restricciones"]
+        direction TB
+        B1["Geometría Fija\n- Puntos de Anclaje\n- Interfaces"]
+        B2["Restricciones Movimiento\n- Grados de Libertad\n- Límites"]
+        B3["Condiciones Contacto\n- Superficies\n- Fricción"]
+    end
+
+    subgraph Cargas["3. Cargas Avanzadas"]
+        direction TB
+        C1["Fuerzas Externas\n- Impacto\n- Presión"]
+        C2["Cargas Térmicas\n- Temperatura\n- Flujo Calor"]
+        C3["Cargas Dinámicas\n- Vibración\n- Fatiga"]
+    end
+
+    %% Conexiones principales
+    ANT --> OBJ --> ALC --> MET --> RES
+    RES --> A1
+    
+    A1 --> A2 --> A3
+    A3 --> B1
+    B1 --> B2 --> B3
+    B3 --> C1
+    C1 --> C2 --> C3
+
+    %% Conexiones cruzadas
+    A2 -.->|"Validación\nGeométrica"| B1
+    A3 -.->|"Propiedades\nMateriales"| C2
+    B2 -.->|"Límites\nDinámicos"| C3
+
+    %% Estilos
+    classDef ata fill:#e6f3ff,stroke:#333,stroke-width:2px
+    classDef prep fill:#f3e5f5,stroke:#333,stroke-width:2px
+    classDef rest fill:#e8f5e9,stroke:#333,stroke-width:2px
+    classDef load fill:#fff3e0,stroke:#333,stroke-width:2px
+
+    class ANT,OBJ,ALC,MET,RES ata
+    class A1,A2,A3 prep
+    class B1,B2,B3 rest
+    class C1,C2,C3 load
 ---
 
 ### **1️⃣ Base Teórica y Especialización**  
