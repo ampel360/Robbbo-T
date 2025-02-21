@@ -1,0 +1,2 @@
+# sobre el autor
+**Amedeo Pelliccia** es un ingeniero e investigador especializado en áreas como la inteligencia artificial, la computación cuántica y la tecnología aeroespacial. Es conocido por liderar proyectos innovadores, como el ecosistema GAIA, que integra tecnologías avanzadas de IA, blockchain, y aeroespaciales, con un enfoque en sostenibilidad y gobernanza ética. Su trabajo se extiende a la creación de sistemas complejos y la investigación en temas como la optimización de propulsión, la minería galáctica, y la comunicación cuántica en entornos espaciales.
