@@ -73,42 +73,63 @@ flowchart TD
     class B1,B2,B3 rest
     class C1,C2,C3 load
 ```
-🔹 Aplicaciones Clave
+🔹 Aplicaciones 
+```
+TD
+    subgraph Entrada["Captura de Datos"]
+        Sensores["Sensores IoT\nDatos Industriales"]
+        CAD["Modelos CAD\nDiseños Base"]
+        Historia["Datos Históricos\nFallos y Eficiencia"]
+    end
 
-🚀 Aeroespacial & Defensa:
-   •   Optimización de estructuras de aeronaves y naves espaciales.
-   •   Diseño generativo de sistemas de propulsión sostenible.
-   •   Simulación de materiales para entornos extremos.
+    subgraph IA["Núcleo IA Generativa"]
+        GAN["Redes Generativas\nGANs"]
+        DRL["Aprendizaje por\nRefuerzo Profundo"]
+        QC["Computación\nCuántica"]
+        DT["Digital Twins\nSimulación"]
+    end
 
-🏭 Manufactura Avanzada:
-   •   Creación de gemelos digitales para líneas de producción.
-   •   Automatización del diseño de componentes mediante IA generativa.
-   •   Predicción y prevención de fallos en maquinaria industrial.
+    subgraph Optimización["Optimización y Validación"]
+        FEA["Análisis de\nElementos Finitos"]
+        MAT["Selección de\nMateriales"]
+        SIM["Simulación\nFísica"]
+    end
 
-🔬 Nanotecnología & Materiales Inteligentes:
-   •   Modelado molecular con computación cuántica.
-   •   Simulación de materiales autorreparables.
-   •   Optimización de aleaciones avanzadas.
+    subgraph Blockchain["Gobernanza y Trazabilidad"]
+        Smart["Contratos\nInteligentes"]
+        Valid["Validación y\nCertificación"]
+        Gov["Gobernanza\nDescentralizada"]
+    end
 
-🌍 Energía & Sostenibilidad:
-   •   Diseño de turbinas eólicas y paneles solares optimizados.
-   •   Modelado de infraestructuras energéticas con IA generativa.
-   •   Reducción del impacto ambiental en manufactura.
+    subgraph Aplicaciones["Aplicaciones Industriales"]
+        Aero["Aeroespacial"]
+        Manu["Manufactura\nAvanzada"]
+        Nano["Nanotecnología"]
+        Energy["Energía\nSostenible"]
+    end
 
-🔹 Beneficios y Diferenciadores
+    %% Conexiones principales
+    Sensores & CAD & Historia --> GAN
+    GAN --> DRL --> QC --> DT
+    DT --> FEA --> MAT --> SIM
+    SIM --> Smart --> Valid --> Gov
 
-✅ Reducción de Costos y Tiempos de Desarrollo: Generación acelerada de diseños óptimos.
-✅ Mayor Seguridad y Confiabilidad: Evaluación de riesgos basada en datos históricos.
-✅ Eficiencia Energética y Optimización de Materiales: IA para selección inteligente de materiales y procesos.
-✅ Interoperabilidad con Blockchain: Registro seguro de patentes, certificaciones y versiones de diseño.
+    %% Conexiones a aplicaciones
+    SIM --> Aero & Manu
+    MAT --> Nano & Energy
 
-🔹 Conclusión
+    classDef input fill:#e6f3ff,stroke:#333
+    classDef ai fill:#f3e5f5,stroke:#333
+    classDef opt fill:#e8f5e9,stroke:#333
+    classDef block fill:#fff3e0,stroke:#333
+    classDef app fill:#fce4ec,stroke:#333
 
-GAIA iMadRep representa un salto disruptivo en la automatización del diseño industrial, fusionando inteligencia artificial generativa, computación cuántica y manufactura avanzada. Su aplicación en aeroespacial, energía, manufactura y nanotecnología lo convierte en un sistema clave para la próxima revolución industrial.
-
-🚀 “Innovación generativa para una industria más eficiente, segura y sostenible.”
-
-
+    class Sensores,CAD,Historia input
+    class GAN,DRL,QC,DT ai
+    class FEA,MAT,SIM opt
+    class Smart,Valid,Gov block
+    class Aero,Manu,Nano,Energy app
+```
 # sobre el autor
 
 
