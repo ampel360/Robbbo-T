@@ -250,6 +250,7 @@ flowchart TD
     class A1,A2,A3 prep
     class B1,B2,B3 rest
     class C1,C2,C3 load
+```
 ---
 
 ### **1️⃣ Base Teórica y Especialización**  
