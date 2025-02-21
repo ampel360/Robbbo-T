@@ -1,5 +1,11 @@
 # GAIA AIR Governance Structure and Processes
 
+## Table of Contents
+- [Organizational Structure](#organizational-structure)
+- [Decision-Making Processes](#decision-making-processes)
+- [Roles and Responsibilities](#roles-and-responsibilities)
+- [Governance Policies](#governance-policies)
+
 ## Organizational Structure
 The organizational structure of GAIA AIR is designed to ensure effective management and decision-making. The key components include:
 - **Board of Directors**: Provides overall strategic direction and oversight.
