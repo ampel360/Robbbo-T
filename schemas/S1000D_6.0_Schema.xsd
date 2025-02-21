@@ -104,4 +104,24 @@
     </xs:sequence>
   </xs:complexType>
 
+  <!-- S1000D Issue 6.0 Standards and Compliance -->
+  <xs:annotation>
+    <xs:documentation>
+      S1000D Issue 6.0 is a standard for technical publications in the aerospace and defense industries. It defines the structure and content of data modules, ensuring consistency and interoperability across different systems and organizations.
+    </xs:documentation>
+  </xs:annotation>
+
+  <!-- Guide on Validating Data Modules -->
+  <xs:annotation>
+    <xs:documentation>
+      To validate a data module against the S1000D Issue 6.0 schema, use an XML editor or validation tool that supports XML Schema validation. Ensure that the data module references the correct namespace and schema location:
+      <dmodule
+        xmlns="http://www.s1000d.org/S1000DIssue6.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.s1000d.org/S1000DIssue6.0 S1000D_6.0_Schema.xsd">
+        ...
+      </dmodule>
+    </xs:documentation>
+  </xs:annotation>
+
 </xs:schema>

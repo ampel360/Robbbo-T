@@ -1,5 +1,16 @@
 # GAIA AIR Project Charter
 
+## Table of Contents
+- [Introduction](#introduction)
+- [Governance Structures](#governance-structures)
+- [Project Charter](#project-charter)
+- [Vision](#vision)
+- [Mission](#mission)
+- [Values](#values)
+- [History](#history)
+- [Current Status](#current-status)
+- [General Project-Level Documentation](#general-project-level-documentation)
+
 ## Introduction
 The GAIA AIR project is a groundbreaking initiative aimed at revolutionizing the aerospace industry through sustainable, innovative, and inclusive practices. This document serves as the project charter, outlining the governance structures, vision, mission, values, history, current status, and general project-level documentation applicable across all modules and initiatives.
 

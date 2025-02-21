@@ -1,5 +1,13 @@
 # GAIA AIR Communication Plan
 
+## Table of Contents
+- [Introduction](#introduction)
+- [Communication Objectives](#communication-objectives)
+- [Target Audiences](#target-audiences)
+- [Communication Channels](#communication-channels)
+- [Communication Strategies](#communication-strategies)
+- [Conclusion](#conclusion)
+
 ## Introduction
 The GAIA AIR Communication Plan outlines the strategies and methodologies for effective communication within the GAIA AIR project. This document ensures that all stakeholders are well-informed and engaged throughout the project lifecycle.
 
