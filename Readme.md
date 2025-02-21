@@ -75,60 +75,52 @@ flowchart TD
 ```
 🔹 Aplicaciones 
 ```mermaid 
-TD
-    subgraph Entrada["Captura de Datos"]
-        Sensores["Sensores IoT\nDatos Industriales"]
-        CAD["Modelos CAD\nDiseños Base"]
-        Historia["Datos Históricos\nFallos y Eficiencia"]
+flowchart TD
+    subgraph Aero["🚀 Aeroespacial"]
+        A1["Optimización de\nEstructuras"]
+        A2["Propulsión\nSostenible"]
+        A3["Simulación\nEntornos Extremos"]
     end
 
-    subgraph IA["Núcleo IA Generativa"]
-        GAN["Redes Generativas\nGANs"]
-        DRL["Aprendizaje por\nRefuerzo Profundo"]
-        QC["Computación\nCuántica"]
-        DT["Digital Twins\nSimulación"]
+    subgraph Manu["🏭 Manufactura"]
+        M1["Gemelos\nDigitales"]
+        M2["Automatización\nDiseño"]
+        M3["Predicción\nFallos"]
     end
 
-    subgraph Optimización["Optimización y Validación"]
-        FEA["Análisis de\nElementos Finitos"]
-        MAT["Selección de\nMateriales"]
-        SIM["Simulación\nFísica"]
+    subgraph Nano["🔬 Nanotecnología"]
+        N1["Modelado\nMolecular"]
+        N2["Materiales\nAutorreparables"]
+        N3["Aleaciones\nAvanzadas"]
     end
 
-    subgraph Blockchain["Gobernanza y Trazabilidad"]
-        Smart["Contratos\nInteligentes"]
-        Valid["Validación y\nCertificación"]
-        Gov["Gobernanza\nDescentralizada"]
+    subgraph Energy["🌍 Energía"]
+        E1["Turbinas\nEólicas"]
+        E2["Infraestructura\nEnergética"]
+        E3["Reducción\nImpacto"]
     end
 
-    subgraph Aplicaciones["Aplicaciones Industriales"]
-        Aero["Aeroespacial"]
-        Manu["Manufactura\nAvanzada"]
-        Nano["Nanotecnología"]
-        Energy["Energía\nSostenible"]
-    end
+    %% Conexiones entre aplicaciones
+    A1 --> M2
+    A2 --> E2
+    M1 --> N3
+    N1 --> E1
+    
+    %% Beneficios compartidos
+    A3 -.->|"Validación"| N2
+    M3 -.->|"Prevención"| E3
+    N3 -.->|"Optimización"| A1
+    E2 -.->|"Eficiencia"| M1
 
-    %% Conexiones principales
-    Sensores & CAD & Historia --> GAN
-    GAN --> DRL --> QC --> DT
-    DT --> FEA --> MAT --> SIM
-    SIM --> Smart --> Valid --> Gov
+    classDef aero fill:#e6f3ff,stroke:#333
+    classDef manu fill:#f3e5f5,stroke:#333
+    classDef nano fill:#e8f5e9,stroke:#333
+    classDef ener fill:#fff3e0,stroke:#333
 
-    %% Conexiones a aplicaciones
-    SIM --> Aero & Manu
-    MAT --> Nano & Energy
-
-    classDef input fill:#e6f3ff,stroke:#333
-    classDef ai fill:#f3e5f5,stroke:#333
-    classDef opt fill:#e8f5e9,stroke:#333
-    classDef block fill:#fff3e0,stroke:#333
-    classDef app fill:#fce4ec,stroke:#333
-
-    class Sensores,CAD,Historia input
-    class GAN,DRL,QC,DT ai
-    class FEA,MAT,SIM opt
-    class Smart,Valid,Gov block
-    class Aero,Manu,Nano,Energy app
+    class A1,A2,A3 aero
+    class M1,M2,M3 manu
+    class N1,N2,N3 nano
+    class E1,E2,E3 ener
 ```
 ## Aplicaciones Clave de GAIA iMadRep
 
