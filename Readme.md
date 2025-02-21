@@ -125,131 +125,62 @@ Este diagrama estructura la relación entre la **base teórica**, los **marcos c
 
 ```mermaid
 flowchart TD
-    subgraph Nivel1["1️⃣ Base Teórica y Especialización"]
-        direction LR
-        IA["IA Avanzada\nModelos Predictivos y\nOptimización"]
-        CQ["Computación Cuántica\nAlgoritmos y\nSimulación"]
-        SA["Sistemas Aeroespaciales\nPropulsión y\nNavegación"]
-        BC["Blockchain\nGobernanza\nDescentralizada"]
+    subgraph BaseTeórica["1. Base Teórica"]
+        IA["IA Avanzada\nModelos Predictivos"]
+        CQ["Computación Cuántica\nSimulación"]
+        SA["Sistemas Aeroespaciales"]
+        BC["Blockchain"]
     end
 
-    subgraph Nivel2["2️⃣ Marco Teórico Unificado"]
-        direction LR
-        HC["Hyperbolic Cosmology\nModelos Gravitacionales y\nDinámica de Vuelo"]
-        ATF["AMPEL Framework\nPropulsión Cuántica y\nOptimización Energética"]
+    subgraph MarcoTeórico["2. Marco Teórico"]
+        HC["Hyperbolic Cosmology"]
+        ATF["AMPEL Framework"]
     end
 
-    subgraph Nivel3["3️⃣ Proyectos de Aplicación"]
-        direction LR
-        GAIA["Ecosistema GAIA\nGobernanza Ética y\nRedes Distribuidas"]
-        AMPEL["AMPEL360\nPropulsión Avanzada y\nSuperconductores"]
+    subgraph Proyectos["3. Proyectos"]
+        GAIA["Ecosistema GAIA"]
+        AMPEL["AMPEL360"]
     end
 
-    subgraph Nivel4["4️⃣ Innovación Tecnológica"]
-        direction LR
-        SP["Sistemas Propulsión\nHydroIAgency\nMotores Híbridos"]
-        CS["Comunicación Espacial\nRedes Cuánticas\nInterplanetarias"]
+    subgraph Innovación["4. Innovación"]
+        SP["Sistemas Propulsión"]
+        CS["Comunicación Espacial"]
     end
 
-    subgraph Nivel5["5️⃣ Visión Estratégica"]
-        direction LR
-        TS["Tecnologías\nSostenibles"]
-        RG["Redes Globales\nCuánticas"]
-        PS["Propulsión\nSostenible"]
+    subgraph Visión["5. Visión"]
+        TS["Tecnologías Sostenibles"]
+        RG["Redes Globales"]
+        PS["Propulsión Sostenible"]
     end
 
-    %% Conexiones entre niveles
+    %% Conexiones base a marco
     IA & CQ --> HC
     SA & CQ --> ATF
-    BC --> GAIA
-    
+
+    %% Conexiones marco a proyectos
     HC --> GAIA
     ATF --> AMPEL
-    
+
+    %% Conexiones a innovación
     GAIA --> CS
     AMPEL --> SP
-    
-    SP --> PS & TS
-    CS --> RG & TS
 
-    %% Estilos
-    classDef nivel1 fill:#e6f3ff,stroke:#333,stroke-width:2px
-    classDef nivel2 fill:#f3e5f5,stroke:#333,stroke-width:2px
-    classDef nivel3 fill:#e8f5e9,stroke:#333,stroke-width:2px
-    classDef nivel4 fill:#fff3e0,stroke:#333,stroke-width:2px
-    classDef nivel5 fill:#fce4ec,stroke:#333,stroke-width:2px
+    %% Conexiones a visión
+    SP --> PS
+    CS --> RG
+    SP & CS --> TS
 
-    class IA,CQ,SA,BC nivel1
-    class HC,ATF nivel2
-    class GAIA,AMPEL nivel3
-    class SP,CS nivel4
-    class TS,RG,PS nivel5
-,stroke:#333,stroke-width:2px
-    classDef nivel4 fill:#fff3e0,stroke:#333,stroke-width:2px
-    classDef nivel5 fill:#fce4ec,stroke:#333,stroke-width:2px
+    classDef base fill:#e6f3ff,stroke:#333
+    classDef marco fill:#f3e5f5,stroke:#333
+    classDef proy fill:#e8f5e9,stroke:#333
+    classDef inno fill:#fff3e0,stroke:#333
+    classDef vis fill:#fce4ec,stroke:#333
 
-    class IA,CQ,SA,BC nivel1
-    class HC,ATF nivel2
-    class GAIA,AMPEL nivel3
-    class SP,CS nivel4
-    class TS,RG,PS nivel5
-```mermaid
-flowchart TD
-    subgraph ATA["ATA 00-00-00 GENERAL"]
-        direction TB
-        ANT["00-00-01\nAntecedentes"]
-        OBJ["00-00-02\nObjetivos del Estudio"]
-        ALC["00-00-03\nAlcance y Delimitaciones"]
-        MET["00-00-04\nMetodología"]
-        RES["00-00-05\nResumen Ejecutivo"]
-    end
-
-    subgraph Preparación["1. Análisis Esencial"]
-        direction TB
-        A1["Configuración Inicial\n- Parámetros Base\n- Calibración"]
-        A2["Preparación del Modelo\n- Geometría\n- Propiedades"]
-        A3["Selección de Material\n- Características\n- Comportamiento"]
-    end
-
-    subgraph Restricciones["2. Definición de Restricciones"]
-        direction TB
-        B1["Geometría Fija\n- Puntos de Anclaje\n- Interfaces"]
-        B2["Restricciones Movimiento\n- Grados de Libertad\n- Límites"]
-        B3["Condiciones Contacto\n- Superficies\n- Fricción"]
-    end
-
-    subgraph Cargas["3. Cargas Avanzadas"]
-        direction TB
-        C1["Fuerzas Externas\n- Impacto\n- Presión"]
-        C2["Cargas Térmicas\n- Temperatura\n- Flujo Calor"]
-        C3["Cargas Dinámicas\n- Vibración\n- Fatiga"]
-    end
-
-    %% Conexiones principales
-    ANT --> OBJ --> ALC --> MET --> RES
-    RES --> A1
-    
-    A1 --> A2 --> A3
-    A3 --> B1
-    B1 --> B2 --> B3
-    B3 --> C1
-    C1 --> C2 --> C3
-
-    %% Conexiones cruzadas
-    A2 -.->|"Validación\nGeométrica"| B1
-    A3 -.->|"Propiedades\nMateriales"| C2
-    B2 -.->|"Límites\nDinámicos"| C3
-
-    %% Estilos
-    classDef ata fill:#e6f3ff,stroke:#333,stroke-width:2px
-    classDef prep fill:#f3e5f5,stroke:#333,stroke-width:2px
-    classDef rest fill:#e8f5e9,stroke:#333,stroke-width:2px
-    classDef load fill:#fff3e0,stroke:#333,stroke-width:2px
-
-    class ANT,OBJ,ALC,MET,RES ata
-    class A1,A2,A3 prep
-    class B1,B2,B3 rest
-    class C1,C2,C3 load
+    class IA,CQ,SA,BC base
+    class HC,ATF marco
+    class GAIA,AMPEL proy
+    class SP,CS inno
+    class TS,RG,PS vis
 ```
 ---
 
