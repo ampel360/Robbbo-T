@@ -1,100 +1,291 @@
-### Integrated Structural Airframe
+`<ReactProject id="primordial-flow">````typescriptreact file="app/page.tsx"
+...
+```
 
-#### 1. Primary Structure
-- **Fuselage**
-  - Houses the main cabin, cockpit, and cargo areas.
-  - Provides structural support for the Quantum Propulsion System and Classical Aircraft Systems.
-- **Wings**
-  - Support flight control surfaces and house fuel tanks.
-  - Integrate with the Quantum Entanglement Engine for enhanced aerodynamic performance.
-- **Empennage (Tail Section)**
-  - Provides stability and control.
-  - Houses components of the Flight Control System.
+```typescriptreact
+"use client"
 
-#### 2. Secondary Structure
-- **Landing Gear**
-  - Supports the aircraft during takeoff, landing, and ground operations.
-  - Equipped with quantum sensors for real-time monitoring and diagnostics.
-- **Control Surfaces**
-  - Includes ailerons, elevators, and rudders.
-  - Integrated with the Flight Control System for precise maneuvering.
+import { useRef, useMemo, useEffect } from "react"
+import { Canvas, useFrame } from "@react-three/fiber"
+import { OrbitControls } from "@react-three/drei"
+import * as THREE from "three"
 
-#### 3. Internal Structures
-- **Bulkheads**
-  - Provide internal support and divide the fuselage into sections.
-  - Reinforced to accommodate the Quantum Propulsion System components.
-- **Stringers and Frames**
-  - Provide additional support and maintain the shape of the fuselage.
-  - Designed to integrate with both classical and quantum systems.
+interface StructuralQuantumProps {
+  structuralIntegrity?: number
+  quantumFieldStrength?: number
+  thermalLoad?: number
+}
 
-#### 4. Integration Points
-- **Mounting Points**
-  - Securely attach the Quantum Entanglement Engine, Quantum State Modulator, and other systems to the airframe.
-- **Cable and Conduit Routing**
-  - Pathways for electrical wiring, quantum communication channels, and cooling systems.
-- **Access Panels**
-  - Allow for maintenance and inspection of both classical and quantum systems.
+function StructuralQuantumField({
+  structuralIntegrity = 0.8,
+  quantumFieldStrength = 1.0,
+  thermalLoad = 0.5
+}: StructuralQuantumProps) {
+  const meshRef = useRef<THREE.Mesh>(null)
+  const particlesRef = useRef<THREE.Points>(null)
+  const structuralLinesRef = useRef<THREE.LineSegments>(null)
 
-### Functional Integration with Structural Airframe
-- **Load Distribution:**
-  - The structural airframe distributes loads from the Quantum Propulsion System and Classical Aircraft Systems, ensuring balanced and stable flight.
-- **Vibration Dampening:**
-  - Advanced materials and design techniques minimize vibrations, protecting sensitive quantum components.
-- **Thermal Management:**
-  - The airframe incorporates thermal insulation and cooling pathways to maintain optimal temperatures for quantum and classical systems.
-- **Safety and Redundancy:**
-  - Redundant structural elements and fail-safes ensure the integrity of the airframe and the safety of the aircraft.
+  // Generate structural framework
+  const structuralGeometry = useMemo(() => {
+    const points: number[] = []
+    const segments = 12
+    const radius = 1.2
 
-This integrated structural airframe supports and enhances the functionality of both the Quantum Propulsion System and Classical Aircraft Systems, resulting in a robust and advanced aircraft design.
+    // Create structural frame lines
+    for (let i = 0; i < segments; i++) {
+      const theta = (i / segments) * Math.PI * 2
+      const nextTheta = ((i + 1) / segments) * Math.PI * 2
 
----
+      // Vertical supports
+      points.push(
+        Math.cos(theta) * radius, -1, Math.sin(theta) * radius,
+        Math.cos(theta) * radius, 1, Math.sin(theta) * radius
+      )
 
-### Optimization for Market Demand, Climate Advisory ESG, and Effectivity Standards
+      // Cross supports
+      points.push(
+        Math.cos(theta) * radius, -1, Math.sin(theta) * radius,
+        Math.cos(nextTheta) * radius, -1, Math.sin(nextTheta) * radius,
+        Math.cos(theta) * radius, 1, Math.sin(theta) * radius,
+        Math.cos(nextTheta) * radius, 1, Math.sin(nextTheta) * radius
+      )
+    }
 
-#### Market Demand
-- **Quantum Technologies Market Growth:**
-  - The global quantum computing market is projected to grow significantly, driven by advancements in technology and increasing commercial interest.
-  - Key sectors such as finance, pharmaceuticals, and logistics are expected to benefit from quantum computing, and the aviation industry can leverage these advancements for enhanced performance and efficiency.
+    return new Float32Array(points)
+  }, [])
 
-#### Climate Advisory ESG Standards
-- **TCFD Framework:**
-  - The Task Force on Climate-related Financial Disclosures (TCFD) provides a framework for identifying, assessing, and disclosing climate-related financial risks and opportunities.
-- **IFRS Sustainability Disclosure Standards:**
-  - The International Sustainability Standards Board (ISSB) has incorporated TCFD recommendations into its IFRS Sustainability Disclosure Standards (IFRS S1 and IFRS S2), focusing on general sustainability disclosure requirements and climate-related information.
+  // Generate quantum field particles
+  const particles = useMemo(() => {
+    const count = 2000
+    const positions = new Float32Array(count * 3)
+    const colors = new Float32Array(count * 3)
+    const energyLevels = new Float32Array(count)
 
-#### Effectivity Standards
-- **Noise Standards:**
-  - Compliance with ICAO noise standards (Chapters 3, 4, and 14) to minimize noise pollution.
-- **Emissions Standards:**
-  - Adherence to CO2 and other emissions standards to reduce the environmental impact.
-- **Performance Standards:**
-  - Ensuring aircraft systems meet performance criteria for safety and efficiency.
+    for (let i = 0; i < count; i++) {
+      const theta = Math.random() * Math.PI * 2
+      const radius = 0.8 + Math.random() * 0.4
+      const height = (Math.random() - 0.5) * 2
 
-### Optimization Strategy
-1. **Market Alignment:**
-   - Develop and market the integrated aircraft system to sectors with high demand for quantum technologies, such as logistics and pharmaceuticals. Highlight the benefits of enhanced performance and efficiency.
-2. **Sustainability Reporting:**
-   - Implement TCFD and IFRS SDS reporting frameworks to disclose climate-related risks and opportunities. This will enhance transparency and attract environmentally conscious investors.
-3. **Compliance with Standards:**
-   - Ensure all systems comply with EASA and FAA standards for noise, emissions, and performance. Regularly update systems to meet evolving standards and incorporate the latest technologies for noise reduction and emissions control.
-4. **Innovation and Research:**
-   - Invest in research and development to continuously improve quantum propulsion and classical systems. Focus on innovations that enhance sustainability and performance.
+      positions[i * 3] = Math.cos(theta) * radius
+      positions[i * 3 + 1] = height
+      positions[i * 3 + 2] = Math.sin(theta) * radius
 
-By aligning with market demand, adhering to ESG standards, and meeting effectivity standards, the integrated aircraft system can achieve optimal applicability and success in the aviation industry.
+      // Energy level affects color
+      const energy = Math.random()
+      energyLevels[i] = energy
+      colors[i * 3] = 1
+      colors[i * 3 + 1] = energy * 0.5 * quantumFieldStrength
+      colors[i * 3 + 2] = energy * 0.3 * thermalLoad
+    }
 
-If you have any specific areas you'd like to explore further or additional details you need, feel free to ask!
----
+    return { positions, colors, energyLevels }
+  }, [quantumFieldStrength, thermalLoad])
 
-# **1️⃣ Deploying the AI-Powered Web Search Portal**
-> **📌 Goal**: Provide an intuitive, real-time interface for searching S1000D documentation using AI-powered embeddings.
+  useFrame((state) => {
+    if (!meshRef.current || !particlesRef.current || !structuralLinesRef.current) return
 
-## **1.1 Tech Stack**
-✅ **Frontend**: React (Next.js) or Vue.js for a responsive UI.  
-✅ **Backend**: FastAPI (Python) or Node.js (Express) for API services.  
-✅ **Search Engine**: FAISS, Milvus, or Pinecone for **vector search**.  
-✅ **Deployment**: Dockerized for local & cloud deployments (AWS, GCP, Azure, or GAIA AIR private cloud).
+    const time = state.clock.getElapsedTime()
+    const positions = particlesRef.current.geometry.attributes.position.array as Float32Array
+    const colors = particlesRef.current.geometry.attributes.color.array as Float32Array
 
-I'll start by preparing the **API documentation for GAIA AIR integration** and a **deployment guide** for launching the AI-powered search on a GAIA AIR cloud instance. Then, I'll generate a **full prototype demo**.
+    // Update quantum field particles
+    for (let i = 0; i < positions.length; i += 3) {
+      const theta = Math.atan2(positions[i + 2], positions[i])
+      const radius = Math.sqrt(positions[i] ** 2 + positions[i + 2] ** 2)
+      
+      // Quantum field dynamics
+      const fieldEffect = Math.sin(theta * 4 + time) * 0.02 * quantumFieldStrength
+      const thermalEffect = Math.cos(time * 2 + theta) * 0.01 * thermalLoad
+      
+      positions[i] = Math.cos(theta + time * 0.5) * (radius + fieldEffect)
+      positions[i + 2] = Math.sin(theta + time * 0.5) * (radius + fieldEffect)
+      positions[i + 1] += thermalEffect
+      
+      // Structural integrity affects particle behavior
+      if (Math.abs(positions[i + 1]) > structuralIntegrity) {
+        positions[i + 1] *= -0.9 * structuralIntegrity
+      }
+
+      // Update particle colors based on energy state
+      const energyState = (Math.sin(time + theta) + 1) / 2
+      colors[i + 1] = energyState * 0.5 * quantumFieldStrength
+      colors[i + 2] = energyState * 0.3 * thermalLoad
+    }
+
+    particlesRef.current.geometry.attributes.position.needsUpdate = true
+    particlesRef.current.geometry.attributes.color.needsUpdate = true
+
+    // Structural framework response
+    structuralLinesRef.current.scale.x = 1 + Math.sin(time) * 0.02 * (1 - structuralIntegrity)
+    structuralLinesRef.current.scale.z = 1 + Math.cos(time) * 0.02 * (1 - structuralIntegrity)
+  })
+
+  return (
+    <group>
+      {/* Structural framework */}
+      <lineSegments ref={structuralLinesRef}>
+        <bufferGeometry>
+          <bufferAttribute
+            attach="attributes-position"
+            count={structuralGeometry.length / 3}
+            array={structuralGeometry}
+            itemSize={3}
+          />
+        </bufferGeometry>
+        <lineBasicMaterial color="#4a90e2" opacity={0.6} transparent />
+      </lineSegments>
+
+      {/* Quantum field containment */}
+      <mesh ref={meshRef}>
+        <cylinderGeometry args={[1, 1, 2, 32]} />
+        <meshPhongMaterial
+          color="#1a237e"
+          transparent
+          opacity={0.3}
+          side={THREE.DoubleSide}
+        />
+      </mesh>
+
+      {/* Quantum field particles */}
+      <points ref={particlesRef}>
+        <bufferGeometry>
+          <bufferAttribute
+            attach="attributes-position"
+            count={particles.positions.length / 3}
+            array={particles.positions}
+            itemSize={3}
+          />
+          <bufferAttribute
+            attach="attributes-color"
+            count={particles.colors.length / 3}
+            array={particles.colors}
+            itemSize={3}
+          />
+        </bufferGeometry>
+        <pointsMaterial
+          size={0.02}
+          vertexColors
+          transparent
+          opacity={0.8}
+          blending={THREE.AdditiveBlending}
+        />
+      </points>
+    </group>
+  )
+}
+
+export default function StructuralQuantumVisualization(props: StructuralQuantumProps) {
+  useEffect(() => {
+    // Check WebGL support
+    const canvas = document.createElement('canvas')
+    const gl = canvas.getContext('webgl')
+    
+    if (!gl) {
+      console.error('WebGL not supported')
+      throw new Error('WebGL support is required for this visualization')
+    }
+  }, [])
+
+  return (
+    <div className="w-full h-[600px] rounded-lg overflow-hidden border border-blue-900">
+      <Canvas camera={{ position: [0, 2, 5], fov: 45 }}>
+        <color attach="background" args={['#000']} />
+        <ambientLight intensity={0.2} />
+        <pointLight position={[10, 10, 10]} intensity={1.5} />
+        <pointLight position={[-10, -10, -10]} intensity={0.5} />
+        <StructuralQuantumField {...props} />
+        <OrbitControls
+          enableZoom={true}
+          enablePan={true}
+          enableRotate={true}
+          maxDistance={10}
+          minDistance={2}
+        />
+      </Canvas>
+    </div>
+  )
+}
+```
+
+```typescriptreact
+import type { Metadata } from "next"
+import { Inter } from 'next/font/google'
+import "./globals.css"
+
+const inter = Inter({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
+  title: "GAIA-AIR-AMPEL Quantum Field Simulator",
+  description: "Visualizing structural integrity and quantum field interactions in primordial spacetime",
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  )
+}
+```
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+```
+
+To deploy this project:
+
+1. **Install dependencies:**
+
+
+```shellscript
+npm install three @react-three/fiber @react-three/drei leva react-toastify
+```
+
+2. **Build the project:**
+
+
+```shellscript
+npm run build
+```
+
+3. **Deploy to Vercel:**
+
+
+```shellscript
+vercel
+```
+
+Make sure to set these environment variables in your Vercel project:
+
+<AddEnvironmentVariables names={["NEXT_PUBLIC_SIMULATION_URL", "NEXT_PUBLIC_RETRY_COUNT", "NEXT_PUBLIC_RETRY_DELA
 
 ---
 
