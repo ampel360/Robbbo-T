@@ -1316,7 +1316,95 @@ GAIA AIR is now powered by **HYDROIAGENCY**, our commitment to harnessing the po
 <br>
 
 **Quick Jump To Part:**
-[Part 0](#part-0-general-and-governance-gp-gg) | [Part I](#part-i-gaia-pulse-id-gp-id---core-project-identity) | [Part II](#part-ii-gaia-pulse-air-modules-gpam---atmospheric-operations) | [Part III](#part-iii-gaia-pulse-space-modules-gpsm---orbital-and-space-operations) | [Part IV](#part-iv-gaia-pulse-propulsion-modules-gppm---propulsion-technologies) | [Part V](#part-v-gaia-pulse-greentech--aero-common-modules-gpgm) | [Part VI](#part-vi-project-management-and-operations-gp-pmo) | [Part VII](#part-vii-documentation-and-knowledge-management-gp-dkm) | [Part VIII](#part-viii-appendices-gp-app) | [Part IX](#part-ix-gaia-galactic-mining-operations-ggmo)
+[Part 0](#part-0-general-and-governance-gp-gg) | [Part I](#part-i-gaia-pulse-id-gp-id---core-project-identity) | [Part II](# Part II: GAIA PULSE AIR MODULES (GPAM) - Atmospheric Operations
+
+**Part Name:** AMPEL360XWLRGA - Aircraft Documentation
+
+This part of the COAFI document contains all documentation related to the AMPEL360XWLRGA aircraft, organized primarily by ATA (Air Transport Association) chapters, and includes design specifications, analysis reports, manufacturing procedures, maintenance manuals, and certification documents.
+
+## 2.1 AMPEL360XWLRGA (Advanced Aircraft Systems)
+
+*   **Aircraft Type Designation:** AMPEL-360
+*   **P/N (Top-Level Assembly - for documentation purposes):** GAIAPULSE-AM-ASSY-00001-Q
+
+[Back to Top](#)
+
+### 2.1.1 ATA Chapters
+
+*   [ATA 05 - Time Limits/Maintenance Checks](ATA05/index.md)
+*   [ATA 06 - Dimensions and Areas](ATA06/index.md)
+*   [ATA 07 - Lifting and Shoring](ATA07/index.md)
+*   [ATA 08 - Leveling and Weighing](ATA08/index.md)
+*   [ATA 09 - Towing and Taxiing](ATA09/index.md)
+*   [ATA 10 - Parking, Mooring, Storage and Return to Service](ATA10/index.md)
+*   [ATA 11 - Placards and Markings](ATA11/index.md)
+*   [ATA 12 - Servicing](ATA12/index.md)
+*  [ATA 18 - Vibration and Noise Analysis](ATA18/index.md)
+*   [ATA 20 - Standard Practices - Airframe](ATA20/index.md)
+*   [ATA 21 - Air Conditioning](ATA21/index.md)
+*   [ATA 22 - Auto Flight](ATA22/index.md)
+*   [ATA 23 - Communications](ATA23/index.md)
+*   [ATA 24 - Electrical Power](ATA24/index.md)
+*   [ATA 25 - Equipment/Furnishings](ATA25/index.md)
+*   [ATA 26 - Fire Protection](ATA26/index.md)
+*   [ATA 27 - Flight Controls](ATA27/index.md)
+*   [ATA 28 - Fuel](ATA28/index.md)
+*  [ATA 29 - Hydraulic Power](ATA29/index.md)
+* [ATA 30 - Ice and Rain Protection](ATA30/index.md)
+*   [ATA 31 - Instruments](ATA31/index.md)
+*   [ATA 32 - Landing Gear](ATA32/index.md)
+*   [ATA 33 - Lights](ATA33/index.md)
+*   [ATA 34 - Navigation](ATA34/index.md)
+*   [ATA 35 - Oxygen](ATA35/index.md)
+*   [ATA 36 - Pneumatic](ATA36/index.md)
+*   [ATA 38 - Water/Waste](ATA38/index.md)
+* [ATA 45 - Central Maintenance System](ATA45/index.md)
+* [ATA 46 - Information Systems](ATA46/index.md)
+* [ATA 49 - Airborne Auxiliary Power](ATA49/index.md)
+* [ATA 51 - Standard Practices and Structures - General](ATA51/index.md)
+* [ATA 52 - Doors](ATA52/index.md)
+* [ATA 53 - Fuselage](ATA53/index.md)
+* [ATA 54 - Nacelles/Pylons](ATA54/index.md)
+* [ATA 55 - Stabilizers](ATA55/index.md)
+* [ATA 56 - Windows](ATA56/index.md)
+*   [ATA 57 - Wings](ATA57/index.md)
+*   [ATA 58 - Wing Anti-Icing](ATA58/index.md)
+*   [ATA 67 - Rotors (Not Applicable)](ATA67/index.md)
+*   [ATA 70 - Standard Practices Engine](ATA70/index.md)
+*   [ATA 71 - Powerplant (Q-01 Integration)](ATA71/index.md)
+*   [ATA 72 - Engine (Q-01 Details)](/docs/GPPM/QPROP)  *(Note: Links to Part IV)*
+* [ATA 73 - Engine Fuel and Control](ATA73/index.md)
+* [ATA 74 - Ignition](ATA74/index.md)
+* [ATA 75 - Air](ATA75/index.md)
+* [ATA 76 - Engine Controls](ATA76/index.md)
+* [ATA 77 - Engine Indicating](ATA77/index.md)
+* [ATA 78 - Exhaust](ATA78/index.md)
+* [ATA 79 - Oil](ATA79/index.md)
+* [ATA 80 - Starting](ATA80/index.md)
+* [ATA 91 - Charts](ATA91/index.md)
+* [ATA 92 - Electrical System Testing](ATA92/index.md)
+* [ATA 93 - Avionics Systems Testing](ATA93/index.md)
+* [ATA 94 - Propulsion System Testing](ATA94/index.md)
+* [ATA 95 - Structural and Mechanical Testing](ATA95/index.md)
+* [ATA 96 - Environmental Control and Life Support Testing](ATA96/index.md)
+* [ATA 97 - Fire Protection System Testing](ATA97/index.md)
+*   [ATA 98 - Flight Test Program](ATA98/index.md)
+* [ATA 99 - Software and System Integration Testing](ATA99/index.md)
+* [ATA 100 - Certification and Documentation](ATA100/index.md)
+
+### 2.1.2 AMPEL360XWLRGA General Documentation:
+*   [General Documentation Overview](GPAM-AMPEL-0201-DOC-0001-A.md)
+
+### 2.1.3 AMPEL360XWLRGA Maintenance Manuals:
+* [Maintenance Manuals Overview](GPAM-AMPEL-0201-MAINT-0001-A.md)
+
+### 2.1.4 AMPEL360XWLRGA Illustrated Parts Catalog:
+*  [Illustrated Parts Catalog Overview](GPAM-AMPEL-0201-IPD-0001.md)
+
+### 2.1.5 AMPEL360XWLRGA Wiring and Schematics:
+*   [Wiring and Schematics Overview](GPAM-AMPEL-0201-WIRE-0001.md)
+
+[Back to Part I](#part-i-summary) | [Go to Part III](#part-iii-summary) | [Back to Top](#) #part-ii-gaia-pulse-air-modules-gpam---atmospheric-operations) | [Part III](#part-iii-gaia-pulse-space-modules-gpsm---orbital-and-space-operations) | [Part IV](#part-iv-gaia-pulse-propulsion-modules-gppm---propulsion-technologies) | [Part V](#part-v-gaia-pulse-greentech--aero-common-modules-gpgm) | [Part VI](#part-vi-project-management-and-operations-gp-pmo) | [Part VII](#part-vii-documentation-and-knowledge-management-gp-dkm) | [Part VIII](#part-viii-appendices-gp-app) | [Part IX](#part-ix-gaia-galactic-mining-operations-ggmo)
 
 ---
 
