@@ -775,9 +775,254 @@ model = SentenceTransformer("gaia_air_model")
 ## **🚀 Next Steps**
 Now that the model is **fine-tuned** and deployed locally, what’s next?
 
-1️⃣ **Test the fine-tuned search model** with real GAIA AIR queries.  
-2️⃣ **Deploy on GAIA AIR cloud** for production use.  
-3️⃣ **Enhance the search UI** with category filters (e.g., ATA codes, S1000D modules).  
+### **🚀 Step 3: Deploy AI Search Portal on GAIA AIR Kubernetes Cluster**  
+
+✅ **Now that we have successfully pushed the Docker images to GAIA AIR's registry, we are ready for Kubernetes deployment.**  
+
+---
+
+### **📌 What We'll Do in Step 3**
+1️⃣ **Create Kubernetes Deployment Manifests**  
+   - Backend (`FastAPI AI Search API`)  
+   - Frontend (`React/Next.js UI`)  
+   - Vector Database (`FAISS/Pinecone`)  
+2️⃣ **Deploy Services on GAIA AIR’s Kubernetes Cluster**  
+   - `kubectl apply -f` to deploy everything.  
+3️⃣ **Verify & Expose Services**  
+   - Check Pods, Logs, and Connectivity  
+   - Configure Ingress for Public/Private Access  
+
+---
+
+### **🔧 Step 3.1: Create Kubernetes Deployment Files**
+We will create the following Kubernetes YAML files:  
+- **`backend-deployment.yaml`** (AI Search API - FastAPI)  
+- **`frontend-deployment.yaml`** (React-based UI)  
+- **`vector-db-deployment.yaml`** (FAISS/Pinecone for vector search)  
+- **`ingress.yaml`** (Optional: Expose services via domain)  
+
+#### **Backend Deployment (`backend-deployment.yaml`)**
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-search-backend
+  namespace: gaia-ai
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ai-search-backend
+  template:
+    metadata:
+      labels:
+        app: ai-search-backend
+    spec:
+      containers:
+        - name: backend
+          image: gaia-registry/ai-search-backend:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: VECTOR_DB_HOST
+              value: "vector-db-service"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ai-search-backend
+  namespace: gaia-ai
+spec:
+  type: ClusterIP
+  selector:
+    app: ai-search-backend
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
+```
+
+#### **Frontend Deployment (`frontend-deployment.yaml`)**
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-search-frontend
+  namespace: gaia-ai
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ai-search-frontend
+  template:
+    metadata:
+      labels:
+        app: ai-search-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: gaia-registry/ai-search-frontend:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: BACKEND_API_URL
+              value: "http://ai-search-backend:8000"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ai-search-frontend
+  namespace: gaia-ai
+spec:
+  type: ClusterIP
+  selector:
+    app: ai-search-frontend
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+```
+
+#### **Vector Database Deployment (`vector-db-deployment.yaml`)**
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vector-db
+  namespace: gaia-ai
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vector-db
+  template:
+    metadata:
+      labels:
+        app: vector-db
+    spec:
+      containers:
+        - name: vector-db
+          image: qdrant/qdrant:latest  # Alternative: pinecone, FAISS setup
+          ports:
+            - containerPort: 6333
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vector-db-service
+  namespace: gaia-ai
+spec:
+  type: ClusterIP
+  selector:
+    app: vector-db
+  ports:
+    - protocol: TCP
+      port: 6333
+      targetPort: 6333
+```
+
+#### **Ingress Configuration (`ingress.yaml`)**
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ai-search-ingress
+  namespace: gaia-ai
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: search.gaia-air.com  # Change to your domain
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ai-search-frontend
+                port:
+                  number: 3000
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ai-search-backend
+                port:
+                  number: 8000
+```
+
+---
+
+### **🔁 Step 3.2: Deploy Everything**
+1️⃣ **Apply Namespace**  
+```bash
+kubectl create namespace gaia-ai
+```
+
+2️⃣ **Deploy Backend, Frontend, and Vector DB**  
+```bash
+kubectl apply -f backend-deployment.yaml
+kubectl apply -f frontend-deployment.yaml
+kubectl apply -f vector-db-deployment.yaml
+```
+
+3️⃣ **Apply Ingress (Optional - If Exposing Publicly)**  
+```bash
+kubectl apply -f ingress.yaml
+```
+
+---
+
+### **🔍 Step 3.3: Verify Deployment**
+#### **Check Pods**
+```bash
+kubectl get pods -n gaia-ai
+```
+✔️ Expected output (should see Running status):
+```
+NAME                               READY   STATUS    RESTARTS   AGE
+ai-search-backend-XXXXXXX          1/1     Running   0          2m
+ai-search-frontend-XXXXXXX         1/1     Running   0          2m
+vector-db-XXXXXXX                   1/1     Running   0          2m
+```
+
+#### **Check Logs (For Debugging)**
+```bash
+kubectl logs -n gaia-ai deployment/ai-search-backend
+kubectl logs -n gaia-ai deployment/ai-search-frontend
+```
+
+#### **Check Services**
+```bash
+kubectl get svc -n gaia-ai
+```
+✔️ Expected output:
+```
+NAME                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)
+ai-search-backend    ClusterIP   10.233.1.100    <none>        8000/TCP
+ai-search-frontend   ClusterIP   10.233.1.101    <none>        3000/TCP
+vector-db-service    ClusterIP   10.233.1.102    <none>        6333/TCP
+```
+
+#### **Access the Application**
+- If using **Ingress**: Open `http://search.gaia-air.com`
+- If testing **locally**:  
+  ```bash
+  kubectl port-forward svc/ai-search-frontend -n gaia-ai 8080:3000
+  ```
+  Then visit: `http://localhost:8080`
+
+---
+
+### **✅ Step 3 Completion & Next Steps**
+✔️ AI Search Portal is now **live** on GAIA AIR’s Kubernetes cluster! 🎉  
+
+#### **Next Actions:**
+1. **Confirm the services are running** (access the search UI and test API calls).  
+2. **Run test queries** using the deployed FastAPI search backend.  
+3. **Optimize Performance** (if needed - we can discuss scaling replicas, autoscaling, etc.).  
+4. **Monitoring & Logs Setup** (Prometheus, Grafana, Loki, etc.).  
+
 
 Let me know which step you'd like to proceed with! 🚀
 
