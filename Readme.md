@@ -1,3 +1,5 @@
+```Action required: migrate or opt-out of migration to GitHub inside Microsoft #5
+```
 ```mermaid
 flowchart TB
     root("GPAM Diagrammatic Documentation Suite")
@@ -40,7 +42,6 @@ flowchart TB
 
     linkStyle default stroke:#999,stroke-width:1px,color:#555
 ```
-Action required: migrate or opt-out of migration to GitHub inside Microsoft #5
 
 # Optimización del Flujo de Documentación S1000D
 
