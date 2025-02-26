@@ -1,5 +1,4 @@
-```Action required: migrate or opt-out of migration to GitHub inside Microsoft #5
-```
+https://v0-image-analysis-navy.vercel.app/
 ```mermaid
 flowchart TB
     root("GPAM Diagrammatic Documentation Suite")
