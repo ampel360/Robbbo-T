@@ -65,14 +65,14 @@ graph TB
     Accumulator -- "Backup" --> FlightControls & LandingGear & BrakeSystem & NoseWheel
 
     %% Tooltip definitions for cross-references
-    classDef control tooltip:"See GPAM Section 4.1 for System Control Unit details";
-    classDef pumpRef tooltip:"Refer to CMM Section 3.3 for Pump calibration and maintenance";
-    classDef reservoirRef tooltip:"See GPAM Section 5.2 for Reservoir inspection guidelines";
-    classDef accumulatorRef tooltip:"See Maintenance Manual Section 7.1 for Accumulator checks";
-    classDef sensor tooltip:"See Sensor Data Sheet Section 2.4 for sensor details";
-    classDef temperature tooltip:"Refer to Temperature Sensor Guide Section 2.5";
-    classDef level tooltip:"See Fluid Level Monitoring Guidelines Section 2.6";
-    classDef filter tooltip:"See Filter Maintenance Procedures Section 2.7";
+    classDef control fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef pumpRef fill:#e0f7fa,stroke:#333,stroke-width:1px;
+    classDef reservoirRef fill:#e0f7fa,stroke:#333,stroke-width:1px;
+    classDef accumulatorRef fill:#e0f7fa,stroke:#333,stroke-width:1px;
+    classDef sensor fill:#e0f7fa,stroke:#333,stroke-width:1px;
+    classDef temperature fill:#e0f7fa,stroke:#333,stroke-width:1px;
+    classDef level fill:#e0f7fa,stroke:#333,stroke-width:1px;
+    classDef filter fill:#e0f7fa,stroke:#333,stroke-width:1px;
 
     %% Apply tooltips
     class HSCU control;
@@ -88,6 +88,7 @@ graph TB
     classDef central fill:#f9f,stroke:#333,stroke-width:2px;
     classDef component fill:#e0f7fa,stroke:#333,stroke-width:1px;
     classDef subsystem fill:#dfd,stroke:#333,stroke-width:2px;
+
 ```
 
 ---
