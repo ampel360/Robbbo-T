@@ -1,3 +1,46 @@
+```mermaid
+flowchart TB
+    root("GPAM Diagrammatic Documentation Suite")
+    root --> workflow(Overall Maintenance Workflow Diagrams)
+    root --> inspection(Component Inspection Diagrams)
+    root --> repair(Repair Procedure Diagrams)
+    root --> troubleshoot(Troubleshooting Guides)
+
+    subgraph workflow_cluster [Overall Workflow Diagrams]
+        direction TB
+        workflow --> workflow_main[Main Maintenance Workflow <br/> Diagram 1]
+    end
+
+    subgraph inspection_cluster [Component Inspection Diagrams]
+        direction TB
+        inspection --> inspect_actuator[Actuator Inspection <br/> Diagram 3]
+        inspection --> inspect_reservoir[Reservoir Inspection <br/> Diagram 4]
+        inspection --> inspect_pump[Pump Inspection <br/> Implied - Section 6.3 Text]
+    end
+
+    subgraph repair_cluster [Repair Procedure Diagrams]
+        direction TB
+        repair --> repair_line[Line Replacement <br/> Diagram 5]
+        repair --> repair_actuator_seal[Actuator Seal Replacement <br/> Diagram 6]
+        repair --> repair_pump_seal[Pump Seal Replacement <br/> Diagram 7]
+        repair --> repair_valve_overhaul[Valve Overhaul <br/> Diagram 8]
+    end
+
+    subgraph troubleshoot_cluster [Troubleshooting Guides]
+        direction TB
+        troubleshoot --> troubleshoot_hydraulic[Hydraulic System Troubleshooting <br/> Diagram 2]
+    end
+
+
+    style root fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style workflow_cluster fill:#e0f7fa,stroke:#333,stroke-width:1px
+    style inspection_cluster fill:#e0f7fa,stroke:#333,stroke-width:1px
+    style repair_cluster fill:#f0f4c3,stroke:#333,stroke-width:1px
+    style troubleshoot_cluster fill:#ffe0b2,stroke:#333,stroke-width:1px
+
+    linkStyle default stroke:#999,stroke-width:1px,color:#555
+```
+
 # Optimización del Flujo de Documentación S1000D
 
 Esta guía proporciona técnicas y herramientas para mejorar el manejo y la distribución de la documentación S1000D, desde la identificación de archivos mediante expresiones regulares hasta la automatización del despliegue. A continuación, se detallan los pasos y herramientas clave para optimizar el flujo de trabajo.
