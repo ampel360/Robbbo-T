@@ -1,10 +1,10 @@
-
 # Document: AMPEL360 Hydraulic System Overview and Procedures
 
 **DMC:** DMC-GAIAPULSE-AMPEL-0201-29-001-A-001-00_EN-US  
 **File:** GPAM-AMPEL-0201-29-001-A.md
 
-*Please follow every step in the procedure below to verify the reliability and proper operation of each module’s component in the hydraulic system.*
+![image](https://github.com/user-attachments/assets/4809f06e-1d34-4bb9-bb51-fc9d7f1ecd1e)
+
 
 ---
 
