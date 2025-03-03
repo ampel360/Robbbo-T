@@ -1,5 +1,7 @@
 Below is a brief **description of the image** and how it fits into our previous discussion on network topologies:
 
+https://v0.dev/chat/interactive-network-visualization-8RGuhqluVG6
+
 1. **Image Description**  
    The image shows six simplified diagrams representing common Ethernet network topologies: **Bus, Ring, Mesh, Star, Tree,** and **Daisy Chain**. Each icon depicts a basic layout of nodes (circles) [...]
 
