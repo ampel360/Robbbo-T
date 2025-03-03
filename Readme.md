@@ -1,4 +1,46 @@
-Below is a brief **description of the image** and how it fits into our previous discussion on network topologies:
+```typescriptreact project="network-visualization"
+...
+```
+
+# Interactive 3D Network Visualization
+
+I've created an interactive 3D network visualization that allows you to explore network topologies, vulnerabilities, and security treatments. This visualization provides a comprehensive view of your network infrastructure and security posture.
+
+## Features
+
+### Network Topology Visualization
+
+- **Interactive 3D Graph**: Nodes represent different network components (routers, servers, databases, clients, storage)
+- **Color-Coded Nodes**: Different colors represent different types of network components
+- **Connection Visualization**: Lines between nodes show network connections
+- **Orbit Controls**: Rotate, pan, and zoom to explore the network from any angle
+
+
+### Vulnerability Analysis
+
+- **Vulnerability Highlighting**: Hover over vulnerabilities to see affected nodes
+- **Visual Indicators**: Nodes with vulnerabilities are marked with alert badges
+- **Animated Effects**: Vulnerable nodes pulse when their vulnerability is selected
+- **Path Highlighting**: Connection paths between vulnerable nodes are highlighted
+
+
+### Security Treatments
+
+- **Treatment Details**: View recommended security treatments for each vulnerability
+- **Node-Specific Information**: Select any node to see its vulnerabilities and treatments
+- **Comprehensive View**: See all vulnerabilities and treatments across the network
+
+
+## How to Use
+
+1. **Explore the Network**: Use your mouse to rotate, pan, and zoom around the 3D network
+2. **Select Nodes**: Click on any node to view detailed information about it
+3. **View Vulnerabilities**: Switch to the "Vulnerabilities" tab and hover over specific vulnerabilities to highlight affected nodes
+4. **Review Treatments**: Switch to the "Treatments" tab to see security recommendations for each vulnerability
+
+
+This visualization helps security teams identify vulnerable components in their network infrastructure and understand the appropriate security treatments to mitigate risks.
+
 
 https://v0.dev/chat/interactive-network-visualization-8RGuhqluVG6
 
