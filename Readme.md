@@ -1,5 +1,9 @@
 ```typescriptreact project="network-visualization"
+...Thought for 1 second```typescriptreact project="portfolio-multipanel"
 ...
+```
+
+Deploy to VercelCreate a deployment on Vercel for this Block. You can unpublish a deployment at any time.
 ```
 
 # Interactive 3D Network Visualization
