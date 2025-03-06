@@ -1,4 +1,10 @@
-![replicate-prediction-39e9h3m4qdrma0cnd5f9dbzrsg](https://github.com/user-attachments/assets/1d30a3f0-35b7-459f-934b-8a67ca423ec5)
+![replicate-prediction-39e9h3m4qdrma0cnd5f9dbzrsg](https://github.com/user-attachments/assets/1d30a3f0-35b7-459f-934b-8a67ca423ec5) 
+
+39e9h3m4qdrma0cnd5f9dbzrsg
+
+
+Prompt
+a modern aircraft with quantum propulsion. make the image of engineering interest. being creative is allowed but with precision and common sense
 # **GAIA AIR: Tecnología INFRANET**
 
 ![Build Status](https://img.shields.io/github/actions/workflow/status/Robbbo-T/AGI-REPOSITORY/ci.yml)
