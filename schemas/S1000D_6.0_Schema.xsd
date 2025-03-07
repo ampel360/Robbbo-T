@@ -20,7 +20,7 @@
   <xs:complexType name="identAndStatusSectionType">
     <xs:sequence>
       <xs:element name="dmAddress" type="dmAddressType"/>
-      <xs:element name="dmCode" type="dmCodeType"/>
+      <xs:element name="modelIdentCode" type="xs:string"/>
       <xs:element name="issueNumber" type="xs:string"/>
       <xs:element name="issueDate" type="xs:date"/>
       <xs:element name="securityClassification" type="xs:string"/>
@@ -62,28 +62,13 @@
   <!-- Content section -->
   <xs:complexType name="contentType">
     <xs:sequence>
-      <xs:element name="description" type="descriptionType"/>
       <xs:element name="procedures" type="proceduresType"/>
       <xs:element name="illustrations" type="illustrationsType"/>
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Description -->
-  <xs:complexType name="descriptionType">
-    <xs:sequence>
-      <xs:element name="para" type="xs:string" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-
   <!-- Procedures -->
   <xs:complexType name="proceduresType">
-    <xs:sequence>
-      <xs:element name="step" type="stepType" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <!-- Step -->
-  <xs:complexType name="stepType">
     <xs:sequence>
       <xs:element name="para" type="xs:string" maxOccurs="unbounded"/>
     </xs:sequence>

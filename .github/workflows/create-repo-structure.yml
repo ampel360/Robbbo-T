@@ -249,6 +249,14 @@ jobs:
           }
           EOL
           
+      - name: Validate XML against S1000D Schema
+        run: |
+          xmllint --noout --schema schemas/S1000D_6.0_Schema.xsd data/ATA71.xml
+
+      - name: Run BREX Compliance Check
+        run: |
+          python tools/brex_check.py rules/ProjectBREX.xml data/ATA71.xml
+
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
