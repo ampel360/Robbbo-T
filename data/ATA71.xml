@@ -14,7 +14,7 @@
     <dmAddress>
       <modelIdentCode>
         <modelIdentCode>AMPEL360</modelIdentCode>
-        <dmCode
+        <modelIdentCode
           modelIdentCode="AMPEL360"
           systemDiffCode="A"
           systemCode="71"
@@ -31,12 +31,12 @@
           dmType="DMC"
           learnCode="A">
           GPAM-AMPEL-0201-71-000-A
-        </dmCode>
+        </modelIdentCode>
       </modelIdentCode>
     </dmAddress>
 
     <dmCode>
-      <techName>ATA 71 - Powerplant - System Description</techName>
+      <dmCode>ATA 71 - Powerplant - System Description</dmCode>
     </dmCode>
 
     <issueInfo>
