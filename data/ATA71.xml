@@ -13,6 +13,7 @@
   <identAndStatusSection>
     <dmAddress>
       <modelIdentCode>
+        <modelIdentCode>AMPEL360</modelIdentCode>
         <dmCode
           modelIdentCode="AMPEL360"
           systemDiffCode="A"
