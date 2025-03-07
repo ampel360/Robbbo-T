@@ -8,7 +8,7 @@ a modern aircraft with quantum propulsion. make the image of engineering interes
 # **GAIA AIR: Tecnología INFRANET**
 
 ![Build Status](https://img.shields.io/github/actions/workflow/status/Robbbo-T/AGI-REPOSITORY/ci.yml)
-![License](https://img.shields.io/github/license/Robbbo-T/AGI-REPOSITORY)
+![License](https://img.shields.io/github/license/Robbbo-T/AGI-REPOSITORY) I am not a Robot, I am a person
 
 ## Visión General
 
