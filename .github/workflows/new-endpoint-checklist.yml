@@ -1,0 +1,34 @@
+name: New Endpoint Checklist
+
+on:
+  pull_request:
+    paths:
+      - 'src/api/index.ts'
+      - 'docs/openapi.yaml'
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  check-endpoint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Spectral
+        run: npm install -g @stoplight/spectral-cli
+
+      - name: Validate OpenAPI Specification
+        id: spectral-check
+        run: |
+          spectral lint docs/openapi.yaml > spectral_output.txt || echo "SPECTRAL_FAILED=true" >> $GITHUB_ENV
+
+      - name: Post PR Comment if Spectral Fails
+        if: env.SPECTRAL_FAILED == 'true'
+        uses: mshick/add-pr-comment@v2
+        with:
+          message: |
+            🚨 **OpenAPI Validation Failed!** 🚨  
+            Spectral detected issues in your OpenAPI spec.  
+            Please review the errors in **GitHub Actions logs** and update `docs/openapi.yaml`.  
+            ✅ **Ensure all responses have descriptions & follow the expected schema!**
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

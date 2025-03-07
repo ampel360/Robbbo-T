@@ -7,12 +7,14 @@
 <dmodule
   xmlns="http://www.s1000d.org/S1000DIssue6.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.s1000d.org/S1000DIssue6.0 S1000D_6.0_Schema.xsd">
+  xsi:schemaLocation="http://www.s1000d.org/S1000DIssue6.0 schemas/S1000D_6.0_Schema.xsd"
+  schemaVersion="6.0">
 
   <identAndStatusSection>
     <dmAddress>
-      <dmIdent>
-        <dmCode
+      <modelIdentCode>
+        <modelIdentCode>AMPEL360</modelIdentCode>
+        <modelIdentCode
           modelIdentCode="AMPEL360"
           systemDiffCode="A"
           systemCode="71"
@@ -24,18 +26,18 @@
           infoCodeVariant="A"
           itemLocationCode="00"
           language="EN-US"
-          issueNumber="002"   <!-- Updated from 1.2 to 002 -->
+          issueNumber="002"   
           revNumber="00"
           dmType="DMC"
           learnCode="A">
           GPAM-AMPEL-0201-71-000-A
-        </dmCode>
-      </dmIdent>
+        </modelIdentCode>
+      </modelIdentCode>
     </dmAddress>
 
-    <infoName>
-      <techName>ATA 71 - Powerplant - System Description</techName>
-    </infoName>
+    <dmCode>
+      <dmCode>ATA 71 - Powerplant - System Description</dmCode>
+    </dmCode>
 
     <issueInfo>
       <!-- Using integer for issueNumber -->
@@ -72,15 +74,15 @@
 
   <content>
     <!-- ========== 1. Applicability ========== -->
-    <description>
-      <title>1. Applicability</title>
+    <procedures>
+      <para>1. Applicability</para>
       <para>This data module describes the powerplant system for the AMPEL360XWLRGA aircraft. It applies to all configurations equipped with the hybrid-electric propulsion system and the Q-01 experimental thrust augmentation system.</para>
       <para>Document version: 002; Classification: Proprietary – GAIA AIR</para>
-    </description>
+    </procedures>
 
     <!-- ========== 2. References ========== -->
-    <description>
-      <title>2. References</title>
+    <procedures>
+      <para>2. References</para>
       <para>The following documents and standards are referenced:</para>
       <itemizedlist>
         <item>
@@ -108,29 +110,29 @@
           <para>RTCA DO-178C, DO-254, DO-160G Aerospace Certification Standards (Current Versions)</para>
         </item>
       </itemizedlist>
-    </description>
+    </procedures>
 
     <!-- ========== 3. System Overview ========== -->
-    <description>
-      <title>3. System Overview</title>
+    <procedures>
+      <para>3. System Overview</para>
       <para>
         The ATA 71 Powerplant system is a hybrid-electric propulsion architecture combining conventional and advanced power sources.
         It integrates a fuel-burning engine (turbogenerator) with electric motors, an energy storage system, and experimental quantum augmentation.
       </para>
       <para>Key advantages include reduced emissions, improved fuel efficiency, redundancy, flexibility, and future-proofing.</para>
-    </description>
+    </procedures>
 
     <!-- 3.4 Diagram reference -->
     <illustration>
       <figure id="fig-powerplant-diagram">
-        <title>Figure 1: Hybrid-Electric Propulsion System Block Diagram</title>
+        <para>Figure 1: Hybrid-Electric Propulsion System Block Diagram</para>
         <graphic boardNo="ILL-GPAM-AMPEL-0201-71-DIAG-001"/>
       </figure>
     </illustration>
 
     <!-- ========== 4. System Components ========== -->
-    <description>
-      <title>4. System Components</title>
+    <procedures>
+      <para>4. System Components</para>
       <para>
         This section outlines the major powerplant components:
       </para>
@@ -185,11 +187,11 @@
         <item><para>P/N: GPAM-AMPEL-ELEC-PMDU-001</para></item>
         <item><para>Manages HVDC bus, integrates Turbogenerator, Battery, AEHCS</para></item>
       </itemizedlist>
-    </description>
+    </procedures>
 
     <!-- ========== 5. System Operation ========== -->
-    <description>
-      <title>5. System Operation</title>
+    <procedures>
+      <para>5. System Operation</para>
       <para>5.1 Normal Operating Modes</para>
       <itemizedlist>
         <item><para>Takeoff: Battery peak + Turbogenerator as needed, Q-01 standby</para></item>
@@ -210,14 +212,14 @@
       </itemizedlist>
 
       <para>5.3 Control System Logic: FADEC manages all components; Q-01 is not safety-critical.</para>
-    </description>
+    </procedures>
 
     <!-- ========== 6. Interfaces ========== -->
-    <description>
-      <title>6. Interfaces</title>
+    <procedures>
+      <para>6. Interfaces</para>
       <para>Key interfaces between the powerplant and other aircraft systems:</para>
       <table id="interfaces">
-        <title>Powerplant Interfaces</title>
+        <para>Powerplant Interfaces</para>
         <tgroup cols="3">
           <thead>
             <row>
@@ -285,18 +287,7 @@
           </tbody>
         </tgroup>
       </table>
-    </description>
+    </procedures>
   </content>
 
-  <techCreditSection>
-    <credits>
-      <creditEntry>
-        <name>Amedeo Pelliccia &amp; AI Collaboration</name>
-        <responsibility>Originator</responsibility>
-      </creditEntry>
-    </credits>
-  </techCreditSection>
-
 </dmodule>
-
-

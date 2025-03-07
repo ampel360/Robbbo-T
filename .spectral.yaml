@@ -1,0 +1,57 @@
+extends: spectral:oas
+
+rules:
+  # 1️⃣ Require descriptions for all responses
+  response-description:
+    description: "All API responses must include a description."
+    message: "Response code {{property}} is missing a description."
+    given: "$.paths[*][*].responses[*]"
+    then:
+      field: description
+      function: truthy
+
+  # 2️⃣ Ensure every response has a JSON schema definition
+  response-schema-required:
+    description: "All API responses must define a JSON schema."
+    message: "Response for status code {{property}} is missing a schema definition."
+    given: "$.paths[*][*].responses[*].content.application/json"
+    then:
+      field: schema
+      function: truthy
+
+  # 3️⃣ Enforce a standardized response structure
+  response-structure:
+    description: "API responses must follow a consistent structure."
+    given: "$.paths[*][*].responses[*].content.application/json.schema"
+    then:
+      function: schema
+      functionOptions:
+        schema:
+          type: object
+          properties:
+            status:
+              type: string
+            message:
+              type: string
+            data:
+              type: object
+          required: ["status", "message", "data"]
+
+  # 4️⃣ Ensure status codes follow standard conventions
+  valid-status-codes:
+    description: "Responses must use standard HTTP status codes."
+    given: "$.paths[*][*].responses[*]"
+    then:
+      field: "[key]"
+      function: pattern
+      functionOptions:
+        match: "^(200|201|204|400|401|403|404|409|422|500)$"
+
+  # 5️⃣ Ensure all responses include examples
+  response-examples-required:
+    description: "All API responses must include examples."
+    message: "Response for status code {{property}} is missing an example."
+    given: "$.paths[*][*].responses[*].content.application/json"
+    then:
+      field: examples
+      function: truthy
