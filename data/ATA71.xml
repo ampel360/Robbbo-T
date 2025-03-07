@@ -13,7 +13,8 @@
   <identAndStatusSection>
     <dmAddress>
       <modelIdentCode>
-        <dmCode
+        <modelIdentCode>AMPEL360</modelIdentCode>
+        <modelIdentCode
           modelIdentCode="AMPEL360"
           systemDiffCode="A"
           systemCode="71"
@@ -30,12 +31,12 @@
           dmType="DMC"
           learnCode="A">
           GPAM-AMPEL-0201-71-000-A
-        </dmCode>
+        </modelIdentCode>
       </modelIdentCode>
     </dmAddress>
 
     <dmCode>
-      <techName>ATA 71 - Powerplant - System Description</techName>
+      <dmCode>ATA 71 - Powerplant - System Description</dmCode>
     </dmCode>
 
     <issueInfo>
@@ -124,7 +125,7 @@
     <!-- 3.4 Diagram reference -->
     <illustration>
       <figure id="fig-powerplant-diagram">
-        <title>Figure 1: Hybrid-Electric Propulsion System Block Diagram</title>
+        <para>Figure 1: Hybrid-Electric Propulsion System Block Diagram</para>
         <graphic boardNo="ILL-GPAM-AMPEL-0201-71-DIAG-001"/>
       </figure>
     </illustration>
@@ -218,7 +219,7 @@
       <para>6. Interfaces</para>
       <para>Key interfaces between the powerplant and other aircraft systems:</para>
       <table id="interfaces">
-        <title>Powerplant Interfaces</title>
+        <para>Powerplant Interfaces</para>
         <tgroup cols="3">
           <thead>
             <row>
