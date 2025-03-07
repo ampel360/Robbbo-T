@@ -5,10 +5,6 @@
 
 Prompt
 a modern aircraft with quantum propulsion. make the image of engineering interest. being creative is allowed but with precision and common sense
-# **GAIA AIR: Tecnología INFRANET**
-
-![Build Status](https://img.shields.io/github/actions/workflow/status/Robbbo-T/AGI-REPOSITORY/ci.yml)
-![License](https://img.shields.io/github/license/Robbbo-T/AGI-REPOSITORY) I am not a Robot, I am a person
 
 ## Visión General
 
