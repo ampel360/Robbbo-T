@@ -3708,14 +3708,15 @@ This document covers:
 The Q-01 Quantum Propulsion System is a revolutionary propulsion system designed for the AMPEL360XWLRGA aircraft. It utilizes principles of quantum entanglement, quantum tunneling, and vacuum energy manipulation to generate thrust without the need for conventional fuel combustion or rotating machinery. The system is designed for high efficiency, low emissions, and precise thrust control.
 
 ### 2.2 Block Diagram
+
 ```mermaid
 flowchart LR
     subgraph Q-01_System [Q-01 Quantum Propulsion System]
-        A[Power Source (AEHCS)] --> B[Control System]
-        B --> C[Quantum State Modulator (QSM)]
-        C --> D[Quantum Entanglement Engine (QEE)]
-        D --> E[Thrust Generation Mechanism]
-        B --> F[Cryogenic Cooling System (CCS)]
+        A["Power Source - AEHCS"] --> B["Control System"]
+        B --> C["Quantum State Modulator - QSM"]
+        C --> D["Quantum Entanglement Engine - QEE"]
+        D --> E["Thrust Generation Mechanism"]
+        B --> F["Cryogenic Cooling System - CCS"]
         F --> C
         F --> D
     end
