@@ -1,6 +1,4 @@
-Here’s the continuation of the **GPAM-GAIA-0210-GPAQS-QA-001-A** document, focusing on the **Pelliccia Resonance Amplification Algorithm (PRAA)** specification. This document will provide a detailed technical description of the PRAA algorithm, its mathematical foundations, and its implementation within the GAIA AIR system.
 
----
 
 # GPAM-GAIA-0210-GPAQS-QA-001-A: Pelliccia Resonance Amplification Algorithm (PRAA) - Specification
 
@@ -226,8 +224,6 @@ PRAA scales efficiently with problem size, making it suitable for large-scale op
 [Back to GPAQS Document Index](../index.md) | [Back to Top](#)
 
 ---
-
-This document provides a comprehensive specification of the PRAA algorithm, ensuring clarity and precision for developers and researchers. Let me know if you'd like to refine any section further! 🚀
 
 
 ## Visión General
