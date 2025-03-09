@@ -1,5 +1,11 @@
-**Autoenergized Regenerative Reciprocive Spececrafts, Aircrafts , and ComputerCraft (ARQ QUANTUM ARTIFACTs): Enhanced Coherent Entanglement Weaving**  
-*(Aligned with COAFI framework and S1000D documentation standards)*  
+---
+title: "[Overview]"
+author: "[Amedeo Pelliccia]"
+date: "2025-03-09"
+status: "Draft"
+doc_code: "[Template]-[csdb]-[metadatos]-OV-[001]-[A]"
+---
+
 
 # GAIA AIR FULL MINDMAP
 
