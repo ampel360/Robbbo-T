@@ -25,129 +25,131 @@ COAFI is a comprehensive documentation framework designed to manage the complexi
 *   **Faster Onboarding:**  New team members can quickly find the information they need to get up to speed.
 *   **Simplified Compliance:**  Makes it easier to demonstrate compliance with regulatory requirements.
 
-  ```Mermaid
+
+```mermaid
 flowchart RL
-    style whiteboard fill:#f8f8f8,stroke:#333,stroke-width:2px;
-    
-    subgraph "Whiteboard: Documentation Index"
-        direction RL
-        %% Master Index
-        A[Master Index] --> B[Part I: Project Overview & Digital Ecosystem]
-        A --> C[Part II: Air Vehicle Systems]
-        A --> D[Part III: Mission Systems and Operations]
-        A --> E[Part IV: Propulsion Systems GAIA PULSE]
-        A --> F[Part V: Power and Energy Systems GAIA POWER]
-        A --> G[Part VI: Control Systems GAIA CONTROL]
-        A --> H[Part VII: Materials and Manufacturing GAIA FAB]
-        A --> I[Part VIII: Testing and Certification GAIA CERT]
-        A --> J[Part IX: Safety and Reliability GAIA SAFE]
-        A --> K[Part X: Transportation and Space Operations GAIA SPACE]
-        A --> L[Part XI: Documentation Management and Control]
-        A --> M[Part XII: Glossary and Definitions]
+style whiteboard fill:#f8f8f8,stroke:#333,stroke-width:2px;
 
-        subgraph "Part I: Project Overview & Digital Ecosystem"
-          B1[GAIA-OV-001.md]
-          B2[GAIA-QUANTUM-PORTAL-OV-001.md]
-          B3[Digital-Architecture-Overview.md]
-          B4[...]
-        end
+subgraph "Whiteboard: Documentation Index"
+direction RL
+%% Master Index
+A[Master Index] --> B[Part I: Project Overview & Digital Ecosystem]
+A --> C[Part II: Air Vehicle Systems]
+A --> D[Part III: Mission Systems and Operations]
+A --> E[Part IV: Propulsion Systems GAIA PULSE]
+A --> F[Part V: Power and Energy Systems GAIA POWER]
+A --> G[Part VI: Control Systems GAIA CONTROL]
+A --> H[Part VII: Materials and Manufacturing GAIA FAB]
+A --> I[Part VIII: Testing and Certification GAIA CERT]
+A --> J[Part IX: Safety and Reliability GAIA SAFE]
+A --> K[Part X: Transportation and Space Operations GAIA SPACE]
+A --> L[Part XI: Documentation Management and Control]
+A --> M[Part XII: Glossary and Definitions]
 
-        subgraph "Part II: Air Vehicle Systems"
-          direction TB
-          BA[Baseline Aircraft Configuration]
-          BA --> C1[Airframe]
-          BA --> C2[Propulsion]
-          BA --> C3[Avionics]
-          BA --> C4[Flight Control]
-          BA --> C5[Landing Gear]
-          BA --> C6["Non-Carbon Fuel Architecture"]
-          BA --> C7["AEHCS (Atmospheric Energy Harvesting)"]
-          BA --> C8[Electrical Systems]
-          BA --> C9[Safety Measures]
-          BA --> C10[Communications]
-          BA --> C11[Environmental Control]
-        end
+subgraph "Part I: Project Overview & Digital Ecosystem"
+  B1[GAIA-OV-001.md]
+  B2[GAIA-QUANTUM-PORTAL-OV-001.md]
+  B3[Digital-Architecture-Overview.md]
+  B4[...]
+end
 
-         subgraph "Part III: Mission Systems and Operations"
-          D1[MissionPlanning/]
-          D2[FlightOperations/]
-          D3[PayloadIntegration/]
-          D4[...]
-        end
+subgraph "Part II: Air Vehicle Systems"
+  direction TB
+  BA[Baseline Aircraft Configuration]
+  BA --> C1[Airframe]
+  BA --> C2[Propulsion]
+  BA --> C3[Avionics]
+  BA --> C4[Flight Control]
+  BA --> C5[Landing Gear]
+  BA --> C6["Non-Carbon Fuel Architecture"]
+  BA --> C7["AEHCS (Atmospheric Energy Harvesting)"]
+  BA --> C8[Electrical Systems]
+  BA --> C9[Safety Measures]
+  BA --> C10[Communications]
+  BA --> C11[Environmental Control]
+end
 
-        subgraph "Part IV: Propulsion Systems GAIA PULSE"
-          E1[QPS/]
-          E2[ConventionalPropulsion/]
-          E3[EngineControl/]
-          E4[...]
-        end
+ subgraph "Part III: Mission Systems and Operations"
+  D1[MissionPlanning/]
+  D2[FlightOperations/]
+  D3[PayloadIntegration/]
+  D4[...]
+end
 
-      subgraph "Part V: Power and Energy Systems GAIA POWER"
-        F1[EnergyHarvesting/]
-        F2[PowerDistribution/]
-        F3[BatteryManagement/]
-        F4[...]
+subgraph "Part IV: Propulsion Systems GAIA PULSE"
+  E1[QPS/]
+  E2[ConventionalPropulsion/]
+  E3[EngineControl/]
+  E4[...]
+end
+
+subgraph "Part V: Power and Energy Systems GAIA POWER"
+  F1[EnergyHarvesting/]
+  F2[PowerDistribution/]
+  F3[BatteryManagement/]
+  F4[...]
+end
+
+subgraph "Part VI: Control Systems GAIA CONTROL"
+  G1[FlightControl/]
+  G2[AutonomousSystems/]
+  G3[ActuatorControl/]
+  G4[...]
+end
+
+subgraph "Part VII: Materials and Manufacturing GAIA FAB"
+ H1[Materials/]
+ H2[ManufacturingProcesses/]
+ H3[Composites/]
+ H4[...]
+end
+
+subgraph "Part VIII: Testing and Certification GAIA CERT"
+  I1[Testing/]
+  I2[Certification/]
+  I3[FlightTests/]
+  I4[...]
+end
+
+subgraph "Part IX: Safety and Reliability GAIA SAFE"
+  J1[SafetyAnalysis/]
+  J2[Reliability/]
+  J3[FMEA/]
+  J4[...]
+end
+
+subgraph "Part X: Transportation and Space Operations GAIA SPACE"
+ K1[OrbitalTransport/]
+ K2[DeepSpaceOps/]
+ K3[LogisticsAndSupply/]
+ K4[GatewayStations/]
+ K5[SpaceCargoMgmt/]
+ K6[...]
+end
+
+subgraph "Part XI: Documentation Management and Control"
+  L1[StyleGuide/]
+  L2[Templates/]
+  L3[VersionControl/]
+  L4[CSDB_CMS/]
+      subgraph "Part XI/CSDB_CMS/"
+          L4A[PartXI-CC-CSDB-ARC-001.md]
+          L4B[PartXI-CC-CMS-ARC-001.md]
       end
+  L5[...]
+end
 
-      subgraph "Part VI: Control Systems GAIA CONTROL"
-        G1[FlightControl/]
-        G2[AutonomousSystems/]
-        G3[ActuatorControl/]
-        G4[...]
-      end
+subgraph "Part XII: Glossary and Definitions"
+    M1[Glossary.md]
+    M2[Acronyms.md]
+    M3[Units.md]
+    M4[...]
+  end
+end
 
-      subgraph "Part VII: Materials and Manufacturing GAIA FAB"
-         H1[Materials/]
-         H2[ManufacturingProcesses/]
-         H3[Composites/]
-         H4[...]
-      end
-
-      subgraph "Part VIII: Testing and Certification GAIA CERT"
-        I1[Testing/]
-        I2[Certification/]
-        I3[FlightTests/]
-        I4[...]
-      end
-
-      subgraph "Part IX: Safety and Reliability GAIA SAFE"
-        J1[SafetyAnalysis/]
-        J2[Reliability/]
-        J3[FMEA/]
-        J4[...]
-      end
-
-      subgraph "Part X: Transportation and Space Operations GAIA SPACE"
-         K1[OrbitalTransport/]
-         K2[DeepSpaceOps/]
-         K3[LogisticsAndSupply/]
-         K4[GatewayStations/]
-         K5[SpaceCargoMgmt/]
-         K6[...]
-      end
-
-        subgraph "Part XI: Documentation Management and Control"
-          L1[StyleGuide/]
-          L2[Templates/]
-          L3[VersionControl/]
-          L4[CSDB_CMS/]
-              subgraph "Part XI/CSDB_CMS/"
-                  L4A[PartXI-CC-CSDB-ARC-001.md]
-                  L4B[PartXI-CC-CMS-ARC-001.md]
-              end
-          L5[...]
-        end
-
-        subgraph "Part XII: Glossary and Definitions"
-            M1[Glossary.md]
-            M2[Acronyms.md]
-            M3[Units.md]
-            M4[...]
-          end
-    end
-
-    linkStyle default fill:#f0f0f0,stroke-width:2px;
+linkStyle default fill:#f0f0f0,stroke-width:2px;
 ```
+
 
 ## II. GAIA AIR Project Overview
 
