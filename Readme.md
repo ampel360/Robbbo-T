@@ -4,7 +4,8 @@ The **Web-Based Generative Engineering Platform** is a revolutionary tool design
 
 ## **Web-Based Generative Engineering Platform**
 
----
+![image](https://github.com/user-attachments/assets/641ad10d-626a-4cd3-8b02-10caabfdb939)
+
 
 ### **1. Overview**
 The platform, powered by **e-WAYs by Gaia-Air**, is a cutting-edge solution for engineers across multiple domains. It enables users to input parameters, generate optimized designs, and interact with results in real-time. Built with modern technologies like **Next.js**, **React Three Fiber**, and **shadcn UI components**, it offers a seamless and intuitive user experience.
