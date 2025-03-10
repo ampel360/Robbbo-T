@@ -26,7 +26,6 @@ A novel approach that propagates information about potential future failures bac
 Retrocausal Flow:
 Future State (t+n) → Present Design Decisions (t) → Optimized Initial Conditions (t-m)
 
-```plaintext
 
 ### 2. QUBO Integration
 
@@ -52,13 +51,13 @@ The QIAO framework consists of three primary components:
 
 ## Example Application: Aerospace Component Optimization
 
-```
+
 
 Input: Design constraints, material properties, performance requirements
 Process: QUBO formulation → Quantum-inspired optimization → Retrocausal validation
 Output: Optimized component design with Pareto-optimal trade-offs
 
-```plaintext
+
 
 ## Results
 
@@ -93,15 +92,12 @@ GAIA AIR is at the forefront of developing advanced engineering solutions that c
 
 For more information about QIAO or to explore collaboration opportunities, please contact:
 
-- **Email**: info@gaia-air.com
-- **Website**: [www.gaia-air.com](https://www.gaia-air.com)
-- **GenEng.dev**: [www.geneng.dev](https://www.geneng.dev)
+- **Email**: amedeo.pelliccia@gmail.com
 
 ---
 
 © 2025 GAIA AIR Technologies. All rights reserved.
-```
-Here is the formatted markdown content for the `README.md` file:
+
 
 ---
 
