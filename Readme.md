@@ -179,48 +179,518 @@ nav_title: "Master Index"
 
 # GAIA AIR Master Index
 
-This document serves as the Master Index for the GAIA AIR project's documentation, organized according to the COAFI (Cosmic Omnidevelopable Aero Foresights Index) system.
+### **GAIA AIR - Estructura ATA Completa (8 Dígitos) - Avión Propulsado por Hidrógeno - VERSIÓN AMPLIADA**
+
+**Nota:**  Esta estructura ATA detalla **todos los capítulos ATA del 20 al 80** para el GAIA AIR propulsado por hidrógeno, con un **énfasis especial en el capítulo 71 (Powerplant)**, que se desglosa en sub-subsistemas del Q-01 Quantum Propulsion System.  Se incluyen ejemplos de DMs (Documentos de Mantenimiento) para algunos subcapítulos y se asegura la consistencia en la nomenclatura.
 
 ---
 
-## I. Introduction to COAFI
+*   **20 Standard Practices - Airframe (Prácticas Estándar - Célula - Adaptaciones para Hidrógeno)**
+    *   20-00 Standard Practices - Airframe - General (General - Adaptaciones Hidrógeno)
+        *   20-00-01  General Maintenance Practices - Hydrogen Aircraft (Prácticas Generales de Mantenimiento - Avión de Hidrógeno)
+        *   20-00-02  Material Handling - Hydrogen Compatible Materials (Manejo de Materiales - Materiales Compatibles con Hidrógeno)
+        *   20-00-03  Safety Procedures - Hydrogen Systems (Procedimientos de Seguridad - Sistemas de Hidrógeno)
+        *   20-00-04  Tooling - Hydrogen System Specific Tools (Herramientas - Herramientas Específicas para Sistemas de Hidrógeno)
+            *   [Ejemplo DM - Herramientas Especiales Hidrógeno](docs/ATA_20-00-04_TOOLING/M_ATA_20-00-04_Herramientas_Especiales_Hidrogeno.md)
+    *   20-05 Ground Handling - Hydrogen Specific (Manejo en Tierra - Específico para Hidrógeno)
+        *   20-05-01  Hydrogen Refueling Procedures (Procedimientos de Repostaje de Hidrógeno)
+            *   20-05-01-01 Cryogenic Refueling Connections - Hydrogen
+            *   20-05-01-02 Hydrogen Fuel Quality Checks - Ground
+        *   20-05-02  Hydrogen Leak Detection - Ground Operations (Detección de Fugas de Hidrógeno - Operaciones en Tierra)
+            *   20-05-02-01 Portable Hydrogen Leak Detectors
+            *   20-05-02-02 Ground Hydrogen Leak Check Procedures
+        *   20-05-03  Hydrogen System Purging and Venting - Ground (Purgado y Ventilación del Sistema de Hidrógeno - Tierra)
+            *   20-05-03-01 Hydrogen Venting Procedures - Safety
+            *   20-05-03-02 Purging Gas Specifications - Hydrogen Systems
+        *   20-05-04  Emergency Procedures - Hydrogen Ground Incidents (Procedimientos de Emergencia - Incidentes de Hidrógeno en Tierra)
+            *   20-05-04-01 Hydrogen Spill Response - Ground
+            *   20-05-04-02 Fire Suppression - Hydrogen Ground Fire
 
-The **Cosmic Omnidevelopable Aero Foresights Index (COAFI)** is a documentation framework designed specifically for the GAIA AIR project. It provides a structured, consistent, and scalable way to organize and manage the vast amount of technical information associated with this complex project.
+*   **21 Air Conditioning & Pressurization (Acondicionamiento de Aire y Presurización - Adaptaciones Térmicas Hidrógeno)**
+    *   21-00 Air Conditioning & Pressurization - General (General - Adaptaciones Hidrógeno)
+        *   21-00-01 Integration with Hydrogen Boil-Off Management (Integración con Gestión de Boil-Off de Hidrógeno)
+            *   21-00-01-01 Boil-Off Heat Exchanger Integration - AC System
+        *   21-00-02 Thermal Load Considerations - Hydrogen Systems (Consideraciones de Carga Térmica - Sistemas de Hidrógeno)
+            *   21-00-02-01 Cryogenic Tank Cooling Load - AC System
+    *   21-10 Air Supply (Suministro de Aire - Adaptaciones para Integración Boil-Off)
+        *   21-10-01 Boil-Off Air Integration - Description (Integración de Aire de Boil-Off - Descripción)
+            *   21-10-01-01 Boil-Off Air Ducting - AC System Integration
+        *   21-10-02 Boil-Off Air - Control and Distribution (Aire de Boil-Off - Control y Distribución)
+            *   21-10-02-01 Boil-Off Air Control Valves - AC System
+        *   21-10-03 Bleed Air System - Hydrogen Engine Adaptation (Sistema de Aire Sangrado - Adaptación Motor Hidrógeno)
+            *   21-10-03-01 Bleed Air Port - Hydrogen Engine Interface
+    *   21-20 Distribution (Distribución - Aislamiento para Boil-Off)
+        *   21-20-01 Insulated Ducting - Boil-Off Integration (Conductos Aislados - Integración Boil-Off)
+            *   21-20-01-01 Insulation - Boil-Off Air Ducts
+        *   21-20-02 Air Mix Zones - Hydrogen Thermal Management (Zonas de Mezcla de Aire - Gestión Térmica Hidrógeno)
+            *   21-20-02-01 Temperature Sensors - Hydrogen Thermal Zones
+    *   21-30 Pressurization Control (Control de Presurización - Consideraciones Generales Hidrógeno)
+        *   21-30-01 Hydrogen System Interface Review - Pressurization (Revisión de Interfaz del Sistema de Hidrógeno - Presurización)
+            *   21-30-01-01 Pressure Control Logic - Hydrogen System Interaction
 
-### Purpose of COAFI
+*   **22 Autopilot (Piloto Automático - Impacto Indirecto Mínimo)**
+    *   22-00 Autopilot - General (General - Impacto Indirecto Mínimo)
+        *   22-00-01 Autopilot System - General Review - Hydrogen Aircraft (Sistema de Piloto Automático - Revisión General - Avión de Hidrógeno)
+    *   22-10 Automatic Flight Control System (AFCS) (Sistema de Control Automático de Vuelo - Estándar)
+        *   22-10-01 AFCS Computer - Standard
+    *   22-20 Autothrottle System (Sistema de Acelerador Automático - Interfaz Motor Hidrógeno)
+        *   22-20-01 Autothrottle - Hydrogen Engine Interface (Interfaz Acelerador Automático - Motor Hidrógeno)
+            *   22-20-01-01 Thrust Command Signal - Hydrogen Engine
 
-- **Manage Complexity**: Streamline the large volume of technical data.  
-- **Ensure Consistency**: Offer uniform templates, naming conventions, and document codes.  
-- **Facilitate Collaboration**: Provide a single, coherent repository for all project documentation.  
-- **Efficient Searching**: Support cross-referencing and role-based filtering (“Views”).  
-- **Regulatory Support**: Aid in compliance with standards (S1000D, ATA chapters, etc.) and certification processes.
+*   **23 Communications (Comunicaciones - Impacto Indirecto Mínimo)**
+    *   23-00 Communications - General (General - Impacto Indirecto Mínimo)
+        *   23-00-01 Communication Systems - General Review - Hydrogen Aircraft (Sistemas de Comunicación - Revisión General - Avión de Hidrógeno)
+    *   23-10 VHF Communication (Comunicación VHF - Estándar)
+        *   23-10-01 VHF Transceivers - Standard
+    *   23-20 HF Communication (Comunicación HF - Estándar)
+        *   23-20-01 HF Transceivers - Standard
+    *   23-30 SATCOM (Comunicación SATCOM - Estándar)
+        *   23-30-01 SATCOM Units - Standard
+    *   23-40 Interphone System (Sistema de Interfono - Estándar)
+        *   23-40-01 Interphone Control Panels - Standard
 
-### Benefits of COAFI
+*   **24 Electrical Power (Potencia Eléctrica - Adaptaciones para Demandas de Hidrógeno)**
+    *   24-00 Electrical Power - General (General - Adaptaciones Hidrógeno)
+        *   24-00-01 Power Requirements - Hydrogen System Components (Requerimientos de Potencia - Componentes del Sistema de Hidrógeno)
+            *   24-00-01-01 Cryogenic Pump Power Demand
+            *   24-00-01-02 Boil-Off System Power Demand
+        *   24-00-02 Electrical Load Analysis - Hydrogen Propulsion (Análisis de Carga Eléctrica - Propulsión de Hidrógeno)
+            *   24-00-02-01 Total Electrical Load - Hydrogen Aircraft
+    *   24-10 Generation (Generación - Posible Integración Celdas Combustible)
+        *   24-10-01 Main Generators - Hydrogen Engine Driven (Generadores Principales - Accionados por Motor de Hidrógeno)
+            *   24-10-01-01 Generator Capacity - Hydrogen Engine
+        *   24-10-02 APU Generator - Standard or Hydrogen Fuel Cell (Generador APU - Estándar o Celda de Combustible de Hidrógeno)
+            *   24-10-02-01 APU Type Selection - Hydrogen or Conventional
+        *   24-10-03 Hydrogen Fuel Cell - Power Generation (Generación de Potencia - Celda de Combustible de Hidrógeno) (Si Aplica)
+            *   24-10-03-01 Fuel Cell Stack - Electrical Power Generation
+            *   24-10-03-02 Fuel Cell Control System - Power Management
+    *   24-20 Distribution (Distribución - Adaptaciones para Nuevas Cargas)
+        *   24-20-01 Power Distribution Network - Hydrogen System Loads (Red de Distribución de Potencia - Cargas del Sistema de Hidrógeno)
+            *   24-20-01-01 Hydrogen System Power Buses
+        *   24-20-02 Circuit Protection - Hydrogen System Circuits (Protección de Circuito - Circuitos del Sistema de Hidrógeno)
+            *   24-20-02-01 Circuit Breakers - Hydrogen System Circuits
+    *   24-30 Batteries (Baterías - Capacidad y Tipo - Demandas Hidrógeno)
+        *   24-30-01 Main Batteries - Capacity for Hydrogen Systems (Baterías Principales - Capacidad para Sistemas de Hidrógeno)
+            *   24-30-01-01 Battery Capacity Increase - Hydrogen Loads
+        *   24-30-02 Emergency Batteries - Hydrogen System Backup (Baterías de Emergencia - Respaldo del Sistema de Hidrógeno)
+            *   24-30-02-01 Emergency Power for Hydrogen Safety Systems
 
-1. **Modularity** – Each module is self-contained for easier updates.  
-2. **Scalability** – The framework grows with the project's complexity.  
-3. **Flexibility** – Adapts readily to shifting tech, project scope, or regulatory requirements.  
-4. **Discoverability** – Clear coding standards and references for quick information retrieval.  
-5. **Contextualization** – “Views” tailored for different user roles (engineer, manager, regulator, etc.).
+*   **25 Equipment/Furnishings (Equipamiento/Mobiliario - Impacto Indirecto Mínimo)**
+    *   25-00 Equipment/Furnishings - General (General - Impacto Indirecto Mínimo)
+        *   25-00-01 Cabin Equipment - General Review - Hydrogen Aircraft (Equipamiento de Cabina - Revisión General - Avión de Hidrógeno)
+    *   25-10 Cockpit Furnishings (Mobiliario de Cabina - Estándar)
+        *   25-10-01 Cockpit Seats - Standard
+    *   25-20 Cabin Furnishings (Mobiliario de Cabina de Pasajeros - Estándar)
+        *   25-20-01 Passenger Seats - Standard
+    *   25-30 Emergency Equipment (Equipamiento de Emergencia - Posible Adición por Hidrógeno)
+        *   25-30-01 Emergency Exit Lighting - Standard
+        *   25-30-02 Portable Oxygen - Standard
+        *   25-30-03 Hydrogen Leak Emergency Procedures - Cards (Si Aplica)
 
-**Note**: COAFI can interface with the **ATA Chapter** system for Part II (Air Vehicle Systems), bridging aircraft-specific documentation into the broader GAIA AIR repository.
+*   **26 Fire Protection (Protección Contra Incendios - Sistema Rediseñado para Hidrógeno)**
+    *   26-00 Fire Protection - General (General - Rediseño para Hidrógeno)
+        *   26-00-01 Hydrogen Fire Hazards - Analysis (Riesgos de Incendio de Hidrógeno - Análisis)
+            *   26-00-01-01 Hydrogen Flame Characteristics - Invisible Flame
+            *   26-00-01-02 Hydrogen Autoignition Temperature - Considerations
+        *   26-00-02 Fire Protection System - Hydrogen Specific Design (Sistema de Protección Contra Incendios - Diseño Específico para Hidrógeno)
+            *   26-00-02-01 System Architecture - Hydrogen Fire Protection
+    *   26-10 Detection System (Sistema de Detección - Detectores de Hidrógeno Específicos)
+        *   26-10-01 Hydrogen Leak Detectors - Engine Nacelle (Detectores de Fugas de Hidrógeno - Nacelle del Motor)
+            *   26-10-01-01 Detector Type - Catalytic Bead or Equivalent
+        *   26-10-02 Hydrogen Leak Detectors - Fuel Tank Area (Detectores de Fugas de Hidrógeno - Área del Tanque de Combustible)
+            *   26-10-02-01 Sensor Placement - Fuel Tank Vents
+        *   26-10-03 Hydrogen Flame Detectors - Combustion Zone (Detectores de Llama de Hidrógeno - Zona de Combustión)
+            *   26-10-03-01 UV/IR Flame Detectors - Hydrogen Compatible
+        *   26-10-04 Cabin Hydrogen Detectors (Detectores de Hidrógeno en Cabina) (Si Aplica)
+            *   26-10-04-01 Cabin Air Quality Sensors - Hydrogen Monitoring
+    *   26-20 Extinguishing System (Sistema de Extinción - Agentes Extintores para Hidrógeno)
+        *   26-20-01 Extinguishing Agents - Hydrogen Fires (Agentes Extintores - Incendios de Hidrógeno)
+            *   26-20-01-01 Dry Chemical Agents - Hydrogen Fire Suppression
+            *   26-20-01-02 Inert Gas Agents - Hydrogen Fire Suppression
+        *   26-20-02 Extinguishing System - Engine Nacelle - Hydrogen (Sistema de Extinción - Nacelle del Motor - Hidrógeno)
+            *   26-20-02-01 Nozzle Placement - Hydrogen Nacelle Fire
+        *   26-20-03 Extinguishing System - Fuel Tank Area - Hydrogen (Sistema de Extinción - Área del Tanque de Combustible - Hidrógeno)
+            *   26-20-03-01 Tank Area Fire Suppression - Hydrogen
+        *   26-20-04 Portable Extinguishers - Hydrogen Compatible (Extintores Portátiles - Compatibles con Hidrógeno)
+            *   26-20-04-01 Handheld Extinguishers - Hydrogen Rated
 
-For more details, see [COAFI Structure and Guidelines](Part0/coafi_structure.md).
+*   **27 Flight Controls (Controles de Vuelo - Adaptaciones de Interfaz con Motor Hidrógeno)**
+    *   27-00 Flight Controls - General (General - Interfaz Motor Hidrógeno)
+        *   27-00-01 Flight Control System - Hydrogen Engine Interface (Sistema de Control de Vuelo - Interfaz Motor Hidrógeno)
+            *   27-00-01-01 Engine Thrust Command Interface - Digital
+        *   27-00-02 Control Laws - Hydrogen Engine Response (Leyes de Control - Respuesta del Motor de Hidrógeno)
+            *   27-00-02-01 Thrust Response Characteristics - Hydrogen Engine
+    *   27-10 Primary Flight Controls (Controles de Vuelo Primarios - Sin Impacto Directo Hidrógeno)
+        *   27-10-01 Ailerons - Standard (Alerones - Estándar)
+        *   27-10-02 Elevators - Standard (Elevadores - Estándar)
+        *   27-10-03 Rudder - Standard (Timón - Estándar)
+    *   27-20 Secondary Flight Controls (Controles de Vuelo Secundarios - Sin Impacto Directo Hidrógeno)
+        *   27-20-01 Flaps - Standard (Flaps - Estándar)
+        *   27-20-02 Slats - Standard (Slats - Estándar)
+        *   27-20-03 Spoilers - Standard (Spoilers - Estándar)
+    *   27-30 High Lift & Drag Devices (Dispositivos de Alta Sustentación y Resistencia - Sin Impacto Directo Hidrógeno)
+        *   27-30-01 Flaps System - Standard (Sistema de Flaps - Estándar)
+        *   27-30-02 Slats System - Standard (Sistema de Slats - Estándar)
+        *   27-30-03 Spoilers System - Standard (Sistema de Spoilers - Estándar)
 
----
+*   **28 Fuel (Combustible - Transformación Completa a Hidrógeno)**
+    *   28-00 Fuel - General (General - Sistema de Hidrógeno Criogénico)
+        *   28-00-01 Hydrogen Fuel System - Overview (Sistema de Combustible de Hidrógeno - Visión General)
+            *   28-00-01-01 System Architecture - Cryogenic Hydrogen Fuel
+        *   28-00-02 Cryogenic Fuel System - Principles (Sistema de Combustible Criogénico - Principios)
+            *   28-00-02-01 Cryogenic Fluid Dynamics - Hydrogen
+        *   28-00-03 Hydrogen Safety - Fuel System Design (Seguridad del Hidrógeno - Diseño del Sistema de Combustible)
+            *   28-00-03-01 Safety Features - Hydrogen Fuel Tanks
+    *   28-10 Fuel Storage (Almacenamiento de Combustible - Tanques Criogénicos en Célula)
+        *   28-10-01 Hydrogen Fuel Tanks - Cryogenic Design (Tanques de Combustible de Hidrógeno - Diseño Criogénico)
+            *   28-10-01-01 Tank Material - Cryogenic Aluminum Alloy
+            *   28-10-01-02 Tank Shape - Optimized for Cryogenic Storage
+            *   [Ejemplo DM - Mantenimiento Tanque Hidrógeno](docs/ATA_28-10-01_FUEL_TANKS/M_ATA_28-10-01_Mantenimiento_Tanque_Hidrogeno.md)
+            *   [Ejemplo DM - IPC Tanque Hidrógeno](docs/ATA_28-10-01_FUEL_TANKS/IPC_ATA_28-10-01_Catalogo_Partes_Tanque_Hidrogeno.md)
+            *   [Ejemplo DM - BOM Tanque Hidrógeno](docs/ATA_28-10-01_FUEL_TANKS/BOM_ATA_28-10-01_Lista_Materiales_Tanque_Hidrogeno.md)
 
-## II. GAIA AIR Project Overview
+        *   28-10-02 Tank Insulation System - Vacuum and MLI (Sistema de Aislamiento del Tanque - Vacío y MLI)
+            *   28-10-02-01 Multi-Layer Insulation (MLI) - Hydrogen Tanks
+            *   28-10-02-02 Vacuum Pumping System - Tank Insulation
+        *   28-10-03 Tank Venting and Purging System - Hydrogen (Sistema de Ventilación y Purgado del Tanque - Hidrógeno)
+            *   28-10-03-01 Vent Valves - Hydrogen Gas Release
+            *   28-10-03-02 Purge Gas Supply - Inert Gas for Hydrogen
+        *   28-10-04 Tank Pressure Control System - Cryogenic (Sistema de Control de Presión del Tanque - Criogénico)
+            *   28-10-04-01 Pressure Relief Valves - Cryogenic Tanks
+            *   28-10-04-02 Pressure Control Regulators - Hydrogen
+        *   28-10-05 Tank Structural Integration - Airframe (Integración Estructural del Tanque - Célula)
+            *   28-10-05-01 Tank Mounting Structure - Wing Integration
+            *   28-10-05-02 Load Distribution - Hydrogen Tank Weight
+    *   28-20 Fuel Distribution (Distribución de Combustible - Sistema de Bombeo y Tuberías Criogénicas)
+        *   28-20-01 Cryogenic Fuel Pumps - High Pressure (Bombas de Combustible Criogénicas - Alta Presión)
+            *   28-20-01-01 Pump Type - Centrifugal Cryogenic Pump
+            *   28-20-01-02 Pump Motor - Cryogenic Rated
+        *   28-20-02 Vacuum Jacketed Fuel Lines - Insulation (Líneas de Combustible con Aislamiento de Vacío - Aislamiento)
+            *   28-20-02-01 Vacuum Jacket - Fuel Line Insulation
+            *   28-20-02-02 Line Material - Cryogenic Steel Alloy
+        *   28-20-03 Fuel Manifolds and Valves - Cryogenic Rated (Colectores y Válvulas de Combustible - Clasificación Criogénica)
+            *   28-20-03-01 Cryogenic Valves - Hydrogen Service
+            *   28-20-03-02 Manifold Design - Low Heat Leak
+        *   28-20-04 Fuel Filters - Cryogenic Compatibility (Filtros de Combustible - Compatibilidad Criogénica)
+            *   28-20-04-01 Filter Material - Cryogenic Compatible
+    *   28-30 Fuel Indicating (Indicación de Combustible - Sensores Criogénicos y de Hidrógeno)
+        *   28-30-01 Hydrogen Level Sensors - Cryogenic (Sensores de Nivel de Hidrógeno - Criogénicos)
+            *   28-30-01-01 Sensor Type - Capacitive Level Sensor
+        *   28-30-02 Hydrogen Temperature Sensors - Cryogenic (Sensores de Temperatura de Hidrógeno - Criogénicos)
+            *   28-30-02-01 Sensor Type - Cryogenic Thermocouple
+        *   28-30-03 Hydrogen Pressure Sensors - Cryogenic (Sensores de Presión de Hidrógeno - Criogénicos)
+            *   28-30-03-01 Sensor Type - Cryogenic Pressure Transducer
+        *   28-30-04 Fuel Quantity Indication - Hydrogen Specific (Indicación de Cantidad de Combustible - Específico para Hidrógeno)
+            *   28-30-04-01 Fuel Quantity Display - Cockpit - Hydrogen Units
 
-The **GAIA AIR** project is an ambitious effort to develop a next-generation aerospace platform, integrating:
+*   **29 Hydraulic Power (Potencia Hidráulica - Posibles Adaptaciones por Demandas Hidrógeno)**
+    *   29-00 Hydraulic Power - General (General - Adaptaciones Hidrógeno - Si Aplica)
+        *   29-00-01 Hydraulic System - Hydrogen System Demands Review (Sistema Hidráulico - Revisión de Demandas del Sistema de Hidrógeno)
+            *   29-00-01-01 Hydraulic Power Requirements - Hydrogen Components
+    *   29-10 Power Generation (Generación de Potencia - Bombas para Demandas Hidrógeno - Si Aplica)
+        *   29-10-01 Engine Driven Hydraulic Pumps - Standard (Bombas Hidráulicas Accionadas por Motor - Estándar)
+        *   29-10-02 Electric Hydraulic Pumps - Hydrogen System Support (Bombas Hidráulicas Eléctricas - Soporte del Sistema de Hidrógeno) (Si Aplica)
+            *   29-10-02-01 Electric Pump Specification - Hydrogen System
+    *   29-20 Power Distribution (Distribución de Potencia - Adaptaciones de Circuito - Si Aplica)
+        *   29-20-01 Hydraulic Circuits - Hydrogen System Actuation (Circuitos Hidráulicos - Actuación del Sistema de Hidrógeno) (Si Aplica)
+            *   29-20-01-01 Hydraulic Actuators - Hydrogen System Valves
 
-- **GAIA PULSE (Quantum Propulsion)** – Revolutionizing propulsion with unparalleled efficiency.  
-- **GAIA CONTROL (AI-Powered Flight Control)** – Advanced autonomous flight systems.  
-- **GAIA FAB (Sustainable Materials)** – Lightweight, eco-friendly materials in airframe and propulsion.  
-- **GAIA SPACE (Orbital/Deep-Space Ops)** – Extending flight capabilities from atmospheric to orbital and beyond.  
-- **ARQC (Autoenergetic Regenerative Quantum Computing)** – Improves computational efficiency, minimizes resource usage.  
-- **Quantum Displays** – Ultra-efficient, self-sustaining display technologies with minimal energy draw.
+*   **30 Ice and Rain Protection (Protección Contra Hielo y Lluvia - Impacto Indirecto Mínimo)**
+    *   30-00 Ice and Rain Protection - General (General - Impacto Indirecto Mínimo)
+        *   30-00-01 Ice Protection System - General Review - Hydrogen Aircraft (Sistema de Protección Contra Hielo - Revisión General - Avión de Hidrógeno)
+    *   30-10 Airframe Ice Protection (Protección Contra Hielo de la Célula - Sin Impacto Directo Hidrógeno)
+        *   30-10-01 Wing Ice Protection - Standard (Protección Contra Hielo de Ala - Estándar)
+        *   30-10-02 Empennage Ice Protection - Standard (Protección Contra Hielo del Empenaje - Estándar)
+    *   30-20 Engine Ice Protection (Protección Contra Hielo del Motor - Adaptaciones Menores - Si Aplica)
+        *   30-20-01 Engine Inlet Ice Protection - Hydrogen Engine Adaptation (Protección Contra Hielo de la Entrada del Motor - Adaptación Motor Hidrógeno) (Si Aplica)
+            *   30-20-01-01 Inlet Heating System - Hydrogen Engine
 
-**Project Scope**: Covers everything from design and manufacturing to flight operations, maintenance, orbital transport, and deep-space exploration. The goal is to set a new standard for sustainability, performance, and innovation in aerospace.
+*   **31 Indicating/Recording Systems (Sistemas de Indicación/Registro - Nuevos Parámetros de Hidrógeno)**
+    *   31-00 Indicating/Recording Systems - General (General - Parámetros Hidrógeno)
+        *   31-00-01 Instrumentation System - Hydrogen Parameters Integration (Sistema de Instrumentación - Integración de Parámetros de Hidrógeno)
+            *   31-00-01-01 Cockpit Display System - Hydrogen Data
+        *   31-00-02 Recording System - Hydrogen Data Channels (Sistema de Registro - Canales de Datos de Hidrógeno)
+            *   31-00-02-01 FDR Channels - Hydrogen System Parameters
+    *   31-10 Instrument Systems (Sistemas de Instrumentos - Indicadores de Hidrógeno en Cabina)
+        *   31-10-01 Engine Instruments - Hydrogen Specific Parameters (Instrumentos de Motor - Parámetros Específicos de Hidrógeno)
+            *   31-10-01-01 Hydrogen Fuel Flow Indicator
+            *   31-10-02 Hydrogen Combustion Efficiency Indicator (Si Aplica)
+        *   31-10-02 Fuel System Instruments - Hydrogen Levels/Pressure/Temp (Instrumentos del Sistema de Combustible - Niveles/Presión/Temp de Hidrógeno)
+            *   31-10-02-01 Hydrogen Tank Level Indicator
+            *   31-10-02-02 Hydrogen Tank Pressure Indicator
+            *   31-10-02-03 Hydrogen Tank Temperature Indicator
+        *   31-10-03 Hydrogen Leak Detection Indicators - Cabin Display (Indicadores de Detección de Fugas de Hidrógeno - Display en Cabina)
+            *   31-10-03-01 Hydrogen Leak Warning Lights - Cockpit
+    *   31-20 Recording Systems (Sistemas de Registro - FDR/CVR - Canales de Datos Hidrógeno)
+        *   31-20-01 Flight Data Recorder (FDR) - Hydrogen Data Channels (Registrador de Datos de Vuelo (FDR) - Canales de Datos de Hidrógeno)
+            *   31-20-01-01 Hydrogen Fuel Parameters - FDR Channels
+            *   [Ejemplo DM - FDR Hidrógeno](docs/ATA_31-20-01_FDR/C_ATA_31-20-01_Correctivo_FDR_Hidrogeno.md)
+        *   31-20-02 Cockpit Voice Recorder (CVR) - Standard (Registrador de Voz de Cabina (CVR) - Estándar)
+
+*   **32 Landing Gear (Tren de Aterrizaje - Impacto Indirecto Mínimo - Peso)**
+    *   32-00 Landing Gear - General (General - Consideraciones de Peso Hidrógeno)
+        *   32-00-01 Landing Gear System - Weight Impact - Hydrogen Fuel (Sistema de Tren de Aterrizaje - Impacto de Peso - Combustible de Hidrógeno)
+            *   32-00-01-01 Landing Gear Load Capacity - Hydrogen Aircraft
+    *   32-10 Main Landing Gear (Tren de Aterrizaje Principal - Estándar)
+        *   32-10-01 Main Landing Gear Structure - Standard (Estructura del Tren de Aterrizaje Principal - Estándar)
+        *   32-10-02 Main Landing Gear Brakes - Standard (Frenos del Tren de Aterrizaje Principal - Estándar)
+    *   32-20 Nose Landing Gear (Tren de Aterrizaje Delantero - Estándar)
+        *   32-20-01 Nose Landing Gear Structure - Standard (Estructura del Tren de Aterrizaje Delantero - Estándar)
+        *   32-20-02 Nose Landing Gear Steering - Standard (Dirección del Tren de Aterrizaje Delantero - Estándar)
+    *   32-30 Extension & Retraction System (Sistema de Extensión y Retracción - Estándar)
+        *   32-30-01 Landing Gear Actuation System - Standard (Sistema de Actuación del Tren de Aterrizaje - Estándar)
+
+*   **33 Lights (Luces - Posibles Luces de Seguridad Hidrógeno)**
+    *   33-00 Lights - General (General - Posibles Luces Seguridad Hidrógeno)
+        *   33-00-01 Lighting System - Hydrogen Safety Considerations (Sistema de Iluminación - Consideraciones de Seguridad de Hidrógeno)
+            *   33-00-01-01 Safety Lighting - Hydrogen Handling Areas
+        *   33-00-02 Exterior Lighting - Standard (Iluminación Exterior - Estándar)
+    *   33-10 Exterior Lights (Luces Exteriores - Estándar)
+        *   33-10-01 Navigation Lights - Standard (Luces de Navegación - Estándar)
+        *   33-10-02 Landing Lights - Standard (Luces de Aterrizaje - Estándar)
+    *   33-20 Interior Lights (Luces Interiores - Posibles Luces de Advertencia Hidrógeno)
+        *   33-20-01 Cockpit Lights - Standard (Luces de Cabina - Estándar)
+        *   33-20-02 Cabin Lights - Standard (Luces de Cabina de Pasajeros - Estándar)
+        *   33-20-03 Hydrogen Leak Warning Lights - Cabin (Luces de Advertencia de Fugas de Hidrógeno - Cabina) (Si Aplica)
+            *   33-20-03-01 Hydrogen Leak Indication Lights - Passenger Cabin
+
+*   **34 Navigation (Navegación - Impacto Indirecto Mínimo)**
+    *   34-00 Navigation - General (General - Impacto Indirecto Mínimo)
+        *   34-00-01 Navigation Systems - General Review - Hydrogen Aircraft (Sistemas de Navegación - Revisión General - Avión de Hidrógeno)
+    *   34-10 Inertial Reference System (IRS) (Sistema de Referencia Inercial (IRS) - Estándar)
+        *   34-10-01 IRS Units - Standard (Unidades IRS - Estándar)
+    *   34-20 Global Positioning System (GPS) (Sistema de Posicionamiento Global (GPS) - Estándar)
+        *   34-20-01 GPS Receivers - Standard (Receptores GPS - Estándar)
+
+*   **35 Oxygen (Oxígeno - Impacto Indirecto Mínimo)**
+    *   35-00 Oxygen - General (General - Impacto Indirecto Mínimo)
+        *   35-00-01 Oxygen Systems - General Review - Hydrogen Aircraft (Sistemas de Oxígeno - Revisión General - Avión de Hidrógeno)
+    *   35-10 Crew Oxygen System (Sistema de Oxígeno de la Tripulación - Estándar)
+        *   35-10-01 Crew Oxygen Masks - Standard (Máscaras de Oxígeno de la Tripulación - Estándar)
+    *   35-20 Passenger Oxygen System (Sistema de Oxígeno de Pasajeros - Estándar)
+        *   35-20-01 Passenger Oxygen Masks - Standard (Máscaras de Oxígeno de Pasajeros - Estándar)
+
+*   **36 Pneumatic (Neumático - Posibles Adaptaciones por Motor Hidrógeno)**
+    *   36-00 Pneumatic - General (General - Adaptaciones Motor Hidrógeno - Si Aplica)
+        *   36-00-01 Pneumatic System - Hydrogen Engine Interface Review (Sistema Neumático - Revisión de Interfaz con Motor de Hidrógeno)
+            *   36-00-01-01 Pneumatic System Redesign - Hydrogen Engine
+    *   36-10 Air Supply (Suministro de Aire - Fuente de Aire Neumático - Adaptaciones)
+        *   36-10-01 Bleed Air - Hydrogen Engine Source Adaptation (Aire Sangrado - Adaptación de Fuente del Motor de Hidrógeno) (Si Aplica)
+            *   36-10-01-01 Bleed Air Characteristics - Hydrogen Engine
+        *   36-10-02 APU Air Supply - Standard or Adapted (Suministro de Aire APU - Estándar o Adaptado)
+            *   36-10-02-01 APU Pneumatic Output - Hydrogen Aircraft
+    *   36-20 Distribution (Distribución - Adaptaciones Menores - Si Aplica)
+        *   36-20-01 Pneumatic Distribution Network - Standard (Posibles Adaptaciones Menores) (Red de Distribución Neumática - Estándar (Posibles Adaptaciones Menores))
+            *   36-20-01-01 Pneumatic Lines - Hydrogen System Interface
+
+*   **37 Vacuum System (Sistema de Vacío -  Potencialmente Relevante para Q-01)**
+    *   37-00 Vacuum System - General (General - Sistema de Vacío para Q-01)
+        *   37-00-01 Vacuum System - Q-01 Integration (Sistema de Vacío - Integración con Q-01)
+            *   37-00-01-01 Vacuum Requirements - Quantum State Modulator
+            *   37-00-01-02 Vacuum Levels - Quantum Entanglement Engine
+    *   37-10 Vacuum Generation (Generación de Vacío - Bombas de Vacío para Q-01)
+        *   37-10-01 Vacuum Pumps - Q-01 System (Bombas de Vacío - Sistema Q-01)
+            *   37-10-01-01 Pump Type - Cryogenic Vacuum Pump
+            *   37-10-01-02 Pump Capacity - Q-01 Requirements
+    *   37-20 Vacuum Distribution (Distribución de Vacío - Red de Vacío para Q-01)
+        *   37-20-01 Vacuum Lines - Q-01 System (Líneas de Vacío - Sistema Q-01)
+            *   37-20-01-01 Line Material - Vacuum Compatible
+            *   37-20-01-02 Line Insulation - Thermal Considerations
+    *   37-30 Vacuum Indicating (Indicación de Vacío - Sensores y Monitores para Q-01)
+        *   37-30-01 Vacuum Sensors - Q-01 System (Sensores de Vacío - Sistema Q-01)
+            *   37-30-01-01 Sensor Type - High Vacuum Sensor
+            *   37-30-01-02 Sensor Placement - QSM/QEE
+        *   37-30-02 Vacuum Gauges - Cockpit Display (Indicadores de Vacío - Display en Cabina)
+            *   37-30-02-01 Vacuum Level Display - Q-01 System
+
+*   **38 Water/Waste (Agua/Residuos - Impacto Indirecto Mínimo)**
+    *   38-00 Water/Waste - General (General - Impacto Indirecto Mínimo)
+        *   38-00-01 Water and Waste Systems - General Review - Hydrogen Aircraft (Sistemas de Agua y Residuos - Revisión General - Avión de Hidrógeno)
+    *   38-10 Water System (Sistema de Agua - Estándar)
+        *   38-10-01 Water Tanks - Standard (Tanques de Agua - Estándar)
+    *   38-20 Waste System (Sistema de Residuos - Estándar)
+        *   38-20-01 Waste Tanks - Standard (Tanques de Residuos - Estándar)
+
+*   **49 Airborne Auxiliary Power (Potencia Auxiliar en Vuelo - APU - Posible Adaptación a Hidrógeno)**
+    *   49-00 Airborne Auxiliary Power - General (General - APU de Hidrógeno - Posible)
+        *   49-00-01 APU System - Hydrogen Fuel Cell Option (Sistema APU - Opción de Celda de Combustible de Hidrógeno)
+            *   49-00-01-01 APU Technology Selection - Hydrogen vs Conventional
+        *   49-00-02 APU System - Conventional Fuel Option (Sistema APU - Opción de Combustible Convencional)
+            *   49-00-02-01 Conventional APU Integration - Hydrogen Aircraft
+    *   49-10 APU System (Sistema APU - APU Convencional o de Hidrógeno)
+        *   49-10-01 APU Engine - Conventional Turbine (APU Motor - Turbina Convencional) (Si Aplica)
+            *   49-10-01-01 Conventional APU Performance - Standard
+        *   49-10-02 APU Fuel Cell Stack - Hydrogen (Pila de Celdas de Combustible APU - Hidrógeno) (Si Aplica)
+            *   49-10-02-01 Hydrogen Fuel Cell APU - Power Output
+        *   49-10-03 APU Hydrogen Fuel Supply (Suministro de Combustible de Hidrógeno APU) (Si Aplica)
+            *   49-10-03-01 Hydrogen Fuel Line - APU Supply
+    *   49-20 APU Controls (Controles APU - Controles Adaptados a Tipo de APU)
+        *   49-20-01 APU Control Panel - Conventional APU (Panel de Control APU - APU Convencional) (Si Aplica)
+        *   49-20-02 APU Control Panel - Hydrogen Fuel Cell APU (Panel de Control APU - APU Celda de Combustible de Hidrógeno) (Si Aplica)
+            *   49-20-02-01 Fuel Cell APU Control Logic - Hydrogen
+
+*   **51-57 Structures (Estructuras - Adaptaciones Estructurales por Tanques Hidrógeno)**
+    *   51-00 Structures - General (General - Adaptaciones Estructurales Hidrógeno)
+        *   51-00-01 Airframe Structure - Hydrogen Tank Integration (Estructura de la Célula - Integración de Tanques de Hidrógeno)
+            *   51-00-01-01 Structural Reinforcements - Tank Mounting
+        *   51-00-02 Material Selection - Cryogenic Temperatures (Selección de Materiales - Temperaturas Criogénicas)
+            *   51-00-02-01 Cryogenic Material Specifications - Airframe
+    *   52 Doors (Puertas - Sin Impacto Directo Hidrógeno)
+        *   52-00 Doors - General - Standard (Puertas - General - Estándar)
+    *   53 Fuselage (Fuselaje - Adaptaciones para Tanques Criogénicos)
+        *   53-00 Fuselage - General (General - Adaptaciones Tanques Hidrógeno)
+            *   53-00-01 Fuselage Structure - Cryogenic Tank Integration Zone (Estructura del Fuselaje - Zona de Integración de Tanques Criogénicos)
+                *   53-00-01-01 Tank Bay Structure - Hydrogen Tanks
+            *   53-00-02 Thermal Barrier - Fuselage Structure (Barrera Térmica - Estructura del Fuselaje)
+                *   53-00-02-01 Thermal Shielding - Fuselage Panels
+    *   54 Nacelles/Pylons (Nacelles/Pylons - Adaptaciones Menores - Motor Hidrógeno)
+        *   54-00 Nacelles/Pylons - General (General - Adaptaciones Menores Motor H2)
+            *   54-00-01 Nacelle Structure - Hydrogen Engine Compatibility (Estructura de la Nacelle - Compatibilidad con Motor de Hidrógeno)
+                *   54-00-01-01 Nacelle Aerodynamics - Hydrogen Engine Integration
+    *   55 Stabilizers (Estabilizadores - Sin Impacto Directo Hidrógeno)
+        *   55-00 Stabilizers - General - Standard (Estabilizadores - General - Estándar)
+    *   57 Wings (Alas - Adaptaciones para Tanques Criogénicos)
+        *   57-00 Wings - General (General - Adaptaciones Tanques Hidrógeno)
+            *   57-00-01 Wing Structure - Cryogenic Tank Integration Zone (Estructura Alar - Zona de Integración de Tanques Criogénicos)
+                *   57-00-01-01 Wing Box Reinforcements - Hydrogen Tanks
+            *   57-00-02 Wing Thermal Management - Tank Integration (Gestión Térmica Alar - Integración de Tanques)
+                *   57-00-02-01 Wing Skin Temperature Monitoring - Hydrogen Tanks
+
+*   **70-80 Powerplant - Q-01 Quantum Propulsion System (Grupo Motopropulsor - Sistema de Propulsión Cuántica Q-01 - DETALLE COMPLETO)**
+    *   **71 Powerplant - Q-01 Installation (Instalación del Q-01)**
+        *   71-00 Powerplant - Q-01 - General (General - Q-01)
+            *   71-00-01 Q-01 System Overview - Installation (Visión General del Sistema Q-01 - Instalación)
+        *   71-10 QSM - Quantum State Modulator (QSM - Modulador de Estado Cuántico)
+            *   71-10-01 QSM Mounting Structure (Estructura de Montaje del QSM)
+            *   71-10-02 QSM Thermal Interface (Interfaz Térmica del QSM)
+            *   71-10-03 QSM Electrical Connections (Conexiones Eléctricas del QSM)
+            *   [Ejemplo DM - Mantenimiento QSM](docs/ATA_71-10_QSM/M_ATA_71-10_Mantenimiento_QSM.md)
+            *   [Ejemplo DM - Troubleshooting QSM](docs/ATA_71-10_QSM/T_ATA_71-10_Troubleshooting_QSM.md)
+        *   71-20 QEE - Quantum Entanglement Engine (QEE - Motor de Entrelazamiento Cuántico)
+            *   71-20-01 QEE Mounting Structure (Estructura de Montaje del QEE)
+            *   71-20-02 QEE Vacuum Interface (Interfaz de Vacío del QEE)
+            *   71-20-03 QEE Control Interfaces (Interfaces de Control del QEE)
+        *   71-30 CCS - Cryogenic Cooling System (CCS - Sistema de Enfriamiento Criogénico)
+            *   71-30-01 CCS Coolant Lines (Líneas de Refrigerante del CCS)
+            *   71-30-02 CCS Control Unit (Unidad de Control del CCS)
+            *   71-30-03 CCS Heat Exchangers (Intercambiadores de Calor del CCS)
+        *   71-40 Energy Conversion System (ECS) (Sistema de Conversión de Energía) (Si Aplica)
+            *   71-40-01 ECS Power Converters (Convertidores de Potencia del ECS)
+            *   71-40-02 ECS Energy Distribution (Distribución de Energía del ECS)
+        *   71-50 Control System - Q-01 Control (Sistema de Control - Control del Q-01)
+            *   71-50-01 Q-01 FADEC - Quantum Propulsion Control (FADEC del Q-01 - Control de Propulsión Cuántica)
+            *   71-50-02 Q-01 System Monitoring (Monitorización del Sistema Q-01)
+        *   71-90 Powerplant - Q-01 - Additional Information (Información Adicional - Q-01)
+            *   71-90-01 Q-01 System Schematics (Esquemas del Sistema Q-01)
+            *   71-90-02 Q-01 Performance Data (Datos de Rendimiento del Q-01)
+
+    *   **72 Engine - Q-01 Quantum Propulsion Engine (Motor - Motor de Propulsión Cuántica Q-01)**
+        *   *Nota:  El capítulo 72 se centra en los componentes internos del Q-01.  Debido a la naturaleza teórica y avanzada del Q-01, el desglose a 8 dígitos aquí es más conceptual y representativo de los posibles subsistemas internos de un motor de propulsión cuántica hipotético.*
+        *   72-00 Engine - Q-01 - General (General - Q-01)
+            *   72-00-01 Q-01 Engine - System Description (Motor Q-01 - Descripción del Sistema)
+        *   72-10 Quantum State Modulator (QSM) - Engine Core (Modulador de Estado Cuántico - Núcleo del Motor)
+            *   72-10-01 QSM Core Unit (Unidad Central del QSM)
+                *   72-10-01-01 Quantum Field Stabilizer - QSM Core
+                *   72-10-01-02 State Transition Matrix - QSM Core
+            *   72-10-02 QSM Control Electronics (Electrónica de Control del QSM)
+                *   72-10-02-01 Quantum Control Processor - QSM
+                *   72-10-02-02 Feedback Control System - QSM
+        *   72-20 Quantum Entanglement Engine (QEE) - Propulsion Unit (Motor de Entrelazamiento Cuántico - Unidad de Propulsión)
+            *   72-20-01 QEE Entanglement Chamber (Cámara de Entrelazamiento del QEE)
+                *   72-20-01-01 Entanglement Field Generator - QEE
+                *   72-20-01-02 Containment Field - QEE Chamber
+            *   72-20-02 QEE Energy Extraction System (Sistema de Extracción de Energía del QEE)
+                *   72-20-02-01 Zero-Point Energy Tap - QEE
+                *   72-20-02-02 Vacuum Fluctuation Converter - QEE
+        *   72-30 Cryogenic Cooling System (CCS) - Engine Cooling (Sistema de Enfriamiento Criogénico - Enfriamiento del Motor)
+            *   72-30-01 CCS Coolant Pump - Engine (Bomba de Refrigerante del CCS - Motor)
+                *   72-30-01-01 Cryogenic Coolant Circulation - Engine
+                *   72-30-01-02 Pump Control System - CCS Engine
+            *   72-30-02 CCS Heat Exchanger - Engine (Intercambiador de Calor del CCS - Motor)
+                *   72-30-02-01 Heat Rejection System - CCS Engine
+                *   72-30-02-02 Thermal Management - Q-01 Engine
+        *   72-40 Energy Conversion System (ECS) - Engine Power (Sistema de Conversión de Energía - Potencia del Motor) (Si Aplica)
+            *   72-40-01 ECS Power Converter - Engine (Convertidor de Potencia del ECS - Motor)
+                *   72-40-01-01 Energy Conversion Unit - ECS Engine
+                *   72-40-01-02 Power Regulation - ECS Engine
+            *   72-40-02 ECS Power Output - Engine (Salida de Potencia del ECS - Motor)
+                *   72-40-02-01 Power Interface - Aircraft Systems
+                *   72-40-02-02 Power Distribution - Engine ECS
+
+    *   **73 Engine Fuel & Control - Q-01 Control System (Control de Combustible y Motor - Sistema de Control Q-01)**
+        *   73-00 Engine Fuel & Control - Q-01 - General (General - Q-01)
+            *   73-00-01 Q-01 Control System - Overview (Sistema de Control Q-01 - Visión General)
+        *   73-10 Q-01 Thrust Control (Control de Empuje - Q-01)
+            *   73-10-01 Thrust Demand Processing - Q-01 (Procesamiento de Demanda de Empuje - Q-01)
+            *   73-10-02 Q-01 Thrust Modulation System (Sistema de Modulación de Empuje - Q-01)
+        *   73-20 Q-01 Power Management (Gestión de Potencia - Q-01)
+            *   73-20-01 Q-01 Power Distribution Control (Control de Distribución de Potencia - Q-01)
+            *   73-20-02 Q-01 Energy Balance Management (Gestión de Balance de Energía - Q-01)
+        *   73-30 Q-01 System Monitoring & Diagnostics (Monitorización y Diagnóstico del Sistema Q-01)
+            *   73-30-01 Q-01 Health Monitoring System (Sistema de Monitorización de Salud del Q-01)
+            *   73-30-02 Q-01 Diagnostic Data Output (Salida de Datos de Diagnóstico del Q-01)
+            *   [Ejemplo DM - Troubleshooting Q-01](docs/ATA_73-30_CONTROL_Q01/T_ATA_73-30_Troubleshooting_Control_Q01.md)
+
+    *   **74 Ignition/Starting System - Q-01 Activation (Sistema de Ignición/Arranque - Activación del Q-01)**
+        *   74-00 Ignition/Starting - Q-01 - General (General - Q-01)
+            *   74-00-01 Q-01 Activation System - Overview (Sistema de Activación del Q-01 - Visión General)
+        *   74-10 Q-01 Activation Sequence (Secuencia de Activación del Q-01)
+            *   74-10-01 QSM Initialization Sequence (Secuencia de Inicialización del QSM)
+            *   74-10-02 QEE Startup Sequence (Secuencia de Arranque del QEE)
+        *   74-20 Q-01 Deactivation Sequence (Secuencia de Desactivación del Q-01)
+            *   74-20-01 QSM Shutdown Sequence (Secuencia de Apagado del QSM)
+            *   74-20-02 QEE Standby Mode (Modo de Espera del QEE)
+
+    *   **76 Engine Controls - Q-01 System Controls (Controles de Motor - Controles del Sistema Q-01)**
+        *   76-00 Engine Controls - Q-01 - General (General - Q-01)
+            *   76-00-01 Q-01 Control Interfaces - Cockpit (Interfaces de Control del Q-01 - Cabina)
+        *   76-10 Thrust Control - Q-01 (Control de Empuje - Q-01)
+            *   76-10-01 Thrust Lever Input - Q-01 System (Entrada de Palanca de Empuje - Sistema Q-01)
+            *   76-10-02 Thrust Mode Selection - Q-01 (Selección de Modo de Empuje - Q-01)
+        *   76-20 Emergency Shutdown - Q-01 (Apagado de Emergencia - Q-01)
+            *   76-20-01 Emergency Stop Procedure - Q-01 (Procedimiento de Parada de Emergencia - Q-01)
+            *   76-20-02 System Override - Q-01 Emergency (Anulación del Sistema - Emergencia Q-01)
+
+    *   **77 Engine Indicating - Q-01 System Indication (Indicación de Motor - Indicación del Sistema Q-01)**
+        *   77-00 Engine Indicating - Q-01 - General (General - Q-01)
+            *   77-00-01 Q-01 System Parameters - Cockpit Display (Parámetros del Sistema Q-01 - Display en Cabina)
+        *   77-10 Power Indicating - Q-01 (Indicación de Potencia - Q-01)
+            *   77-10-01 Q-01 Thrust Level Indication (Indicación de Nivel de Empuje - Q-01)
+            *   77-10-02 Q-01 Power Output Indication (Indicación de Salida de Potencia - Q-01)
+        *   77-20 Temperature Indicating - Q-01 (Indicación de Temperatura - Q-01)
+            *   77-20-01 CCS Coolant Temperature Indication (Indicación de Temperatura del Refrigerante CCS)
+            *   77-20-02 QSM/QEE Operating Temperature Indication (Indicación de Temperatura de Operación QSM/QEE)
+        *   77-30 System Status Indicating - Q-01 (Indicación de Estado del Sistema - Q-01)
+            *   77-30-01 QSM Status Indication (Indicación de Estado del QSM)
+            *   77-30-02 QEE Status Indication (Indicación de Estado del QEE)
+            *   77-30-03 CCS Status Indication (Indicación de Estado del CCS)
+            *   [Ejemplo DM - Correctivo Indicadores Q-01](docs/ATA_77-30_INDICATING_Q01/C_ATA_77-30_Correctivo_Indicadores_Q01.md)
+
+    *   **78 Exhaust System - Q-01 Energy Release (Sistema de Escape - Liberación de Energía Q-01)**
+        *   78-00 Exhaust System - Q-01 - General (General - Q-01)
+            *   78-00-01 Q-01 Energy Release System - Overview (Sistema de Liberación de Energía Q-01 - Visión General)
+        *   78-10 Energy Collector/Release Nozzle (Colector de Energía/Tobera de Liberación)
+            *   78-10-01 Energy Release Nozzle - Q-01 (Tobera de Liberación de Energía - Q-01)
+            *   78-10-02 Energy Collector - Q-01 System (Colector de Energía - Sistema Q-01)
+        *   78-30 Thrust Vectoring (Vectorización de Empuje) (Si Aplica)
+            *   78-30-01 Thrust Vectoring Nozzle - Q-01 (Tobera de Vectorización de Empuje - Q-01)
+            *   78-30-02 Vectoring Control System - Q-01 (Sistema de Control de Vectorización - Q-01)
+
+    *   **79 Oil System -  *No Aplica* (Sistema de Aceite - No Aplica para Q-01)**
+        *   *Nota: El sistema de aceite (ATA 79) es típicamente para motores de turbina convencionales.  Para el sistema de propulsión cuántica Q-01, este capítulo **no sería aplicable**, ya que no utiliza lubricación con aceite de la misma manera.  Se mantiene el capítulo 79 en la estructura ATA por completitud, pero se indica que no aplica al Q-01.*
+        *   79-00 Oil System - Q-01 - General (General - Q-01)
+            *   79-00-01 Oil System - Not Applicable to Q-01 (Sistema de Aceite - No Aplicable a Q-01)
+
+    *   **80 Starting System - Q-01 Activation System (Sistema de Arranque - Sistema de Activación Q-01)**
+        *   80-00 Starting System - Q-01 - General (General - Q-01)
+            *   80-00-01 Starting System - Q-01 Activation (Sistema de Arranque - Activación Q-01)
+        *   80-10 Cranking System - Q-01 Activation (Sistema de Giro - Activación Q-01)
+            *   80-10-01 Activation Initiator - Q-01 (Iniciador de Activación - Q-01)
+            *   80-10-02 Activation Control Unit - Q-01 (Unidad de Control de Activación - Q-01)
+
+
+**Nota Final - Estructura ATA Ampliada y Completa:**
+
 
 ---
 
