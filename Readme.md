@@ -4,7 +4,8 @@ https://v0-aircraft-quantum-system.vercel.app/
 
 # QIAO: Quantum-Inspired Aerospace Optimization
 
-![image](https://github.com/user-attachments/assets/c2d837c1-1077-4ca1-b925-0ce54f8bccf9)
+![image](https://github.com/user-attachments/assets/34dc6de8-ea60-439c-9386-eed95e2caed3)
+
 
 ## The First Real Case Functional Algorithm Generated on GenEng.dev
 
