@@ -487,7 +487,25 @@ linkStyle default fill:#f0f0f0,stroke-width:2px;
 
 ## II. GAIA AIR Project Overview
 
-The GAIA AIR project is an ambitious initiative to develop a next-generation aerospace platform integrating [COMPLETAR: Briefly describe GAIA AIR's key features, e.g., quantum propulsion, AI-powered flight control, sustainable materials, and space operations capabilities]. The project encompasses all aspects of aerospace development, from initial design and manufacturing to flight operations, maintenance, and even extends to orbital transport and deep-space operations.
+**GAIA AIR** is envisioned as a **next-generation aerospace platform** that seamlessly blends cutting-edge technologies with a commitment to **sustainability** and **operational versatility**. Some of its standout features include:
+
+1. **Quantum Propulsion**  
+   - **Breakthrough Efficiency**: Utilizes emergent quantum-field effects to achieve ultra-low fuel consumption and extended range.  
+   - **Reduced Emissions**: Minimizes carbon footprint, aligning with global environmental goals.
+
+2. **AI-Powered Flight Control**  
+   - **Adaptive Autonomy**: Employs advanced machine learning algorithms to dynamically adjust flight parameters for safety and efficiency.  
+   - **Predictive Diagnostics**: Continuously monitors system health, anticipating potential failures before they impact operations.
+
+3. **Sustainable Materials**  
+   - **Eco-Friendly Construction**: Employs high-strength, lightweight composites derived from renewable sources.  
+   - **Lifecycle Focus**: Components are designed for recyclability, reducing waste over the aircraft’s service life.
+
+4. **Space Operations Capabilities**  
+   - **High-Altitude Performance**: Engineered to sustain near-space flight profiles, suitable for suborbital missions.  
+   - **Modular Design**: Allows rapid reconfiguration for cargo, crewed missions, or scientific payloads targeting low Earth orbit.
+
+Through these innovations, **GAIA AIR** aims to pioneer a new era of **green aviation** and **multidomain air–space operations**, setting a benchmark for performance, safety, and environmental responsibility.
 
 ## III. COAFI Documentation Structure
 
@@ -513,8 +531,114 @@ The COAFI structure is organized into the following Parts:
 Each document within COAFI has a unique code:
 
 `[Part Code]-[System Code]-[Subsystem Code]-[Document Type Code]-[Serial Number]-[Revision Code]`
+Aquí tienes el documento estructurado **XI-IP-OV-001-A.md**, que define el sistema de codificación documental dentro del programa GAIA AIR, incluyendo los códigos de sistema y subsistema.
 
-Refer to [COMPLETAR: Link to the IPPN document, e.g., `XI-IP-OV-001-A`] for a complete explanation of the document coding system and a list of all System and Subsystem Codes.
+---
+
+## **XI-IP-OV-001-A.md**  
+### **Normativa de Codificación de Documentos en GAIA AIR**  
+
+### **1. Introducción**  
+El presente documento establece la estructura de codificación utilizada en el ecosistema **GAIA AIR** para la identificación, trazabilidad y gestión de documentos técnicos, operativos y de mantenimiento.  
+
+### **2. Estructura del Código Documental**  
+Cada documento en **GAIA AIR** sigue la siguiente estructura estándar de codificación:
+
+```
+[XX]-[YY]-[ZZ]-[NNN]-[V]
+```
+
+Donde:  
+- **XX** → Dominio del documento (ej. `XI` para Ingeniería, `OP` para Operaciones, `MT` para Mantenimiento).  
+- **YY** → Tipo de documento (ej. `IP` para Ingeniería de Producto, `SP` para Procedimientos de Servicio, `TR` para Informes Técnicos).  
+- **ZZ** → Código del Sistema Principal (ver tabla en la sección 3).  
+- **NNN** → Número secuencial dentro del sistema y tipo de documento.  
+- **V** → Versión del documento (`A`, `B`, `C`, etc.).  
+
+#### **Ejemplo de Código Documental**  
+`XI-IP-21-003-A` → Documento de Ingeniería de Producto (IP) sobre el sistema de Aire Acondicionado (ATA 21), versión A.  
+
+---
+
+### **3. Lista de Códigos de Sistema y Subsistema**  
+Los códigos de sistema y subsistema en GAIA AIR siguen el estándar **ATA** con extensiones personalizadas.  
+
+#### **Códigos Principales de Sistemas**  
+
+| **Código** | **Sistema**                  |
+|------------|------------------------------|
+| 21         | Aire Acondicionado (ECS)     |
+| 22         | Vuelo Automático             |
+| 23         | Comunicaciones               |
+| 24         | Energía Eléctrica            |
+| 25         | Equipamiento y Mobiliario    |
+| 26         | Protección contra Incendios  |
+| 27         | Controles de Vuelo           |
+| 28         | Combustible                  |
+| 29         | Hidráulica                   |
+| 30         | Protección contra Hielo/Lluvia |
+| 31         | Sistemas de Indicadores      |
+| 32         | Tren de Aterrizaje           |
+| 33         | Iluminación                  |
+| 34         | Navegación                   |
+| 35         | Oxígeno                       |
+| 36         | Neumática                     |
+| 38         | Agua y Desechos               |
+| 45         | Sistemas de Mantenimiento Centralizados |
+| 46         | Sistemas de Información      |
+| 49         | Unidad de Energía Auxiliar (APU) |
+| 71         | Planta Motriz (Motor)        |
+| 72         | Motor Turbina/Turbohélice    |
+| 73         | Control de Combustible del Motor |
+| 74         | Ignición del Motor           |
+| 75         | Aire Sangrado                |
+| 76         | Controles del Motor          |
+| 77         | Indicadores del Motor        |
+| 78         | Escape de Gases              |
+| 79         | Lubricación del Motor        |
+
+#### **Ejemplo de Códigos de Subsistema (para ATA 21 - Aire Acondicionado)**  
+
+| **Código**  | **Subsistema**                 |
+|------------|--------------------------------|
+| 21-10      | Sistema de Aire Acondicionado  |
+| 21-20      | Distribución de Aire           |
+| 21-30      | Presurización                  |
+| 21-40      | Control de Temperatura         |
+| 21-50      | Enfriamiento de Equipos        |
+| 21-60      | Humidificación                 |
+
+---
+
+### **4. Aplicación de la Codificación**  
+Todos los documentos en GAIA AIR deben seguir esta estructura de codificación. Esto permite:  
+✔ **Uniformidad y estandarización** en la gestión documental.  
+✔ **Trazabilidad rápida** para localizar información dentro del sistema.  
+✔ **Compatibilidad con CSDB y S1000D**, facilitando integración con sistemas de mantenimiento y gestión de datos técnicos.  
+
+---
+
+### **5. Ejemplo de Documentos Existentes en GAIA AIR**  
+
+| **Código**          | **Título del Documento**                          | **Versión** |
+|---------------------|--------------------------------------------------|------------|
+| XI-IP-21-001-A     | Descripción del Sistema de Aire Acondicionado    | A          |
+| XI-IP-23-005-B     | Especificaciones de Comunicaciones Aviónicas     | B          |
+| OP-SP-32-010-C     | Procedimiento de Mantenimiento del Tren de Aterrizaje | C      |
+| MT-TR-71-002-A     | Informe Técnico sobre Diagnóstico de Motor       | A          |
+
+---
+
+### **6. Conclusión**  
+Este documento sirve como referencia oficial para la codificación de documentos dentro del ecosistema **GAIA AIR**, garantizando consistencia en la nomenclatura y facilitando la organización y acceso a la información técnica.
+
+---
+
+> **Referencias**  
+> - [COMPLETAR: Documentos relacionados]  
+> - [Normativa S1000D para codificación de datos]  
+
+---
 
 **Views:**
 
