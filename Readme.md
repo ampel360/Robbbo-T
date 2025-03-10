@@ -158,8 +158,6 @@ graph LR
 This loop illustrates the continuous feedback and self-improvement cycle within the integrated system.
 
 ---
-
-```
 ## Quantum Optimization Technologies
 
 ### Quantum Particle Swarm Optimization (QPSO) in Space Navigation
@@ -173,7 +171,7 @@ Quantum-optimized air traffic management systems are projected to significantly 
 
 ### Quantum-Secured Aerospace Cybersecurity 
 Leveraging Quantum Key Distribution (QKD) and hybrid protocols, the aviation sector is transitioning to quantum-resistant cryptography. China's Micius satellite network has demonstrated aircraft-to-ground QKD at 10.3 kbps rates with a quantum bit error rate of 1.72%, establishing unconditional security against quantum computing attacks. NIST-standardized CRYSTALS-Kyber post-quantum algorithms augment QKD in commercial aviation data links, achieving AES-256 equivalence with 28% lower computational overhead. Federated blockchain networks enforce environmental accountability through smart contract-driven carbon audits and lifecycle emission tokenization, while predictive maintenance models trained on blockchain-validated records achieve 92% accuracy in predicting engine blade degradation 150 flight hours pre-failure.
-```
+
 
 # Implementación de Tecnología de Libro Mayor Distribuido (DLT) con Seguridad Cuántica en GenEng.dev, una visión estratégica para el futuro de la innovación científica.
 
