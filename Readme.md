@@ -113,14 +113,14 @@ Este documento detalla la integración profunda de la Tecnología de Libro Mayor
 
 ```mermaid
 graph TD
-    A["Frontend (Next.js)"] --> B["API Gateway (Cuántico-Seguro)"]
+    A["Frontend (Next.js)"] --> B["API Gateway Cuántico-Seguro"]
     B --> C["Servicio de Identidad<br/>Post-Cuántico"]
     B --> D["Orquestador QIAO"]
     B --> E["Ledger Service"]
-    E --> F["Nodos DLT<br/>(Hyperledger Fabric)"]
+    E --> F["Nodos DLT<br/>Hyperledger Fabric"]
     D --> G["Simulación Diferenciable"]
     D --> H["Optimizador QUBO"]
-    C --> I["Almacén de Claves<br/>Cuánticas (HSM+QKD)"]
+    C --> I["Almacén de Claves<br/>Cuánticas HSM+QKD"]
     E --> J["IPFS Encriptado"]
 ```
 
