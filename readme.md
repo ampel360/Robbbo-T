@@ -126,42 +126,44 @@ Based on the analysis of the BRDP Index data, I'll now create a more accurate kn
 ```mermaid
 flowchart TD
     %% S1000D Issue 6.0 Core
-    A@{ shape: dbl-circ, label: "S1000D\nCore" } 
-    A --> B@{ shape: rect, label: "Data Modules" }
-    A --> C@{ shape: rect, label: "BREX (Business Rules\nExchange)" }
-    A --> D@{ shape: rect, label: "Publications" }
-    A --> E@{ shape: rect, label: "Information Sets" }
+    A["S1000D\nCore"]:::core
+    A --> B["Data Modules"]:::component
+    A --> C["BREX (Business Rules\nExchange)"]:::component
+    A --> D["Publications"]:::component
+    A --> E["Information Sets"]:::component
     
     %% Data Modules specific formats
-    B --> F(["Data Module Code"])
-    B --> G([Content Section])
-    B --> H{{"Identification &\nStatus"}} 
-    B --> I@{ shape: lin-doc, label: "Technical Content" }
+    B --> F["Data Module Code"]:::brdpGroup
+    B --> G["Content Section"]:::brdpGroup
+    B --> H["Identification &\nStatus"]:::brdpGroup
+    B --> I["Technical Content"]:::brdpGroup
 
-% Security and Compliance Benefits
-    K@{ label: "0.3ms Inference Time", shape: badge, color:blue }
+    % Security and Compliance Benefits
+    K["0.3ms Inference Time"]:::badge
     F --> K 
-    K --> K_0{{ "Security & Compliance" }}
-    K --> N@{ shape: hex, label: "AI-Driven Zero Trust\nProtocols" }
-    N --> L@{ shape: bolt, label: "Safeguard Digital\nTwin Data" }
+    K --> K_0["Security & Compliance"]:::decision
+    K --> N["AI-Driven Zero Trust\nProtocols"]:::hex
+    N --> L["Safeguard Digital\nTwin Data"]:::bolt
 
-% More Technical Components
-    A --> J[Schemas]
-    J ===>|"Performance\nMetrics for Neural\nTraffic" | N
-    I --> M [Illustrations]
-    I --> N [Multimedia]
+    % More Technical Components
+    A --> J["Schemas"]:::subComp
+    J ===>|"Performance\nMetrics for Neural\nTraffic"| N
+    I --> M["Illustrations"]:::subComp
+    I --> N["Multimedia"]:::subComp
     
-%% Styling for nodes
+    %% Styling for nodes
     classDef core fill:#e67e22, color:white, stroke:#d35400,stroke-width:2px;
     classDef component fill:#3498db, color:white, stroke:#2980b9;
     classDef subComp fill:#2ecc71, stroke:#27ae60, color:white;
     classDef decision fill:#e74c3c, stroke:#c0392b, color:white;
     classDef brdpGroup fill:#9b59b6, stroke:#8e44ad, color:white;
+    classDef badge fill:#3498db, color:white;
+    classDef hex fill:#3498db, color:white;
+    classDef bolt fill:#3498db, color:white;
 
     class A core;
     class B, C, J, M, N, L subComp;
     class F, G, H, I brdpGroup;
-
 ```
 Diagram Summary
 S1000D Core: This node acts as the central double circle, depicting the overall architecture core.
