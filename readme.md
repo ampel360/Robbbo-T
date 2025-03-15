@@ -1,5 +1,7 @@
 # EXECUTIVE BRIEF: INTEGRATION OF QUANTUM SYSTEMS AND AUTONOMOUS ROBOTICS IN AEROSPACE
+flowchart
 
+```markdown
 ```mermaid
 flowchart LR
     A["GAIA AIR DIGITAL QUADROS"]
@@ -45,18 +47,18 @@ flowchart LR
     %% Implementation & Integration
     A --> D["Implementation & Integration"]
     D --> D1["Tech Stack"]
-    D1 --> D1a["Quantum Computing (IBM Qiskit, D-Wave)"]
-    D1 --> D1b["AI & ML (TensorFlow, PyTorch, GPT)"]
-    D1 --> D1c["Robotics & Automation (ROS, Edge AI)"]
-    D1 --> D1d["Blockchain & Security (Hyperledger, Ethereum)"]
-    D1 --> D1e["Aerospace CAD & Simulation (CATIA, Ansys)"]
-    D1 --> D1f["Digital Twins (Azure, Siemens MindSphere)"]
+    D1 --> D1a["Quantum Computing"]
+    D1 --> D1b["AI & ML"]
+    D1 --> D1c["Robotics & Automation"]
+    D1 --> D1d["Blockchain & Security"]
+    D1 --> D1e["Aerospace CAD & Simulation"]
+    D1 --> D1f["Digital Twins"]
     
     %% Roadmap & Future Developments
     A --> E["Roadmap & Future Developments"]
-    E --> E1["Short-term (Design & Validation)"]
-    E --> E2["Mid-term (Assembly & Integration)"]
-    E --> E3["Long-term (Service, Recycling, & Global Expansion)"]
+    E --> E1["Short-term"]
+    E --> E2["Mid-term"]
+    E --> E3["Long-term"]
 ```
 
 
