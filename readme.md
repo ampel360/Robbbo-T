@@ -91,10 +91,10 @@ Se presentan **recomendaciones estratégicas** para alinear la elección de la p
 ## V. Visualizaciones de Datos 📊
 
 ### **1️⃣ Ponderación de Criterios por Escenario Estratégico**
-![image](https://github.com/user-attachments/assets/e8019d22-88fe-4904-96e8-0e360cd4f2dc)
+![Gráfico 1: Ponderación de Criterios por Escenario Estratégico](https://github.com/user-attachments/assets/e8019d22-88fe-4904-96e8-0e360cd4f2dc)
 
 ### **2️⃣ Comparación de Costos y Reducción de Emisiones**
-![image](https://github.com/user-attachments/assets/cd4c0cd2-5922-46c2-a893-9607858dac1c)
+![Gráfico 2: Comparación de Costos y Reducción de Emisiones](https://github.com/user-attachments/assets/cd4c0cd2-5922-46c2-a893-9607858dac1c)
 
 
 ---
