@@ -268,14 +268,31 @@ Aquí tienes el código Mermaid actualizado, listo para ser copiado y pegado en 
  ```
 
 ```mermaid
-xychart-beta
-    title "Puntuación Total por Escenario"
-    x-axis ["Equilibrado", "Ambiental", "Autonomía", "Económico"]
-    y-axis "Puntuación Total" 0 --> 100
-    bar [50, 60, 65, 70] "Turbofán"
-    bar [70, 80, 75, 85] "Híbrido"
-    bar [45, 55, 60, 65] "Eléctrico"
-    bar [60, 65, 70, 75] "Hidrógeno"
+flowchart TB
+    subgraph Scenario1[Equilibrado]
+        Turbofan1[50: Turbofán]
+        Hibrido1[70: Híbrido]
+        Electrico1[45: Eléctrico]
+        Hidrogeno1[60: Hidrógeno]
+    end
+    subgraph Scenario2[Ambiental]
+        Turbofan2[60: Turbofán]
+        Hibrido2[80: Híbrido]
+        Electrico2[55: Eléctrico]
+        Hidrogeno2[65: Hidrógeno]
+    end
+    subgraph Scenario3[Autonomía]
+        Turbofan3[65: Turbofán]
+        Hibrido3[75: Híbrido]
+        Electrico3[60: Eléctrico]
+        Hidrogeno3[70: Hidrógeno]
+    end
+    subgraph Scenario4[Económico]
+        Turbofan4[70: Turbofán]
+        Hibrido4[85: Híbrido]
+        Electrico4[65: Eléctrico]
+        Hidrogeno4[75: Hidrógeno]
+    end
 ```
 
 
