@@ -1,7 +1,7 @@
 # ✈️ AMPEL 360XWLRGA Design Document
 
 **Document Version:** 2.1 (Released)
-**Date:** October 26, 2023 (Revised Date)
+**Date:** October 26, 2024 (Revised Date)
 **Author(s):** Amedeo Pelliccia and AI
 
 ---
