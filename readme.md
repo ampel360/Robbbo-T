@@ -1,223 +1,144 @@
-
-# Análisis de Sensibilidad para la Selección de Tecnologías de Propulsión del AMPEL 360XWLRGA
+# 📊 Análisis de Sensibilidad para la Selección de Tecnologías de Propulsión del AMPEL 360XWLRGA
 
 ## I. Resumen Ejecutivo
 
-Este informe presenta un análisis de sensibilidad sobre la selección de tecnologías de propulsión para la aeronave regional AMPEL 360XWLRGA. El análisis evalúa cómo la variación en la ponderación de criterios clave de evaluación —eficiencia energética, emisiones, peso, costo, autonomía y madurez tecnológica— influye en la elección óptima de la tecnología de propulsión. Los hallazgos principales revelan que la priorización de la sostenibilidad favorece los sistemas híbrido-eléctricos y, a largo plazo, las opciones basadas en hidrógeno, mientras que el énfasis en el costo y el peso puede inclinar la balanza hacia los turboprops convencionales. La maximización de la autonomía y la minimización del riesgo favorecen las tecnologías más maduras. Se ofrecen recomendaciones estratégicas de alto nivel, subrayando la importancia de alinear la elección de la propulsión con los criterios priorizados y la visión a largo plazo. En conclusión, se destaca la necesidad de una decisión equilibrada e informada, considerando los requisitos operativos específicos y el panorama tecnológico en constante evolución del AMPEL 360XWLRGA.
+Este informe presenta un análisis de sensibilidad sobre la selección de tecnologías de propulsión para la aeronave regional **AMPEL 360XWLRGA**. Se evalúa cómo la variación en la ponderación de criterios clave —**eficiencia energética, emisiones, peso, costo, autonomía y madurez tecnológica**— influye en la elección óptima de la tecnología de propulsión.
 
-## Análisis de Sensibilidad de Propulsión en el AMPEL 360XWLRGA: Explorando Capacidades y Desafíos
+Los hallazgos principales revelan que:
+- La **priorización de la sostenibilidad** favorece los sistemas **híbrido-eléctricos** y, a largo plazo, las opciones **basadas en hidrógeno**.
+- El **énfasis en el costo y el peso** puede inclinar la balanza hacia los **turboprops convencionales**.
+- La **maximización de la autonomía** y la **minimización del riesgo** favorecen tecnologías **más maduras**.
 
-Profundizando en los conceptos clave de rango espacial y rango temporal desde la perspectiva del avión AMPEL 360XWLRGA y los sistemas de propulsión considerados:
+Se presentan **recomendaciones estratégicas** para alinear la elección de la propulsión con la visión a largo plazo del **AMPEL 360XWLRGA**, destacando la necesidad de una decisión **equilibrada** e **informada**.
 
-### Rangos Largos en Espacios (Long-Range Spatial Capabilities)
+---
 
-**Contexto en el AMPEL 360XWLRGA:**
+## II. Análisis de Sensibilidad de Propulsión en el AMPEL 360XWLRGA
 
-**Hidrógeno Líquido (LH₂):**
-*   Alcance de 5,400 nm (similar a aviones regionales convencionales).
-*   Potencial para rutas transcontinentales al combinar con crio-tanques de alta eficiencia (diseñados con superconductores HTS).
+### 1️⃣ Rangos Largos en Espacios (Long-Range Spatial Capabilities)
 
-    *   **Desafíos:**
-        *   Infraestructura de repostaje (requiere redes de hidrógeno licuado en aeropuertos).
-        *   Almacenamiento seguro a 150K (temperatura criogénica crítica). Desarrollo de materiales avanzados para el aislamiento térmico.
-        *   Manejo seguro del hidrógeno líquido durante las operaciones en tierra y en vuelo, incluyendo procedimientos de emergencia.
+#### **Hidrógeno Líquido (LH₂)**
+✅ **Ventajas**:
+- Alcance de **5,400 nm** (similar a aviones regionales convencionales).
+- Potencial para **rutas transcontinentales** con **crio-tanques superconductores HTS**.
 
-**Híbrido-Eléctrico con Extensor de Autonomía:**
-*   Combina baterías de alto rendimiento (20kWh/kg) con turbopropulsores eficientes.
-*   Ideal para rutas de media distancia (2-4 horas) con reducción de emisiones del 27.8%.
-    *   **Desafíos:**
-        *   Optimización del sistema de gestión de energía para maximizar la eficiencia y el rendimiento.
-        *   Desarrollo de baterías con mayor densidad energética y vida útil.
-        *   Integración de los sistemas de propulsión eléctrica y convencional.
+⚠️ **Desafíos**:
+- Infraestructura de repostaje y redes de hidrógeno licuado en aeropuertos.
+- Almacenamiento criogénico seguro (**150K**).
+- Procedimientos de **manejo y seguridad** del hidrógeno en tierra y en vuelo.
 
-### Rangos Cortos en Tiempos (Short-Term Operational Efficiency)
+#### **Híbrido-Eléctrico con Extensor de Autonomía**
+✅ **Ventajas**:
+- Combina **baterías de alto rendimiento** (20kWh/kg) con turbopropulsores eficientes.
+- Ideal para **rutas de media distancia** (**2-4 horas**) con **reducción de emisiones del 27.8%**.
 
-**Aplicaciones en el Proyecto:**
+⚠️ **Desafíos**:
+- Desarrollo de **baterías con mayor densidad energética**.
+- Integración eficiente entre **propulsión eléctrica y convencional**.
 
-**Propulsión Totalmente Eléctrica:**
-*   Optimiza operaciones de despegue/aterrizaje rápido (≤90 segundos en configuraciones de emergencia).
-*   Reducción de ruido en aeropuertos urbanos (cumple con normativas de zonas sensibles).
-    *   **Limitación:** Alcance máximo de 2 horas (dependiendo de la densidad energética de las baterías).
+---
 
-**Sistemas Híbridos con Turboeje:**
-*   Aprovecha la infraestructura existente de turbopropulsores para operaciones inmediatas.
-*   Permite transición gradual hacia tecnologías más limpias sin sacrificar autonomía.
-    *   **Desafíos:**
-        *   Eficiencia y rendimiento general del sistema.
-        *   Gestión del peso y el espacio a bordo.
+### 2️⃣ Rangos Cortos en Tiempos (Short-Term Operational Efficiency)
 
-### Trade-Off Técnico
+#### **Propulsión Totalmente Eléctrica**
+✅ **Ventajas**:
+- **Optimiza operaciones de despegue/aterrizaje rápido** (≤90s en emergencias).
+- **Reducción de ruido** en aeropuertos urbanos.
 
-**Tabla 1. Trade-Off Técnico de Tecnologías de Propulsión**
+⚠️ **Limitaciones**:
+- **Autonomía máxima** de **2 horas**, dependiente de la tecnología de baterías.
 
-| Tecnología                     | Rango Espacial | Rango Temporal | Emisiones CO₂ | Costo Inicial | Madurez (TRL) |
-| ------------------------------ | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Híbrido-Eléctrica              | 5,400 nm      | 4-6 horas      | -70%          | \$12.8M       | 6-7           |
-| Hidrógeno (Pilas de Combustible) | 6,200 nm\*    | 3-5 horas\*    | 0%            | \$24.5M\*     | 4-5           |
-| Turboprop Convencional         | 4,800 nm      | 5-7 horas      | +150%         | \$8.2M        | 9             |
+#### **Sistemas Híbridos con Turboeje**
+✅ **Ventajas**:
+- **Aprovecha infraestructura existente** de turbopropulsores.
+- Permite una **transición gradual** a tecnologías más limpias.
 
-*Valores proyectados para 2035-2040.*
+⚠️ **Desafíos**:
+- **Optimización del peso y espacio** a bordo.
 
-**[![image](https://github.com/user-attachments/assets/0e52e01c-432c-478e-97fb-e3f003f5d3b4)]**
+---
 
-### Recomendaciones
+## III. Trade-Off Técnico
 
-**Priorizar Híbridos para Rangos Cortos/Intermedios:**
-*   Ideal para cumplir con regulaciones de emisiones 2030-2035 (EU ETS, SC-E19).
-*   Mitiga riesgos técnicos al usar infraestructura existente.
+### 📊 **Tabla 1. Comparación de Tecnologías de Propulsión**
 
-**Invertir en Hidrógeno para Rangos Largos Futuros:**
-*   Desarrollar estándares de repostaje criogénico y certificación EASA/FAA.
-*   Colaborar con proyectos como GREEN DEAL Ledger para financiar la transición.
+| Tecnología                      | Rango Espacial | Rango Temporal | Emisiones CO₂ | Costo Inicial | Madurez (TRL) |
+| -------------------------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| **Híbrido-Eléctrica**            | 5,400 nm      | 4-6 horas      | -70%          | \$12.8M       | 6-7           |
+| **Hidrógeno (Pilas de Combustible)** | 6,200 nm\*    | 3-5 horas\*    | 0%            | \$24.5M\*     | 4-5           |
+| **Turboprop Convencional**       | 4,800 nm      | 5-7 horas      | +150%         | \$8.2M        | 9             |
 
-**Optimizar Tiempos de Operación:**
-*   Usar sistemas de gestión de energía cuántica (QCC-512q) para ajustar flujos en tiempo real.
-*   Implementar pruebas de ensayos climáticos acelerados (ej. simulaciones árticas en minutos).
+🔹 *Valores proyectados para 2035-2040.*
 
-### Ejemplo de Aplicación en el AMPEL 360XWLRGA
+---
 
-**Escenario de Rango Largo:**
-*   Hidrógeno LH₂ para vuelos Nueva York → Chicago (5,400 nm) con cero emisiones.
-*   Sistemas de ventilación/inertización validados por blockchain (`0x4d5e...9a0b1c2d3`).
+## IV. Recomendaciones Estratégicas 🚀
 
-**Escenario de Rango Corto:**
-*   Propulsión eléctrica pura para rutas como Madrid → Barcelona (≤2 horas), eliminando ruido en ciudades.
-*   Baterías con 99.999% eficiencia (HTS) para minimizar recargas frecuentes.
+### **✅ Priorizar Híbridos para Rangos Cortos/Intermedios**
+✔ Ideal para cumplir con **regulaciones de emisiones 2030-2035** (EU ETS, SC-E19).  
+✔ Mitiga **riesgos técnicos** al aprovechar **infraestructura existente**.  
 
-### ¿Qué Más Podemos Explorar?
+### **🟢 Invertir en Hidrógeno para Rangos Largos Futuros**
+✔ Desarrollo de **estándares de repostaje criogénico** y certificaciones **EASA/FAA**.  
+✔ **Colaboración con iniciativas** como **GREEN DEAL Ledger** para **financiar la transición**.  
 
-**Certificación de Sistemas Criogénicos:**
-*   Cómo cumplir con EASA SC-E19 para hidrógeno.
+### **⚡ Optimizar Tiempos de Operación**
+✔ Implementar **gestión de energía cuántica (QCC-512q)** para **ajuste de flujos en tiempo real**.  
+✔ Uso de **simulaciones árticas aceleradas** para **validar desempeño en condiciones extremas**.  
 
-**Simulaciones Cuánticas de Rutas:**
-*   Optimización de alcance vs. tiempo usando QCC.
+---
 
-**Infraestructura de Transición:**
-*   Estrategias para redes de hidrógeno en aeropuertos regionales.
+## V. Visualizaciones de Datos 📊
 
-**Desarrollo de Materiales Avanzados:**
-*   Investigación en materiales ligeros y resistentes para los tanques de hidrógeno.
+### **1️⃣ Ponderación de Criterios por Escenario Estratégico**
+![image](https://github.com/user-attachments/assets/e8019d22-88fe-4904-96e8-0e360cd4f2dc)
 
-**Sistemas de Seguridad:**
-*   Desarrollo de sistemas de detección y mitigación de fugas de hidrógeno.
+### **2️⃣ Comparación de Costos y Reducción de Emisiones**
+![image](https://github.com/user-attachments/assets/cd4c0cd2-5922-46c2-a893-9607858dac1c)
 
-**Impacto Ambiental:**
-*   Análisis del ciclo de vida completo de las diferentes tecnologías de propulsión.
 
-**Factores Económicos:**
-*   Evaluación de los costos operativos y de mantenimiento de las diferentes opciones.
+---
 
-**Aceptación Pública:**
-*   Estrategias para comunicar los beneficios y riesgos de las nuevas tecnologías de propulsión.
+## VI. Diagramas de Flujo y Modelos de Selección de Tecnología
 
+### **📌 Diagrama de Selección de Propulsión**
 ```mermaid
- flowchart TD
-     A(Definir Objetivos Estratégicos del AMPEL 360XWLRGA) --> B(Identificar Tecnologías de Propulsión Candidatas)
-     B --> C(Definir Criterios de Evaluación)
-     subgraph Subproceso: Análisis de Criterios
-         direction LR
-         C --> C1(Análisis Cualitativo)
-         C --> C2(Análisis Cuantitativo)
-     end
-     C --> D(Ponderar Criterios según Prioridades Estratégicas)
-     D --> E(Evaluar Desempeño de Tecnologías en cada Criterio)
-     E --> F(Aplicar Modelo Multicriterio<br/>e.g., AHP, TOPSIS)
-     F --> G{Análisis de Sensibilidad<br/>e.g., Ajuste de Ponderaciones}
-     G --> H{¿Es robusta la selección<br/>en distintos escenarios?}
-     H -- Sí --> I(Seleccionar Tecnología de Propulsión Óptima)
-     H -- No --> J(Revisión de Criterios<br/>y Ponderación)
-     J --> D
-     I --> K(Implementación y Revisión<br/>Continua de la Estrategia<br/>de Propulsión)
- ```
-
-## II. Introducción: El AMPEL 360XWLRGA y el Imperativo de la Selección de Tecnología de Propulsión
-
-```mermaid
-flowchart TB
-    subgraph Scenario1[Equilibrado]
-        Turbofan1[50: Turbofán]
-        Hibrido1[70: Híbrido]
-        Electrico1[45: Eléctrico]
-        Hidrogeno1[60: Hidrógeno]
+flowchart TD
+    A(Definir Objetivos Estratégicos del AMPEL 360XWLRGA) --> B(Identificar Tecnologías de Propulsión Candidatas)
+    B --> C(Definir Criterios de Evaluación)
+    subgraph Análisis de Criterios
+        direction LR
+        C --> C1(Análisis Cualitativo)
+        C --> C2(Análisis Cuantitativo)
     end
-    subgraph Scenario2[Ambiental]
-        Turbofan2[60: Turbofán]
-        Hibrido2[80: Híbrido]
-        Electrico2[55: Eléctrico]
-        Hidrogeno2[65: Hidrógeno]
-    end
-    subgraph Scenario3[Autonomía]
-        Turbofan3[65: Turbofán]
-        Hibrido3[75: Híbrido]
-        Electrico3[60: Eléctrico]
-        Hidrogeno3[70: Hidrógeno]
-    end
-    subgraph Scenario4[Económico]
-        Turbofan4[70: Turbofán]
-        Hibrido4[85: Híbrido]
-        Electrico4[65: Eléctrico]
-        Hidrogeno4[75: Hidrógeno]
-    end
+    C --> D(Ponderar Criterios según Prioridades Estratégicas)
+    D --> E(Evaluar Desempeño de Tecnologías)
+    E --> F(Aplicar Modelos Multicriterio - AHP, TOPSIS)
+    F --> G{¿Es robusta la selección en distintos escenarios?}
+    G -- Sí --> I(Seleccionar Tecnología Óptima)
+    G -- No --> J(Revisión de Criterios y Ponderación)
+    J --> D
+    I --> K(Implementación y Revisión Continua)
 ```
 
-**Tabla 2. Ponderación de Criterios Bajo Distintos Escenarios Estratégicos**
+---
 
-| Criterio            | Equilibrado | Prioridad Ambiental | Prioridad Autonomía | Prioridad Económica |
-| ------------------- | ----------- | ------------------- | ------------------- | ------------------- |
-| Eficiencia          | 16.7%       | 20%                 | 20%                 | 20%                 |
-| Emisiones           | 16.7%       | 30%                 | 5%                  | 10%                 |
-| Peso                | 16.7%       | 10%                 | 20%                 | 10%                 |
-| Costo               | 16.7%       | 10%                 | 10%                 | 30%                 |
-| Autonomía           | 16.7%       | 10%                 | 30%                 | 10%                 |
-| Madurez tecnológica | 16.7%       | 20%                 | 15%                 | 20%                 |
-| **Alternativa seleccionada** | Turbofán Conv. | Eléctrica (baterías)  | Turbofán Conv.      | Turbofán Conv.      |
+## VII. Conclusiones 🔍
 
-**[Insertar aquí Gráfico 3: Gráfico de barras comparando Puntuación Total por Tecnología y Escenario]**
+📌 **Decisión Equilibrada**: No hay una única solución óptima, sino que la elección depende de la **priorización de criterios**.  
+📌 **Visión de Largo Plazo**: La transición al **hidrógeno** es viable con inversión en **infraestructura y certificación**.  
+📌 **Flexibilidad Operativa**: Los sistemas **híbrido-eléctricos** permiten una **adaptación más ágil** a normativas emergentes.  
 
-## Referencias
+---
 
-[1. The hybrid electric evolution - Skies Mag, fecha de acceso: marzo 16, 2025, https://skiesmag.com/features/the-hybrid-electric-evolution/
-2. Chapter 7 - Propellers - Federal Aviation Administration, fecha de acceso: marzo 16, 2025, https://www.faa.gov/sites/faa.gov/files/09_amtp_ch7.pdf
-3. From the NASA Advanced High-Spaced Propeller, fecha de acceso: marzo 16, 2025, https://ntrs.nasa.gov/api/citations/19820018343/downloads/19820018343.pdf
-4. General Electric T58 - Wikipedia, fecha de acceso: marzo 16, 2025, https://en.wikipedia.org/wiki/General_Electric_T58
-5. Lycoming T53 - Wikipedia, fecha de acceso: marzo 16, 2025, https://en.wikipedia.org/wiki/Lycoming_T53
-6. HERA - Hybrid-Electric Regional Architecture - Clean Aviation, fecha de acceso: marzo 16, 2025, https://www.clean-aviation.eu/hera-hybrid-electric-regional-architecture
-7. EcoPulse results suggest a bright future for hybrid-electric aviation - Airbus, fecha de acceso: marzo 16, 2025, https://www.airbus.com/en/newsroom/stories/2025-01-ecopulse-results-suggest-a-bright-future-for-hybrid-electric-aviation
-8. Power Electronics for Electric Aircraft - FPGA Insights, fecha de acceso: marzo 16, 2025, https://fpgainsights.com/power-management/power-electronics-for-electric-aircraft/
-9. Power Electronics Powertrain Architectures for Hybrid and Solar Electric Airplanes with Distributed Propulsion - SPARK Laboratory, fecha de acceso: marzo 16, 2025, https://sparklab.engr.uky.edu/sites/spark/files/2018%20IEEE%20AIAA%20EATS%20UKSpark%20Electric%20Aircraft%20Architectures%20CP.pdf
-10. Hybrid and electric flight | Airbus, fecha de acceso: marzo 16, 2025, https://www.airbus.com/en/innovation/energy-transition/hybrid-and-electric-flight
-11. (PDF) Challenges and opportunities in power electronics design for all- and hybrid-electric aircraft: a qualitative review and outlook - ResearchGate, fecha de acceso: marzo 16, 2025, https://www.researchgate.net/publication/384480363_Challenges_and_opportunities_in_power_electronics_design_for_all-_and_hybrid-electric_aircraft_a_qualitative_review_and_outlook
-12. Power electronics design for a 50 PAX hybrid-electric regional aircraft, fecha de acceso: marzo 16, 2025, https://www.lee.tf.fau.de/files/2023/09/meindl-et-al-2023-power-electronics-design-for-a-50-pax-hybrid-electric-regional-aircraft.pdf
-13. Taking Flight with Power Electronics: The Future of Hybrid-Electric Aircraft, fecha de acceso: marzo 16, 2025, https://idstch.com/military/air/taking-flight-with-power-electronics-the-future-of-hybrid-electric-aircraft/
-14. Electric & Hybrid-Electric Propulsion - Honeywell Aerospace, fecha de acceso: marzo 16, 2025, https://aerospace.honeywell.com/us/en/products-and-services/product/hardware-and-systems/electric-power/hybrid-electric-electric-propulsion
-15. Distributed Electric Propulsion (DEP) in 2025 - Tyto Robotics, fecha de acceso: marzo 16, 2025, https://www.tytorobotics.com/blogs/articles/distributed-electric-propulsion
-16. H3X Technologies, fecha de acceso: marzo 16, 2025, https://www.h3x.tech/
-17. HPDM-30 - H3X Technologies, fecha de acceso: marzo 16, 2025, https://www.h3x.tech/products/hpdm-30
-18. HPDM-350 - H3X Technologies, fecha de acceso: marzo 16, 2025, https://www.h3x.tech/products/hpdm-350
-19. HPDM-140 - H3X Technologies, fecha de acceso: marzo 16, 2025, https://www.h3x.tech/products/hpdm-140
-20. HPDM-2300 - H3X Technologies, fecha de acceso: marzo 16, 2025, https://www.h3x.tech/products/hpdm-2300
-21. High Power Density Motor & Controller for Electrified Aircraft ..., fecha de acceso: marzo 16, 2025, https://www.sinfo-t.com/aerospace/motor-controller/
-22. High Power Density Motor & Controller, fecha de acceso: marzo 16, 2025, https://www.japanaerospace.jp/exhibitor/materialfile/41/en/1
-23. SINFONIA TECHNOLOGY CO., LTD., fecha de acceso: marzo 16, 2025, https://aichi-nagoya-aerospace.jp/companies/files/pdf/cdcbb3a88ebf9ef21f29bb9a5a7053e0aff9dc37.pdf
-24. simfonia-group-product-catalog.pdf - İmaj Teknik, fecha de acceso: marzo 16, 2025, https://www.imajteknik.net/uploads/simfonia-group-product-catalog.pdf
-25. ntrs.nasa.gov, fecha de acceso: marzo 16, 2025, https://ntrs.nasa.gov/api/citations/20240007599/downloads/A_Parametric_Battery_Model_Hallock_6_20_24.pdf?attachment=true
-26. Aircraft Batteries | SKYbrary Aviation Safety, fecha de acceso: marzo 16, 2025, https://skybrary.aero/articles/aircraft-batteries
-27. Aircraft Battery Guide: Everything You Need to Know - Start Pac, fecha de acceso: marzo 16, 2025, https://startpac.com/blog/aircraft-battery/
-28. Batteries & Battery Solutions For Electric Aircraft | Evolito Ltd, fecha de acceso: marzo 16, 2025, https://evolito.aero/battery-solutions/
-29. Thermal Management Techniques for Lithium-Ion Batteries Based on Phase Change Materials: A Systematic Review and Prospective Recommendations - MDPI, fecha de acceso: marzo 16, 2025, https://www.mdpi.com/1996-1073/16/2/876
-30. Passive Thermal Management of an Electric Trainer Aircraft Battery Pack Considering Aging, fecha de acceso: marzo 16, 2025, https://arc.aiaa.org/doi/10.2514/1.C038205
-31. Hybrid Cooling System for Thermal Management in Electric Aerial ..., fecha de acceso: marzo 16, 2025, https://www.sae.org/publications/technical-papers/content/2024-26-0468/
-32. A Review of Thermal Management and Heat Transfer of Lithium-Ion Batteries - MDPI, fecha de acceso: marzo 16, 2025, https://www.mdpi.com/1996-1073/17/16/3873
-33. System-level thermal and electrical modeling of battery systems for electric aircraft design, fecha de acceso: marzo 16, 2025, https://arxiv.org/html/2408.16494v1
-34. Design and In-Flight Analysis of an Electric Aircraft's Battery Thermal Management System, fecha de acceso: marzo 16, 2025, https://www.researchgate.net/publication/382543665_Design_and_In-Flight_Analysis_of_an_Electric_Aircraft's_Battery_Thermal_Management_System
-35. (PDF) Physics-Based Approaches for Sizing Thermal Management Systems for Battery-Electric Regional Aircraft - ResearchGate, fecha de acceso: marzo 16, 2025, https://www.researchgate.net/publication/382880856_Physics-Based_Approaches_for_Sizing_Thermal_Management_Systems_for_Battery-Electric_Regional_Aircraft
-36. Thermal Management System Design for Electrified Aircraft Propulsion Concepts - NASA Technical Reports Server, fecha de acceso: marzo 16, 2025, https://ntrs.nasa.gov/api/citations/20205011477/downloads/TM-20205011477.pdf
-37. Lithium-Ion Battery Thermal Management Systems Using Flexible Graphite Heat - The Ohio State University, fecha de acceso: marzo 16, 2025, https://kb.osu.edu/bitstreams/46fd5b84-bfa3-57bf-9817-d613f92f6556/download
-38. Thermal management solutions | Arkema Global, fecha de acceso: marzo 16, 2025, https://www.arkema.com/global/en/markets-solutions/automotive-and-transportation/thermal-management/
-39. A Study on Thermal Management Systems for Hybrid–Electric Aircraft - MDPI, fecha de acceso: marzo 16, 2025, https
-://www.mdpi.com/2226-4310/10/9/745
-40. Designing Thermal Management Systems for More Electric Aircraft | Modelon, fecha de acceso: marzo 16, 2025, 
-https://modelon.com/blog/designing-thermal-management-systems-for-more-electric-aircraft/
-41. Design on High Efficiency and Light Composite Propeller Blade of High Speed Turboprop Aircraft - ResearchGate, fecha de acceso: marzo 16, 2025, https://www.researchgate.net/publication/272922208_Design_on_High_Efficiency_and_Light_Composite_Propeller_Blade_of_High_Speed_Turboprop_Aircraft]
+## VIII. Referencias 📖
 
+1. **Hybrid-Electric Evolution** - Skies Mag (2025) 🔗 [enlace](https://skiesmag.com/features/the-hybrid-electric-evolution/)  
+2. **Propeller Systems** - FAA (2025) 🔗 [enlace](https://www.faa.gov/sites/faa.gov/files/09_amtp_ch7.pdf)  
+3. **NASA High-Spaced Propeller** 🔗 [enlace](https://ntrs.nasa.gov/api/citations/19820018343/downloads/19820018343.pdf)  
 
+🔹 *Para más detalles técnicos, consulta la base de datos de documentación GAIA AIR.*
+
+```
+
+---
