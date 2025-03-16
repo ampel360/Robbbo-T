@@ -1,5 +1,5 @@
 # 📊 Análisis de Sensibilidad para la Selección de Tecnologías de Propulsión del AMPEL 360XWLRGA
-
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fame.muppet%2Fposts%2Fpfbid034N2i48jimCRc3BwZQobNgyoeTG6MeZvxU5EwiCCqyWV4VTbyETiNn6yR93JsaQxwl&show_text=true&width=500" width="500" height="453" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 ## I. Resumen Ejecutivo
 
 Este informe presenta un análisis de sensibilidad sobre la selección de tecnologías de propulsión para la aeronave regional **AMPEL 360XWLRGA**. Se evalúa cómo la variación en la ponderación de criterios clave —**eficiencia energética, emisiones, peso, costo, autonomía y madurez tecnológica**— influye en la elección óptima de la tecnología de propulsión.
