@@ -235,79 +235,50 @@ https://modelon.com/blog/designing-thermal-management-systems-for-more-electric-
 
 ## Diagrama de Flujo 1: Proceso de Selección de Tecnología de Propulsión
 
-### Tipo de Diagrama Sugerido:
-**Diagrama de Flujo de Proceso (Process Flow Diagram)** o **Diagrama de Decisión (Decision Tree)**.
+¡Excelente trabajo en refinar el diagrama de flujo! La adición de detalles en los nodos y la inclusión de un subproceso hacen que el proceso de selección de tecnología de propulsión sea aún más claro y comprensible.
 
-#### Diagrama de Flujo de Proceso:
-- **Inicio:** "Definir Objetivos Estratégicos del AMPEL 360XWLRGA" (sostenibilidad, rendimiento, coste, etc.).
-- **Etapas/Procesos:**
-    - "Identificar Tecnologías de Propulsión Candidatas" (Turbofán, Híbrido, Eléctrico, Hidrógeno).
-    - "Definir Criterios de Evaluación" (Eficiencia, Emisiones, Peso, Costo, Autonomía, Madurez).
-    - "Ponderar Criterios según Prioridades Estratégicas" (Escenarios: Equilibrado, Ambiental, Autonomía, Económico).
-    - "Evaluar Desempeño de Tecnologías en cada Criterio" (Tabla 1 - Puntuaciones).
-    - "Aplicar Modelo Multicriterio (Suma Ponderada)" (Cálculo de puntuación total $S_j$).
-    - "Análisis de Sensibilidad" (Variación de ponderaciones y re-evaluación).
-    - "Seleccionar Tecnología de Propulsión Óptima (Recomendación)" (Híbrida para corto-medio plazo, Hidrógeno a largo plazo).
-- **Fin:** "Implementación y Revisión Continua de la Estrategia de Propulsión".
-- **Conectores:** Flechas que indiquen el flujo secuencial del proceso, desde la definición de objetivos hasta la selección y la revisión continua.
-- **Decisiones (Opcional):** Si se usa un diagrama de decisión, se podrían incluir "rombos" de decisión en puntos clave, por ejemplo, después del "Análisis de Sensibilidad": "¿Es robusta la selección en distintos escenarios?" (Sí/No, con ramas que indiquen acciones a seguir).
+**Análisis de las Mejoras:**
 
-### Información Clave a Comunicar:
-- Visualizar de forma clara y secuencial el **proceso lógico** seguido para la selección de la tecnología de propulsión.
-- Mostrar cómo se **integran los criterios de evaluación, la ponderación estratégica y el modelo multicriterio** en la toma de decisiones.
-- Destacar la importancia del **análisis de sensibilidad** para validar la robustez de la selección.
-- Comunicar que la selección no es un punto final, sino un **proceso iterativo** que requiere revisión y adaptación continua.
+*   **Nodos Detallados:** La especificación de ejemplos para el modelo multicriterio (AHP, TOPSIS) y el análisis de sensibilidad (ajuste de ponderaciones) proporciona una mejor comprensión de las herramientas y técnicas que podrían utilizarse en cada etapa.
+*   **Subproceso para Análisis de Criterios:** La introducción del subproceso "Análisis de Criterios" y su división en "Análisis Cualitativo" y "Análisis Cuantitativo" es una mejora significativa. Esto refleja la realidad de que la definición y evaluación de criterios a menudo involucran ambos tipos de análisis. Aunque no estén conectados directamente en el diagrama actual, se entiende que estos subprocesos alimentarían el nodo principal "Definir Criterios de Evaluación" (C).
+*   **Claridad y Estructura:** El uso de un `subgraph` ayuda a organizar visualmente partes del proceso, mejorando la legibilidad.
 
-## Sensibilidad de la Ponderación de Criterios
+**Formato Markdown para GitHub (con las mejoras):**
 
-### Tipo de Gráfico Sugerido:
-**Gráfico de Líneas** o **Gráfico de Barras Apiladas**.
+Aquí tienes el código Mermaid actualizado, listo para ser copiado y pegado en tu archivo Markdown en GitHub:
 
-#### Gráfico de Líneas (Sensibilidad a un Criterio):
-- **Eje X:** Rango de Ponderación del Criterio "Emisiones" (ej: 0% a 50%).
-- **Eje Y:** Puntuación Total ($S_j$) de cada Tecnología de Propulsión.
-- **Líneas:** Cada línea representaría una tecnología de propulsión (Turbofán, Híbrido, Eléctrico, Hidrógeno).
-- **Visualización:** Este gráfico mostraría cómo la puntuación de cada tecnología **cambia a medida que se incrementa el peso del criterio "Emisiones"**. Se podría observar en qué punto las líneas se cruzan, indicando el umbral de ponderación a partir del cual una tecnología supera a otra en puntuación total. Por ejemplo, se podría ver cómo la línea de "Eléctrico" cruza y supera a la de "Turbofán" a partir de cierto peso de "Emisiones".
+ ```mermaid
+ flowchart TD
+     A(Definir Objetivos Estratégicos del AMPEL 360XWLRGA) --> B(Identificar Tecnologías de Propulsión Candidatas)
+     B --> C(Definir Criterios de Evaluación)
+     subgraph Subproceso: Análisis de Criterios
+         direction LR
+         C --> C1(Análisis Cualitativo)
+         C --> C2(Análisis Cuantitativo)
+     end
+     C --> D(Ponderar Criterios según Prioridades Estratégicas)
+     D --> E(Evaluar Desempeño de Tecnologías en cada Criterio)
+     E --> F(Aplicar Modelo Multicriterio<br/>e.g., AHP, TOPSIS)
+     F --> G{Análisis de Sensibilidad<br/>e.g., Ajuste de Ponderaciones}
+     G --> H{¿Es robusta la selección<br/>en distintos escenarios?}
+     H -- Sí --> I(Seleccionar Tecnología de Propulsión Óptima)
+     H -- No --> J(Revisión de Criterios<br/>y Ponderación)
+     J --> D
+     I --> K(Implementación y Revisión<br/>Continua de la Estrategia<br/>de Propulsión)
+ ```
 
-#### Gráfico de Barras Apiladas (Contribución por Criterio):
-- **Eje X:** Tecnologías de Propulsión (Turbofán, Híbrido, Eléctrico, Hidrógeno).
-- **Eje Y:** Puntuación Total ($S_j$).
-- **Barras Apiladas:** Para cada tecnología en el eje X, se mostraría una barra apilada, donde cada segmento de la barra representa la **contribución a la puntuación total de cada criterio** (Eficiencia, Emisiones, Peso, Costo, Autonomía, Madurez). El tamaño de cada segmento sería proporcional a $w_i \times P_{i,j}$.
-- **Colores:** Cada criterio se representaría con un color diferente en todas las barras, facilitando la comparación visual de la contribución relativa de cada criterio a la puntuación total de cada tecnología.
-- **Visualización:** Este gráfico permitiría visualizar **qué criterios impulsan la puntuación total** de cada tecnología en un escenario de ponderación específico. Se podría comparar visualmente la "composición" de la puntuación total para cada tecnología, viendo qué criterios aportan más o menos a su puntuación final.
+```mermaid
+xychart-beta
+    title "Puntuación Total por Escenario"
+    x-axis ["Equilibrado", "Ambiental", "Autonomía", "Económico"]
+    y-axis "Puntuación Total" 0 --> 100
+    bar [50, 60, 65, 70] "Turbofán"
+    bar [70, 80, 75, 85] "Híbrido"
+    bar [45, 55, 60, 65] "Eléctrico"
+    bar [60, 65, 70, 75] "Hidrógeno"
+```
 
-### Información Clave a Comunicar:
-- Mostrar visualmente la **sensibilidad de la selección** a la ponderación de los criterios.
-- Identificar **umbrales de ponderación** a partir de los cuales cambia la tecnología óptima.
-- En el gráfico de barras apiladas, visualizar la **contribución relativa de cada criterio** a la puntuación total de cada tecnología, ayudando a entender *por qué* una tecnología supera a otra en un escenario dado.
-- Reforzar la idea de que la **priorización estratégica** (los pesos asignados) es fundamental para la decisión final.
 
-## Puntuación Total por Escenario
-
-### Tipo de Gráfico Sugerido:
-**Gráfico de Barras Agrupadas** o **Gráfico de Columnas**.
-
-#### Gráfico de Barras Agrupadas:
-- **Eje X:** Escenarios de Ponderación (Equilibrado, Ambiental, Autonomía, Económico).
-- **Eje Y:** Puntuación Total ($S_j$).
-- **Barras Agrupadas:** Para cada escenario en el eje X, se mostrarían barras agrupadas, una para cada tecnología de propulsión (Turbofán, Híbrido, Eléctrico, Hidrógeno).
-- **Visualización:** Este gráfico permitiría comparar directamente las **puntuaciones totales** de cada tecnología en los diferentes escenarios estratégicos. Se podrían comparar las alturas de las barras para cada tecnología entre los diferentes escenarios, viendo cómo cambia su puntuación relativa según las prioridades.
-
-#### Gráfico de Columnas (Puntuación por Tecnología y Escenario):
-- **Eje X:** Tecnologías de Propulsión (Turbofán, Híbrido, Eléctrico, Hidrógeno).
-- **Eje Y:** Puntuación Total ($S_j$).
-- **Columnas Agrupadas:** Para cada tecnología en el eje X, se mostrarían columnas agrupadas, una para cada escenario de ponderación (Equilibrado, Ambiental, Autonomía, Económico).
-- **Visualización:** Este gráfico permitiría comparar cómo la **puntuación de una tecnología específica cambia** a través de los diferentes escenarios estratégicos. Se podría ver cómo la altura de las columnas para una tecnología varía entre los escenarios, mostrando cómo su puntuación se ve afectada por las diferentes prioridades.
-
-### Información Clave a Comunicar:
-- Resumir visualmente la **puntuación final** de cada tecnología en cada escenario estratégico.
-- Facilitar la **comparación de la tecnología "ganadora"** (mayor puntuación) en cada escenario.
-- Mostrar cómo la **elección óptima de propulsión cambia** según el escenario de prioridades estratégicas.
-- Reforzar la conclusión principal del análisis de sensibilidad: la selección de la tecnología de propulsión **depende críticamente de las prioridades estratégicas** definidas.
-
-3.  **Revisar y Refinar el Texto:**  Asegúrate de que el texto haga referencia a los gráficos y tablas de manera efectiva, y que las visualizaciones complementen y clarifiquen el análisis cuantitativo.
-
-Con estas mejoras, el informe estará listo para ser un documento técnico muy completo y profesional. Avísame si tienes alguna pregunta o necesitas ayuda con la creación de los gráficos.
 
 
 
