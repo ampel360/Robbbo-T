@@ -58,7 +58,7 @@ Profundizando en los conceptos clave de rango espacial y rango temporal desde la
 
 *Valores proyectados para 2035-2040.*
 
-**[Insertar aquí Gráfico 1: Gráfico de barras comparando el Trade-Off Técnico de las Tecnologías de Propulsión]**
+**[![image](https://github.com/user-attachments/assets/0e52e01c-432c-478e-97fb-e3f003f5d3b4)]**
 
 ### Recomendaciones
 
@@ -110,13 +110,55 @@ Profundizando en los conceptos clave de rango espacial y rango temporal desde la
 **Aceptación Pública:**
 *   Estrategias para comunicar los beneficios y riesgos de las nuevas tecnologías de propulsión.
 
-**[Insertar aquí Diagrama de Flujo 1: Diagrama de flujo de proceso de selección de tecnología de propulsión]**
-
-**¿Te gustaría profundizar en alguno de estos aspectos o en algún otro en particular?**
+```mermaid
+ flowchart TD
+     A(Definir Objetivos Estratégicos del AMPEL 360XWLRGA) --> B(Identificar Tecnologías de Propulsión Candidatas)
+     B --> C(Definir Criterios de Evaluación)
+     subgraph Subproceso: Análisis de Criterios
+         direction LR
+         C --> C1(Análisis Cualitativo)
+         C --> C2(Análisis Cuantitativo)
+     end
+     C --> D(Ponderar Criterios según Prioridades Estratégicas)
+     D --> E(Evaluar Desempeño de Tecnologías en cada Criterio)
+     E --> F(Aplicar Modelo Multicriterio<br/>e.g., AHP, TOPSIS)
+     F --> G{Análisis de Sensibilidad<br/>e.g., Ajuste de Ponderaciones}
+     G --> H{¿Es robusta la selección<br/>en distintos escenarios?}
+     H -- Sí --> I(Seleccionar Tecnología de Propulsión Óptima)
+     H -- No --> J(Revisión de Criterios<br/>y Ponderación)
+     J --> D
+     I --> K(Implementación y Revisión<br/>Continua de la Estrategia<br/>de Propulsión)
+ ```
 
 ## II. Introducción: El AMPEL 360XWLRGA y el Imperativo de la Selección de Tecnología de Propulsión
 
-**[Insertar aquí Gráfico 2: Gráfico de líneas mostrando la Sensibilidad de la Ponderación de Criterios en la Selección de Propulsión]**
+```mermaid
+flowchart TB
+    subgraph Scenario1[Equilibrado]
+        Turbofan1[50: Turbofán]
+        Hibrido1[70: Híbrido]
+        Electrico1[45: Eléctrico]
+        Hidrogeno1[60: Hidrógeno]
+    end
+    subgraph Scenario2[Ambiental]
+        Turbofan2[60: Turbofán]
+        Hibrido2[80: Híbrido]
+        Electrico2[55: Eléctrico]
+        Hidrogeno2[65: Hidrógeno]
+    end
+    subgraph Scenario3[Autonomía]
+        Turbofan3[65: Turbofán]
+        Hibrido3[75: Híbrido]
+        Electrico3[60: Eléctrico]
+        Hidrogeno3[70: Hidrógeno]
+    end
+    subgraph Scenario4[Económico]
+        Turbofan4[70: Turbofán]
+        Hibrido4[85: Híbrido]
+        Electrico4[65: Eléctrico]
+        Hidrogeno4[75: Hidrógeno]
+    end
+```
 
 **Tabla 2. Ponderación de Criterios Bajo Distintos Escenarios Estratégicos**
 
@@ -177,150 +219,5 @@ Profundizando en los conceptos clave de rango espacial y rango temporal desde la
 40. Designing Thermal Management Systems for More Electric Aircraft | Modelon, fecha de acceso: marzo 16, 2025, 
 https://modelon.com/blog/designing-thermal-management-systems-for-more-electric-aircraft/
 41. Design on High Efficiency and Light Composite Propeller Blade of High Speed Turboprop Aircraft - ResearchGate, fecha de acceso: marzo 16, 2025, https://www.researchgate.net/publication/272922208_Design_on_High_Efficiency_and_Light_Composite_Propeller_Blade_of_High_Speed_Turboprop_Aircraft]
-
-
-## Gráfico 1: Gráfico de Radar (Spider Chart) de Trade-Off Técnico (Mejorado)
-
-**Tipo:** Gráfico de Radar (Spider Chart)
-
-**Ejes:**
-- Rango Espacial
-- Rango Temporal
-- Emisiones CO₂
-- Costo Inicial
-- Madurez
-
-**Series de Datos:**
-- Híbrido-Eléctrica
-- Hidrógeno
-- Turboprop Convencional
-
-**Visualización:**
-- Cada tecnología se representa con una línea poligonal conectando sus puntuaciones en cada eje.
-- La escala en cada eje estará claramente definida (ej: 0 a 10, donde 10 representa el máximo desempeño).
-- Se utilizarán colores distintos y fácilmente distinguibles para cada tecnología.
-- Mejora: Se incluirán etiquetas directas cerca de los puntos de datos para mostrar la puntuación aproximada de cada tecnología en cada criterio, o se indicará que en una implementación interactiva, se podrían mostrar tooltips al pasar el cursor.
-
-![image](https://github.com/user-attachments/assets/0e52e01c-432c-478e-97fb-e3f003f5d3b4)
-
-**Información Clave a Comunicar:**
-- Visualizar los perfiles de desempeño y los trade-offs de cada tecnología.
-- Facilitar la comparación visual de las fortalezas y debilidades relativas.
-- Mostrar qué tecnología se alinea mejor con diferentes prioridades de criterios.
-
-## Gráfico 2: Gráfico de Barras Agrupadas de Trade-Off Técnico (Mejorado)
-
-**Tipo:** Gráfico de Barras Agrupadas
-
-**Eje X:** Criterios del Trade-Off Técnico (ordenados estratégicamente, por ejemplo: Emisiones CO₂, Costo Inicial, Rango Espacial, Rango Temporal, Madurez).
-
-**Eje Y:** Puntuación de Desempeño (escala clara y consistente, por ejemplo: 0 a 10).
-
-**Barras Agrupadas:** Para cada criterio en el eje X, se mostrarán tres barras adyacentes, cada una representando una tecnología:
-- Barra 1: Híbrido-Eléctrica (color consistente)
-- Barra 2: Hidrógeno (color consistente)
-- Barra 3: Turboprop Convencional (color consistente)
-
-**Visualización:**
-- Las alturas de las barras representarán el desempeño de cada tecnología en el criterio correspondiente.
-- Se utilizarán etiquetas claras para los ejes y los criterios.
-- Mejora: Se incluirá una leyenda clara indicando qué color de barra corresponde a cada tecnología. Adicionalmente, se podrían añadir pequeñas etiquetas de texto sobre cada grupo de barras para identificar el criterio.
-
-![image](https://github.com/user-attachments/assets/05893e92-3e66-4b0a-8036-f898f2c0b560)
-
-**Información Clave a Comunicar:**
-- Facilitar la comparación directa del desempeño en cada criterio.
-- Identificar rápidamente qué tecnología tiene el mejor o peor desempeño en un criterio específico.
-- Mostrar la distribución del desempeño de cada tecnología a través de los diferentes criterios.
-
-## Diagrama de Flujo 1: Proceso de Selección de Tecnología de Propulsión
-```markdown
-## Gráfico de Barras Apiladas (Contribución por Criterio)
-
-**Eje X:** Tecnologías de Propulsión (Turbofán, Híbrido, Eléctrico, Hidrógeno).
-**Eje Y:** Puntuación Total ($S_j$).
-
-**Barras Apiladas:**
-- Para cada tecnología en el eje X, se mostraría una barra apilada, donde cada segmento de la barra representa la contribución a la puntuación total de cada criterio (Eficiencia, Emisiones, Peso, Costo, Autonomía, Madurez).
-- El tamaño de cada segmento sería proporcional a $w_i \times P_{i,j}$.
-
-**Colores:**
-- Cada criterio se representaría con un color diferente en todas las barras, facilitando la comparación visual de la contribución relativa de cada criterio a la puntuación total de cada tecnología.
-
-**Visualización:**
-- Este gráfico permitiría visualizar qué criterios impulsan la puntuación total de cada tecnología en un escenario de ponderación específico.
-- Se podría comparar visualmente la "composición" de la puntuación total para cada tecnología, viendo qué criterios aportan más o menos a su puntuación final.
-
-```
-
- ```mermaid
- flowchart TD
-     A(Definir Objetivos Estratégicos del AMPEL 360XWLRGA) --> B(Identificar Tecnologías de Propulsión Candidatas)
-     B --> C(Definir Criterios de Evaluación)
-     subgraph Subproceso: Análisis de Criterios
-         direction LR
-         C --> C1(Análisis Cualitativo)
-         C --> C2(Análisis Cuantitativo)
-     end
-     C --> D(Ponderar Criterios según Prioridades Estratégicas)
-     D --> E(Evaluar Desempeño de Tecnologías en cada Criterio)
-     E --> F(Aplicar Modelo Multicriterio<br/>e.g., AHP, TOPSIS)
-     F --> G{Análisis de Sensibilidad<br/>e.g., Ajuste de Ponderaciones}
-     G --> H{¿Es robusta la selección<br/>en distintos escenarios?}
-     H -- Sí --> I(Seleccionar Tecnología de Propulsión Óptima)
-     H -- No --> J(Revisión de Criterios<br/>y Ponderación)
-     J --> D
-     I --> K(Implementación y Revisión<br/>Continua de la Estrategia<br/>de Propulsión)
- ```
-## Puntuación Total por Escenario
-```markdown
-## Gráfico de Barras Agrupadas
-
-**Eje X:** Escenarios de Ponderación (Equilibrado, Ambiental, Autonomía, Económico).
-**Eje Y:** Puntuación Total ($S_j$).
-
-**Barras Agrupadas:**
-- Para cada escenario en el eje X, se mostrarían barras agrupadas, una para cada tecnología de propulsión (Turbofán, Híbrido, Eléctrico, Hidrógeno).
-
-**Visualización:**
-- Este gráfico permitiría comparar directamente las puntuaciones totales de cada tecnología en los diferentes escenarios estratégicos.
-- Se podrían comparar las alturas de las barras para cada tecnología entre los diferentes escenarios, viendo cómo cambia su puntuación relativa según las prioridades.
-
-```
-```mermaid
-flowchart TB
-    subgraph Scenario1[Equilibrado]
-        Turbofan1[50: Turbofán]
-        Hibrido1[70: Híbrido]
-        Electrico1[45: Eléctrico]
-        Hidrogeno1[60: Hidrógeno]
-    end
-    subgraph Scenario2[Ambiental]
-        Turbofan2[60: Turbofán]
-        Hibrido2[80: Híbrido]
-        Electrico2[55: Eléctrico]
-        Hidrogeno2[65: Hidrógeno]
-    end
-    subgraph Scenario3[Autonomía]
-        Turbofan3[65: Turbofán]
-        Hibrido3[75: Híbrido]
-        Electrico3[60: Eléctrico]
-        Hidrogeno3[70: Hidrógeno]
-    end
-    subgraph Scenario4[Económico]
-        Turbofan4[70: Turbofán]
-        Hibrido4[85: Híbrido]
-        Electrico4[65: Eléctrico]
-        Hidrogeno4[75: Hidrógeno]
-    end
-```
-
-
-
-
-
-
-
-
 
 
