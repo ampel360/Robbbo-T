@@ -201,7 +201,7 @@ https://modelon.com/blog/designing-thermal-management-systems-for-more-electric-
 - Se utilizarán colores distintos y fácilmente distinguibles para cada tecnología.
 - Mejora: Se incluirán etiquetas directas cerca de los puntos de datos para mostrar la puntuación aproximada de cada tecnología en cada criterio, o se indicará que en una implementación interactiva, se podrían mostrar tooltips al pasar el cursor.
 
-![Generated Image](Generated%20Image%20March%2016,%202025%20-%202:31PM.png)
+![image](https://github.com/user-attachments/assets/0e52e01c-432c-478e-97fb-e3f003f5d3b4)
 
 **Información Clave a Comunicar:**
 - Visualizar los perfiles de desempeño y los trade-offs de cada tecnología.
@@ -226,7 +226,7 @@ https://modelon.com/blog/designing-thermal-management-systems-for-more-electric-
 - Se utilizarán etiquetas claras para los ejes y los criterios.
 - Mejora: Se incluirá una leyenda clara indicando qué color de barra corresponde a cada tecnología. Adicionalmente, se podrían añadir pequeñas etiquetas de texto sobre cada grupo de barras para identificar el criterio.
 
-![Generated Image](Generated%20Image%20March%2016,%202025%20-%202:31PM.png)
+![image](https://github.com/user-attachments/assets/05893e92-3e66-4b0a-8036-f898f2c0b560)
 
 **Información Clave a Comunicar:**
 - Facilitar la comparación directa del desempeño en cada criterio.
@@ -235,17 +235,6 @@ https://modelon.com/blog/designing-thermal-management-systems-for-more-electric-
 
 ## Diagrama de Flujo 1: Proceso de Selección de Tecnología de Propulsión
 
-¡Excelente trabajo en refinar el diagrama de flujo! La adición de detalles en los nodos y la inclusión de un subproceso hacen que el proceso de selección de tecnología de propulsión sea aún más claro y comprensible.
-
-**Análisis de las Mejoras:**
-
-*   **Nodos Detallados:** La especificación de ejemplos para el modelo multicriterio (AHP, TOPSIS) y el análisis de sensibilidad (ajuste de ponderaciones) proporciona una mejor comprensión de las herramientas y técnicas que podrían utilizarse en cada etapa.
-*   **Subproceso para Análisis de Criterios:** La introducción del subproceso "Análisis de Criterios" y su división en "Análisis Cualitativo" y "Análisis Cuantitativo" es una mejora significativa. Esto refleja la realidad de que la definición y evaluación de criterios a menudo involucran ambos tipos de análisis. Aunque no estén conectados directamente en el diagrama actual, se entiende que estos subprocesos alimentarían el nodo principal "Definir Criterios de Evaluación" (C).
-*   **Claridad y Estructura:** El uso de un `subgraph` ayuda a organizar visualmente partes del proceso, mejorando la legibilidad.
-
-**Formato Markdown para GitHub (con las mejoras):**
-
-Aquí tienes el código Mermaid actualizado, listo para ser copiado y pegado en tu archivo Markdown en GitHub:
 
  ```mermaid
  flowchart TD
