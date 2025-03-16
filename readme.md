@@ -1,14 +1,14 @@
-# 🌍 An Internet Self-Regulated by AGI: Saving Democracy from Misinformation
+# 🌍 A self-regulated internet by AGI: Saving democracy from misinformation
 
 **General Proof Reader Technology**  
 **By Amedeo Pelliccia**  
 
 ---
 
-## **GAIA AIR INFRANET**  
+## GAIA AIR INFRASTRUCTURE  
 ### *Strategic Intermediate Layer*
 
-The **GAIA AIR INFRANET** is a strategic layer that bridges the **universal accessibility** of the public web with the **controlled security** of private networks (clouds). Its main purpose is to deliver **high-quality**, **strategic value**, and **total transparency** through **automatic verification** processes that prioritize **factual accuracy**, explicitly excluding **SEO-based marketing techniques**.
+The **GAIA AIINFRASTRUCTURE is a strategic layer that bridges the **universal accessibility** of the public web with the **controlled security** of private networks (clouds). Its main purpose is to deliver **high-quality**, **strategic value**, and **total transparency** through **automatic verification** processes that prioritize **factual accuracy**, explicitly excluding **SEO-based marketing techniques**.
 
 ---
 
