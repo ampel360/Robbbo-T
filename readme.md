@@ -234,7 +234,24 @@ https://modelon.com/blog/designing-thermal-management-systems-for-more-electric-
 - Mostrar la distribución del desempeño de cada tecnología a través de los diferentes criterios.
 
 ## Diagrama de Flujo 1: Proceso de Selección de Tecnología de Propulsión
+```markdown
+## Gráfico de Barras Apiladas (Contribución por Criterio)
 
+**Eje X:** Tecnologías de Propulsión (Turbofán, Híbrido, Eléctrico, Hidrógeno).
+**Eje Y:** Puntuación Total ($S_j$).
+
+**Barras Apiladas:**
+- Para cada tecnología en el eje X, se mostraría una barra apilada, donde cada segmento de la barra representa la contribución a la puntuación total de cada criterio (Eficiencia, Emisiones, Peso, Costo, Autonomía, Madurez).
+- El tamaño de cada segmento sería proporcional a $w_i \times P_{i,j}$.
+
+**Colores:**
+- Cada criterio se representaría con un color diferente en todas las barras, facilitando la comparación visual de la contribución relativa de cada criterio a la puntuación total de cada tecnología.
+
+**Visualización:**
+- Este gráfico permitiría visualizar qué criterios impulsan la puntuación total de cada tecnología en un escenario de ponderación específico.
+- Se podría comparar visualmente la "composición" de la puntuación total para cada tecnología, viendo qué criterios aportan más o menos a su puntuación final.
+
+```
 
  ```mermaid
  flowchart TD
@@ -255,7 +272,21 @@ https://modelon.com/blog/designing-thermal-management-systems-for-more-electric-
      J --> D
      I --> K(Implementación y Revisión<br/>Continua de la Estrategia<br/>de Propulsión)
  ```
+## Puntuación Total por Escenario
+```markdown
+## Gráfico de Barras Agrupadas
 
+**Eje X:** Escenarios de Ponderación (Equilibrado, Ambiental, Autonomía, Económico).
+**Eje Y:** Puntuación Total ($S_j$).
+
+**Barras Agrupadas:**
+- Para cada escenario en el eje X, se mostrarían barras agrupadas, una para cada tecnología de propulsión (Turbofán, Híbrido, Eléctrico, Hidrógeno).
+
+**Visualización:**
+- Este gráfico permitiría comparar directamente las puntuaciones totales de cada tecnología en los diferentes escenarios estratégicos.
+- Se podrían comparar las alturas de las barras para cada tecnología entre los diferentes escenarios, viendo cómo cambia su puntuación relativa según las prioridades.
+
+```
 ```mermaid
 flowchart TB
     subgraph Scenario1[Equilibrado]
