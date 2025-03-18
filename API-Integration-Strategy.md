@@ -57,6 +57,15 @@ The API Orchestration System combines multiple API calls into unified interfaces
 - Data transformation between steps
 - Error handling and compensation strategies
 
+### 6. UI Generation Script
+
+The UI Generation Script creates a simple HTML page to provide a basic user interface for the API integration system.
+
+**Key Features:**
+- Generates a simple HTML page
+- Customizable content and styling
+- Easy to run and integrate
+
 ## Architecture
 
 ![Architecture Diagram](./docs/diagrams/architecture.png)
@@ -93,6 +102,9 @@ npm run start:metadata
 
 # Run API orchestration example
 npm run start:orchestration
+
+# Run UI generation script
+npm run generate-ui
 ```
 
 ## System Breakdown
@@ -104,6 +116,7 @@ npm run start:orchestration
 | Transformation Framework | Data transformation | JSON Schema, XSLT, Ajv |
 | Metadata-Driven Approach | Dynamic API generation | OpenAPI/Swagger, JSON Schema |
 | API Orchestration | Workflow simplification | State machines, Promises, Pub/Sub |
+| UI Generation Script | Basic UI creation | HTML, CSS, Node.js |
 
 ## Project Structure
 
@@ -114,6 +127,7 @@ api-integration-strategy/
 ├── transformation-framework/  # Data transformation engine
 ├── metadata-driven-approach/  # Dynamic API generation
 ├── api-orchestration/         # API workflow orchestration
+├── ui/                        # UI generation script
 ├── common/                    # Shared utilities and models
 ├── docs/                      # Documentation and diagrams
 └── examples/                  # Example usage scenarios
@@ -126,6 +140,7 @@ api-integration-strategy/
 3. **Partner API Integration**: Use the Transformation Framework to adapt to partner API formats
 4. **Rapid API Development**: Leverage the Metadata-Driven approach for quick API creation
 5. **Complex Workflows**: Simplify multi-step processes with the API Orchestration System
+6. **Basic UI Creation**: Generate a simple HTML page for a basic user interface
 
 ## Contributing
 
