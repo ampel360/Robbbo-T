@@ -44,5 +44,21 @@ function generateHTML() {
   console.log(`HTML page generated at: ${outputPath}`);
 }
 
+// Function to generate a UI component based on input data
+function generateUIComponent(data) {
+  if (!data || typeof data !== 'object') {
+    throw new Error('Invalid input data');
+  }
+
+  const componentHTML = `
+    <div class="component">
+      <h2>${data.title}</h2>
+      <p>${data.description}</p>
+    </div>
+  `;
+
+  return componentHTML;
+}
+
 // Run the function to generate the HTML page
 generateHTML();

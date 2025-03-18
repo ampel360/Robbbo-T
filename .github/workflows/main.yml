@@ -69,6 +69,7 @@ jobs:
 
   generate-ui:
     runs-on: ubuntu-latest
+    needs: run-tests
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -83,3 +84,21 @@ jobs:
 
       - name: Generate UI
         run: node ui/generate-ui.js
+
+  generate-ui-backend:
+    runs-on: ubuntu-latest
+    needs: generate-ui
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate UI Backend
+        run: node ui/generate-ui-backend.js
