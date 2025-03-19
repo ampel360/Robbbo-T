@@ -185,7 +185,7 @@ graph TD
     E --> F[Parallel Development Paths]
     F --> G[Decision Gates]
     G --> H[Selected Technology Implementation]```
-
+```
 ## 5. CRITICAL SUCCESS FACTORS
 
 | Success Factor | Measurement Criteria | Verification Method |
