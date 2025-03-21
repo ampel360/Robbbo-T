@@ -26,6 +26,7 @@ This document covers the COAFI framework specifically for Part I documentation. 
 
 ### 1.3 Applicable Documents
 - Overall Aircraft System Description Document (GP-AM-EDR-00-001)
+- Airworthiness & Certification Requirements Report (GP-AM-EDR-00-003)
 - COAFI Master Framework Document (COAFI-MASTER-001)
 - GAIA AIR Documentation Standards (GP-DOC-STD-001)
 

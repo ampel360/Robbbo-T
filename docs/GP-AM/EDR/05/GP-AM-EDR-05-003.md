@@ -30,6 +30,7 @@ This document covers maintenance aspects specific to the Q-01 quantum propulsion
 - Q-01 Quantum Entanglement Engine System Description (GP-AM-EDR-72-Q01-001)
 - Cryogenic Cooling System Description (GP-AM-EDR-72-Q01-005)
 - Q-01 Maintenance Procedures Manual (GP-AM-EDR-72-Q01-006)
+- Component Lifing & Time-Limit Data Report (GP-AM-EDR-05-004)
 
 ## 2. Q-01 Quantum Propulsion System Overview
 ### 2.1 System Description

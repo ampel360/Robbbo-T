@@ -29,6 +29,7 @@ This document covers the architecture, implementation strategy, and operational 
 - i-Aher0 Architecture Document (GPGM-IAHER-06XX-001-A)
 - Overall Aircraft System Description Document (GP-AM-EDR-00-001)
 - Central Maintenance System Specification (GP-AM-EDR-45-001)
+- Propulsion Maintenance Impact Analysis Report (GP-AM-EDR-05-003)
 
 ## 2. Predictive Maintenance Architecture
 ### 2.1 System Overview

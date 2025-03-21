@@ -324,3 +324,4 @@ Contingency measures include:
 - Alternative Energy Harvesting System Life Test Report (GP-AM-EDR-28-AEHS-005)
 - Advanced Materials Aging Analysis Report (GP-AM-EDR-51-AMAR-002)
 - Digital Twin Life Prediction Validation Report (GP-DT-LPVR-001)
+- Service Life Cycle Analysis Document (GP-AM-EDR-05-005)
