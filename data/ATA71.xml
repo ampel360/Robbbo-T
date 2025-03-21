@@ -1,9 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  ATA 71 - Powerplant System Description
-  S1000D Issue 6.0 Compliant Data Module
-  Final version incorporating recommended improvements.
--->
 <dmodule
   xmlns="http://www.s1000d.org/S1000DIssue6.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -12,282 +6,25 @@
 
   <identAndStatusSection>
     <dmAddress>
-      <modelIdentCode>
-        <modelIdentCode>AMPEL360</modelIdentCode>
-        <modelIdentCode
-          modelIdentCode="AMPEL360"
-          systemDiffCode="A"
-          systemCode="71"
-          subSystemCode="00"
-          subSubSystemCode="00"
-          assyCode="00"
-          disassyCodeVariant="A"
-          infoCode="020"
-          infoCodeVariant="A"
-          itemLocationCode="00"
-          language="EN-US"
-          issueNumber="002"   
-          revNumber="00"
-          dmType="DMC"
-          learnCode="A">
-          GPAM-AMPEL-0201-71-000-A
-        </modelIdentCode>
+      <modelIdentCode modelIdentCode="AMPEL360" systemDiffCode="A" systemCode="71" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCodeVariant="A" infoCode="020" infoCodeVariant="A" itemLocationCode="00" language="EN-US" issueNumber="002" revNumber="00" dmType="DMC" learnCode="A">
+        GPAM-AMPEL-0201-71-000-A
       </modelIdentCode>
     </dmAddress>
 
-    <dmCode>
-      <dmCode>ATA 71 - Powerplant - System Description</dmCode>
-    </dmCode>
-
     <issueInfo>
-      <!-- Using integer for issueNumber -->
       <issueNumber>002</issueNumber>
       <issueDate day="28" month="10" year="2025" />
       <inWork/>
-      <!-- Updated classification syntax -->
       <securityClassification handle="proprietary">Proprietary – GAIA AIR</securityClassification>
     </issueInfo>
-
-    <dmStatus issueType="revised">
-      <prodInfo>
-        <applic>
-          <modelIdentCode>AMPEL360XWLRGA</modelIdentCode>
-        </applic>
-      </prodInfo>
-      <security securityClassification="proprietary" securityReleasability="noConstraint"/>
-      <responsiblePartnerCompany>GAIAPULSE</responsiblePartnerCompany>
-      <originator>Amedeo Pelliccia &amp; AI Collaboration</originator>
-      <approver>
-        <name>John Doe</name>
-        <responsibility>Engineering Manager</responsibility>
-      </approver>
-      <qualityAssurance>
-        <name>QA Dept.</name>
-        <responsibility>Quality Approval</responsibility>
-      </qualityAssurance>
-      <!-- Summaries of changes since previous issue -->
-      <dateChangeNotice>
-        <para>Updated to S1000D Issue 6.0 namespace. Revised battery specs &amp; Q-01 references.</para>
-      </dateChangeNotice>
-    </dmStatus>
   </identAndStatusSection>
 
   <content>
-    <!-- ========== 1. Applicability ========== -->
-    <procedures>
-      <para>1. Applicability</para>
-      <para>This data module describes the powerplant system for the AMPEL360XWLRGA aircraft. It applies to all configurations equipped with the hybrid-electric propulsion system and the Q-01 experimental thrust augmentation system.</para>
-      <para>Document version: 002; Classification: Proprietary – GAIA AIR</para>
-    </procedures>
-
-    <!-- ========== 2. References ========== -->
-    <procedures>
-      <para>2. References</para>
-      <para>The following documents and standards are referenced:</para>
-      <itemizedlist>
-        <item>
-          <para>GPAM-AMPEL-0201-24-001-A - Primary Power Generation System (S100D) - Rev A</para>
-        </item>
-        <item>
-          <para>GPAM-AMPEL-0201-24-002-A - Power Distribution Schematics (S100D) - Rev A</para>
-        </item>
-        <item>
-          <para>GPAM-AMPEL-0201-28-Q2-001 - AEHCS System Overview and Architecture (S100D) - Rev B</para>
-        </item>
-        <item>
-          <para>GPAM-AMPEL-0201-76-001-A - Engine Control System Integration with Q-01 (S100D) - Rev A</para>
-        </item>
-        <item>
-          <para>GPPM-QPROP-0401-01-001-A - Q-01 System Description (S100D) - Rev A</para>
-        </item>
-        <item>
-          <para>Rolls-Royce AE2100J Specs - Manufacturer Specifications - Rev 3.2</para>
-        </item>
-        <item>
-          <para>Magnix MagniX500 Specs - Manufacturer Specifications - Rev 2.1</para>
-        </item>
-        <item>
-          <para>RTCA DO-178C, DO-254, DO-160G Aerospace Certification Standards (Current Versions)</para>
-        </item>
-      </itemizedlist>
-    </procedures>
-
-    <!-- ========== 3. System Overview ========== -->
-    <procedures>
-      <para>3. System Overview</para>
-      <para>
-        The ATA 71 Powerplant system is a hybrid-electric propulsion architecture combining conventional and advanced power sources.
-        It integrates a fuel-burning engine (turbogenerator) with electric motors, an energy storage system, and experimental quantum augmentation.
-      </para>
-      <para>Key advantages include reduced emissions, improved fuel efficiency, redundancy, flexibility, and future-proofing.</para>
-    </procedures>
-
-    <!-- 3.4 Diagram reference -->
-    <illustration>
+    <illustrations>
       <figure id="fig-powerplant-diagram">
         <para>Figure 1: Hybrid-Electric Propulsion System Block Diagram</para>
         <graphic boardNo="ILL-GPAM-AMPEL-0201-71-DIAG-001"/>
       </figure>
-    </illustration>
-
-    <!-- ========== 4. System Components ========== -->
-    <procedures>
-      <para>4. System Components</para>
-      <para>
-        This section outlines the major powerplant components:
-      </para>
-
-      <!-- 4.1 Electric Motors/Ducted Fans -->
-      <para>4.1 Electric Motors/Ducted Fans</para>
-      <itemizedlist>
-        <item><para>Quantity: 6 (distributed along wings)</para></item>
-        <item><para>P/N: GPAM-AMPEL-PROP-EM-00001-P</para></item>
-        <item><para>Power Output: 1.5 MW peak, 1 MW continuous</para></item>
-        <item><para>Voltage: ±270 VDC bus</para></item>
-        <item><para>Cooling: Liquid-cooled</para></item>
-        <item><para>MTBF: &gt;25,000 hours</para></item>
-      </itemizedlist>
-
-      <!-- 4.2 Turbogenerator (SAF-Fueled) -->
-      <para>4.2 Turbogenerator (SAF-Fueled)</para>
-      <itemizedlist>
-        <item><para>P/N: GPAM-AMPEL-PROP-TG-00001-P</para></item>
-        <item><para>Power Output: 4 MW</para></item>
-        <item><para>Fuel: 100% SAF, ~0.15 kg/kWh</para></item>
-        <item><para>MTBF: &gt;10,000 hours</para></item>
-      </itemizedlist>
-
-      <!-- 4.3 Primary Battery System -->
-      <para>4.3 Primary Battery System</para>
-      <itemizedlist>
-        <item><para>P/N: GPAM-AMPEL-PROP-BAT-00001-P</para></item>
-        <item><para>Capacity: ~1 MWh, 800 VDC, weight ~4000 kg</para></item>
-        <item><para>Cooling: Liquid-cooled, integrated with AEHCS Thermal Mgt</para></item>
-        <item><para>Meets DO-311A, DO-160G</para></item>
-      </itemizedlist>
-
-      <!-- 4.4 AEHCS -->
-      <para>4.4 Atmospheric Energy Harvesting and Conversion System (AEHCS)</para>
-      <itemizedlist>
-        <item><para>50 kW nominal, up to 100 kW peak</para></item>
-        <item><para>Flexible PV cells, TEG, air turbine generators</para></item>
-      </itemizedlist>
-
-      <!-- 4.5 Q-01 -->
-      <para>4.5 Q-01 Quantum Propulsion System (Experimental)</para>
-      <itemizedlist>
-        <item><para>P/N: GPPM-QPROP-0401</para></item>
-        <item><para>Target Thrust: ~5 N, extremely speculative</para></item>
-        <item><para>TRL 1-2, not certified</para></item>
-      </itemizedlist>
-
-      <!-- 4.6 PMDU -->
-      <para>4.6 Power Management and Distribution Unit (PMDU)</para>
-      <itemizedlist>
-        <item><para>P/N: GPAM-AMPEL-ELEC-PMDU-001</para></item>
-        <item><para>Manages HVDC bus, integrates Turbogenerator, Battery, AEHCS</para></item>
-      </itemizedlist>
-    </procedures>
-
-    <!-- ========== 5. System Operation ========== -->
-    <procedures>
-      <para>5. System Operation</para>
-      <para>5.1 Normal Operating Modes</para>
-      <itemizedlist>
-        <item><para>Takeoff: Battery peak + Turbogenerator as needed, Q-01 standby</para></item>
-        <item><para>Climb: Battery + Turbogenerator, AEHCS supplements, Q-01 optional test</para></item>
-        <item><para>Cruise: Turbogenerator main, AEHCS helps, Battery partial, Q-01 experimental</para></item>
-        <item><para>Descent: Regenerative braking, turbogenerator idle, Q-01 standby</para></item>
-        <item><para>Landing: Battery + Turbogenerator as needed, Q-01 standby</para></item>
-        <item><para>Taxi: Battery/AEHCS only, turbogenerator idle</para></item>
-      </itemizedlist>
-
-      <para>5.2 Emergency Operating Modes</para>
-      <itemizedlist>
-        <item><para>AEHCS Failure: minimal effect</para></item>
-        <item><para>Battery Failure: turbogenerator picks up load</para></item>
-        <item><para>Turbogenerator Failure: switch to battery, limited range</para></item>
-        <item><para>Q-01 Failure: no impact on flight safety</para></item>
-        <item><para>Multiple Failures: FADEC/PMSC fault-tolerant, load shedding if needed</para></item>
-      </itemizedlist>
-
-      <para>5.3 Control System Logic: FADEC manages all components; Q-01 is not safety-critical.</para>
-    </procedures>
-
-    <!-- ========== 6. Interfaces ========== -->
-    <procedures>
-      <para>6. Interfaces</para>
-      <para>Key interfaces between the powerplant and other aircraft systems:</para>
-      <table id="interfaces">
-        <para>Powerplant Interfaces</para>
-        <tgroup cols="3">
-          <thead>
-            <row>
-              <entry>Interface</entry>
-              <entry>Protocol</entry>
-              <entry>Description</entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry>Cockpit Controls</entry>
-              <entry>Analog/Discrete</entry>
-              <entry>Pilot throttle commands</entry>
-            </row>
-            <row>
-              <entry>Flight Control (ATA 27)</entry>
-              <entry>ARINC 825 (CAN)</entry>
-              <entry>Thrust vectoring, flight path mgmt</entry>
-            </row>
-            <row>
-              <entry>Power Mgmt System (PMSC)</entry>
-              <entry>ARINC 825 (CAN)</entry>
-              <entry>Power demand/availability</entry>
-            </row>
-            <row>
-              <entry>AEHCS CDU</entry>
-              <entry>CAN</entry>
-              <entry>AEHCS output, status</entry>
-            </row>
-            <row>
-              <entry>Battery BMS</entry>
-              <entry>CAN</entry>
-              <entry>SOC, voltage, temperature</entry>
-            </row>
-            <row>
-              <entry>Emergency Power</entry>
-              <entry>Discrete</entry>
-              <entry>Emergency signals/fault</entry>
-            </row>
-            <row>
-              <entry>Avionics (ATA 23,31,34,46)</entry>
-              <entry>ARINC 429, Ethernet</entry>
-              <entry>Engine instruments, nav/comm data</entry>
-            </row>
-            <row>
-              <entry>ECS (ATA 21)</entry>
-              <entry>Discrete</entry>
-              <entry>Thermal mgmt for cooling loops</entry>
-            </row>
-            <row>
-              <entry>Landing Gear (ATA 32)</entry>
-              <entry>Discrete</entry>
-              <entry>Electric gear actuators</entry>
-            </row>
-            <row>
-              <entry>Data Acq (ATA 46,99)</entry>
-              <entry>Ethernet, ARINC 429</entry>
-              <entry>Flight data logs, maint logs</entry>
-            </row>
-            <row>
-              <entry>Ground Support (GSE)</entry>
-              <entry>Physical Connectors</entry>
-              <entry>External power, charging, data</entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
-    </procedures>
+    </illustrations>
   </content>
-
 </dmodule>
