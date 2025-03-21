@@ -29,6 +29,7 @@ This document covers the life cycle analysis of major aircraft components and sy
 - Predictive Maintenance Integration Plan (GP-AM-EDR-05-002)
 - Propulsion Maintenance Impact Analysis Report (GP-AM-EDR-05-003)
 - Component Lifing & Time-Limit Data Report (GP-AM-EDR-05-004)
+- Airworthiness Limitations Document (GP-AM-EDR-05-006)
 - Fatigue and Damage Tolerance Analysis Report (GP-AM-FDTAR-001)
 
 ## 2. Life Cycle Analysis Methodology

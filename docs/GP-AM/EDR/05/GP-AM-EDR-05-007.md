@@ -31,6 +31,7 @@ This document covers all aspects of the certification process, including the reg
 - Quantum Propulsion Certification Plan (GP-AM-QP-CERT-001)
 - Alternative Energy Harvesting Certification Plan (GP-AM-AEHS-CERT-001)
 - Advanced Materials Certification Plan (GP-AM-AM-CERT-001)
+- Scheduled Maintenance Program Specification (GP-AM-EDR-05-001)
 
 ## 2. Certification Strategy
 ### 2.1 Overall Approach
