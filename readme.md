@@ -2478,15 +2478,17 @@ Each module in this section is organized by ATA chapter. For every module, the e
 
 ---
 
+Your document has been updated with hyperlinks for the specified engineering documents:
+
 ## ATA 00 – General
 
 ### **GP-AM-AMPEL-0100-00-001-A: Aircraft General – System Description (ATA 00)**
 - **Engineering Documents to Prepare:**
-  - *Overall Aircraft System Description Document* (Data Module Code: **GP-AM-EDR-00-001**)  
+  - *[Overall Aircraft System Description Document](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/00/GP-AM-EDR-00-001.md)* (Data Module Code: **GP-AM-EDR-00-001**)  
     *(Describes mission, design philosophy, and system integration overview.)*
-  - *COAFI Framework Overview for Part I* (Data Module Code: **GP-AM-EDR-00-002**)  
+  - *[COAFI Framework Overview for Part I](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/00/GP-AM-EDR-00-002.md)* (Data Module Code: **GP-AM-EDR-00-002**)  
     *(Outlines the documentation structure and how the airframe fits within COAFI.)*
-  - *Airworthiness & Certification Requirements Report* (Data Module Code: **GP-AM-EDR-00-003**)  
+  - *[Airworthiness & Certification Requirements Report](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/00/GP-AM-EDR-00-003.md)* (Data Module Code: **GP-AM-EDR-00-003**)  
     *(Summarizes regulatory criteria and certification plans.)*
 - **Early Integration Point:**  
   - Initial Concept Design Review & Systems Integration Workshop.
@@ -2501,11 +2503,11 @@ Each module in this section is organized by ATA chapter. For every module, the e
 
 ### **GP-AM-AMPEL-0100-05-001-A: Scheduled Maintenance Program (ATA 05)**
 - **Engineering Documents to Prepare:**
-  - *Scheduled Maintenance Program Specification* (Data Module Code: **GP-AM-EDR-05-001**)  
+  - *[Scheduled Maintenance Program Specification](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/05/GP-AM-EDR-05-001.md)* (Data Module Code: **GP-AM-EDR-05-001**)  
     *(Details maintenance intervals and inspection guidelines.)*
-  - *Predictive Maintenance Integration Plan* (Data Module Code: **GP-AM-EDR-05-002**)  
+  - *[Predictive Maintenance Integration Plan](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/05/GP-AM-EDR-05-002.md)* (Data Module Code: **GP-AM-EDR-05-002**)  
     *(Describes how i‑Aher0 will be integrated for predictive maintenance.)*
-  - *Propulsion Maintenance Impact Analysis Report* (Data Module Code: **GP-AM-EDR-05-003**)  
+  - *[Propulsion Maintenance Impact Analysis Report](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/05/GP-AM-EDR-05-003.md)* (Data Module Code: **GP-AM-EDR-05-003**)  
     *(Focuses on special considerations for the Q‑01 propulsion system.)*
 - **Early Integration Point:**  
   - Maintenance strategy review during preliminary design.
@@ -2516,9 +2518,9 @@ Each module in this section is organized by ATA chapter. For every module, the e
 
 ### **GP-AM-AMPEL-0100-05-002-A: Maintenance Time Limits (ATA 05)**
 - **Engineering Documents to Prepare:**
-  - *Component Lifing & Time-Limit Data Report* (Data Module Code: **GP-AM-EDR-05-004**)  
+  - *[Component Lifing & Time-Limit Data Report](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/05/GP-AM-EDR-05-004.md)* (Data Module Code: **GP-AM-EDR-05-004**)  
     *(Provides lifetime limits and maintenance time data.)*
-  - *Service Life Cycle Analysis Document* (Data Module Code: **GP-AM-EDR-05-005**)  
+  - *[Service Life Cycle Analysis Document](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/05/GP-AM-EDR-05-005.md)* (Data Module Code: **GP-AM-EDR-05-005**)  
     *(Analyzes lifecycle expectations of critical components.)*
 - **Early Integration Point:**  
   - During the initial system life-cycle review meeting.
@@ -2529,9 +2531,9 @@ Each module in this section is organized by ATA chapter. For every module, the e
 
 ### **GP-AM-AMPEL-0100-05-003-A: Airworthiness Limitations (ATA 05)**
 - **Engineering Documents to Prepare:**
-  - *Airworthiness Limitations Document* (Data Module Code: **GP-AM-EDR-05-006**)  
+  - *[Airworthiness Limitations Document](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/05/GP-AM-EDR-05-006.md)* (Data Module Code: **GP-AM-EDR-05-006**)  
     *(Describes regulatory limitations and operational constraints.)*
-  - *Compliance & Certification Roadmap* (Data Module Code: **GP-AM-EDR-05-007**)  
+  - *[Compliance & Certification Roadmap](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/05/GP-AM-EDR-05-007.md)* (Data Module Code: **GP-AM-EDR-05-007**)  
     *(Outlines steps for certification and regulatory compliance.)*
 - **Early Integration Point:**  
   - Regulatory review phase during concept design.
@@ -2540,82 +2542,101 @@ Each module in this section is organized by ATA chapter. For every module, the e
 - **Assembly Station:**  
   - Final Assembly Line during airworthiness verification.
 
----
-
-## ATA 06 – Dimensions and Stations
-
-### **GP-AM-AMPEL-0201-06-001-A: Aircraft Dimensions and Stations (ATA 06)**
-- **Engineering Documents to Prepare:**
-  - *Dimensional Data Report* (Data Module Code: **GP-AM-EDR-06-001**)  
-    *(Covers overall dimensions and critical measurement points.)*
-  - *Calibration & Measurement Procedures Document* (Data Module Code: **GP-AM-EDR-06-002**)  
-    *(Specifies calibration routines for dimensional verification.)*
-  - *Structural Integration Analysis Report* (Data Module Code: **GP-AM-EDR-06-003**)  
-    *(Analyzes interfaces between measurement points and structural components.)*
-- **Early Integration Point:**  
-  - Pre-assembly dimensional verification review.
-- **Installation Frontier:**  
-  - Defined measurement interfaces along fuselage, wings, and empennage.
-- **Assembly Station:**  
-  - Dimensional Verification Station within Final Assembly.
-
-### **GP-AM-AMPEL-0201-06-002-A: Compartment Layout and Dimensions (ATA 06)**
-- **Engineering Documents to Prepare:**
-  - *Internal Compartment Layout Document* (Data Module Code: **GP-AM-EDR-06-004**)  
-    *(Describes the internal layout for cabins, cargo, and equipment bays.)*
-  - *Detailed Dimensions and Volume Calculation Report* (Data Module Code: **GP-AM-EDR-06-005**)  
-    *(Provides measurements and volume estimates for each compartment.)*
-- **Early Integration Point:**  
-  - During cabin layout integration in the design phase.
-- **Installation Frontier:**  
-  - Interface with cabin furnishings and environmental control systems.
-- **Assembly Station:**  
-  - Cabin Assembly and Interior Integration Area.
-
-### **GP-AM-AMPEL-0201-06-003-A: AMPEL360XWLRGA Measurement Point Definitions (ATA 06)**
-- **Engineering Documents to Prepare:**
-  - *Measurement Point Definitions Table* (Data Module Code: **GP-AM-EDR-06-006**)  
-    *(Lists and defines each critical measurement point.)*
-  - *Cross-Reference Diagram for Measurement Points* (Data Module Code: **GP-AM-DRW-06-007**)  
-    *(Graphical diagram linking measurement points to structural elements.)*
-- **Early Integration Point:**  
-  - Concurrent with dimensional data verification.
-- **Installation Frontier:**  
-  - Interfaces with structural sensors and calibration tools.
-- **Assembly Station:**  
-  - Inspection and Verification Station.
 
 ---
 
-## ATA 07 – Lifting, Shoring, and Related Procedures
+### ATA 06 – Dimensions and Stations
 
-### **GP-AM-AMPEL-0100-07-001-A: Lifting Procedures and Diagrams (ATA 07)**
-- **Engineering Documents to Prepare:**
-  - *Lifting Procedures Manual* (Data Module Code: **GP-AM-EDR-07-001**)  
-    *(Specifies procedures for lifting and jacking the aircraft.)*
-  - *Lifting Points & Jack Locations Diagram* (Data Module Code: **GP-AM-DRW-07-002**)  
-    *(Diagrams showing all lifting points and jack placements.)*
-  - *Composite Structure Handling Guidelines* (Data Module Code: **GP-AM-EDR-07-003**)  
-    *(Guidelines for handling composite structures during lifting.)*
-- **Early Integration Point:**  
-  - Early structural integration and transport planning review.
-- **Installation Frontier:**  
-  - Defined attachment points on fuselage and wing structures.
-- **Assembly Station:**  
-  - Lifting & Transport Preparation Area.
+#### GP-AM-AMPEL-0201-06-001-A: Aircraft Dimensions and Stations (ATA 06)
+**Engineering Documents to Prepare:**
+1. **[Dimensional Data Report](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/06/GP-AM-EDR-06-001.md)**
+   - Covers overall dimensions and critical measurement points.
+2. **[Calibration & Measurement Procedures Document](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/06/GP-AM-EDR-06-002.md)**
+   - Specifies calibration routines for dimensional verification.
+3. **[Structural Integration Analysis Report](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/06/GP-AM-EDR-06-003.md)**
+   - Analyzes interfaces between measurement points and structural components.
 
-### **GP-AM-AMPEL-0100-07-002-A: Shoring Procedures and Diagrams (ATA 07)**
-- **Engineering Documents to Prepare:**
-  - *Shoring Procedures Manual* (Data Module Code: **GP-AM-EDR-07-004**)  
-    *(Details procedures for shoring during maintenance.)*
-  - *Structural Support Diagram for Maintenance* (Data Module Code: **GP-AM-DRW-07-005**)  
-    *(Diagrams showing shoring points and support structures.)*
-- **Early Integration Point:**  
-  - During final assembly maintenance planning.
-- **Installation Frontier:**  
-  - Interface with ground support equipment.
-- **Assembly Station:**  
-  - Maintenance Hangar.
+**Early Integration Point:**
+- Pre-assembly dimensional verification review.
+
+**Installation Frontier:**
+- Defined measurement interfaces along fuselage, wings, and empennage.
+
+**Assembly Station:**
+- Dimensional Verification Station within Final Assembly.
+
+#### GP-AM-AMPEL-0201-06-002-A: Compartment Layout and Dimensions (ATA 06)
+**Engineering Documents to Prepare:**
+1. **[Internal Compartment Layout Document](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/06/GP-AM-EDR-06-004.md)**
+   - Describes the internal layout for cabins, cargo, and equipment bays.
+2. **[Detailed Dimensions and Volume Calculation Report](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/06/GP-AM-EDR-06-005.md)**
+   - Provides measurements and volume estimates for each compartment.
+
+**Early Integration Point:**
+- During cabin layout integration in the design phase.
+
+**Installation Frontier:**
+- Interface with cabin furnishings and environmental control systems.
+
+**Assembly Station:**
+- Cabin Assembly and Interior Integration Area.
+
+#### GP-AM-AMPEL-0201-06-003-A: AMPEL360XWLRGA Measurement Point Definitions (ATA 06)
+**Engineering Documents to Prepare:**
+1. **[Measurement Point Definitions Table](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/06/GP-AM-EDR-06-006.md)**
+   - Lists and defines each critical measurement point.
+2. **[Cross-Reference Diagram for Measurement Points](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/DRW/06/GP-AM-DRW-06-007.md)**
+   - Graphical diagram linking measurement points to structural elements.
+
+**Early Integration Point:**
+- Concurrent with dimensional data verification.
+
+**Installation Frontier:**
+- Interfaces with structural sensors and calibration tools.
+
+**Assembly Station:**
+- Inspection and Verification Station.
+
+
+
+---
+### ATA 07 – Lifting, Shoring, and Related Procedures
+
+#### GP-AM-AMPEL-0100-07-001-A: Lifting Procedures and Diagrams (ATA 07)
+**Engineering Documents to Prepare:**
+1. **[Lifting Procedures Manual](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/07/GP-AM-EDR-07-001.md)**
+   - Specifies procedures for lifting and jacking the aircraft.
+2. **[Lifting Points & Jack Locations Diagram](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/DRW/07/GP-AM-DRW-07-002.md)**
+   - Diagrams showing all lifting points and jack placements.
+3. **[Composite Structure Handling Guidelines](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/07/GP-AM-EDR-07-003.md)**
+   - Guidelines for handling composite structures during lifting.
+
+**Early Integration Point:**
+- Early structural integration and transport planning review.
+
+**Installation Frontier:**
+- Defined attachment points on fuselage and wing structures.
+
+**Assembly Station:**
+- Lifting & Transport Preparation Area.
+
+#### GP-AM-AMPEL-0100-07-002-A: Shoring Procedures and Diagrams (ATA 07)
+**Engineering Documents to Prepare:**
+1. **[Shoring Procedures Manual](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/07/GP-AM-EDR-07-004.md)**
+   - Details procedures for shoring during maintenance.
+2. **[Structural Support Diagram for Maintenance](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/DRW/07/GP-AM-DRW-07-005.md)**
+   - Diagrams showing shoring points and support structures.
+
+**Early Integration Point:**
+- During final assembly maintenance planning.
+
+**Installation Frontier:**
+- Interface with ground support equipment.
+
+**Assembly Station:**
+- Maintenance Hangar.
+
+Feel free to click on the links to access the respective documents. If you need further assistance, let me know!
 
 ---
 
