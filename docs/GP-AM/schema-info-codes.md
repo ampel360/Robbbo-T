@@ -75,6 +75,11 @@ Where:
 - **[Info Code]**: Type of document (see [Info Code Reference](#info-code-reference))
 - **[Revision]**: Document revision letter (A, B, C, etc.)
 
+### Examples:
+- **GP-AM-AMPEL-0100-05-001-SP-A**: Scheduled Maintenance Program Specification
+- **GP-AM-AMPEL-0201-06-002-DD-A**: Internal Compartment Layout Document
+- **GP-AM-AMPEL-0100-07-001-PROC-A**: Lifting Procedures Manual
+
 ## ATA Chapters {#ata-chapters}
 
 ### ATA 00 – General {#ata-00--general}
@@ -997,6 +1002,28 @@ When assigning Info Codes to documents, consider the primary purpose of the docu
 | **BOM** | Bill of Materials | Parts lists |
 | **SWD** | Software Architecture | Software architecture documents |
 | **SPEC** | Software Specification | Software functionality descriptions |
+
+### Detailed Descriptions:
+
+- **OV (Overview)**: High-level summaries of systems or components, providing a general understanding without going into detailed specifications.
+- **SP (Specification)**: Documents defining technical requirements, including performance criteria, design constraints, and compliance standards.
+- **REQ (Requirements)**: Documents capturing functional or performance requirements, often used to outline what a system or component must achieve.
+- **DD (Design Document)**: Documents describing detailed design, including schematics, blueprints, and design rationale.
+- **SDD (System Description)**: Comprehensive descriptions of system architecture, detailing how different components interact and function together.
+- **DWG (Drawing)**: Engineering drawings, schematics, and diagrams, providing visual representations of components and systems.
+- **CAL (Calculation/Analysis)**: Documents containing calculations or analyses, often used to validate design choices and performance metrics.
+- **RPT (Report)**: General reports and findings, summarizing research, testing, or analysis results.
+- **TEST (Test Plan)**: Documents describing test procedures, including test setup, execution steps, and expected outcomes.
+- **RES (Test Results)**: Documents reporting test results, including data collected, analysis, and conclusions.
+- **MAN (Manual)**: Instruction manuals, providing step-by-step guidance on operation, maintenance, or assembly.
+- **PROC (Procedure)**: Step-by-step process descriptions, detailing how to perform specific tasks or operations.
+- **CAT (Catalog)**: Lists of parts or components, often including part numbers, descriptions, and specifications.
+- **GLO (Glossary)**: Term definitions, providing explanations of technical terms and acronyms.
+- **PLAN (Plan)**: Planning documents, outlining project timelines, milestones, and resource allocation.
+- **ICD (Interface Control)**: Documents defining interfaces, specifying how different systems or components interact.
+- **BOM (Bill of Materials)**: Parts lists, detailing all components required for assembly or production.
+- **SWD (Software Architecture)**: Software architecture documents, describing the structure and design of software systems.
+- **SPEC (Software Specification)**: Software functionality descriptions, outlining the features and capabilities of software applications.
 
 ### Multiple Info Codes
 
