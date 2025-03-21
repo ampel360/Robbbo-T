@@ -1147,2089 +1147,1013 @@ Each module in this section is organized by ATA chapter. For every module, the e
 
 ---
 
-Your document has been updated with hyperlinks for the specified engineering documents:
+# AMPEL360XWLRGA Complete Documentation Schema with Info Codes
 
-## ATA 00 – General
+## Table of Contents
+- [Document ID Structure](#document-id-structure)
+- [ATA Chapters](#ata-chapters)
+  - [ATA 00 – General](#ata-00--general)
+  - [ATA 05 – Maintenance Programs](#ata-05--maintenance-programs)
+  - [ATA 06 – Dimensions and Stations](#ata-06--dimensions-and-stations)
+  - [ATA 07 – Lifting, Shoring, and Related Procedures](#ata-07--lifting-shoring-and-related-procedures)
+  - [ATA 08 – Leveling and Weighing](#ata-08--leveling-and-weighing)
+  - [ATA 09 – Towing, Taxiing, and Related Procedures](#ata-09--towing-taxiing-and-related-procedures)
+  - [ATA 10 – Parking, Mooring, Storage, and Return to Service](#ata-10--parking-mooring-storage-and-return-to-service)
+  - [ATA 11 – Exterior and Interior Placards and Markings](#ata-11--exterior-and-interior-placards-and-markings)
+  - [ATA 12 – Servicing and Special Maintenance](#ata-12--servicing-and-special-maintenance)
+  - [ATA 18 – Vibration and Noise](#ata-18--vibration-and-noise)
+  - [ATA 20 – Fasteners, Bonding, and NDT](#ata-20--fasteners-bonding-and-ndt)
+  - [ATA 21 – Air Conditioning and Cabin Environment](#ata-21--air-conditioning-and-cabin-environment)
+  - [ATA 22 – Flight Control and Avionics](#ata-22--flight-control-and-avionics)
+  - [ATA 23 – Communications](#ata-23--communications)
+  - [ATA 24 – Electrical Power](#ata-24--electrical-power)
+  - [ATA 25 – Equipment and Furnishings](#ata-25--equipment-and-furnishings)
+  - [ATA 26 – Fire Protection](#ata-26--fire-protection)
+  - [ATA 27 – Flight Controls](#ata-27--flight-controls)
+  - [ATA 28 – Fuel, AEHCS, and Energy Systems](#ata-28--fuel-aehcs-and-energy-systems)
+  - [ATA 29 – Hydraulic Systems](#ata-29--hydraulic-systems)
+  - [ATA 30 – Ice Protection](#ata-30--ice-protection)
+  - [ATA 31 – Recording Systems](#ata-31--recording-systems)
+  - [ATA 32 – Landing Gear](#ata-32--landing-gear)
+  - [ATA 33 – Exterior Lighting](#ata-33--exterior-lighting)
+  - [ATA 34 – Navigation](#ata-34--navigation)
+  - [ATA 35 – Oxygen Systems](#ata-35--oxygen-systems)
+  - [ATA 36 – Pneumatic Systems](#ata-36--pneumatic-systems)
+  - [ATA 38 – Water/Waste Systems](#ata-38--waterwaste-systems)
+  - [ATA 45 – Central Maintenance System (CMS)](#ata-45--central-maintenance-system-cms)
+  - [ATA 46 – Information Systems](#ata-46--information-systems)
+  - [ATA 49 – Airborne Auxiliary Power (AAP)](#ata-49--airborne-auxiliary-power-aap)
+  - [ATA 51 – Structural Systems](#ata-51--structural-systems)
+  - [ATA 52 – Doors](#ata-52--doors)
+  - [ATA 53 – Fuselage](#ata-53--fuselage)
+  - [ATA 54 – Nacelles/Pylons](#ata-54--nacellespylons)
+  - [ATA 55 – Stabilizers](#ata-55--stabilizers)
+  - [ATA 56 – Windows](#ata-56--windows)
+  - [ATA 57 – Wings](#ata-57--wings)
+  - [ATA 71 – Power Plant](#ata-71--power-plant)
+  - [ATA 72 – Engine Systems](#ata-72--engine-systems)
+  - [ATA 72 – Q-01 Quantum Propulsion Documents](#ata-72--q-01-quantum-propulsion-documents)
+  - [ATA 73 – Engine Oil System](#ata-73--engine-oil-system)
+  - [ATA 74 – Engine Fuel and Control System](#ata-74--engine-fuel-and-control-system)
+  - [ATA 75 – Engine Bleed Air System](#ata-75--engine-bleed-air-system)
+  - [ATA 76 – Engine Air Inlet and Exhaust](#ata-76--engine-air-inlet-and-exhaust)
+  - [ATA 77 – Engine Indicating Systems](#ata-77--engine-indicating-systems)
+  - [ATA 78 – Engine Starting System](#ata-78--engine-starting-system)
+  - [ATA 86 – Cockpit Doors](#ata-86--cockpit-doors)
+  - [ATA 87 – Passenger/Crew Doors](#ata-87--passengercrew-doors)
+  - [ATA 88 – Cargo Doors](#ata-88--cargo-doors)
+  - [ATA 89 – Landing Gear Doors](#ata-89--landing-gear-doors)
+  - [ATA 90 – Equipment Doors / Access Panels](#ata-90--equipment-doors--access-panels)
+  - [ATA 91 – Cockpit Windows](#ata-91--cockpit-windows)
+  - [ATA 92 – Cabin Windows](#ata-92--cabin-windows)
+  - [ATA 93 – Observation/Special Purpose Windows](#ata-93--observationspecial-purpose-windows)
+  - [ATA 99 – Special/Emerging Technologies](#ata-99--specialemerging-technologies)
+- [Info Code Reference](#info-code-reference)
 
-### **GP-AM-AMPEL-0100-00-001-A: Aircraft General – System Description (ATA 00)**
-- **Engineering Documents to Prepare:**
-  - *[Overall Aircraft System Description Document](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/00/GP-AM-EDR-00-001.md)* (Data Module Code: **GP-AM-EDR-00-001**)  
-    *(Describes mission, design philosophy, and system integration overview.)*
-  - *[COAFI Framework Overview for Part I](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/00/GP-AM-EDR-00-002.md)* (Data Module Code: **GP-AM-EDR-00-002**)  
-    *(Outlines the documentation structure and how the airframe fits within COAFI.)*
-  - *[Airworthiness & Certification Requirements Report](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/00/GP-AM-EDR-00-003.md)* (Data Module Code: **GP-AM-EDR-00-003**)  
-    *(Summarizes regulatory criteria and certification plans.)*
-- **Early Integration Point:**  
-  - Initial Concept Design Review & Systems Integration Workshop.
-- **Installation Frontier:**  
-  - Primary interface with the central system bus, structural framework, and avionics subsystems.
-- **Assembly Station:**  
-  - Main Fuselage Assembly Line and Final Assembly Line (FAL).
+## Document ID Structure {#document-id-structure}
 
----
+Each document follows this standardized ID format:
+**GP-AM-AMPEL-[Project Code]-[ATA Chapter]-[Sequential Number]-[Info Code]-[Revision]**
 
-## ATA 05 – Maintenance Programs
+Where:
+- **GP-AM**: Project prefix for GAIA AIR - AMPEL
+- **AMPEL**: Program identifier
+- **[Project Code]**: Specific project code (e.g., 0100, 0201)
+- **[ATA Chapter]**: Two-digit ATA chapter number (00-99)
+- **[Sequential Number]**: Three-digit sequential number within the ATA chapter
+- **[Info Code]**: Type of document (see [Info Code Reference](#info-code-reference))
+- **[Revision]**: Document revision letter (A, B, C, etc.)
 
-### **GP-AM-AMPEL-0100-05-001-A: Scheduled Maintenance Program (ATA 05)**
-- **Engineering Documents to Prepare:**
-  - *[Scheduled Maintenance Program Specification](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/05/GP-AM-EDR-05-001.md)* (Data Module Code: **GP-AM-EDR-05-001**)  
-    *(Details maintenance intervals and inspection guidelines.)*
-  - *[Predictive Maintenance Integration Plan](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/05/GP-AM-EDR-05-002.md)* (Data Module Code: **GP-AM-EDR-05-002**)  
-    *(Describes how i‑Aher0 will be integrated for predictive maintenance.)*
-  - *[Propulsion Maintenance Impact Analysis Report](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/05/GP-AM-EDR-05-003.md)* (Data Module Code: **GP-AM-EDR-05-003**)  
-    *(Focuses on special considerations for the Q‑01 propulsion system.)*
-- **Early Integration Point:**  
-  - Maintenance strategy review during preliminary design.
-- **Installation Frontier:**  
-  - Interface with the Central Maintenance Computer and onboard diagnostic systems.
-- **Assembly Station:**  
-  - Maintenance Hangar and Dedicated Integration Test Facility.
+## ATA Chapters {#ata-chapters}
 
-### **GP-AM-AMPEL-0100-05-002-A: Maintenance Time Limits (ATA 05)**
-- **Engineering Documents to Prepare:**
-  - *[Component Lifing & Time-Limit Data Report](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/05/GP-AM-EDR-05-004.md)* (Data Module Code: **GP-AM-EDR-05-004**)  
-    *(Provides lifetime limits and maintenance time data.)*
-  - *[Service Life Cycle Analysis Document](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/05/GP-AM-EDR-05-005.md)* (Data Module Code: **GP-AM-EDR-05-005**)  
-    *(Analyzes lifecycle expectations of critical components.)*
-- **Early Integration Point:**  
-  - During the initial system life-cycle review meeting.
-- **Installation Frontier:**  
-  - Interfaces with parts tracking and condition monitoring systems.
-- **Assembly Station:**  
-  - Quality Control Station (post-assembly).
+### ATA 00 – General {#ata-00--general}
 
-### **GP-AM-AMPEL-0100-05-003-A: Airworthiness Limitations (ATA 05)**
-- **Engineering Documents to Prepare:**
-  - *[Airworthiness Limitations Document](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/05/GP-AM-EDR-05-006.md)* (Data Module Code: **GP-AM-EDR-05-006**)  
-    *(Describes regulatory limitations and operational constraints.)*
-  - *[Compliance & Certification Roadmap](https://github.com/Robbbo-T/Robbbo-T/blob/main/docs/GP-AM/EDR/05/GP-AM-EDR-05-007.md)* (Data Module Code: **GP-AM-EDR-05-007**)  
-    *(Outlines steps for certification and regulatory compliance.)*
-- **Early Integration Point:**  
-  - Regulatory review phase during concept design.
-- **Installation Frontier:**  
-  - Interface with flight control software and overall systems safety envelope.
-- **Assembly Station:**  
-  - Final Assembly Line during airworthiness verification.
+#### **GP-AM-AMPEL-0100-00-001-A: Aircraft General – System Description (ATA 00)**
+- **[GP-AM-EDR-00-001-SDD-A](#ata-00--general)**: Overall Aircraft System Description Document
+- **[GP-AM-EDR-00-002-OV-A](#ata-00--general)**: COAFI Framework Overview for Part I
+- **[GP-AM-EDR-00-003-RPT-A](#ata-00--general)**: Airworthiness & Certification Requirements Report
 
-
----
-
-### ATA 06 – Dimensions and Stations
-
-#### GP-AM-AMPEL-0201-06-001-A: Aircraft Dimensions and Stations (ATA 06)
-**Engineering Documents to Prepare:**
-1. **[Dimensional Data Report](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/06/GP-AM-EDR-06-001.md)**
-   - Covers overall dimensions and critical measurement points.
-2. **[Calibration & Measurement Procedures Document](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/06/GP-AM-EDR-06-002.md)**
-   - Specifies calibration routines for dimensional verification.
-3. **[Structural Integration Analysis Report](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/06/GP-AM-EDR-06-003.md)**
-   - Analyzes interfaces between measurement points and structural components.
-
-**Early Integration Point:**
-- Pre-assembly dimensional verification review.
-
-**Installation Frontier:**
-- Defined measurement interfaces along fuselage, wings, and empennage.
-
-**Assembly Station:**
-- Dimensional Verification Station within Final Assembly.
-
-#### GP-AM-AMPEL-0201-06-002-A: Compartment Layout and Dimensions (ATA 06)
-**Engineering Documents to Prepare:**
-1. **[Internal Compartment Layout Document](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/06/GP-AM-EDR-06-004.md)**
-   - Describes the internal layout for cabins, cargo, and equipment bays.
-2. **[Detailed Dimensions and Volume Calculation Report](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/06/GP-AM-EDR-06-005.md)**
-   - Provides measurements and volume estimates for each compartment.
-
-**Early Integration Point:**
-- During cabin layout integration in the design phase.
-
-**Installation Frontier:**
-- Interface with cabin furnishings and environmental control systems.
-
-**Assembly Station:**
-- Cabin Assembly and Interior Integration Area.
-
-#### GP-AM-AMPEL-0201-06-003-A: AMPEL360XWLRGA Measurement Point Definitions (ATA 06)
-**Engineering Documents to Prepare:**
-1. **[Measurement Point Definitions Table](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/06/GP-AM-EDR-06-006.md)**
-   - Lists and defines each critical measurement point.
-2. **[Cross-Reference Diagram for Measurement Points](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/DRW/06/GP-AM-DRW-06-007.md)**
-   - Graphical diagram linking measurement points to structural elements.
-
-**Early Integration Point:**
-- Concurrent with dimensional data verification.
-
-**Installation Frontier:**
-- Interfaces with structural sensors and calibration tools.
-
-**Assembly Station:**
-- Inspection and Verification Station.
-
-
-
----
-### ATA 07 – Lifting, Shoring, and Related Procedures
-
-#### GP-AM-AMPEL-0100-07-001-A: Lifting Procedures and Diagrams (ATA 07)
-**Engineering Documents to Prepare:**
-1. **[Lifting Procedures Manual](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/07/GP-AM-EDR-07-001.md)**
-   - Specifies procedures for lifting and jacking the aircraft.
-2. **[Lifting Points & Jack Locations Diagram](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/DRW/07/GP-AM-DRW-07-002.md)**
-   - Diagrams showing all lifting points and jack placements.
-3. **[Composite Structure Handling Guidelines](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/07/GP-AM-EDR-07-003.md)**
-   - Guidelines for handling composite structures during lifting.
-
-**Early Integration Point:**
-- Early structural integration and transport planning review.
-
-**Installation Frontier:**
-- Defined attachment points on fuselage and wing structures.
-
-**Assembly Station:**
-- Lifting & Transport Preparation Area.
-
-#### GP-AM-AMPEL-0100-07-002-A: Shoring Procedures and Diagrams (ATA 07)
-**Engineering Documents to Prepare:**
-1. **[Shoring Procedures Manual](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/EDR/07/GP-AM-EDR-07-004.md)**
-   - Details procedures for shoring during maintenance.
-2. **[Structural Support Diagram for Maintenance](https://github.com/Robbbo-T/Robbbo-T/new/main/docs/GP-AM/DRW/07/GP-AM-DRW-07-005.md)**
-   - Diagrams showing shoring points and support structures.
-
-**Early Integration Point:**
-- During final assembly maintenance planning.
-
-**Installation Frontier:**
-- Interface with ground support equipment.
-
-**Assembly Station:**
-- Maintenance Hangar.
-
-Feel free to click on the links to access the respective documents. If you need further assistance, let me know!
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 08 – Leveling and Weighing
+### ATA 05 – Maintenance Programs {#ata-05--maintenance-programs}
 
-### **GP-AM-AMPEL-0100-08-001-A: Leveling Procedures (ATA 08)**
-- **Engineering Documents to Prepare:**
-  - *Aircraft Leveling Procedures Document* (Data Module Code: **GP-AM-EDR-08-001**)  
-    *(Step-by-step leveling procedures and calibration requirements.)*
-  - *Leveling Calibration and Instrumentation Manual* (Data Module Code: **GP-AM-EDR-08-002**)  
-    *(Guidelines for using leveling instruments.)*
-- **Early Integration Point:**  
-  - During initial ground testing.
-- **Installation Frontier:**  
-  - Interface with structural alignment sensors.
-- **Assembly Station:**  
-  - Pre-flight Ground Test Area.
+#### **GP-AM-AMPEL-0100-05-001-A: Scheduled Maintenance Program (ATA 05)**
+- **[GP-AM-EDR-05-001-SP-A](#ata-05--maintenance-programs)**: Scheduled Maintenance Program Specification
+- **[GP-AM-EDR-05-002-PLAN-A](#ata-05--maintenance-programs)**: Predictive Maintenance Integration Plan
+- **[GP-AM-EDR-05-003-RPT-A](#ata-05--maintenance-programs)**: Propulsion Maintenance Impact Analysis Report
 
-### **GP-AM-AMPEL-0100-08-002-A: Aircraft Weighing Procedures (ATA 08)**
-- **Engineering Documents to Prepare:**
-  - *Weighing Procedures & Center of Gravity Calculation Report* (Data Module Code: **GP-AM-EDR-08-003**)  
-    *(Describes weighing procedures and CG determination.)*
-  - *Weight and Balance Data Collection Protocol* (Data Module Code: **GP-AM-EDR-08-004**)  
-    *(Protocol for capturing weight data.)*
-- **Early Integration Point:**  
-  - During final assembly weight verification.
-- **Installation Frontier:**  
-  - Interface with weight sensors and load cells.
-- **Assembly Station:**  
-  - Weight Verification Station.
+#### **GP-AM-AMPEL-0100-05-002-A: Maintenance Time Limits (ATA 05)**
+- **[GP-AM-EDR-05-004-RPT-A](#ata-05--maintenance-programs)**: Component Lifing & Time-Limit Data Report
+- **[GP-AM-EDR-05-005-CAL-A](#ata-05--maintenance-programs)**: Service Life Cycle Analysis Document
+
+#### **GP-AM-AMPEL-0100-05-003-A: Airworthiness Limitations (ATA 05)**
+- **[GP-AM-EDR-05-006-REQ-A](#ata-05--maintenance-programs)**: Airworthiness Limitations Document
+- **[GP-AM-EDR-05-007-PLAN-A](#ata-05--maintenance-programs)**: Compliance & Certification Roadmap
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 09 – Towing, Taxiing, and Related Procedures
+### ATA 06 – Dimensions and Stations {#ata-06--dimensions-and-stations}
 
-### **GP-AM-AMPEL-0100-09-001-A: Towing Procedures (ATA 09)**
-- **Engineering Documents to Prepare:**
-  - *Towing Procedures Manual* (Data Module Code: **GP-AM-EDR-09-001**)  
-    *(Outlines approved towing procedures.)*
-  - *Approved Towing Points Diagram* (Data Module Code: **GP-AM-DRW-09-002**)  
-    *(Diagrams indicating towing attachment points.)*
-  - *Impact Analysis for Hybrid‑Electric Systems during Towing* (Data Module Code: **GP-AM-EDR-09-003**)  
-    *(Analysis of towing impact on hybrid‑electric components.)*
-- **Early Integration Point:**  
-  - During ground operations review.
-- **Installation Frontier:**  
-  - Defined towing connection interfaces on the airframe.
-- **Assembly Station:**  
-  - Ground Handling and Transport Facility.
+#### **GP-AM-AMPEL-0201-06-001-A: Aircraft Dimensions and Stations (ATA 06)**
+- **[GP-AM-EDR-06-001-CAL-A](#ata-06--dimensions-and-stations)**: Dimensional Data Report
+- **[GP-AM-EDR-06-002-PROC-A](#ata-06--dimensions-and-stations)**: Calibration & Measurement Procedures Document
+- **[GP-AM-EDR-06-003-CAL-A](#ata-06--dimensions-and-stations)**: Structural Integration Analysis Report
 
-### **GP-AM-AMPEL-0100-09-002-A: Taxiing Procedures (ATA 09)**
-- **Engineering Documents to Prepare:**
-  - *Taxiing Procedures and Guidelines Document* (Data Module Code: **GP-AM-EDR-09-004**)  
-    *(Describes standard taxiing procedures.)*
-  - *Electric Taxiing Operational Considerations* (Data Module Code: **GP-AM-EDR-09-005**)  
-    *(Outlines specifics for electric taxiing systems.)*
-- **Early Integration Point:**  
-  - During early flight simulation and ground tests.
-- **Installation Frontier:**  
-  - Interface with propulsion and braking control systems.
-- **Assembly Station:**  
-  - Runway & Taxiway Integration Area.
+#### **GP-AM-AMPEL-0201-06-002-A: Compartment Layout and Dimensions (ATA 06)**
+- **[GP-AM-EDR-06-004-DD-A](#ata-06--dimensions-and-stations)**: Internal Compartment Layout Document
+- **[GP-AM-EDR-06-005-CAL-A](#ata-06--dimensions-and-stations)**: Detailed Dimensions and Volume Calculation Report
+
+#### **GP-AM-AMPEL-0201-06-003-A: AMPEL360XWLRGA Measurement Point Definitions (ATA 06)**
+- **[GP-AM-EDR-06-006-CAT-A](#ata-06--dimensions-and-stations)**: Measurement Point Definitions Table
+- **[GP-AM-DRW-06-007-DWG-A](#ata-06--dimensions-and-stations)**: Cross-Reference Diagram for Measurement Points
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 10 – Parking, Mooring, Storage, and Return to Service
+### ATA 07 – Lifting, Shoring, and Related Procedures {#ata-07--lifting-shoring-and-related-procedures}
 
-### **GP-AM-AMPEL-0100-10-001-A: Parking Procedures (ATA 10)**
-- **Engineering Documents to Prepare:**
-  - *Parking Procedures Manual* (Data Module Code: **GP-AM-EDR-10-001**)  
-    *(Details procedures for aircraft parking under various conditions.)*
-  - *Environmental Conditions and Surface Adaptation Guidelines* (Data Module Code: **GP-AM-EDR-10-002**)  
-    *(Guidelines for parking on different ground surfaces.)*
-- **Early Integration Point:**  
-  - During final ground operations planning.
-- **Installation Frontier:**  
-  - Interface with undercarriage and ground support systems.
-- **Assembly Station:**  
-  - Parking and Ramp Area.
+#### **GP-AM-AMPEL-0100-07-001-A: Lifting Procedures and Diagrams (ATA 07)**
+- **[GP-AM-EDR-07-001-PROC-A](#ata-07--lifting-shoring-and-related-procedures)**: Lifting Procedures Manual
+- **[GP-AM-DRW-07-002-DWG-A](#ata-07--lifting-shoring-and-related-procedures)**: Lifting Points & Jack Locations Diagram
+- **[GP-AM-EDR-07-003-MAN-A](#ata-07--lifting-shoring-and-related-procedures)**: Composite Structure Handling Guidelines
 
-### **GP-AM-AMPEL-0100-10-002-A: Mooring Procedures (ATA 10)**
-- **Engineering Documents to Prepare:**
-  - *Mooring Procedures Document* (Data Module Code: **GP-AM-EDR-10-003**)  
-    *(Describes procedures for mooring the aircraft securely.)*
-  - *Wind and Weather Load Analysis for Mooring* (Data Module Code: **GP-AM-EDR-10-004**)  
-    *(Analysis of environmental loads on mooring points.)*
-- **Early Integration Point:**  
-  - Post-assembly during outdoor testing.
-- **Installation Frontier:**  
-  - Defined mooring attachment points on the airframe.
-- **Assembly Station:**  
-  - Aircraft Parking and Mooring Facility.
+#### **GP-AM-AMPEL-0100-07-002-A: Shoring Procedures and Diagrams (ATA 07)**
+- **[GP-AM-EDR-07-004-PROC-A](#ata-07--lifting-shoring-and-related-procedures)**: Shoring Procedures Manual
+- **[GP-AM-DRW-07-005-DWG-A](#ata-07--lifting-shoring-and-related-procedures)**: Structural Support Diagram for Maintenance
 
-### **GP-AM-AMPEL-0100-10-003-A: Storage Procedures (ATA 10)**
-- **Engineering Documents to Prepare:**
-  - *Storage Procedures and Environmental Protection Guidelines* (Data Module Code: **GP-AM-EDR-10-005**)  
-    *(Documents storage procedures for short- and long-term storage.)*
-  - *Special Handling Guidelines for Quantum and Battery Components* (Data Module Code: **GP-AM-EDR-10-006**)  
-    *(Outlines requirements for sensitive components.)*
-- **Early Integration Point:**  
-  - During production planning for storage configurations.
-- **Installation Frontier:**  
-  - Interface with storage hangars and environmental control.
-- **Assembly Station:**  
-  - Dedicated Storage Facility.
-
-### **GP-AM-AMPEL-0100-10-004-A: Return to Service Procedures (ATA 10)**
-- **Engineering Documents to Prepare:**
-  - *Return to Service (RTS) Procedures Manual* (Data Module Code: **GP-AM-EDR-10-007**)  
-    *(Procedures for preparing the aircraft for service after maintenance.)*
-  - *Pre-Service Checklists and Diagnostic Reports* (Data Module Code: **GP-AM-EDR-10-008**)  
-    *(Lists items and diagnostics required for RTS.)*
-- **Early Integration Point:**  
-  - At completion of maintenance cycles.
-- **Installation Frontier:**  
-  - Interface with flight control and maintenance systems.
-- **Assembly Station:**  
-  - Final Inspection and RTS Station.
-
-### **GP-AM-AMPEL-0100-10-005-A: Return to Service Checklists (ATA 10)**
-- **Engineering Documents to Prepare:**
-  - *Detailed RTS Checklists for Each Subsystem* (Data Module Code: **GP-AM-EDR-10-009**)  
-    *(Provides checklists to verify system readiness.)*
-  - *Verification and Validation Logs* (Data Module Code: **GP-AM-EDR-10-010**)  
-    *(Logs documenting compliance with RTS requirements.)*
-- **Early Integration Point:**  
-  - During post-maintenance testing.
-- **Installation Frontier:**  
-  - Tied to the overall RTS interface.
-- **Assembly Station:**  
-  - Central RTS Verification Station.
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 11 – Exterior and Interior Placards and Markings
+### ATA 08 – Leveling and Weighing {#ata-08--leveling-and-weighing}
 
-### **GP-AM-AMPEL-0100-11-001-A: Exterior Placards and Markings (ATA 11)**
-- **Engineering Documents to Prepare:**
-  - *Exterior Placard Layout and Design Specifications* (Data Module Code: **GP-AM-EDR-11-001**)  
-    *(Specifies layout, fonts, colors, and positioning.)*
-  - *Marking Guidelines for Hazardous Areas* (Data Module Code: **GP-AM-EDR-11-002**)  
-    *(Details markings for high voltage, cryogenic, and quantum zones.)*
-- **Early Integration Point:**  
-  - During initial system styling and livery design.
-- **Installation Frontier:**  
-  - Interface with the airframe’s external surfaces.
-- **Assembly Station:**  
-  - Painting and Finishing Shop.
+#### **GP-AM-AMPEL-0100-08-001-A: Leveling Procedures (ATA 08)**
+- **[GP-AM-EDR-08-001-PROC-A](#ata-08--leveling-and-weighing)**: Aircraft Leveling Procedures Document
+- **[GP-AM-EDR-08-002-MAN-A](#ata-08--leveling-and-weighing)**: Leveling Calibration and Instrumentation Manual
 
-### **GP-AM-AMPEL-0100-11-002-A: Interior Placards and Markings (ATA 11)**
-- **Engineering Documents to Prepare:**
-  - *Interior Placard and Signage Design Document* (Data Module Code: **GP-AM-EDR-11-003**)  
-    *(Covers emergency, safety, and informational signage.)*
-  - *Emergency and Safety Marking Specifications* (Data Module Code: **GP-AM-EDR-11-004**)  
-    *(Specifies fonts, colors, and placement for critical warnings.)*
-- **Early Integration Point:**  
-  - During interior layout design.
-- **Installation Frontier:**  
-  - Interface with cabin interior surfaces and control panels.
-- **Assembly Station:**  
-  - Interior Assembly and Finishing Station.
+#### **GP-AM-AMPEL-0100-08-002-A: Aircraft Weighing Procedures (ATA 08)**
+- **[GP-AM-EDR-08-003-PROC-A](#ata-08--leveling-and-weighing)**: Weighing Procedures & Center of Gravity Calculation Report
+- **[GP-AM-EDR-08-004-PROC-A](#ata-08--leveling-and-weighing)**: Weight and Balance Data Collection Protocol
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 12 – Servicing and Special Maintenance
+### ATA 09 – Towing, Taxiing, and Related Procedures {#ata-09--towing-taxiing-and-related-procedures}
 
-### **GP-AM-AMPEL-0100-12-001-A: Servicing Procedures (ATA 12)**
-- **Engineering Documents to Prepare:**
-  - *Servicing Procedures Manual* (Data Module Code: **GP-AM-EDR-12-001**)  
-    *(Covers routine servicing tasks, including fluid replenishment.)*
-  - *Special Servicing Guidelines for Hybrid‑Electric and Quantum Components* (Data Module Code: **GP-AM-EDR-12-002**)  
-    *(Outlines procedures for specialized systems.)*
-- **Early Integration Point:**  
-  - During final systems integration testing.
-- **Installation Frontier:**  
-  - Interface with maintenance diagnostic systems (CMS, i‑Aher0).
-- **Assembly Station:**  
-  - Maintenance and Service Facility.
+#### **GP-AM-AMPEL-0100-09-001-A: Towing Procedures (ATA 09)**
+- **[GP-AM-EDR-09-001-PROC-A](#ata-09--towing-taxiing-and-related-procedures)**: Towing Procedures Manual
+- **[GP-AM-DRW-09-002-DWG-A](#ata-09--towing-taxiing-and-related-procedures)**: Approved Towing Points Diagram
+- **[GP-AM-EDR-09-003-CAL-A](#ata-09--towing-taxiing-and-related-procedures)**: Impact Analysis for Hybrid‑Electric Systems during Towing
 
-### **GP-AM-AMPEL-0100-12-002-A: Servicing Equipment List (ATA 12)**
-- **Engineering Documents to Prepare:**
-  - *Comprehensive Tools & Equipment List for Servicing* (Data Module Code: **GP-AM-EDR-12-003**)  
-    *(Lists all specialized tools needed for maintenance.)*
-  - *Calibration & Qualification Procedures for Servicing Equipment* (Data Module Code: **GP-AM-EDR-12-004**)  
-    *(Details procedures for equipment verification.)*
-- **Early Integration Point:**  
-  - At the start of service operations planning.
-- **Installation Frontier:**  
-  - Interface with maintenance storage and tool control systems.
-- **Assembly Station:**  
-  - Maintenance Workshop.
+#### **GP-AM-AMPEL-0100-09-002-A: Taxiing Procedures (ATA 09)**
+- **[GP-AM-EDR-09-004-PROC-A](#ata-09--towing-taxiing-and-related-procedures)**: Taxiing Procedures and Guidelines Document
+- **[GP-AM-EDR-09-005-MAN-A](#ata-09--towing-taxiing-and-related-procedures)**: Electric Taxiing Operational Considerations
 
-### **GP-AM-AMPEL-0100-12-003-A: Cold Weather Maintenance Procedures (ATA 12)**
-- **Engineering Documents to Prepare:**
-  - *Cold Weather Servicing Guidelines Document* (Data Module Code: **GP-AM-EDR-12-005**)  
-    *(Provides procedures for cold weather operations.)*
-  - *Special Procedures for Cryogenic and Low-Temperature Components* (Data Module Code: **GP-AM-EDR-12-006**)  
-    *(Specifies handling and maintenance requirements.)*
-- **Early Integration Point:**  
-  - During environmental conditioning tests.
-- **Installation Frontier:**  
-  - Interface with temperature-controlled service bays.
-- **Assembly Station:**  
-  - Cold Weather Maintenance Facility.
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 18 – Vibration and Noise
+### ATA 10 – Parking, Mooring, Storage, and Return to Service {#ata-10--parking-mooring-storage-and-return-to-service}
 
-### **GP-AM-AMPEL-0100-18-001-A: Vibration Analysis Procedures (ATA 18)**
-- **Engineering Documents to Prepare:**
-  - *Vibration Analysis Test Plan* (Data Module Code: **GP-AM-EDR-18-001**)  
-    *(Outlines procedures for vibration testing.)*
-  - *Sensor Calibration and Data Acquisition Procedures* (Data Module Code: **GP-AM-EDR-18-002**)  
-    *(Describes calibration for vibration sensors.)*
-- **Early Integration Point:**  
-  - During structural testing on prototypes.
-- **Installation Frontier:**  
-  - Interface with integrated structural sensors.
-- **Assembly Station:**  
-  - Structural Testing and Analysis Lab.
+#### **GP-AM-AMPEL-0100-10-001-A: Parking Procedures (ATA 10)**
+- **[GP-AM-EDR-10-001-PROC-A](#ata-10--parking-mooring-storage-and-return-to-service)**: Parking Procedures Manual
+- **[GP-AM-EDR-10-002-MAN-A](#ata-10--parking-mooring-storage-and-return-to-service)**: Environmental Conditions and Surface Adaptation Guidelines
 
-### **GP-AM-AMPEL-0100-18-002-A: Noise Analysis Procedures (ATA 18)**
-- **Engineering Documents to Prepare:**
-  - *Noise Measurement and Analysis Procedures* (Data Module Code: **GP-AM-EDR-18-003**)  
-    *(Describes how to measure and analyze noise levels.)*
-  - *Acoustic Test Reports and Instrumentation Calibration Manual* (Data Module Code: **GP-AM-EDR-18-004**)  
-    *(Provides calibration details for noise measurement instruments.)*
-- **Early Integration Point:**  
-  - During environmental qualification testing.
-- **Installation Frontier:**  
-  - Interface with cabin and engine noise monitoring systems.
-- **Assembly Station:**  
-  - Acoustics Testing Facility.
+#### **GP-AM-AMPEL-0100-10-002-A: Mooring Procedures (ATA 10)**
+- **[GP-AM-EDR-10-003-PROC-A](#ata-10--parking-mooring-storage-and-return-to-service)**: Mooring Procedures Document
+- **[GP-AM-EDR-10-004-CAL-A](#ata-10--parking-mooring-storage-and-return-to-service)**: Wind and Weather Load Analysis for Mooring
 
-### **GP-AM-AMPEL-0100-18-003-A: Vibration and Noise Limits (ATA 18)**
-- **Engineering Documents to Prepare:**
-  - *Vibration and Noise Limit Specifications* (Data Module Code: **GP-AM-EDR-18-005**)  
-    *(Specifies acceptable vibration and noise thresholds.)*
-  - *Compliance and Certification Analysis Report* (Data Module Code: **GP-AM-EDR-18-006**)  
-    *(Analyzes how limits meet regulatory standards.)*
-- **Early Integration Point:**  
-  - At the design review for structural certification.
-- **Installation Frontier:**  
-  - Integrated into system health monitoring thresholds.
-- **Assembly Station:**  
-  - Final Assembly Quality Control Station.
+#### **GP-AM-AMPEL-0100-10-003-A: Storage Procedures (ATA 10)**
+- **[GP-AM-EDR-10-005-PROC-A](#ata-10--parking-mooring-storage-and-return-to-service)**: Storage Procedures and Environmental Protection Guidelines
+- **[GP-AM-EDR-10-006-MAN-A](#ata-10--parking-mooring-storage-and-return-to-service)**: Special Handling Guidelines for Quantum and Battery Components
+
+#### **GP-AM-AMPEL-0100-10-004-A: Return to Service Procedures (ATA 10)**
+- **[GP-AM-EDR-10-007-PROC-A](#ata-10--parking-mooring-storage-and-return-to-service)**: Return to Service (RTS) Procedures Manual
+- **[GP-AM-EDR-10-008-CAT-A](#ata-10--parking-mooring-storage-and-return-to-service)**: Pre-Service Checklists and Diagnostic Reports
+
+#### **GP-AM-AMPEL-0100-10-005-A: Return to Service Checklists (ATA 10)**
+- **[GP-AM-EDR-10-009-CAT-A](#ata-10--parking-mooring-storage-and-return-to-service)**: Detailed RTS Checklists for Each Subsystem
+- **[GP-AM-EDR-10-010-RPT-A](#ata-10--parking-mooring-storage-and-return-to-service)**: Verification and Validation Logs
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 20 – Fasteners, Bonding, and NDT
+### ATA 11 – Exterior and Interior Placards and Markings {#ata-11--exterior-and-interior-placards-and-markings}
 
-### **GP-AM-AMPEL-0100-20-001-A: Torque Values & Procedures (ATA 20)**
-- **Engineering Documents to Prepare:**
-  - *Torque Specification Document for Critical Fasteners* (Data Module Code: **GP-AM-EDR-20-001**)  
-    *(Details torque values for fasteners.)*
-  - *Fastening Procedures and Verification Checklist* (Data Module Code: **GP-AM-EDR-20-002**)  
-    *(Provides step-by-step fastening guidelines.)*
-- **Early Integration Point:**  
-  - During subassembly integration review.
-- **Installation Frontier:**  
-  - Interface with structural bolting and fastener application stations.
-- **Assembly Station:**  
-  - Fastener Application and Inspection Area.
+#### **GP-AM-AMPEL-0100-11-001-A: Exterior Placards and Markings (ATA 11)**
+- **[GP-AM-EDR-11-001-SP-A](#ata-11--exterior-and-interior-placards-and-markings)**: Exterior Placard Layout and Design Specifications
+- **[GP-AM-EDR-11-002-MAN-A](#ata-11--exterior-and-interior-placards-and-markings)**: Marking Guidelines for Hazardous Areas
 
-### **GP-AM-AMPEL-0100-20-002-A: Electrical Bonding Procedures (ATA 20)**
-- **Engineering Documents to Prepare:**
-  - *Electrical Bonding Specification Document* (Data Module Code: **GP-AM-EDR-20-003**)  
-    *(Specifies bonding requirements and test methods.)*
-  - *Bonding Procedure Manual* (Data Module Code: **GP-AM-EDR-20-004**)  
-    *(Details the step-by-step bonding process.)*
-- **Early Integration Point:**  
-  - During electrical system design review.
-- **Installation Frontier:**  
-  - Interface with electrical harness installation zones.
-- **Assembly Station:**  
-  - Electrical Assembly and Verification Station.
+#### **GP-AM-AMPEL-0100-11-002-A: Interior Placards and Markings (ATA 11)**
+- **[GP-AM-EDR-11-003-DD-A](#ata-11--exterior-and-interior-placards-and-markings)**: Interior Placard and Signage Design Document
+- **[GP-AM-EDR-11-004-SP-A](#ata-11--exterior-and-interior-placards-and-markings)**: Emergency and Safety Marking Specifications
 
-### **GP-AM-AMPEL-0100-20-003-A: Non-Destructive Testing (NDT) Procedures (ATA 20)**
-- **Engineering Documents to Prepare:**
-  - *NDT Methodologies and Procedures Manual* (Data Module Code: **GP-AM-EDR-20-005**)  
-    *(Outlines NDT techniques.)*
-  - *Inspection Report Templates and Criteria* (Data Module Code: **GP-AM-EDR-20-006**)  
-    *(Provides standardized reporting formats.)*
-- **Early Integration Point:**  
-  - During structural certification and periodic inspections.
-- **Installation Frontier:**  
-  - Interface with structural integrity monitoring systems.
-- **Assembly Station:**  
-  - NDT and Inspection Facility.
-
-### **GP-AM-AMPEL-0100-20-004-A: Wiring Standard Practices (ATA 20)**
-- **Engineering Documents to Prepare:**
-  - *Wiring Installation, Inspection, and Repair Guidelines* (Data Module Code: **GP-AM-EDR-20-007**)  
-    *(Outlines best practices for wiring.)*
-  - *Wiring Schematic Standards Document* (Data Module Code: **GP-AM-DRW-20-008**)  
-    *(Specifies schematic standards for consistency.)*
-- **Early Integration Point:**  
-  - During avionics and electrical integration.
-- **Installation Frontier:**  
-  - Interface with the central electrical distribution network.
-- **Assembly Station:**  
-  - Avionics Assembly and Wiring Integration Lab.
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 21 – Air Conditioning and Cabin Environment
+### ATA 12 – Servicing and Special Maintenance {#ata-12--servicing-and-special-maintenance}
 
-### **GP-AM-AMPEL-0100-21-001-A: Air Conditioning System Schematics (ATA 21)**
-- **Engineering Documents to Prepare:**
-  - *Air Conditioning and Pressurization System Schematic Package* (Data Module Code: **GP-AM-DRW-21-001**)  
-    *(Includes detailed schematics and interconnection diagrams.)*
-  - *System Integration and Interconnection Protocols Document* (Data Module Code: **GP-AM-EDR-21-002**)  
-    *(Describes how the system integrates with other subsystems.)*
-- **Early Integration Point:**  
-  - During environmental system design phase.
-- **Installation Frontier:**  
-  - Interface with the environmental control bus and cabin systems.
-- **Assembly Station:**  
-  - Environmental Systems Integration Station.
+#### **GP-AM-AMPEL-0100-12-001-A: Servicing Procedures (ATA 12)**
+- **[GP-AM-EDR-12-001-PROC-A](#ata-12--servicing-and-special-maintenance)**: Servicing Procedures Manual
+- **[GP-AM-EDR-12-002-MAN-A](#ata-12--servicing-and-special-maintenance)**: Special Servicing Guidelines for Hybrid‑Electric and Quantum Components
 
-### **GP-AM-AMPEL-0100-21-002-A: Cabin Temperature Control System (ATA 21)**
-- **Engineering Documents to Prepare:**
-  - *Cabin Temperature Control System Specification* (Data Module Code: **GP-AM-EDR-21-003**)  
-    *(Details control algorithms and operating parameters.)*
-  - *Temperature Management Control Logic Test Plan* (Data Module Code: **GP-AM-EDR-21-004**)  
-    *(Specifies integration tests for temperature control.)*
-- **Early Integration Point:**  
-  - During avionics subsystem integration.
-- **Installation Frontier:**  
-  - Interface with cabin sensor networks and control actuators.
-- **Assembly Station:**  
-  - Avionics Integration Station.
+#### **GP-AM-AMPEL-0100-12-002-A: Servicing Equipment List (ATA 12)**
+- **[GP-AM-EDR-12-003-CAT-A](#ata-12--servicing-and-special-maintenance)**: Comprehensive Tools & Equipment List for Servicing
+- **[GP-AM-EDR-12-004-PROC-A](#ata-12--servicing-and-special-maintenance)**: Calibration & Qualification Procedures for Servicing Equipment
 
-### **GP-AM-AMPEL-0100-21-003-A: Air Source Selection and Configuration (ATA 21)**
-- **Engineering Documents to Prepare:**
-  - *Air Source Selection Procedures and Configuration Guidelines* (Data Module Code: **GP-AM-EDR-21-005**)  
-    *(Outlines criteria for selecting and configuring air sources.)*
-  - *System Interface and Performance Test Report* (Data Module Code: **GP-AM-EDR-21-006**)  
-    *(Documents test results for air source integration.)*
-- **Early Integration Point:**  
-  - At the design phase for environmental control setup.
-- **Installation Frontier:**  
-  - Interface with external air intakes and cabin circulation units.
-- **Assembly Station:**  
-  - Environmental Systems Assembly Area.
+#### **GP-AM-AMPEL-0100-12-003-A: Cold Weather Maintenance Procedures (ATA 12)**
+- **[GP-AM-EDR-12-005-PROC-A](#ata-12--servicing-and-special-maintenance)**: Cold Weather Servicing Guidelines Document
+- **[GP-AM-EDR-12-006-MAN-A](#ata-12--servicing-and-special-maintenance)**: Special Procedures for Cryogenic and Low-Temperature Components
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 22 – Flight Control and Avionics
+### ATA 18 – Vibration and Noise {#ata-18--vibration-and-noise}
 
-### **GP-AM-AMPEL-0100-22-001-A: Flight Control Computer Specifications (ATA 22)**
-- **Engineering Documents to Prepare:**
-  - *Flight Control Computer Design Specification* (Data Module Code: **GP-AM-EDR-22-001**)  
-    *(Outlines performance, architecture, and integration requirements.)*
-  - *Redundancy and Fault-Tolerance Analysis Report* (Data Module Code: **GP-AM-EDR-22-002**)  
-    *(Analyzes backup and fail-safe systems.)*
-  - *Avionics Integration Test Plan* (Data Module Code: **GP-AM-EDR-22-003**)  
-    *(Specifies tests for integration with other avionics.)*
-- **Early Integration Point:**  
-  - Early prototyping of avionics subsystems.
-- **Installation Frontier:**  
-  - Interface with cockpit sensors, control surfaces, and data buses.
-- **Assembly Station:**  
-  - Dedicated Avionics Integration Station.
+#### **GP-AM-AMPEL-0100-18-001-A: Vibration Analysis Procedures (ATA 18)**
+- **[GP-AM-EDR-18-001-TEST-A](#ata-18--vibration-and-noise)**: Vibration Analysis Test Plan
+- **[GP-AM-EDR-18-002-PROC-A](#ata-18--vibration-and-noise)**: Sensor Calibration and Data Acquisition Procedures
 
-### **GP-AM-AMPEL-0100-22-002-A: Autopilot Modes and Functions (ATA 22)**
-- **Engineering Documents to Prepare:**
-  - *Autopilot Modes & Functions Description Document* (Data Module Code: **GP-AM-EDR-22-004**)  
-    *(Describes available autopilot modes and operational functions.)*
-  - *Adaptive Control Laws Integration with Heuritmática* (Data Module Code: **GP-AM-EDR-22-005**)  
-    *(Details how AI adapts autopilot responses.)*
-- **Early Integration Point:**  
-  - During flight control system software integration.
-- **Installation Frontier:**  
-  - Interface between FCC and flight control surfaces.
-- **Assembly Station:**  
-  - Avionics Software Integration Lab.
+#### **GP-AM-AMPEL-0100-18-002-A: Noise Analysis Procedures (ATA 18)**
+- **[GP-AM-EDR-18-003-PROC-A](#ata-18--vibration-and-noise)**: Noise Measurement and Analysis Procedures
+- **[GP-AM-EDR-18-004-MAN-A](#ata-18--vibration-and-noise)**: Acoustic Test Reports and Instrumentation Calibration Manual
 
-### **GP-AM-AMPEL-0100-22-003-A: Flight Director System Description (ATA 22)**
-- **Engineering Documents to Prepare:**
-  - *Flight Director System Operation Manual* (Data Module Code: **GP-AM-EDR-22-006**)  
-    *(Explains the operation and functions of the Flight Director.)*
-  - *Integration and Test Procedures Document* (Data Module Code: **GP-AM-EDR-22-007**)  
-    *(Specifies integration tests for the Flight Director.)*
-- **Early Integration Point:**  
-  - During cockpit systems integration and simulation testing.
-- **Installation Frontier:**  
-  - Interface with cockpit displays and control interfaces.
-- **Assembly Station:**  
-  - Cockpit Assembly & Final Integration Station.
+#### **GP-AM-AMPEL-0100-18-003-A: Vibration and Noise Limits (ATA 18)**
+- **[GP-AM-EDR-18-005-SP-A](#ata-18--vibration-and-noise)**: Vibration and Noise Limit Specifications
+- **[GP-AM-EDR-18-006-RPT-A](#ata-18--vibration-and-noise)**: Compliance and Certification Analysis Report
 
-### **GP-AM-AMPEL-0100-22-004-A: Optimized Influence Protocol (OIP) for Pilot-Aircraft Synergy (ATA 22)**
-- **Engineering Documents to Prepare:**
-  - *OIP Functional Description and Impact Analysis* (Data Module Code: **GP-AM-EDR-22-008**)  
-    *(Describes the optimized protocol and its benefits.)*
-  - *Pilot-Aircraft Interaction Test Procedures* (Data Module Code: **GP-AM-EDR-22-009**)  
-    *(Specifies test procedures for evaluating pilot control synergy.)*
-- **Early Integration Point:**  
-  - During advanced flight simulation and pilot training evaluations.
-- **Installation Frontier:**  
-  - Interface with cockpit control systems and displays.
-- **Assembly Station:**  
-  - Cockpit Integration and Simulator Lab.
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 23 – Communications
+### ATA 20 – Fasteners, Bonding, and NDT {#ata-20--fasteners-bonding-and-ndt}
 
-### **GP-AM-AMPEL-0100-23-001-A: Communication Systems Description and Operation (ATA 23)**
-- **Engineering Documents to Prepare:**
-  - *Comprehensive Communication Systems Overview Document* (Data Module Code: **GP-AM-EDR-23-001**)  
-    *(Details system components, frequencies, and functionalities.)*
-  - *Interface and Integration Test Plans for VHF/HF and SATCOM* (Data Module Code: **GP-AM-EDR-23-002**)  
-    *(Outlines integration procedures for communication hardware.)*
-- **Early Integration Point:**  
-  - During avionics subsystem integration.
-- **Installation Frontier:**  
-  - Interface with external antennas and transponder systems.
-- **Assembly Station:**  
-  - Avionics Assembly and RF Integration Station.
+#### **GP-AM-AMPEL-0100-20-001-A: Torque Values & Procedures (ATA 20)**
+- **[GP-AM-EDR-20-001-SP-A](#ata-20--fasteners-bonding-and-ndt)**: Torque Specification Document for Critical Fasteners
+- **[GP-AM-EDR-20-002-PROC-A](#ata-20--fasteners-bonding-and-ndt)**: Fastening Procedures and Verification Checklist
 
----
+#### **GP-AM-AMPEL-0100-20-002-A: Electrical Bonding Procedures (ATA 20)**
+- **[GP-AM-EDR-20-003-SP-A](#ata-20--fasteners-bonding-and-ndt)**: Electrical Bonding Specification Document
+- **[GP-AM-EDR-20-004-PROC-A](#ata-20--fasteners-bonding-and-ndt)**: Bonding Procedure Manual
 
-## ATA 24 – Electrical Power
+#### **GP-AM-AMPEL-0100-20-003-A: Non-Destructive Testing (NDT) Procedures (ATA 20)**
+- **[GP-AM-EDR-20-005-PROC-A](#ata-20--fasteners-bonding-and-ndt)**: NDT Methodologies and Procedures Manual
+- **[GP-AM-EDR-20-006-CAT-A](#ata-20--fasteners-bonding-and-ndt)**: Inspection Report Templates and Criteria
 
-### **GP-AM-AMPEL-0100-24-001-A: Electrical Power System Description and Operation (ATA 24)**
-- **Engineering Documents to Prepare:**
-  - *Electrical Power Generation and Distribution Specification* (Data Module Code: **GP-AM-EDR-24-001**)  
-    *(Covers generation, distribution, and control of electrical power.)*
-  - *System Control and Monitoring Integration Plan* (Data Module Code: **GP-AM-EDR-24-002**)  
-    *(Outlines integration with monitoring systems.)*
-  - *Certification and Compliance Test Reports* (Data Module Code: **GP-AM-EDR-24-003**)  
-    *(Documents regulatory testing and compliance.)*
-- **Early Integration Point:**  
-  - During design of the power distribution network.
-- **Installation Frontier:**  
-  - Interface with engine generators, APUs, and electrical buses.
-- **Assembly Station:**  
-  - Power System Assembly and Integration Facility.
+#### **GP-AM-AMPEL-0100-20-004-A: Wiring Standard Practices (ATA 20)**
+- **[GP-AM-EDR-20-007-MAN-A](#ata-20--fasteners-bonding-and-ndt)**: Wiring Installation, Inspection, and Repair Guidelines
+- **[GP-AM-DRW-20-008-DWG-A](#ata-20--fasteners-bonding-and-ndt)**: Wiring Schematic Standards Document
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 25 – Equipment and Furnishings
+### ATA 21 – Air Conditioning and Cabin Environment {#ata-21--air-conditioning-and-cabin-environment}
 
-### **GP-AM-AMPEL-0100-25-001-A: Cockpit Equipment and Furnishings (ATA 25)**
-- **Engineering Documents to Prepare:**
-  - *Cockpit Equipment List and Ergonomic Layout Specification* (Data Module Code: **GP-AM-EDR-25-001**)  
-    *(Lists and describes all cockpit components.)*
-  - *Integration Plan for Avionics and VR/AR Pilot Interfaces* (Data Module Code: **GP-AM-EDR-25-002**)  
-    *(Specifies integration with advanced pilot interfaces.)*
-- **Early Integration Point:**  
-  - During cockpit design and ergonomic review sessions.
-- **Installation Frontier:**  
-  - Interface with the cockpit avionics network and control panels.
-- **Assembly Station:**  
-  - Cockpit Assembly and Finalization Area.
+#### **GP-AM-AMPEL-0100-21-001-A: Air Conditioning System Schematics (ATA 21)**
+- **[GP-AM-DRW-21-001-DWG-A](#ata-21--air-conditioning-and-cabin-environment)**: Air Conditioning and Pressurization System Schematic Package
+- **[GP-AM-EDR-21-002-ICD-A](#ata-21--air-conditioning-and-cabin-environment)**: System Integration and Interconnection Protocols Document
 
-### **GP-AM-AMPEL-0100-25-002-A: Cabin Equipment and Furnishings (ATA 25)**
-- **Engineering Documents to Prepare:**
-  - *Cabin Furnishings and Amenity Specification* (Data Module Code: **GP-AM-EDR-25-003**)  
-    *(Describes all cabin equipment and materials used.)*
-  - *Sustainability Certification Documents for Interiors* (Data Module Code: **GP-AM-EDR-25-004**)  
-    *(Provides documentation of sustainable materials and certifications.)*
-- **Early Integration Point:**  
-  - During interior design phase and system integration review.
-- **Installation Frontier:**  
-  - Interface with cabin environmental and structural systems.
-- **Assembly Station:**  
-  - Interior Assembly and Finishing Station.
+#### **GP-AM-AMPEL-0100-21-002-A: Cabin Temperature Control System (ATA 21)**
+- **[GP-AM-EDR-21-003-SP-A](#ata-21--air-conditioning-and-cabin-environment)**: Cabin Temperature Control System Specification
+- **[GP-AM-EDR-21-004-TEST-A](#ata-21--air-conditioning-and-cabin-environment)**: Temperature Management Control Logic Test Plan
 
-### **GP-AM-AMPEL-0100-25-003-A: Emergency Equipment (ATA 25)**
-- **Engineering Documents to Prepare:**
-  - *Emergency Equipment List and Operation Manual* (Data Module Code: **GP-AM-EDR-25-005**)  
-    *(Details all emergency equipment and usage procedures.)*
-  - *Safety and Evacuation Procedure Guidelines* (Data Module Code: **GP-AM-EDR-25-006**)  
-    *(Specifies emergency response protocols.)*
-- **Early Integration Point:**  
-  - During safety systems design review.
-- **Installation Frontier:**  
-  - Interface with cabin emergency systems and communication networks.
-- **Assembly Station:**  
-  - Final Cabin Assembly & Safety Verification Area.
+#### **GP-AM-AMPEL-0100-21-003-A: Air Source Selection and Configuration (ATA 21)**
+- **[GP-AM-EDR-21-005-PROC-A](#ata-21--air-conditioning-and-cabin-environment)**: Air Source Selection Procedures and Configuration Guidelines
+- **[GP-AM-EDR-21-006-RES-A](#ata-21--air-conditioning-and-cabin-environment)**: System Interface and Performance Test Report
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 26 – Fire Protection
+### ATA 22 – Flight Control and Avionics {#ata-22--flight-control-and-avionics}
 
-### **GP-AM-AMPEL-0100-26-001-A: Fire Detection System Description and Operation (ATA 26)**
-- **Engineering Documents to Prepare:**
-  - *Fire Detection System Design and Operation Manual* (Data Module Code: **GP-AM-EDR-26-001**)  
-    *(Describes system design and operational parameters.)*
-  - *Integration Guidelines for Advanced Fuels/Quantum Systems* (Data Module Code: **GP-AM-EDR-26-002**)  
-    *(Specifies integration details for specialized environments.)*
-- **Early Integration Point:**  
-  - During environmental systems integration.
-- **Installation Frontier:**  
-  - Interface with onboard sensors and central maintenance system.
-- **Assembly Station:**  
-  - Environmental Control and Safety Systems Station.
+#### **GP-AM-AMPEL-0100-22-001-A: Flight Control Computer Specifications (ATA 22)**
+- **[GP-AM-EDR-22-001-SP-A](#ata-22--flight-control-and-avionics)**: Flight Control Computer Design Specification
+- **[GP-AM-EDR-22-002-CAL-A](#ata-22--flight-control-and-avionics)**: Redundancy and Fault-Tolerance Analysis Report
+- **[GP-AM-EDR-22-003-TEST-A](#ata-22--flight-control-and-avionics)**: Avionics Integration Test Plan
 
-### **GP-AM-AMPEL-0100-26-002-A: Fire Suppression System Description and Operation (ATA 26)**
-- **Engineering Documents to Prepare:**
-  - *Fire Suppression System Specification and Deployment Procedures* (Data Module Code: **GP-AM-EDR-26-003**)  
-    *(Covers system design and suppression agent details.)*
-  - *Agent and Activation Mechanism Test Reports* (Data Module Code: **GP-AM-EDR-26-004**)  
-    *(Provides test data and performance benchmarks.)*
-- **Early Integration Point:**  
-  - At the time of safety system integration.
-- **Installation Frontier:**  
-  - Interface with onboard fire detection and control networks.
-- **Assembly Station:**  
-  - Final Assembly Safety Check Area.
+#### **GP-AM-AMPEL-0100-22-002-A: Autopilot Modes and Functions (ATA 22)**
+- **[GP-AM-EDR-22-004-SDD-A](#ata-22--flight-control-and-avionics)**: Autopilot Modes & Functions Description Document
+- **[GP-AM-EDR-22-005-ICD-A](#ata-22--flight-control-and-avionics)**: Adaptive Control Laws Integration with Heuritmática
+
+#### **GP-AM-AMPEL-0100-22-003-A: Flight Director System Description (ATA 22)**
+- **[GP-AM-EDR-22-006-MAN-A](#ata-22--flight-control-and-avionics)**: Flight Director System Operation Manual
+- **[GP-AM-EDR-22-007-TEST-A](#ata-22--flight-control-and-avionics)**: Integration and Test Procedures Document
+
+#### **GP-AM-AMPEL-0100-22-004-A: Optimized Influence Protocol (OIP) for Pilot-Aircraft Synergy (ATA 22)**
+- **[GP-AM-EDR-22-008-SDD-A](#ata-22--flight-control-and-avionics)**: OIP Functional Description and Impact Analysis
+- **[GP-AM-EDR-22-009-TEST-A](#ata-22--flight-control-and-avionics)**: Pilot-Aircraft Interaction Test Procedures
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 27 – Flight Controls
+### ATA 23 – Communications {#ata-23--communications}
 
-### **GP-AM-AMPEL-0100-27-001-A: Primary Flight Controls System Description and Operation (ATA 27)**
-- **Engineering Documents to Prepare:**
-  - *Primary Flight Controls System Specification* (Data Module Code: **GP-AM-EDR-27-001**)  
-    *(Details design for ailerons, elevators, rudder and Fly-by-Wire integration.)*
-  - *Fly-by-Wire System Integration and Test Plan* (Data Module Code: **GP-AM-EDR-27-002**)  
-    *(Outlines test procedures for system integration.)*
-  - *Backup and Redundancy Analysis Report* (Data Module Code: **GP-AM-EDR-27-003**)  
-    *(Evaluates fail-safe mechanisms.)*
-- **Early Integration Point:**  
-  - Early avionics prototyping phase.
-- **Installation Frontier:**  
-  - Interface with control surfaces and sensor networks.
-- **Assembly Station:**  
-  - Avionics & Flight Controls Integration Lab.
+#### **GP-AM-AMPEL-0100-23-001-A: Communication Systems Description and Operation (ATA 23)**
+- **[GP-AM-EDR-23-001-SDD-A](#ata-23--communications)**: Comprehensive Communication Systems Overview Document
+- **[GP-AM-EDR-23-002-TEST-A](#ata-23--communications)**: Interface and Integration Test Plans for VHF/HF and SATCOM
 
-### **GP-AM-AMPEL-0100-27-002-A: Secondary Flight Controls System Description and Operation (ATA 27)**
-- **Engineering Documents to Prepare:**
-  - *Secondary Flight Controls Specification* (Data Module Code: **GP-AM-EDR-27-004**)  
-    *(Covers flaps, slats, spoilers, and trim systems.)*
-  - *Integration and Calibration Procedures Document* (Data Module Code: **GP-AM-EDR-27-005**)  
-    *(Details calibration procedures.)*
-- **Early Integration Point:**  
-  - During detailed design of control surfaces.
-- **Installation Frontier:**  
-  - Interface with primary flight control computers.
-- **Assembly Station:**  
-  - Final Control Systems Integration Area.
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 28 – Fuel, AEHCS, and Energy Systems
+### ATA 24 – Electrical Power {#ata-24--electrical-power}
 
-### **GP-AM-AMPEL-0100-28-001-A: Fuel System Description and Operation (ATA 28)**
-- **Engineering Documents to Prepare:**
-  - *Fuel System Design and Operation Manual* (Data Module Code: **GP-AM-EDR-28-001**)  
-    *(Covers conventional fuel systems and integration with AEHCS.)*
-  - *Hydrogen Storage and Distribution Documentation* (Data Module Code: **GP-AM-EDR-28-002**)  
-    *(If applicable, details for hydrogen fuel.)*
-  - *AEHCS Integration Plan* (Data Module Code: **GP-AM-EDR-28-003**)  
-    *(Outlines how the fuel system interfaces with AEHCS.)*
-- **Early Integration Point:**  
-  - During propulsion system design review.
-- **Installation Frontier:**  
-  - Interface with fuel tanks and energy control systems.
-- **Assembly Station:**  
-  - Propulsion and Fuel Integration Workshop.
+#### **GP-AM-AMPEL-0100-24-001-A: Electrical Power System Description and Operation (ATA 24)**
+- **[GP-AM-EDR-24-001-SP-A](#ata-24--electrical-power)**: Electrical Power Generation and Distribution Specification
+- **[GP-AM-EDR-24-002-PLAN-A](#ata-24--electrical-power)**: System Control and Monitoring Integration Plan
+- **[GP-AM-EDR-24-003-RES-A](#ata-24--electrical-power)**: Certification and Compliance Test Reports
 
-### **GP-AM-AMPEL-0201-28-Q1-001-A: AEHCS System Overview and Architecture (ATA 28)**
-- **Engineering Documents to Prepare:**
-  - *AEHCS Architecture Overview Document* (Data Module Code: **GP-AM-EDR-28-004**)  
-    *(Describes the overall architecture of AEHCS.)*
-  - *Energy Harvesting Components Integration Plan* (Data Module Code: **GP-AM-EDR-28-005**)  
-    *(Specifies how each energy harvesting element is integrated.)*
-  - *Control Logic and AI Algorithm Specifications for AEHCS* (Data Module Code: **GP-AM-EDR-28-006**)  
-    *(Details AI control approaches.)*
-- **Early Integration Point:**  
-  - During systems integration for energy systems.
-- **Installation Frontier:**  
-  - Interface with electrical and propulsion systems.
-- **Assembly Station:**  
-  - Environmental Systems Assembly & Test Facility.
-
-### **GP-AM-AMPEL-0201-28-Q2-003-A: TENGs Integration and Performance (ATA 28)**
-- **Engineering Documents to Prepare:**
-  - *TENGs Integration Specification and Performance Report* (Data Module Code: **GP-AM-EDR-28-007**)  
-    *(Details integration of Triboelectric Nanogenerators.)*
-  - *Test and Calibration Procedures for TENGs* (Data Module Code: **GP-AM-DRW-28-008**)  
-    *(Provides calibration drawings and test protocols.)*
-- **Early Integration Point:**  
-  - During subsystem prototyping.
-- **Installation Frontier:**  
-  - Interface with the AEHCS power distribution network.
-- **Assembly Station:**  
-  - Renewable Energy Systems Integration Lab.
-
-### **GP-AM-AMPEL-0201-28-Q2-004-A: Piezoelectric Energy Harvesters Integration and Performance (ATA 28)**
-- **Engineering Documents to Prepare:**
-  - *Piezoelectric Harvester Specification and Integration Guide* (Data Module Code: **GP-AM-EDR-28-009**)  
-    *(Outlines technical details for piezoelectric harvesters.)*
-  - *Performance Testing and Data Analysis Report* (Data Module Code: **GP-AM-EDR-28-010**)  
-    *(Presents test results and efficiency analysis.)*
-- **Early Integration Point:**  
-  - During early energy systems validation.
-- **Installation Frontier:**  
-  - Interface with AEHCS data and power network.
-- **Assembly Station:**  
-  - Renewable Energy Integration Station.
-
-### **GP-AM-AMPEL-0201-28-Q2-005-A: Concave Solar Panels Design and Performance (ATA 28)**
-- **Engineering Documents to Prepare:**
-  - *Solar Panel Design and Performance Specification* (Data Module Code: **GP-AM-EDR-28-011**)  
-    *(Describes design criteria and performance benchmarks.)*
-  - *Integration and Mounting Interface Guidelines* (Data Module Code: **GP-AM-EDR-28-012**)  
-    *(Specifies mounting details and aerodynamic integration.)*
-- **Early Integration Point:**  
-  - During environmental system integration.
-- **Installation Frontier:**  
-  - Interface with exterior aerodynamic surfaces and power distribution.
-- **Assembly Station:**  
-  - Exterior Assembly & Panel Integration Area.
-
-### **GP-AM-AMPEL-0201-28-Q4-002-A: Cryogenic System Integration (ATA 28)**
-- **Engineering Documents to Prepare:**
-  - *Cryogenic System Integration Manual* (Data Module Code: **GP-AM-EDR-28-013**)  
-    *(Details integration of cryogenic cooling for LH₂ storage.)*
-  - *Thermal Management and Interface Specifications* (Data Module Code: **GP-AM-EDR-28-014**)  
-    *(Describes requirements for thermal and interface management.)*
-- **Early Integration Point:**  
-  - During propulsion system design and fuel system integration.
-- **Installation Frontier:**  
-  - Interface between fuel storage tanks and cryogenic cooling systems.
-- **Assembly Station:**  
-  - Cryogenic System Assembly and Integration Facility.
-
-### **GP-AM-AMPEL-0201-28-Q5-002-A: Battery Management System Integration (ATA 28)**
-- **Engineering Documents to Prepare:**
-  - *Battery Management System Specification Document* (Data Module Code: **GP-AM-EDR-28-015**)  
-    *(Covers design and operational parameters for the BMS.)*
-  - *Integration and Communication Interface Test Plan* (Data Module Code: **GP-AM-EDR-28-016**)  
-    *(Specifies how BMS integrates with fuel and electrical systems.)*
-- **Early Integration Point:**  
-  - During electrical and propulsion integration tests.
-- **Installation Frontier:**  
-  - Interface with onboard power management and distribution networks.
-- **Assembly Station:**  
-  - Electrical Integration Station.
-
-### **GP-AM-AMPEL-0201-28-Q6-001-A: AI Control Algorithms for AEHCS (ATA 28)**
-- **Engineering Documents to Prepare:**
-  - *AI Control Algorithms Specification for AEHCS* (Data Module Code: **GP-AM-EDR-28-017**)  
-    *(Describes the algorithms used for energy optimization.)*
-  - *Integration Test Plan for Energy Optimization Software* (Data Module Code: **GP-AM-EDR-28-018**)  
-    *(Outlines test procedures for AI control integration.)*
-- **Early Integration Point:**  
-  - During system-level simulation and prototype testing.
-- **Installation Frontier:**  
-  - Interface between AEHCS hardware and central control computer.
-- **Assembly Station:**  
-  - Software Integration and Validation Lab.
-
-### **GP-AM-AMPEL-0201-28-Q6-002-A: Real-Time Monitoring Procedures for AEHCS (ATA 28)**
-- **Engineering Documents to Prepare:**
-  - *Real-Time Monitoring and Data Acquisition Procedures Document* (Data Module Code: **GP-AM-EDR-28-019**)  
-    *(Describes procedures for continuous monitoring.)*
-  - *Maintenance and Diagnostic Checklists for AEHCS* (Data Module Code: **GP-AM-EDR-28-020**)  
-    *(Provides checklists for regular system checks.)*
-- **Early Integration Point:**  
-  - Concurrent with system integration testing for AEHCS.
-- **Installation Frontier:**  
-  - Interface with central maintenance and diagnostic systems.
-- **Assembly Station:**  
-  - Monitoring and Diagnostic Facility.
-
-### **GP-AM-AMPEL-0201-28-Q7-001-A: Performance Test Results for AEHCS (ATA 28)**
-- **Engineering Documents to Prepare:**
-  - *Performance Test Report for AEHCS* (Data Module Code: **GP-AM-EDR-28-021**)  
-    *(Includes test data and performance metrics.)*
-  - *Comparative Efficiency and Output Metrics Document* (Data Module Code: **GP-AM-EDR-28-022**)  
-    *(Analyzes system efficiency.)*
-- **Early Integration Point:**  
-  - After initial prototype testing.
-- **Installation Frontier:**  
-  - Interface with performance monitoring sensors.
-- **Assembly Station:**  
-  - Test and Evaluation Laboratory.
-
-### **GP-AM-AMPEL-0201-28-Q7-002-A: Efficiency Data Analysis for AEHCS (ATA 28)**
-- **Engineering Documents to Prepare:**
-  - *Efficiency Data Analysis Report* (Data Module Code: **GP-AM-EDR-28-023**)  
-    *(Analyzes test and simulation data for system efficiency.)*
-- **Early Integration Point:**  
-  - Following energy systems performance testing.
-- **Installation Frontier:**  
-  - Data interface with energy management systems.
-- **Assembly Station:**  
-  - Systems Integration Lab.
-
-### **GP-AM-AMPEL-0201-28-Q8-001-A: Fail-Safe Mechanisms in AEHCS (ATA 28)**
-- **Engineering Documents to Prepare:**
-  - *Fail-Safe and Redundancy Protocols Document for AEHCS* (Data Module Code: **GP-AM-EDR-28-024**)  
-    *(Details safety protocols and backup systems.)*
-  - *Safety Verification Test Plan* (Data Module Code: **GP-AM-EDR-28-025**)  
-    *(Specifies testing for fail-safe mechanisms.)*
-- **Early Integration Point:**  
-  - During final systems safety review.
-- **Installation Frontier:**  
-  - Interface with emergency shutdown and alert modules.
-- **Assembly Station:**  
-  - Safety Systems Verification Area.
-
-### **GP-AM-AMPEL-0201-28-Q8-002-A: Redundancy Protocols in AEHCS (ATA 28)**
-- **Engineering Documents to Prepare:**
-  - *Redundancy and Backup Systems Specification Document* (Data Module Code: **GP-AM-EDR-28-026**)  
-    *(Describes redundancy protocols in AEHCS.)*
-  - *Test Reports for Redundancy Effectiveness* (Data Module Code: **GP-AM-EDR-28-027**)  
-    *(Documents testing outcomes for backup systems.)*
-- **Early Integration Point:**  
-  - During design integration for critical power and control pathways.
-- **Installation Frontier:**  
-  - Interface with backup control and power distribution networks.
-- **Assembly Station:**  
-  - Redundancy Integration and Testing Facility.
-
-### **GP-AM-AMPEL-0201-28-Q9-001-A: Maintenance Procedures for AEHCS (ATA 28)**
-- **Engineering Documents to Prepare:**
-  - *Maintenance Procedures Manual for AEHCS* (Data Module Code: **GP-AM-EDR-28-028**)  
-    *(Provides detailed maintenance procedures.)*
-  - *Preventive Maintenance and Service Intervals Document* (Data Module Code: **GP-AM-EDR-28-029**)  
-    *(Outlines service schedules.)*
-- **Early Integration Point:**  
-  - During maintenance planning and system validation testing.
-- **Installation Frontier:**  
-  - Interface with diagnostic and monitoring systems.
-- **Assembly Station:**  
-  - Maintenance and Service Workshop.
-
-### **GP-AM-AMPEL-0201-28-Q9-002-A: Inspection Checklists for AEHCS (ATA 28)**
-- **Engineering Documents to Prepare:**
-  - *Inspection Checklist Document for AEHCS* (Data Module Code: **GP-AM-EDR-28-030**)  
-    *(Standardized checklists for routine inspections.)*
-  - *Detailed Guidelines for On-Site Inspection and Data Recording* (Data Module Code: **GP-AM-EDR-28-031**)  
-    *(Provides instructions for inspectors.)*
-- **Early Integration Point:**  
-  - Prior to final acceptance testing.
-- **Installation Frontier:**  
-  - Interface with maintenance diagnostic software.
-- **Assembly Station:**  
-  - Inspection and Verification Facility.
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 29 – Hydraulic Systems
+### ATA 25 – Equipment and Furnishings {#ata-25--equipment-and-furnishings}
 
-### **GP-AM-AMPEL-0201-29-001-A: Hydraulic Power System Description and Operation (ATA 29)**
-- **Engineering Documents to Prepare:**
-  - *Hydraulic System Design Specification Document* (Data Module Code: **GP-AM-EDR-29-001**)  
-    *(Details design and operational parameters.)*
-  - *Operation and Maintenance Procedures for Hydraulic Systems* (Data Module Code: **GP-AM-EDR-29-002**)  
-    *(Guidelines for system operation.)*
-- **Early Integration Point:**  
-  - During propulsion and control system integration testing.
-- **Installation Frontier:**  
-  - Interface with control actuators and hydraulic fluid lines.
-- **Assembly Station:**  
-  - Hydraulic Systems Assembly Area.
+#### **GP-AM-AMPEL-0100-25-001-A: Cockpit Equipment and Furnishings (ATA 25)**
+- **[GP-AM-EDR-25-001-CAT-A](#ata-25--equipment-and-furnishings)**: Cockpit Equipment List and Ergonomic Layout Specification
+- **[GP-AM-EDR-25-002-ICD-A](#ata-25--equipment-and-furnishings)**: Integration Plan for Avionics and VR/AR Pilot Interfaces
 
----
+#### **GP-AM-AMPEL-0100-25-002-A: Cabin Equipment and Furnishings (ATA 25)**
+- **[GP-AM-EDR-25-003-SP-A](#ata-25--equipment-and-furnishings)**: Cabin Furnishings and Amenity Specification
+- **[GP-AM-EDR-25-004-RPT-A](#ata-25--equipment-and-furnishings)**: Sustainability Certification Documents for Interiors
 
-## ATA 30 – Ice Protection
+#### **GP-AM-AMPEL-0100-25-003-A: Emergency Equipment (ATA 25)**
+- **[GP-AM-EDR-25-005-CAT-A](#ata-25--equipment-and-furnishings)**: Emergency Equipment List and Operation Manual
+- **[GP-AM-EDR-25-006-PROC-A](#ata-25--equipment-and-furnishings)**: Safety and Evacuation Procedure Guidelines
 
-### **GP-AM-AMPEL-0201-30-001-A: Ice Protection System Description and Operation (ATA 30)**
-- **Engineering Documents to Prepare:**
-  - *Ice Protection System Design and Operation Manual* (Data Module Code: **GP-AM-EDR-30-001**)  
-    *(Describes design features and operation procedures.)*
-  - *Environmental Testing and Certification Report for Ice Protection* (Data Module Code: **GP-AM-EDR-30-002**)  
-    *(Outlines test results and compliance data.)*
-- **Early Integration Point:**  
-  - During environmental qualification and icing tests.
-- **Installation Frontier:**  
-  - Interface with wing leading edges and engine inlets.
-- **Assembly Station:**  
-  - External Systems Integration Facility.
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 31 – Recording Systems
+### ATA 26 – Fire Protection {#ata-26--fire-protection}
 
-### **GP-AM-AMPEL-0201-31-001-A: Flight Data Recording System (FDRS) Description and Operation (ATA 31)**
-- **Engineering Documents to Prepare:**
-  - *FDRS Design and Operation Specifications* (Data Module Code: **GP-AM-EDR-31-001**)  
-    *(Covers system design, storage, and data handling.)*
-  - *Data Acquisition and Storage Procedures* (Data Module Code: **GP-AM-EDR-31-002**)  
-    *(Details procedures for data logging.)*
-- **Early Integration Point:**  
-  - During avionics integration testing.
-- **Installation Frontier:**  
-  - Interface with sensor networks and central data buses.
-- **Assembly Station:**  
-  - Avionics Final Assembly Station.
+#### **GP-AM-AMPEL-0100-26-001-A: Fire Detection System Description and Operation (ATA 26)**
+- **[GP-AM-EDR-26-001-SDD-A](#ata-26--fire-protection)**: Fire Detection System Design and Operation Manual
+- **[GP-AM-EDR-26-002-ICD-A](#ata-26--fire-protection)**: Integration Guidelines for Advanced Fuels/Quantum Systems
 
-### **GP-AM-AMPEL-0201-31-002-A: Cockpit Voice Recording System (CVRS) Description and Operation (ATA 31)**
-- **Engineering Documents to Prepare:**
-  - *CVRS System Description and Operational Procedures* (Data Module Code: **GP-AM-EDR-31-003**)  
-    *(Describes audio recording and data retrieval methods.)*
-  - *Audio Data Storage and Retrieval Guidelines* (Data Module Code: **GP-AM-EDR-31-004**)  
-    *(Specifies storage formats and access protocols.)*
-- **Early Integration Point:**  
-  - During cockpit electronics integration.
-- **Installation Frontier:**  
-  - Interface with cockpit audio systems.
-- **Assembly Station:**  
-  - Cockpit Assembly Area.
+#### **GP-AM-AMPEL-0100-26-002-A: Fire Suppression System Description and Operation (ATA 26)**
+- **[GP-AM-EDR-26-003-SP-A](#ata-26--fire-protection)**: Fire Suppression System Specification and Deployment Procedures
+- **[GP-AM-EDR-26-004-RES-A](#ata-26--fire-protection)**: Agent and Activation Mechanism Test Reports
 
-### **GP-AM-AMPEL-0201-31-003-A: Indicating Systems Description and Operation (ATA 31)**
-- **Engineering Documents to Prepare:**
-  - *Indicating Systems Design Document* (Data Module Code: **GP-AM-EDR-31-005**)  
-    *(Describes digital and analog indicators in the cockpit.)*
-  - *Integration and Calibration Procedures for Instrumentation* (Data Module Code: **GP-AM-EDR-31-006**)  
-    *(Outlines calibration methods and procedures.)*
-- **Early Integration Point:**  
-  - During avionics and flight control testing.
-- **Installation Frontier:**  
-  - Interface with digital displays and sensor outputs.
-- **Assembly Station:**  
-  - Avionics Integration Station.
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 32 – Landing Gear
+### ATA 27 – Flight Controls {#ata-27--flight-controls}
 
-### **GP-AM-AMPEL-0201-32-001-A: Landing Gear System Description and Operation (ATA 32)**
-- **Engineering Documents to Prepare:**
-  - *Landing Gear Design and Operation Manual* (Data Module Code: **GP-AM-EDR-32-001**)  
-    *(Covers extension, retraction, braking, and steering.)*
-  - *Test Procedures for Landing Gear Functionality* (Data Module Code: **GP-AM-EDR-32-002**)  
-    *(Provides detailed testing protocols.)*
-- **Early Integration Point:**  
-  - During structural and control systems integration.
-- **Installation Frontier:**  
-  - Interface with landing gear actuation and hydraulic systems.
-- **Assembly Station:**  
-  - Landing Gear Assembly and Integration Facility.
+#### **GP-AM-AMPEL-0100-27-001-A: Primary Flight Controls System Description and Operation (ATA 27)**
+- **[GP-AM-EDR-27-001-SP-A](#ata-27--flight-controls)**: Primary Flight Controls System Specification
+- **[GP-AM-EDR-27-002-TEST-A](#ata-27--flight-controls)**: Fly-by-Wire System Integration and Test Plan
+- **[GP-AM-EDR-27-003-CAL-A](#ata-27--flight-controls)**: Backup and Redundancy Analysis Report
+
+#### **GP-AM-AMPEL-0100-27-002-A: Secondary Flight Controls System Description and Operation (ATA 27)**
+- **[GP-AM-EDR-27-004-SP-A](#ata-27--flight-controls)**: Secondary Flight Controls Specification
+- **[GP-AM-EDR-27-005-PROC-A](#ata-27--flight-controls)**: Integration and Calibration Procedures Document
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 33 – Exterior Lighting
+### ATA 28 – Fuel, AEHCS, and Energy Systems {#ata-28--fuel-aehcs-and-energy-systems}
 
-### **GP-AM-AMPEL-0100-33-001-A: Exterior Lighting System (ATA 33)**
-- **Engineering Documents to Prepare:**
-  - *Exterior Lighting Design Specifications* (Data Module Code: **GP-AM-EDR-33-001**)  
-    *(Details design for navigation, anti-collision, and landing lights.)*
-  - *Integration and Alignment Procedures for Lighting Systems* (Data Module Code: **GP-AM-DRW-33-002**)  
-    *(Diagrams and procedures for correct installation.)*
-- **Early Integration Point:**  
-  - During exterior systems design review.
-- **Installation Frontier:**  
-  - Interface with external electrical and control wiring.
-- **Assembly Station:**  
-  - Exterior Finishing and Systems Integration Area.
+#### **GP-AM-AMPEL-0100-28-001-A: Fuel System Description and Operation (ATA 28)**
+- **[GP-AM-EDR-28-001-SDD-A](#ata-28--fuel-aehcs-and-energy-systems)**: Fuel System Design and Operation Manual
+- **[GP-AM-EDR-28-002-SP-A](#ata-28--fuel-aehcs-and-energy-systems)**: Hydrogen Storage and Distribution Documentation
+- **[GP-AM-EDR-28-003-ICD-A](#ata-28--fuel-aehcs-and-energy-systems)**: AEHCS Integration Plan
 
----
+#### **GP-AM-AMPEL-0201-28-Q1-001-A: AEHCS System Overview and Architecture (ATA 28)**
+- **[GP-AM-EDR-28-004-SDD-A](#ata-28--fuel-aehcs-and-energy-systems)**: AEHCS Architecture Overview Document
+- **[GP-AM-EDR-28-005-ICD-A](#ata-28--fuel-aehcs-and-energy-systems)**: Energy Harvesting Components Integration Plan
+- **[GP-AM-EDR-28-006-SPEC-A](#ata-28--fuel-aehcs-and-energy-systems)**: Control Logic and AI Algorithm Specifications for AEHCS
 
-## ATA 34 – Navigation
+#### **GP-AM-AMPEL-0201-28-Q2-003-A: TENGs Integration and Performance (ATA 28)**
+- **[GP-AM-EDR-28-007-RPT-A](#ata-28--fuel-aehcs-and-energy-systems)**: TENGs Integration Specification and Performance Report
+- **[GP-AM-DRW-28-008-DWG-A](#ata-28--fuel-aehcs-and-energy-systems)**: Test and Calibration Procedures for TENGs
 
-### **GP-AM-AMPEL-0100-34-001-A: Navigation Systems Description and Operation (ATA 34)**
-- **Engineering Documents to Prepare:**
-  - *Overall Navigation Systems Specification Document* (Data Module Code: **GP-AM-EDR-34-001**)  
-    *(Describes GNSS, INS, and RNAV functionalities.)*
-  - *Integration Test Plans for Navigation Sensors* (Data Module Code: **GP-AM-EDR-34-002**)  
-    *(Specifies test procedures for navigation systems.)*
-- **Early Integration Point:**  
-  - During avionics and sensor integration.
-- **Installation Frontier:**  
-  - Interface with navigation antennas and sensor networks.
-- **Assembly Station:**  
-  - Avionics and Navigation Integration Lab.
+#### **GP-AM-AMPEL-0201-28-Q2-004-A: Piezoelectric Energy Harvesters Integration and Performance (ATA 28)**
+- **[GP-AM-EDR-28-009-SP-A](#ata-28--fuel-aehcs-and-energy-systems)**: Piezoelectric Harvester Specification and Integration Guide
+- **[GP-AM-EDR-28-010-RES-A](#ata-28--fuel-aehcs-and-energy-systems)**: Performance Testing and Data Analysis Report
 
-### **GP-AM-AMPEL-0201-34-W1-001-A: GPS Receiver Specifications (ATA 34)**
-- **Engineering Documents to Prepare:**
-  - *GPS Receiver Technical Specifications and Test Protocols* (Data Module Code: **GP-AM-EDR-34-003**)  
-    *(Details performance and testing of GPS receivers.)*
-- **Early Integration Point:**  
-  - During sensor subsystem assembly.
-- **Installation Frontier:**  
-  - Interface with the central navigation data bus.
-- **Assembly Station:**  
-  - Sensor Integration Station.
+#### **GP-AM-AMPEL-0201-28-Q2-005-A: Concave Solar Panels Design and Performance (ATA 28)**
+- **[GP-AM-EDR-28-011-SP-A](#ata-28--fuel-aehcs-and-energy-systems)**: Solar Panel Design and Performance Specification
+- **[GP-AM-EDR-28-012-ICD-A](#ata-28--fuel-aehcs-and-energy-systems)**: Integration and Mounting Interface Guidelines
 
-### **GP-AM-AMPEL-0201-34-W2-001-A: INS Specifications (ATA 34)**
-- **Engineering Documents to Prepare:**
-  - *Inertial Navigation System Specification Document* (Data Module Code: **GP-AM-EDR-34-004**)  
-    *(Covers technical specifications and calibration procedures.)*
-- **Early Integration Point:**  
-  - During early avionics integration.
-- **Installation Frontier:**  
-  - Interface with flight control computer and navigation display.
-- **Assembly Station:**  
-  - Avionics Integration Lab.
+#### **GP-AM-AMPEL-0201-28-Q4-002-A: Cryogenic System Integration (ATA 28)**
+- **[GP-AM-EDR-28-013-SDD-A](#ata-28--fuel-aehcs-and-energy-systems)**: Cryogenic System Integration Manual
+- **[GP-AM-EDR-28-014-SP-A](#ata-28--fuel-aehcs-and-energy-systems)**: Thermal Management and Interface Specifications
 
-### **GP-AM-AMPEL-0201-34-W3-001-A: RNAV System Description (ATA 34)**
-- **Engineering Documents to Prepare:**
-  - *RNAV System Functional Description and Operational Guidelines* (Data Module Code: **GP-AM-EDR-34-005**)  
-    *(Describes the RNAV system and its modes.)*
-- **Early Integration Point:**  
-  - During navigation systems review.
-- **Installation Frontier:**  
-  - Interface with INS and GNSS modules.
-- **Assembly Station:**  
-  - Avionics Integration Station.
+#### **GP-AM-AMPEL-0201-28-Q5-002-A: Battery Management System Integration (ATA 28)**
+- **[GP-AM-EDR-28-015-SP-A](#ata-28--fuel-aehcs-and-energy-systems)**: Battery Management System Specification Document
+- **[GP-AM-EDR-28-016-TEST-A](#ata-28--fuel-aehcs-and-energy-systems)**: Integration and Communication Interface Test Plan
 
-### **GP-AM-AMPEL-0201-34-W4-001-A: Q-01 Navigation Interface (ATA 34)**
-- **Engineering Documents to Prepare:**
-  - *Interface Specification between Navigation and Q‑01 Propulsion* (Data Module Code: **GP-AM-EDR-34-006**)  
-    *(Details the required interface.)*
-  - *Integration and Test Plan for Quantum Propulsion Interfacing* (Data Module Code: **GP-AM-EDR-34-007**)  
-    *(Specifies testing methods for the interface.)*
-- **Early Integration Point:**  
-  - During integration of quantum propulsion and navigation subsystems.
-- **Installation Frontier:**  
-  - Defined interconnect between avionics and Q‑01 control units.
-- **Assembly Station:**  
-  - Integrated Systems Assembly Facility.
+#### **GP-AM-AMPEL-0201-28-Q6-001-A: AI Control Algorithms for AEHCS (ATA 28)**
+- **[GP-AM-EDR-28-017-SPEC-A](#ata-28--fuel-aehcs-and-energy-systems)**: AI Control Algorithms Specification for AEHCS
+- **[GP-AM-EDR-28-018-TEST-A](#ata-28--fuel-aehcs-and-energy-systems)**: Integration Test Plan for Energy Optimization Software
 
-### **GP-AM-AMPEL-0201-34-W5-001-A: Weather Radar System Description (ATA 34)**
-- **Engineering Documents to Prepare:**
-  - *Weather Radar System Design and Operation Manual* (Data Module Code: **GP-AM-EDR-34-008**)  
-    *(Describes system design, operation, and performance.)*
-  - *Integration Procedures with Navigation and Flight Management Systems* (Data Module Code: **GP-AM-EDR-34-009**)  
-    *(Outlines interface and testing.)*
-- **Early Integration Point:**  
-  - During sensor suite integration.
-- **Installation Frontier:**  
-  - Interface with external sensor mounts and data processors.
-- **Assembly Station:**  
-  - Sensor and Avionics Integration Lab.
+#### **GP-AM-AMPEL-0201-28-Q6-002-A: Real-Time Monitoring Procedures for AEHCS (ATA 28)**
+- **[GP-AM-EDR-28-019-PROC-A](#ata-28--fuel-aehcs-and-energy-systems)**: Real-Time Monitoring and Data Acquisition Procedures Document
+- **[GP-AM-EDR-28-020-CAT-A](#ata-28--fuel-aehcs-and-energy-systems)**: Maintenance and Diagnostic Checklists for AEHCS
+
+#### **GP-AM-AMPEL-0201-28-Q7-001-A: Performance Test Results for AEHCS (ATA 28)**
+- **[GP-AM-EDR-28-021-RES-A](#ata-28--fuel-aehcs-and-energy-systems)**: Performance Test Report for AEHCS
+- **[GP-AM-EDR-28-022-CAL-A](#ata-28--fuel-aehcs-and-energy-systems)**: Comparative Efficiency and Output Metrics Document
+
+#### **GP-AM-AMPEL-0201-28-Q7-002-A: Efficiency Data Analysis for AEHCS (ATA 28)**
+- **[GP-AM-EDR-28-023-CAL-A](#ata-28--fuel-aehcs-and-energy-systems)**: Efficiency Data Analysis Report
+
+#### **GP-AM-AMPEL-0201-28-Q8-001-A: Fail-Safe Mechanisms in AEHCS (ATA 28)**
+- **[GP-AM-EDR-28-024-SDD-A](#ata-28--fuel-aehcs-and-energy-systems)**: Fail-Safe and Redundancy Protocols Document for AEHCS
+- **[GP-AM-EDR-28-025-TEST-A](#ata-28--fuel-aehcs-and-energy-systems)**: Safety Verification Test Plan
+
+#### **GP-AM-AMPEL-0201-28-Q8-002-A: Redundancy Protocols in AEHCS (ATA 28)**
+- **[GP-AM-EDR-28-026-SP-A](#ata-28--fuel-aehcs-and-energy-systems)**: Redundancy and Backup Systems Specification Document
+- **[GP-AM-EDR-28-027-RES-A](#ata-28--fuel-aehcs-and-energy-systems)**: Test Reports for Redundancy Effectiveness
+
+#### **GP-AM-AMPEL-0201-28-Q9-001-A: Maintenance Procedures for AEHCS (ATA 28)**
+- **[GP-AM-EDR-28-028-PROC-A](#ata-28--fuel-aehcs-and-energy-systems)**: Maintenance Procedures Manual for AEHCS
+- **[GP-AM-EDR-28-029-MAN-A](#ata-28--fuel-aehcs-and-energy-systems)**: Preventive Maintenance and Service Intervals Document
+
+#### **GP-AM-AMPEL-0201-28-Q9-002-A: Inspection Checklists for AEHCS (ATA 28)**
+- **[GP-AM-EDR-28-030-CAT-A](#ata-28--fuel-aehcs-and-energy-systems)**: Inspection Checklist Document for AEHCS
+- **[GP-AM-EDR-28-031-MAN-A](#ata-28--fuel-aehcs-and-energy-systems)**: Detailed Guidelines for On-Site Inspection and Data Recording
 
 ---
 
-## ATA 35 – Oxygen Systems
+### ATA 29 – Hydraulic Systems {#ata-29--hydraulic-systems}
 
-### **GP-AM-AMPEL-0100-35-001-A: Oxygen System Description and Operation (ATA 35)**
-- **Engineering Documents to Prepare:**
-  - *Oxygen System Design and Operation Manual* (Data Module Code: **GP-AM-EDR-35-001**)  
-    *(Describes design, control, and operation of oxygen systems.)*
-  - *Emergency Oxygen Deployment Procedures* (Data Module Code: **GP-AM-EDR-35-002**)  
-    *(Provides emergency guidelines and usage procedures.)*
-- **Early Integration Point:**  
-  - During environmental and life-support system design.
-- **Installation Frontier:**  
-  - Interface with cabin pressurization and emergency systems.
-- **Assembly Station:**  
-  - Environmental Systems Assembly Station.
+#### **GP-AM-AMPEL-0201-29-001-A: Hydraulic Power System Description and Operation (ATA 29)**
+- **[GP-AM-EDR-29-001-SDD-A](#ata-29--hydraulic-systems)**: Hydraulic System Design Specification Document
+- **[GP-AM-EDR-29-002-PROC-A](#ata-29--hydraulic-systems)**: Operating and Maintenance Procedures for Hydraulic Systems
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 36 – Pneumatic Systems
+### ATA 30 – Ice Protection {#ata-30--ice-protection}
 
-### **GP-AM-AMPEL-0100-36-001-A: Pneumatic System Description and Operation (ATA 36)**
-- **Engineering Documents to Prepare:**
-  - *Pneumatic System Design and Functional Specification* (Data Module Code: **GP-AM-EDR-36-001**)  
-    *(Details the design and operating parameters.)*
-  - *Integration and Testing Procedures for Pneumatic Components* (Data Module Code: **GP-AM-EDR-36-002**)  
-    *(Specifies test methods for integration.)*
-- **Early Integration Point:**  
-  - During design review for environmental and engine systems.
-- **Installation Frontier:**  
-  - Interface with air conditioning and pressurization units.
-- **Assembly Station:**  
-  - Environmental Systems Assembly Area.
+#### **GP-AM-AMPEL-0201-30-001-A: Ice Protection System Description and Operation (ATA 30)**
+- **[GP-AM-EDR-30-001-SDD-A](#ata-30--ice-protection)**: Ice Protection System Design and Operation Manual
+- **[GP-AM-EDR-30-002-RES-A](#ata-30--ice-protection)**: Environmental Testing and Certification Report for Ice Protection
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 38 – Water/Waste Systems
+### ATA 31 – Recording Systems {#ata-31--recording-systems}
 
-### **GP-AM-AMPEL-0100-38-001-A: Water/Waste System Description and Operation (ATA 38)**
-- **Engineering Documents to Prepare:**
-  - *Water and Waste System Design Specification* (Data Module Code: **GP-AM-EDR-38-001**)  
-    *(Describes design and operation of potable water and waste disposal systems.)*
-  - *Operating and Maintenance Procedures for Water/Waste Systems* (Data Module Code: **GP-AM-EDR-38-002**)  
-    *(Provides guidelines for system operation.)*
-- **Early Integration Point:**  
-  - During interior and environmental system design.
-- **Installation Frontier:**  
-  - Interface with cabin and auxiliary environmental systems.
-- **Assembly Station:**  
-  - Environmental and Interior Assembly Facility.
+#### **GP-AM-AMPEL-0201-31-001-A: Flight Data Recording System (FDRS) Description and Operation (ATA 31)**
+- **[GP-AM-EDR-31-001-SP-A](#ata-31--recording-systems)**: FDRS Design and Operation Specifications
+- **[GP-AM-EDR-31-002-PROC-A](#ata-31--recording-systems)**: Data Acquisition and Storage Procedures
 
----
+#### **GP-AM-AMPEL-0201-31-002-A: Cockpit Voice Recording System (CVRS) Description and Operation (ATA 31)**
+- **[GP-AM-EDR-31-003-SDD-A](#ata-31--recording-systems)**: CVRS System Description and Operational Procedures
+- **[GP-AM-EDR-31-004-MAN-A](#ata-31--recording-systems)**: Audio Data Storage and Retrieval Guidelines
 
-## ATA 45 – Central Maintenance System (CMS)
+#### **GP-AM-AMPEL-0201-31-003-A: Indicating Systems Description and Operation (ATA 31)**
+- **[GP-AM-EDR-31-005-DD-A](#ata-31--recording-systems)**: Indicating Systems Design Document
+- **[GP-AM-EDR-31-006-PROC-A](#ata-31--recording-systems)**: Integration and Calibration Procedures for Instrumentation
 
-### **GP-AM-AMPEL-0100-45-001-A: Central Maintenance System (CMS) Description and Operation (ATA 45)**
-- **Engineering Documents to Prepare:**
-  - *CMS Functional Specification and Integration Manual* (Data Module Code: **GP-AM-EDR-45-001**)  
-    *(Describes CMS functionalities and integration requirements.)*
-  - *Data Access and Diagnostic Procedures for CMS* (Data Module Code: **GP-AM-EDR-45-002**)  
-    *(Specifies diagnostic and data access procedures.)*
-  - *Integration Plan with i‑Aher0 Predictive Maintenance* (Data Module Code: **GP-AM-EDR-45-003**)  
-    *(Outlines integration with maintenance prediction systems.)*
-- **Early Integration Point:**  
-  - During systems integration of avionics and maintenance platforms.
-- **Installation Frontier:**  
-  - Interface with onboard diagnostic sensors and maintenance networks.
-- **Assembly Station:**  
-  - Central Maintenance Integration Station.
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 46 – Information Systems
+### ATA 32 – Landing Gear {#ata-32--landing-gear}
 
-### **GP-AM-AMPEL-0100-46-001-A: Information Systems Description and Operation (ATA 46)**
-- **Engineering Documents to Prepare:**
-  - *Information Systems Architecture Document* (Data Module Code: **GP-AM-EDR-46-001**)  
-    *(Describes the overall network and system architecture.)*
-  - *Data Flow Diagrams and Network Protocol Specifications* (Data Module Code: **GP-AM-EDR-46-002**)  
-    *(Provides detailed data flow and interface diagrams.)*
-  - *Integration Test Plan for Information Systems* (Data Module Code: **GP-AM-EDR-46-003**)  
-    *(Specifies testing procedures for system integration.)*
-- **Early Integration Point:**  
-  - During avionics and network architecture design.
-- **Installation Frontier:**  
-  - Interface with digital data buses and communication networks.
-- **Assembly Station:**  
-  - IT and Avionics Integration Center.
+#### **GP-AM-AMPEL-0201-32-001-A: Landing Gear System Description and Operation (ATA 32)**
+- **[GP-AM-EDR-32-001-SDD-A](#ata-32--landing-gear)**: Landing Gear Design and Operation Manual
+- **[GP-AM-EDR-32-002-TEST-A](#ata-32--landing-gear)**: Test Procedures for Landing Gear Functionality
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 49 – Airborne Auxiliary Power (AAP)
+### ATA 33 – Exterior Lighting {#ata-33--exterior-lighting}
 
-### **GP-AM-AMPEL-0100-49-001-A: Airborne Auxiliary Power (AAP) Description and Operation (ATA 49)**
-- **Engineering Documents to Prepare:**
-  - *AAP System Design and Operation Manual* (Data Module Code: **GP-AM-EDR-49-001**)  
-    *(Describes design and operational details of the AAP system.)*
-  - *Integration and Redundancy Analysis Report* (Data Module Code: **GP-AM-EDR-49-002**)  
-    *(Evaluates backup and redundancy aspects.)*
-- **Early Integration Point:**  
-  - During power systems integration and testing.
-- **Installation Frontier:**  
-  - Interface with main electrical distribution and engine systems.
-- **Assembly Station:**  
-  - Power Systems Assembly Area.
+#### **GP-AM-AMPEL-0100-33-001-A: Exterior Lighting System (ATA 33)**
+- **[GP-AM-EDR-33-001-SP-A](#ata-33--exterior-lighting)**: Exterior Lighting Design Specifications
+- **[GP-AM-DRW-33-002-DWG-A](#ata-33--exterior-lighting)**: Integration and Alignment Procedures for Lighting Systems
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 51 – Structural Systems
+### ATA 34 – Navigation {#ata-34--navigation}
 
-### **GP-AM-AMPEL-0201-51-001-A: General Structural Design Principles (ATA 51)**
-- **Engineering Documents to Prepare:**
-  - *Structural Design Principles Document* (Data Module Code: **GP-AM-EDR-51-001**)  
-    *(Overviews design philosophies, load-bearing analysis, and material use.)*
-  - *Load-Bearing Analysis and Stress Calculation Report* (Data Module Code: **GP-AM-EDR-51-002**)  
-    *(Documents structural analysis results.)*
-  - *Composite Materials Integration Guidelines* (Data Module Code: **GP-AM-EDR-51-003**)  
-    *(Guidelines for advanced composite integration.)*
-- **Early Integration Point:**  
-  - During early design reviews of the airframe.
-- **Installation Frontier:**  
-  - Interface with all primary structural components (fuselage, wings, empennage).
-- **Assembly Station:**  
-  - Main Structural Assembly and Final Assembly Line.
+#### **GP-AM-AMPEL-0100-34-001-A: Navigation Systems Description and Operation (ATA 34)**
+- **[GP-AM-EDR-34-001-SDD-A](#ata-34--navigation)**: Overall Navigation Systems Specification Document
+- **[GP-AM-EDR-34-002-TEST-A](#ata-34--navigation)**: Integration Test Plans for Navigation Sensors
 
-### **GP-AM-AMPEL-0201-51-002-A: Material Specifications and Properties (ATA 51)**
-- **Engineering Documents to Prepare:**
-  - *Comprehensive Material Specification Document* (Data Module Code: **GP-AM-EDR-51-004**)  
-    *(Includes data sheets for Aluminum alloys, BNNT composites, Carbon Lattice structures, etc.)*
-  - *Material Certification and Compliance Reports* (Data Module Code: **GP-AM-EDR-51-005**)  
-    *(Documents material certifications.)*
-- **Early Integration Point:**  
-  - Concurrent with structural design finalization.
-- **Installation Frontier:**  
-  - Interface with all components using advanced materials.
-- **Assembly Station:**  
-  - Material Verification and Composite Assembly Facility.
+#### **GP-AM-AMPEL-0201-34-W1-001-A: GPS Receiver Specifications (ATA 34)**
+- **[GP-AM-EDR-34-003-SP-A](#ata-34--navigation)**: GPS Receiver Technical Specifications and Test Protocols
 
-### **GP-AM-AMPEL-0201-51-003-A: Repair Procedures - General (ATA 51)**
-- **Engineering Documents to Prepare:**
-  - *Structural Repair Procedures Manual* (Data Module Code: **GP-AM-EDR-51-006**)  
-    *(Guidelines and approved repair methods for structural repairs.)*
-  - *Non-Destructive Testing (NDT) Guidelines and Methodology* (Data Module Code: **GP-AM-EDR-51-007**)  
-    *(Outlines NDT methods for damage assessment.)*
-- **Early Integration Point:**  
-  - During post-production and routine maintenance planning.
-- **Installation Frontier:**  
-  - Interface with inspection and diagnostic systems.
-- **Assembly Station:**  
-  - Maintenance Repair Workshop.
+#### **GP-AM-AMPEL-0201-34-W2-001-A: INS Specifications (ATA 34)**
+- **[GP-AM-EDR-34-004-SP-A](#ata-34--navigation)**: Inertial Navigation System Specification Document
+
+#### **GP-AM-AMPEL-0201-34-W3-001-A: RNAV System Description (ATA 34)**
+- **[GP-AM-EDR-34-005-SDD-A](#ata-34--navigation)**: RNAV System Functional Description and Operational Guidelines
+
+#### **GP-AM-AMPEL-0201-34-W4-001-A: Q-01 Navigation Interface (ATA 34)**
+- **[GP-AM-EDR-34-006-ICD-A](#ata-34--navigation)**: Interface Specification between Navigation and Q‑01 Propulsion
+- **[GP-AM-EDR-34-007-TEST-A](#ata-34--navigation)**: Integration and Test Plan for Quantum Propulsion Interfacing
+
+#### **GP-AM-AMPEL-0201-34-W5-001-A: Weather Radar System Description (ATA 34)**
+- **[GP-AM-EDR-34-008-SDD-A](#ata-34--navigation)**: Weather Radar System Design and Operation Manual
+- **[GP-AM-EDR-34-009-ICD-A](#ata-34--navigation)**: Integration Procedures with Navigation and Flight Management Systems
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 52 – Doors
+### ATA 35 – Oxygen Systems {#ata-35--oxygen-systems}
 
-### **GP-AM-AMPEL-0201-52-001-A: Doors - Description and Operation (ATA 52)**
-- **Engineering Documents to Prepare:**
-  - *Doors System Description Document* (Data Module Code: **GP-AM-EDR-52-001**)  
-    *(Covers passenger, cargo, service, and emergency doors.)*
-  - *Operating Mechanism and Safety Feature Specifications* (Data Module Code: **GP-AM-EDR-52-002**)  
-    *(Details door operation and safety interlocks.)*
-- **Early Integration Point:**  
-  - During interior systems and fuselage design integration.
-- **Installation Frontier:**  
-  - Interface with fuselage structure and emergency systems.
-- **Assembly Station:**  
-  - Fuselage and Interior Assembly Facility.
+#### **GP-AM-AMPEL-0100-35-001-A: Oxygen System Description and Operation (ATA 35)**
+- **[GP-AM-EDR-35-001-SDD-A](#ata-35--oxygen-systems)**: Oxygen System Design and Operation Manual
+- **[GP-AM-EDR-35-002-PROC-A](#ata-35--oxygen-systems)**: Emergency Oxygen Deployment Procedures
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 53 – Fuselage
+### ATA 36 – Pneumatic Systems {#ata-36--pneumatic-systems}
 
-### **GP-AM-AMPEL-0201-53-001-A: Fuselage - Description and Operation (ATA 53)**
-- **Engineering Documents to Prepare:**
-  - *Fuselage Structural Design and Construction Techniques Document* (Data Module Code: **GP-AM-EDR-53-001**)  
-    *(Describes fuselage design, construction techniques, and materials.)*
-  - *Frame/Stringer Arrangement and Skin Panel Specification* (Data Module Code: **GP-AM-EDR-53-002**)  
-    *(Provides detailed specifications for structural components.)*
-  - *Integration Points for Wings and Stabilizers Report* (Data Module Code: **GP-AM-EDR-53-003**)  
-    *(Identifies interface points with other major assemblies.)*
-- **Early Integration Point:**  
-  - During conceptual and detailed structural design reviews.
-- **Installation Frontier:**  
-  - Interface with wing, empennage, and major subsystem mounting points.
-- **Assembly Station:**  
-  - Main Fuselage Assembly Line.
+#### **GP-AM-AMPEL-0100-36-001-A: Pneumatic System Description and Operation (ATA 36)**
+- **[GP-AM-EDR-36-001-SP-A](#ata-36--pneumatic-systems)**: Pneumatic System Design and Functional Specification
+- **[GP-AM-EDR-36-002-TEST-A](#ata-36--pneumatic-systems)**: Integration and Testing Procedures for Pneumatic Components
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 54 – Nacelles/Pylons
+### ATA 38 – Water/Waste Systems {#ata-38--waterwaste-systems}
 
-### **GP-AM-AMPEL-0201-54-001-A: Nacelles/Pylons - Description and Operation (ATA 54)**
-- **Engineering Documents to Prepare:**
-  - *Nacelles and Pylons Design and Integration Manual* (Data Module Code: **GP-AM-EDR-54-001**)  
-    *(Describes design, integration, and structural considerations.)*
-  - *Vibration Damping and Structural Load Analysis Report* (Data Module Code: **GP-AM-EDR-54-002**)  
-    *(Analyzes load distribution and vibration characteristics.)*
-- **Early Integration Point:**  
-  - During engine and wing interface design review.
-- **Installation Frontier:**  
-  - Interface with wing structure and engine mounts.
-- **Assembly Station:**  
-  - Engine and Pylon Assembly Facility.
+#### **GP-AM-AMPEL-0100-38-001-A: Water/Waste System Description and Operation (ATA 38)**
+- **[GP-AM-EDR-38-001-SDD-A](#ata-38--waterwaste-systems)**: Water and Waste System Design Specification
+- **[GP-AM-EDR-38-002-PROC-A](#ata-38--waterwaste-systems)**: Operating and Maintenance Procedures for Water/Waste Systems
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 55 – Stabilizers
+### ATA 45 – Central Maintenance System (CMS) {#ata-45--central-maintenance-system-cms}
 
-### **GP-AM-AMPEL-0201-55-001-A: Stabilizers - Description and Operation (ATA 55)**
-- **Engineering Documents to Prepare:**
-  - *Stabilizers Design Document* (Data Module Code: **GP-AM-EDR-55-001**)  
-    *(Describes horizontal and vertical stabilizer design.)*
-  - *Control Surface Integration and Attachment Specifications* (Data Module Code: **GP-AM-EDR-55-002**)  
-    *(Details attachment methods and integration with control surfaces.)*
-- **Early Integration Point:**  
-  - During empennage and tail assembly design.
-- **Installation Frontier:**  
-  - Interface with fuselage and flight control systems.
-- **Assembly Station:**  
-  - Tail Assembly Area.
+#### **GP-AM-AMPEL-0100-45-001-A: Central Maintenance System (CMS) Description and Operation (ATA 45)**
+- **[GP-AM-EDR-45-001-SDD-A](#ata-45--central-maintenance-system-cms)**: CMS Functional Specification and Integration Manual
+- **[GP-AM-EDR-45-002-PROC-A](#ata-45--central-maintenance-system-cms)**: Data Access and Diagnostic Procedures for CMS
+- **[GP-AM-EDR-45-003-ICD-A](#ata-45--central-maintenance-system-cms)**: Integration Plan with i‑Aher0 Predictive Maintenance
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 56 – Windows
+### ATA 46 – Information Systems {#ata-46--information-systems}
 
-### **GP-AM-AMPEL-0201-56-001-A: Windows - Description and Operation (ATA 56)**
-- **Engineering Documents to Prepare:**
-  - *Windows System Design Specification Document* (Data Module Code: **GP-AM-EDR-56-001**)  
-    *(Describes design, materials, and sealing methods for cockpit and cabin windows.)*
-  - *Pressure/Environmental Resistance Test Protocols* (Data Module Code: **GP-AM-EDR-56-002**)  
-    *(Outlines testing procedures for window integrity.)*
-- **Early Integration Point:**  
-  - During interior and fuselage design integration.
-- **Installation Frontier:**  
-  - Interface with fuselage skin and structural supports.
-- **Assembly Station:**  
-  - Fuselage Finishing and Window Installation Station.
+#### **GP-AM-AMPEL-0100-46-001-A: Information Systems Description and Operation (ATA 46)**
+- **[GP-AM-EDR-46-001-SDD-A](#ata-46--information-systems)**: Information Systems Architecture Document
+- **[GP-AM-EDR-46-002-DWG-A](#ata-46--information-systems)**: Data Flow Diagrams and Network Protocol Specifications
+- **[GP-AM-EDR-46-003-TEST-A](#ata-46--information-systems)**: Integration Test Plan for Information Systems
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 57 – Wings
+### ATA 49 – Airborne Auxiliary Power (AAP) {#ata-49--airborne-auxiliary-power-aap}
 
-### **GP-AM-AMPEL-0201-57-001-A: Wings - Description and Operation (ATA 57)**
-- **Engineering Documents to Prepare:**
-  - *Wing Structure and Aerodynamic Design Document* (Data Module Code: **GP-AM-EDR-57-001**)  
-    *(Details the aerodynamic design, wing box, spars, ribs, and skin.)*
-  - *High-Lift Device Integration and Control Surface Specification* (Data Module Code: **GP-AM-EDR-57-002**)  
-    *(Documents integration of flaps, slats, ailerons, and spoilers.)*
-  - *Fuel Tank Integration and Structural Interface Report* (Data Module Code: **GP-AM-EDR-57-003**)  
-    *(Analyzes interface between fuel tanks and structural members.)*
-- **Early Integration Point:**  
-  - During wing design and aerodynamic simulation phases.
-- **Installation Frontier:**  
-  - Interface with fuselage and fuel system components.
-- **Assembly Station:**  
-  - Wing Assembly and Integration Facility.
+#### **GP-AM-AMPEL-0100-49-001-A: Airborne Auxiliary Power (AAP) Description and Operation (ATA 49)**
+- **[GP-AM-EDR-49-001-SDD-A](#ata-49--airborne-auxiliary-power-aap)**: AAP System Design and Operation Manual
+- **[GP-AM-EDR-49-002-CAL-A](#ata-49--airborne-auxiliary-power-aap)**: Integration and Redundancy Analysis Report
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 71 – Power Plant
+### ATA 51 – Structural Systems {#ata-51--structural-systems}
 
-### **GP-AM-AMPEL-0100-71-001-A: Power Plant - General Description and Operation (ATA 71)**
-- **Engineering Documents to Prepare:**
-  - *Propulsion System Options Overview* (Data Module Code: **GP-AM-EDR-71-001**)  
-    *(Covers Hybrid‑Electric, Hydrogen, and Quantum Propulsion options.)*
-  - *Comparative Performance Analysis Document* (Data Module Code: **GP-AM-EDR-71-002**)  
-    *(Provides a high-level comparison of system characteristics.)*
-  - *Integration Guidelines for Propulsion and Energy Systems* (Data Module Code: **GP-AM-EDR-71-003**)  
-    *(Outlines integration with the airframe and power distribution.)*
-- **Early Integration Point:**  
-  - During propulsion system selection and early integration review.
-- **Installation Frontier:**  
-  - Interface with engine mounts and power distribution networks.
-- **Assembly Station:**  
-  - Propulsion System Assembly Line.
+#### **GP-AM-AMPEL-0201-51-001-A: General Structural Design Principles (ATA 51)**
+- **[GP-AM-EDR-51-001-SDD-A](#ata-51--structural-systems)**: Structural Design Principles Document
+- **[GP-AM-EDR-51-002-CAL-A](#ata-51--structural-systems)**: Load-Bearing Analysis and Stress Calculation Report
+- **[GP-AM-EDR-51-003-MAN-A](#ata-51--structural-systems)**: Composite Materials Integration Guidelines
 
----
+#### **GP-AM-AMPEL-0201-51-002-A: Material Specifications and Properties (ATA 51)**
+- **[GP-AM-EDR-51-004-SP-A](#ata-51--structural-systems)**: Comprehensive Material Specification Document
+- **[GP-AM-EDR-51-005-RPT-A](#ata-51--structural-systems)**: Material Certification and Compliance Reports
 
-## ATA 72 – Engine Systems
+#### **GP-AM-AMPEL-0201-51-003-A: Repair Procedures - General (ATA 51)**
+- **[GP-AM-EDR-51-006-PROC-A](#ata-51--structural-systems)**: Structural Repair Procedures Manual
+- **[GP-AM-EDR-51-007-PROC-A](#ata-51--structural-systems)**: Non-Destructive Testing (NDT) Guidelines and Methodology
 
-### **Turbofan/Hydrogen Engine Documents**
-
-#### **GP-AM-AMPEL-0100-72-TP-001-A: Turbofan/Hydrogen Engine - System Description (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *System-Level Engine Description Document* (Data Module Code: **GP-AM-EDR-72-TP-001**)  
-    *(Describes overall engine system performance and features.)*
-  - *Performance and Efficiency Specifications* (Data Module Code: **GP-AM-EDR-72-TP-002**)  
-    *(Documents efficiency and performance metrics.)*
-- **Early Integration Point:**  
-  - During early propulsion system conceptual design review.
-- **Installation Frontier:**  
-  - Interface with nacelles and pylons.
-- **Assembly Station:**  
-  - Engine Assembly Facility.
-
-#### **GP-AM-AMPEL-0100-72-TP-002-A: Turbofan/Hydrogen Engine - Component Description (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Detailed Component Descriptions Document* (Data Module Code: **GP-AM-EDR-72-TP-003**)  
-    *(Covers compressor, combustor, turbine, and auxiliary components.)*
-  - *Material and Tolerance Specifications* (Data Module Code: **GP-AM-EDR-72-TP-004**)  
-    *(Specifies materials and design tolerances.)*
-- **Early Integration Point:**  
-  - During detailed engine design and component qualification.
-- **Installation Frontier:**  
-  - Interface with engine integration points on the airframe.
-- **Assembly Station:**  
-  - Engine Subassembly Workshop.
-
-#### **GP-AM-AMPEL-0100-72-TP-003-A: Turbofan/Hydrogen Engine - Operating Procedures (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Standard Operating Procedures Document* (Data Module Code: **GP-AM-EDR-72-TP-005**)  
-    *(Covers engine startup, operation, and shutdown procedures.)*
-  - *Safety and Emergency Protocols* (Data Module Code: **GP-AM-EDR-72-TP-006**)  
-    *(Provides safety procedures during operation.)*
-- **Early Integration Point:**  
-  - Prior to engine qualification flight tests.
-- **Installation Frontier:**  
-  - Interface with cockpit engine controls and monitoring systems.
-- **Assembly Station:**  
-  - Final Engine Integration Station.
-
-#### **GP-AM-AMPEL-0100-72-TP-004-A: Turbofan/Hydrogen Engine - Maintenance Procedures (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Engine Maintenance Manual* (Data Module Code: **GP-AM-EDR-72-TP-007**)  
-    *(Details scheduled maintenance and overhaul procedures.)*
-  - *Inspection and Service Guidelines* (Data Module Code: **GP-AM-EDR-72-TP-008**)  
-    *(Specifies inspection routines and repair instructions.)*
-- **Early Integration Point:**  
-  - During maintenance planning and certification reviews.
-- **Installation Frontier:**  
-  - Interface with maintenance and diagnostic systems.
-- **Assembly Station:**  
-  - Engine Maintenance Workshop.
-
-#### **GP-AM-AMPEL-0100-72-TP-005-A: Turbofan/Hydrogen Engine - Troubleshooting (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Troubleshooting Guide for Turbofan/Hydrogen Engine* (Data Module Code: **GP-AM-EDR-72-TP-009**)  
-    *(Guides for fault isolation and corrective actions.)*
-- **Early Integration Point:**  
-  - During system validation and pre-flight testing.
-- **Installation Frontier:**  
-  - Interface with engine control and sensor networks.
-- **Assembly Station:**  
-  - Troubleshooting and Diagnostics Station.
-
-### **Hybrid-Electric Propulsion Documents**
-
-#### **GP-AM-AMPEL-0100-72-HYB-001-A: Hybrid-Electric System - Overview and Architecture (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Hybrid-Electric Propulsion System Overview Document* (Data Module Code: **GP-AM-EDR-72-HYB-001**)  
-    *(Provides a system-level overview and architectural diagrams.)*
-- **Early Integration Point:**  
-  - During early propulsion concept selection.
-- **Installation Frontier:**  
-  - Interface with power electronics and battery systems.
-- **Assembly Station:**  
-  - Propulsion System Integration Facility.
-
-#### **GP-AM-AMPEL-0100-72-HYB-002-A: Hybrid-Electric System - Component Description (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Component Descriptions for Electric Motors, Power Electronics, and Batteries* (Data Module Code: **GP-AM-EDR-72-HYB-002**)  
-    *(Details technical specifications for each component.)*
-- **Early Integration Point:**  
-  - During detailed design phase of hybrid system components.
-- **Installation Frontier:**  
-  - Interface with engine mounts and electrical distribution.
-- **Assembly Station:**  
-  - Electrical Systems Assembly Station.
-
-#### **GP-AM-AMPEL-0100-72-HYB-003-A: Hybrid-Electric System - Operation and Control (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Operating Procedures and Control Logic Document for Hybrid-Electric System* (Data Module Code: **GP-AM-EDR-72-HYB-003**)  
-    *(Describes power management strategies and operating modes.)*
-- **Early Integration Point:**  
-  - During avionics and propulsion software integration.
-- **Installation Frontier:**  
-  - Interface with flight control computer and energy management bus.
-- **Assembly Station:**  
-  - Avionics Integration Facility.
-
-#### **GP-AM-AMPEL-0100-72-HYB-004-A: Hybrid-Electric System - Maintenance Procedures (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Maintenance Procedures for Hybrid‑Electric Components* (Data Module Code: **GP-AM-EDR-72-HYB-004**)  
-    *(Includes battery checks, motor inspections, and system diagnostics.)*
-- **Early Integration Point:**  
-  - During scheduled maintenance planning and certification reviews.
-- **Installation Frontier:**  
-  - Interface with diagnostic systems for electrical propulsion.
-- **Assembly Station:**  
-  - Maintenance Workshop.
-
-#### **GP-AM-AMPEL-0100-72-HYB-005-A: Hybrid-Electric System - Troubleshooting (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Troubleshooting Guide for Hybrid‑Electric Propulsion System* (Data Module Code: **GP-AM-EDR-72-HYB-005**)  
-    *(Provides fault isolation procedures.)*
-- **Early Integration Point:**  
-  - During fault isolation tests in the integration phase.
-- **Installation Frontier:**  
-  - Interface with sensor networks and control software.
-- **Assembly Station:**  
-  - Troubleshooting Station.
-
-#### **GP-AM-AMPEL-0100-72-HYB-006-A: Hybrid-Electric System - System Schematics and Wiring Diagrams (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Detailed Schematics and Wiring Diagrams for Hybrid-Electric System* (Data Module Code: **GP-AM-DRW-72-HYB-006**)  
-    *(Provides comprehensive electrical interconnection details.)*
-- **Early Integration Point:**  
-  - During final design review for electrical systems.
-- **Installation Frontier:**  
-  - Interface with central wiring harness and control units.
-- **Assembly Station:**  
-  - Wiring Integration Laboratory.
-
-#### **GP-AM-AMPEL-0100-72-HYB-007-A: Hybrid-Electric System - Safety Precautions (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Safety Precautions and Hazard Analysis Document for Hybrid‑Electric System* (Data Module Code: **GP-AM-EDR-72-HYB-007**)  
-    *(Outlines guidelines for handling high-voltage and battery systems.)*
-- **Early Integration Point:**  
-  - At the time of safety system certification review.
-- **Installation Frontier:**  
-  - Interface with emergency shutdown and safety systems.
-- **Assembly Station:**  
-  - Safety and Compliance Inspection Area.
-
-#### **GP-AM-AMPEL-0100-72-HYB-008-A: Hybrid-Electric System - Performance Data (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Performance Data and Benchmark Report for Hybrid‑Electric System* (Data Module Code: **GP-AM-EDR-72-HYB-008**)  
-    *(Includes efficiency, operational metrics, and comparative analysis.)*
-- **Early Integration Point:**  
-  - After initial prototype testing and performance evaluation.
-- **Installation Frontier:**  
-  - Interface with performance monitoring sensors.
-- **Assembly Station:**  
-  - Test and Evaluation Laboratory.
-
-#### **GP-AM-AMPEL-0100-72-HYB-009-A: Hybrid-Electric System - Lubrication System (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Lubrication System Specification and Maintenance Guidelines* (Data Module Code: **GP-AM-EDR-72-HYB-009**)  
-    *(Documents lubrication requirements if applicable.)*
-- **Early Integration Point:**  
-  - During subsystems design review (if separate from engine oil system).
-- **Installation Frontier:**  
-  - Interface with mechanical and drive systems.
-- **Assembly Station:**  
-  - Mechanical Assembly and Lubrication Check Station.
-
-### **Hydrogen Fuel Cell Propulsion Documents**
-
-#### **GP-AM-AMPEL-0100-72-H2-001-A: Hydrogen Fuel Cell System - Overview and Architecture (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Hydrogen Fuel Cell Propulsion System Overview Document* (Data Module Code: **GP-AM-EDR-72-H2-001**)  
-    *(Provides a system-level overview and architectural diagrams.)*
-- **Early Integration Point:**  
-  - During propulsion system concept selection.
-- **Installation Frontier:**  
-  - Interface with hydrogen storage tanks and electrical distribution systems.
-- **Assembly Station:**  
-  - Propulsion Integration Facility.
-
-#### **GP-AM-AMPEL-0100-72-H2-002-A: Hydrogen Fuel Cell System - Component Description (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Detailed Component Descriptions for Hydrogen Fuel Cell System* (Data Module Code: **GP-AM-EDR-72-H2-002**)  
-    *(Includes fuel cells, hydrogen storage, air supply, thermal management, and power distribution.)*
-- **Early Integration Point:**  
-  - During detailed subsystem design and material selection.
-- **Installation Frontier:**  
-  - Interface with engine mounts, cryogenic systems, and power control units.
-- **Assembly Station:**  
-  - Hybrid Propulsion Assembly Workshop.
-
-#### **GP-AM-AMPEL-0100-72-H2-003-A: Hydrogen Fuel Cell System - Operation and Control (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Operating Procedures and Control Logic Document for Hydrogen Fuel Cell System* (Data Module Code: **GP-AM-EDR-72-H2-003**)  
-    *(Covers startup, shutdown, and emergency procedures.)*
-- **Early Integration Point:**  
-  - During system integration testing of the hydrogen propulsion subsystem.
-- **Installation Frontier:**  
-  - Interface with fuel management and control networks.
-- **Assembly Station:**  
-  - Propulsion and Fuel Systems Integration Station.
-
-#### **GP-AM-AMPEL-0100-72-H2-004-A: Hydrogen Fuel Cell System - Maintenance Procedures (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Maintenance Procedures Document for Hydrogen Fuel Cell System* (Data Module Code: **GP-AM-EDR-72-H2-004**)  
-    *(Includes inspection routines, leak detection, and fuel cell stack checks.)*
-- **Early Integration Point:**  
-  - During maintenance planning and certification stages.
-- **Installation Frontier:**  
-  - Interface with diagnostic systems and safety monitoring.
-- **Assembly Station:**  
-  - Maintenance and Service Facility.
-
-#### **GP-AM-AMPEL-0100-72-H2-005-A: Hydrogen Fuel Cell System - Troubleshooting (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Troubleshooting Guide for Hydrogen Fuel Cell Propulsion* (Data Module Code: **GP-AM-EDR-72-H2-005**)  
-    *(Provides fault isolation and corrective actions.)*
-- **Early Integration Point:**  
-  - During prototype testing and fault isolation exercises.
-- **Installation Frontier:**  
-  - Interface with system diagnostic and control units.
-- **Assembly Station:**  
-  - Troubleshooting and Diagnostic Lab.
-
-#### **GP-AM-AMPEL-0100-72-H2-006-A: Hydrogen Fuel Cell System - System Schematics and Wiring Diagrams (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Detailed Schematics and Wiring Diagrams for Hydrogen Fuel Cell System* (Data Module Code: **GP-AM-DRW-72-H2-006**)  
-    *(Includes electrical, fuel, and thermal interconnections.)*
-- **Early Integration Point:**  
-  - During final design review for electrical and fuel systems.
-- **Installation Frontier:**  
-  - Interface with central control and power distribution networks.
-- **Assembly Station:**  
-  - Wiring and Systems Integration Lab.
-
-#### **GP-AM-AMPEL-0100-72-H2-007-A: Hydrogen Fuel Cell System - Safety Precautions (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Safety Precautions and Hazard Analysis Document for Hydrogen Systems* (Data Module Code: **GP-AM-EDR-72-H2-007**)  
-    *(Outlines safety measures and emergency procedures.)*
-- **Early Integration Point:**  
-  - During safety certification review and hazard analysis.
-- **Installation Frontier:**  
-  - Interface with emergency shutdown systems and ventilation.
-- **Assembly Station:**  
-  - Safety Inspection and Compliance Facility.
-
-#### **GP-AM-AMPEL-0100-72-H2-008-A: Hydrogen Fuel Cell System - Performance Data (ATA 72)**
-- **Engineering Documents to Prepare:**
-  - *Performance Data and Benchmark Report for Hydrogen Fuel Cell System* (Data Module Code: **GP-AM-EDR-72-H2-008**)  
-    *(Documents efficiency, power output, and fuel consumption metrics.)*
-- **Early Integration Point:**  
-  - After initial performance testing.
-- **Installation Frontier:**  
-  - Interface with performance monitoring sensors.
-- **Assembly Station:**  
-  - Test and Evaluation Laboratory.
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 72 – Q-01 Quantum Propulsion Documents
+### ATA 52 – Doors {#ata-52--doors}
+
+#### **GP-AM-AMPEL-0201-52-001-A: Doors - Description and Operation (ATA 52)**
+- **[GP-AM-EDR-52-001-SDD-A](#ata-52--doors)**: Doors System Description Document
+- **[GP-AM-EDR-52-002-SP-A](#ata-52--doors)**: Operating Mechanism and Safety Feature Specifications
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
+
+---
+
+### ATA 53 – Fuselage {#ata-53--fuselage}
+
+#### **GP-AM-AMPEL-0201-53-001-A: Fuselage - Description and Operation (ATA 53)**
+- **[GP-AM-EDR-53-001-SDD-A](#ata-53--fuselage)**: Fuselage Structural Design and Construction Techniques Document
+- **[GP-AM-EDR-53-002-SP-A](#ata-53--fuselage)**: Frame/Stringer Arrangement and Skin Panel Specification
+- **[GP-AM-EDR-53-003-RPT-A](#ata-53--fuselage)**: Integration Points for Wings and Stabilizers Report
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
+
+---
+
+### ATA 54 – Nacelles/Pylons {#ata-54--nacellespylons}
+
+#### **GP-AM-AMPEL-0201-54-001-A: Nacelles/Pylons - Description and Operation (ATA 54)**
+- **[GP-AM-EDR-54-001-SDD-A](#ata-54--nacellespylons)**: Nacelles and Pylons Design and Integration Manual
+- **[GP-AM-EDR-54-002-CAL-A](#ata-54--nacellespylons)**: Vibration Damping and Structural Load Analysis Report
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
+
+---
+
+### ATA 55 – Stabilizers {#ata-55--stabilizers}
+
+#### **GP-AM-AMPEL-0201-55-001-A: Stabilizers - Description and Operation (ATA 55)**
+- **[GP-AM-EDR-55-001-DD-A](#ata-55--stabilizers)**: Stabilizers Design Document
+- **[GP-AM-EDR-55-002-SP-A](#ata-55--stabilizers)**: Control Surface Integration and Attachment Specifications
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
+
+---
+
+### ATA 56 – Windows {#ata-56--windows}
+
+#### **GP-AM-AMPEL-0201-56-001-A: Windows - Description and Operation (ATA 56)**
+- **[GP-AM-EDR-56-001-SP-A](#ata-56--windows)**: Windows System Design Specification Document
+- **[GP-AM-EDR-56-002-TEST-A](#ata-56--windows)**: Pressure/Environmental Resistance Test Protocols
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
+
+---
+
+### ATA 57 – Wings {#ata-57--wings}
+
+#### **GP-AM-AMPEL-0201-57-001-A: Wings - Description and Operation (ATA 57)**
+- **[GP-AM-EDR-57-001-SDD-A](#ata-57--wings)**: Wing Structure and Aerodynamic Design Document
+- **[GP-AM-EDR-57-002-SP-A](#ata-57--wings)**: High-Lift Device Integration and Control Surface Specification
+- **[GP-AM-EDR-57-003-RPT-A](#ata-57--wings)**: Fuel Tank Integration and Structural Interface Report
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
+
+---
+
+### ATA 71 – Power Plant {#ata-71--power-plant}
+
+#### **GP-AM-AMPEL-0100-71-001-A: Power Plant - General Description and Operation (ATA 71)**
+- **[GP-AM-EDR-71-001-OV-A](#ata-71--power-plant)**: Propulsion System Options Overview
+- **[GP-AM-EDR-71-002-CAL-A](#ata-71--power-plant)**: Comparative Performance Analysis Document
+- **[GP-AM-EDR-71-003-ICD-A](#ata-71--power-plant)**: Integration Guidelines for Propulsion and Energy Systems
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
+
+---
+
+### ATA 72 – Engine Systems {#ata-72--engine-systems}
+
+#### **Turbofan/Hydrogen Engine Documents**
+
+##### **GP-AM-AMPEL-0100-72-TP-001-A: Turbofan/Hydrogen Engine - System Description (ATA 72)**
+- **[GP-AM-EDR-72-TP-001-SDD-A](#ata-72--engine-systems)**: System-Level Engine Description Document
+- **[GP-AM-EDR-72-TP-002-SP-A](#ata-72--engine-systems)**: Performance and Efficiency Specifications
+
+##### **GP-AM-AMPEL-0100-72-TP-002-A: Turbofan/Hydrogen Engine - Component Description (ATA 72)**
+- **[GP-AM-EDR-72-TP-003-DD-A](#ata-72--engine-systems)**: Detailed Component Descriptions Document
+- **[GP-AM-EDR-72-TP-004-SP-A](#ata-72--engine-systems)**: Material and Tolerance Specifications
+
+##### **GP-AM-AMPEL-0100-72-TP-003-A: Turbofan/Hydrogen Engine - Operating Procedures (ATA 72)**
+- **[GP-AM-EDR-72-TP-005-PROC-A](#ata-72--engine-systems)**: Standard Operating Procedures Document
+- **[GP-AM-EDR-72-TP-006-MAN-A](#ata-72--engine-systems)**: Safety and Emergency Protocols
+
+##### **GP-AM-AMPEL-0100-72-TP-004-A: Turbofan/Hydrogen Engine - Maintenance Procedures (ATA 72)**
+- **[GP-AM-EDR-72-TP-007-MAN-A](#ata-72--engine-systems)**: Engine Maintenance Manual
+- **[GP-AM-EDR-72-TP-008-PROC-A](#ata-72--engine-systems)**: Inspection and Service Guidelines
+
+##### **GP-AM-AMPEL-0100-72-TP-005-A: Turbofan/Hydrogen Engine - Troubleshooting (ATA 72)**
+- **[GP-AM-EDR-72-TP-009-MAN-A](#ata-72--engine-systems)**: Troubleshooting Guide for Turbofan/Hydrogen Engine
+
+#### **Hybrid-Electric Propulsion Documents**
+
+##### **GP-AM-AMPEL-0100-72-HYB-001-A: Hybrid-Electric System - Overview and Architecture (ATA 72)**
+- **[GP-AM-EDR-72-HYB-001-SDD-A](#ata-72--engine-systems)**: Hybrid-Electric Propulsion System Overview Document
+
+##### **GP-AM-AMPEL-0100-72-HYB-002-A: Hybrid-Electric System - Component Description (ATA 72)**
+- **[GP-AM-EDR-72-HYB-002-DD-A](#ata-72--engine-systems)**: Component Descriptions for Electric Motors, Power Electronics, and Batteries
+
+##### **GP-AM-AMPEL-0100-72-HYB-003-A: Hybrid-Electric System - Operation and Control (ATA 72)**
+- **[GP-AM-EDR-72-HYB-003-PROC-A](#ata-72--engine-systems)**: Operating Procedures and Control Logic Document for Hybrid-Electric System
+
+##### **GP-AM-AMPEL-0100-72-HYB-004-A: Hybrid-Electric System - Maintenance Procedures (ATA 72)**
+- **[GP-AM-EDR-72-HYB-004-MAN-A](#ata-72--engine-systems)**: Maintenance Procedures for Hybrid‑Electric Components
+
+##### **GP-AM-AMPEL-0100-72-HYB-005-A: Hybrid-Electric System - Troubleshooting (ATA 72)**
+- **[GP-AM-EDR-72-HYB-005-MAN-A](#ata-72--engine-systems)**: Troubleshooting Guide for Hybrid‑Electric Propulsion System
+
+##### **GP-AM-AMPEL-0100-72-HYB-006-A: Hybrid-Electric System - System Schematics and Wiring Diagrams (ATA 72)**
+- **[GP-AM-DRW-72-HYB-006-DWG-A](#ata-72--engine-systems)**: Detailed Schematics and Wiring Diagrams for Hybrid-Electric System
+
+##### **GP-AM-AMPEL-0100-72-HYB-007-A: Hybrid-Electric System - Safety Precautions (ATA 72)**
+- **[GP-AM-EDR-72-HYB-007-MAN-A](#ata-72--engine-systems)**: Safety Precautions and Hazard Analysis Document for Hybrid‑Electric System
+
+##### **GP-AM-AMPEL-0100-72-HYB-008-A: Hybrid-Electric System - Performance Data (ATA 72)**
+- **[GP-AM-EDR-72-HYB-008-RES-A](#ata-72--engine-systems)**: Performance Data and Benchmark Report for Hybrid‑Electric System
+
+##### **GP-AM-AMPEL-0100-72-HYB-009-A: Hybrid-Electric System - Lubrication System (ATA 72)**
+- **[GP-AM-EDR-72-HYB-009-MAN-A](#ata-72--engine-systems)**: Lubrication System Specification and Maintenance Guidelines
+
+#### **Hydrogen Fuel Cell Propulsion Documents**
+
+##### **GP-AM-AMPEL-0100-72-H2-001-A: Hydrogen Fuel Cell System - Overview and Architecture (ATA 72)**
+- **[GP-AM-EDR-72-H2-001-SDD-A](#ata-72--engine-systems)**: Hydrogen Fuel Cell Propulsion System Overview Document
+
+##### **GP-AM-AMPEL-0100-72-H2-002-A: Hydrogen Fuel Cell System - Component Description (ATA 72)**
+- **[GP-AM-EDR-72-H2-002-DD-A](#ata-72--engine-systems)**: Detailed Component Descriptions for Hydrogen Fuel Cell System
+
+##### **GP-AM-AMPEL-0100-72-H2-003-A: Hydrogen Fuel Cell System - Operation and Control (ATA 72)**
+- **[GP-AM-EDR-72-H2-003-PROC-A](#ata-72--engine-systems)**: Operating Procedures and Control Logic Document for Hydrogen Fuel Cell System
+
+##### **GP-AM-AMPEL-0100-72-H2-004-A: Hydrogen Fuel Cell System - Maintenance Procedures (ATA 72)**
+- **[GP-AM-EDR-72-H2-004-MAN-A](#ata-72--engine-systems)**: Maintenance Procedures Document for Hydrogen Fuel Cell System
+
+##### **GP-AM-AMPEL-0100-72-H2-005-A: Hydrogen Fuel Cell System - Troubleshooting (ATA 72)**
+- **[GP-AM-EDR-72-H2-005-MAN-A](#ata-72--engine-systems)**: Troubleshooting Guide for Hydrogen Fuel Cell Propulsion
+
+##### **GP-AM-AMPEL-0100-72-H2-006-A: Hydrogen Fuel Cell System - System Schematics and Wiring Diagrams (ATA 72)**
+- **[GP-AM-DRW-72-H2-006-DWG-A](#ata-72--engine-systems)**: Detailed Schematics and Wiring Diagrams for Hydrogen Fuel Cell System
+
+##### **GP-AM-AMPEL-0100-72-H2-007-A: Hydrogen Fuel Cell System - Safety Precautions (ATA 72)**
+- **[GP-AM-EDR-72-H2-007-MAN-A](#ata-72--engine-systems)**: Safety Precautions and Hazard Analysis Document for Hydrogen Systems
+
+##### **GP-AM-AMPEL-0100-72-H2-008-A: Hydrogen Fuel Cell System - Performance Data (ATA 72)**
+- **[GP-AM-EDR-72-H2-008-RES-A](#ata-72--engine-systems)**: Performance Data and Benchmark Report for Hydrogen Fuel Cell System
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
+
+---
+
+### ATA 72 – Q-01 Quantum Propulsion Documents {#ata-72--q-01-quantum-propulsion-documents}
 
 #### **GP-AM-AMPEL-0100-72-Q01-001-A: Q-01 Quantum Entanglement Engine (QEE) - System Description (ATA 72-Q01)**
-- **Engineering Documents to Prepare:**
-  - *QEE System-Level Description Document* (Data Module Code: **GP-AM-EDR-72-Q01-001**)  
-    *(Describes overall functionality and theoretical basis.)*
-  - *Quantum Propulsion Concept and Theoretical Basis Report* (Data Module Code: **GP-AM-EDR-72-Q01-002**)  
-    *(Provides theoretical background and performance targets.)*
-- **Early Integration Point:**  
-  - During early conceptual design and quantum systems feasibility study.
-- **Installation Frontier:**  
-  - Interface with specialized quantum control hardware and engine mounts.
-- **Assembly Station:**  
-  - Quantum Propulsion Integration Facility.
+- **[GP-AM-EDR-72-Q01-001-SDD-A](#ata-72--q-01-quantum-propulsion-documents)**: QEE System-Level Description Document
+- **[GP-AM-EDR-72-Q01-002-RPT-A](#ata-72--q-01-quantum-propulsion-documents)**: Quantum Propulsion Concept and Theoretical Basis Report
 
 #### **GP-AM-AMPEL-0100-72-Q01-002-A: Q-01 Quantum Entanglement Engine (QEE) - Component Description (ATA 72-Q01)**
-- **Engineering Documents to Prepare:**
-  - *Detailed QEE Component Descriptions Document* (Data Module Code: **GP-AM-EDR-72-Q01-003**)  
-    *(Details components such as the quantum generator and control units.)*
-  - *Material and Tolerance Specifications for Quantum Components* (Data Module Code: **GP-AM-EDR-72-Q01-004**)  
-    *(Specifies material requirements and tolerances.)*
-- **Early Integration Point:**  
-  - During detailed design of quantum subsystems.
-- **Installation Frontier:**  
-  - Interface with cryogenic cooling and control data interfaces.
-- **Assembly Station:**  
-  - Specialized Quantum Assembly Area.
+- **[GP-AM-EDR-72-Q01-003-DD-A](#ata-72--q-01-quantum-propulsion-documents)**: Detailed QEE Component Descriptions Document
+- **[GP-AM-EDR-72-Q01-004-SP-A](#ata-72--q-01-quantum-propulsion-documents)**: Material and Tolerance Specifications for Quantum Components
 
 #### **GP-AM-AMPEL-0100-72-Q01-003-A: Q-01 Quantum Entanglement Engine (QEE) - Operating Procedures (ATA 72-Q01)**
-- **Engineering Documents to Prepare:**
-  - *QEE Operating Procedures Document* (Data Module Code: **GP-AM-EDR-72-Q01-005**)  
-    *(Covers startup, thrust control, and shutdown procedures.)*
-- **Early Integration Point:**  
-  - During system integration testing for quantum propulsion.
-- **Installation Frontier:**  
-  - Interface with flight control and propulsion management systems.
-- **Assembly Station:**  
-  - Quantum Propulsion Integration Station.
+- **[GP-AM-EDR-72-Q01-005-PROC-A](#ata-72--q-01-quantum-propulsion-documents)**: QEE Operating Procedures Document
 
 #### **GP-AM-AMPEL-0100-72-Q01-004-A: Q-01 Quantum Entanglement Engine (QEE) - Maintenance Procedures (ATA 72-Q01)**
-- **Engineering Documents to Prepare:**
-  - *QEE Maintenance Procedures Manual* (Data Module Code: **GP-AM-EDR-72-Q01-006**)  
-    *(Provides detailed maintenance procedures for QEE.)*
-- **Early Integration Point:**  
-  - During maintenance planning and system lifecycle testing.
-- **Installation Frontier:**  
-  - Interface with diagnostic systems for quantum components.
-- **Assembly Station:**  
-  - Maintenance Workshop.
+- **[GP-AM-EDR-72-Q01-006-MAN-A](#ata-72--q-01-quantum-propulsion-documents)**: QEE Maintenance Procedures Manual
 
 #### **GP-AM-AMPEL-0100-72-Q01-005-A: Cryogenic Cooling System (CCS) - System Description (ATA 72-Q01)**
-- **Engineering Documents to Prepare:**
-  - *CCS System Overview Document* (Data Module Code: **GP-AM-EDR-72-Q01-007**)  
-    *(Describes system requirements and integration with QEE.)*
-- **Early Integration Point:**  
-  - Concurrent with QEE design and early system integration.
-- **Installation Frontier:**  
-  - Interface between QEE and cooling infrastructure.
-- **Assembly Station:**  
-  - Cryogenic Systems Assembly Facility.
+- **[GP-AM-EDR-72-Q01-007-SDD-A](#ata-72--q-01-quantum-propulsion-documents)**: CCS System Overview Document
 
 #### **GP-AM-AMPEL-0100-72-Q01-006-A: Cryogenic Cooling System (CCS) - Component Description (ATA 72-Q01)**
-- **Engineering Documents to Prepare:**
-  - *Detailed CCS Component Description Document* (Data Module Code: **GP-AM-EDR-72-Q01-008**)  
-    *(Details cryocoolers, coolant loops, and heat exchangers.)*
-- **Early Integration Point:**  
-  - During subsystem design for cryogenic management.
-- **Installation Frontier:**  
-  - Interface with QEE and overall energy distribution network.
-- **Assembly Station:**  
-  - Cryogenic Assembly and Integration Lab.
+- **[GP-AM-EDR-72-Q01-008-DD-A](#ata-72--q-01-quantum-propulsion-documents)**: Detailed CCS Component Description Document
 
 #### **GP-AM-AMPEL-0100-72-Q01-007-A: Cryogenic Cooling System (CCS) - Maintenance Procedures (ATA 72-Q01)**
-- **Engineering Documents to Prepare:**
-  - *CCS Maintenance and Inspection Procedures Manual* (Data Module Code: **GP-AM-EDR-72-Q01-009**)  
-    *(Outlines maintenance, leak detection, and coolant checks.)*
-- **Early Integration Point:**  
-  - During scheduled maintenance planning for quantum propulsion.
-- **Installation Frontier:**  
-  - Interface with sensor and control systems for cryogenic management.
-- **Assembly Station:**  
-  - Maintenance Workshop.
+- **[GP-AM-EDR-72-Q01-009-MAN-A](#ata-72--q-01-quantum-propulsion-documents)**: CCS Maintenance and Inspection Procedures Manual
 
 #### **GP-AM-AMPEL-0100-72-Q01-008-A: Cryogenic Cooling System (CCS) - Operating Procedures (ATA 72-Q01)**
-- **Engineering Documents to Prepare:**
-  - *CCS Operating Procedures Document* (Data Module Code: **GP-AM-EDR-72-Q01-010**)  
-    *(Covers cooldown, temperature monitoring, and emergency shutdown.)*
-- **Early Integration Point:**  
-  - Prior to engine performance testing.
-- **Installation Frontier:**  
-  - Interface with QEE control and temperature regulation systems.
-- **Assembly Station:**  
-  - Systems Integration Lab.
+- **[GP-AM-EDR-72-Q01-010-PROC-A](#ata-72--q-01-quantum-propulsion-documents)**: CCS Operating Procedures Document
 
 #### **GP-AM-AMPEL-0100-72-Q01-009-A: Q-01 Quantum Entanglement Engine (QEE) - Troubleshooting (ATA 72-Q01)**
-- **Engineering Documents to Prepare:**
-  - *QEE Troubleshooting Guide* (Data Module Code: **GP-AM-EDR-72-Q01-011**)  
-    *(Provides fault isolation and recovery procedures.)*
-- **Early Integration Point:**  
-  - During pre-flight testing and early operations validation.
-- **Installation Frontier:**  
-  - Interface with diagnostic and control modules for quantum propulsion.
-- **Assembly Station:**  
-  - Troubleshooting and Diagnostic Lab.
+- **[GP-AM-EDR-72-Q01-011-MAN-A](#ata-72--q-01-quantum-propulsion-documents)**: QEE Troubleshooting Guide
 
 #### **GP-AM-AMPEL-0100-72-Q01-010-A: Cryogenic Cooling System (CCS) - Troubleshooting (ATA 72-Q01)**
-- **Engineering Documents to Prepare:**
-  - *CCS Troubleshooting Guide* (Data Module Code: **GP-AM-EDR-72-Q01-012**)  
-    *(Provides procedures for identifying and resolving CCS issues.)*
-- **Early Integration Point:**  
-  - During system validation and integrated testing.
-- **Installation Frontier:**  
-  - Interface with cryogenic sensor networks and control systems.
-- **Assembly Station:**  
-  - Diagnostics and Test Facility.
+- **[GP-AM-EDR-72-Q01-012-MAN-A](#ata-72--q-01-quantum-propulsion-documents)**: CCS Troubleshooting Guide
 
 #### **GP-AM-AMPEL-0100-72-Q01-011-A: Q-01 Quantum Entanglement Engine (QEE) - System Schematics and Wiring Diagrams (ATA 72-Q01)**
-- **Engineering Documents to Prepare:**
-  - *Detailed QEE System Schematics* (Data Module Code: **GP-AM-DRW-72-Q01-013**)  
-    *(Provides comprehensive electrical and control schematics.)*
-  - *Wiring Diagram Package for QEE* (Data Module Code: **GP-AM-DRW-72-Q01-014**)  
-    *(Includes interface definitions and wiring interconnections.)*
-- **Early Integration Point:**  
-  - During final design review for electrical and control systems.
-- **Installation Frontier:**  
-  - Interface with central control and sensor networks.
-- **Assembly Station:**  
-  - Wiring and Systems Integration Lab.
+- **[GP-AM-DRW-72-Q01-013-DWG-A](#ata-72--q-01-quantum-propulsion-documents)**: Detailed QEE System Schematics
+- **[GP-AM-DRW-72-Q01-014-DWG-A](#ata-72--q-01-quantum-propulsion-documents)**: Wiring Diagram Package for QEE
 
 #### **GP-AM-AMPEL-0100-72-Q01-012-A: Cryogenic Cooling System (CCS) - System Schematics and Wiring Diagrams (ATA 72-Q01)**
-- **Engineering Documents to Prepare:**
-  - *Detailed CCS Schematics and Wiring Diagrams* (Data Module Code: **GP-AM-DRW-72-Q01-015**)  
-    *(Provides comprehensive diagrams for CCS interconnections.)*
-- **Early Integration Point:**  
-  - During final design and integration review for CCS.
-- **Installation Frontier:**  
-  - Interface with control and cooling sensor systems.
-- **Assembly Station:**  
-  - Electrical/Mechanical Integration Lab.
+- **[GP-AM-DRW-72-Q01-015-DWG-A](#ata-72--q-01-quantum-propulsion-documents)**: Detailed CCS Schematics and Wiring Diagrams
 
 #### **GP-AM-AMPEL-0100-72-Q01-013-A: Q-01 Quantum Entanglement Engine (QEE) - Safety Precautions (ATA 72-Q01)**
-- **Engineering Documents to Prepare:**
-  - *QEE Safety Precautions and Hazard Analysis Document* (Data Module Code: **GP-AM-EDR-72-Q01-016**)  
-    *(Outlines safety measures, emergency procedures, and hazard warnings.)*
-- **Early Integration Point:**  
-  - During safety certification review for quantum systems.
-- **Installation Frontier:**  
-  - Interface with emergency shutdown and alert systems.
-- **Assembly Station:**  
-  - Safety Compliance and Inspection Facility.
+- **[GP-AM-EDR-72-Q01-016-MAN-A](#ata-72--q-01-quantum-propulsion-documents)**: QEE Safety Precautions and Hazard Analysis Document
 
 #### **GP-AM-AMPEL-0100-72-Q01-014-A: Cryogenic Cooling System (CCS) - Safety Precautions (ATA 72-Q01)**
-- **Engineering Documents to Prepare:**
-  - *CCS Safety Precautions Document* (Data Module Code: **GP-AM-EDR-72-Q01-017**)  
-    *(Outlines guidelines for handling cryogens and pressure relief.)*
-- **Early Integration Point:**  
-  - During risk analysis and safety planning phases.
-- **Installation Frontier:**  
-  - Interface with environmental and safety monitoring systems.
-- **Assembly Station:**  
-  - Safety Systems Inspection Facility.
+- **[GP-AM-EDR-72-Q01-017-MAN-A](#ata-72--q-01-quantum-propulsion-documents)**: CCS Safety Precautions Document
 
 #### **GP-AM-AMPEL-0100-72-Q01-015-A: Q-01 Quantum Entanglement Engine (QEE) - Performance Data (ATA 72-Q01)**
-- **Engineering Documents to Prepare:**
-  - *QEE Performance Data Report* (Data Module Code: **GP-AM-EDR-72-Q01-018**)  
-    *(Includes thrust output, energy consumption, and operational range data.)*
-  - *Benchmarking and Comparison Analysis Document* (Data Module Code: **GP-AM-EDR-72-Q01-019**)  
-    *(Analyzes QEE performance against design targets.)*
-- **Early Integration Point:**  
-  - After initial system testing and before final certification.
-- **Installation Frontier:**  
-  - Interface with performance monitoring and data acquisition systems.
-- **Assembly Station:**  
-  - Test and Evaluation Laboratory.
+- **[GP-AM-EDR-72-Q01-018-RES-A](#ata-72--q-01-quantum-propulsion-documents)**: QEE Performance Data Report
+- **[GP-AM-EDR-72-Q01-019-CAL-A](#ata-72--q-01-quantum-propulsion-documents)**: Benchmarking and Comparison Analysis Document
 
 #### **GP-AM-AMPEL-0100-72-Q01-016-A: Cryogenic Cooling System (CCS) - Performance Data (ATA 72-Q01)**
-- **Engineering Documents to Prepare:**
-  - *CCS Performance Data and Specifications Document* (Data Module Code: **GP-AM-EDR-72-Q01-020**)  
-    *(Covers cooling capacity, flow rates, and temperature regulation accuracy.)*
-- **Early Integration Point:**  
-  - After integration testing of the CCS.
-- **Installation Frontier:**  
-  - Interface with temperature and coolant flow sensors.
-- **Assembly Station:**  
-  - Test and Evaluation Laboratory.
+- **[GP-AM-EDR-72-Q01-020-RES-A](#ata-72--q-01-quantum-propulsion-documents)**: CCS Performance Data and Specifications Document
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 73 – Engine Oil System
+### ATA 73 – Engine Oil System {#ata-73--engine-oil-system}
 
-### **GP-AM-AMPEL-0100-73-001-A: Engine Oil System (Turbofan/Hydrogen) - Description and Operation (ATA 73)**
-- **Engineering Documents to Prepare:**
-  - *Engine Oil System Design Specification Document* (Data Module Code: **GP-AM-EDR-73-001**)  
-    *(Describes design and functional aspects of the engine oil system.)*
-  - *Operating and Maintenance Procedures for Engine Oil Systems* (Data Module Code: **GP-AM-EDR-73-002**)  
-    *(Provides guidelines for operation and maintenance.)*
-- **Early Integration Point:**  
-  - During engine subsystem integration.
-- **Installation Frontier:**  
-  - Interface with engine component mounting and lubrication lines.
-- **Assembly Station:**  
-  - Engine Assembly and Maintenance Facility.
+#### **GP-AM-AMPEL-0100-73-001-A: Engine Oil System (Turbofan/Hydrogen) - Description and Operation (ATA 73)**
+- **[GP-AM-EDR-73-001-SDD-A](#ata-73--engine-oil-system)**: Engine Oil System Design Specification Document
+- **[GP-AM-EDR-73-002-PROC-A](#ata-73--engine-oil-system)**: Operating and Maintenance Procedures for Engine Oil Systems
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 74 – Engine Fuel and Control System
+### ATA 74 – Engine Fuel and Control System {#ata-74--engine-fuel-and-control-system}
 
-### **GP-AM-AMPEL-0100-74-001-A: Engine Fuel and Control System (Turbofan/Hydrogen) - Description and Operation (ATA 74)**
-- **Engineering Documents to Prepare:**
-  - *Engine Fuel and Control System Specification Document* (Data Module Code: **GP-AM-EDR-74-001**)  
-    *(Describes design, operation, and integration of fuel and control systems.)*
-  - *System Operation, Start-up, and Shutdown Procedures* (Data Module Code: **GP-AM-EDR-74-002**)  
-    *(Provides operational guidelines.)*
-- **Early Integration Point:**  
-  - During propulsion system design and testing.
-- **Installation Frontier:**  
-  - Interface with fuel lines and control interfaces in the engine compartment.
-- **Assembly Station:**  
-  - Engine Integration Facility.
+#### **GP-AM-AMPEL-0100-74-001-A: Engine Fuel and Control System (Turbofan/Hydrogen) - Description and Operation (ATA 74)**
+- **[GP-AM-EDR-74-001-SDD-A](#ata-74--engine-fuel-and-control-system)**: Engine Fuel and Control System Specification Document
+- **[GP-AM-EDR-74-002-PROC-A](#ata-74--engine-fuel-and-control-system)**: System Operation, Start-up, and Shutdown Procedures
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 75 – Engine Bleed Air System
+### ATA 75 – Engine Bleed Air System {#ata-75--engine-bleed-air-system}
 
-### **GP-AM-AMPEL-0100-75-001-A: Engine Bleed Air System (Turbofan/Hydrogen) - Description and Operation (ATA 75)**
-- **Engineering Documents to Prepare:**
-  - *Engine Bleed Air System Design and Operational Procedures Document* (Data Module Code: **GP-AM-EDR-75-001**)  
-    *(Details design and function of the bleed air system.)*
-  - *Performance and Efficiency Test Reports* (Data Module Code: **GP-AM-EDR-75-002**)  
-    *(Documents testing protocols and outcomes.)*
-- **Early Integration Point:**  
-  - During engine and environmental systems integration.
-- **Installation Frontier:**  
-  - Interface with engine compressors and cabin pressurization systems.
-- **Assembly Station:**  
-  - Engine and Environmental Systems Assembly Facility.
+#### **GP-AM-AMPEL-0100-75-001-A: Engine Bleed Air System (Turbofan/Hydrogen) - Description and Operation (ATA 75)**
+- **[GP-AM-EDR-75-001-SDD-A](#ata-75--engine-bleed-air-system)**: Engine Bleed Air System Design and Operational Procedures Document
+- **[GP-AM-EDR-75-002-RES-A](#ata-75--engine-bleed-air-system)**: Performance and Efficiency Test Reports
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 76 – Engine Air Inlet and Exhaust
+### ATA 76 – Engine Air Inlet and Exhaust {#ata-76--engine-air-inlet-and-exhaust}
 
-### **GP-AM-AMPEL-0100-76-001-A: Engine Air Inlet and Exhaust System (Turbofan/Hydrogen) - Description and Operation (ATA 76)**
-- **Engineering Documents to Prepare:**
-  - *Engine Air Inlet and Exhaust System Design Document* (Data Module Code: **GP-AM-EDR-76-001**)  
-    *(Describes design considerations for inlet and exhaust systems.)*
-  - *Interface and Performance Test Procedures* (Data Module Code: **GP-AM-EDR-76-002**)  
-    *(Outlines test procedures and integration requirements.)*
-- **Early Integration Point:**  
-  - During propulsion system aerodynamic testing.
-- **Installation Frontier:**  
-  - Interface with engine nacelles and aerodynamic fairings.
-- **Assembly Station:**  
-  - Engine Integration and Aerodynamic Assembly Station.
+#### **GP-AM-AMPEL-0100-76-001-A: Engine Air Inlet and Exhaust System (Turbofan/Hydrogen) - Description and Operation (ATA 76)**
+- **[GP-AM-EDR-76-001-SDD-A](#ata-76--engine-air-inlet-and-exhaust)**: Engine Air Inlet and Exhaust System Design Document
+- **[GP-AM-EDR-76-002-TEST-A](#ata-76--engine-air-inlet-and-exhaust)**: Interface and Performance Test Procedures
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 77 – Engine Indicating Systems
+### ATA 77 – Engine Indicating Systems {#ata-77--engine-indicating-systems}
 
-### **GP-AM-AMPEL-0100-77-001-A: Engine Indicating System (Turbofan/Hydrogen) - Description and Operation (ATA 77)**
-- **Engineering Documents to Prepare:**
-  - *Engine Indicating System Specification Document* (Data Module Code: **GP-AM-EDR-77-001**)  
-    *(Describes design and operational aspects for monitoring.)*
-  - *Integration and Calibration Procedures for Display Systems* (Data Module Code: **GP-AM-EDR-77-002**)  
-    *(Details calibration procedures.)*
-- **Early Integration Point:**  
-  - During final avionics and engine control integration.
-- **Installation Frontier:**  
-  - Interface with cockpit displays and sensor networks.
-- **Assembly Station:**  
-  - Avionics and Engine Integration Lab.
+#### **GP-AM-AMPEL-0100-77-001-A: Engine Indicating System (Turbofan/Hydrogen) - Description and Operation (ATA 77)**
+- **[GP-AM-EDR-77-001-SDD-A](#ata-77--engine-indicating-systems)**: Engine Indicating System Specification Document
+- **[GP-AM-EDR-77-002-PROC-A](#ata-77--engine-indicating-systems)**: Integration and Calibration Procedures for Display Systems
 
-### **GP-AM-AMPEL-0100-77-002-A: Engine Indicating System (Quantum Engine) - Description and Operation (ATA 77)**
-- **Engineering Documents to Prepare:**
-  - *Q‑01 Specific Engine Indicating System Document* (Data Module Code: **GP-AM-EDR-77-003**)  
-    *(Describes the indicating system for the Q‑01 Quantum Engine.)*
-  - *Interface Description for Quantum Propulsion Monitoring* (Data Module Code: **GP-AM-EDR-77-004**)  
-    *(Details interconnection with quantum control units.)*
-- **Early Integration Point:**  
-  - During integration of Q‑01 components with cockpit systems.
-- **Installation Frontier:**  
-  - Interface with quantum control units and digital displays.
-- **Assembly Station:**  
-  - Specialized Quantum Propulsion Integration Area.
+#### **GP-AM-AMPEL-0100-77-002-A: Engine Indicating System (Quantum Engine) - Description and Operation (ATA 77)**
+- **[GP-AM-EDR-77-003-SDD-A](#ata-77--engine-indicating-systems)**: Q‑01 Specific Engine Indicating System Document
+- **[GP-AM-EDR-77-004-ICD-A](#ata-77--engine-indicating-systems)**: Interface Description for Quantum Propulsion Monitoring
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 78 – Engine Starting System
+### ATA 78 – Engine Starting System {#ata-78--engine-starting-system}
 
-### **GP-AM-AMPEL-0100-78-001-A: Engine Starting System (Turbofan/Hydrogen) - Description and Operation (ATA 78)**
-- **Engineering Documents to Prepare:**
-  - *Engine Starting System Specification Document* (Data Module Code: **GP-AM-EDR-78-001**)  
-    *(Describes design and operational procedures for engine starting.)*
-  - *Operational and Safety Procedures for Starting Systems* (Data Module Code: **GP-AM-EDR-78-002**)  
-    *(Provides guidelines for start-up and emergency shutdown.)*
-- **Early Integration Point:**  
-  - During propulsion system integration and start-up simulation testing.
-- **Installation Frontier:**  
-  - Interface with engine starter units and control interfaces.
-- **Assembly Station:**  
-  - Engine Assembly and Starting System Integration Area.
+#### **GP-AM-AMPEL-0100-78-001-A: Engine Starting System (Turbofan/Hydrogen) - Description and Operation (ATA 78)**
+- **[GP-AM-EDR-78-001-SDD-A](#ata-78--engine-starting-system)**: Engine Starting System Specification Document
+- **[GP-AM-EDR-78-002-PROC-A](#ata-78--engine-starting-system)**: Operational and Safety Procedures for Starting Systems
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 86 – Cockpit Doors
+### ATA 86 – Cockpit Doors {#ata-86--cockpit-doors}
 
-### **GP-AM-AMPEL-0100-86-001-A: Cockpit Doors System - Description and Operation (ATA 86)**
-- **Engineering Documents to Prepare:**
-  - *Cockpit Doors Design and Operation Manual* (Data Module Code: **GP-AM-EDR-86-001**)  
-    *(Describes design, operation, and emergency procedures for cockpit doors.)*
-  - *Emergency Operation and Egress Procedures* (Data Module Code: **GP-AM-EDR-86-002**)  
-    *(Outlines emergency egress requirements.)*
-- **Early Integration Point:**  
-  - During cockpit and fuselage interior design integration.
-- **Installation Frontier:**  
-  - Interface with cockpit structure and emergency systems.
-- **Assembly Station:**  
-  - Cockpit Assembly and Final Integration Area.
+#### **GP-AM-AMPEL-0100-86-001-A: Cockpit Doors System - Description and Operation (ATA 86)**
+- **[GP-AM-EDR-86-001-SDD-A](#ata-86--cockpit-doors)**: Cockpit Doors Design and Operation Manual
+- **[GP-AM-EDR-86-002-PROC-A](#ata-86--cockpit-doors)**: Emergency Operation and Egress Procedures
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 87 – Passenger/Crew Doors
+### ATA 87 – Passenger/Crew Doors {#ata-87--passengercrew-doors}
 
-### **GP-AM-AMPEL-0100-87-001-A: Passenger/Crew Doors System - Description and Operation (ATA 87)**
-- **Engineering Documents to Prepare:**
-  - *Passenger/Crew Doors Operation Manual* (Data Module Code: **GP-AM-EDR-87-001**)  
-    *(Describes operational modes and emergency procedures.)*
-  - *Safety and Emergency Procedures Documentation* (Data Module Code: **GP-AM-EDR-87-002**)  
-    *(Outlines safety guidelines.)*
-- **Early Integration Point:**  
-  - During cabin interior design and safety systems integration.
-- **Installation Frontier:**  
-  - Interface with fuselage interior and emergency egress systems.
-- **Assembly Station:**  
-  - Cabin Assembly and Integration Facility.
+#### **GP-AM-AMPEL-0100-87-001-A: Passenger/Crew Doors System - Description and Operation (ATA 87)**
+- **[GP-AM-EDR-87-001-SDD-A](#ata-87--passengercrew-doors)**: Passenger/Crew Doors Operation Manual
+- **[GP-AM-EDR-87-002-PROC-A](#ata-87--passengercrew-doors)**: Safety and Emergency Procedures Documentation
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 88 – Cargo Doors
+### ATA 88 – Cargo Doors {#ata-88--cargo-doors}
 
-### **GP-AM-AMPEL-0100-88-001-A: Cargo Doors System - Description and Operation (ATA 88)**
-- **Engineering Documents to Prepare:**
-  - *Cargo Doors Design and Operational Procedures Document* (Data Module Code: **GP-AM-EDR-88-001**)  
-    *(Details design, operation, and safety features for cargo doors.)*
-- **Early Integration Point:**  
-  - During fuselage design and cargo bay layout integration.
-- **Installation Frontier:**  
-  - Interface with fuselage structure and cargo handling systems.
-- **Assembly Station:**  
-  - Cargo Bay Assembly Area.
+#### **GP-AM-AMPEL-0100-88-001-A: Cargo Doors System - Description and Operation (ATA 88)**
+- **[GP-AM-EDR-88-001-SDD-A](#ata-88--cargo-doors)**: Cargo Doors Design and Operational Procedures Document
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 89 – Landing Gear Doors
+### ATA 89 – Landing Gear Doors {#ata-89--landing-gear-doors}
 
-### **GP-AM-AMPEL-0100-89-001-A: Landing Gear Doors System - Description and Operation (ATA 89)**
-- **Engineering Documents to Prepare:**
-  - *Landing Gear Doors System Operation Manual* (Data Module Code: **GP-AM-EDR-89-001**)  
-    *(Describes door operation, sequencing, and interlock procedures.)*
-- **Early Integration Point:**  
-  - During landing gear system integration.
-- **Installation Frontier:**  
-  - Interface with landing gear mechanisms and hydraulic systems.
-- **Assembly Station:**  
-  - Landing Gear Assembly and Integration Facility.
+#### **GP-AM-AMPEL-0100-89-001-A: Landing Gear Doors System - Description and Operation (ATA 89)**
+- **[GP-AM-EDR-89-001-SDD-A](#ata-89--landing-gear-doors)**: Landing Gear Doors System Operation Manual
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 90 – Equipment Doors / Access Panels
+### ATA 90 – Equipment Doors / Access Panels {#ata-90--equipment-doors--access-panels}
 
-### **GP-AM-AMPEL-0100-90-001-A: Equipment Doors / Access Panels System - Description and Operation (ATA 90)**
-- **Engineering Documents to Prepare:**
-  - *Equipment Doors and Access Panels Specification Document* (Data Module Code: **GP-AM-EDR-90-001**)  
-    *(Describes design, installation, and safety procedures.)*
-  - *Installation, Access, and Safety Procedure Guidelines* (Data Module Code: **GP-AM-EDR-90-002**)  
-    *(Details procedures for safe access and assembly.)*
-- **Early Integration Point:**  
-  - During interior systems integration and access planning.
-- **Installation Frontier:**  
-  - Interface with airframe panels and interior access points.
-- **Assembly Station:**  
-  - Interior Assembly and Finishing Area.
+#### **GP-AM-AMPEL-0100-90-001-A: Equipment Doors / Access Panels System - Description and Operation (ATA 90)**
+- **[GP-AM-EDR-90-001-SDD-A](#ata-90--equipment-doors--access-panels)**: Equipment Doors and Access Panels Specification Document
+- **[GP-AM-EDR-90-002-PROC-A](#ata-90--equipment-doors--access-panels)**: Installation, Access, and Safety Procedure Guidelines
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 91 – Cockpit Windows
+### ATA 91 – Cockpit Windows {#ata-91--cockpit-windows}
 
-### **GP-AM-AMPEL-0100-91-001-A: Cockpit Windows System - Description and Operation (ATA 91)**
-- **Engineering Documents to Prepare:**
-  - *Cockpit Windows System Specification Document* (Data Module Code: **GP-AM-EDR-91-001**)  
-    *(Describes design, operation, and safety features.)*
-  - *Operational Guidelines and Emergency Egress Procedures* (Data Module Code: **GP-AM-EDR-91-002**)  
-    *(Provides emergency egress and usage procedures.)*
-- **Early Integration Point:**  
-  - During cockpit interior design integration.
-- **Installation Frontier:**  
-  - Interface with cockpit fuselage and structural glazing systems.
-- **Assembly Station:**  
-  - Cockpit Assembly and Window Installation Station.
+#### **GP-AM-AMPEL-0100-91-001-A: Cockpit Windows System - Description and Operation (ATA 91)**
+- **[GP-AM-EDR-91-001-SP-A](#ata-91--cockpit-windows)**: Cockpit Windows System Specification Document
+- **[GP-AM-EDR-91-002-PROC-A](#ata-91--cockpit-windows)**: Operational Guidelines and Emergency Egress Procedures
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 92 – Cabin Windows
+### ATA 92 – Cabin Windows {#ata-92--cabin-windows}
 
-### **GP-AM-AMPEL-0100-92-001-A: Cabin Windows System - Description and Operation (ATA 92)**
-- **Engineering Documents to Prepare:**
-  - *Cabin Windows System Design and Operation Manual* (Data Module Code: **GP-AM-EDR-92-001**)  
-    *(Describes design, operation, and emergency exit features.)*
-- **Early Integration Point:**  
-  - During interior and fuselage design review.
-- **Installation Frontier:**  
-  - Interface with fuselage and cabin structural elements.
-- **Assembly Station:**  
-  - Interior Assembly and Finishing Facility.
+#### **GP-AM-AMPEL-0100-92-001-A: Cabin Windows System - Description and Operation (ATA 92)**
+- **[GP-AM-EDR-92-001-SDD-A](#ata-92--cabin-windows)**: Cabin Windows System Design and Operation Manual
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 93 – Observation/Special Purpose Windows
+### ATA 93 – Observation/Special Purpose Windows {#ata-93--observationspecial-purpose-windows}
 
-### **GP-AM-AMPEL-0100-93-001-A: Observation/Special Purpose Windows System - Description and Operation (ATA 93)**
-- **Engineering Documents to Prepare:**
-  - *Special Purpose Windows Design and Functionality Document* (Data Module Code: **GP-AM-EDR-93-001**)  
-    *(Describes functions and design considerations for observation windows.)*
-  - *Integration and Safety Guidelines for Observation Systems* (Data Module Code: **GP-AM-EDR-93-002**)  
-    *(Provides guidelines for special-purpose windows.)*
-- **Early Integration Point:**  
-  - During design of special-use areas in the airframe.
-- **Installation Frontier:**  
-  - Interface with structural and sensor systems.
-- **Assembly Station:**  
-  - Specialized Assembly Area for Observation Systems.
+#### **GP-AM-AMPEL-0100-93-001-A: Observation/Special Purpose Windows System - Description and Operation (ATA 93)**
+- **[GP-AM-EDR-93-001-SDD-A](#ata-93--observationspecial-purpose-windows)**: Special Purpose Windows Design and Functionality Document
+- **[GP-AM-EDR-93-002-MAN-A](#ata-93--observationspecial-purpose-windows)**: Integration and Safety Guidelines for Observation Systems
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
-## ATA 99 – Special/Emerging Technologies
+### ATA 99 – Special/Emerging Technologies {#ata-99--specialemerging-technologies}
 
-### **GP-AM-AMPEL-0100-99-001-A: Special / Emerging Technologies - Overview (ATA 99)**
-- **Engineering Documents to Prepare:**
-  - *Overview Document for Emerging Technologies in AMPEL360XWLRGA* (Data Module Code: **GP-AM-EDR-99-001**)  
-    *(Provides a high-level overview of new or experimental technologies.)*
-  - *Cross-Reference Document to Detailed Subsystem Documentation* (Data Module Code: **GP-AM-EDR-99-002**)  
-    *(References detailed documents in other parts for emerging tech.)*
-- **Early Integration Point:**  
-  - As emerging technologies are defined, during strategic design reviews.
-- **Installation Frontier:**  
-  - Interfaces with multiple subsystems as applicable.
-- **Assembly Station:**  
-  - Integrated Systems Test Facility.
+#### **GP-AM-AMPEL-0100-99-001-A: Special / Emerging Technologies - Overview (ATA 99)**
+- **[GP-AM-EDR-99-001-OV-A](#ata-99--specialemerging-technologies)**: Overview Document for Emerging Technologies in AMPEL360XWLRGA
+- **[GP-AM-EDR-99-002-CAT-A](#ata-99--specialemerging-technologies)**: Cross-Reference Document to Detailed Subsystem Documentation
+
+[Back to Top](#ampel360xwlrga-complete-documentation-schema-with-info-codes)
 
 ---
 
+## Info Code Reference {#info-code-reference}
 
-**End of GP-AM-ATA Guidance Document**
+When assigning Info Codes to documents, consider the primary purpose of the document:
+
+| Info Code | Description | Usage |
+|-----------|-------------|-------|
+| **OV** | Overview | High-level summaries of systems or components |
+| **SP** | Specification | Documents defining technical requirements |
+| **REQ** | Requirements | Documents capturing functional or performance requirements |
+| **DD** | Design Document | Documents describing detailed design |
+| **SDD** | System Description | Comprehensive descriptions of system architecture |
+| **DWG** | Drawing | Engineering drawings, schematics, and diagrams |
+| **CAL** | Calculation/Analysis | Documents containing calculations or analyses |
+| **RPT** | Report | General reports and findings |
+| **TEST** | Test Plan | Documents describing test procedures |
+| **RES** | Test Results | Documents reporting test results |
+| **MAN** | Manual | Instruction manuals |
+| **PROC** | Procedure | Step-by-step process descriptions |
+| **CAT** | Catalog | Lists of parts or components |
+| **GLO** | Glossary | Term definitions |
+| **PLAN** | Plan | Planning documents |
+| **ICD** | Interface Control | Documents defining interfaces |
+| **BOM** | Bill of Materials | Parts lists |
+| **SWD** | Software Architecture | Software architecture documents |
+| **SPEC** | Software Specification | Software functionality descriptions |
+
+### Multiple Info Codes
+
+For documents that serve multiple purposes, you may combine Info Codes in order of primary to secondary purpose:
+
+- **GP-AM-AMPEL-0100-07-001-PROC-DWG-A**: A document that is primarily a procedure but also contains significant diagrams
+- **GP-AM-AMPEL-0100-28-Q7-001-RES-CAL-A**: A document that presents test results with significant calculation/analysis content
+
 
 ***
 
