@@ -112,9 +112,9 @@ Here's how we can formally structure and integrate the **Future Integration** se
 ---
 
 ## **9. FUTURE INTEGRATION**  
-### **(GAIA AIR Computing and Material Simulation – Part VI Content Management System)**
+### **(GAIA AIR Computing and Material Simulation – Part V Content Management System)**
 
-**GACMS (COAFI Part VI)** serves as the computational and simulation backbone of GAIA AIR. Future integration of functions defined in the COAFI Functional Framework will leverage GACMS as a real-time, model-driven content management and verification system, enabling simulation-informed decision-making, auto-validation, and AI explainability across the lifecycle.
+**GACMS (COAFI Part V)** serves as the computational and simulation backbone of GAIA AIR. Future integration of functions defined in the COAFI Functional Framework will leverage GACMS as a real-time, model-driven content management and verification system, enabling simulation-informed decision-making, auto-validation, and AI explainability across the lifecycle.
 
 ### ✅ Functional Alignment with GACMS:
 
@@ -1034,7 +1034,7 @@ This document defines the backbone of FFI: a multi-domain, audit-ready, AI-inter
 ---
 
 ## Part VI: Project Management & Operations (GP-PMO) ⚙️📈
-
+Part VI Content Management System
 *   [**PMO Chapter 00: Intro & General - Project Management & Operations**](GP-PMO-PROJECT-00-001-A.md) *(Adapted from ATA 00)*
     *   [GP-PMO-PROJECT-00-001-A: GP-PMO-00 General Document - Intro & General - Project Management & Operations](GP-PMO-PROJECT-00-001-A.md)
     *   [GP-PMO-PROJECT-00-A-001-A: GP-PMO-00 - Approved (In Service) - Intro & General - Project & Operations Overview](GP-PMO-PROJECT-00-A-001-A.md)
