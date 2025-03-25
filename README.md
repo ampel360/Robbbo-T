@@ -1410,43 +1410,322 @@ This document defines the backbone of FFI: a multi-domain, audit-ready, AI-inter
 
 ---
 
-## Part 0: Project Foundations - Manifesto, Research & Theory (GP-FD) 🌱🔬
+Thought for 2 seconds### GAIA AIR Program Documentation Structure
 
-*   [**FD.00: Introduction & Program Vision** 🧭](GP-FD-00-001-A.md)
-    *   [GP-FD-00-001-A: FD.00 General Document - Introduction & Program Vision](GP-FD-00-001-A.md)
-    *   [GP-FD-00-A-001-A: FD.00 - Approved (In Service) - Program Vision Statement](GP-FD-00-A-001-A.md)
-    *   [GP-FD-00-B-001-A: FD.00 - Being Tested (Development) - Program Vision - Expansion Scenarios](GP-FD-00-B-001-A.md)
-    *   [GP-FD-00-B-THEO-001-A: FD.00 - Speculative (Studying) - Program Vision - Long-Term Cosmic Impetus](GP-FD-00-B-THEO-001-A.md)
-    *   [GP-FD-00-C-001-A: FD.00 - Condensed (Formal Scientific Consensus) - Core Principles of GAIA AIR](GP-FD-00-C-001-A.md)
-    *   [GP-FD-00-D-001-A: FD.00 - Auto-Adaptive Configuration (AI-Driven Vision Adaptation)](GP-FD-00-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**FD.01: Key Theories & Proofs** 💡](GP-FD-01-001-A.md)
-    *   [GP-FD-01-001-A: FD.01 General Document - Key Theories & Proofs Overview](GP-FD-01-001-A.md)
-    *   [GP-FD-01-A-001-A: FD.01 - Approved (In Service) - Quantum Propulsion Theory - Validated Principles](GP-FD-01-A-001-A.md)
-    *   [GP-FD-01-B-001-A: FD.01 - Being Tested (Development) - Federated AI Theory - Implementation & Testing](GP-FD-01-B-001-A.md)
-    *   [GP-FD-01-B-THEO-001-A: FD.01 - Speculative (Studying) - BNNT Composites Theory - Advanced Properties Research](GP-FD-01-B-THEO-001-A.md)
-    *   [GP-FD-01-C-001-A: FD.01 - Condensed (Formal Scientific Consensus) - Quantum Mechanics Fundamentals for Propulsion](GP-FD-01-C-001-A.md)
-    *   [GP-FD-01-D-001-A: FD.01 - Auto-Adaptive Configuration - AI-Driven Theory Refinement](GP-FD-01-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**FD.02: Regulatory & Standards Base** 📜](GP-FD-02-001-A.md)
-    *   [GP-FD-02-001-A: FD.02 General Document - Regulatory & Standards Base Overview](GP-FD-02-001-A.md)
-    *   [GP-FD-02-A-001-A: FD.02 - Approved (In Service) - FAA/EASA Certification Requirements - Detailed Breakdown](GP-FD-02-A-001-A.md)
-    *   [GP-FD-02-B-001-A: FD.02 - Being Tested (Development) - NASA/ESA Standards - Application & Compliance Testing](GP-FD-02-B-001-A.md)
-    *   [GP-FD-02-B-THEO-001-A: FD.02 - Speculative (Studying) - Future Regulatory Landscape - Anticipated Changes](GP-FD-02-B-THEO-001-A.md)
-    *   [GP-FD-02-C-001-A: FD.02 - Condensed (Formal Scientific Consensus) - Core Aviation & Space Regulations - Summary](GP-FD-02-C-001-A.md)
-    *   [GP-FD-02-D-001-A: FD.02 - Auto-Adaptive Configuration - AI-Driven Regulatory Compliance Monitoring](GP-FD-02-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**FD.03: Cross-Disciplinary Research** 🔭](GP-FD-03-001-A.md)
-    *   [GP-FD-03-001-A: FD.03 General Document - Cross-Disciplinary Research Overview](GP-FD-03-001-A.md)
-    *   [GP-FD-03-A-001-A: FD.03 - Approved (In Service) - Multi-Physics Simulation Methodologies - Validated Framework](GP-FD-03-A-001-A.md)
-    *   [GP-FD-03-B-001-A: FD.03 - Being Tested (Development) - Quantum Computing for Advanced Flight Ops - Testing & Benchmarking](GP-FD-03-B-001-A.md)
-    *   [GP-FD-03-B-THEO-001-A: FD.03 - Speculative (Studying) - Cosmic Vacuum Energy Concepts - Theoretical Explorations](GP-FD-03-B-THEO-001-A.md)
-    *   [GP-FD-03-C-001-A: FD.03 - Condensed (Formal Scientific Consensus) - Synergy of AI, Quantum, & Green Propulsion - Core Principles](GP-FD-03-C-001-A.md)
-    *   [GP-FD-03-D-001-A: FD.03 - Auto-Adaptive Configuration - AI-Driven Research Prioritization & Resource Allocation](GP-FD-03-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
+## 1. Introduction
 
-*   [**FD.04 - FD.99: Reserved Future Sections** 🚧](GP-FD-04-001-A.md) *(Example Reserved Sections)*
-    *   [GP-FD-04-001-A: FD.04 General Document - Reserved - Ethical Implications of AI in Aerospace](GP-FD-04-001-A.md)
-    *   [GP-FD-05-001-A: FD.05 General Document - Reserved - Long-Term Vision for Interplanetary Expansion](GP-FD-05-001-A.md)
-    *   ... *(and so on for FD.06 - FD.99 Reserved Sections)*
+The GAIA AIR program employs a sophisticated documentation architecture that spans multiple functional domains. This structured approach ensures consistency, traceability, and effective knowledge management across all program activities from theoretical research to operational implementation. The documentation system follows a hierarchical organization with standardized naming conventions and classification categories.
 
----
+## 2. Document Classification System
+
+All GAIA AIR program documents adhere to a standardized classification system that indicates their status, purpose, and relationship to other documents:
+
+| Code | Classification | Description
+|-----|-----|-----
+| `GP-FD-XX-001-A` | General Document | Primary overview document for a functional domain
+| `GP-FD-XX-A-001-A` | Approved (In Service) | Operational documents for implemented systems
+| `GP-FD-XX-B-001-A` | Being Tested (Development) | Documents for systems under development
+| `GP-FD-XX-B-THEO-001-A` | Speculative (Studying) | Theoretical concepts under investigation
+| `GP-FD-XX-C-001-A` | Condensed (Formal Scientific Consensus) | Scientific consensus summaries
+| `GP-FD-XX-D-001-A` | Auto-Adaptive Configuration | AI-driven adaptive systems documentation
+
+
+## 3. Functional Domains
+
+### 3.1 FD.00: Introduction & Program Vision 🧭
+
+The FD.00 series establishes the foundational vision and direction for the GAIA AIR program:
+
+- [`GP-FD-00-001-A`](#GP-FD-00-001-A): General Document - Introduction & Program Vision
+
+- Primary overview of the program's vision and objectives
+- Serves as the entry point to all vision-related documentation
+
+
+
+- [`GP-FD-00-A-001-A`](#GP-FD-00-A-001-A): Approved - Program Vision Statement
+
+- Contains the officially approved and operational vision statement
+- Defines current program direction and objectives
+
+
+
+- [`GP-FD-00-B-001-A`](#GP-FD-00-B-001-A): Being Tested - Program Vision Expansion Scenarios
+
+- Documents potential expansion scenarios under development
+- Outlines near-term vision evolution possibilities
+
+
+
+- [`GP-FD-00-B-THEO-001-A`](#GP-FD-00-B-THEO-001-A): Speculative - Long-Term Cosmic Impetus
+
+- Explores theoretical long-term vision concepts
+- Investigates speculative future directions and cosmic-scale objectives
+
+
+
+- [`GP-FD-00-C-001-A`](#GP-FD-00-C-001-A): Condensed - Core Principles of GAIA AIR
+
+- Summarizes the essential scientific principles underlying the program
+- Provides consensus-based foundational concepts
+
+
+
+- [`GP-FD-00-D-001-A`](#GP-FD-00-D-001-A): Auto-Adaptive - AI-Driven Vision Adaptation
+
+- Details the AI systems that dynamically adapt program vision
+- Outlines mechanisms for vision evolution based on emerging data
+
+
+
+
+
+### 3.2 FD.01: Key Theories & Proofs 💡
+
+The FD.01 series documents the theoretical foundations and scientific proofs that underpin the program:
+
+- [`GP-FD-01-001-A`](#GP-FD-01-001-A): General Document - Key Theories & Proofs Overview
+
+- Comprehensive overview of the theoretical framework
+- Maps relationships between different theoretical domains
+
+
+
+- [`GP-FD-01-A-001-A`](#GP-FD-01-A-001-A): Approved - Quantum Propulsion Theory - Validated Principles
+
+- Documents validated quantum propulsion principles in operational use
+- Provides theoretical basis for current propulsion systems
+
+
+
+- [`GP-FD-01-B-001-A`](#GP-FD-01-B-001-A): Being Tested - Federated AI Theory - Implementation & Testing
+
+- Details federated AI approaches under development
+- Documents testing methodologies and preliminary results
+
+
+
+- [`GP-FD-01-B-THEO-001-A`](#GP-FD-01-B-THEO-001-A): Speculative - BNNT Composites Theory - Advanced Properties Research
+
+- Explores theoretical properties of Boron Nitride Nanotube composites
+- Investigates potential applications in aerospace structures
+
+
+
+- [`GP-FD-01-C-001-A`](#GP-FD-01-C-001-A): Condensed - Quantum Mechanics Fundamentals for Propulsion
+
+- Summarizes essential quantum mechanics principles relevant to propulsion
+- Provides scientific consensus on quantum applications
+
+
+
+- [`GP-FD-01-D-001-A`](#GP-FD-01-D-001-A): Auto-Adaptive - AI-Driven Theory Refinement
+
+- Details AI systems for continuous theoretical refinement
+- Documents adaptive theoretical modeling approaches
+
+
+
+
+
+### 3.3 FD.02: Regulatory & Standards Base 📜
+
+The FD.02 series establishes the regulatory framework and standards base for all program operations:
+
+- [`GP-FD-02-001-A`](#GP-FD-02-001-A): General Document - Regulatory & Standards Base Overview
+
+- Comprehensive overview of the regulatory landscape and standards framework
+- Central reference point for all compliance requirements
+
+
+
+- [`GP-FD-02-A-001-A`](#GP-FD-02-A-001-A): Approved - FAA/EASA Certification Requirements
+
+- Detailed breakdown of operational aviation certification requirements
+- Compliance pathways for airworthiness directives
+
+
+
+- [`GP-FD-02-B-001-A`](#GP-FD-02-B-001-A): Being Tested - NASA/ESA Standards
+
+- Documentation of space standards under testing and validation
+- Integration protocols with existing space infrastructure
+
+
+
+- [`GP-FD-02-B-THEO-001-A`](#GP-FD-02-B-THEO-001-A): Speculative - Future Regulatory Landscape
+
+- Analysis of emerging regulatory frameworks
+- Scenario planning for anticipated regulatory changes
+
+
+
+- [`GP-FD-02-C-001-A`](#GP-FD-02-C-001-A): Condensed - Core Aviation & Space Regulations
+
+- Quick reference summary of essential regulations
+- Based on formal scientific consensus
+
+
+
+- [`GP-FD-02-D-001-A`](#GP-FD-02-D-001-A): Auto-Adaptive - AI-Driven Regulatory Compliance
+
+- Systems for continuous monitoring of regulatory changes
+- Adaptive documentation updates across the program
+
+
+
+
+
+### 3.4 FD.03: Cross-Disciplinary Research 🔭
+
+The FD.03 series documents research that spans multiple scientific and engineering disciplines:
+
+- [`GP-FD-03-001-A`](#GP-FD-03-001-A): General Document - Cross-Disciplinary Research Overview
+
+- Maps interdisciplinary research domains and methodologies
+- Establishes framework for cross-domain collaboration
+
+
+
+- [`GP-FD-03-A-001-A`](#GP-FD-03-A-001-A): Approved - Multi-Physics Simulation Methodologies
+
+- Documents validated simulation frameworks in operational use
+- Details integration of multiple physics domains in simulation
+
+
+
+- [`GP-FD-03-B-001-A`](#GP-FD-03-B-001-A): Being Tested - Quantum Computing for Advanced Flight Ops
+
+- Documents testing of quantum computing applications
+- Benchmarking results against classical computing approaches
+
+
+
+- [`GP-FD-03-B-THEO-001-A`](#GP-FD-03-B-THEO-001-A): Speculative - Cosmic Vacuum Energy Concepts
+
+- Explores theoretical energy extraction from cosmic vacuum
+- Investigates potential applications for propulsion
+
+
+
+- [`GP-FD-03-C-001-A`](#GP-FD-03-C-001-A): Condensed - Synergy of AI, Quantum, & Green Propulsion
+
+- Summarizes scientific consensus on interdisciplinary approaches
+- Documents core principles for integrated technology development
+
+
+
+- [`GP-FD-03-D-001-A`](#GP-FD-03-D-001-A): Auto-Adaptive - AI-Driven Research Prioritization
+
+- Details AI systems for research optimization
+- Documents adaptive resource allocation methodologies
+
+
+
+
+
+### 3.5 FD.04 - FD.99: Reserved Future Sections 🚧
+
+The program documentation architecture reserves sections FD.04 through FD.99 for future expansion:
+
+- [`GP-FD-04-001-A`](#GP-FD-04-001-A): Reserved - Ethical Implications of AI in Aerospace
+
+- Placeholder for future ethical framework documentation
+
+
+
+- [`GP-FD-05-001-A`](#GP-FD-05-001-A): Reserved - Long-Term Vision for Interplanetary Expansion
+
+- Placeholder for future interplanetary mission documentation
+
+
+
+- Additional reserved sections will be developed as the program evolves
+
+
+## 4. Documentation Integration Patterns
+
+The GAIA AIR documentation system maintains consistent relationships across functional domains:
+
+- **Horizontal Integration**: Documents at the same classification level (e.g., all A-series documents) maintain consistent approaches to their respective domains
+- **Vertical Integration**: Within each functional domain, documents progress from general overview to specific implementations
+- **Cross-Domain References**: Documents reference related content in other functional domains to ensure comprehensive coverage
+- **Progressive Development**: Content evolves from approved operational concepts through development and into theoretical exploration
+- **AI Integration**: Auto-adaptive configurations ensure documentation remains current with emerging developments
+
+
+## 5. Document Lifecycle Management
+
+All GAIA AIR program documents follow a standardized lifecycle:
+
+1. **Creation**: Initial drafting based on program requirements
+2. **Review**: Multi-disciplinary expert review and validation
+3. **Approval**: Formal approval process with appropriate authorities
+4. **Implementation**: Integration into operational processes
+5. **Monitoring**: Continuous assessment of relevance and accuracy
+6. **Adaptation**: AI-driven updates based on emerging information
+7. **Archiving**: Systematic versioning and historical preservation
+
+## Annex: Visual Representation of Documentation Structure
+
+```mermaid
+graph TD;
+    A["GAIA AIR Program Documentation"] --> B["FD.00: Introduction & Program Vision 🧭"]
+    A --> C["FD.01: Key Theories & Proofs 💡"]
+    A --> D["FD.02: Regulatory & Standards Base 📜"]
+    A --> E["FD.03: Cross-Disciplinary Research 🔭"]
+    A --> F["FD.04-FD.99: Reserved Future Sections 🚧"]
+    
+    %% FD.00 Series
+    B --> B1["GP-FD-00-001-A: General Document"]
+    B --> B2["GP-FD-00-A-001-A: Approved - Vision Statement"]
+    B --> B3["GP-FD-00-B-001-A: Being Tested - Expansion Scenarios"]
+    B --> B4["GP-FD-00-B-THEO-001-A: Speculative - Cosmic Impetus"]
+    B --> B5["GP-FD-00-C-001-A: Condensed - Core Principles"]
+    B --> B6["GP-FD-00-D-001-A: Auto-Adaptive - AI-Driven Vision"]
+    
+    %% FD.01 Series
+    C --> C1["GP-FD-01-001-A: General Document"]
+    C --> C2["GP-FD-01-A-001-A: Approved - Quantum Propulsion"]
+    C --> C3["GP-FD-01-B-001-A: Being Tested - Federated AI"]
+    C --> C4["GP-FD-01-B-THEO-001-A: Speculative - BNNT Composites"]
+    C --> C5["GP-FD-01-C-001-A: Condensed - Quantum Mechanics"]
+    C --> C6["GP-FD-01-D-001-A: Auto-Adaptive - Theory Refinement"]
+    
+    %% FD.02 Series
+    D --> D1["GP-FD-02-001-A: General Document"]
+    D --> D2["GP-FD-02-A-001-A: Approved - FAA/EASA Certification"]
+    D --> D3["GP-FD-02-B-001-A: Being Tested - NASA/ESA Standards"]
+    D --> D4["GP-FD-02-B-THEO-001-A: Speculative - Future Regulations"]
+    D --> D5["GP-FD-02-C-001-A: Condensed - Core Regulations"]
+    D --> D6["GP-FD-02-D-001-A: Auto-Adaptive - Compliance Monitoring"]
+    
+    %% FD.03 Series
+    E --> E1["GP-FD-03-001-A: General Document"]
+    E --> E2["GP-FD-03-A-001-A: Approved - Multi-Physics Simulation"]
+    E --> E3["GP-FD-03-B-001-A: Being Tested - Quantum Computing"]
+    E --> E4["GP-FD-03-B-THEO-001-A: Speculative - Vacuum Energy"]
+    E --> E5["GP-FD-03-C-001-A: Condensed - AI/Quantum/Green Synergy"]
+    E --> E6["GP-FD-03-D-001-A: Auto-Adaptive - Research Prioritization"]
+    
+    %% FD.04-99 Series
+    F --> F1["GP-FD-04-001-A: Reserved - AI Ethics"]
+    F --> F2["GP-FD-05-001-A: Reserved - Interplanetary Expansion"]
+    F --> F3["..."]
+    
+    %% Document Classification System
+    G["Document Classification System"] --> G1["GP-FD-XX-001-A: General Document"]
+    G --> G2["GP-FD-XX-A-001-A: Approved (In Service)"]
+    G --> G3["GP-FD-XX-B-001-A: Being Tested (Development)"]
+    G --> G4["GP-FD-XX-B-THEO-001-A: Speculative (Studying)"]
+    G --> G5["GP-FD-XX-C-001-A: Condensed (Scientific Consensus)"]
+    G --> G6["GP-FD-XX-D-001-A: Auto-Adaptive Configuration"]
+    
+    %% Cross-domain relationships (simplified)
+    B1 -.-> C1["Related domains"]
+    C1 -.-> D1["Related domains"]
+    D1 -.-> E1["Related domains"]
+```
 
 ## Part I: Airframes – AMPEL360XWLRGA (GP-AM) 🚀
 
@@ -1843,6 +2122,41 @@ This document defines the backbone of FFI: a multi-domain, audit-ready, AI-inter
     *   [GP-AM-AMPEL-0100-99-C-001-A: GP-AM-99 - Condensed (Formal Scientific Consensus) - Special / Emerging Tech - Aerospace Innovation & Tech Readiness Principles](GP-AM-AMPEL-0100-99-C-001-A.md)
     *   [GP-AM-AMPEL-0100-99-D-001-A: GP-AM-99 - Auto-Configuración Adaptativa - Special / Emerging Tech - AI-Driven Tech Adoption & Lifecycle Management](GP-AM-AMPEL-0100-99-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
 
+```mermaid
+graph TD;
+    A["GAIA AIR Program Documentation"] --> B["Part 0: Project Foundations (GP-FD)"]
+    A --> C["Part I: Airframes – AMPEL360XWLRGA (GP-AM)"]
+    
+    C --> D1["ATA Chapters 00-18: General Aircraft"]
+    C --> D2["ATA Chapters 20-38: Aircraft Systems"]
+    C --> D3["ATA Chapters 45-49: Information Systems"]
+    C --> D4["ATA Chapters 51-57: Structures"]
+    C --> D5["ATA Chapters 71-78: Propulsion"]
+    C --> D6["ATA Chapters 86-93: Doors & Windows"]
+    C --> D7["ATA Chapter 99: Special/Emerging Tech"]
+    
+    D2 --> E1["ATA 21: Air Conditioning & Pressurization"]
+    D2 --> E2["ATA 22: Auto Flight"]
+    D2 --> E3["ATA 23: Communications"]
+    D2 --> E4["ATA 24: Electrical Power"]
+    D2 --> E5["ATA 27: Flight Controls"]
+    D2 --> E6["ATA 28: Fuel"]
+    
+    E1 --> F1["GP-AM-AMPEL-0100-21-001-A: General Document"]
+    E1 --> F2["GP-AM-AMPEL-0100-21-A-001-A: Approved (In Service)"]
+    E1 --> F3["GP-AM-AMPEL-0100-21-B-001-A: Being Tested"]
+    E1 --> F4["GP-AM-AMPEL-0100-21-B-THEO-001-A: Speculative"]
+    E1 --> F5["GP-AM-AMPEL-0100-21-C-001-A: Condensed"]
+    E1 --> F6["GP-AM-AMPEL-0100-21-D-001-A: Auto-Adaptive"]
+    
+    D5 --> G1["ATA 72-Q01: Propulsion – Quantum Extension"]
+    G1 --> H1["GP-AM-AMPEL-0100-72-Q01-001-A: General Document"]
+    G1 --> H2["GP-AM-AMPEL-0100-72-Q01-A-001-A: Approved"]
+    G1 --> H3["GP-AM-AMPEL-0100-72-Q01-B-001-A: Being Tested"]
+    G1 --> H4["GP-AM-AMPEL-0100-72-Q01-B-THEO-001-A: Speculative"]
+    G1 --> H5["GP-AM-AMPEL-0100-72-Q01-C-001-A: Condensed"]
+    G1 --> H6["GP-AM-AMPEL-0100-72-Q01-D-001-A: Auto-Adaptive"]
+```
 ---
 
 [Return to Part 0: Manifesto, Research & Theoretical Foundations (GP-FD) ToC](ToC-GP-FD.md)
