@@ -2369,27 +2369,434 @@ graph TD;
 
 ## Part I: Airframes – AMPEL360XWLRGA (GP-AM) 🚀
 
-*   [**ATA Chapter 00: Intro & General** ✈️](GP-AM-AMPEL-0100-00-001-A.md)
-    *   [GP-AM-AMPEL-0100-00-001-A: GP-AM-00 General Document - Intro & General](GP-AM-AMPEL-0100-00-001-A.md)
-    *   [GP-AM-AMPEL-0100-00-A-001-A: GP-AM-00 - Approved (In Service) - Intro & General - Project Scope & Compliance](GP-AM-AMPEL-0100-00-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-00-B-001-A: GP-AM-00 - Being Tested (Development) - Intro & General - Design Philosophy & Materials](GP-AM-AMPEL-0100-00-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-00-B-THEO-001-A: GP-AM-00 - Speculative (Studying) - Intro & General - Long-Term Cosmic Vision Integration](GP-AM-AMPEL-0100-00-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-00-C-001-A: GP-AM-00 - Condensed (Formal Scientific Consensus) - Intro & General - Core Airframe Design Principles](GP-AM-AMPEL-0100-00-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-00-D-001-A: GP-AM-00 - Auto-Adaptive Configuration - Intro & General - AI-Driven Doc Adaptation](GP-AM-AMPEL-0100-00-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 05: Time Limits/Maint Checks** ⏱️](GP-AM-AMPEL-0100-05-001-A.md)
-    *   [GP-AM-AMPEL-0100-05-001-A: GP-AM-05 General Document - Time Limits/Maint Checks](GP-AM-AMPEL-0100-05-001-A.md)
-    *   [GP-AM-AMPEL-0100-05-A-001-A: GP-AM-05 - Approved (In Service) - Time Limits/Maint Checks - Approved Procedures](GP-AM-AMPEL-0100-05-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-05-B-001-A: GP-AM-05 - Being Tested (Development) - Time Limits/Maint Checks - Predictive Maint R&D](GP-AM-AMPEL-0100-05-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-05-B-THEO-001-A: GP-AM-05 - Speculative (Studying) - Time Limits/Maint Checks - Quantum Sensor Based Monitoring Concepts](GP-AM-AMPEL-0100-05-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-05-C-001-A: GP-AM-05 - Condensed (Formal Scientific Consensus) - Time Limits/Maint Checks - Reliability Theory Basics](GP-AM-AMPEL-0100-05-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-05-D-001-A: GP-AM-05 - Auto-Adaptive Configuration - Time Limits/Maint Checks - AI-Driven Adaptive Schedules](GP-AM-AMPEL-0100-05-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 06: Dimensions & Areas** 📏](GP-AM-AMPEL-0100-06-001-A.md)
-    *   [GP-AM-AMPEL-0100-06-001-A: GP-AM-06 General Document - Dimensions & Areas](GP-AM-AMPEL-0100-06-001-A.md)
-    *   [GP-AM-AMPEL-0100-06-A-001-A: GP-AM-06 - Approved (In Service) - Dimensions & Areas - Aircraft Geometry Specs](GP-AM-AMPEL-0100-06-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-06-B-001-A: GP-AM-06 - Being Tested (Development) - Dimensions & Areas - Digital Twin Geometry Model Testing](GP-AM-AMPEL-0100-06-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-06-B-THEO-001-A: GP-AM-06 - Speculative (Studying) - Dimensions & Areas - Morphing Airframe Geometry Concepts](GP-AM-AMPEL-0100-06-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-06-C-001-A: GP-AM-06 - Condensed (Formal Scientific Consensus) - Dimensions & Areas - Aerodynamic Geometry Principles](GP-AM-AMPEL-0100-06-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-06-D-001-A: GP-AM-06 - Auto-Adaptive Configuration - Dimensions & Areas - AI-Driven Geometry Optimization](GP-AM-AMPEL-0100-06-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
+* # COAFI Part I: Airframes – AMPEL360XWLRGA (GP‑AM)
+**JSON Schema Representation (Formatted as Markdown)**
+
+---
+
+## 1. Información General de la Parte
+
+- **coafiPart**: `GP-AM`  
+- **partTitle**: `Part I: Airframes – AMPEL360XWLRGA`
+
+---
+
+## 2. Referencia de Códigos de Información
+
+| **Código** | **Descripción**                                                           | **Uso**                                                                                               |
+|:----------:|:-------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------|
+| **OV**     | Overview (Visión General)                                                | Resúmenes de alto nivel de sistemas, componentes o procesos.                                          |
+| **SP**     | Specification (Especificación)                                           | Define requerimientos técnicos, características, desempeño, propiedades, dimensiones y tolerancias.    |
+| **REQ**    | Requirements Document (Documento de Requerimientos)                      | Captura y gestiona requerimientos funcionales, de desempeño, de interfaz y de conformidad.             |
+| **DD**     | Design Document (Documento de Diseño)                                    | Describe el diseño detallado de un sistema o componente.                                              |
+| **SDD**    | System Description Document (Documento de Descripción del Sistema)       | Proporciona una descripción completa de la arquitectura y operación del sistema.                      |
+| **DWG**    | Drawing (Dibujo)                                                         | Dibujos de ingeniería, esquemas y diagramas visuales.                                                 |
+| **CAL**    | Calculation/Analysis (Cálculo/Análisis)                                  | Documenta cálculos, simulaciones y análisis de desempeño.                                             |
+| **RPT**    | Report (Reporte)                                                         | Informes generales, resúmenes de hallazgos y reportes de investigación.                                |
+| **TEST**   | Test Plan/Procedure (Plan/Procedimiento de Pruebas)                      | Describe procedimientos para la validación y pruebas de sistemas o componentes.                       |
+| **RES**    | Test Results (Resultados de Pruebas)                                     | Documenta los resultados y hallazgos de las pruebas realizadas.                                       |
+| **MAN**    | Manual                                                                   | Instrucciones de operación, mantenimiento, reparación o entrenamiento.                                |
+| **PROC**   | Procedure (Procedimiento)                                                | Describe procesos paso a paso (mantenimiento, instalación, inspección, etc.).                         |
+| **CAT**    | Catalog/List (Catálogo/Lista)                                            | Listas de partes, componentes, equipos o referencias (ej. IPC).                                       |
+| **GLO**    | Glossary (Glosario)                                                      | Lista de términos y definiciones.                                                                     |
+| **PLAN**   | Plan                                                                      | Describe planes de acción (plan de proyecto, de mantenimiento, de gestión de riesgos, etc.).          |
+| **ICD**    | Interface Control Document (Documento de Control de Interfaz)            | Define las interfaces entre sistemas o componentes.                                                   |
+| **BOM**    | Bill of Materials (Lista de Materiales)                                  | Lista de todas las partes o materiales necesarios para construir un sistema o componente.            |
+| **SWD**    | Software Architecture Document (Documento de Arquitectura de Software)   | Describe la arquitectura del software.                                                               |
+| **SPEC**   | Software Specification (Especificación de Software)                      | Describe funcionalidades y requerimientos del software.                                              |
+| **ADMIN**  | Administrative (Administrativo)                                          | Documenta información administrativa (historial de revisiones, aprobaciones, etc.).                   |
+| **REF**    | Reference (Referencia)                                                   | Proporciona referencias a estándares externos, documentos o recursos.                                |
+
+---
+
+## 3. Estructura de Capítulos y Documentos (ATA)
+
+### 3.1 ATA Chapter 00: Intro & General
+
+#### **Documento 1**
+
+- **documentId**: `GP-AM-AMPEL-0100-00-001-A`  
+- **documentTitle**: `GP-AM-00 General Document - Intro & General`  
+- **status**: `Draft`  
+- **infoCode**: `OV`  
+- **description**: Introducción general a Part I (Airframes – GP‑AM), su alcance, alineación con ATA y relación con otras partes de COAFI.
+
+  - **documentParts**:
+    1. **partId**: `INTRO`  
+       **title**: `Introduction`  
+       **infoCode**: `OV`  
+       **contentPlaceholder (filled)**:  
+       *"Esta sección describe la finalidad general y el alcance de Part I: Airframes – GP-AM, presentando los objetivos principales y la relación con la estructura global de COAFI."*
+
+    2. **partId**: `ATA_ALIGN`  
+       **title**: `ATA Alignment`  
+       **infoCode**: `DS`  
+       **contentPlaceholder (filled)**:  
+       *"Se detalla cómo se aplican los capítulos ATA (por ejemplo 00, 05, 06) al airframe AMPEL360XWLRGA, asegurando compatibilidad con las prácticas estándar de la industria."*
+
+    3. **partId**: `COAFI_LINKS`  
+       **title**: `COAFI Relationships`  
+       **infoCode**: `DS`  
+       **contentPlaceholder (filled)**:  
+       *"Se describen las interrelaciones con otros módulos y partes de COAFI, enfatizando sinergias con propulsión, aviónica y documentación cruzada."*
+
+    4. **partId**: `REVISIONS`  
+       **title**: `Revision History`  
+       **infoCode**: `ADMIN`  
+       **contentPlaceholder (filled)**:  
+       *"Versión 1.0: Publicación inicial. Versión 1.1: Ajustes menores de alcance. Versión 2.0: Cambios significativos alineados con nueva directiva interna."*
+
+---
+
+#### **Documento 2**
+
+- **documentId**: `GP-AM-AMPEL-0100-00-A-001-A`  
+- **documentTitle**: `GP-AM-00 - Approved (In Service) - Intro & General - Project Scope & Compliance`  
+- **status**: `Approved (In Service)`  
+- **infoCode**: `REQ`  
+- **description**: Documento aprobado que detalla el alcance del proyecto para el airframe AMPEL360XWLRGA y los requisitos de conformidad.
+
+  - **documentParts**:
+    1. **partId**: `SCOPE`  
+       **title**: `Project Scope Definition`  
+       **infoCode**: `SP`  
+       **contentPlaceholder (filled)**:  
+       *"El alcance del proyecto considera el diseño completo del airframe, incluyendo dimensiones principales, performance esperada y normativa de seguridad."*
+
+    2. **partId**: `COMPLIANCE_REQ`  
+       **title**: `Compliance Requirements Matrix`  
+       **infoCode**: `REQ`  
+       **contentPlaceholder (filled)**:  
+       *"La matriz vincula cada requisito regulatorio (EASA, FAA, etc.) con las secciones específicas del diseño del AMPEL360XWLRGA, garantizando trazabilidad."*
+
+    3. **partId**: `CERT_STRATEGY`  
+       **title**: `Certification Strategy Overview`  
+       **infoCode**: `PLAN`  
+       **contentPlaceholder (filled)**:  
+       *"La estrategia de certificación se basa en un enfoque por fases, abarcando pruebas en tierra y en vuelo, y validación progresiva de la conformidad."*
+
+    4. **partId**: `REVISIONS`  
+       **title**: `Revision History`  
+       **infoCode**: `ADMIN`  
+       **contentPlaceholder (filled)**:  
+       *"Versión 1.0: Documento aprobado inicialmente. Versión 1.1: Inclusión de requisitos de compatibilidad con sistemas externos."*
+
+---
+
+#### **Documento 3**
+
+- **documentId**: `GP-AM-AMPEL-0100-00-B-001-A`  
+- **documentTitle**: `GP-AM-00 - Being Tested (Development) - Intro & General - Design Philosophy & Materials`  
+- **status**: `Being Tested (Development)`  
+- **infoCode**: `DD`  
+- **description**: Documento en desarrollo que detalla la filosofía de diseño del airframe AMPEL360XWLRGA y la selección de materiales avanzados.
+
+  - **documentParts**:
+    1. **partId**: `DESIGN_PHILOSOPHY`  
+       **title**: `Airframe Design Philosophy`  
+       **infoCode**: `DS`  
+       **contentPlaceholder (filled)**:  
+       *"La filosofía de diseño busca un balance óptimo entre resistencia estructural, eficiencia aerodinámica y reducción de peso, integrando parámetros de manufacturabilidad."*
+
+    2. **partId**: `MATERIALS_OVERVIEW`  
+       **title**: `AMPEL Materials Overview`  
+       **infoCode**: `DS`  
+       **contentPlaceholder (filled)**:  
+       *"La iniciativa AMPEL propone el uso de materiales compuestos de alto desempeño y aleaciones ligeras, priorizando resistencia a la fatiga y sostenibilidad."*
+
+    3. **partId**: `MATERIAL_SPECS`  
+       **title**: `Material Specifications (Preliminary)`  
+       **infoCode**: `SP`  
+       **contentPlaceholder (filled)**:  
+       *"Las especificaciones preliminares incluyen listados de resinas epoxi y fibras avanzadas, sujetas a validación y ensayos destructivos y no destructivos."*
+
+    4. **partId**: `MATERIAL_TEST_PLAN`  
+       **title**: `Material Testing & Validation Plan`  
+       **infoCode**: `TEST`  
+       **contentPlaceholder (filled)**:  
+       *"Este plan contempla pruebas de tracción, compresión y fatiga cíclica, siguiendo normativa ASTM e ISO aplicable, con validación en laboratorio externo."*
+
+    5. **partId**: `REVISIONS`  
+       **title**: `Revision History`  
+       **infoCode**: `ADMIN`  
+       **contentPlaceholder (filled)**:  
+       *"Versión 0.1: Borrador inicial con resultados parciales de ensayos. Versión 0.2: Actualizado con datos de pruebas de impacto."*
+
+---
+
+#### **Documento 4**
+
+- **documentId**: `GP-AM-AMPEL-0100-00-B-THEO-001-A`  
+- **documentTitle**: `GP-AM-00 - Speculative (Studying) - Intro & General - Long-Term Cosmic Vision Integration`  
+- **status**: `Speculative (Studying)`  
+- **infoCode**: `RPT`  
+- **description**: Documento especulativo que explora la integración a largo plazo del diseño de airframe con la visión cósmica global de GAIA AIR.
+
+  - **documentParts**:
+    1. **partId**: `VISION_INTEGRATION`  
+       **title**: `Cosmic Vision Integration Concepts`  
+       **infoCode**: `DS`  
+       **contentPlaceholder (filled)**:  
+       *"Se plantean escenarios de vuelos suborbitales y la adaptación del airframe para misiones de exploración extendida, alineados con la estrategia GAIA AIR."*
+
+    2. **partId**: `FUTURE_CAPABILITIES_REQ`  
+       **title**: `Future Capability Requirements Analysis`  
+       **infoCode**: `REQ`  
+       **contentPlaceholder (filled)**:  
+       *"Requerimientos prospectivos contemplan la incorporación de sistemas autónomos, protección ante radiación cósmica y capacidad de operación en entornos de baja presión."*
+
+    3. **partId**: `TECH_GAPS_ANALYSIS`  
+       **title**: `Technology Gap Analysis`  
+       **infoCode**: `CAL`  
+       **contentPlaceholder (filled)**:  
+       *"Identifica brechas en propulsión, control térmico y sistemas de soporte vital, que requieren investigación adicional y posibles colaboraciones científicas."*
+
+    4. **partId**: `REVISIONS`  
+       **title**: `Revision History`  
+       **infoCode**: `ADMIN`  
+       **contentPlaceholder (filled)**:  
+       *"Versión 0.1: Documento exploratorio inicial. Versión 0.2: Inclusión de comentarios de expertos en exploración espacial."*
+
+---
+
+#### **Documento 5**
+
+- **documentId**: `GP-AM-AMPEL-0100-00-C-001-A`  
+- **documentTitle**: `GP-AM-00 - Condensed (Formal Scientific Consensus) - Intro & General - Core Airframe Design Principles`  
+- **status**: `Condensed (Formal Scientific Consensus)`  
+- **infoCode**: `OV`  
+- **description**: Resumen condensado de los principios fundamentales consensuados para el diseño del airframe AMPEL360XWLRGA.
+
+  - **documentParts**:
+    1. **partId**: `CORE_PRINCIPLES_AERO`  
+       **title**: `Core Aerodynamic Principles`  
+       **infoCode**: `DS`  
+       **contentPlaceholder (filled)**:  
+       *"Se resumen los perfiles aerodinámicos básicos, el coeficiente de sustentación y la reducción de arrastre en configuraciones típicas del AMPEL360XWLRGA."*
+
+    2. **partId**: `CORE_PRINCIPLES_STRUCT`  
+       **title**: `Core Structural Principles`  
+       **infoCode**: `DS`  
+       **contentPlaceholder (filled)**:  
+       *"Se incluyen criterios de refuerzo en zonas de alta tensión y el uso de uniones híbridas entre materiales compuestos y metales ligeros."*
+
+    3. **partId**: `RELEVANT_STANDARDS`  
+       **title**: `Key Relevant Standards`  
+       **infoCode**: `REF`  
+       **contentPlaceholder (filled)**:  
+       *"FAR/CS-25, normativas ASTM de ensayos de materiales y estándares ISO de calidad forman parte del conjunto de normas aplicables."*
+
+    4. **partId**: `APPLICATION_SUMMARY`  
+       **title**: `Application Summary for AMPEL360XWLRGA`  
+       **infoCode**: `DS`  
+       **contentPlaceholder (filled)**:  
+       *"Estos principios se aplican a las variantes de fuselaje y alas, facilitando la modularidad y la adaptación a futuros modelos en la familia AMPEL."*
+
+    5. **partId**: `REVISIONS`  
+       **title**: `Revision History`  
+       **infoCode**: `ADMIN`  
+       **contentPlaceholder (filled)**:  
+       *"Versión 1.0: Aprobado por consenso científico. Versión 1.1: Ajustes según nueva directiva de ingeniería."*
+
+---
+
+#### **Documento 6**
+
+- **documentId**: `GP-AM-AMPEL-0100-00-D-001-A`  
+- **documentTitle**: `GP-AM-00 - Auto-Adaptive Configuration - Intro & General - AI-Driven Doc Adaptation`  
+- **status**: `Auto-Adaptive Configuration`  
+- **infoCode**: `SDD`  
+- **description**: Documento que detalla el sistema basado en IA para adaptar automáticamente la documentación conforme a cambios en la configuración o datos operativos.
+
+  - **documentParts**:
+    1. **partId**: `ADAPTIVE_SYSTEM_DESC`  
+       **title**: `AI Documentation Adaptation System Description`  
+       **infoCode**: `SDD`  
+       **contentPlaceholder (filled)**:  
+       *"Se describe la arquitectura de IA que monitorea alteraciones de configuración, ejecuta modelos de machine learning y reconfigura la documentación de forma automatizada."*
+
+    2. **partId**: `ADAPTATION_TRIGGERS`  
+       **title**: `Adaptation Triggers and Rules`  
+       **infoCode**: `DS`  
+       **contentPlaceholder (filled)**:  
+       *"Los disparadores incluyen actualizaciones normativas, cambios en la estructura del airframe o detecciones de anomalías en los datos operativos, aplicando reglas definidas."*
+
+    3. **partId**: `ADAPTATION_WORKFLOW`  
+       **title**: `Adaptation Process Workflow`  
+       **infoCode**: `PROC`  
+       **contentPlaceholder (filled)**:  
+       *"El flujo define pasos de validación, aprobación y registro de versiones antes de que el contenido actualizado entre en vigor."*
+
+    4. **partId**: `VALIDATION_PROC`  
+       **title**: `Validation Procedures for Adapted Docs`  
+       **infoCode**: `PROC`  
+       **contentPlaceholder (filled)**:  
+       *"Se establecen revisiones humanas y controles de consistencia automatizados para garantizar la exactitud y conformidad de la documentación regenerada."*
+
+    5. **partId**: `REVISIONS`  
+       **title**: `Revision History`  
+       **infoCode**: `ADMIN`  
+       **contentPlaceholder (filled)**:  
+       *"Versión 0.9: Fase de prueba interna. Versión 1.0: Publicación de la funcionalidad auto-adaptativa en entorno de producción."*
+
+---
+
+### 3.2 ATA Chapter 05: Time Limits / Maintenance Checks
+
+#### **Documento 1**
+
+- **documentId**: `GP-AM-AMPEL-0100-05-001-A`  
+- **documentTitle**: `GP-AM-05 General Document - Time Limits/Maint Checks`  
+- **status**: `Draft`  
+- **infoCode**: `OV`  
+- **description**: Introducción general a los límites de tiempo y procedimientos de mantenimiento para el airframe.
+
+  - **documentParts**:
+    1. **partId**: `INTRO`  
+       **title**: `Introduction`  
+       **infoCode**: `OV`  
+       **contentPlaceholder (filled)**:  
+       *"Se ofrece una visión global del enfoque de mantenimiento preventivo y correctivo, abarcando límites de operación y revisiones programadas."*
+
+    2. **partId**: `MAINT_PLAN_REF`  
+       **title**: `Maintenance Plan Reference`  
+       **infoCode**: `REF`  
+       **contentPlaceholder (filled)**:  
+       *"Se remite al Plan de Mantenimiento Global del aircraft, indicando frecuencias de inspección y tareas requeridas para garantizar la aeronavegabilidad."*
+
+    3. **partId**: `REVISIONS`  
+       **title**: `Revision History`  
+       **infoCode**: `ADMIN`  
+       **contentPlaceholder (filled)**:  
+       *"Versión 1.0: Borrador inicial con alcances generales. Versión 1.1: Ajuste de intervalos de inspección basado en retroalimentación de servicio."*
+
+---
+
+#### **Documento 2**
+
+- **documentId**: `GP-AM-AMPEL-0100-05-A-001-A`  
+- **documentTitle**: `GP-AM-05 - Approved (In Service) - Time Limits/Maint Checks - Approved Procedures`  
+- **status**: `Approved (In Service)`  
+- **infoCode**: `PROC`  
+- **description**: Procedimientos de mantenimiento e inspección aprobados, con límites de vida de componentes.
+
+  - **documentParts**:
+    1. **partId**: `SCHEDULED_MAINT_PROC`  
+       **title**: `Scheduled Maintenance Procedures`  
+       **infoCode**: `PROC`  
+       **contentPlaceholder (filled)**:  
+       *"Se definen procedimientos periódicos (checks A, B, C, D) para la preservación integral del airframe, especificando métodos y herramientas requeridas."*
+
+    2. **partId**: `INSPECTION_PROC`  
+       **title**: `Inspection Procedures`  
+       **infoCode**: `PROC`  
+       **contentPlaceholder (filled)**:  
+       *"Incluye métodos visuales, ultrasonidos y ensayos no destructivos para detectar fisuras u otros defectos en zonas críticas."*
+
+    3. **partId**: `LIFE_LIMITS_TABLE`  
+       **title**: `Component Life Limits Data`  
+       **infoCode**: `CAT`  
+       **contentPlaceholder (filled)**:  
+       *"Presenta la lista de partes con vida limitada (p. ej. largueros, secciones del tren de aterrizaje) y sus intervalos de recambio obligatorios."*
+
+    4. **partId**: `AIRWORTHINESS_LIMITS`  
+       **title**: `Airworthiness Limitations Section (ALS)`  
+       **infoCode**: `REQ`  
+       **contentPlaceholder (filled)**:  
+       *"Sección formal que agrupa las limitaciones impuestas por autoridades aeronáuticas, requeridas para mantener la certificación en vigor."*
+
+    5. **partId**: `REVISIONS`  
+       **title**: `Revision History`  
+       **infoCode**: `ADMIN`  
+       **contentPlaceholder (filled)**:  
+       *"Versión 1.0: Documento aprobado en servicio. Versión 1.2: Actualización de intervalos en base a datos operativos."*
+
+---
+
+### 3.3 ATA Chapter 06: Dimensions & Areas
+
+#### **Documento 1**
+
+- **documentId**: `GP-AM-AMPEL-0100-06-001-A`  
+- **documentTitle**: `GP-AM-06 General Document - Dimensions & Areas`  
+- **status**: `Draft`  
+- **infoCode**: `OV`  
+- **description**: Introducción general a las dimensiones, estaciones y áreas de referencia de la aeronave.
+
+  - **documentParts**:
+    1. **partId**: `INTRO`  
+       **title**: `Introduction`  
+       **infoCode**: `OV`  
+       **contentPlaceholder (filled)**:  
+       *"Capítulo 06 detalla la metodología para medir y describir las dimensiones clave del airframe, y la asignación de estaciones de fuselaje."*
+
+    2. **partId**: `DIMENSIONAL_SYSTEM_DEF`  
+       **title**: `Dimensional System Definitions`  
+       **infoCode**: `DS`  
+       **contentPlaceholder (filled)**:  
+       *"Incluye definiciones de FS (Fuselage Stations), WL (Water Lines) y BL (Butt Lines), así como la nomenclatura para zonas de referencia."*
+
+    3. **partId**: `REVISIONS`  
+       **title**: `Revision History`  
+       **infoCode**: `ADMIN`  
+       **contentPlaceholder (filled)**:  
+       *"Versión 1.0: Borrador inicial. Versión 1.1: Ajuste de la descripción de ejes en base a feedback de ingeniería."*
+
+---
+
+#### **Documento 2**
+
+- **documentId**: `GP-AM-AMPEL-0100-06-A-001-A`  
+- **documentTitle**: `GP-AM-06 - Approved (In Service) - Dimensions & Areas - Aircraft Geometry Specs`  
+- **status**: `Approved (In Service)`  
+- **infoCode**: `SP`  
+- **description**: Especificaciones aprobadas para la geometría, dimensiones y definiciones de estaciones de la aeronave.
+
+  - **documentParts**:
+    1. **partId**: `OVERALL_DIM_DWG`  
+       **title**: `Overall Aircraft Dimensions Drawing`  
+       **infoCode**: `DWG`  
+       **contentPlaceholder (filled)**:  
+       *"El dibujo oficial muestra longitud total (~XX m), envergadura (~YY m) y altura (~ZZ m), con márgenes de tolerancia según norma industrial."*
+
+    2. **partId**: `STATION_DIAGRAMS`  
+       **title**: `Station Diagrams`  
+       **infoCode**: `DWG`  
+       **contentPlaceholder (filled)**:  
+       *"Incluye gráficos detallados de FS, BL y WL para ubicaciones críticas en el fuselaje y alas, facilitando alineación y montaje."*
+
+    3. **partId**: `ZONE_DIAGRAMS`  
+       **title**: `Zone Diagrams`  
+       **infoCode**: `DWG`  
+       **contentPlaceholder (filled)**:  
+       *"Desglosa áreas de mantenimiento (Zonas 100, 200, 300, etc.) facilitando la localización rápida de secciones clave en tareas de servicio."*
+
+    4. **partId**: `REFERENCE_POINTS_SPEC`  
+       **title**: `Reference Point Specifications`  
+       **infoCode**: `SP`  
+       **contentPlaceholder (filled)**:  
+       *"Tabla con coordenadas precisas de puntos de referencia (nariz del fuselaje = FS 0.0, WL 0.0, BL 0.0), vitales para mediciones y calibraciones."*
+
+    5. **partId**: `REVISIONS`  
+       **title**: `Revision History`  
+       **infoCode**: `ADMIN`  
+       **contentPlaceholder (filled)**:  
+       *"Versión 1.0: Documento aprobado en servicio. Versión 1.1: Actualización de algunos valores dimensionales tras recalibración en fábrica."*
+
+---
+
+## 4. Capítulos Adicionales
+
+La misma estructura de documentos y secciones (infoCode, status, contentPlaceholder, etc.) se aplicará en los capítulos ATA restantes que integren **Part I: GP‑AM**. Cada documento incluirá sus partes, descripciones y placeholders específicos, asegurando coherencia con el **sistema digital unificado de ingeniería regenerativa**.
+
+---
+
+## Conclusión
+
+Esta versión **con placeholders llenos** refleja una documentación estructurada para **COAFI Part I (Airframes – GP‑AM)**, abarcando introducciones generales, definiciones de alcance, filosofía de diseño, especificaciones de materiales, planes de mantenimiento, integración de visión futura y detalles de geometría. Cada capítulo y documento se alinea con los **códigos de información** y los **estados** correspondientes (Draft, Approved, Being Tested, etc.), garantizando trazabilidad y coherencia.
+
+La metodología facilita la adopción de un enfoque **integral y colaborativo**, donde la documentación puede evolucionar en paralelo con los procesos de diseño, certificación y operación —incluyendo la implementación de inteligencia artificial para la **auto-adaptación de contenidos**. De este modo, se potencia la eficiencia y la robustez de la gestión documental dentro de la visión de **GAIA AIR** y su framework **COAFI**. 
+
 *   [**ATA Chapter 07: Lifting & Shoring** 🏗️](GP-AM-AMPEL-0100-07-001-A.md)
     *   [GP-AM-AMPEL-0100-07-001-A: GP-AM-07 General Document - Lifting & Shoring](GP-AM-AMPEL-0100-07-001-A.md)
     *   [GP-AM-AMPEL-0100-07-A-001-A: GP-AM-07 - Approved (In Service) - Lifting & Shoring - Approved Procedures](GP-AM-AMPEL-0100-07-A-001-A.md)
