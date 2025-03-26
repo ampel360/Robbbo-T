@@ -1,4 +1,4 @@
-# COAFI - Componment Overhaul Aerospaace Frame Intelligence. Aerospoace Table of Contents (AToC.md)
+# Containerization and Orchestration of Aerospace Futures Index
 
 # COAFI-FUNC-CORE-0001-A
 **Functional Framework Implementation (FFI)**  
