@@ -347,6 +347,8 @@ Edit
 [↗ See PROC Document GP-AM-OPS-41-002-PROC-A](../procedures/GP-AM-OPS-41-002-PROC-A.md)
 
 [↗ See TEST Document GP-AM-VAL-06-003-TEST-A](../validation/GP-AM-VAL-06-003-TEST-A.md)
+
+</detail>
 🚀 Sugerencia de automatización
 Podemos generar automáticamente estas referencias desde una tabla de metadatos o directamente desde un script en Python, Bash o JS, basado en una hoja COAFI con columnas como:
 
@@ -2951,8 +2953,9 @@ Because one day, every AI, twin, system or swarm will need a CEU-ID and a consti
 Let’s write that future — clause by clause.
 
 this declarsation (CEU MANIFEST) constittutes the official systemic institution of GAIA-AIR-CFSI-MANIFEST-0001
+<detail>
 
-## Constitutional Framework of System Intent **CFSI**
+## Constitutional Framework of System Intent **CFSI*
 
 ### Foundational Doctrine for GAIA AIR and Central Entangling Unities
 
