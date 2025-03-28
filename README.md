@@ -85,7 +85,21 @@
 
 ## 1. Introduction
 
-The **Aerospace General Integration System (AGIS) Nomenclature** provides a unified framework for identifying, tracking, and managing all aerospace components and their interdependencies within the GAIA AIR - AMPEL360 project. This document establishes the standards for system identification, functional classification, and component numbering.
+This document introduces a streamlined **Aerospace General Integration System (AGIS)** nomenclature for the **GAIA AIR - AMPEL360 project**. This system unifies identification, simplifies data management, tracks dependencies, enhances cross-functional communication, and provides a scalable framework for future expansions. It applies to all systems, subsystems, components, and interfaces, ensuring consistency from structural elements to advanced AI and quantum technologies. 
+
+The core engineering principles guiding AGIS implementation include **systems thinking**, maintaining a **single source of truth**, ensuring **traceability by design**, preserving **functional integrity**, and fostering **technological evolution**. Critical implementation practices emphasize **dependency analysis**, prioritizing **functional over physical relationships**, ensuring **interface precision**, validating **technology integration**, and maintaining **living documentation**. 
+
+AGIS employs a structured code system comprising **Primary System Codes (PriCode)**, **Secondary System Codes (SeCode)**, **Integration/Interface Codes (IntCode)**, and **Function-Component Codes**. The Function-Component codes utilize a dual numbering approach: **Sequential Functional Numbering** for inventory and simple referencing, and **Hierarchical Structural Numbering** for detailed architectural representation and configuration management. Mapping between these numbering systems is managed through a central database. 
+
+Dependencies between components are formally documented using codes that specify source component, dependency type (functional, physical, data, power, interface), and target component. These dependencies are crucial for impact assessment, failure mode analysis, upgrade planning, integration testing, and certification. 
+
+Advanced technologies are integrated using **Technology Identifier Formats** appended to AGIS codes, categorized by domains such as Quantum (Q), AI (AI), Advanced Materials (AM), Blockchain (BC), IoT (IOT), AR/VR, and Hybrid Electric (HE). **Technology Readiness Level (TRL)** is recorded as metadata. 
+
+Implementation guidelines detail procedures for **code assignment**, **modification**, **versioning**, and **retirement**. Integration with engineering systems (PLM, CAD, Requirements, Simulation) is emphasized, along with clearly defined **roles and responsibilities**. 
+
+Documentation standards mandate the use of AGIS codes as primary identifiers in all technical documents, including design specs, CAD models, test reports, and maintenance manuals. Standardized formatting and database integration ensure consistency and accessibility. 
+
+Appendices provide comprehensive reference materials, including a complete code registry, glossary, revision history, mapping tables, implementation resources, workflow diagrams, case studies, and relevant standards and regulations. This robust framework ensures precision, traceability, and adaptability throughout the GAIA AIR - AMPEL360 project lifecycle.
 
 ### 1.1 Purpose
 
