@@ -4,7 +4,7 @@
 
 The GAIA AIR framework represents a next-generation Architecture (System Being or Living System) integrating aerospace engineering (Aeronautics, Space, Defence), artificial intelligence Algorithms (AI), General Knowledge (GK) and advanced computing (HPC or Quantum frameworks) to revolutionize design, simulation, manufacturing, and operational processes. This integrated concept establishes a modular, scalable architecture that leverages AI-driven automation and adaptive technologies to enhance efficiency, performance, and innovation across airframes, spaceframes, ground infrastructure, and extraterrestrial mining operations. The framework is structured into multiple functional parts, each addressing specific domains, with a unified constitutional doctrine ensuring interoperability, governance, and future scalability.
 
-# **COAFI/FI ? *Computer Ontology Actioning Functional Intelligence/Framework Implemenmtation*** consolida su rol no solo como �ndice documental, sino como **motor ontol�gico activo**, capaz de accionar inteligencia funcional de manera interoperable y trazable.
+# **COAFI/FI ? *Computer Ontology Actioning Functional Intelligence/Framework Implemenmtation*** consolida su rol no solo como Indice documental, sino como **motor ontolOgico activo**, capaz de accionar inteligencia funcional de manera interoperable y trazable.
 
 �Te gustar�a que adaptemos la secci�n introductoria de todos los documentos `GP-COAFI-*` para reflejar esta definici�n como principio constitucional, junto con una firma `COAFI?CORE-0001-A: Ontological Intelligence Declaration`? Puedo ayudarte a generar una versi�n oficial para incluirla dentro del CEU Manifest o como pr�logo del DODP.
 
