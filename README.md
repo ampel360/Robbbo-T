@@ -1324,9 +1324,6 @@ flowchart LR
 
 ---
 
-Okay, here is the combined content from all the provided sections, formatted coherently into a single Markdown document. I've structured it logically, adjusted heading levels for consistency, and integrated the various manifests and frameworks.
-
-```markdown
 # GAIA AIR Integrated Framework: Doctrine, Architecture, Function, and Documentation
 
 ## Introduction: Integrated Concept
