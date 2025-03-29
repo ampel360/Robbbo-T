@@ -1,5 +1,991 @@
 
 # GAIA AIR - AMPEL360 Project
+
+# The Intelligence Development Framework: AERO-IT-LLM
+
+[Thought for 3 seconds](https://v0-next-js-generative-ai-app.vercel.app/)
+
+## Full Description and Implementation Guide
+
+---
+
+## Table of Contents
+
+1. [Executive Summary](#executive-summary)
+2. [Framework Overview](#framework-overview)
+3. [Architecture Design](#architecture-design)
+4. [Core Components](#core-components)
+5. [Implementation Roadmap](#implementation-roadmap)
+6. [UI/UX Guidelines](#uiux-guidelines)
+7. [Integration Strategy](#integration-strategy)
+8. [Security & Compliance](#security--compliance)
+9. [Performance Considerations](#performance-considerations)
+10. [Testing Strategy](#testing-strategy)
+11. [Deployment Guide](#deployment-guide)
+12. [Appendix: Code Examples](#appendix-code-examples)
+
+---
+
+## Executive Summary
+
+AERO-IT-LLM (Aerospace Engineering, Robotics Operations, Information Technology Large Language Model) represents a strategic consolidation of previously separate AI systems (ADsT-LLM and ADs(I+D)LLM) into a unified framework. This integration enhances usability while expanding capabilities across three critical domains: aerospace engineering, robotics operations, and IT infrastructure.
+
+The framework maintains distinct operational modes (Compliance, Innovation, and Integrated) while providing a cohesive user experience. This document serves as the comprehensive guide for implementing the AERO-IT-LLM framework within the GAIA AIR ecosystem.
+
+---
+
+## Framework Overview
+
+### Core Concept
+
+AERO-IT-LLM unifies technical documentation capabilities with speculative research functions under a single interface. Users can seamlessly transition between operational modes while maintaining context and preserving domain-specific workflows.
+
+### Key Advantages
+
+1. **Unified Experience**: Eliminates context switching between separate systems
+2. **Domain Expansion**: Explicitly incorporates robotics and IT alongside aerospace
+3. **Operational Flexibility**: Maintains distinct modes for different use cases
+4. **Enhanced Collaboration**: Facilitates cross-functional teamwork
+5. **Simplified Branding**: Single, memorable acronym improves adoption
+
+### Operational Modes
+
+| Mode         | Purpose                                         | Visual Indicator | Primary Use Cases                                                    |
+|--------------|-------------------------------------------------|------------------|----------------------------------------------------------------------|
+| **Compliance** | Technical documentation, regulatory validation, standard workflows | Blue            | Certification documents, maintenance manuals, safety protocols         |
+| **Innovation** | Speculative design, research exploration, future concepts           | Purple          | Next-gen propulsion concepts, biomimetic robotics, quantum computing applications |
+| **Integrated** | Combined workflows leveraging both technical rigor and innovation   | Green           | Research-to-production pipelines, concept validation, technology roadmapping |
+
+### Domain Focus Areas
+
+| Domain                | Scope                                          | Key Components                                                         |
+|-----------------------|------------------------------------------------|------------------------------------------------------------------------|
+| **Aerospace Engineering** | Aircraft design, propulsion, aerodynamics, materials | Technical specifications, compliance documentation, future concepts     |
+| **Robotics Operations** | Autonomous systems, control systems, sensor integration | Operation procedures, safety protocols, advanced autonomy research     |
+| **IT Infrastructure** | Computing systems, networks, security, data management | System documentation, security compliance, emerging technologies       |
+
+---
+
+## Architecture Design
+
+### High-Level Architecture
+
+```mermaid
+graph TD
+    A["AERO-IT-LLM Unified Framework"] --> B["Presentation Layer"]
+    A --> C["Business Logic Layer"]
+    A --> D["Data Layer"]
+    
+    B --> B1["Web Interface"]
+    B --> B2["Mobile Interface"]
+    B --> B3["API Endpoints"]
+    
+    C --> C1["Mode Controller"]
+    C --> C2["Domain Controller"]
+    C --> C3["Workflow Engine"]
+    C --> C4["LLM Integration"]
+    
+    D --> D1["Knowledge Base"]
+    D --> D2["User Data"]
+    D --> D3["Project Repository"]
+    
+    D1 --> D1a["Technical Documentation"]
+    D1 --> D1b["Research Papers"]
+    D1 --> D1c["Regulatory Standards"]
+    
+    C4 --> C4a["Compliance Processing"]
+    C4 --> C4b["Innovation Processing"]
+    C4 --> C4c["Cross-Domain Integration"]
+```
+
+### Component Interaction Flow
+
+1. User selects operational mode and domain focus
+2. UI components adapt based on selections
+3. Queries are routed to appropriate LLM processing pipeline
+4. Results are presented with appropriate visual indicators
+5. Context is preserved when switching between modes
+
+---
+
+## Core Components
+
+### 1. Mode Selector
+
+The Mode Selector allows users to switch between Compliance, Innovation, and Integrated operational modes. Each mode has distinct visual indicators and processing pipelines.
+
+**Key Features:**
+
+- Clear visual distinction between modes
+- Warning messages when switching to non-certified modes
+- Keyboard shortcuts for rapid switching
+- Context preservation between mode transitions
+
+### 2. Domain Filter
+
+The Domain Filter enables users to focus on specific domains (Aerospace, Robotics, IT) or work across all domains simultaneously.
+
+**Key Features:**
+
+- Dropdown selection for domain focus
+- Visual indicators for active domain
+- Dynamic filtering of available modules
+- Domain-specific knowledge base access
+
+### 3. Module Dashboard
+
+The Module Dashboard presents available tools and workflows based on the selected operational mode and domain focus.
+
+**Key Features:**
+
+- Card-based module presentation
+- Color-coding by operational mode
+- Domain indicators for each module
+- Consistent information architecture
+
+### 4. Chat Interface
+
+The unified Chat Interface provides natural language interaction with the AERO-IT-LLM system across all operational modes and domains.
+
+**Key Features:**
+
+- Mode-specific prompt templates
+- Visual indicators for response source
+- Multi-modal input support
+- Context-aware suggestions
+
+### 5. Knowledge Integration System
+
+The Knowledge Integration System connects the AERO-IT-LLM framework to various data sources, ensuring appropriate information access based on operational mode and domain.
+
+**Key Features:**
+
+- RAG (Retrieval-Augmented Generation) implementation
+- Domain-specific knowledge bases
+- Regulatory standard integration
+- Research paper repository
+
+---
+
+## Implementation Roadmap
+
+### Phase 1: Foundation (Weeks 1-4)
+
+1. **Core Architecture Setup**
+
+    1. Establish unified data model
+    2. Implement mode controller
+    3. Create domain controller
+    4. Set up basic UI framework
+
+2. **Knowledge Base Consolidation**
+
+    1. Merge existing ADsT-LLM and ADs(I+D)LLM knowledge bases
+    2. Implement domain tagging system
+    3. Establish knowledge retrieval patterns
+
+### Phase 2: UI Development (Weeks 5-8)
+
+1. **Component Implementation**
+
+    1. Develop Mode Selector component
+    2. Create Domain Filter component
+    3. Build Module Dashboard
+    4. Implement unified Chat Interface
+
+2. **Visual Design System**
+
+    1. Establish color coding for operational modes
+    2. Create domain indicators
+    3. Design warning messages and tooltips
+    4. Implement responsive layouts
+
+### Phase 3: Integration (Weeks 9-12)
+
+1. **LLM Integration**
+
+    1. Configure mode-specific processing pipelines
+    2. Implement domain-focused query routing
+    3. Set up context preservation mechanisms
+    4. Create response formatting templates
+
+2. **External System Connections**
+
+    1. Integrate with PLM systems
+    2. Connect to regulatory databases
+    3. Establish research paper repositories
+    4. Implement collaboration tools
+
+### Phase 4: Refinement (Weeks 13-16)
+
+1. **User Testing & Optimization**
+
+    1. Conduct usability testing
+    2. Optimize performance
+    3. Refine visual indicators
+    4. Enhance context preservation
+
+2. **Documentation & Training**
+
+    1. Create user guides
+    2. Develop training materials
+    3. Prepare deployment documentation
+    4. Establish support processes
+
+---
+
+## UI/UX Guidelines
+
+### Color System
+
+| Element            | Compliance Mode | Innovation Mode | Integrated Mode |
+|--------------------|-----------------|-----------------|-----------------|
+| **Primary Color**  | `#2A363B` (Dark Blue) | `#5E4B8B` (Purple) | `#3A7D44` (Green) |
+| **Background**     | `#EBF8FF` (Light Blue) | `#F3EBFF` (Light Purple) | `#EBFFF0` (Light Green) |
+| **Accent**         | `#0284C7` (Bright Blue) | `#7E22CE` (Bright Purple) | `#16A34A` (Bright Green) |
+| **Text**           | `#1E293B` (Dark Slate) | `#1E293B` (Dark Slate) | `#1E293B` (Dark Slate) |
+
+### Typography
+
+- **Primary Font**: Roboto - Clear and legible across all sizes
+- **Monospace Font**: Roboto Mono - For code and technical data
+- **Heading Font**: Roboto Condensed - Space-efficient for hierarchical display
+
+### Component Design Principles
+
+1. **Mode Clarity**: Always make the current operational mode immediately apparent
+2. **Domain Context**: Clearly indicate which domain(s) are in focus
+3. **Information Hierarchy**: Prioritize safety-critical information in the visual hierarchy
+4. **Consistency**: Maintain consistent patterns across all operational modes
+5. **Accessibility**: Ensure all components meet WCAG 2.1 AA standards
+
+### Visual Indicators
+
+1. **Mode Indicators**: Color-coded badges and borders
+2. **Domain Icons**: Consistent iconography for each domain
+3. **Confidence Levels**: Visual representation of information reliability
+4. **Warning Messages**: Clear alerts when entering non-certified modes
+5. **Source Attribution**: Visual distinction between regulatory and speculative content
+
+---
+
+## Integration Strategy
+
+### Existing System Migration
+
+#### From ADsT-LLM
+
+1. **Knowledge Base Transfer**
+
+    1. Migrate technical documentation
+    2. Transfer regulatory standards
+    3. Preserve compliance workflows
+    4. Tag content with appropriate domains
+
+2. **User Migration**
+
+    1. Map user roles to new permission structure
+    2. Transfer saved projects and documents
+    3. Update API integrations
+    4. Provide transition training
+
+#### From ADs(I+D)LLM
+
+1. **Research Content Migration**
+
+    1. Transfer research papers and references
+    2. Migrate speculative designs
+    3. Preserve innovation workflows
+    4. Tag content with appropriate domains
+
+2. **User Migration**
+
+    1. Map researcher profiles to new system
+    2. Transfer ongoing projects
+    3. Update collaboration settings
+    4. Provide transition training
+
+### External System Integration
+
+1. **PLM Systems**
+
+    1. Implement bidirectional sync with Siemens Teamcenter
+    2. Establish document versioning protocols
+    3. Create workflow triggers
+    4. Set up approval processes
+
+2. **Regulatory Databases**
+
+    1. Connect to FAA, EASA, and other regulatory databases
+    2. Implement standard compliance checking
+    3. Set up notification systems for regulatory updates
+    4. Create audit trails for compliance activities
+
+3. **Collaboration Tools**
+
+    1. Integrate with Microsoft Teams/Slack
+    2. Implement document sharing capabilities
+    3. Create notification systems
+    4. Set up collaborative editing features
+
+---
+
+## Security & Compliance
+
+### Data Classification
+
+| Classification | Description                  | Handling Requirements                                           |
+|----------------|------------------------------|-----------------------------------------------------------------|
+| **Public**     | Non-sensitive information    | Standard encryption, no special handling                        |
+| **Internal**   | Business information not for public disclosure | Encryption at rest and in transit, role-based access             |
+| **Confidential** | Sensitive business information | Strong encryption, strict access controls, audit logging         |
+| **Restricted** | Highly sensitive information | Maximum security measures, limited access, comprehensive auditing |
+
+### Access Control
+
+1. **Role-Based Access Control**
+
+    1. Administrator: Full system access
+    2. Engineer: Access to compliance mode and relevant domains
+    3. Researcher: Access to innovation mode and relevant domains
+    4. Manager: Access to integrated mode and reporting
+    5. Regulator: Limited access to compliance documentation
+
+2. **Domain-Based Permissions**
+
+    1. Aerospace: Access to aerospace engineering content
+    2. Robotics: Access to robotics operations content
+    3. IT: Access to IT infrastructure content
+
+3. **Mode-Based Restrictions**
+
+    1. Compliance: Restricted to certified users
+    2. Innovation: Available to research team members
+    3. Integrated: Limited to senior staff and project leads
+
+### Audit Trail
+
+1. **User Activity Logging**
+
+    1. Mode switches
+    2. Domain selections
+    3. Document access
+    4. Query submissions
+    5. Content generation
+
+2. **Compliance Documentation**
+
+    1. Automatic versioning
+    2. Change tracking
+    3. Approval workflows
+    4. Regulatory submission records
+
+---
+
+## Performance Considerations
+
+### Optimization Strategies
+
+1. **Query Processing**
+
+    1. Implement query caching
+    2. Optimize RAG retrieval
+    3. Use streaming responses
+    4. Implement parallel processing for complex queries
+
+2. **UI Responsiveness**
+
+    1. Lazy load components
+    2. Implement virtual scrolling for large datasets
+    3. Use efficient state management
+    4. Optimize rendering cycles
+
+3. **Knowledge Base Access**
+
+    1. Implement tiered caching
+    2. Use vector database for efficient similarity search
+    3. Pre-compute common queries
+    4. Implement background indexing
+
+### Scalability Planning
+
+1. **Horizontal Scaling**
+
+    1. Containerize components
+    2. Implement load balancing
+    3. Use auto-scaling based on demand
+    4. Distribute processing across regions
+
+2. **Vertical Scaling**
+
+    1. Optimize memory usage
+    2. Implement efficient database queries
+    3. Use appropriate hardware for LLM processing
+    4. Monitor and adjust resource allocation
+
+---
+
+## Testing Strategy
+
+### Test Categories
+
+1. **Unit Testing**
+
+    1. Component functionality
+    2. Mode switching logic
+    3. Domain filtering
+    4. UI rendering
+
+2. **Integration Testing**
+
+    1. Mode-domain interactions
+    2. Knowledge base integration
+    3. External system connections
+    4. Workflow transitions
+
+3. **Performance Testing**
+
+    1. Response time under load
+    2. Concurrent user handling
+    3. Large document processing
+    4. Complex query performance
+
+4. **User Acceptance Testing**
+
+    1. Role-specific workflows
+    2. Domain expert validation
+    3. Compliance officer review
+    4. Researcher feedback
+
+### Specialized Testing
+
+1. **Compliance Validation**
+
+    1. Regulatory standard adherence
+    2. Documentation accuracy
+    3. Audit trail completeness
+    4. Access control effectiveness
+
+2. **Innovation Assessment**
+
+    1. Research quality evaluation
+    2. Speculative design usefulness
+    3. Cross-domain integration
+    4. Knowledge discovery effectiveness
+
+---
+
+## Deployment Guide
+
+### Environment Setup
+
+1. **Development Environment**
+
+    1. Local development setup
+    2. Testing frameworks
+    3. Mock data generation
+    4. CI/CD pipeline integration
+
+2. **Staging Environment**
+
+    1. Production-like configuration
+    2. Integration with test instances of external systems
+    3. Performance monitoring
+    4. User acceptance testing
+
+3. **Production Environment**
+
+    1. High-availability configuration
+    2. Disaster recovery setup
+    3. Monitoring and alerting
+    4. Backup and restoration procedures
+
+### Deployment Process
+
+1. **Pre-Deployment Checklist**
+
+    1. Security review completion
+    2. Performance benchmark validation
+    3. Documentation readiness
+    4. Training material preparation
+
+2. **Deployment Steps**
+
+    1. Database migration
+    2. Application deployment
+    3. External system integration
+    4. User access configuration
+
+3. **Post-Deployment Verification**
+
+    1. Functionality testing
+    2. Performance validation
+    3. Security assessment
+    4. User access verification
+
+---
+
+## Appendix: Code Examples
+
+### Mode Selector Component
+
+```typescriptreact
+"use client";
+
+import { useState } from "react";
+import { Rocket, Lightbulb } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { cn } from "@/lib/utils";
+
+export type OperationalMode = "compliance" | "innovation" | "integrated";
+
+interface ModeSelectorProps {
+  initialMode?: OperationalMode;
+  onModeChange?: (mode: OperationalMode) => void;
+  className?: string;
+}
+
+export function ModeSelector({
+  initialMode = "compliance",
+  onModeChange,
+  className,
+}: ModeSelectorProps) {
+  const [activeMode, setActiveMode] = useState<OperationalMode>(initialMode);
+  const [showWarning, setShowWarning] = useState(false);
+
+  const handleModeChange = (mode: OperationalMode) => {
+    // Show warning when switching to innovation or integrated mode
+    if (mode !== "compliance" && activeMode === "compliance") {
+      setShowWarning(true);
+    } else {
+      setShowWarning(false);
+    }
+    
+    setActiveMode(mode);
+    onModeChange?.(mode);
+  };
+
+  const getModeColor = (mode: OperationalMode) => {
+    switch (mode) {
+      case "compliance":
+        return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200";
+      case "innovation":
+        return "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200";
+      case "integrated":
+        return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200";
+    }
+  };
+
+  return (
+    <TooltipProvider delayDuration={300}>
+      <div className={cn("space-y-2", className)}>
+        <div className="flex items-center gap-2 p-1 bg-muted rounded-lg">
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button
+                onClick={() => handleModeChange("compliance")}
+                className={cn(
+                  "flex items-center gap-2 px-3 py-2 rounded-md transition-all",
+                  activeMode === "compliance" 
+                    ? getModeColor("compliance")
+                    : "hover:bg-muted-foreground/10"
+                )}
+                aria-pressed={activeMode === "compliance"}
+              >
+                <Rocket className="h-4 w-4" />
+                <span className="font-medium">Compliance</span>
+              </button>
+            </TooltipTrigger>
+            <TooltipContent side="bottom">
+              <p className="max-w-xs">Technical mode for certified documentation, compliance validation, and standard aerospace workflows</p>
+            </TooltipContent>
+          </Tooltip>
+
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button
+                onClick={() => handleModeChange("innovation")}
+                className={cn(
+                  "flex items-center gap-2 px-3 py-2 rounded-md transition-all",
+                  activeMode === "innovation" 
+                    ? getModeColor("innovation")
+                    : "hover:bg-muted-foreground/10"
+                )}
+                aria-pressed={activeMode === "innovation"}
+              >
+                <Lightbulb className="h-4 w-4" />
+                <span className="font-medium">Innovation</span>
+              </button>
+            </TooltipTrigger>
+            <TooltipContent side="bottom">
+              <p className="max-w-xs">Research mode for speculative design, future concepts, and innovation exploration</p>
+            </TooltipContent>
+          </Tooltip>
+
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button
+                onClick={() => handleModeChange("integrated")}
+                className={cn(
+                  "flex items-center gap-2 px-3 py-2 rounded-md transition-all",
+                  activeMode === "integrated" 
+                    ? getModeColor("integrated")
+                    : "hover:bg-muted-foreground/10"
+                )}
+                aria-pressed={activeMode === "integrated"}
+              >
+                <span className="relative">
+                  <Rocket className="h-4 w-4" />
+                  <Lightbulb className="h-4 w-4 absolute -right-1 -bottom-1 scale-75" />
+                </span>
+                <span className="font-medium">Integrated</span>
+              </button>
+            </TooltipTrigger>
+            <TooltipContent side="bottom">
+              <p className="max-w-xs">Integrated mode combining technical rigor with innovative exploration</p>
+            </TooltipContent>
+          </Tooltip>
+        </div>
+
+        {showWarning && (
+          <div className="flex items-center gap-2 p-3 text-sm bg-amber-50 border border-amber-200 text-amber-800 rounded-md dark:bg-amber-900/30 dark:border-amber-800 dark:text-amber-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+              <path d="M12 9v4"></path>
+              <path d="M12 17h.01"></path>
+            </svg>
+            <div>
+              <p className="font-medium">Entering non-certified mode</p>
+              <p className="text-xs mt-0.5">
+                Content generated in this mode may include speculative concepts that have not been validated against aerospace standards.
+              </p>
+            </div>
+          </div>
+        )}
+      </div>
+    </TooltipProvider>
+  );
+}
+```
+
+### Domain Filter Component
+
+```typescriptreact
+"use client";
+
+import { useState } from "react";
+import { Rocket, Layers, Settings, ChevronDown } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+export type DomainFocus = "aerospace" | "robotics" | "it" | "all";
+
+interface DomainFilterProps {
+  initialDomain?: DomainFocus;
+  onDomainChange?: (domain: DomainFocus) => void;
+}
+
+export function DomainFilter({
+  initialDomain = "all",
+  onDomainChange,
+}: DomainFilterProps) {
+  const [activeDomain, setActiveDomain] = useState<DomainFocus>(initialDomain);
+
+  const handleDomainChange = (domain: DomainFocus) => {
+    setActiveDomain(domain);
+    onDomainChange?.(domain);
+  };
+
+  const getDomainIcon = (domain: DomainFocus) => {
+    switch (domain) {
+      case "aerospace":
+        return <Rocket className="h-4 w-4" />;
+      case "robotics":
+        return <Layers className="h-4 w-4" />;
+      case "it":
+        return <Settings className="h-4 w-4" />;
+      case "all":
+        return (
+          <div className="relative">
+            <Rocket className="h-4 w-4" />
+            <Layers className="h-3 w-3 absolute -right-1 -bottom-1" />
+            <Settings className="h-2 w-2 absolute -right-2 -top-1" />
+          </div>
+        );
+    }
+  };
+
+  const getDomainLabel = (domain: DomainFocus) => {
+    switch (domain) {
+      case "aerospace":
+        return "Aerospace Engineering";
+      case "robotics":
+        return "Robotics Operations";
+      case "it":
+        return "IT Infrastructure";
+      case "all":
+        return "All Domains";
+    }
+  };
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" size="sm" className="h-8 gap-1">
+          {getDomainIcon(activeDomain)}
+          <span className="hidden sm:inline">{getDomainLabel(activeDomain)}</span>
+          <ChevronDown className="h-3 w-3 opacity-50" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="start">
+        <DropdownMenuLabel>Domain Focus</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem onClick={() => handleDomainChange("all")}>
+          <div className="relative mr-2">
+            <Rocket className="h-4 w-4" />
+            <Layers className="h-3 w-3 absolute -right-1 -bottom-1" />
+            <Settings className="h-2 w-2 absolute -right-2 -top-1" />
+          </div>
+          All Domains
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => handleDomainChange("aerospace")}>
+          <Rocket className="h-4 w-4 mr-2" />
+          Aerospace Engineering
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => handleDomainChange("robotics")}>
+          <Layers className="h-4 w-4 mr-2" />
+          Robotics Operations
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => handleDomainChange("it")}>
+          <Settings className="h-4 w-4 mr-2" />
+          IT Infrastructure
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+```
+
+### Module Card Component
+
+```typescriptreact
+"use client";
+
+import { ReactNode } from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+export type ModuleType = "compliance" | "innovation" | "integrated";
+export type ModuleDomain = "aerospace" | "robotics" | "it" | "all";
+
+interface ModuleCardProps {
+  title: string;
+  description: string;
+  type: ModuleType;
+  domain: ModuleDomain;
+  icon: ReactNode;
+  features: Array<{
+    icon: ReactNode;
+    label: string;
+  }>;
+  onOpen?: () => void;
+  className?: string;
+}
+
+export function ModuleCard({
+  title,
+  description,
+  type,
+  domain,
+  icon,
+  features,
+  onOpen,
+  className,
+}: ModuleCardProps) {
+  const getTypeBadgeStyle = (type: ModuleType) => {
+    switch (type) {
+      case "compliance":
+        return "bg-blue-50 text-blue-700 dark:bg-blue-900 dark:text-blue-200";
+      case "innovation":
+        return "bg-purple-50 text-purple-700 dark:bg-purple-900 dark:text-purple-200";
+      case "integrated":
+        return "bg-green-50 text-green-700 dark:bg-green-900 dark:text-green-200";
+    }
+  };
+
+  const getDomainLabel = (domain: ModuleDomain) => {
+    switch (domain) {
+      case "aerospace":
+        return "Aerospace Engineering";
+      case "robotics":
+        return "Robotics Operations";
+      case "it":
+        return "IT Infrastructure";
+      case "all":
+        return "All Domains";
+    }
+  };
+
+  return (
+    <Card className={cn("", className)}>
+      <CardHeader className="pb-2">
+        <div className="flex justify-between items-start">
+          <CardTitle className="text-lg font-medium">{title}</CardTitle>
+          <Badge variant="outline" className={getTypeBadgeStyle(type)}>
+            {type.charAt(0).toUpperCase() + type.slice(1)}
+          </Badge>
+        </div>
+        <CardDescription>{description}</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+          {icon}
+          <span>{getDomainLabel(domain)}</span>
+        </div>
+        <ul className="space-y-1 text-sm">
+          {features.map((feature, index) => (
+            <li key={index} className="flex items-center gap-2">
+              {feature.icon}
+              <span>{feature.label}</span>
+            </li>
+          ))}
+        </ul>
+      </CardContent>
+      <CardFooter>
+        <Button className="w-full" onClick={onOpen}>Open Module</Button>
+      </CardFooter>
+    </Card>
+  );
+}
+```
+
+### Database Schema
+
+```sql
+-- Core Tables
+
+CREATE TABLE domains (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  code VARCHAR(20) NOT NULL UNIQUE,
+  description TEXT,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE operational_modes (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  code VARCHAR(20) NOT NULL UNIQUE,
+  description TEXT,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE modules (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  description TEXT,
+  operational_mode_id INTEGER REFERENCES operational_modes(id),
+  domain_id INTEGER REFERENCES domains(id),
+  icon VARCHAR(50),
+  route VARCHAR(100),
+  is_active BOOLEAN DEFAULT TRUE,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- User Management
+
+CREATE TABLE roles (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  description TEXT,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  name VARCHAR(100),
+  role_id INTEGER REFERENCES roles(id),
+  is_active BOOLEAN DEFAULT TRUE,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE user_domain_access (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id),
+  domain_id INTEGER REFERENCES domains(id),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE(user_id, domain_id)
+);
+
+CREATE TABLE user_mode_access (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id),
+  operational_mode_id INTEGER REFERENCES operational_modes(id),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE(user_id, operational_mode_id)
+);
+
+-- Knowledge Base
+
+CREATE TABLE knowledge_items (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  content TEXT,
+  domain_id INTEGER REFERENCES domains(id),
+  operational_mode_id INTEGER REFERENCES operational_modes(id),
+  classification VARCHAR(50) DEFAULT 'internal',
+  vector_embedding VECTOR(1536),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE knowledge_tags (
+  id SERIAL PRIMARY KEY,
+  knowledge_item_id INTEGER REFERENCES knowledge_items(id),
+  tag VARCHAR(100) NOT NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE(knowledge_item_id, tag)
+);
+
+-- Audit Trail
+
+CREATE TABLE user_activities (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id),
+  activity_type VARCHAR(50) NOT NULL,
+  description TEXT,
+  operational_mode_id INTEGER REFERENCES operational_modes(id),
+  domain_id INTEGER REFERENCES domains(id),
+  ip_address VARCHAR(45),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+---
+
+*This document serves as the comprehensive implementation guide for the AERO-IT-LLM unified framework. It provides the technical specifications, architectural design, and implementation strategy required to successfully transition from the dual-model approach to the consolidated framework.*
+
+*For additional information or support, please contact the GAIA AIR technical team.*
+
+*© 2025 GAIA AIR - All Rights Reserved*
+
 # Aerospace General Integration System (AGIS) Nomenclature
 
 ---
