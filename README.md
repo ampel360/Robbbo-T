@@ -1,4 +1,95 @@
-# Robbbo-T
+
+# Robbbo-T Repository - Combined Table of Contents
+
+---
+
+## ### README.md
+
+1.  [Robbbo-T](#robbbo-t)
+2.  [The Proposal - Open Call](#the-proposal---open-call)
+3.  [GAIA AIR - AMPEL360 Project](#gaia-air---ampel360-project)
+    *   [The Intelligence Development Framework: AERO-IT-LLM](#the-intelligence-development-framework-aero-it-llm)
+        *   [Core Concept](#core-concept)
+        *   [Key Advantages](#key-advantages)
+        *   [Operational Modes](#operational-modes)
+        *   [Domain Focus Areas](#domain-focus-areas)
+        *   [Architecture Design](#architecture-design)
+            *   [High-Level Architecture](#high-level-architecture)
+            *   [Component Interaction Flow](#component-interaction-flow)
+        *   [Core Components](#core-components)
+        *   [AERO-IT-LLM Model Card Metadata (v1.1)](#aero-it-llm-model-card-metadata-v11)
+4.  [Model Card: AERO-IT-LLM](#model-card-aero-it-llm)
+    *   [Model Details](#model-details)
+    *   [Intended Use](#intended-use)
+    *   [Training Data](#training-data)
+    *   [Evaluation Data](#evaluation-data)
+    *   [Performance Metrics (Targets)](#performance-metrics-targets)
+    *   [Monitoring & Maintenance](#monitoring--maintenance)
+    *   [Ethical Considerations & Safety](#ethical-considerations--safety)
+    *   [Limitations](#limitations)
+    *   [Feedback, Training & Contact](#feedback-training--contact)
+    *   [Environmental Impact](#environmental-impact)
+
+---
+
+## ### model/README.md
+
+1.  [Aerospace Mater Printable Electronic Lot](#aerospace-mater-printable-electronic-lot)
+    *   [Overview](#overview)
+    *   [Key Concepts](#key-concepts)
+    *   [Applications](#applications)
+    *   [Benefits](#benefits)
+    *   [Challenges](#challenges)
+    *   [Future Directions](#future-directions)
+    *   [Conclusion](#conclusion)
+2.  [Efficiency Model – General Mathematical Formulation](#efficiency-model--general-mathematical-formulation)
+    *   [Basic Efficiency Formula](#basic-efficiency-formula)
+    *   [Efficiency in Linear Programming / DEA (Data Envelopment Analysis)](#efficiency-in-linear-programming--dea-data-envelopment-analysis)
+    *   [Energy Efficiency Model](#energy-efficiency-model)
+    *   [Economic Efficiency](#economic-efficiency)
+3.  [Infrastructural Requirements for Efficiency Models](#infrastructural-requirements-for-efficiency-models)
+    *   [Data Infrastructure](#data-infrastructure)
+    *   [Computational Infrastructure](#computational-infrastructure)
+    *   [Mathematical Modeling Infrastructure](#mathematical-modeling-infrastructure)
+    *   [Organizational & Sectoral Requirements](#organizational--sectoral-requirements)
+    *   [Security and Ethics Infrastructure](#security-and-ethics-infrastructure)
+4.  [Introduction to COAFI](#introduction-to-coafi)
+    *   [Diagrama de Bloques COAFI](#diagrama-de-bloques-coafi)
+    *   [Diagram Description](#diagram-description)
+    *   [Benefits of COAFI](#benefits-of-coafi)
+    *   [Practical Example](#practical-example)
+5.  [GAIA AIR Project Overview](#gaia-air-project-overview)
+6.  [COAFI Documentation Structure](#coafi-documentation-structure)
+    *   [Document Codes](#document-codes)
+    *   [Parts Index](#parts-index)
+    *   [COAFI Views](#coafi-views)
+    *   [Getting Started](#getting-started)
+7.  [GP-AM-ATA: Guidance for Applying ATA Principles in COAFI Part I (Airframes)](#gp-am-ata-guidance-for-applying-ata-principles-in-coafi-part-i-airframes)
+    *   [Purpose and Scope](#purpose-and-scope)
+    *   [ATA Standard and COAFI Integration](#ata-standard-and-coafi-integration)
+    *   [Key ATA Principles to Apply in GP-AM](#key-ata-principles-to-apply-in-gp-am)
+    *   [GP-AM Specific Adaptations and Considerations](#gp-am-specific-adaptations-and-considerations)
+    *   [Examples of Document Codes in GP-AM](#examples-of-document-codes-in-gp-am)
+    *   [Content Guidelines within GP-AM Chapters](#content-guidelines-within-gp-am-chapters)
+    *   [Formatting and Style Guide](#formatting-and-style-guide)
+    *   [Review and Validation Process](#review-and-validation-process)
+    *   [Resources and References](#resources-and-references)
+8.  [Architecture Layers Overview](#architecture-layers-overview)
+    *   [User Interface Layer](#user-interface-layer)
+    *   [Application Layer](#application-layer)
+    *   [AI Services Layer](#ai-services-layer)
+    *   [Data Integration Layer](#data-integration-layer)
+    *   [Data Sources Layer](#data-sources-layer)
+    *   [Security & Governance Layer](#security--governance-layer)
+    *   [Visual Architecture Diagram](#visual-architecture-diagram)
+    *   [Future Enhancements](#future-enhancements)
+9.  [Design and Simulation Module](#design-and-simulation-module)
+    *   [Generative Design](#generative-design)
+    *   [AI-Powered Simulation](#ai-powered-simulation)
+10. [Manufacturing and Production Module](#manufacturing-and-production-module)
+    *   [Automated Manufacturing Planning](#automated-manufacturing-planning)
+
+---
 
 The Proposal - Open Call
 
