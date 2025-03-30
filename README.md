@@ -3,7 +3,7 @@
 
 ---
 
-## ### README.md
+## README.md
 
 1.  [Robbbo-T](#robbbo-t)
 2.  [The Proposal - Open Call](#the-proposal---open-call)
