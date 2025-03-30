@@ -5873,11 +5873,939 @@ Part VI Content Management System
 
 ---
 
-## Part VII: Appendices and Reference Material (GP-APP) 📚
+## **Part VII: Appendices and Reference Material (GP-APP) 📚**
 
-*   [**APP Chapter 00: Intro & General - Appendices & Reference**](GP-APP-REFERENCE-00-001-A.md) *(Adapted from ATA 00)*
-    *   [GP-APP-REFERENCE-00-001-A: GP-APP-00 General Document - Intro & General - Appendices & Reference Material](GP-APP-REFERENCE-00-001-A.md)
-    *   [GP-APP-REFERENCE-00-A-001-A: GP-APP-00 - Approved (In Service) - Intro & General - Reference Material Guidelines](GP-APP-REFERENCE-00-A-001-A.md)
+---
+
+## **Table of Contents - Part VII**
+
+*   [**APP.00: Introduction to Appendices & Reference Material**](#app00-introduction-to-appendices--reference-material)
+    *   [`GP-APP-INTRO-00-001-A`: General Document - Purpose and Scope of Part VII.](#gp-app-intro-00-001-a-general-document---purpose-and-scope-of-part-vii)
+*   [**APP.01: Terminology**](#app01-terminology)
+    *   [`GP-APP-TERMINOLOGY-01-001-A`: General Document - Terminology Overview.](#gp-app-terminology-01-001-a-general-document---terminology-overview)
+    *   [APP.01.01: Glossary of Terms](#app0101-glossary-of-terms)
+        *   [`GP-APP-GLOSSARY-01-A-001-A`: Approved Glossary & Definitions.](#gp-app-glossary-01-a-001-a-approved-glossary--definitions)
+    *   [APP.01.02: Acronyms and Abbreviations](#app0102-acronyms-and-abbreviations)
+        *   [`GP-APP-ACRONYMS-02-A-001-A`: Approved Acronym List & Definitions.](#gp-app-acronyms-02-a-001-a-approved-acronym-list--definitions)
+*   [**APP.02: Standards & Regulations**](#app02-standards--regulations)
+    *   [`GP-APP-STANDREG-02-001-A`: General Document - Standards & Regulations Overview.](#gp-app-standreg-02-001-a-general-document---standards--regulations-overview)
+    *   [APP.02.01: Applicable Industry Standards](#app0201-applicable-industry-standards)
+        *   [`GP-APP-INDSTD-02-A-001-A`: Approved List of Industry Standards (ISO, SAE, MIL-STD, etc.).](#gp-app-indstd-02-a-001-a-approved-list-of-industry-standards-iso-sae-mil-std-etc)
+    *   [APP.02.02: Applicable Regulatory Requirements](#app0202-applicable-regulatory-requirements)
+        *   [`GP-APP-REGREQ-02-A-001-A`: Approved List of Regulatory Requirements (FAA, EASA, etc.).](#gp-app-regreq-02-a-001-a-approved-list-of-regulatory-requirements-faa-easa-etc)
+    *   [APP.02.03: Internal GAIA AIR Standards & Doctrines (References)](#app0203-internal-gaia-air-standards--doctrines-references)
+        *   [`GP-APP-INTSTD-02-A-001-A`: Links/References to CFSI, CEU, AGAD, AGIS, COAFI Core Docs.](#gp-app-intstd-02-a-001-a-linksreferences-to-cfsi-ceu-agad-agis-coafi-core-docs)
+*   [**APP.03: Documentation Framework & Guidance**](#app03-documentation-framework--guidance)
+    *   [`GP-APP-DOCGUIDE-03-001-A`: General Document - Documentation Framework Overview.](#gp-app-docguide-03-001-a-general-document---documentation-framework-overview)
+    *   [APP.03.01: COAFI Structure Overview](#app0301-coafi-structure-overview)
+        *   [`GP-APP-COAFIOV-03-A-001-A`: Summary of COAFI Parts and Structure.](#gp-app-coafiov-03-a-001-a-summary-of-coafi-parts-and-structure)
+    *   [APP.03.02: Document Classification System](#app0302-document-classification-system)
+        *   [`GP-APP-DOCCLASS-03-A-001-A`: Definition of Classifications (A, B, B-THEO, C, D).](#gp-app-docclass-03-a-001-a-definition-of-classifications-a-b-b-theo-c-d)
+    *   [APP.03.03: Info Code Reference Table](#app0303-info-code-reference-table)
+        *   [`GP-APP-INFOCODE-03-A-001-A`: Approved Table of Information Codes (OV, SP, REQ, etc.).](#gp-app-infocode-03-a-001-a-approved-table-of-information-codes-ov-sp-req-etc)
+    *   [APP.03.04: Engineering Documentation Types List](#app0304-engineering-documentation-types-list)
+        *   [`GP-APP-ENGDOC-03-A-001-A`: Comprehensive List of Engineering Document Types.](#gp-app-engdoc-03-a-001-a-comprehensive-list-of-engineering-document-types)
+            *   [5.1 Introduction](#51-introduction)
+            *   [5.2 Note on PLM Integration](#52-note-on-plm-integration)
+            *   [5.3 Documentation Categories & Types](#53-documentation-categories--types)
+                *   [5.3.1 Requirements Documentation](#531-requirements-documentation)
+                *   [5.3.2 Design & Architecture Documentation](#532-design--architecture-documentation)
+                *   [5.3.3 Analysis & Simulation Documentation](#533-analysis--simulation-documentation)
+                *   [5.3.4 Testing & Validation Documentation](#534-testing--validation-documentation)
+                *   [5.3.5 Manufacturing & Production Documentation](#535-manufacturing--production-documentation)
+                *   [5.3.6 Operations, Support & Customer Services Documentation](#536-operations-support--customer-services-documentation)
+                *   [5.3.7 Disposal & Regeneration Documentation](#537-disposal--regeneration-documentation)
+                *   [5.3.8 Management, Control & Administrative Documentation](#538-management-control--administrative-documentation)
+                *   [5.3.9 Reference Documentation](#539-reference-documentation)
+    *   [APP.03.05: Documentation Style Guide & Templates](#app0305-documentation-style-guide--templates)
+        *   [`GP-APP-STYLEGUIDE-03-A-001-A`: Reference/Link to Official Style Guide and Templates.](#gp-app-styleguide-03-a-001-a-referencelink-to-official-style-guide-and-templates)
+*   [**APP.04: Project Resources & Mappings**](#app04-project-resources--mappings)
+    *   [`GP-APP-RESOURCES-04-001-A`: General Document - Project Resources Overview.](#gp-app-resources-04-001-a-general-document---project-resources-overview)
+    *   [APP.04.01: Key Project Tools & Systems Access](#app0401-key-project-tools--systems-access)
+        *   [`GP-APP-TOOLS-04-A-001-A`: Links to PLM, CMS, GACMS Portal, etc.](#gp-app-tools-04-a-001-a-links-to-plm-cms-gacms-portal-etc)
+    *   [APP.04.02: AGIS Implementation Resources](#app0402-agis-implementation-resources)
+        *   [`GP-APP-AGISRES-04-A-001-A`: Links to AGIS Database, Training, Governance Docs.](#gp-app-agisres-04-a-001-a-links-to-agis-database-training-governance-docs)
+    *   [APP.04.03: Mapping Tables](#app0403-mapping-tables)
+        *   [`GP-APP-MAPPING-04-A-001-A`: Links/Data for Legacy->AGIS, ATA->AGIS, Cert->AGIS Mappings.](#gp-app-mapping-04-a-001-a-linksdata-for-legacy-agis-ata-agis-cert-agis-mappings)
+    *   [APP.04.04: External Resource List](#app0404-external-resource-list)
+        *   [`GP-APP-EXTREF-04-A-001-A`: Approved List of External Websites, Databases, Tools.](#gp-app-extref-04-a-001-a-approved-list-of-external-websites-databases-tools)
+*   [**APP.05: Core Framework Summaries**](#app05-core-framework-summaries) *(Optional but Recommended)*
+    *   [`GP-APP-FRAMESUMM-05-001-A`: General Document - Core Framework Summaries Overview.](#gp-app-framesumm-05-001-a-general-document---core-framework-summaries-overview)
+    *   [APP.05.01: CFSI Summary](#app0501-cfsi-summary)
+        *   [`GP-APP-CFSISUMM-05-C-001-A`: Condensed Summary of CFSI Principles.](#gp-app-cfsisumm-05-c-001-a-condensed-summary-of-cfsi-principles)
+    *   [APP.05.02: CEU Manifest Summary](#app0502-ceu-manifest-summary)
+        *   [`GP-APP-CEUSUMM-05-C-001-A`: Condensed Summary of CEU Concepts.](#gp-app-ceusumm-05-c-001-a-condensed-summary-of-ceu-concepts)
+    *   [APP.05.03: AGAD Standard Summary](#app0503-agad-standard-summary)
+        *   [`GP-APP-AGADSUMM-05-C-001-A`: Condensed Summary of AGAD Axes and Principles.](#gp-app-agadsumm-05-c-001-a-condensed-summary-of-agad-axes-and-principles)
+    *   [APP.05.04: URIF System Summary](#app0504-urif-system-summary)
+        *   [`GP-APP-URIFSUMM-05-C-001-A`: Condensed Summary of URIF Components and Philosophy.](#gp-app-urifsumm-05-c-001-a-condensed-summary-of-urif-components-and-philosophy)
+    *   [APP.05.05: e.G.A.I.As Paradigm Summary](#app0505-egaias-paradigm-summary)
+        *   [`GP-APP-EGAIASUMM-05-C-001-A`: Condensed Summary of e.G.A.I.As Principles.](#gp-app-egaiasumm-05-c-001-a-condensed-summary-of-egaias-principles)
+*   [**APP.99: Part VII Revision History**](#app99-part-vii-revision-history)
+    *   [`GP-APP-ADMIN-99-001-A`: Revision History for Part VII Appendices.](#gp-app-admin-99-001-a-revision-history-for-part-vii-appendices)
+
+---
+---
+
+## APP.00: Introduction to Appendices & Reference Material
+
+### `GP-APP-INTRO-00-001-A`: General Document - Purpose and Scope of Part VII
+**Info Code:** OV
+**Status:** Approved
+
+This document provides an overview of COAFI Part VII: Appendices and Reference Material (GP-APP). Part VII serves as a central repository for supplementary information, reference data, glossaries, standards lists, framework guidance, and other materials that support the primary engineering and project management documentation found in Parts 0 through VI, VIII, and IX. Its goal is to provide readily accessible, standardized reference information to enhance consistency and understanding across the GAIA AIR program.
+
+**Scope:**
+*   Define the structure and purpose of the appendices within Part VII (APP.00 - APP.99).
+*   Provide guidance on navigating and utilizing the reference materials contained herein, including terminology, standards, framework details, and project resources.
+*   Establish the relationship between Part VII and other COAFI Parts, ensuring it acts as a supportive reference layer.
+*   Outline the governance and update procedures specific to the content within Part VII.
+
+**Key Sections:**
+*   Introduction to Part VII structure and chapter organization.
+*   Guidance on locating specific reference information (e.g., finding definitions, standards, document types).
+*   Explanation of how Part VII content supports other COAFI Parts.
+*   Process for proposing updates or additions to the appendices.
+
+---
+
+## APP.01: Terminology
+
+### `GP-APP-TERMINOLOGY-01-001-A`: General Document - Terminology Overview
+**Info Code:** OV
+**Status:** Approved
+
+This document introduces the terminology sections within Part VII: the Glossary of Terms (APP.01.01) and the Acronyms and Abbreviations list (APP.01.02). Standardized terminology is critical for unambiguous communication within the complex, multi-disciplinary GAIA AIR program. These sections serve as the authoritative source for definitions and expansions used throughout the COAFI documentation set. Terms and acronyms within are organized primarily by the lifecycle phase where they are most relevant or typically introduced.
+
+---
+
+### APP.01.01: Glossary of Terms
+
+#### `GP-APP-GLOSSARY-01-A-001-A`: Approved Glossary & Definitions
+**Info Code:** GLO, CAT
+**Status:** Approved
+
+This document contains the official, approved glossary of terms used throughout the GAIA AIR program and COAFI documentation, organized by lifecycle phase. *(Draft Content Below - Requires Review)*
+
+##### Concept & Research Phase
+
+| Term                                      | Definition                                                                                                | Primary Lifecycle Phase(s) | Related COAFI/Concept |
+| :---------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :------------------------- | :-------------------- |
+| **AGAD (As GAIA AIR Does)**               | Quantum-Financial Architecture for Autopoietic Aerospace Systems; a regenerative financing/ops standard.    | Concept, All               | AGAD Standard         |
+| **Autopoiesis**                           | The property of a system capable of reproducing and maintaining itself.                                     | Concept                    | AGAD                  |
+| **CEU (Central Entangling Unity)**        | Core unit encoding system intent, purpose, and boundaries within CFSI. Also Common European Universal.      | Concept, All               | CFSI, CEU Manifest    |
+| **CFSI (Constitutional Framework of System Intent)** | Foundational doctrine encoding human intent into engineered systems.                                | Concept, All               | CFSI Manifest         |
+| **e.G.A.I.As**                            | Paradigm for AI: Embodiment, Evolving Nature, Extended Capacity.                                          | Concept, Design            | e.G.A.I.As Paradigm   |
+| **Feasibility Study**                     | An assessment of the practicality of a proposed project or system.                                        | Concept                    | PMO                   |
+| **ODRF (Open Design & Replication Framework)** | Licensing framework promoting open design and replication, used by AGAD.                                | Concept                    | AGAD                  |
+| **Regenerative Finance (ReFi)**           | Financial models aiming for positive systemic environmental and social outcomes.                            | Concept                    | AGAD                  |
+| **Technology Readiness Level (TRL)**      | Method for estimating the maturity of technologies.                                                       | Concept, Design, V&V       | AGIS (Sec 8.4)        |
+| **Trade Study**                           | Comparative analysis of different design options or technologies.                                         | Concept, Design            | CAL, RPT              |
+| **URIF (Universal Robotics Ingenuity Foundation)** | Framework for cognitive robotic systems integrating quantum, holography, swarms.                      | Concept, Design            | URIF Overview         |
+
+##### Requirements Definition Phase
+
+| Term                                      | Definition                                                                                                | Primary Lifecycle Phase(s) | Related COAFI/Concept |
+| :---------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :------------------------- | :-------------------- |
+| **Interface Requirements Document (IRD)** | Document specifying requirements for interfaces between systems/components.                               | Requirements, Design       | REQ, ICD              |
+| **Non-Functional Requirement (NFR)**      | Requirement specifying criteria used to judge the operation of a system (e.g., performance, reliability). | Requirements, Design       | REQ, FFI              |
+| **Requirement**                           | A condition or capability needed by a user or system to solve a problem or achieve an objective.          | Requirements               | REQ                   |
+| **Requirements Traceability Matrix (RTM)**| Document linking requirements through to their validation and implementation.                             | Requirements, V&V, All     | REQ, TEST, RES        |
+| **System Requirements Specification (SRS)** | Document defining the high-level requirements for a system.                                               | Requirements, Design       | REQ, SP               |
+| **Use Case**                              | Description of how a user or system interacts with the target system to achieve a specific goal.          | Requirements, Design       | REQ, OV               |
+| **Verification & Validation (V&V)**       | Process of checking that a product/system meets specifications and fulfills its intended purpose.         | Requirements, V&V          | V&V                   |
+
+##### Design & Architecture Phase
+
+| Term                                      | Definition                                                                                                | Primary Lifecycle Phase(s) | Related COAFI/Concept |
+| :---------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :------------------------- | :-------------------- |
+| **AGIS (Aerospace General Integration System)** | GAIA AIR's nomenclature system for identifying systems, components, functions, and interfaces.        | Design, All                | AGIS Standard         |
+| **Architecture**                          | The fundamental organization of a system, embodied in its components, their relationships, and principles.  | Design                     | SDD, SWD              |
+| **Bill of Materials (BOM)**               | Hierarchical list of all parts, components, and raw materials needed to build a product.                  | Design, Mfg, Maint         | BOM, CAT              |
+| **Boundary Representation (B-Rep)**       | Method for representing shapes using their boundaries in CAD.                                             | Design                     | CAD                   |
+| **Computer-Aided Design (CAD)**           | Use of computers to aid in the creation, modification, analysis, or optimization of a design.             | Design, Mfg, Sim           | DWG                   |
+| **Computer-Aided Engineering (CAE)**      | Use of computer software to simulate performance to improve product designs or assist in resolution.      | Design, Analysis           | CAL                   |
+| **Computer-Aided Manufacturing (CAM)**    | Use of software to control machine tools and related ones in the manufacturing of workpieces.             | Design, Mfg                | MPP                   |
+| **COAFI (Comprehensive Organized Aerospace Full Index)** | GAIA AIR's overarching documentation structure.                                               | Design, All                | COAFI Structure       |
+| **Data Module Code (DMC)**                | Unique identifier for a data module in S1000D technical publications.                                     | Design, Maint              | S1000D, GP-AM         |
+| **Design Order (DO)**                     | Specific instructions, often including drawings, to implement an approved engineering change.             | Design, Mfg, Maint         | ADMIN, PROC, DWG      |
+| **Detailed Design Document (DDD)**        | Document providing low-level design details for specific components or modules.                           | Design                     | DD, SP                |
+| **Digital Twin**                          | A virtual representation that serves as the real-time digital counterpart of a physical object or process. | Design, Sim, Ops, Maint    | DigT1 (AGIS), GACMS   |
+| **Function ID (FID)**                     | Unique identifier for a function within the FFI framework.                                                | Design, All                | FFI                   |
+| **Functional Framework Implementation (FFI)** | COAFI component defining how functions are managed and traced.                                          | Design, All                | FFI                   |
+| **Geometric Dimensioning & Tolerancing (GD&T)** | System for defining and communicating engineering tolerances on drawings.                             | Design, Mfg, QC            | DWG                   |
+| **Hierarchical Numbering (AGIS)**         | AGIS coding format representing parent-child relationships (`[Func]-[L1.L2.L3]-[Variant]`).              | Design, All                | AGIS (Sec 6.3)        |
+| **Interface Control Document (ICD)**      | Document formally defining interfaces between systems or components.                                      | Design, Integration        | ICD, SP               |
+| **Integration/Interface Code (IntCode)**  | AGIS code identifying connections between components (`Int-[Code1]-to-[Code2]`).                          | Design, All                | AGIS (Sec 3.3)        |
+| **Model-Based Systems Engineering (MBSE)**| Formalized application of modeling to support system requirements, design, analysis, V&V activities.    | Design, All                | SysML, UML            |
+| **Primary System Code (PriCode)**         | AGIS code identifying major systems (`[Category Abbr][Num]`).                                             | Design, All                | AGIS (Sec 3.1)        |
+| **Product Lifecycle Management (PLM)**    | Process of managing the entire lifecycle of a product from inception through disposal.                    | Design, All                | PLM System            |
+| **Sequential Numbering (AGIS)**           | AGIS coding format providing a simple inventory number within a function (`[Func]-[NNN]`).                | Design, All                | AGIS (Sec 6.2)        |
+| **System Architecture Description (SAD)** | Document providing a high-level overview of the system's architecture.                                  | Design                     | SDD, OV               |
+| **System Design Description (SDD)**       | Document providing a detailed description of the system design.                                           | Design                     | SDD, DD               |
+| **Systems Modeling Language (SysML)**     | A general-purpose modeling language for systems engineering applications.                                 | Design                     | MBSE                  |
+| **Technology Identifier (TechCode)**      | AGIS suffix indicating integration of advanced technology (`-[TechCode]`).                                | Design, All                | AGIS (Sec 8)          |
+| **Unified Modeling Language (UML)**       | A general-purpose, developmental, modeling language intended to provide a standard way to visualize design. | Design                     | MBSE                  |
+| **Variant (AGIS)**                        | Optional AGIS suffix for versions or configurations (`-[Variant]`).                                       | Design, All                | AGIS (Sec 6.3)        |
+
+##### Analysis & Simulation Phase
+
+| Term                                      | Definition                                                                                                | Primary Lifecycle Phase(s) | Related COAFI/Concept |
+| :---------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :------------------------- | :-------------------- |
+| **Analysis Report**                       | Document reporting results of engineering analyses (structural, thermal, etc.).                           | Analysis, V&V              | CAL, RPT              |
+| **Computational Fluid Dynamics (CFD)**    | Branch of fluid mechanics using numerical analysis and data structures to analyze fluid flows.            | Analysis, Sim              | CAL                   |
+| **Failure Modes & Effects Analysis (FMEA)** | Systematic, proactive method for evaluating a process to identify where and how it might fail.          | Analysis, Design, Safety   | CAL, RPT              |
+| **Fault Tree Analysis (FTA)**             | Top-down, deductive failure analysis where system failure is traced back to root causes.                  | Analysis, Safety           | SAR                   |
+| **Finite Element Analysis (FEA)**         | Numerical method for predicting how a product reacts to real-world forces, vibration, heat, etc.          | Analysis, Sim              | CAL                   |
+| **GAIA AIR Computing and Material Simulation (GACMS)** | COAFI Part V, the computational and simulation backbone of GAIA AIR.                            | Analysis, Sim, All         | GACMS (Part V)        |
+| **High-Performance Computing (HPC)**      | Use of supercomputers and parallel processing techniques for solving complex computational problems.      | Analysis, Sim              | GACMS                 |
+| **Physics-Informed Neural Network (PINN)**| Neural networks trained to solve supervised learning tasks while respecting given laws of physics.        | Analysis, Sim              | GACMS AI              |
+| **Predictive Analytics Engine (PRED)**    | GACMS AI service for degradation, anomaly, and failure forecasting.                                       | Analysis, Sim, Ops         | GACMS AI              |
+| **Risk Priority Number (RPN)**            | A measure used in FMEA to assess risk associated with potential failure modes.                            | Analysis, Safety           | FMEA                  |
+| **Safety Assessment Report (SAR)**        | Document summarizing the overall safety analysis of a system.                                             | Analysis, Safety, Cert     | RPT, CAL              |
+| **Simulation Report**                     | Document reporting results of computational simulations.                                                  | Analysis, V&V              | CAL, RPT              |
+| **Surrogate Modeling**                    | Technique using a simpler model to approximate a complex, computationally expensive model.                | Analysis, Sim              | GACMS AI              |
+
+##### Manufacturing & Production Phase
+
+| Term                                      | Definition                                                                                                | Primary Lifecycle Phase(s) | Related COAFI/Concept |
+| :---------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :------------------------- | :-------------------- |
+| **Additive Manufacturing (AM)**           | Process of joining materials to make objects from 3D model data, usually layer upon layer.                | Mfg                        | AM (AGIS), Add1       |
+| **Assembly Instructions**                 | Step-by-step guidance for assembling components.                                                          | Mfg                        | PROC, MAN             |
+| **Enterprise Resource Planning (ERP)**    | Integrated management of main business processes, often mediated by software and technology.              | Mfg, Ops                   | ERP System            |
+| **Manufacturing Execution System (MES)**  | Computerized systems used in manufacturing to track and document the transformation of raw materials.     | Mfg                        | MES                   |
+| **Manufacturing Process Plan (MPP)**      | Document detailing the sequence of operations to manufacture a part.                                      | Mfg                        | PROC, PLAN            |
+| **Non-Destructive Testing (NDT)**         | Testing and analysis techniques used to evaluate material properties without causing damage.              | Mfg, Maint, QC             | TEST                  |
+| **Quality Assurance (QA)**                | Maintenance of a desired level of quality in a service or product, especially by attention to detail.     | Mfg, All                   | QMP, QCP              |
+| **Quality Control (QC)**                  | System of maintaining standards in manufactured products by testing a sample against the specification.   | Mfg                        | QMP, QCP              |
+| **Quality Control Plan (QCP)**            | Document outlining quality checks during manufacturing.                                                   | Mfg                        | PLAN, PROC            |
+| **Tooling**                               | Jigs, fixtures, molds, and other equipment used in manufacturing.                                         | Mfg                        | DWG, DD, SP           |
+
+##### Testing & Validation (V&V) Phase
+
+| Term                                      | Definition                                                                                                | Primary Lifecycle Phase(s) | Related COAFI/Concept |
+| :---------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :------------------------- | :-------------------- |
+| **Acceptance Test Procedure (ATP)**       | Defines procedures for customer or end-user acceptance.                                                   | V&V, Delivery              | TEST, PROC            |
+| **Certification**                         | Formal process by which compliance with regulatory requirements is assured.                               | V&V, Cert                  | Cer1 (AGIS)           |
+| **Electromagnetic Compatibility (EMC)**   | Ability of electronic equipment to function properly together in the electronic environment.              | V&V                        | TEST                  |
+| **Qualification Test Report (QTR)**       | Documents results of formal qualification testing (e.g., environmental).                                  | V&V, Cert                  | RES, RPT              |
+| **Test Plan**                             | Document outlining the strategy, resources, schedule, and scope for testing.                              | V&V                        | TEST, PLAN            |
+| **Test Procedure**                        | Document providing step-by-step instructions for executing specific tests.                                | V&V                        | TEST, PROC            |
+| **Test Report**                           | Document reporting the results and outcomes of executed tests.                                            | V&V                        | RES, RPT              |
+
+##### Operations, Support & Customer Services Phase
+
+| Term                                      | Definition                                                                                                | Primary Lifecycle Phase(s) | Related COAFI/Concept |
+| :---------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :------------------------- | :-------------------- |
+| **Airworthiness Directive (AD)**          | Legally enforceable regulation issued by aviation authorities to correct an unsafe condition.             | Ops, Maint                 | MAN, PROC, ADMIN      |
+| **Aircraft Maintenance Manual (AMM)**     | Manual containing procedures required to maintain the aircraft.                                           | Maint                      | MAN                   |
+| **Component Maintenance Manual (CMM)**    | Manual containing procedures for off-aircraft maintenance of specific components.                         | Maint, Overhaul            | MAN                   |
+| **Customer Relationship Management (CRM)**| Practices, strategies and technologies used to manage and analyze customer interactions and data.         | Ops, Support               | PCS                   |
+| **Illustrated Parts Catalog (IPC)**       | Manual identifying and listing replaceable parts and assemblies.                                          | Maint, Logistics           | CAT                   |
+| **Maintenance, Repair, and Overhaul (MRO)** | Activities involved in maintaining, repairing, or overhauling aerospace components and systems.         | Maint, Overhaul            | MRO Module            |
+| **Operations Manual (OM)**                | Instructions for operating the system or equipment.                                                       | Ops                        | MAN                   |
+| **Product Customer Services (PCS)**       | GAIA AIR specific documentation category for customer support, feedback, training, service history.     | Ops, Support               | RPT, PROC, MAN, CAT   |
+| **Service Bulletin (SB)**                 | Notice from a manufacturer informing operators of a product modification or inspection.                   | Ops, Maint                 | MAN, PROC, ADMIN      |
+| **Structural Repair Manual (SRM)**        | Manual containing information and procedures for repairing the aircraft structure.                          | Maint, Overhaul            | MAN                   |
+| **Troubleshooting**                       | Systematic approach to problem-solving used to find and correct issues with complex systems.            | Maint                      | MAN, PROC             |
+
+##### Disposal & Regeneration Phase
+
+| Term                                      | Definition                                                                                                | Primary Lifecycle Phase(s) | Related COAFI/Concept |
+| :---------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :------------------------- | :-------------------- |
+| **Circular Economy**                      | Economic model aiming to eliminate waste and promote the continual use of resources.                      | EoL, Concept               | AGAD                  |
+| **Decommissioning**                       | Process of taking a system or facility out of service.                                                    | EoL                        | PLAN                  |
+| **End-of-Life (EoL)**                     | Final stage in a product's lifecycle, involving disposal, recycling, or regeneration.                     | EoL                        | PREDP                 |
+| **Material Declaration**                  | Report listing materials used in a product, often for environmental compliance.                           | EoL, Design, Mfg           | RPT, CAT              |
+| **Product Regenerative Engineering Disposal Procedures (PREDP)** | GAIA AIR specific procedures for decommissioning, disassembly, recovery, and regeneration. | EoL                        | PROC, PLAN, MAN       |
+| **REACH (Registration, Evaluation, Authorisation and Restriction of Chemicals)** | EU regulation addressing the production and use of chemical substances.                               | EoL, Design, Mfg           | Standards             |
+| **Regeneration**                          | Process of restoring or renewing components or materials for reuse or upcycling.                          | EoL                        | PREDP, AGAD           |
+| **RoHS (Restriction of Hazardous Substances)** | EU directive restricting the use of specific hazardous materials in electrical/electronic equipment.    | EoL, Design, Mfg           | Standards             |
+
+##### Cross-Cutting / Management / General
+
+| Term                                      | Definition                                                                                                | Primary Lifecycle Phase(s) | Related COAFI/Concept |
+| :---------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :------------------------- | :-------------------- |
+| **Administrative (Info Code)**            | COAFI Info Code for documents primarily administrative in nature (e.g., approvals, history).              | All                        | ADMIN                 |
+| **Baseline**                              | A formally approved version of a configuration item, used as a basis for further development.             | All                        | CM                    |
+| **Configuration Control Board (CCB)**     | Group responsible for reviewing and approving/disapproving proposed changes to baselines.                 | All                        | CM, PMO               |
+| **Configuration Item (CI)**               | An aggregation of hardware, software, or both, designated for configuration management.                   | All                        | CM                    |
+| **Configuration Management (CM)**         | Process for establishing and maintaining consistency of a product's attributes throughout its life.       | All                        | CMP                   |
+| **Configuration Management Plan (CMP)**   | Document defining how configuration management will be performed.                                         | All                        | PLAN                  |
+| **Engineering Change Request (ECR)**      | Formal request to change a configuration item after its baseline has been established.                    | All                        | ADMIN, PROC, REQ      |
+| **Engineering Order (EO)**                | Formal document authorizing the implementation of an approved change (ECR).                               | All                        | ADMIN, PROC, REQ      |
+| **Explainable AI (XAI)**                  | Artificial intelligence in which the results of the solution can be understood by humans.                 | All                        | XAI-TAGS, GACMS AI    |
+| **Human-in-the-Loop (HITL)**              | Model requiring human interaction, particularly for verification or decision-making in critical steps.    | All                        | AERO-IT-LLM           |
+| **Info Code**                             | Code within COAFI Document ID indicating the primary nature of the document's content.                    | All                        | COAFI Structure       |
+| **Overview (Info Code)**                  | COAFI Info Code for high-level summary documents.                                                         | All                        | OV                    |
+| **Project Management Office (PMO)**       | Group or department within a business that defines and maintains standards for project management.        | All                        | PMO (Part VI)         |
+| **Project Management Plan (PMP)**         | Document defining how a project is executed, monitored, controlled, and closed.                           | All                        | PLAN                  |
+| **Quality Management Plan (QMP)**         | Document defining quality policies, procedures, and standards.                                            | All                        | PLAN                  |
+| **Quality Management System (QMS)**       | Formalized system documenting quality processes.                                                          | All                        | QMP                   |
+| **Retrieval-Augmented Generation (RAG)**  | AI technique combining pre-trained models with external knowledge retrieval to improve accuracy.          | All                        | AERO-IT-LLM, GACMS AI |
+| **Role-Based Access Control (RBAC)**      | Access control mechanism based on user roles and privileges.                                              | All (Security)             | GACMS Security        |
+| **Risk Management Plan (RMP)**            | Document defining how risks are managed.                                                                  | All                        | PLAN                  |
+| **Specification (Info Code)**             | COAFI Info Code for documents defining technical requirements, characteristics, etc.                      | All                        | SP                    |
+| **Status (Document)**                     | Indicates the maturity/approval state of a COAFI document (e.g., Draft, Approved, Testing).             | All                        | COAFI Classification  |
+
+---
+
+### APP.01.02: Acronyms and Abbreviations
+
+#### `GP-APP-ACRONYMS-02-A-001-A`: Approved Acronym List & Definitions
+**Info Code:** CAT, GLO
+**Status:** Approved
+
+This document provides the official list of acronyms and abbreviations used within the GAIA AIR program documentation, organized by lifecycle phase. *(Draft Content Below - Requires Review)*
+
+##### Concept & Research Phase
+
+| Acronym   | Full Term                                       | Primary Lifecycle Phase(s) | Notes/Context                                     |
+| :-------- | :---------------------------------------------- | :------------------------- | :------------------------------------------------ |
+| **AGAD**  | As GAIA AIR Does                                | Concept, All               | Regenerative Finance/Ops Standard                 |
+| **CEU**   | Central Entangling Unity / Common European Universal | Concept, All               | Core unit encoding system intent                  |
+| **CFSI**  | Constitutional Framework of System Intent       | Concept, All               | Foundational doctrine for intent                  |
+| **R&D**   | Research and Development                        | Concept                    | Initial exploratory phase                         |
+| **SDG**   | Sustainable Development Goal (UN)               | Concept                    | Referenced in AGAD                                |
+| **TRL**   | Technology Readiness Level                      | Concept, Design, V&V       | Technology maturity scale                         |
+| **URIF**  | Universal Robotics Ingenuity Foundation         | Concept, Design            | Cognitive robotics framework                      |
+
+##### Requirements Definition Phase
+
+| Acronym   | Full Term                                       | Primary Lifecycle Phase(s) | Notes/Context                                     |
+| :-------- | :---------------------------------------------- | :------------------------- | :------------------------------------------------ |
+| **FID**   | Function ID                                     | Requirements, Design, All  | Identifier within FFI                             |
+| **FFI**   | Functional Framework Implementation             | Requirements, Design, All  | COAFI component for function management           |
+| **IRD**   | Interface Requirements Document                 | Requirements, Design       | Specifies interface needs                         |
+| **NFR**   | Non-Functional Requirement                      | Requirements, Design       | Performance, reliability, usability, etc.         |
+| **RTM**   | Requirements Traceability Matrix                | Requirements, V&V, All     | Links requirements to tests/design                |
+| **SRS**   | System Requirements Specification / Software Requirements Specification | Requirements, Design       | Requirements document                             |
+
+##### Design & Architecture Phase
+
+| Acronym   | Full Term                                       | Primary Lifecycle Phase(s) | Notes/Context                                     |
+| :-------- | :---------------------------------------------- | :------------------------- | :------------------------------------------------ |
+| **AGIS**  | Aerospace General Integration System            | Design, All                | GAIA AIR Nomenclature System                      |
+| **API**   | Application Programming Interface               | Design, Integration        | Software interface definition                     |
+| **BOM**   | Bill of Materials                               | Design, Mfg, Maint         | List of parts/materials                           |
+| **B-Rep** | Boundary Representation                         | Design                     | CAD geometry representation method                |
+| **CAD**   | Computer-Aided Design                           | Design, Mfg, Sim           | Software for creating designs                     |
+| **CAE**   | Computer-Aided Engineering                      | Design, Analysis           | Software for engineering analysis                 |
+| **CAM**   | Computer-Aided Manufacturing                    | Design, Mfg                | Software for controlling manufacturing machines   |
+| **COAFI** | Comprehensive Organized Aerospace Full Index    | Design, All                | GAIA AIR Documentation Framework                  |
+| **DMC**   | Data Module Code                                | Design, Maint              | S1000D identifier                                 |
+| **DO**    | Design Order                                    | Design, Mfg, Maint         | Instructions to implement an approved change      |
+| **DDD**   | Detailed Design Document                        | Design                     | Low-level component design details                |
+| **DWG**   | Drawing                                         | Design, Mfg, Maint         | Engineering drawing document type                 |
+| **GD&T**  | Geometric Dimensioning & Tolerancing            | Design, Mfg, QC            | Standard for defining tolerances on drawings      |
+| **ICD**   | Interface Control Document                      | Design, Integration        | Formal interface definition document              |
+| **IntCode**| Integration/Interface Code (AGIS)             | Design, All                | AGIS code for interfaces                          |
+| **MBSE**  | Model-Based Systems Engineering                 | Design, All                | Systems engineering using formal models           |
+| **PriCode**| Primary System Code (AGIS)                    | Design, All                | AGIS code for major systems                       |
+| **SAD**   | System Architecture Description                 | Design                     | High-level architecture document                  |
+| **SDD**   | System Design Description                       | Design                     | Detailed system design document                   |
+| **SeCode** | Secondary System Code (AGIS)                  | Design, All                | AGIS code for dependent components (may be merged)|
+| **SPARQL**| SPARQL Protocol and RDF Query Language          | Design, Data               | Query language for RDF/Knowledge Graphs           |
+| **SysML** | Systems Modeling Language                       | Design                     | Modeling language for systems engineering         |
+| **TechCode**| Technology Identifier (AGIS)                  | Design, All                | AGIS suffix for advanced tech                     |
+| **UML**   | Unified Modeling Language                       | Design                     | Modeling language primarily for software          |
+
+##### Analysis & Simulation Phase
+
+| Acronym   | Full Term                                       | Primary Lifecycle Phase(s) | Notes/Context                                     |
+| :-------- | :---------------------------------------------- | :------------------------- | :------------------------------------------------ |
+| **CFD**   | Computational Fluid Dynamics                    | Analysis, Sim              | Simulation of fluid flows                         |
+| **FMEA**  | Failure Modes and Effects Analysis              | Analysis, Design, Safety   | Risk analysis methodology                         |
+| **FMECA** | Failure Modes, Effects, and Criticality Analysis| Analysis, Design, Safety   | Extension of FMEA including criticality           |
+| **FTA**   | Fault Tree Analysis                             | Analysis, Safety           | Top-down failure analysis                         |
+| **FEA**   | Finite Element Analysis                         | Analysis, Sim              | Numerical method for structural/thermal analysis  |
+| **GACMS** | GAIA AIR Computing and Material Simulation      | Analysis, Sim, All         | COAFI Part V                                      |
+| **HPC**   | High-Performance Computing                      | Analysis, Sim              | Use of supercomputers/clusters                    |
+| **PINN**  | Physics-Informed Neural Network                 | Analysis, Sim              | AI model respecting physics laws                  |
+| **PRED**  | Predictive Analytics Engine (GACMS)             | Analysis, Sim, Ops         | GACMS AI service                                  |
+| **RPN**   | Risk Priority Number                            | Analysis, Safety           | FMEA metric                                       |
+| **SAR**   | Safety Assessment Report                        | Analysis, Safety, Cert     | Overall system safety documentation               |
+
+##### Manufacturing & Production Phase
+
+| Acronym   | Full Term                                       | Primary Lifecycle Phase(s) | Notes/Context                                     |
+| :-------- | :---------------------------------------------- | :------------------------- | :------------------------------------------------ |
+| **AM**    | Additive Manufacturing                          | Mfg                        | 3D Printing                                       |
+| **ERP**   | Enterprise Resource Planning                    | Mfg, Ops                   | Business process management software              |
+| **ISRU**  | In-Situ Resource Utilization                    | Mfg (Space), GMO           | Using local resources (e.g., on Moon/Mars)        |
+| **MES**   | Manufacturing Execution System                  | Mfg                        | System to track/document manufacturing            |
+| **MPP**   | Manufacturing Process Plan                      | Mfg                        | Sequence of manufacturing operations              |
+| **NDT**   | Non-Destructive Testing                         | Mfg, Maint, QC             | Testing without damaging the part                 |
+| **QC**    | Quality Control                                 | Mfg                        | Maintaining standards via testing samples         |
+| **QCP**   | Quality Control Plan                            | Mfg                        | Plan for QC checks during manufacturing           |
+
+##### Testing & Validation (V&V) Phase
+
+| Acronym   | Full Term                                       | Primary Lifecycle Phase(s) | Notes/Context                                     |
+| :-------- | :---------------------------------------------- | :------------------------- | :------------------------------------------------ |
+| **ATP**   | Acceptance Test Procedure                       | V&V, Delivery              | Procedure for customer acceptance                 |
+| **EMC**   | Electromagnetic Compatibility                   | V&V                        | Testing for electromagnetic interference          |
+| **QTR**   | Qualification Test Report                       | V&V, Cert                  | Report for formal qualification tests             |
+| **V&V**   | Verification & Validation                       | Requirements, V&V          | Process of checking requirements & fitness        |
+
+##### Operations, Support & Customer Services Phase
+
+| Acronym   | Full Term                                       | Primary Lifecycle Phase(s) | Notes/Context                                     |
+| :-------- | :---------------------------------------------- | :------------------------- | :------------------------------------------------ |
+| **AD**    | Airworthiness Directive                         | Ops, Maint                 | Mandatory action from aviation authority          |
+| **AMM**   | Aircraft Maintenance Manual                     | Maint                      | Procedures for aircraft maintenance               |
+| **CMM**   | Component Maintenance Manual                    | Maint, Overhaul            | Procedures for component maintenance              |
+| **CRM**   | Customer Relationship Management                | Ops, Support               | System/process for managing customer interactions |
+| **IPC**   | Illustrated Parts Catalog                       | Maint, Logistics           | Catalog of replaceable parts                      |
+| **MRO**   | Maintenance, Repair, and Overhaul               | Maint, Overhaul            | Industry term for maintenance activities          |
+| **OM**    | Operations Manual                               | Ops                        | Instructions for operating equipment              |
+| **PCS**   | Product Customer Services                       | Ops, Support               | GAIA AIR specific documentation category          |
+| **SB**    | Service Bulletin                                | Ops, Maint                 | Manufacturer recommendation/instruction           |
+| **SRM**   | Structural Repair Manual                        | Maint, Overhaul            | Procedures for structural repairs                 |
+
+##### Disposal & Regeneration Phase
+
+| Acronym   | Full Term                                       | Primary Lifecycle Phase(s) | Notes/Context                                     |
+| :-------- | :---------------------------------------------- | :------------------------- | :------------------------------------------------ |
+| **EoL**   | End-of-Life                                     | EoL                        | Final stage of product lifecycle                  |
+| **PREDP** | Product Regenerative Engineering Disposal Procedures | EoL                        | GAIA AIR specific disposal/regen procedures       |
+| **REACH** | Registration, Evaluation, Authorisation and Restriction of Chemicals | EoL, Design, Mfg           | EU chemical regulation                            |
+| **RoHS**  | Restriction of Hazardous Substances             | EoL, Design, Mfg           | EU directive restricting hazardous materials      |
+
+##### Cross-Cutting / Management / General
+
+| Acronym   | Full Term                                       | Primary Lifecycle Phase(s) | Notes/Context                                     |
+| :-------- | :---------------------------------------------- | :------------------------- | :------------------------------------------------ |
+| **AI**    | Artificial Intelligence                         | All                        | Intelligence demonstrated by machines             |
+| **CCB**   | Configuration Control Board                     | All                        | Body approving changes to baselines               |
+| **CI**    | Configuration Item                              | All                        | Item under configuration management               |
+| **CM**    | Configuration Management                        | All                        | Process for managing product consistency          |
+| **CMP**   | Configuration Management Plan                   | All                        | Document defining CM process                      |
+| **CMS**   | Content Management System                       | All                        | System for managing digital content/documents     |
+| **CV**    | Computer Vision                                 | All (AI Service)           | AI field enabling computers to "see"              |
+| **DODP**  | Declarative Operational Digital Policies        | All                        | Policies implementing CEU principles              |
+| **ECR**   | Engineering Change Request                      | All                        | Formal request to change a baseline               |
+| **EO**    | Engineering Order                               | All                        | Formal authorization to implement a change        |
+| **ETL**   | Extract, Transform, Load                        | All (Data Int)             | Data integration process                          |
+| **FAA**   | Federal Aviation Administration (USA)           | All                        | US aviation regulatory body                       |
+| **EASA**  | European Union Aviation Safety Agency           | All                        | EU aviation regulatory body                       |
+| **GDPR**  | General Data Protection Regulation (EU)         | All                        | EU data privacy regulation                        |
+| **GPU**   | Graphics Processing Unit                        | All (Hardware)             | Processor specialized for parallel computation    |
+| **HITL**  | Human-in-the-Loop                               | All                        | Process requiring human interaction/approval      |
+| **ISO**   | International Organization for Standardization  | All                        | International standards body                      |
+| **ITAR**  | International Traffic in Arms Regulations (USA) | All                        | US export control regulations                     |
+| **KG**    | Knowledge Graph                                 | All (AI Service)           | Graph-based knowledge representation              |
+| **KPI**   | Key Performance Indicator                       | All                        | Measurable value demonstrating effectiveness      |
+| **LLM**   | Large Language Model                            | All (AI Service)           | AI model trained on vast text data                |
+| **MOD**   | Modular Implementation Layer (CFSI/AGAD)        | All                        | Component within CFSI/AGAD structure              |
+| **MVP**   | Minimum Viable Product                          | All (Project Mgmt)         | Product version with just enough features         |
+| **NLP**   | Natural Language Processing                     | All (AI Service)           | AI field enabling computers to understand language|
+| **PDR**   | Preliminary Design Review                       | Design                     | Project milestone review                          |
+| **PII**   | Personally Identifiable Information             | All                        | Data that can identify an individual              |
+| **PLM**   | Product Lifecycle Management                    | All                        | Process/system for managing product lifecycle     |
+| **PMO**   | Project Management Office / COAFI Part VI       | All                        | Organizational unit / COAFI Part                  |
+| **PMP**   | Project Management Plan                         | All                        | Document defining project execution               |
+| **PQC**   | Post-Quantum Cryptography                       | All (Security)             | Cryptographic algorithms resistant to quantum attack|
+| **PTIM**  | Pre-Trained Implementable Models (CFSI)         | All (AI)                   | AI models constrained by CEU declarations         |
+| **QA**    | Quality Assurance                               | All                        | Process ensuring quality standards are met        |
+| **QMP**   | Quality Management Plan                         | All                        | Document defining quality process                 |
+| **QMS**   | Quality Management System                       | All                        | Formalized system documenting quality processes   |
+| **RAG**   | Retrieval-Augmented Generation                  | All (AI Technique)         | AI technique combining generation & retrieval     |
+| **RBAC**  | Role-Based Access Control                       | All (Security)             | Access control based on user roles and privileges |
+| **RL**    | Reinforcement Learning                          | All (AI Service)           | AI learning through trial and error               |
+| **RMP**   | Risk Management Plan                            | All                        | Document defining risk management process         |
+| **ROS**   | Robot Operating System                          | Robotics                   | Framework for robot software development          |
+| **SAE**   | SAE International (formerly Society of Automotive Engineers) | All                        | Standards organization (esp. aerospace)           |
+| **SME**   | Subject Matter Expert                           | All                        | Person with deep knowledge in a specific area     |
+| **SP**    | Specification (Info Code)                       | All                        | COAFI Info Code                                   |
+| **XAI**   | Explainable AI                                  | All                        | AI that can explain its decisions                 |
+
+---
+
+## APP.02: Standards & Regulations
+
+### `GP-APP-STANDREG-02-001-A`: General Document - Standards & Regulations Overview
+**Info Code:** OV, REF
+**Status:** Approved
+
+This document provides an overview of the standards and regulations landscape relevant to GAIA AIR. It serves as an entry point to the detailed lists of applicable industry standards (APP.02.01), regulatory requirements (APP.02.02), and internal GAIA AIR doctrines (APP.02.03). Maintaining compliance and adherence to these standards is paramount for safety, interoperability, and certification.
+
+---
+
+### APP.02.01: Applicable Industry Standards
+
+#### `GP-APP-INDSTD-02-A-001-A`: Approved List of Industry Standards (ISO, SAE, MIL-STD, etc.)
+**Info Code:** REF, CAT
+**Status:** Approved
+
+This document lists key external industry standards referenced and applied within the GAIA AIR program. *(Draft Content Below - Requires Review & Expansion)*
+
+| Standard ID        | Title                                                                 | Issuing Body   | Primary Area(s) of Application          |
+| :----------------- | :-------------------------------------------------------------------- | :------------- | :-------------------------------------- |
+| ISO 9001           | Quality management systems — Requirements                             | ISO            | Overall Quality Management (QMS)        |
+| AS9100             | Quality Management Systems - Requirements for Aviation, Space, and Defense Organizations | SAE            | Aerospace Quality Management (QMS)      |
+| ISO 14001          | Environmental management systems — Requirements with guidance for use | ISO            | Environmental Management                  |
+| ISO/IEC 27001      | Information security, cybersecurity and privacy protection — Information security management systems — Requirements | ISO/IEC        | Information Security Management (ISMS)    |
+| ISO/IEC/IEEE 15288 | Systems and software engineering — System life cycle processes        | ISO/IEC/IEEE   | Systems Engineering Lifecycle           |
+| ISO 10007          | Quality management — Guidelines for configuration management          | ISO            | Configuration Management Guidance         |
+| ANSI/EIA-649       | National Consensus Standard for Configuration Management              | SAE            | Configuration Management Standard         |
+| ATA iSpec 2200     | Information Standards for Aviation Maintenance                        | ATA            | Maintenance Data Structure & Content    |
+| S1000D             | International specification for technical publications                | ASD/AIA/ATA    | Technical Documentation (Modular)       |
+| DO-178C            | Software Considerations in Airborne Systems and Equipment Certification | RTCA           | Airborne Software Safety Assurance        |
+| DO-254             | Design Assurance Guidance for Airborne Electronic Hardware            | RTCA           | Airborne Hardware Safety Assurance        |
+| DO-160G            | Environmental Conditions and Test Procedures for Airborne Equipment   | RTCA           | Environmental Qualification Testing     |
+| MIL-STD-882E       | Standard Practice for System Safety                                   | US DoD         | System Safety Program Requirements        |
+| MIL-STD-498        | Software Development and Documentation                                | US DoD         | (Often referenced, though superseded by others) |
+| ISO/ASTM 52910     | Additive manufacturing — Design — Requirements, guidelines and recommendations | ISO/ASTM       | Additive Manufacturing Design           |
+| ASME Y14.5         | Dimensioning and Tolerancing                                          | ASME           | Engineering Drawings (GD&T)             |
+| IEEE 7000          | Model Process for Addressing Ethical Concerns During System Design    | IEEE           | Ethical Design Considerations             |
+| ISO 42001          | Artificial intelligence — Management system                           | ISO            | AI Management Systems                     |
+| *(Add others as identified)* | *(...)*                                                               | *(...)*        | *(...)*                                 |
+
+---
+
+### APP.02.02: Applicable Regulatory Requirements
+
+#### `GP-APP-REGREQ-02-A-001-A`: Approved List of Regulatory Requirements (FAA, EASA, etc.)
+**Info Code:** REF, CAT
+**Status:** Approved
+
+This document lists key regulatory frameworks and specific regulations applicable to GAIA AIR systems. *(Draft Content Below - Requires Review & Expansion)*
+
+| Regulation ID     | Title / Subject                                                       | Issuing Body   | Primary Area(s) of Application              |
+| :---------------- | :-------------------------------------------------------------------- | :------------- | :------------------------------------------ |
+| 14 CFR Part 25    | Airworthiness Standards: Transport Category Airplanes                 | FAA (USA)      | Airframe Design & Certification (AMPEL360)  |
+| EASA CS-25        | Certification Specifications for Large Aeroplanes                     | EASA (EU)      | Airframe Design & Certification (AMPEL360)  |
+| 14 CFR Part 21    | Certification Procedures for Products and Articles                    | FAA (USA)      | Certification Process                       |
+| EASA Part 21      | Certification of aircraft and related products, parts and appliances... | EASA (EU)      | Certification Process                       |
+| 14 CFR Part 33    | Airworthiness Standards: Aircraft Engines                             | FAA (USA)      | Engine Certification                        |
+| EASA CS-E         | Certification Specifications for Engines                              | EASA (EU)      | Engine Certification                        |
+| 14 CFR Part 43    | Maintenance, Preventive Maintenance, Rebuilding, and Alteration       | FAA (USA)      | Maintenance Procedures & Records            |
+| EASA Part 145     | Requirements for Maintenance Organisations                            | EASA (EU)      | Maintenance Organisation Approval           |
+| EU AI Act         | Artificial Intelligence Act (Regulation laying down harmonised rules...) | European Union | AI System Development & Deployment Ethics/Risk |
+| GDPR              | General Data Protection Regulation                                    | European Union | Data Privacy (Personal Data)                |
+| CCPA / CPRA       | California Consumer Privacy Act / Privacy Rights Act                  | California (USA)| Data Privacy (Consumer Rights)              |
+| ITAR              | International Traffic in Arms Regulations                             | US Dept. State | Export Control (Defense-related tech)       |
+| EAR               | Export Administration Regulations                                     | US Dept. Commerce | Export Control (Dual-use tech)              |
+| Outer Space Treaty| Treaty on Principles Governing Activities of States in Exploration... | UN             | International Space Law                     |
+| *(Add others)*    | *(e.g., Specific NASA/ESA program requirements, FCC/ITU regs)*       | *(...)*        | *(...)*                                     |
+
+---
+
+### APP.02.03: Internal GAIA AIR Standards & Doctrines (References)
+
+#### `GP-APP-INTSTD-02-A-001-A`: Links/References to CFSI, CEU, AGAD, AGIS, COAFI Core Docs
+**Info Code:** REF, CAT
+**Status:** Approved
+
+This document provides direct references to the foundational internal standards, doctrines, and framework documents governing the GAIA AIR program. *(Draft Content Below - Requires Link Population & Doc ID Confirmation)*
+
+| Doctrine/Standard/Framework | Primary Document ID(s)         | Location / COAFI Reference        | Description                                      |
+| :-------------------------- | :----------------------------- | :-------------------------------- | :----------------------------------------------- |
+| **CFSI**                    | `CFSI-MANIFEST-0001`           | Part 0 (`GP-FD-01-B-THEO-001-A`?) | Foundational doctrine for system intent.         |
+| **CEU Manifest**            | `CEU-DECLARATION-0001`         | Part 0 (`GP-FD-01-B-THEO-001-A`?) | Defines Central Entangling Unities.              |
+| **AGAD Standard**           | `COAFI-STANDARD-AGAD-0001-A`   | Part 0 (`GP-FD-01-B-THEO-001-A`?) | Quantum-Financial & Regenerative Ops Standard. |
+| **URIF Overview**           | `GPGM-URIF-0514-001-A`         | Part 0 (`GP-FD-01-B-THEO-001-A`?) | Cognitive Robotics Framework.                    |
+| **e.G.A.I.As Paradigm**     | `GP-FD-01-B-THEO-002-A` *(Est)*| Part 0 (`GP-FD-01-B-THEO-002-A`)  | AI Paradigm (Embodiment, Evolving, Extended).  |
+| **AGIS Nomenclature**       | `GP-APP-AGISSTD-02-A-001-A` *(Est)* | Part VII (`APP.02.03`)          | Aerospace General Integration System Standard. |
+| **COAFI Core Framework**    | `GP-APP-COAFIOV-03-A-001-A`    | Part VII (`APP.03.01`)            | Overview of the COAFI structure.               |
+| **FFI**                     | `COAFI-FUNC-CORE-0001-A`       | Part VII (`APP.03` or Link)       | Functional Framework Implementation details.   |
+| **GACMS Architecture**      | `GP-GACMS-COMP-00-A-001-A`     | Part V (`GP-GACMS-COMP-00-A`)     | Overview of Computing & Simulation Arch.       |
+| **AERO-IT-LLM Model Card**  | `GP-GACMS-AI-LLM-MCARD-001-A`  | Part VII (`APP.05` or Link)       | Details of the core LLM framework.             |
+| **GAIA AIR Ethics Policy**  | `GP-FD-04-A-001-A` *(Est)*     | Part 0 (`GP-FD-04-A-001-A`)       | Overarching ethical guidelines.                  |
+
+---
+
+## APP.03: Documentation Framework & Guidance
+
+### `GP-APP-DOCGUIDE-03-001-A`: General Document - Documentation Framework Overview
+**Info Code:** OV, REF
+**Status:** Approved
+
+This document introduces the sections within APP.03, providing essential guidance on understanding and utilizing the COAFI documentation framework. It covers the overall structure (APP.03.01), the classification system (APP.03.02), the meaning of information codes (APP.03.03), a comprehensive list of standard engineering document types within the framework (APP.03.04), and references to style guides and templates (APP.03.05). This chapter serves as the primary reference for authors and users navigating the COAFI documentation ecosystem.
+
+---
+
+### APP.03.01: COAFI Structure Overview
+
+#### `GP-APP-COAFIOV-03-A-001-A`: Summary of COAFI Parts and Structure
+**Info Code:** OV, REF
+**Status:** Approved
+
+This document provides a high-level summary of the Comprehensive Organized Aerospace Full Index (COAFI) structure. *(Draft Content Below - Requires Review)*
+
+*   **Part 0: Project Foundations (GP-FD):** Establishes the philosophical, theoretical, and regulatory bedrock of GAIA AIR. Contains foundational doctrines (CFSI, CEU, AGAD), core scientific principles, governing standards, and cross-disciplinary research directions.
+*   **Part I: Airframes (GP-AM):** Focuses on atmospheric flight vehicles, specifically the AMPEL360XWLRGA. Covers design, systems, structures, propulsion (conventional/hybrid), maintenance, and operations following an adapted ATA chapter structure.
+*   **Part II: Spaceframes (GP-SM):** Addresses orbital and interplanetary vehicles and habitats (GAIA SPACE). Covers design, life support, propulsion (chemical/ion/quantum), structures, docking, and operations using a space-adapted chapter structure.
+*   **Part III: Common Networks (GP-CN):** Defines the architecture, protocols, security, and specifications for shared communication, data, power, and control networks connecting GAIA AIR assets (air, space, ground).
+*   **Part IV: Ground Infrastructure (GP-GB):** Details the design, construction, operation, and maintenance of terrestrial support infrastructure, including launch facilities, control centers, manufacturing plants, and data centers.
+*   **Part V: GAIA AIR Computing and Material Simulation (GP-GACMS):** Describes the digital backbone: HPC infrastructure, cloud resources, simulation environments (CFD, FEA, Materials), AI services (AERO-IT-LLM, GEN, SIM, PRED, KG), data integration layers, and knowledge management systems.
+*   **Part VI: Project Management & Operations (GP-PMO):** Contains overarching project management plans (PMP, CMP, QMP, RMP), organizational structures, operational procedures, lifecycle management guidelines, and governance documentation.
+*   **Part VII: Appendices and Reference Material (GP-APP):** Serves as the central repository for reference information supporting all other parts, including terminology, standards lists, framework guides, resource links, and core doctrine summaries. (This document resides here).
+*   **Part VIII: GAIA GALACTIC MINING OPERATIONS (GP-GMO):** Focuses on the specialized systems, robotics, resource extraction/processing techniques, and logistics for extraterrestrial mining activities.
+*   **Part IX: RESERVED FOR FUTURE EXPANSION (GP-RES):** Designated placeholder for future, currently undefined GAIA AIR domains, such as interstellar capabilities, advanced AI evolution, or large-scale ecological engineering.
+
+---
+
+### APP.03.02: Document Classification System
+
+#### `GP-APP-DOCCLASS-03-A-001-A`: Definition of Classifications (A, B, B-THEO, C, D)
+**Info Code:** REF, GLO
+**Status:** Approved
+
+This document formally defines the document classification codes (suffixes) used throughout COAFI. *(Content Included Below)*
+
+| Suffix Code | Classification                        | Description                                                                                                                               | Primary Use                                                                 |
+| :---------- | :------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------- |
+| `-A`        | Approved (In Service)                 | Officially released, validated, and currently applicable documentation for operational systems or established procedures/standards.         | Operations, Maintenance, Current Design Baseline, Established Standards     |
+| `-B`        | Being Tested (Development)            | Documentation for systems, components, or procedures currently under active development, testing, and validation. Not yet fully approved. | Engineering Development, Prototype Testing, Pre-Release Validation          |
+| `-B-THEO`   | Speculative (Studying / Theoretical)  | Documentation exploring theoretical concepts, future possibilities, or early-stage research not yet in active development or testing.       | R&D, Concept Exploration, Long-Term Vision, Feasibility Studies           |
+| `-C`        | Condensed (Formal Scientific Consensus / Summary) | Concise summaries representing established scientific principles, consensus views, or high-level overviews derived from approved data. | Quick Reference, Training, High-Level Overviews, Foundational Principles  |
+| `-D`        | Auto-Adaptive Configuration           | Documentation dynamically generated or updated by AI systems based on real-time data, configuration changes, or adaptive algorithms.      | Real-time System Status, AI-driven Optimization Logs, Dynamic Procedures |
+
+*Note: The classification suffix applies to the *content status* described within a specific version of a document, identified by its full COAFI Document ID (e.g., `GP-AM-AMPEL-0100-05-A-001-A` describes *Approved* procedures in version `001-A` of that document).*
+
+---
+
+### APP.03.03: Info Code Reference Table
+
+#### `GP-APP-INFOCODE-03-A-001-A`: Approved Table of Information Codes (OV, SP, REQ, etc.)
+**Info Code:** REF, CAT, GLO
+**Status:** Approved
+
+This document provides the definitive list and description of the Information Codes used within COAFI document IDs. *(Content Included Below)*
+
+| Info Code | Description                   | Usage                                                                              |
+|:----------|:----------------------------|:---------------------------------------------------------------------------------|
+| OV        | Overview                      | High-level summaries, introductions, scope definitions.                            |
+| SP        | Specification                 | Detailed technical requirements, characteristics, performance parameters, limits.  |
+| REQ       | Requirements Document         | Formal capture, definition, and management of system/component requirements.     |
+| DD        | Design Document               | Descriptions of how a system/component is designed to meet requirements.           |
+| SDD       | System Description Document   | Comprehensive description of system architecture, components, and operation.     |
+| DWG       | Drawing                       | Engineering drawings, schematics, wiring diagrams, illustrations.                  |
+| CAL       | Calculation/Analysis          | Documentation of engineering calculations, simulations, performance analyses.      |
+| RPT       | Report (General)              | General reports, study findings, investigation results, summaries.                 |
+| TEST      | Test Plan/Procedure           | Documents outlining test strategy, setup, steps, and expected outcomes.            |
+| RES       | Test Results                  | Documents recording the actual outcomes and analysis of tests performed.           |
+| MAN       | Manual                        | Instructions for users/operators/maintainers (OM, AMM, CMM, SRM, Training).      |
+| PROC      | Procedure                     | Step-by-step instructions for specific tasks (maintenance, manufacturing, admin).|
+| CAT       | Catalog/List                  | Lists or catalogs of items (parts in IPC, standards, acronyms, resources).       |
+| GLO       | Glossary                      | Definitions of terms.                                                              |
+| PLAN      | Plan                          | Documents outlining intended future actions (Project, Maint, Risk, Quality, CM). |
+| ICD       | Interface Control Document    | Formal definition of interfaces between entities.                                  |
+| BOM       | Bill of Materials             | List of parts and materials for an assembly.                                       |
+| SWD       | Software Architecture Document| Description of the software's high-level structure.                              |
+| SPEC      | Software Specification        | Detailed requirements and design for software components (often used with REQ).  |
+| ADMIN     | Administrative                | Documents related to management, control, history, approvals (Revision History). |
+| REF       | Reference                     | Documents primarily providing pointers or links to other internal/external info. |
+
+---
+
+### APP.03.04: Engineering Documentation Types List
+
+#### `GP-APP-ENGDOC-03-A-001-A`: Comprehensive List of Engineering Document Types
+**Info Code:** OV, CAT
+**Status:** Approved
+
+##### 5.1 Introduction
+This chapter provides a comprehensive, though not exhaustive, list of official engineering documentation types utilized within the GAIA AIR program and the AMPEL360 project. It integrates standard aerospace engineering documentation practices with specific GAIA AIR concepts and the COAFI framework. The purpose is to standardize understanding, facilitate access, and ensure proper management of engineering information throughout the product lifecycle.
+
+All documentation listed here is managed within the GAIA AIR digital ecosystem, linked via AGIS codes, classified according to the COAFI structure, and version-controlled within the designated PLM/CMS systems. The 'Typical Info Code(s)' column references the codes defined in `GP-APP-INFOCODE-03-A-001-A` (Info Code Reference Table). The 'Optimal Format(s) / Extension(s)' column suggests preferred file formats, recognizing that the specific toolchain may dictate final formats.
+
+##### 5.2 Note on PLM Integration
+The Product Lifecycle Management (PLM) system is the central hub for managing much of the data represented by these documentation types. While "PLM Data" isn't a single document type, the PLM system manages critical information such as: AGIS/COAFI Code Registry & Associations, Component Specifications (Attributes linked to AGIS codes), Bill of Materials (BOM) structure, CAD Models & Drawings (often vaulted within PLM), Configuration Management Baselines, Change Management Records (linked to EOs/DOs), and Traceability Links. Therefore, many documents listed below either reside directly within the PLM system or are tightly integrated and linked from it.
+
+##### 5.3 Documentation Categories & Types
+
+###### 5.3.1 Requirements Documentation
+
+| Document Type                     | Typical Info Code(s) | Purpose/Description                                                                 | Key Content                                                                                                | Optimal Format(s) / Extension(s)                               | COAFI Integration Notes                                                                                                | Lifecycle Phase(s) |
+| :-------------------------------- | :------------------- | :---------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| **System Requirements Spec (SRS)** | REQ, SP              | Defines high-level system requirements (functional, performance, safety, etc.).     | System goals, constraints, functional reqs, performance targets, regulatory reqs, NFRs.                    | `.docx`, `.pdf`, `.reqif`, `.md`, ReqTool DB Entry             | Linked to high-level AGIS System/Function codes. Resides in relevant COAFI Part/Chapter (e.g., GP-AM-00-REQ).        | Concept, Design    |
+| **Subsystem Requirements Spec**   | REQ, SP              | Details requirements for specific subsystems derived from the SRS.                  | Subsystem functions, performance, interfaces, derived reqs, allocation from SRS.                           | `.docx`, `.pdf`, `.reqif`, `.md`, ReqTool DB Entry             | Linked to subsystem AGIS codes. Resides in relevant COAFI Part/Chapter (e.g., GP-AM-27-REQ).                         | Design             |
+| **Software Requirements Spec**    | REQ, SPEC            | Defines requirements specifically for software components.                          | Software functions, algorithms, data formats, performance, safety (DO-178C), security reqs.                | `.docx`, `.pdf`, `.reqif`, `.md`, ReqTool DB Entry             | Linked to software AGIS codes. Resides in relevant COAFI Part/Chapter (e.g., GP-AM-22-SPEC).                       | Design             |
+| **Hardware Requirements Spec**    | REQ, SP              | Defines requirements specifically for hardware components.                          | Hardware functions, performance, environmental reqs (DO-160), physical constraints, safety (DO-254).       | `.docx`, `.pdf`, `.reqif`, `.md`, ReqTool DB Entry             | Linked to hardware AGIS codes. Resides in relevant COAFI Part/Chapter (e.g., GP-AM-32-SP).                        | Design             |
+| **Interface Requirements Doc (IRD)** | REQ, ICD             | Specifies requirements for interfaces between systems/components.                   | Data formats, protocols, timing, physical connections, power reqs, linked to IntCodes.                     | `.docx`, `.pdf`, `.reqif` (as part of ICD/REQ)                 | Often part of ICD or REQ docs. Linked to AGIS IntCodes.                                                              | Design             |
+| **Use Case Document**             | REQ, OV              | Describes how users or systems interact with the system to achieve specific goals. | Actors, scenarios, pre/post-conditions, interaction steps, alternative flows.                              | `.docx`, `.pdf`, `.md`, MBSE Tool Element                      | Supports REQ definition. Linked to relevant Function IDs (FIDs).                                                       | Concept, Design    |
+| **Requirements Traceability Matrix (RTM)** | REQ, TEST, RES       | Matrix linking requirements to design elements, test cases, and results.          | Requirement IDs, linked Design IDs, linked Test Case IDs, Verification Status.                             | `.xlsx`, Database View/Report, `.pdf`                          | Managed within PLM/Requirements Tool, linked via AGIS/COAFI IDs. Represents traceability links (Section 4). | All Phases         |
+
+###### 5.3.2 Design & Architecture Documentation
+
+| Document Type                     | Typical Info Code(s) | Purpose/Description                                                                 | Key Content                                                                                                | Optimal Format(s) / Extension(s)                               | COAFI Integration Notes                                                                                                | Lifecycle Phase(s) |
+| :-------------------------------- | :------------------- | :---------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| **System Architecture Description** | SDD, OV              | High-level overview of the system's structure, components, and interactions.      | Architectural views (logical, physical, process), key components, major interfaces, design principles.     | `.docx`, `.pdf`, `.md`, MBSE Model Export                      | Top-level design doc, linked to high-level AGIS codes. Resides in relevant COAFI Part/Chapter (e.g., GP-AM-00-SDD). | Design             |
+| **System Design Description (SDD)** | SDD, DD              | Detailed description of the system design, elaborating on the architecture.       | Component breakdown, detailed interfaces, data flows, state diagrams, algorithms, rationale.               | `.docx`, `.pdf`, `.md`, MBSE Model Export                      | Core design doc, linked to AGIS codes. Resides in relevant COAFI Part/Chapter (e.g., GP-AM-27-SDD).                 | Design             |
+| **Detailed Design Document (DDD)** | DD, SP               | Low-level design details for specific components or modules.                      | Class diagrams, sequence diagrams, detailed algorithms, specific parameters, material choices.             | `.docx`, `.pdf`, `.md`, Code Comments                          | Linked to specific AGIS component codes. Resides in relevant COAFI Part/Chapter (e.g., GP-AM-27-100.10-DD).       | Design             |
+| **Interface Control Document (ICD)** | ICD, SP              | Formal definition of interfaces between systems, subsystems, or components.       | Protocol definitions, data dictionaries, message formats, connector pinouts, electrical characteristics. | `.docx`, `.pdf`, `.xml`/`.json` (Data Dict.), DB Entry        | Linked via AGIS IntCodes. Critical for integration. Resides in relevant COAFI Part/Chapter or common area.        | Design, Integration|
+| **Engineering Drawings**          | DWG                  | Visual representations of components and assemblies (2D/3D).                      | Geometry, dimensions, tolerances (GD&T), materials, notes, assembly views, schematics.                     | `.pdf`, `.dwg`/`.dxf`, `.catdrawing`, `.slddrw`, `.tiff`      | Managed in CAD/PLM, linked via AGIS codes. Stored under relevant COAFI Part/Chapter (e.g., GP-AM-53-DWG).         | Design, Mfg, Maint |
+| **CAD Models**                    | DWG (Ref)            | 3D digital representation of components/assemblies.                               | Geometry, assembly structure, metadata.                                                                    | Native CAD (`.catpart`, etc.), `.step`, `.iges`, `.jt`        | Managed in CAD/PLM, linked via AGIS codes. The source for many DWG documents.                                        | Design, Mfg, Sim   |
+| **System/Software Models (SysML/UML)** | DD, SDD, SWD         | Formal models representing system structure, behavior, and requirements.          | Block diagrams, state machines, sequence diagrams, use case diagrams, requirements diagrams.               | Native MBSE (`.mdzip`, etc.), `.xml`/`.xmi`, `.pdf`/`.png`    | Managed in MBSE tools, linked via AGIS/COAFI IDs. Can generate parts of SDD/DD/SWD.                               | Design             |
+
+###### 5.3.3 Analysis & Simulation Documentation
+
+| Document Type                     | Typical Info Code(s) | Purpose/Description                                                                 | Key Content                                                                                                | Optimal Format(s) / Extension(s)                               | COAFI Integration Notes                                                                                                | Lifecycle Phase(s) |
+| :-------------------------------- | :------------------- | :---------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| **Analysis Report**               | CAL, RPT             | Documents results of engineering analyses (structural, thermal, aerodynamic, etc.). | Methodology, assumptions, input data, results (plots, tables), conclusions, recommendations.             | `.docx`, `.pdf`, `.ipynb`, `.html`                             | Linked to AGIS codes of analyzed components/systems. Stored under relevant COAFI Part/Chapter (e.g., GP-AM-57-CAL). | Design, V&V        |
+| **Simulation Report**             | CAL, RPT             | Documents results of computational simulations (CFD, FEA, Multibody Dynamics).    | Model setup, boundary conditions, mesh details, solver settings, results, validation against test data.    | `.docx`, `.pdf`, `.ipynb`, `.html`, Sim Tool Output (`.res`, etc.) | Linked to AGIS codes and potentially GACMS simulation IDs. Stored under relevant COAFI Part/Chapter.               | Design, V&V        |
+| **Trade Study Report**            | RPT, CAL             | Compares different design options or technologies against defined criteria.         | Options evaluated, criteria, scoring methodology, analysis results, decision rationale, recommendation.    | `.docx`, `.pdf`, `.xlsx`                                       | Supports design decisions. Linked to relevant AGIS codes/Functions.                                                    | Concept, Design    |
+| **Failure Modes & Effects Analysis (FMEA/FMECA)** | CAL, RPT             | Identifies potential failure modes and their effects on the system.               | Failure modes, causes, effects, severity, occurrence, detection, RPN, recommended actions.                 | `.xlsx`, `.docx`, `.pdf`, Safety Tool DB Entry                 | Critical for safety & reliability. Linked to AGIS codes. Stored under relevant COAFI Part/Chapter (e.g., GP-AM-SF-RPT). | Design, Safety     |
+| **Safety Assessment Report (SAR)** | RPT, CAL             | Documents the overall safety analysis of the system.                              | Hazard analysis, fault tree analysis (FTA), FMEA summary, compliance evidence, residual risk assessment.   | `.docx`, `.pdf`                                                | Key certification document. Linked to AGIS codes and SF PriCodes/Functions.                                          | Design, Safety, Cert|
+
+###### 5.3.4 Testing & Validation Documentation
+
+| Document Type                     | Typical Info Code(s) | Purpose/Description                                                                 | Key Content                                                                                                | Optimal Format(s) / Extension(s)                               | COAFI Integration Notes                                                                                                | Lifecycle Phase(s) |
+| :-------------------------------- | :------------------- | :---------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| **Test Plan**                     | TEST, PLAN           | Outlines the strategy, resources, schedule, and scope for testing activities.       | Test objectives, scope, items to be tested, test levels, entry/exit criteria, schedule, responsibilities. | `.docx`, `.pdf`, Test Mgmt Tool Format                         | Governs V&V activities. Linked to requirements and AGIS codes. Stored under VC or relevant system chapter.         | Design, V&V        |
+| **Test Procedure**                | TEST, PROC           | Provides step-by-step instructions for executing specific tests.                    | Test ID, objective, prerequisites, setup, steps, expected results, pass/fail criteria, safety warnings.    | `.docx`, `.pdf`, `.md`, Test Mgmt Tool Format                  | Linked to Test Plan and Requirements/AGIS codes.                                                                       | V&V                |
+| **Test Report**                   | RES, RPT             | Documents the results and outcomes of executed tests.                               | Test ID, procedure used, execution date/env, actual results, pass/fail status, anomalies, analysis.        | `.docx`, `.pdf`, `.csv`/`.xlsx` (Data), `.log`                | Provides evidence for V&V. Linked to Test Procedure and Requirements/AGIS codes.                                     | V&V                |
+| **Verification & Validation (V&V) Matrix** | REQ, TEST, RES       | Cross-references requirements with their verification methods and results.        | Requirement ID, Verification Method (Test, Analysis, Demo, Inspect), Test/Analysis ID, Status, Evidence Link. | `.xlsx`, Database View/Report, `.pdf`                          | Often integrated with RTM. Managed in PLM/Requirements Tool.                                                           | V&V, Cert          |
+| **Qualification Test Report (QTR)** | RES, RPT             | Documents results of formal qualification testing (e.g., environmental, EMC).     | Test standards (e.g., DO-160), setup, procedures, results, compliance statement.                           | `.docx`, `.pdf`                                                | Key certification document. Linked to AGIS codes and VC PriCodes.                                                    | V&V, Cert          |
+| **Acceptance Test Procedure (ATP)** | TEST, PROC           | Defines procedures for customer or end-user acceptance of the system/component.   | Acceptance criteria, test steps, expected outcomes.                                                        | `.docx`, `.pdf`, Test Mgmt Tool Format                         | Used for delivery validation.                                                                                          | Production, Delivery|
+
+###### 5.3.5 Manufacturing & Production Documentation
+
+| Document Type                     | Typical Info Code(s) | Purpose/Description                                                                 | Key Content                                                                                                | Optimal Format(s) / Extension(s)                               | COAFI Integration Notes                                                                                                | Lifecycle Phase(s) |
+| :-------------------------------- | :------------------- | :---------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| **Manufacturing Process Plan (MPP)** | PROC, PLAN           | Details the sequence of operations required to manufacture a component/assembly.  | Operations sequence, work instructions, required tooling, machine settings, inspection points.             | `.docx`, `.pdf`, `.html`, MES Format                           | Linked to AGIS codes. Stored under AM or relevant system chapter.                                                    | Mfg                |
+| **Assembly Instructions**         | PROC, MAN            | Provides step-by-step guidance for assembling components into subsystems/systems. | Assembly sequence, diagrams/illustrations, torque values, required tools, safety precautions.              | `.docx`, `.pdf`, `.html` (Interactive)                         | Linked to AGIS assembly codes.                                                                                         | Mfg                |
+| **Bill of Materials (BOM)**       | BOM, CAT             | Hierarchical list of all parts, components, and raw materials needed.             | Part numbers (AGIS codes), descriptions, quantities, units of measure, procurement type.                   | PLM Export (`.csv`, `.xlsx`), DB View, `.pdf`                | Managed in PLM, fundamental configuration data. Linked via AGIS codes.                                               | Design, Mfg, Maint |
+| **Quality Control Plan (QCP)**    | PLAN, PROC           | Outlines quality checks and procedures during the manufacturing process.          | Inspection points, measurement methods, acceptance criteria, sampling plans, non-conformance procedures. | `.docx`, `.pdf`, QMS Format                                    | Linked to AGIS codes and Qlt1 PriCode.                                                                                 | Mfg                |
+| **Tooling Design & Specification**| DWG, DD, SP          | Designs and specifications for jigs, fixtures, molds, and other manufacturing tools. | Tool drawings, material specs, usage instructions, calibration requirements.                               | Native CAD, `.step`, `.pdf`, `.dwg`                            | Linked to specific manufacturing processes (MF Functions) and component AGIS codes.                                | Design, Mfg        |
+
+###### 5.3.6 Operations, Support & Customer Services Documentation
+
+| Document Type                     | Typical Info Code(s) | Purpose/Description                                                                 | Key Content                                                                                                | Optimal Format(s) / Extension(s)                               | COAFI Integration Notes                                                                                                | Lifecycle Phase(s) |
+| :-------------------------------- | :------------------- | :---------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| **Operations Manual (OM)**        | MAN                  | Instructions for operating the system or equipment safely and effectively.          | Operating procedures, limitations, performance data, emergency procedures, checklists.                     | `.pdf`, `.html` (IETP), CMS Format                             | Used by flight crews, ground operators. Linked to AGIS system codes.                                                   | Operations         |
+| **Maintenance Manuals (AMM, CMM, SRM)** | MAN                  | Detailed procedures for maintenance, component overhaul, and structural repair.   | Removal/installation, inspection, repair, testing procedures, troubleshooting, standard practices.         | `.xml` (S1000D/ATA), `.pdf`, `.html` (IETP), CMS Format       | Core maintenance documentation (e.g., GP-AM-*-MAN). Follows ATA/S1000D structure. Linked via AGIS codes.           | Maint, Overhaul    |
+| **Illustrated Parts Catalog (IPC)** | CAT                  | Identifies and lists replaceable parts and assemblies with illustrations.         | Part numbers (AGIS codes), figure/item numbers, descriptions, quantity per assembly, vendor codes.         | `.xml` (S1000D/ATA), `.pdf`, DB View, `.html` (IETP)          | Used for ordering spares. Linked via AGIS codes.                                                                       | Maint, Logistics   |
+| **Service Bulletin (SB) / Airworthiness Directive (AD) Compliance** | MAN, PROC, ADMIN     | Instructions for mandatory or recommended modifications/inspections.              | Applicability, reason, description of work, compliance time, required parts/materials.                     | `.pdf` (Original), PLM/Maint Record, `.docx` (Internal)      | Critical for continued airworthiness. Tracked in PLM/Maint Systems. Linked to AGIS codes.                            | Operations, Maint  |
+| **Troubleshooting Guide/Manual**  | MAN, PROC            | Systematic procedures for diagnosing and resolving system faults.                   | Fault symptoms, isolation procedures, probable causes, corrective actions.                               | `.xml` (S1000D/ATA), `.pdf`, `.html` (IETP), CMS Format       | Often part of AMM/CMM. Linked to AGIS codes and Fdt1/FAL functions.                                                  | Maint              |
+| **Product Customer Services (PCS) Documentation** | RPT, PROC, MAN, CAT | Documentation related to customer support, feedback, training, and service history. | Customer support procedures, FAQ, training materials, service records, feedback analysis reports.        | `.docx`, `.pdf`, `.html`, CRM Data, `.csv`                   | **GAIA AIR Specific.** Integrates customer interaction data. Linked to AGIS codes & potentially CRM systems.        | Operations, Support|
+| **Training Materials**            | MAN                  | Materials used for training pilots, maintenance crew, and other personnel.        | Syllabi, presentations, simulator guides, practical exercises, assessments.                                | `.pptx`, `.pdf`, `.mp4`, SCORM, `.html`                        | Linked to relevant system/procedure AGIS codes.                                                                        | All Phases         |
+
+###### 5.3.7 Disposal & Regeneration Documentation
+
+| Document Type                     | Typical Info Code(s) | Purpose/Description                                                                 | Key Content                                                                                                | Optimal Format(s) / Extension(s)                               | COAFI Integration Notes                                                                                                | Lifecycle Phase(s) |
+| :-------------------------------- | :------------------- | :---------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| **Product Regenerative Engineering Disposal Procedures (PREDP)** | PROC, PLAN, MAN      | Detailed procedures for decommissioning, disassembly, material recovery, and regeneration/recycling. | Disassembly sequence, material separation instructions, hazardous material handling, recycling/upcycling pathways. | `.docx`, `.pdf`, `.html` (Interactive)                         | **GAIA AIR Specific.** Aligns with AGAD principles (MOD-REGEN). Linked to AGIS codes and material data (AM).       | End-of-Life        |
+| **Material Declaration Report**   | RPT, CAT             | Lists materials used in the product, often for environmental compliance.          | Material composition, quantities, supplier information, compliance statements (e.g., REACH, RoHS).         | `.pdf`, `.xlsx`, `.xml` (e.g., IPC-1752A)                    | Supports PREDP and environmental compliance. Linked to BOM/AGIS codes.                                               | Design, Mfg, EoL   |
+| **Decommissioning Plan**          | PLAN                 | Plan outlining the process for taking a system or facility out of service.        | Scope, schedule, procedures, safety measures, environmental considerations, resource requirements.         | `.docx`, `.pdf`, `.mpp`                                        | Relevant for large systems/infrastructure.                                                                             | End-of-Life        |
+
+###### 5.3.8 Management, Control & Administrative Documentation
+
+| Document Type                     | Typical Info Code(s) | Purpose/Description                                                                 | Key Content                                                                                                | Optimal Format(s) / Extension(s)                               | COAFI Integration Notes                                                                                                | Lifecycle Phase(s) |
+| :-------------------------------- | :------------------- | :---------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| **Project Management Plan (PMP)** | PLAN                 | Defines how the project is executed, monitored, controlled, and closed.             | Scope, schedule, budget, resources, communication plan, risk plan, quality plan, WBS.                      | `.docx`, `.pdf`, `.mpp`                                        | Governs project execution. Resides in COAFI Part VI (GP-PMO).                                                          | Planning, Execution|
+| **Configuration Management Plan (CMP)** | PLAN                 | Defines how system configuration is managed throughout the lifecycle.             | CI identification, baseline management, change control process, audits, status accounting.                 | `.docx`, `.pdf`                                                | Governs CM activities. Resides in COAFI Part VI (GP-PMO). Links heavily to PLM system.                               | All Phases         |
+| **Quality Management Plan (QMP)** | PLAN                 | Defines quality policies, procedures, and standards for the project/product.      | Quality objectives, roles/responsibilities, QA/QC procedures, metrics, audit plan.                         | `.docx`, `.pdf`                                                | Governs quality assurance. Resides in COAFI Part VI (GP-PMO).                                                          | All Phases         |
+| **Risk Management Plan (RMP)**    | PLAN                 | Defines how risks are identified, analyzed, mitigated, and monitored.             | Risk categories, identification methods, analysis techniques, mitigation strategies, monitoring plan.      | `.docx`, `.pdf`, `.xlsx` (Risk Register)                     | Governs risk management. Resides in COAFI Part VI (GP-PMO).                                                          | All Phases         |
+| **Engineering Order (EO) / Change Request (ECR)** | ADMIN, PROC, REQ   | Formal document authorizing or requesting a change to a baseline.             | Change description, justification, impact analysis, affected items (AGIS codes), approval signatures.    | PLM Record, `.pdf` (Form), `.docx`                           | Managed via CM process within PLM. Key change control document.                                                      | All Phases         |
+| **Design Order (DO)**             | ADMIN, PROC, DWG   | Specific instructions, often including drawings, to implement an approved change.   | Detailed implementation steps, drawing revisions, required parts/materials.                                | `.pdf`, `.docx`, Linked `.dwg`/CAD                             | Implements an EO/ECR. Linked to EO and affected AGIS codes.                                                            | Design, Mfg, Maint |
+| **Waiver / Deviation Request**    | ADMIN, REQ           | Request to deviate from a specified requirement or standard for a specific instance. | Requirement affected, justification, proposed deviation, impact assessment, duration, approvals.          | PLM Record, `.pdf` (Form), `.docx`                           | Managed via CM/QA process.                                                                                             | Design, Mfg, V&V   |
+| **Meeting Minutes & Action Items**| ADMIN, RPT           | Records of decisions, discussions, and actions from project meetings.             | Attendees, topics discussed, decisions made, action items assigned, due dates.                             | `.docx`, `.pdf`, Wiki Page, Task Tool Entry                  | Supports project communication and tracking.                                                                           | All Phases         |
+| **Document Revision History**     | ADMIN                | Tracks changes made to a specific document over time.                             | Version number, date, author, summary of changes.                                                        | Embedded Metadata, `.txt` Log, PLM/CMS History               | Integral part of all version-controlled documents (See ADMIN Info Code usage).                                       | All Phases         |
+
+###### 5.3.9 Reference Documentation
+
+| Document Type                     | Typical Info Code(s) | Purpose/Description                                                                 | Key Content                                                                                                | Optimal Format(s) / Extension(s)                               | COAFI Integration Notes                                                                                                | Lifecycle Phase(s) |
+| :-------------------------------- | :------------------- | :---------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| **Glossary**                      | GLO                  | Definitions of terms specific to the project or domain.                             | Term, definition, source (if applicable).                                                                  | `.docx`, `.pdf`, `.csv`, Wiki Page, DB View                  | Resides in COAFI Part VII (`GP-APP-GLOSSARY-01-A-001-A`).                                                              | All Phases         |
+| **Acronym List**                  | CAT, GLO             | List of acronyms and abbreviations used in the project documentation.             | Acronym, full term.                                                                                        | `.docx`, `.pdf`, `.csv`, Wiki Page, DB View                  | Resides in COAFI Part VII (`GP-APP-ACRONYMS-02-A-001-A`).                                                              | All Phases         |
+| **Standards & Regulations List**  | REF                  | List of external standards and regulations applicable to the project.             | Standard/Regulation ID, Title, Version, Issuing Body.                                                      | `.docx`, `.pdf`, `.csv`, Wiki Page, DB View                  | Resides in COAFI Part VII (`GP-APP-INDSTD-02-A-001-A`, `GP-APP-REGREQ-02-A-001-A`).                                   | All Phases         |
+| **External Resource List**        | REF                  | List of relevant external websites, databases, tools, or reference documents.     | Resource Name, URL/Location, Description.                                                                  | `.docx`, `.pdf`, Wiki Page, Bookmark List                    | Resides in COAFI Part VII (`GP-APP-EXTREF-04-A-001-A`).                                                                | All Phases         |
+
+---
+
+### APP.03.05: Documentation Style Guide & Templates
+
+#### `GP-APP-STYLEGUIDE-03-A-001-A`: Reference/Link to Official Style Guide and Templates
+**Info Code:** REF, MAN
+**Status:** Approved
+
+This document provides access to the official GAIA AIR Documentation Style Guide and approved templates. *(Draft Content Below - Requires Link Population)*
+
+*   **GAIA AIR Documentation Style Guide:** `[Link to Style Guide Document / Wiki Page]`
+    *   *Covers:* Language (US English), tone, formatting (headings, lists, tables), AGIS/COAFI code usage, diagramming standards (Mermaid, UML, SysML), accessibility.
+*   **COAFI Document Templates Repository:** `[Link to Template Repository / Shared Drive]`
+    *   *Contains:* `.md`, `.docx`, `.xml` (S1000D mapping), `.pptx` templates incorporating COAFI principles, metadata fields, standard sections.
+*   **Guidance on Template Usage:** `[Link to Guidance Document / Wiki Page]`
+    *   Instructions on selecting templates based on Info Code, filling sections, maintaining consistency.
+
+---
+
+## APP.04: Project Resources & Mappings
+
+### `GP-APP-RESOURCES-04-001-A`: General Document - Project Resources Overview
+**Info Code:** OV, REF
+**Status:** Approved
+
+This document introduces the sections within APP.04, providing central access points to essential project resources, including tools, AGIS resources, mapping tables, and external references.
+
+---
+
+### APP.04.01: Key Project Tools & Systems Access
+
+#### `GP-APP-TOOLS-04-A-001-A`: Links to PLM, CMS, GACMS Portal, etc.
+**Info Code:** REF, CAT
+**Status:** Approved
+
+This document provides direct links and access notes for primary digital tools used in the GAIA AIR program. *(Draft Content Below - Requires Link Population & Tool Confirmation)*
+
+| Tool/System Category        | Example Tool(s) / Instance Name | Access Link / Instructions                               | Primary Use within GAIA AIR                                  |
+| :-------------------------- | :------------------------------ | :------------------------------------------------------- | :----------------------------------------------------------- |
+| **PLM System**              | Siemens Teamcenter (GAIA Instance) | `https://plm.gaia-air.internal` *(Requires VPN/Login)* | AGIS/COAFI Mgmt, BOM, CM, Change Control, CAD Vault        |
+| **CMS/DMS**                 | Alfresco / SharePoint Online    | `https://docs.gaia-air.internal` *(Requires Login)*      | Document Storage, Versioning, Review Workflows             |
+| **GACMS Portal**            | GAIA AIR Compute Portal         | `https://gacms.gaia-air.internal` *(Requires Login)*     | Access to Simulation, AI Services, Dashboards              |
+| **Requirements Management** | Jama Connect / DOORS Next       | `https://reqs.gaia-air.internal` *(Integrated w/ PLM)*   | Requirements Definition, Tracing, V&V Matrix             |
+| **MBSE Tool**               | Cameo Systems Modeler / Capella | *(Access via specific licenses/servers)*                 | System Modeling (SysML), Architecture Definition           |
+| **CAD Tools**               | CATIA, Siemens NX               | *(Access via specific licenses/servers)*                 | 3D Modeling, Engineering Drawings                          |
+| **CAE/Simulation Tools**    | ANSYS, NASTRAN, MATLAB/Simulink | *(Access via GACMS Portal or specific licenses)*       | FEA, CFD, System Simulation                                |
+| **Collaboration Platform**  | Microsoft Teams / Slack         | *(Standard Org Access)*                                  | Team Communication, File Sharing, Meeting Coordination     |
+| **Issue Tracking**          | Atlassian JIRA                  | `https://jira.gaia-air.internal` *(Requires Login)*      | Bug Tracking, Task Management, Action Item Tracking        |
+| **Code Repository**         | GitLab / GitHub Enterprise      | `https://git.gaia-air.internal` *(Requires Login)*       | Software Source Code Management, CI/CD Pipelines           |
+| **AGIS/COAFI Registry**     | *(Part of PLM or Custom DB)*    | `[Link to Registry Interface]`                           | Authoritative source/query interface for codes             |
+
+---
+
+### APP.04.02: AGIS Implementation Resources
+
+#### `GP-APP-AGISRES-04-A-001-A`: Links to AGIS Database, Training, Governance Docs
+**Info Code:** REF, CAT
+**Status:** Approved
+
+This document centralizes links specifically related to the AGIS nomenclature system. *(Draft Content Below - Requires Link Population)*
+
+*   **AGIS Code Registry / Query Tool:** `[Link to AGIS Database/PLM Query Interface]`
+*   **AGIS Nomenclature Standard:** `[Link to AGIS Standard Document in APP.02.03]`
+*   **AGIS Training Materials:** `[Link to Training Portal / Shared Drive]`
+*   **AGIS Governance Board (CCB) Charter:** `[Link to Governance Document in GP-PMO]`
+*   **AGIS Governance Board Contact List:** `[Link to Contact Info / Org Chart in GP-PMO]`
+*   **Component Registration Request (CRR) Tool/Form:** `[Link to CRR Tool / Workflow Start Page]`
+*   **AGIS Frequently Asked Questions (FAQ):** `[Link to FAQ Page / Document]`
+
+---
+
+### APP.04.03: Mapping Tables
+
+#### `GP-APP-MAPPING-04-A-001-A`: Links/Data for Legacy->AGIS, ATA->AGIS, Cert->AGIS Mappings
+**Info Code:** REF, CAT
+**Status:** Approved
+
+This document provides access to key mapping tables connecting AGIS/COAFI identifiers to other relevant systems or standards. *(Draft Content Below - Requires Link/Data Population)*
+
+*   **Legacy Part Number to AGIS Code Mapping:**
+    *   *Description:* Maps historical/supplier part numbers to AGIS codes.
+    *   *Location/Access:* `[Link to Mapping Database / PLM Report]`
+*   **ATA Chapter to COAFI/AGIS Mapping:**
+    *   *Description:* Guidance on correspondence between ATA chapters and COAFI/AGIS structures.
+    *   *Location/Access:* `[Link to Mapping Guidance Document / Table]` (Ref: `GP-AM-ATA` guide)
+*   **Certification Requirement to AGIS/FFI Mapping:**
+    *   *Description:* Links regulatory requirements (e.g., 14 CFR 25.1309) to AGIS functions/components and V&V evidence.
+    *   *Location/Access:* Managed in Requirements Tool / PLM. `[Link to Traceability View / Report]`
+
+---
+
+### APP.04.04: External Resource List
+
+#### `GP-APP-EXTREF-04-A-001-A`: Approved List of External Websites, Databases, Tools
+**Info Code:** REF, CAT
+**Status:** Approved
+
+This document lists approved external resources relevant to the GAIA AIR program. *(Draft Content Below - Requires Review & Expansion)*
+
+*   **Regulatory Agencies:** FAA (`faa.gov`), EASA (`easa.europa.eu`), *(Others)*
+*   **Standards Organizations:** ISO (`iso.org`), SAE (`sae.org`), RTCA (`rtca.org`), ASTM (`astm.org`), AIA/ASD (`s1000d.org`), ATA (`airlines.org`)
+*   **Research Databases:** NASA NTRS (`ntrs.nasa.gov`), arXiv (`arxiv.org`), AIAA ARC (`arc.aiaa.org`)
+*   **Key Technology Partners:** *(List relevant partner portals)*
+*   **Open Source Communities:** *(List relevant communities, e.g., ROS, PyTorch, TensorFlow)*
+
+---
+
+## APP.05: Core Framework Summaries
+
+### `GP-APP-FRAMESUMM-05-001-A`: General Document - Core Framework Summaries Overview
+**Info Code:** OV
+**Status:** Approved
+
+This chapter provides condensed summaries of the foundational doctrines and paradigms governing the GAIA AIR program (CFSI, CEU, AGAD, URIF, e.G.A.I.As) for quick reference. Refer to COAFI Part 0 (GP-FD) for full details.
+
+---
+
+### APP.05.01: CFSI Summary
+
+#### `GP-APP-CFSISUMM-05-C-001-A`: Condensed Summary of CFSI Principles
+**Info Code:** OV, REF
+**Status:** Condensed (Formal Scientific Consensus)
+
+**(Draft Summary - Requires Review)**
+The Constitutional Framework of System Intent (CFSI) ensures human intent guides GAIA AIR systems. Key principles: **Dignity of Intent** (systems have declared purpose), **Entanglement of Responsibility** (linking implementation to intent), **Constitutional Sovereignty** (intent governs evolution), **Federated Purpose** (negotiating purpose across systems). Uses **CEUs** (Central Entangling Unities) to encode intent hierarchically (CEU-0 to CEU-5, CEU-Σ), **DODPs** for operational rules, and **XAI-TAGS** for traceability. Establishes rights/responsibilities for systems, creators, stakeholders, governed via an Intent Registry and validated continuously.
+
+---
+
+### APP.05.02: CEU Manifest Summary
+
+#### `GP-APP-CEUSUMM-05-C-001-A`: Condensed Summary of CEU Concepts
+**Info Code:** OV, REF
+**Status:** Condensed (Formal Scientific Consensus)
+
+**(Draft Summary - Requires Review)**
+A Central Entangling Unity (CEU) / Common European Universal is the core CFSI element encoding engineering intent. It's hierarchical (CEU-0 Existential, CEU-1 Functional, etc.) and links COAFI elements (docs, modules, functions) back to the root intent (`CEU-ROOT-GAIA-001`). CEUs enable traceable, responsible engineering aligned with human values and regulations (EU AI Act, GDPR, ISO), managed via DODPs.
+
+---
+
+### APP.05.03: AGAD Standard Summary
+
+#### `GP-APP-AGADSUMM-05-C-001-A`: Condensed Summary of AGAD Axes and Principles
+**Info Code:** OV, REF
+**Status:** Condensed (Formal Scientific Consensus)
+
+**(Draft Summary - Requires Review)**
+AGAD (As GAIA AIR Does) is a standard for regenerative, self-financing aerospace systems using quantum tech, IP tokenization, and DAO governance. It addresses the innovation funding gap and promotes sustainability. Key features: **7 Axes of Operation** (#FinAsGaiaDoes, #DesignAsGaiaDoes, #ProofAsGaiaDoes, #ProduceAsGaiaDoes, #ServeAsGaiaDoes, #CareAsGaiaDoes, #RedoAsGaiaDoes) linked to biomimetic principles and replicable modules (MOD-*). Uses F-NFTs, dNFTs, Quantum Simulation microservices, QAOE Engine, MOD-CHAIN. Licensed under ODRF-7.
+
+---
+
+### APP.05.04: URIF System Summary
+
+#### `GP-APP-URIFSUMM-05-C-001-A`: Condensed Summary of URIF Components and Philosophy
+**Info Code:** OV, REF
+**Status:** Condensed (Formal Scientific Consensus)
+
+**(Draft Summary - Requires Review)**
+The Universal Robotics Ingenuity Foundation (URIF) is GAIA AIR's framework for advanced cognitive robotics. Components: **CDR** (Complex Deepness Robotics), **AS** (Agentic Swarms), **QT** (Qubit Teleportation - research), **IS** (Imaginary Streaming), **CBSS** (Cognitive Brainstorming Sessions), **NH** (Nanopixel Holography). Philosophy: "Digitale Liberato" (AI as symbiotic partners). Integrates with GAIA AIR MOD-HRB-*, MOD-XAI, MOD-TWIN, MOD-QSIM.
+
+---
+
+### APP.05.05: e.G.A.I.As Paradigm Summary
+
+#### `GP-APP-EGAIASUMM-05-C-001-A`: Condensed Summary of e.G.A.I.As Principles
+**Info Code:** OV, REF
+**Status:** Condensed (Formal Scientific Consensus)
+
+**(Draft Summary - Requires Review)**
+The e.G.A.I.As paradigm guides GAIA AIR's AI design beyond narrow tasks. Principles: **Embodiment** (integration with environment via sensors/actuators), **Evolving Nature** (dynamic adaptation via advanced learning like RL/meta-learning), **Extended Capacity** (collaboration in distributed networks for collective intelligence). Emphasizes self-optimization, modularity, resilience, and responsible innovation.
+
+---
+
+## APP.99: Part VII Revision History
+
+### `GP-APP-ADMIN-99-001-A`: Revision History for Part VII Appendices
+**Info Code:** ADMIN
+**Status:** Active
+
+| Version | Date       | Author(s)       | Summary of Changes                                                                 |
+| :------ | :--------- | :-------------- | :--------------------------------------------------------------------------------- |
+| 1.0     | YYYY-MM-DD | GAIA AIR CM     | Initial release of reorganized Part VII structure.                                 |
+| 1.1     | YYYY-MM-DD | GAIA AIR EngDoc | Added detailed content for APP.03.04 (Engineering Documentation Types List).       |
+| 1.2     | 2024-12-07 | GAIA AIR AI/Doc | Populated detailed Glossary (APP.01.01) and Acronym List (APP.01.02) by lifecycle. |
+| 1.3     | 2024-12-07 | GAIA AIR AI/Doc | Added draft content for all remaining placeholder sections in Part VII (APP.00, APP.02, APP.03.01, APP.03.05, APP.04, APP.05). |
+| 1.4     | 2024-12-07 | GAIA AIR AI/Doc | Added "Optimal Format(s) / Extension(s)" column to tables in APP.03.04.          |
+| ...     | ...        | ...             | ...                                                                                |
+
+---
+
+
+*   [GP-APP-REFERENCE-00-A-001-A: GP-APP-00 - Approved (In Service) - Intro & General - Reference Material Guidelines](GP-APP-REFERENCE-00-A-001-A.md)
     *   [GP-APP-REFERENCE-00-B-001-A: GP-APP-00 - Being Tested (Development) - Intro & General - AI-Driven Reference Link Management Testing](GP-APP-REFERENCE-00-B-001-A.md)
     *   [GP-APP-REFERENCE-00-B-THEO-001-A: GP-APP-00 - Speculative (Studying) - Intro & General - Semantic Web & Ontology Integration Concepts for References](GP-APP-REFERENCE-00-B-THEO-001-A.md)
     *   [GP-APP-REFERENCE-00-C-001-A: GP-APP-00 - Condensed (Formal Scientific Consensus) - Intro & General - Principles of Technical Documentation Referencing](GP-APP-REFERENCE-00-C-001-A.md)
