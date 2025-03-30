@@ -4957,377 +4957,1796 @@ Esta versión **con placeholders llenos** refleja una documentación estructurad
 
 La metodología facilita la adopción de un enfoque **integral y colaborativo**, donde la documentación puede evolucionar en paralelo con los procesos de diseño, certificación y operación —incluyendo la implementación de inteligencia artificial para la **auto-adaptación de contenidos**. De este modo, se potencia la eficiencia y la robustez de la gestión documental dentro de la visión de **GAIA AIR** y su framework **COAFI**. 
 
-*   [**ATA Chapter 07: Lifting & Shoring** 🏗️](GP-AM-AMPEL-0100-07-001-A.md)
-    *   [GP-AM-AMPEL-0100-07-001-A: GP-AM-07 General Document - Lifting & Shoring](GP-AM-AMPEL-0100-07-001-A.md)
-    *   [GP-AM-AMPEL-0100-07-A-001-A: GP-AM-07 - Approved (In Service) - Lifting & Shoring - Approved Procedures](GP-AM-AMPEL-0100-07-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-07-B-001-A: GP-AM-07 - Being Tested (Development) - Lifting & Shoring - Robotic Handling Systems Testing](GP-AM-AMPEL-0100-07-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-07-B-THEO-001-A: GP-AM-07 - Speculative (Studying) - Lifting & Shoring - Zero-G Handling Concepts](GP-AM-AMPEL-0100-07-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-07-C-001-A: GP-AM-07 - Condensed (Formal Scientific Consensus) - Lifting & Shoring - Structural Load Distribution Principles](GP-AM-AMPEL-0100-07-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-07-D-001-A: GP-AM-07 - Auto-Adaptive Configuration - Lifting & Shoring - AI-Optimized Handling Procedures](GP-AM-AMPEL-0100-07-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 08: Leveling & Weighing** ⚖️](GP-AM-AMPEL-0100-08-001-A.md)
-    *   [GP-AM-AMPEL-0100-08-001-A: GP-AM-08 General Document - Leveling & Weighing](GP-AM-AMPEL-0100-08-001-A.md)
-    *   [GP-AM-AMPEL-0100-08-A-001-A: GP-AM-08 - Approved (In Service) - Leveling & Weighing - Approved Procedures & CG Limits](GP-AM-AMPEL-0100-08-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-08-B-001-A: GP-AM-08 - Being Tested (Development) - Leveling & Weighing - HPC-Based CG Calculation Testing](GP-AM-AMPEL-0100-08-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-08-B-THEO-001-A: GP-AM-08 - Speculative (Studying) - Leveling & Weighing - Quantum Gravity Sensors for Weight Measurement Concepts](GP-AM-AMPEL-0100-08-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-08-C-001-A: GP-AM-08 - Condensed (Formal Scientific Consensus) - Leveling & Weighing - Center of Gravity Principles](GP-AM-AMPEL-0100-08-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-08-D-001-A: GP-AM-08 - Auto-Adaptive Configuration - Leveling & Weighing - AI-Driven Weight & Balance Optimization](GP-AM-AMPEL-0100-08-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 09: Towing & Taxiing** 🧲](GP-AM-AMPEL-0100-09-001-A.md)
-    *   [GP-AM-AMPEL-0100-09-001-A: GP-AM-09 General Document - Towing & Taxiing](GP-AM-AMPEL-0100-09-001-A.md)
-    *   [GP-AM-AMPEL-0100-09-A-001-A: GP-AM-09 - Approved (In Service) - Towing & Taxiing - Approved Procedures & Safety Protocols](GP-AM-AMPEL-0100-09-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-09-B-001-A: GP-AM-09 - Being Tested (Development) - Towing & Taxiing - Autonomous Taxiing System Testing](GP-AM-AMPEL-0100-09-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-09-B-THEO-001-A: GP-AM-09 - Speculative (Studying) - Towing & Taxiing - Quantum Sensor Based Ground Navigation Concepts](GP-AM-AMPEL-0100-09-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-09-C-001-A: GP-AM-09 - Condensed (Formal Scientific Consensus) - Towing & Taxiing - Aircraft Ground Handling Principles](GP-AM-AMPEL-0100-09-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-09-D-001-A: GP-AM-09 - Auto-Adaptive Configuration - Towing & Taxiing - AI-Optimized Ground Traffic Management](GP-AM-AMPEL-0100-09-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 10: Parking, Mooring, Storage** ⚓](GP-AM-AMPEL-0100-10-001-A.md)
-    *   [GP-AM-AMPEL-0100-10-001-A: GP-AM-10 General Document - Parking, Mooring, Storage](GP-AM-AMPEL-0100-10-001-A.md)
-    *   [GP-AM-AMPEL-0100-10-A-001-A: GP-AM-10 - Approved (In Service) - Parking, Mooring, Storage - Approved Procedures & Security](GP-AM-AMPEL-0100-10-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-10-B-001-A: GP-AM-10 - Being Tested (Development) - Parking, Mooring, Storage - Robotic Maint Checks During Storage Testing](GP-AM-AMPEL-0100-10-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-10-B-THEO-001-A: GP-AM-10 - Speculative (Studying) - Parking, Mooring, Storage - Long-Term Cryogenic Fuel Storage Concepts](GP-AM-AMPEL-0100-10-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-10-C-001-A: GP-AM-10 - Condensed (Formal Scientific Consensus) - Parking, Mooring, Storage - Aircraft Preservation Principles](GP-AM-AMPEL-0100-10-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-10-D-001-A: GP-AM-10 - Auto-Adaptive Configuration - Parking, Mooring, Storage - AI-Optimized Storage & Maint Scheduling](GP-AM-AMPEL-0100-10-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 11: Placards & Markings** 🪧](GP-AM-AMPEL-0100-11-001-A.md)
-    *   [GP-AM-AMPEL-0100-11-001-A: GP-AM-11 General Document - Placards & Markings](GP-AM-AMPEL-0100-11-001-A.md)
-    *   [GP-AM-AMPEL-0100-11-A-001-A: GP-AM-11 - Approved (In Service) - Placards & Markings - Approved Signage & Locations](GP-AM-AMPEL-0100-11-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-11-B-001-A: GP-AM-11 - Being Tested (Development) - Placards & Markings - AR-Enhanced Placard Testing](GP-AM-AMPEL-0100-11-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-11-B-THEO-001-A: GP-AM-11 - Speculative (Studying) - Placards & Markings - Quantum-Luminescent Signage Concepts](GP-AM-AMPEL-0100-11-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-11-C-001-A: GP-AM-11 - Condensed (Formal Scientific Consensus) - Placards & Markings - Aviation Signage Standards & Regulations](GP-AM-AMPEL-0100-11-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-11-D-001-A: GP-AM-11 - Auto-Adaptive Configuration - Placards & Markings - AI-Driven Dynamic Signage Adaptation](GP-AM-AMPEL-0100-11-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 12: Servicing – Routine** 🛠️](GP-AM-AMPEL-0100-12-001-A.md)
-    *   [GP-AM-AMPEL-0100-12-001-A: GP-AM-12 General Document - Servicing – Routine](GP-AM-AMPEL-0100-12-001-A.md)
-    *   [GP-AM-AMPEL-0100-12-A-001-A: GP-AM-12 - Approved (In Service) - Servicing – Routine - Approved Procedures & Schedules](GP-AM-AMPEL-0100-12-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-12-B-001-A: GP-AM-12 - Being Tested (Development) - Servicing – Routine - Robotic Servicing System Testing](GP-AM-AMPEL-0100-12-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-12-B-THEO-001-A: GP-AM-12 - Speculative (Studying) - Servicing – Routine - Nanobot Based Self-Cleaning Concepts](GP-AM-AMPEL-0100-12-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-12-C-001-A: GP-AM-12 - Condensed (Formal Scientific Consensus) - Servicing – Routine - Aircraft Fluid & Lubricant Standards](GP-AM-AMPEL-0100-12-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-12-D-001-A: GP-AM-12 - Auto-Adaptive Configuration - Servicing – Routine - AI-Driven Predictive Servicing Needs](GP-AM-AMPEL-0100-12-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 18: Vibration & Noise** 🔈](GP-AM-AMPEL-0100-18-001-A.md)
-    *   [GP-AM-AMPEL-0100-18-001-A: GP-AM-18 General Document - Vibration & Noise](GP-AM-AMPEL-0100-18-001-A.md)
-    *   [GP-AM-AMPEL-0100-18-A-001-A: GP-AM-18 - Approved (In Service) - Vibration & Noise - Approved Limits & Monitoring Procedures](GP-AM-AMPEL-0100-18-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-18-B-001-A: GP-AM-18 - Being Tested (Development) - Vibration & Noise - Active Noise Cancellation Testing](GP-AM-AMPEL-0100-18-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-18-B-THEO-001-A: GP-AM-18 - Speculative (Studying) - Vibration & Noise - Quantum Acoustic Dampening Concepts](GP-AM-AMPEL-0100-18-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-18-C-001-A: GP-AM-18 - Condensed (Formal Scientific Consensus) - Vibration & Noise - Aeroacoustic Principles & Standards](GP-AM-AMPEL-0100-18-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-18-D-001-A: GP-AM-18 - Auto-Configuración Adaptativa - Vibration & Noise - AI-Driven Noise Profile Adaptation](GP-AM-AMPEL-0100-18-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 20: Fasteners, Bonding, NDT** 🔩](GP-AM-AMPEL-0100-20-001-A.md)
-    *   [GP-AM-AMPEL-0100-20-001-A: GP-AM-20 General Document - Fasteners, Bonding, NDT](GP-AM-AMPEL-0100-20-001-A.md)
-    *   [GP-AM-AMPEL-0100-20-A-001-A: GP-AM-20 - Approved (In Service) - Fasteners, Bonding, NDT - Approved Materials & Specs](GP-AM-AMPEL-0100-20-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-20-B-001-A: GP-AM-20 - Being Tested (Development) - Fasteners, Bonding, NDT - Advanced Composite Bonding Testing](GP-AM-AMPEL-0100-20-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-20-B-THEO-001-A: GP-AM-20 - Speculative (Studying) - Fasteners, Bonding, NDT - Self-Healing Composites & Quantum Sensors for NDT Concepts](GP-AM-AMPEL-0100-20-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-20-C-001-A: GP-AM-20 - Condensed (Formal Scientific Consensus) - Fasteners, Bonding, NDT - Aerospace Fastener & Bonding Standards](GP-AM-AMPEL-0100-20-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-20-D-001-A: GP-AM-20 - Auto-Configuración Adaptativa - Fasteners, Bonding, NDT - AI-Driven Defect Detection & Predictive Failure Analysis](GP-AM-AMPEL-0100-20-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 21: Air Conditioning & Pressurization** ❄️](GP-AM-AMPEL-0100-21-001-A.md)
-    *   [GP-AM-AMPEL-0100-21-001-A: GP-AM-21 General Document - Air Conditioning & Pressurization](GP-AM-AMPEL-0100-21-001-A.md)
-    *   [GP-AM-AMPEL-0100-21-A-001-A: GP-AM-21 - Approved (In Service) - Air Conditioning & Pressurization - Approved System Specs & Limits](GP-AM-AMPEL-0100-21-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-21-B-001-A: GP-AM-21 - Being Tested (Development) - Air Conditioning & Pressurization - Green ECS Testing & Validation](GP-AM-AMPEL-0100-21-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-21-B-THEO-001-A: GP-AM-21 - Speculative (Studying) - Air Conditioning & Pressurization - Quantum Cooling & Air Purification Concepts](GP-AM-AMPEL-0100-21-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-21-C-001-A: GP-AM-21 - Condensed (Formal Scientific Consensus) - Air Conditioning & Pressurization - Environmental Control System Principles](GP-AM-AMPEL-0100-21-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-21-D-001-A: GP-AM-21 - Auto-Adaptive Configuration - Air Conditioning & Pressurization - AI-Driven Cabin Climate Optimization](GP-AM-AMPEL-0100-21-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 22: Auto Flight** 💺](GP-AM-AMPEL-0100-22-001-A.md)
-    *   [GP-AM-AMPEL-0100-22-001-A: GP-AM-22 General Document - Auto Flight](GP-AM-AMPEL-0100-22-001-A.md)
-    *   [GP-AM-AMPEL-0100-22-A-001-A: GP-AM-22 - Approved (In Service) - Auto Flight - Approved Autopilot Modes & Ops Manual](GP-AM-AMPEL-0100-22-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-22-B-001-A: GP-AM-22 - Being Tested (Development) - Auto Flight - Heuritmática AI Autopilot Testing](GP-AM-AMPEL-0100-22-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-22-B-THEO-001-A: GP-AM-22 - Speculative (Studying) - Auto Flight - Quantum-Enhanced Flight Control Concepts](GP-AM-AMPEL-0100-22-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-22-C-001-A: GP-AM-22 - Condensed (Formal Scientific Consensus) - Auto Flight - Flight Control Systems Principles](GP-AM-AMPEL-0100-22-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-22-D-001-A: GP-AM-22 - Auto-Adaptive Configuration - Auto Flight - AI-Driven Adaptive Flight Control Laws](GP-AM-AMPEL-0100-22-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 23: Communications** 📡](GP-AM-AMPEL-0100-23-001-A.md)
-    *   [GP-AM-AMPEL-0100-23-001-A: GP-AM-23 General Document - Communications](GP-AM-AMPEL-0100-23-001-A.md)
-    *   [GP-AM-AMPEL-0100-23-A-001-A: GP-AM-23 - Approved (In Service) - Communications - Approved Radio Frequencies & Protocols](GP-AM-AMPEL-0100-23-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-23-B-001-A: GP-AM-23 - Being Tested (Development) - Communications - Quantum Comms System Testing](GP-AM-AMPEL-0100-23-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-23-B-THEO-001-A: GP-AM-23 - Speculative (Studying) - Communications - Quantum Entanglement Comms Concepts](GP-AM-AMPEL-0100-23-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-23-C-001-A: GP-AM-23 - Condensed (Formal Scientific Consensus) - Communications - Aviation Comms Frequencies & Standards](GP-AM-AMPEL-0100-23-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-23-D-001-A: GP-AM-23 - Auto-Configuración Adaptativa - Communications - AI-Driven Spectrum Optimization](GP-AM-AMPEL-0100-23-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 24: Electrical Power** ⚡](GP-AM-AMPEL-0100-24-001-A.md)
-    *   [GP-AM-AMPEL-0100-24-001-A: GP-AM-24 General Document - Electrical Power](GP-AM-AMPEL-0100-24-001-A.md)
-    *   [GP-AM-AMPEL-0100-24-A-001-A: GP-AM-24 - Approved (In Service) - Electrical Power - Approved System Specs & Load Limits](GP-AM-AMPEL-0100-24-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-24-B-001-A: GP-AM-24 - Being Tested (Development) - Electrical Power - AEHCS Integration Testing](GP-AM-AMPEL-0100-24-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-24-B-THEO-001-A: GP-AM-24 - Speculative (Studying) - Electrical Power - Quantum Energy Transfer Concepts](GP-AM-AMPEL-0100-24-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-24-C-001-A: GP-AM-24 - Condensed (Formal Scientific Consensus) - Electrical Power - Aircraft Electrical System Principles](GP-AM-AMPEL-0100-24-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-24-D-001-A: GP-AM-24 - Auto-Configuración Adaptativa - Electrical Power - AI-Driven Energy Management & Optimization](GP-AM-AMPEL-0100-24-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 25: Equipment/Furnishings** 🛋️](GP-AM-AMPEL-0100-25-001-A.md)
-    *   [GP-AM-AMPEL-0100-25-001-A: GP-AM-25 General Document - Equipment/Furnishings](GP-AM-AMPEL-0100-25-001-A.md)
-    *   [GP-AM-AMPEL-0100-25-A-001-A: GP-AM-25 - Approved (In Service) - Equipment/Furnishings - Approved Equipment Lists & Layouts](GP-AM-AMPEL-0100-25-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-25-B-001-A: GP-AM-25 - Being Tested (Development) - Equipment/Furnishings - Smart Cabin System Testing](GP-AM-AMPEL-0100-25-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-25-B-THEO-001-A: GP-AM-25 - Speculative (Studying) - Equipment/Furnishings - Bio-Integrated Cabin Furnishing Concepts](GP-AM-AMPEL-0100-25-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-25-C-001-A: GP-AM-25 - Condensed (Formal Scientific Consensus) - Equipment/Furnishings - Aircraft Cabin Safety & Ergonomics Principles](GP-AM-AMPEL-0100-25-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-25-D-001-A: GP-AM-25 - Auto-Adaptive Configuration - Equipment/Furnishings - AI-Driven Cabin Personalization](GP-AM-AMPEL-0100-25-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 26: Fire Protection** 🔥](GP-AM-AMPEL-0100-26-001-A.md)
-    *   [GP-AM-AMPEL-0100-26-001-A: GP-AM-26 General Document - Fire Protection](GP-AM-AMPEL-0100-26-001-A.md)
-    *   [GP-AM-AMPEL-0100-26-A-001-A: GP-AM-26 - Approved (In Service) - Fire Protection - Approved System Specs & Procedures](GP-AM-AMPEL-0100-26-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-26-B-001-A: GP-AM-26 - Being Tested (Development) - Fire Protection - Advanced Fire Detection Testing](GP-AM-AMPEL-0100-26-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-26-B-THEO-001-A: GP-AM-26 - Speculative (Studying) - Fire Protection - Nanomaterial Based Fire Suppression Concepts](GP-AM-AMPEL-0100-26-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-26-C-001-A: GP-AM-26 - Condensed (Formal Scientific Consensus) - Fire Protection - Aviation Fire Safety Standards & Regulations](GP-AM-AMPEL-0100-26-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-26-D-001-A: GP-AM-26 - Auto-Adaptive Configuration - Fire Protection - AI-Driven Dynamic Fire Risk Assessment](GP-AM-AMPEL-0100-26-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 27: Flight Controls** 🕹️](GP-AM-AMPEL-0100-27-001-A.md)
-    *   [GP-AM-AMPEL-0100-27-001-A: GP-AM-27 General Document - Flight Controls](GP-AM-AMPEL-0100-27-001-A.md)
-    *   [GP-AM-AMPEL-0100-27-A-001-A: GP-AM-27 - Approved (In Service) - Flight Controls - Approved System Specs & Control Laws](GP-AM-AMPEL-0100-27-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-27-B-001-A: GP-AM-27 - Being Tested (Development) - Flight Controls - Heuritmática FBW System Testing](GP-AM-AMPEL-0100-27-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-27-B-THEO-001-A: GP-AM-27 - Speculative (Studying) - Flight Controls - Quantum-Enhanced Actuation Concepts](GP-AM-AMPEL-0100-27-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-27-C-001-A: GP-AM-27 - Condensed (Formal Scientific Consensus) - Flight Controls - Aircraft Flight Dynamics Principles](GP-AM-AMPEL-0100-27-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-27-D-001-A: GP-AM-27 - Auto-Adaptive Configuration - Flight Controls - AI-Driven Adaptive Control Surfaces](GP-AM-AMPEL-0100-27-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 28: Fuel** ⛽](GP-AM-AMPEL-0100-28-001-A.md)
-    *   [GP-AM-AMPEL-0100-28-001-A: GP-AM-28 General Document - Fuel](GP-AM-AMPEL-0100-28-001-A.md)
-    *   [GP-AM-AMPEL-0100-28-A-001-A: GP-AM-28 - Approved (In Service) - Fuel - Approved System Specs & Fuel Types](GP-AM-AMPEL-0100-28-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-28-B-001-A: GP-AM-28 - Being Tested (Development) - Fuel - AEHCS Integration & Testing](GP-AM-AMPEL-0100-28-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-28-B-THEO-001-A: GP-AM-28 - Speculative (Studying) - Fuel - Hydrogen Fuel Cell Tech & Cryogenic Storage Concepts](GP-AM-AMPEL-0100-28-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-28-C-001-A: GP-AM-28 - Condensed (Formal Scientific Consensus) - Fuel - Aircraft Fuel System Principles & Safety](GP-AM-AMPEL-0100-28-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-28-D-001-A: GP-AM-28 - Auto-Adaptive Configuration - Fuel - AI-Driven Fuel Consumption Optimization](GP-AM-AMPEL-0100-28-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 29: Hydraulic Power** 💧](GP-AM-AMPEL-0100-29-001-A.md)
-    *   [GP-AM-AMPEL-0100-29-001-A: GP-AM-29 General Document - Hydraulic Power](GP-AM-AMPEL-0100-29-001-A.md)
-    *   [GP-AM-AMPEL-0100-29-A-001-A: GP-AM-29 - Approved (In Service) - Hydraulic Power - Approved System Specs & Fluid Types](GP-AM-AMPEL-0100-29-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-29-B-001-A: GP-AM-29 - Being Tested (Development) - Hydraulic Power - Electro-Hydraulic Actuator Testing](GP-AM-AMPEL-0100-29-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-29-B-THEO-001-A: GP-AM-29 - Speculative (Studying) - Hydraulic Power - Electro-Hydrostatic Actuation Concepts](GP-AM-AMPEL-0100-29-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-29-C-001-A: GP-AM-29 - Condensed (Formal Scientific Consensus) - Hydraulic Power - Aircraft Hydraulic System Principles](GP-AM-AMPEL-0100-29-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-29-D-001-A: GP-AM-29 - Auto-Configuración Adaptativa - Hydraulic Power - AI-Driven Hydraulic System Monitoring & Control](GP-AM-AMPEL-0100-29-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 30: Ice & Rain Protection** 🌧️](GP-AM-AMPEL-0100-30-001-A.md)
-    *   [GP-AM-AMPEL-0100-30-001-A: GP-AM-30 General Document - Ice & Rain Protection](GP-AM-AMPEL-0100-30-001-A.md)
-    *   [GP-AM-AMPEL-0100-30-A-001-A: GP-AM-30 - Approved (In Service) - Ice & Rain Protection - Approved System Specs & Procedures](GP-AM-AMPEL-0100-30-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-30-B-001-A: GP-AM-30 - Being Tested (Development) - Ice & Rain Protection - Electro-Thermal Ice Protection Testing](GP-AM-AMPEL-0100-30-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-30-B-THEO-001-A: GP-AM-30 - Speculative (Studying) - Ice & Rain Protection - Nanotechnology Based Ice-Phobic Coating Concepts](GP-AM-AMPEL-0100-30-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-30-C-001-A: GP-AM-30 - Condensed (Formal Scientific Consensus) - Ice & Rain Protection - Aircraft Icing Principles & Standards](GP-AM-AMPEL-0100-30-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-30-D-001-A: GP-AM-30 - Auto-Configuración Adaptativa - Ice & Rain Protection - AI-Driven Adaptive Ice Protection System](GP-AM-AMPEL-0100-30-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 31: Indicating / Recording** 📊](GP-AM-AMPEL-0100-31-001-A.md)
-    *   [GP-AM-AMPEL-0100-31-001-A: GP-AM-31 General Document - Indicating / Recording](GP-AM-AMPEL-0100-31-001-A.md)
-    *   [GP-AM-AMPEL-0100-31-A-001-A: GP-AM-31 - Approved (In Service) - Indicating / Recording - Approved Instrument Specs & Data Formats](GP-AM-AMPEL-0100-31-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-31-B-001-A: GP-AM-31 - Being Tested (Development) - Indicating / Recording - Advanced Sensor Fusion Testing](GP-AM-AMPEL-0100-31-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-31-B-THEO-001-A: GP-AM-31 - Speculative (Studying) - Indicating / Recording - Quantum Sensor Based Measurement Concepts](GP-AM-AMPEL-0100-31-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-31-C-001-A: GP-AM-31 - Condensed (Formal Scientific Consensus) - Indicating / Recording - Aviation Instrumentation Standards & Data Logging](GP-AM-AMPEL-0100-31-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-31-D-001-A: GP-AM-31 - Auto-Configuración Adaptativa - Indicating / Recording - AI-Driven Adaptive Instrument Display & Data Analysis](GP-AM-AMPEL-0100-31-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 32: Landing Gear** 🛬](GP-AM-AMPEL-0100-32-001-A.md)
-    *   [GP-AM-AMPEL-0100-32-001-A: GP-AM-32 General Document - Landing Gear](GP-AM-AMPEL-0100-32-001-A.md)
-    *   [GP-AM-AMPEL-0100-32-A-001-A: GP-AM-32 - Approved (In Service) - Landing Gear - Approved System Specs & Procedures](GP-AM-AMPEL-0100-32-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-32-B-001-A: GP-AM-32 - Being Tested (Development) - Landing Gear - Smart Landing Gear System Testing](GP-AM-AMPEL-0100-32-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-32-B-THEO-001-A: GP-AM-32 - Speculative (Studying) - Landing Gear - Active Landing Gear Suspension Concepts](GP-AM-AMPEL-0100-32-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-32-C-001-A: GP-AM-32 - Condensed (Formal Scientific Consensus) - Landing Gear - Aircraft Landing Gear Design Principles](GP-AM-AMPEL-0100-32-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-32-D-001-A: GP-AM-32 - Auto-Configuración Adaptativa - Landing Gear - AI-Driven Adaptive Landing Gear Control](GP-AM-AMPEL-0100-32-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 33: Lights** 💡](GP-AM-AMPEL-0100-33-001-A.md)
-    *   [GP-AM-AMPEL-0100-33-001-A: GP-AM-33 General Document - Lights](GP-AM-AMPEL-0100-33-001-A.md)
-    *   [GP-AM-AMPEL-0100-33-A-001-A: GP-AM-33 - Approved (In Service) - Lights - Approved Lighting Specs & Standards](GP-AM-AMPEL-0100-33-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-33-B-001-A: GP-AM-33 - Being Tested (Development) - Lights - Adaptive Lighting System Testing](GP-AM-AMPEL-0100-33-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-33-B-THEO-001-A: GP-AM-33 - Speculative (Studying) - Lights - Quantum Dot Based Lighting Concepts](GP-AM-AMPEL-0100-33-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-33-C-001-A: GP-AM-33 - Condensed (Formal Scientific Consensus) - Lights - Aviation Lighting Standards & Regulations](GP-AM-AMPEL-0100-33-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-33-D-001-A: GP-AM-33 - Auto-Configuración Adaptativa - Lights - AI-Driven Adaptive Lighting Control & Color Psychology](GP-AM-AMPEL-0100-33-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 34: Navigation** 🧭](GP-AM-AMPEL-0100-34-001-A.md)
-    *   [GP-AM-AMPEL-0100-34-001-A: GP-AM-34 General Document - Navigation](GP-AM-AMPEL-0100-34-001-A.md)
-    *   [GP-AM-AMPEL-0100-34-A-001-A: GP-AM-34 - Approved (In Service) - Navigation - Approved System Specs & Accuracy Limits](GP-AM-AMPEL-0100-34-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-34-B-001-A: GP-AM-34 - Being Tested (Development) - Navigation - Quantum GPS & INS Integration Testing](GP-AM-AMPEL-0100-34-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-34-B-THEO-001-A: GP-AM-34 - Speculative (Studying) - Navigation - Quantum Inertial Navigation Concepts](GP-AM-AMPEL-0100-34-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-34-C-001-A: GP-AM-34 - Condensed (Formal Scientific Consensus) - Navigation - Aviation Navigation Systems Principles & Standards](GP-AM-AMPEL-0100-34-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-34-D-001-A: GP-AM-34 - Auto-Configuración Adaptativa - Navigation - AI-Driven Adaptive Route Optimization](GP-AM-AMPEL-0100-34-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 35: Oxygen** 🫁](GP-AM-AMPEL-0100-35-001-A.md)
-    *   [GP-AM-AMPEL-0100-35-001-A: GP-AM-35 General Document - Oxygen](GP-AM-AMPEL-0100-35-001-A.md)
-    *   [GP-AM-AMPEL-0100-35-A-001-A: GP-AM-35 - Approved (In Service) - Oxygen - Approved System Specs & Safety Procedures](GP-AM-AMPEL-0100-35-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-35-B-001-A: GP-AM-35 - Being Tested (Development) - Oxygen - Advanced Oxygen Generation System Testing](GP-AM-AMPEL-0100-35-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-35-B-THEO-001-A: GP-AM-35 - Speculative (Studying) - Oxygen - Bio-Mimetic Oxygen Generation Concepts](GP-AM-AMPEL-0100-35-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-35-C-001-A: GP-AM-35 - Condensed (Formal Scientific Consensus) - Oxygen - Aircraft Oxygen System Principles & Safety](GP-AM-AMPEL-0100-35-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-35-D-001-A: GP-AM-35 - Auto-Configuración Adaptativa - Oxygen - AI-Driven Adaptive Oxygen Delivery](GP-AM-AMPEL-0100-35-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 36: Pneumatic** 💨](GP-AM-AMPEL-0100-36-001-A.md)
-    *   [GP-AM-AMPEL-0100-36-001-A: GP-AM-36 General Document - Pneumatic](GP-AM-AMPEL-0100-36-001-A.md)
-    *   [GP-AM-AMPEL-0100-36-A-001-A: GP-AM-36 - Approved (In Service) - Pneumatic - Approved System Specs & Procedures](GP-AM-AMPEL-0100-36-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-36-B-001-A: GP-AM-36 - Being Tested (Development) - Pneumatic - Advanced Pneumatic Actuation Testing](GP-AM-AMPEL-0100-36-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-36-B-THEO-001-A: GP-AM-36 - Speculative (Studying) - Pneumatic - Air-less Pneumatic System Concepts](GP-AM-AMPEL-0100-36-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-36-C-001-A: GP-AM-36 - Condensed (Formal Scientific Consensus) - Pneumatic - Aircraft Pneumatic System Principles](GP-AM-AMPEL-0100-36-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-36-D-001-A: GP-AM-36 - Auto-Configuración Adaptativa - Pneumatic - AI-Driven Adaptive Pneumatic System Control](GP-AM-AMPEL-0100-36-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 38: Water/Waste** 🚰](GP-AM-AMPEL-0100-38-001-A.md)
-    *   [GP-AM-AMPEL-0100-38-001-A: GP-AM-38 General Document - Water/Waste](GP-AM-AMPEL-0100-38-001-A.md)
-    *   [GP-AM-AMPEL-0100-38-A-001-A: GP-AM-38 - Approved (In Service) - Water/Waste - Approved System Specs & Procedures](GP-AM-AMPEL-0100-38-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-38-B-001-A: GP-AM-38 - Being Tested (Development) - Water/Waste - Closed-Loop Water Recycling Testing](GP-AM-AMPEL-0100-38-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-38-B-THEO-001-A: GP-AM-38 - Speculative (Studying) - Water/Waste - Bio-Waste Recycling & Water Generation Concepts](GP-AM-AMPEL-0100-38-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-38-C-001-A: GP-AM-38 - Condensed (Formal Scientific Consensus) - Water/Waste - Aircraft Water & Waste System Principles](GP-AM-AMPEL-0100-38-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-38-D-001-A: GP-AM-38 - Auto-Configuración Adaptativa - Water/Waste - AI-Driven Water Usage Optimization](GP-AM-AMPEL-0100-38-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 45: Central Maintenance System (CMS)** ⚙️](GP-AM-AMPEL-0100-45-001-A.md)
-    *   [GP-AM-AMPEL-0100-45-001-A: GP-AM-45 General Document - Central Maintenance System (CMS)](GP-AM-AMPEL-0100-45-001-A.md)
-    *   [GP-AM-AMPEL-0100-45-A-001-A: GP-AM-45 - Approved (In Service) - Central Maintenance System (CMS) - Approved System Specs & Data Access](GP-AM-AMPEL-0100-45-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-45-B-001-A: GP-AM-45 - Being Tested (Development) - Central Maintenance System (CMS) - i-Aher0 Integration Testing](GP-AM-AMPEL-0100-45-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-45-B-THEO-001-A: GP-AM-45 - Speculative (Studying) - Central Maintenance System (CMS) - Quantum Enhanced Diagnostics Concepts](GP-AM-AMPEL-0100-45-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-45-C-001-A: GP-AM-45 - Condensed (Formal Scientific Consensus) - Central Maintenance System (CMS) - Aircraft Health Monitoring Principles](GP-AM-AMPEL-0100-45-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-45-D-001-A: GP-AM-45 - Auto-Configuración Adaptativa - Central Maintenance System (CMS) - AI-Driven Predictive Alerts & Recommendations](GP-AM-AMPEL-0100-45-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 46: Information Systems** 🌐](GP-AM-AMPEL-0100-46-001-A.md)
-    *   [GP-AM-AMPEL-0100-46-001-A: GP-AM-46 General Document - Information Systems](GP-AM-AMPEL-0100-46-001-A.md)
-    *   [GP-AM-AMPEL-0100-46-A-001-A: GP-AM-46 - Approved (In Service) - Information Systems - Approved Network Specs & Protocols](GP-AM-AMPEL-0100-46-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-46-B-001-A: GP-AM-46 - Being Tested (Development) - Information Systems - Federated Learning Network Testing](GP-AM-AMPEL-0100-46-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-46-B-THEO-001-A: GP-AM-46 - Speculative (Studying) - Information Systems - Quantum Network Security Concepts](GP-AM-AMPEL-0100-46-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-46-C-001-A: GP-AM-46 - Condensed (Formal Scientific Consensus) - Information Systems - Aircraft Data Bus Standards & Protocols](GP-AM-AMPEL-0100-46-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-46-D-001-A: GP-AM-46 - Auto-Configuración Adaptativa - Information Systems - AI-Driven Network Traffic Optimization](GP-AM-AMPEL-0100-46-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 49: Airborne Auxiliary Power (AAP)** 🔋](GP-AM-AMPEL-0100-49-001-A.md)
-    *   [GP-AM-AMPEL-0100-49-001-A: GP-AM-49 General Document - Airborne Auxiliary Power (AAP)](GP-AM-AMPEL-0100-49-001-A.md)
-    *   [GP-AM-AMPEL-0100-49-A-001-A: GP-AM-49 - Approved (In Service) - Airborne Auxiliary Power (AAP) - Approved System Specs & Performance](GP-AM-AMPEL-0100-49-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-49-B-001-A: GP-AM-49 - Being Tested (Development) - Airborne Auxiliary Power (AAP) - AEHCS Integrated Power Testing](GP-AM-AMPEL-0100-49-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-49-B-THEO-001-A: GP-AM-49 - Speculative (Studying) - Airborne Auxiliary Power (AAP) - Quantum Energy Tap Concepts for AAP](GP-AM-AMPEL-0100-49-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-49-C-001-A: GP-AM-49 - Condensed (Formal Scientific Consensus) - Airborne Auxiliary Power (AAP) - Aircraft APU Principles & Performance](GP-AM-AMPEL-0100-49-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-49-D-001-A: GP-AM-49 - Auto-Configuración Adaptativa - Airborne Auxiliary Power (AAP) - AI-Driven Power Load Balancing](GP-AM-AMPEL-0100-49-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 51: Structures – General** 🏗️](GP-AM-AMPEL-0201-51-001-A.md)
-    *   [GP-AM-AMPEL-0201-51-001-A: GP-AM-51 General Document - Structures – General](GP-AM-AMPEL-0201-51-001-A.md)
-    *   [GP-AM-AMPEL-0201-51-A-001-A: GP-AM-51 - Approved (In Service) - Structures – General - Approved Materials & Load Ratings](GP-AM-AMPEL-0201-51-A-001-A.md)
-    *   [GP-AM-AMPEL-0201-51-B-001-A: GP-AM-51 - Being Tested (Development) - Structures – General - Composite Structure Testing & Validation](GP-AM-AMPEL-0201-51-B-001-A.md)
-    *   [GP-AM-AMPEL-0201-51-B-THEO-001-A: GP-AM-51 - Speculative (Studying) - Structures – General - Self-Healing Airframe Concepts](GP-AM-AMPEL-0201-51-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0201-51-C-001-A: GP-AM-51 - Condensed (Formal Scientific Consensus) - Structures – General - Aerospace Structural Engineering Principles](GP-AM-AMPEL-0201-51-C-001-A.md)
-    *   [GP-AM-AMPEL-0201-51-D-001-A: GP-AM-51 - Auto-Configuración Adaptativa - Structures – General - AI-Driven Structural Health Monitoring & Adaptive Repair](GP-AM-AMPEL-0201-51-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 52: Doors** 🚪](GP-AM-AMPEL-0201-52-001-A.md)
-    *   [GP-AM-AMPEL-0201-52-001-A: GP-AM-52 General Document - Doors](GP-AM-AMPEL-0201-52-001-A.md)
-    *   [GP-AM-AMPEL-0201-52-A-001-A: GP-AM-52 - Approved (In Service) - Doors - Approved Door Types & Emergency Procedures](GP-AM-AMPEL-0201-52-A-001-A.md)
-    *   [GP-AM-AMPEL-0201-52-B-001-A: GP-AM-52 - Being Tested (Development) - Doors - Smart Door Actuation System Testing](GP-AM-AMPEL-0201-52-B-001-A.md)
-    *   [GP-AM-AMPEL-0201-52-B-THEO-001-A: GP-AM-52 - Speculative (Studying) - Doors - Active Camouflage Door Concepts](GP-AM-AMPEL-0201-52-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0201-52-C-001-A: GP-AM-52 - Condensed (Formal Scientific Consensus) - Doors - Aircraft Door Design Principles & Safety](GP-AM-AMPEL-0201-52-C-001-A.md)
-    *   [GP-AM-AMPEL-0201-52-D-001-A: GP-AM-52 - Auto-Configuración Adaptativa - Doors - AI-Driven Door Access Control & Security](GP-AM-AMPEL-0201-52-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 53: Fuselage** 🛡️](GP-AM-AMPEL-0201-53-001-A.md)
-    *   [GP-AM-AMPEL-0201-53-001-A: GP-AM-53 General Document - Fuselage](GP-AM-AMPEL-0201-53-001-A.md)
-    *   [GP-AM-AMPEL-0201-53-A-001-A: GP-AM-53 - Approved (In Service) - Fuselage - Approved Structure & Load Bearing Limits](GP-AM-AMPEL-0201-53-A-001-A.md)
-    *   [GP-AM-AMPEL-0201-53-B-001-A: GP-AM-53 - Being Tested (Development) - Fuselage - Advanced Composite Fuselage Testing](GP-AM-AMPEL-0201-53-B-001-A.md)
-    *   [GP-AM-AMPEL-0201-53-B-THEO-001-A: GP-AM-53 - Speculative (Studying) - Fuselage - Morphing Fuselage Concepts](GP-AM-AMPEL-0201-53-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0201-53-C-001-A: GP-AM-53 - Condensed (Formal Scientific Consensus) - Fuselage - Aircraft Fuselage Design Principles](GP-AM-AMPEL-0201-53-C-001-A.md)
-    *   [GP-AM-AMPEL-0201-53-D-001-A: GP-AM-53 - Auto-Configuración Adaptativa - Fuselage - AI-Driven Structural Stress Distribution Optimization](GP-AM-AMPEL-0201-53-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 54: Nacelles/Pylons** 🛩️](GP-AM-AMPEL-0201-54-001-A.md)
-    *   [GP-AM-AMPEL-0201-54-001-A: GP-AM-54 General Document - Nacelles/Pylons](GP-AM-AMPEL-0201-54-001-A.md)
-    *   [GP-AM-AMPEL-0201-54-A-001-A: GP-AM-54 - Approved (In Service) - Nacelles/Pylons - Approved Structure & Engine Mount Specs](GP-AM-AMPEL-0201-54-A-001-A.md)
-    *   [GP-AM-AMPEL-0201-54-B-001-A: GP-AM-54 - Being Tested (Development) - Nacelles/Pylons - Advanced Pylon Material Testing](GP-AM-AMPEL-0201-54-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-54-B-THEO-001-A: GP-AM-54 - Speculative (Studying) - Nacelles/Pylons - Active Aeroelastic Pylon Concepts](GP-AM-AMPEL-0100-54-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-54-C-001-A: GP-AM-54 - Condensed (Formal Scientific Consensus) - Nacelles/Pylons - Aircraft Engine Mounting Principles](GP-AM-AMPEL-0100-54-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-54-D-001-A: GP-AM-54 - Auto-Configuración Adaptativa - Nacelles/Pylons - AI-Driven Engine Vibration Damping Optimization](GP-AM-AMPEL-0100-54-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 55: Stabilizers** 🛩️](GP-AM-AMPEL-0201-55-001-A.md)
-    *   [GP-AM-AMPEL-0201-55-001-A: GP-AM-55 General Document - Stabilizers](GP-AM-AMPEL-0201-55-001-A.md)
-    *   [GP-AM-AMPEL-0201-55-A-001-A: GP-AM-55 - Approved (In Service) - Stabilizers - Approved Structure & Control Surface Specs](GP-AM-AMPEL-0201-55-A-001-A.md)
-    *   [GP-AM-AMPEL-0201-55-B-001-A: GP-AM-55 - Being Tested (Development) - Stabilizers - Advanced Composite Stabilizer Testing](GP-AM-AMPEL-0201-55-B-001-A.md)
-    *   [GP-AM-AMPEL-0201-55-B-THEO-001-A: GP-AM-55 - Speculative (Studying) - Stabilizers - Morphing Stabilizer Concepts](GP-AM-AMPEL-0201-55-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0201-55-C-001-A: GP-AM-55 - Condensed (Formal Scientific Consensus) - Stabilizers - Aircraft Stabilizer Design Principles](GP-AM-AMPEL-0201-55-C-001-A.md)
-    *   [GP-AM-AMPEL-0201-55-D-001-A: GP-AM-55 - Auto-Configuración Adaptativa - Stabilizers - AI-Driven Adaptive Stability Augmentation](GP-AM-AMPEL-0201-55-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 56: Windows** 🪟](GP-AM-AMPEL-0201-56-001-A.md)
-    *   [GP-AM-AMPEL-0201-56-001-A: GP-AM-56 General Document - Windows](GP-AM-AMPEL-0201-56-001-A.md)
-    *   [GP-AM-AMPEL-0201-56-A-001-A: GP-AM-56 - Approved (In Service) - Windows - Approved Window Specs & Visibility Standards](GP-AM-AMPEL-0201-56-A-001-A.md)
-    *   [GP-AM-AMPEL-0201-56-B-001-A: GP-AM-56 - Being Tested (Development) - Windows - Smart Window Tech Testing](GP-AM-AMPEL-0201-56-B-001-A.md)
-    *   [GP-AM-AMPEL-0201-56-B-THEO-001-A: GP-AM-56 - Speculative (Studying) - Windows - Quantum Transparency Control Concepts](GP-AM-AMPEL-0201-56-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0201-56-C-001-A: GP-AM-56 - Condensed (Formal Scientific Consensus) - Windows - Aircraft Window Design Principles & Safety](GP-AM-AMPEL-0100-56-C-001-A.md)
-    *   [GP-AM-AMPEL-0201-56-D-001-A: GP-AM-56 - Auto-Configuración Adaptativa - Windows - AI-Driven Dynamic Window Opacity Control](GP-AM-AMPEL-0201-56-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 57: Wings** 🛩️](GP-AM-AMPEL-0201-57-001-A.md)
-    *   [GP-AM-AMPEL-0201-57-001-A: GP-AM-57 General Document - Wings](GP-AM-AMPEL-0201-57-001-A.md)
-    *   [GP-AM-AMPEL-0201-57-A-001-A: GP-AM-57 - Approved (In Service) - Wings - Approved Structure & Aerodynamic Profiles](GP-AM-AMPEL-0201-57-A-001-A.md)
-    *   [GP-AM-AMPEL-0201-57-B-001-A: GP-AM-57 - Being Tested (Development) - Wings - Morphing Wing Tech Testing](GP-AM-AMPEL-0201-57-B-001-A.md)
-    *   [GP-AM-AMPEL-0201-57-B-THEO-001-A: GP-AM-57 - Speculative (Studying) - Wings - Active Flow Control & Quantum Aerodynamics Concepts](GP-AM-AMPEL-0201-57-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0201-57-C-001-A: GP-AM-57 - Condensed (Formal Scientific Consensus) - Wings - Aircraft Wing Design & Aerodynamic Principles](GP-AM-AMPEL-0201-57-C-001-A.md)
-    *   [GP-AM-AMPEL-0201-57-D-001-A: GP-AM-57 - Auto-Configuración Adaptativa - Wings - AI-Driven Adaptive Wing Shape Optimization](GP-AM-AMPEL-0201-57-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 71: Power Plant** 🧰](GP-AM-AMPEL-0100-71-001-A.md)
-    *   [GP-AM-AMPEL-0100-71-001-A: GP-AM-71 General Document - Power Plant](GP-AM-AMPEL-0100-71-001-A.md)
-    *   [GP-AM-AMPEL-0100-71-A-001-A: GP-AM-71 - Approved (In Service) - Power Plant - Approved Engine Specs & Performance Data](GP-AM-AMPEL-0100-71-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-71-B-001-A: GP-AM-71 - Being Tested (Development) - Power Plant - Hybrid Propulsion System Testing](GP-AM-AMPEL-0100-71-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-71-B-THEO-001-A: GP-AM-71 - Speculative (Studying) - Power Plant - Quantum Propulsion Engine Concepts](GP-AM-AMPEL-0100-71-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-71-C-001-A: GP-AM-71 - Condensed (Formal Scientific Consensus) - Power Plant - Aircraft Propulsion System Principles](GP-AM-AMPEL-0100-71-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-71-D-001-A: GP-AM-71 - Auto-Configuración Adaptativa - Power Plant - AI-Driven Adaptive Thrust Control & Fuel Mix Optimization](GP-AM-AMPEL-0100-71-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 72: Engine** 🚀](GP-AM-AMPEL-0100-72-001-A.md)
-    *   [GP-AM-AMPEL-0100-72-001-A: GP-AM-72 General Document - Engine](GP-AM-AMPEL-0100-72-001-A.md)
-    *   [GP-AM-AMPEL-0100-72-A-001-A: GP-AM-72 - Approved (In Service) - Engine - Approved Engine Specs & Performance Data](GP-AM-AMPEL-0100-72-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-72-B-001-A: GP-AM-72 - Being Tested (Development) - Engine - Hybrid Engine Component Testing](GP-AM-AMPEL-0100-72-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-72-B-THEO-001-A: GP-AM-72 - Speculative (Studying) - Engine - Quantum Entanglement Engine (QEE) Concepts](GP-AM-AMPEL-0100-72-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-72-C-001-A: GP-AM-72 - Condensed (Formal Scientific Consensus) - Engine - Aircraft Engine Design Principles](GP-AM-AMPEL-0100-72-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-72-D-001-A: GP-AM-72 - Auto-Configuración Adaptativa - Engine - AI-Driven Adaptive Engine Parameter Optimization](GP-AM-AMPEL-0100-72-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 72-Q01: Propulsion – Quantum Extension** ✨](GP-AM-AMPEL-0100-72-Q01-001-A.md)
-    *   [GP-AM-AMPEL-0100-72-Q01-001-A: GP-AM-72-Q01 General Document - Propulsion – Quantum Extension](GP-AM-AMPEL-0100-72-Q01-001-A.md)
-    *   [GP-AM-AMPEL-0100-72-Q01-A-001-A: GP-AM-72-Q01 - Approved (In Service) - Propulsion – Quantum Extension - Approved System Specs & Limits](GP-AM-AMPEL-0100-72-Q01-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-72-Q01-B-001-A: GP-AM-AMPEL-0100-72-Q01 - Being Tested (Development) - Propulsion – Quantum Extension - QEE Module Testing & Validation](GP-AM-AMPEL-0100-72-Q01-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-72-Q01-B-THEO-001-A: GP-AM-72-Q01 - Speculative (Studying) - Propulsion – Quantum Extension - Advanced Quantum Field Manipulation Concepts](GP-AM-AMPEL-0100-72-Q01-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-72-Q01-C-001-A: GP-AM-72-Q01 - Condensed (Formal Scientific Consensus) - Propulsion – Quantum Extension - Quantum Propulsion Principles - Theoretical Basis](GP-AM-AMPEL-0100-72-Q01-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-72-Q01-D-001-A: GP-AM-72-Q01 - Auto-Configuración Adaptativa - Propulsion – Quantum Extension - AI-Driven Quantum Field Control Adaptation](GP-AM-AMPEL-0100-72-Q01-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 73: Engine Oil System** 🛢️](GP-AM-AMPEL-0100-73-001-A.md)
-    *   [GP-AM-AMPEL-0100-73-001-A: GP-AM-73 General Document - Engine Oil System](GP-AM-AMPEL-0100-73-001-A.md)
-    *   [GP-AM-AMPEL-0100-73-A-001-A: GP-AM-73 - Approved (In Service) - Engine Oil System - Approved System Specs & Fluid Types](GP-AM-AMPEL-0100-73-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-73-B-001-A: GP-AM-73 - Being Tested (Development) - Engine Oil System - Advanced Lubricant Testing](GP-AM-AMPEL-0100-73-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-73-B-THEO-001-A: GP-AM-73 - Speculative (Studying) - Engine Oil System - Nano-Enhanced Lubricant Concepts](GP-AM-AMPEL-0100-73-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-73-C-001-A: GP-AM-73 - Condensed (Formal Scientific Consensus) - Engine Oil System - Aircraft Engine Lubrication Principles](GP-AM-AMPEL-0100-73-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-73-D-001-A: GP-AM-73 - Auto-Configuración Adaptativa - Engine Oil System - AI-Driven Adaptive Oil Condition Monitoring](GP-AM-AMPEL-0100-73-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 74: Engine Fuel and Control** ⛽](GP-AM-AMPEL-0100-74-001-A.md)
-    *   [GP-AM-AMPEL-0100-74-001-A: GP-AM-74 General Document - Engine Fuel and Control](GP-AM-AMPEL-0100-74-001-A.md)
-    *   [GP-AM-AMPEL-0100-74-A-001-A: GP-AM-74 - Approved (In Service) - Engine Fuel and Control - Approved System Specs & Procedures](GP-AM-AMPEL-0100-74-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-74-B-001-A: GP-AM-74 - Being Tested (Development) - Engine Fuel and Control - Hydrogen Fuel System Testing](GP-AM-AMPEL-0100-74-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-74-B-THEO-001-A: GP-AM-74 - Speculative (Studying) - Engine Fuel and Control - Advanced Fuel Regulation Concepts](GP-AM-AMPEL-0100-74-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-74-C-001-A: GP-AM-74 - Condensed (Formal Scientific Consensus) - Engine Fuel and Control - Aircraft Engine Fuel System Principles](GP-AM-AMPEL-0100-74-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-74-D-001-A: GP-AM-74 - Auto-Configuración Adaptativa - Engine Fuel and Control - AI-Driven Adaptive Fuel Flow Optimization](GP-AM-AMPEL-0100-74-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 75: Engine Bleed Air System** ⚙️](GP-AM-AMPEL-0100-75-001-A.md)
-    *   [GP-AM-AMPEL-0100-75-001-A: GP-AM-75 General Document - Engine Bleed Air System](GP-AM-AMPEL-0100-75-001-A.md)
-    *   [GP-AM-AMPEL-0100-75-A-001-A: GP-AM-75 - Approved (In Service) - Engine Bleed Air System - Approved System Specs & Procedures](GP-AM-AMPEL-0100-75-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-75-B-001-A: GP-AM-75 - Being Tested (Development) - Engine Bleed Air System - Advanced Bleed Air Control Testing](GP-AM-AMPEL-0100-75-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-75-B-THEO-001-A: GP-AM-75 - Speculative (Studying) - Engine Bleed Air System - Air Multiplier Based Bleed Air Concepts](GP-AM-AMPEL-0100-75-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-75-C-001-A: GP-AM-75 - Condensed (Formal Scientific Consensus) - Engine Bleed Air System - Aircraft Bleed Air System Principles](GP-AM-AMPEL-0100-75-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-75-D-001-A: GP-AM-75 - Auto-Configuración Adaptativa - Engine Bleed Air System - AI-Driven Adaptive Bleed Air Control](GP-AM-AMPEL-0100-75-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 76: Engine Air Inlet and Exhaust** 💨](GP-AM-AMPEL-0100-76-001-A.md)
-    *   [GP-AM-AMPEL-0100-76-001-A: GP-AM-76 General Document - Engine Air Inlet and Exhaust](GP-AM-AMPEL-0100-76-001-A.md)
-    *   [GP-AM-AMPEL-0100-76-A-001-A: GP-AM-76 - Approved (In Service) - Engine Air Inlet and Exhaust - Approved System Specs & Performance](GP-AM-AMPEL-0100-76-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-76-B-001-A: GP-AM-76 - Being Tested (Development) - Engine Air Inlet and Exhaust - Active Noise Reduction Testing](GP-AM-AMPEL-0100-76-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-76-B-THEO-001-A: GP-AM-76 - Speculative (Studying) - Engine Air Inlet and Exhaust - Noise Cancellation & Quantum Acoustics Concepts](GP-AM-AMPEL-0100-76-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-76-C-001-A: GP-AM-76 - Condensed (Formal Scientific Consensus) - Engine Air Inlet and Exhaust - Aircraft Engine Inlet & Exhaust Principles](GP-AM-AMPEL-0100-76-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-76-D-001-A: GP-AM-AMPEL-0100-76-D-001-A: GP-AM-76 - Auto-Configuración Adaptativa - Engine Air Inlet and Exhaust - AI-Driven Adaptive Nozzle Control](GP-AM-AMPEL-0100-76-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 77: Engine Indicating** 🎛️](GP-AM-AMPEL-0100-77-001-A.md)
-    *   [GP-AM-AMPEL-0100-77-001-A: GP-AM-77 General Document - Engine Indicating](GP-AM-AMPEL-0100-77-001-A.md)
-    *   [GP-AM-AMPEL-0100-77-A-001-A: GP-AM-77 - Approved (In Service) - Engine Indicating - Approved Instrument Specs & Ranges](GP-AM-AMPEL-0100-77-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-77-B-001-A: GP-AM-77 - Being Tested (Development) - Engine Indicating - Advanced Sensor Suite Testing](GP-AM-AMPEL-0100-77-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-77-B-THEO-001-A: GP-AM-77 - Speculative (Studying) - Engine Indicating - Quantum Sensor Based Engine Monitoring Concepts](GP-AM-AMPEL-0100-77-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-77-C-001-A: GP-AM-77 - Condensed (Formal Scientific Consensus) - Engine Indicating - Aircraft Engine Instrumentation Principles](GP-AM-AMPEL-0100-77-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-77-D-001-A: GP-AM-77 - Auto-Configuración Adaptativa - Engine Indicating - AI-Driven Predictive Engine Health Monitoring](GP-AM-AMPEL-0100-77-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 78: Engine Starting** 🚀](GP-AM-AMPEL-0100-78-001-A.md)
-    *   [GP-AM-AMPEL-0100-78-001-A: GP-AM-78 General Document - Engine Starting](GP-AM-AMPEL-0100-78-001-A.md)
-    *   [GP-AM-AMPEL-0100-78-A-001-A: GP-AM-78 - Approved (In Service) - Engine Starting - Approved Starter Specs & Procedures](GP-AM-AMPEL-0100-78-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-78-B-001-A: GP-AM-AMPEL-0100-78-B-001-A: GP-AM-78 - Being Tested (Development) - Engine Starting - Advanced Starter System Testing](GP-AM-AMPEL-0100-78-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-78-B-THEO-001-A: GP-AM-78 - Speculative (Studying) - Engine Starting - Quantum Assisted Ignition Concepts](GP-AM-AMPEL-0100-78-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-78-C-001-A: GP-AM-78 - Condensed (Formal Scientific Consensus) - Engine Starting - Aircraft Engine Starting System Principles](GP-AM-AMPEL-0100-78-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-78-D-001-A: GP-AM-78 - Auto-Configuración Adaptativa - Engine Starting - AI-Driven Adaptive Start Sequence Optimization](GP-AM-AMPEL-0100-78-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 86: Cockpit Doors** 🚪](GP-AM-AMPEL-0100-86-001-A.md)
-    *   [GP-AM-AMPEL-0100-86-001-A: GP-AM-86 General Document - Cockpit Doors](GP-AM-AMPEL-0100-86-001-A.md)
-    *   [GP-AM-AMPEL-0100-86-A-001-A: GP-AM-86 - Approved (In Service) - Cockpit Doors - Approved Door Specs & Emergency Procedures](GP-AM-AMPEL-0100-86-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-86-B-001-A: GP-AM-86 - Being Tested (Development) - Cockpit Doors - Advanced Locking Mechanism Testing](GP-AM-AMPEL-0100-86-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-86-B-THEO-001-A: GP-AM-86 - Speculative (Studying) - Cockpit Doors - Biometric & Quantum Secured Door Access Concepts](GP-AM-AMPEL-0100-86-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-86-C-001-A: GP-AM-AMPEL-0100-86-C-001-A: GP-AM-86 - Condensed (Formal Scientific Consensus) - Cockpit Doors - Aircraft Door Design Principles & Security](GP-AM-AMPEL-0100-86-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-86-D-001-A: GP-AM-86 - Auto-Configuración Adaptativa - Cockpit Doors - AI-Driven Cockpit Access Control & Intrusion Detection](GP-AM-AMPEL-0100-86-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 87: Passenger/Crew Doors** 🚪](GP-AM-AMPEL-0100-87-001-A.md)
-    *   [GP-AM-AMPEL-0100-87-001-A: GP-AM-87 General Document - Passenger/Crew Doors](GP-AM-AMPEL-0100-87-001-A.md)
-    *   [GP-AM-AMPEL-0100-87-A-001-A: GP-AM-87 - Approved (In Service) - Passenger/Crew Doors - Approved Door Types & Emergency Egress](GP-AM-AMPEL-0100-87-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-87-B-001-A: GP-AM-87 - Being Tested (Development) - Passenger/Crew Doors - Smart Door Operation Testing](GP-AM-AMPEL-0100-87-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-87-B-THEO-001-A: GP-AM-87 - Speculative (Studying) - Passenger/Crew Doors - Holographic Door Interface Concepts](GP-AM-AMPEL-0100-87-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-87-C-001-A: GP-AM-87 - Condensed (Formal Scientific Consensus) - Passenger/Crew Doors - Aircraft Door Design Principles & Egress Standards](GP-AM-AMPEL-0100-87-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-87-D-001-A: GP-AM-87 - Auto-Configuración Adaptativa - Passenger/Crew Doors - AI-Driven Passenger Flow Optimization](GP-AM-AMPEL-0100-87-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 88: Cargo Doors** 🚪](GP-AM-AMPEL-0100-88-001-A.md)
-    *   [GP-AM-AMPEL-0100-88-001-A: GP-AM-88 General Document - Cargo Doors](GP-AM-AMPEL-0100-88-001-A.md)
-    *   [GP-AM-AMPEL-0100-88-A-001-A: GP-AM-88 - Approved (In Service) - Cargo Doors - Approved Door Types & Loading Procedures](GP-AM-AMPEL-0100-88-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-88-B-001-A: GP-AM-88 - Being Tested (Development) - Cargo Doors - Automated Cargo Loading System Testing](GP-AM-AMPEL-0100-88-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-88-B-THEO-001-A: GP-AM-88 - Speculative (Studying) - Cargo Doors - Smart Cargo Bay & Door Concepts](GP-AM-AMPEL-0100-88-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-88-C-001-A: GP-AM-88 - Condensed (Formal Scientific Consensus) - Cargo Doors - Aircraft Cargo Door Design Principles & Load Handling](GP-AM-AMPEL-0100-88-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-88-D-001-A: GP-AM-88 - Auto-Configuración Adaptativa - Cargo Doors - AI-Driven Cargo Loading Optimization](GP-AM-AMPEL-0100-88-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 89: Landing Gear Doors** 🚪](GP-AM-AMPEL-0100-89-001-A.md)
-    *   [GP-AM-AMPEL-0100-89-001-A: GP-AM-89 General Document - Landing Gear Doors](GP-AM-AMPEL-0100-89-001-A.md)
-    *   [GP-AM-AMPEL-0100-89-A-001-A: GP-AM-89 - Approved (In Service) - Landing Gear Doors - Approved Door Types & Operational Specs](GP-AM-AMPEL-0100-89-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-89-B-001-A: GP-AM-89 - Being Tested (Development) - Landing Gear Doors - Smart Door Sequencing Testing](GP-AM-AMPEL-0100-89-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-89-B-THEO-001-A: GP-AM-89 - Speculative (Studying) - Landing Gear Doors - Adaptive Aerodynamic Door Concepts](GP-AM-AMPEL-0100-89-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-89-C-001-A: GP-AM-AMPEL-0100-89-C-001-A: GP-AM-89 - Condensed (Formal Scientific Consensus) - Landing Gear Doors - Aircraft Landing Gear Door Design Principles](GP-AM-AMPEL-0100-89-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-89-D-001-A: GP-AM-89 - Auto-Configuración Adaptativa - Landing Gear Doors - AI-Driven Adaptive Door Sequencing Optimization](GP-AM-AMPEL-0100-89-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 90: Equipment Doors / Access Panels** 🚪](GP-AM-AMPEL-0100-90-001-A.md)
-    *   [GP-AM-AMPEL-0100-90-001-A: GP-AM-90 General Document - Equipment Doors / Access Panels](GP-AM-AMPEL-0100-90-001-A.md)
-    *   [GP-AM-AMPEL-0100-90-A-001-A: GP-AM-90 - Approved (In Service) - Equipment Doors / Access Panels - Approved Panel Specs & Access Procedures](GP-AM-AMPEL-0100-90-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-90-B-001-A: GP-AM-90 - Being Tested (Development) - Equipment Doors / Access Panels - Robotic Panel Access System Testing](GP-AM-AMPEL-0100-90-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-90-B-THEO-001-A: GP-AM-90 - Speculative (Studying) - Equipment Doors / Access Panels - Self-Opening Access Panel Concepts](GP-AM-AMPEL-0100-90-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-90-C-001-A: GP-AM-90 - Condensed (Formal Scientific Consensus) - Equipment Doors / Access Panels - Aircraft Access Panel Design Principles](GP-AM-AMPEL-0100-90-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-90-D-001-A: GP-AM-90 - Auto-Configuración Adaptativa - Equipment Doors / Access Panels - AI-Driven Access Panel Mgmt & Predictive Maint Access](GP-AM-AMPEL-0100-90-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 91: Cockpit Windows** 🪟](GP-AM-AMPEL-0100-91-001-A.md)
-    *   [GP-AM-AMPEL-0100-91-001-A: GP-AM-91 General Document - Cockpit Windows](GP-AM-AMPEL-0100-91-001-A.md)
-    *   [GP-AM-AMPEL-0100-91-A-001-A: GP-AM-91 - Approved (In Service) - Cockpit Windows - Approved Window Specs & Visibility Standards](GP-AM-AMPEL-0100-91-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-91-B-001-A: GP-AM-91 - Being Tested (Development) - Cockpit Windows - Enhanced Vision System Integration Testing](GP-AM-AMPEL-0100-91-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-91-B-THEO-001-A: GP-AM-91 - Speculative (Studying) - Cockpit Windows - Quantum Transparency Control Window Concepts](GP-AM-AMPEL-0100-91-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-91-C-001-A: GP-AM-91 - Condensed (Formal Scientific Consensus) - Cockpit Windows - Aircraft Windshield Design Principles & Visibility](GP-AM-AMPEL-0100-91-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-91-D-001-A: GP-AM-91 - Auto-Configuración Adaptativa - Cockpit Windows - AI-Driven Dynamic Visibility Enhancement](GP-AM-AMPEL-0100-91-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 92: Cabin Windows** 🪟](GP-AM-AMPEL-0100-92-001-A.md)
-    *   [GP-AM-AMPEL-0100-92-001-A: GP-AM-92 General Document - Cabin Windows](GP-AM-AMPEL-0100-92-001-A.md)
-    *   [GP-AM-AMPEL-0100-92-A-001-A: GP-AM-92 - Approved (In Service) - Cabin Windows - Approved Window Specs & Passenger View Standards](GP-AM-AMPEL-0100-92-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-92-B-001-A: GP-AM-AMPEL-0100-92-B-001-A: GP-AM-92 - Being Tested (Development) - Cabin Windows - Smart Cabin Window Dimming System Testing](GP-AM-AMPEL-0100-92-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-92-B-THEO-001-A: GP-AM-92 - Speculative (Studying) - Cabin Windows - Electrochromic Window Concepts](GP-AM-AMPEL-0100-92-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-92-C-001-A: GP-AM-92 - Condensed (Formal Scientific Consensus) - Cabin Windows - Aircraft Cabin Window Design Principles & Passenger Comfort](GP-AM-AMPEL-0100-92-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-92-D-001-A: GP-AM-92 - Auto-Configuración Adaptativa - Cabin Windows - AI-Driven Dynamic Cabin Lighting & Window Tint Optimization](GP-AM-AMPEL-0100-92-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 93: Observation/Special Purpose Windows** 🪟](GP-AM-AMPEL-0100-93-001-A.md)
-    *   [GP-AM-AMPEL-0100-93-001-A: GP-AM-93 General Document - Observation/Special Purpose Windows](GP-AM-AMPEL-0100-93-001-A.md)
-    *   [GP-AM-AMPEL-0100-93-A-001-A: GP-AM-93 - Approved (In Service) - Observation/Special Purpose Windows - Approved Window Specs & Usage Guidelines](GP-AM-AMPEL-0100-93-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-93-B-001-A: GP-AM-AMPEL-0100-93-B-001-A: GP-AM-93 - Being Tested (Development) - Observation/Special Purpose Windows - Sensor-Integrated Window Testing](GP-AM-AMPEL-0100-93-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-93-B-THEO-001-A: GP-AM-93 - Speculative (Studying) - Observation/Special Purpose Windows - Active Camouflage Window Concepts for Observation](GP-AM-AMPEL-0100-93-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-93-C-001-A: GP-AM-93 - Condensed (Formal Scientific Consensus) - Observation/Special Purpose Windows - Aircraft Special Purpose Window Design Principles](GP-AM-AMPEL-0100-93-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-93-D-001-A: GP-AM-AMPEL-0100-93-D-001-A: GP-AM-93 - Auto-Configuración Adaptativa - Observation/Special Purpose Windows - AI-Driven Sensor Data Integration with Windows](GP-AM-AMPEL-0100-93-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
-*   [**ATA Chapter 99: Special / Emerging Tech** 🚀](GP-AM-AMPEL-0100-99-001-A.md)
-    *   [GP-AM-AMPEL-0100-99-001-A: GP-AM-99 General Document - Special / Emerging Tech](GP-AM-AMPEL-0100-99-001-A.md)
-    *   [GP-AM-AMPEL-0100-99-A-001-A: GP-AM-99 - Approved (In Service) - Special / Emerging Tech - Approved Integrations & Safety Cases](GP-AM-AMPEL-0100-99-A-001-A.md)
-    *   [GP-AM-AMPEL-0100-99-B-001-A: GP-AM-99 - Being Tested (Development) - Special / Emerging Tech - Advanced Sensor Suite Integration Testing](GP-AM-AMPEL-0100-99-B-001-A.md)
-    *   [GP-AM-AMPEL-0100-99-B-THEO-001-A: GP-AM-99 - Speculative (Studying) - Special / Emerging Tech - Quantum Sensors & Actuators - Conceptual Integration](GP-AM-AMPEL-0100-99-B-THEO-001-A.md)
-    *   [GP-AM-AMPEL-0100-99-C-001-A: GP-AM-99 - Condensed (Formal Scientific Consensus) - Special / Emerging Tech - Aerospace Innovation & Tech Readiness Principles](GP-AM-AMPEL-0100-99-C-001-A.md)
-    *   [GP-AM-AMPEL-0100-99-D-001-A: GP-AM-99 - Auto-Configuración Adaptativa - Special / Emerging Tech - AI-Driven Tech Adoption & Lifecycle Management](GP-AM-AMPEL-0100-99-D-001-A.md) *(formerly: Auto-Configuración Adaptativa)*
+* A continuación se presenta la **Lista Completa** en formato Markdown, integrando todos los capítulos ATA (desde el ATA 07 hasta el ATA 100, incluyendo el ATA 72‑Q01). Cada entrada incluye:
+
+- **Código del documento** (enlace simulado)
+- **Tipo de documento**
+- **Descripción breve**
+- **Optimal Format(s):** Sugerencias de formatos y extensiones recomendadas para su creación, edición y distribución
+- **Prompt Adicional:** Instrucción generativa para elaborar el contenido técnico digitalizado
+
+Puedes personalizar o ampliar cada entrada según las necesidades específicas del sistema COAFI.
+
+---
+
+```markdown
+# 📑 Lista Completa de Documentos por Capítulo ATA – AMPEL360XWLRGA
+
+Cada ítem detalla el código (enlace simulado), tipo, descripción, formatos óptimos y un prompt generativo adicional.
+
+---
+
+## ATA Chapter 07: Lifting & Shoring 🏗️
+
+- **[GP‑AM‑AMPEL‑0100‑07‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce el tema de levantamiento y shoring para el airframe.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un informe técnico introductorio sobre los fundamentos del levantamiento y shoring, incluyendo aplicaciones en estructuras aeronáuticas y métodos de medición de cargas.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑07‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, MAN)  
+  *Descripción:* Procedimientos oficiales para operaciones de lifting & shoring.  
+  *Optimal Format(s):* `.pdf`, `.xml` (S1000D/ATA), `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle los procedimientos, normas y medidas de seguridad para operaciones de lifting & shoring.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑07‑B‑001‑A](#)**
+  *Tipo:* Being Tested (Development) (RPT, RES)  
+  *Descripción:* Pruebas en curso de sistemas robóticos de manipulación en lifting & shoring.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.ipynb`, `.csv`  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un reporte técnico sobre la fase de pruebas en desarrollo de sistemas robóticos de manipulación para lifting & shoring, incluyendo resultados preliminares y ajustes en curso.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑07‑B‑THEO‑001‑A](#)**
+  *Tipo:* Speculative (Studying) (RPT, CAL)  
+  *Descripción:* Explora conceptos teóricos para el manejo en condiciones de ingravidez (zero‑G).  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.md`, `.ipynb`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento exploratorio que detalle los conceptos teóricos y estudios de viabilidad para el manejo en condiciones de ingravidez, incluyendo simulaciones y escenarios de aplicación.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑07‑C‑001‑A](#)**
+  *Tipo:* Condensed (Formal Scientific Consensus) (OV, REF)  
+  *Descripción:* Resume los principios consensuados sobre distribución de cargas en lifting & shoring.  
+  *Optimal Format(s):* `.md`, `.pdf`, Wiki Page  
+  **Prompt Adicional:**
+  ```markdown
+  Elabora un resumen técnico condensado que compile los principios científicos y normas de distribución de cargas en procesos de lifting & shoring, basado en consenso formal de expertos.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑07‑D‑001‑A](#)**
+  *Tipo:* Auto‑Adaptive Configuration (SDD, PROC)  
+  *Descripción:* Procedimientos optimizados mediante IA para manejo de cargas.  
+  *Optimal Format(s):* `.json`, `.yaml`, `.md`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un documento técnico que describa los procedimientos optimizados para manejo de cargas mediante algoritmos de IA, con ejemplos de adaptabilidad y ajustes en tiempo real.
+  ```
+
+---
+
+## ATA Chapter 08: Leveling & Weighing ⚖️
+
+- **[GP‑AM‑AMPEL‑0100‑08‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los conceptos de nivelación y pesaje.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que defina los conceptos básicos de nivelación y pesaje en aeronaves, describiendo su importancia en la estabilidad y seguridad del vuelo.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑08‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Procedimientos y límites oficiales para el centro de gravedad (CG).  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.xlsx`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle procedimientos y límites para el cálculo y verificación del centro de gravedad en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑08‑B‑001‑A](#)**
+  *Tipo:* Being Tested (Development) (RPT, RES)  
+  *Descripción:* Pruebas de cálculo del CG utilizando sistemas HPC.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.ipynb`, `.csv`  
+  **Prompt Adicional:**
+  ```markdown
+  Elabora un informe técnico sobre la fase de pruebas en desarrollo para el cálculo del centro de gravedad utilizando sistemas HPC, incluyendo metodología y resultados preliminares.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑08‑B‑THEO‑001‑A](#)**
+  *Tipo:* Speculative (Studying) (RPT)  
+  *Descripción:* Explora conceptos de sensores cuánticos para mediciones de peso.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.md`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento exploratorio que discuta el potencial de sensores cuánticos en la medición de peso, abordando desafíos, ventajas y posibles aplicaciones en aeronáutica.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑08‑C‑001‑A](#)**
+  *Tipo:* Condensed (Formal Scientific Consensus) (OV, REF)  
+  *Descripción:* Resumen de los fundamentos para determinar el CG.  
+  *Optimal Format(s):* `.md`, `.pdf`, Wiki Page  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un resumen técnico condensado que presente los fundamentos y metodologías para la determinación del centro de gravedad, basado en consenso científico.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑08‑D‑001‑A](#)**
+  *Tipo:* Auto‑Adaptive Configuration (SDD, CAL)  
+  *Descripción:* Optimización IA de parámetros de peso y balance.  
+  *Optimal Format(s):* `.json`, `.yaml`, `.md`, DB Record  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento técnico que describa cómo se aplican algoritmos de IA para optimizar los parámetros de peso y balance en aeronaves, con ejemplos prácticos.
+  ```
+
+---
+
+## ATA Chapter 09: Towing & Taxiing 🧲
+
+- **[GP‑AM‑AMPEL‑0100‑09‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce procedimientos de remolque y taxiado.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un informe introductorio sobre las técnicas y procedimientos utilizados en remolque y taxiado de aeronaves, destacando la importancia de la coordinación y la seguridad.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑09‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, MAN)  
+  *Descripción:* Procedimientos y protocolos oficiales para remolque y taxiado.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un manual operativo aprobado que incluya protocolos de seguridad y procedimientos estándar para el remolque y taxiado de aeronaves en tierra.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑09‑B‑001‑A](#)**
+  *Tipo:* Being Tested (Development) (RPT, RES)  
+  *Descripción:* Pruebas de sistemas autónomos para el taxiado.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.ipynb`, `.csv`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un informe técnico sobre las pruebas en curso de sistemas autónomos para el taxiado de aeronaves, detallando la metodología y los resultados preliminares.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑09‑B‑THEO‑001‑A](#)**
+  *Tipo:* Speculative (Studying) (RPT)  
+  *Descripción:* Conceptos de sensores cuánticos para optimizar la navegación en tierra.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.md`  
+  **Prompt Adicional:**
+  ```markdown
+  Elabora un documento exploratorio que discuta el potencial de sensores cuánticos para optimizar la navegación y seguridad en tierra, incluyendo escenarios de aplicación.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑09‑C‑001‑A](#)**
+  *Tipo:* Condensed (Formal Scientific Consensus) (OV, REF)  
+  *Descripción:* Resumen de las mejores prácticas en manejo en tierra.  
+  *Optimal Format(s):* `.md`, `.pdf`, Wiki Page  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un resumen técnico condensado que compile las mejores prácticas y principios del manejo en tierra de aeronaves, basados en consenso profesional.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑09‑D‑001‑A](#)**
+  *Tipo:* Auto‑Adaptive Configuration (SDD, PROC)  
+  *Descripción:* Optimización en tiempo real de la gestión del tráfico en tierra mediante IA.  
+  *Optimal Format(s):* `.json`, `.yaml`, `.md`, API Spec  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento técnico que explique cómo se aplican algoritmos de IA para la optimización en tiempo real del tráfico en tierra, integrando múltiples fuentes de datos.
+  ```
+
+---
+
+## ATA Chapter 10: Parking, Mooring, Storage ⚓
+
+- **[GP‑AM‑AMPEL‑0100‑10‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce prácticas de estacionamiento, amarre y almacenamiento.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Crea un informe técnico introductorio que describa las prácticas de estacionamiento y amarre de aeronaves, subrayando la importancia de la preservación durante el almacenamiento.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑10‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, MAN)  
+  *Descripción:* Procedimientos oficiales para estacionamiento y almacenamiento prolongado.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle los procedimientos de seguridad para el estacionamiento, amarre y almacenamiento prolongado de aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑10‑B‑001‑A](#)**
+  *Tipo:* Being Tested (Development) (RPT, RES)  
+  *Descripción:* Pruebas de mantenimiento robótico durante el almacenamiento.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.log`, `.mp4`  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un informe técnico sobre las pruebas en desarrollo de mantenimiento robótico en condiciones de almacenamiento de aeronaves, resaltando innovaciones y resultados preliminares.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑10‑B‑THEO‑001‑A](#)**
+  *Tipo:* Speculative (Studying) (RPT, CAL)  
+  *Descripción:* Conceptos para el almacenamiento a largo plazo de combustibles criogénicos.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.md`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento exploratorio que discuta la viabilidad y desafíos técnicos de almacenar combustibles criogénicos a largo plazo en aeronaves, incluyendo aspectos térmicos y de seguridad.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑10‑C‑001‑A](#)**
+  *Tipo:* Condensed (Formal Scientific Consensus) (OV, REF)  
+  *Descripción:* Resumen de prácticas para la preservación en almacenamiento.  
+  *Optimal Format(s):* `.md`, `.pdf`, Wiki Page  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un resumen técnico condensado que compile las mejores prácticas para la preservación de aeronaves durante períodos prolongados de almacenamiento.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑10‑D‑001‑A](#)**
+  *Tipo:* Auto‑Adaptive Configuration (SDD, PLAN)  
+  *Descripción:* Optimización de la programación de almacenamiento y mantenimiento mediante IA.  
+  *Optimal Format(s):* `.json`, `.yaml`, `.md`, DB Schema  
+  **Prompt Adicional:**
+  ```markdown
+  Elabora un documento técnico que describa cómo los algoritmos de IA se utilizan para programar y optimizar el mantenimiento preventivo durante el almacenamiento de aeronaves.
+  ```
+
+---
+
+## ATA Chapter 11: Placards & Markings 🪧
+
+- **[GP‑AM‑AMPEL‑0100‑11‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce la señalización y marcajes en la aeronave.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un informe introductorio que detalle la importancia de la señalización y marcajes en aeronaves para la seguridad operacional y normativa.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑11‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, DWG)  
+  *Descripción:* Estándares y ubicaciones aprobados para la señalización.  
+  *Optimal Format(s):* `.pdf`, `.dwg`, `.svg`, `.xlsx`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que especifique los estándares, ubicaciones y diseño de la señalización y marcajes en la aeronave.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑11‑B‑001‑A](#)**
+  *Tipo:* Being Tested (Development) (RPT, RES)  
+  *Descripción:* Pruebas de señalización aumentada mediante AR.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.mp4`  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un informe técnico sobre las pruebas en desarrollo de señalización aumentada en aeronaves, incluyendo tecnología AR y su impacto en la visibilidad y seguridad.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑11‑B‑THEO‑001‑A](#)**
+  *Tipo:* Speculative (Studying) (RPT)  
+  *Descripción:* Conceptos de señalización con luminiscencia cuántica.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.md`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento exploratorio que analice la viabilidad y aplicaciones de la señalización luminiscente cuántica en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑11‑C‑001‑A](#)**
+  *Tipo:* Condensed (Formal Scientific Consensus) (OV, REF)  
+  *Descripción:* Resumen de normas de señalización aeronáutica.  
+  *Optimal Format(s):* `.md`, `.pdf`, Wiki Page  
+  **Prompt Adicional:**
+  ```markdown
+  Elabora un resumen técnico condensado que compile los estándares y normativas de señalización aeronáutica a nivel internacional.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑11‑D‑001‑A](#)**
+  *Tipo:* Auto‑Adaptive Configuration (SDD, PROC)  
+  *Descripción:* Adaptación dinámica de la señalización mediante IA.  
+  *Optimal Format(s):* `.json`, `.yaml`, `.md`, API Spec  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un documento técnico que describa cómo se aplica IA para ajustar la señalización en tiempo real según variables operativas y ambientales.
+  ```
+
+---
+
+## ATA Chapter 12: Servicing – Routine 🛠️
+
+- **[GP‑AM‑AMPEL‑0100‑12‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce procedimientos de mantenimiento rutinario.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un informe introductorio que defina los procedimientos básicos y la importancia del mantenimiento rutinario en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑12‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, MAN)  
+  *Descripción:* Procedimientos y cronogramas oficiales de mantenimiento rutinario.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que incluya el cronograma y los procedimientos detallados para el mantenimiento rutinario de la aeronave.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑12‑B‑001‑A](#)**
+  *Tipo:* Being Tested (Development) (RPT, RES)  
+  *Descripción:* Pruebas de sistemas robóticos de servicio.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.log`, `.mp4`  
+  **Prompt Adicional:**
+  ```markdown
+  Elabora un reporte técnico sobre las pruebas en curso de sistemas robóticos de servicio, incluyendo metodologías, resultados preliminares y mejoras identificadas.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑12‑B‑THEO‑001‑A](#)**
+  *Tipo:* Speculative (Studying) (RPT)  
+  *Descripción:* Conceptos de autolimpieza mediante nanobots.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.md`  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un documento exploratorio que investigue la viabilidad de sistemas de autolimpieza mediante nanobots en aeronaves, describiendo principios de operación y aplicaciones potenciales.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑12‑C‑001‑A](#)**
+  *Tipo:* Condensed (Formal Scientific Consensus) (OV, REF)  
+  *Descripción:* Resumen de estándares para fluidos y lubricantes.  
+  *Optimal Format(s):* `.md`, `.pdf`, Wiki Page  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un resumen técnico condensado que compile los estándares y recomendaciones para la gestión de fluidos y lubricantes en sistemas aeronáuticos.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑12‑D‑001‑A](#)**
+  *Tipo:* Auto‑Adaptive Configuration (SDD, PLAN)  
+  *Descripción:* Utiliza IA para predecir necesidades de mantenimiento.  
+  *Optimal Format(s):* `.json`, `.yaml`, `.md`, API Spec  
+  **Prompt Adicional:**
+  ```markdown
+  Crea un documento técnico que explique cómo los algoritmos de IA pueden predecir las necesidades de mantenimiento en aeronaves y optimizar los cronogramas de servicio.
+  ```
+
+---
+
+## ATA Chapter 18: Vibration & Noise 🔈
+
+- **[GP‑AM‑AMPEL‑0100‑18‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce conceptos de vibración y ruido en el airframe.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento técnico introductorio sobre la importancia del control de vibraciones y ruido en la estructura de la aeronave, explicando sus efectos en el rendimiento y confort.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑18‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (SP, PROC)  
+  *Descripción:* Límites y procedimientos de monitoreo de vibración y ruido.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.xlsx`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que incluya los límites de vibración y ruido, junto con los procedimientos de monitoreo y medidas de mitigación.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑18‑B‑001‑A](#)**
+  *Tipo:* Being Tested (Development) (RPT, RES)  
+  *Descripción:* Pruebas de cancelación activa de ruido.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.csv`, `.wav`/`.flac`  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un informe técnico sobre las pruebas en desarrollo de sistemas de cancelación activa de ruido, describiendo la tecnología, metodología y resultados preliminares.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑18‑B‑THEO‑001‑A](#)**
+  *Tipo:* Speculative (Studying) (RPT, CAL)  
+  *Descripción:* Conceptos de amortiguación acústica cuántica.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.md`, `.ipynb`  
+  **Prompt Adicional:**
+  ```markdown
+  Elabora un documento exploratorio que analice la posibilidad de aplicar principios cuánticos para mejorar la amortiguación acústica en estructuras aeronáuticas.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑18‑C‑001‑A](#)**
+  *Tipo:* Condensed (Formal Scientific Consensus) (OV, REF)  
+  *Descripción:* Resumen de principios aeroacústicos y normativas de ruido.  
+  *Optimal Format(s):* `.md`, `.pdf`, Wiki Page  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un resumen técnico condensado que compile los principios aeroacústicos y normativas de ruido relevantes en el diseño y operación de aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑18‑D‑001‑A](#)**
+  *Tipo:* Auto‑Adaptive Configuration (SDD, PROC)  
+  *Descripción:* Optimización en tiempo real de perfiles de ruido mediante IA.  
+  *Optimal Format(s):* `.json`, `.yaml`, `.md`, API Spec  
+  **Prompt Adicional:**
+  ```markdown
+  Crea un documento técnico que explique cómo se utiliza la IA para ajustar y optimizar los perfiles de ruido en tiempo real, basándose en la monitorización continua de condiciones de vuelo.
+  ```
+
+---
+
+## ATA Chapter 20: Fasteners, Bonding, NDT 🔩
+
+- **[GP‑AM‑AMPEL‑0100‑20‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Métodos y materiales para sujetadores, adhesivos y pruebas NDT.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que explique los fundamentos de sujetadores, adhesivos y métodos de pruebas NDT en la industria aeroespacial, resaltando sus aplicaciones.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑20‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (SP, CAT)  
+  *Descripción:* Materiales y normas aprobados para sujetadores y técnicas de unión.  
+  *Optimal Format(s):* `.pdf`, `.xlsx`, `.xml`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle los materiales y normas técnicas para sujetadores y adhesivos utilizados en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑20‑B‑001‑A](#)**
+  *Tipo:* Being Tested (Development) (RPT, RES)  
+  *Descripción:* Pruebas de técnicas avanzadas de unión en compuestos.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.csv`  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un informe técnico sobre las pruebas en desarrollo de técnicas avanzadas de unión en compuestos, incluyendo metodologías de ensayo y resultados preliminares.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑20‑B‑THEO‑001‑A](#)**
+  *Tipo:* Speculative (Studying) (RPT, CAL)  
+  *Descripción:* Conceptos de materiales autorreparables y sensores cuánticos para NDT.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.md`  
+  **Prompt Adicional:**
+  ```markdown
+  Elabora un documento exploratorio que discuta el potencial de materiales autorreparables y el uso de sensores cuánticos para mejorar las técnicas NDT en la industria aeroespacial.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑20‑C‑001‑A](#)**
+  *Tipo:* Condensed (Formal Scientific Consensus) (OV, REF)  
+  *Descripción:* Resumen de estándares para sujetadores y métodos de unión.  
+  *Optimal Format(s):* `.md`, `.pdf`, Wiki Page  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un resumen técnico condensado que compile los estándares y recomendaciones sobre sujetadores y métodos de unión en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑20‑D‑001‑A](#)**
+  *Tipo:* Auto‑Adaptive Configuration (SDD, PROC)  
+  *Descripción:* Sistemas basados en IA para detección de defectos en NDT.  
+  *Optimal Format(s):* `.json`, `.yaml`, `.md`, API Spec  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un documento técnico que explique cómo la IA se utiliza para la detección de defectos en pruebas NDT, incluyendo ejemplos de algoritmos predictivos y resultados esperados.
+  ```
+
+---
+
+## ATA Chapter 21: Air Conditioning & Pressurization ❄️
+
+- **[GP‑AM‑AMPEL‑0100‑21‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Presenta los sistemas de aire acondicionado y presurización.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que detalle los fundamentos y la importancia de los sistemas de aire acondicionado y presurización en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑21‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, MAN)  
+  *Descripción:* Especificaciones y límites operativos del sistema de climatización.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que especifique las especificaciones, límites operativos y procedimientos de verificación del sistema de climatización en la aeronave.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑21‑B‑001‑A](#)**
+  *Tipo:* Being Tested (Development) (RPT, RES)  
+  *Descripción:* Pruebas de integración del sistema de climatización ecológico (ECS).  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.csv`  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un informe técnico sobre las pruebas en desarrollo de integración del sistema de climatización ecológico, incluyendo metodologías de ensayo y análisis de resultados.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑21‑B‑THEO‑001‑A](#)**
+  *Tipo:* Speculative (Studying) (RPT, CAL)  
+  *Descripción:* Conceptos cuánticos para refrigeración y purificación del aire.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.md`, `.ipynb`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento exploratorio que analice la aplicación de conceptos cuánticos en sistemas de refrigeración y purificación del aire en aeronaves, incluyendo estudios teóricos y simulaciones.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑21‑C‑001‑A](#)**
+  *Tipo:* Condensed (Formal Scientific Consensus) (OV, REF)  
+  *Descripción:* Resumen de principios de control ambiental en cabinas.  
+  *Optimal Format(s):* `.md`, `.pdf`, Wiki Page  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un resumen técnico condensado que compile los principios fundamentales de control ambiental en cabinas, basado en consensos de expertos y normativas internacionales.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑21‑D‑001‑A](#)**
+  *Tipo:* Auto‑Adaptive Configuration (SDD, PROC)  
+  *Descripción:* Optimiza la climatización de la cabina mediante IA.  
+  *Optimal Format(s):* `.json`, `.yaml`, `.md`, API Spec  
+  **Prompt Adicional:**
+  ```markdown
+  Crea un documento técnico que describa cómo la IA se utiliza para optimizar en tiempo real la climatización de la cabina, integrando datos de sensores y condiciones externas.
+  ```
+
+---
+
+## ATA Chapter 22: Auto Flight 💺
+
+- **[GP‑AM‑AMPEL‑0100‑22‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de vuelo automático.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que defina los conceptos básicos y componentes del sistema de vuelo automático en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑22‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, MAN)  
+  *Descripción:* Modos y procedimientos aprobados del piloto automático.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle los modos y procedimientos de operación del piloto automático, incluyendo los protocolos de transición a control manual.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑22‑B‑001‑A](#)**
+  *Tipo:* Being Tested (Development) (RPT, RES)  
+  *Descripción:* Pruebas de sistemas de vuelo automático basados en heurísticas IA.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.ipynb`, `.csv`  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un informe técnico sobre las pruebas en desarrollo de sistemas de vuelo automático que utilizan heurísticas de IA, con análisis de rendimiento y desafíos encontrados.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑22‑B‑THEO‑001‑A](#)**
+  *Tipo:* Speculative (Studying) (RPT)  
+  *Descripción:* Conceptos de control de vuelo mejorado mediante tecnología cuántica.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.md`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento exploratorio que discuta la integración de tecnologías cuánticas en el control de vuelo, destacando posibles mejoras en la precisión y respuesta del sistema.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑22‑C‑001‑A](#)**
+  *Tipo:* Condensed (Formal Scientific Consensus) (OV, REF)  
+  *Descripción:* Resumen de principios de diseño de sistemas de control de vuelo.  
+  *Optimal Format(s):* `.md`, `.pdf`, Wiki Page  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un resumen técnico condensado que compile los principios fundamentales del diseño de sistemas de control de vuelo basados en consenso científico.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑22‑D‑001‑A](#)**
+  *Tipo:* Auto‑Adaptive Configuration (SDD, PROC)  
+  *Descripción:* Implementa IA para ajustar dinámicamente las leyes de control de vuelo.  
+  *Optimal Format(s):* `.json`, `.yaml`, `.md`, API Spec  
+  **Prompt Adicional:**
+  ```markdown
+  Elabora un documento técnico que describa la aplicación de algoritmos de IA para el ajuste dinámico de las leyes de control de vuelo, incluyendo ejemplos y casos de éxito.
+  ```
+
+---
+
+## ATA Chapter 23: Communications 📡
+
+- **[GP‑AM‑AMPEL‑0100‑23‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de comunicaciones en la aeronave.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un informe introductorio sobre la importancia y funciones de los sistemas de comunicaciones en aeronaves, resaltando su papel en la seguridad operacional.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑23‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especifica frecuencias y protocolos aprobados para comunicaciones.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.xlsx`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las frecuencias, protocolos y configuraciones estándar de los sistemas de comunicaciones en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑23‑B‑001‑A](#)**
+  *Tipo:* Being Tested (Development) (RPT, RES)  
+  *Descripción:* Pruebas de sistemas de comunicaciones cuánticas.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.ipynb`, `.csv`  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un informe técnico sobre las pruebas en desarrollo de sistemas de comunicaciones cuánticas, incluyendo metodologías de ensayo y análisis de resultados.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑23‑B‑THEO‑001‑A](#)**
+  *Tipo:* Speculative (Studying) (RPT)  
+  *Descripción:* Conceptos de comunicaciones mediante entrelazamiento cuántico.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.md`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento exploratorio que analice la viabilidad y aplicaciones potenciales de las comunicaciones mediante entrelazamiento cuántico en entornos aeronáuticos.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑23‑C‑001‑A](#)**
+  *Tipo:* Condensed (Formal Scientific Consensus) (OV, REF)  
+  *Descripción:* Resumen de normas y estándares de comunicaciones aeronáuticas.  
+  *Optimal Format(s):* `.md`, `.pdf`, Wiki Page  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un resumen técnico condensado que compile las normas y estándares internacionales aplicables a los sistemas de comunicaciones en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑23‑D‑001‑A](#)**
+  *Tipo:* Auto‑Adaptive Configuration (SDD, PROC)  
+  *Descripción:* Optimización del espectro y asignación de frecuencias con IA.  
+  *Optimal Format(s):* `.json`, `.yaml`, `.md`, API Spec  
+  **Prompt Adicional:**
+  ```markdown
+  Elabora un documento técnico que describa cómo se utilizan algoritmos de IA para la optimización del espectro y la asignación de frecuencias en sistemas de comunicaciones aeronáuticas.
+  ```
+
+---
+
+## ATA Chapter 24: Electrical Power ⚡
+
+- **[GP‑AM‑AMPEL‑0100‑24‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de energía eléctrica de la aeronave.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa la arquitectura y los componentes del sistema de energía eléctrica en una aeronave.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑24‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y límites operativos del sistema eléctrico.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual técnico aprobado que detalle las especificaciones y límites operativos del sistema eléctrico de la aeronave, incluyendo diagramas de distribución.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑24‑B‑001‑A](#)**
+  *Tipo:* Being Tested (Development) (RPT, RES)  
+  *Descripción:* Pruebas de integración de sistemas de energía basados en AEHCS.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.csv`  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un informe técnico sobre las pruebas de integración de sistemas de energía basados en AEHCS, con análisis de rendimiento y detección de anomalías.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑24‑B‑THEO‑001‑A](#)**
+  *Tipo:* Speculative (Studying) (RPT)  
+  *Descripción:* Conceptos de transferencia de energía cuántica.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.md`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento exploratorio que analice los fundamentos teóricos y posibles aplicaciones de la transferencia de energía cuántica en sistemas eléctricos de aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑24‑C‑001‑A](#)**
+  *Tipo:* Condensed (Formal Scientific Consensus) (OV, REF)  
+  *Descripción:* Resumen de principios y normativas de sistemas eléctricos aeronáuticos.  
+  *Optimal Format(s):* `.md`, `.pdf`, Wiki Page  
+  **Prompt Adicional:**
+  ```markdown
+  Elabora un resumen técnico condensado que compile los principios básicos y normativas de los sistemas eléctricos en la industria aeronáutica.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑24‑D‑001‑A](#)**
+  *Tipo:* Auto‑Adaptive Configuration (SDD, PROC)  
+  *Descripción:* Optimización de la gestión y distribución de energía mediante IA.  
+  *Optimal Format(s):* `.json`, `.yaml`, `.md`, API Spec  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un documento técnico que describa la aplicación de algoritmos de IA para la gestión y optimización de la distribución de energía en aeronaves.
+  ```
+
+---
+
+## ATA Chapter 25: Equipment/Furnishings 🛋️
+
+- **[GP‑AM‑AMPEL‑0100‑25‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de equipamiento y mobiliario de la cabina.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que detalle los fundamentos y la importancia del equipamiento y mobiliario en la cabina de una aeronave.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑25‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, CAT)  
+  *Descripción:* Listados y layouts oficiales de equipamiento de cabina.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.xlsx`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que incluya listas de equipamiento, layouts y configuraciones estándar para la cabina.
+  ```
+
+*(Las entradas para otros subtemas de ATA 25, como asientos, galleys, lavatorios y equipos de emergencia, se estructuran de forma similar.)*
+
+---
+
+## ATA Chapter 26: Fire Protection 🔥
+
+- **[GP‑AM‑AMPEL‑0100‑26‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de protección contra incendios en la aeronave.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que detalle la importancia de los sistemas de protección contra incendios en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑26‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, MAN)  
+  *Descripción:* Procedimientos oficiales para protección contra incendios.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y procedimientos de protección contra incendios.
+  ```
+
+*(Se incluyen entradas adicionales para sistemas de detección, supresión y zonas de protección, siguiendo el mismo patrón.)*
+
+---
+
+## ATA Chapter 27: Flight Controls 🕹️
+
+- **[GP‑AM‑AMPEL‑0100‑27‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de control de vuelo.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa la importancia y los componentes de los sistemas de control de vuelo en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑27‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, MAN)  
+  *Descripción:* Especificaciones y procedimientos para el control de vuelo.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones, límites y procedimientos de los sistemas de control de vuelo.
+  ```
+
+*(Se incluirán entradas para controles primarios, secundarios y lógica de vuelo, siguiendo el mismo esquema.)*
+
+---
+
+## ATA Chapter 28: Fuel ⛽
+
+- **[GP‑AM‑AMPEL‑0100‑28‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los conceptos del sistema de combustible.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa los fundamentos y la importancia del sistema de combustible en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑28‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y límites para el sistema de combustible.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.xlsx`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y procedimientos para el manejo del combustible.
+  ```
+
+*(Se documentan adaptaciones especiales para AMPEL360XWLRGA, dado su potencial sistema AEHCS.)*
+
+---
+
+## ATA Chapter 29: Hydraulic Power 💧
+
+- **[GP‑AM‑AMPEL‑0100‑29‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas hidráulicos de la aeronave.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que explique la importancia y funcionamiento de los sistemas hidráulicos en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑29‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y normas para el sistema hidráulico.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y procedimientos del sistema hidráulico.
+  ```
+
+---
+
+## ATA Chapter 30: Ice & Rain Protection 🌧️
+
+- **[GP‑AM‑AMPEL‑0100‑30‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de protección contra hielo y lluvia.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un informe introductorio que describa los desafíos y fundamentos de la protección contra hielo y lluvia en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑30‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, MAN)  
+  *Descripción:* Procedimientos oficiales para protección contra hielo y lluvia.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle los procedimientos de protección contra hielo y lluvia, incluyendo especificaciones de componentes.
+  ```
+
+---
+
+## ATA Chapter 31: Instruments 📊
+
+- **[GP‑AM‑AMPEL‑0100‑31‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de indicación y registro de datos.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que explique la importancia de los sistemas de indicación y registro en la monitorización del rendimiento y la seguridad.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑31‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones de instrumentos y formatos de datos aprobados.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.xlsx`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y formatos de datos para los sistemas de indicación y registro en aeronaves.
+  ```
+
+---
+
+## ATA Chapter 32: Landing Gear 🛬
+
+- **[GP‑AM‑AMPEL‑0100‑32‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce el tren de aterrizaje de la aeronave.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que explique la función y componentes del tren de aterrizaje, destacando su importancia en la seguridad operativa.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑32‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y procedimientos para el tren de aterrizaje.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones, procedimientos de operación y mantenimiento del tren de aterrizaje.
+  ```
+
+---
+
+## ATA Chapter 33: Lights 💡
+
+- **[GP‑AM‑AMPEL‑0100‑33‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de iluminación de la aeronave.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un informe introductorio que describa la importancia y componentes de los sistemas de iluminación en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑33‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones aprobadas de iluminación.  
+  *Optimal Format(s):* `.pdf`, `.dwg`, `.svg`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y normativas de iluminación para aeronaves, incluyendo diagramas y ejemplos prácticos.
+  ```
+
+---
+
+## ATA Chapter 34: Navigation 🧭
+
+- **[GP‑AM‑AMPEL‑0100‑34‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de navegación de la aeronave.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que explique los fundamentos y componentes de los sistemas de navegación en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑34‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y límites de precisión para navegación.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.xlsx`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones, límites y criterios de precisión para los sistemas de navegación en aeronaves.
+  ```
+
+---
+
+## ATA Chapter 35: Oxygen 🫁
+
+- **[GP‑AM‑AMPEL‑0100‑35‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de oxígeno a bordo.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa la función y componentes de los sistemas de oxígeno en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑35‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y procedimientos aprobados para la generación y distribución de oxígeno.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle los procedimientos y normativas para la generación y distribución de oxígeno en la aeronave.
+  ```
+
+---
+
+## ATA Chapter 36: Pneumatic 💨
+
+- **[GP‑AM‑AMPEL‑0100‑36‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas neumáticos de la aeronave.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que explique el funcionamiento básico de los sistemas neumáticos en aeronaves y su importancia operacional.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑36‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Procedimientos y especificaciones aprobadas para sistemas neumáticos.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y protocolos de mantenimiento para los sistemas neumáticos en aeronaves.
+  ```
+
+---
+
+## ATA Chapter 38: Water/Waste 🚰
+
+- **[GP‑AM‑AMPEL‑0100‑38‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de gestión de agua y residuos.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa los fundamentos de los sistemas de gestión de agua y residuos en aeronaves y su impacto en la eficiencia operativa.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑38‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Procedimientos y especificaciones para la gestión de agua y residuos.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que incluya procedimientos detallados para la gestión de agua potable y residuos en aeronaves.
+  ```
+
+---
+
+## ATA Chapter 45: Central Maintenance System (CMS) ⚙️
+
+- **[GP‑AM‑AMPEL‑0100‑45‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce el sistema central de mantenimiento (CMS).  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa la importancia y funciones del Sistema Central de Mantenimiento (CMS) en la aeronave.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑45‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, MAN)  
+  *Descripción:* Especificaciones y acceso a datos del CMS.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones del CMS, cómo se accede a los datos y su integración en la cadena de mantenimiento.
+  ```
+
+---
+
+## ATA Chapter 46: Information Systems 🌐
+
+- **[GP‑AM‑AMPEL‑0100‑46‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de información y comunicación interna.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que explique la arquitectura de los sistemas de información y comunicación interna en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑46‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones de redes y protocolos de información.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.xlsx`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones de redes y protocolos de comunicación interna, incluyendo diagramas de flujo de datos.
+  ```
+
+---
+
+## ATA Chapter 49: Airborne Auxiliary Power (AAP) 🔋
+
+- **[GP‑AM‑AMPEL‑0100‑49‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce el sistema de potencia auxiliar (AAP).  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa la función y componentes del sistema de potencia auxiliar (AAP) en una aeronave.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑49‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y rendimiento aprobados del AAP.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y parámetros de rendimiento del AAP, junto con procedimientos de prueba y mantenimiento.
+  ```
+
+---
+
+## ATA Chapter 51: Standard Practices – Airframe Structures
+
+- **[GP‑AM‑AMPEL‑0201‑51‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los principios generales del diseño estructural del airframe.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que explique los fundamentos del diseño estructural en aeronaves y su importancia en la seguridad.
+  ```
+
+- **[GP‑AM‑AMPEL‑0201‑51‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones aprobadas para materiales y límites de carga en estructuras.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones de materiales y límites de carga para las estructuras de la aeronave.
+  ```
+
+---
+
+## ATA Chapter 52: Doors 🚪
+
+- **[GP‑AM‑AMPEL‑0201‑52‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas y tipos de puertas en la aeronave.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que detalle los diferentes tipos de puertas en aeronaves y sus funciones.
+  ```
+
+- **[GP‑AM‑AMPEL‑0201‑52‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y procedimientos de emergencia para puertas.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y protocolos de emergencia para puertas en aeronaves.
+  ```
+
+---
+
+## ATA Chapter 53: Fuselage 🛡️
+
+- **[GP‑AM‑AMPEL‑0201‑53‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce el diseño y estructura del fuselaje.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa la importancia del fuselaje en la integridad y seguridad de la aeronave, y detalle sus componentes principales.
+  ```
+
+- **[GP‑AM‑AMPEL‑0201‑53‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y normas para el diseño del fuselaje.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y normativas para el fuselaje de la aeronave.
+  ```
+
+---
+
+## ATA Chapter 54: Nacelles/Pylons 🛩️
+
+- **[GP‑AM‑AMPEL‑0201‑54‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de nacelles y pylons, adaptados para el Q-01.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que explique la integración estructural de los nacelles y pylons, con especial énfasis en la adaptación para el Q-01.
+  ```
+
+- **[GP‑AM‑AMPEL‑0201‑54‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Procedimientos para la integración del Q-01 en nacelles/pylons.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y procedimientos para la integración del Q-01 en los nacelles/pylons, incluyendo aislamiento de vibraciones y gestión térmica.
+  ```
+
+---
+
+## ATA Chapter 55: Stabilizers 🛩️
+
+- **[GP‑AM‑AMPEL‑0201‑55‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de estabilizadores.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa la función y componentes de los estabilizadores en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0201‑55‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y procedimientos para los estabilizadores.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y normas para el mantenimiento de los estabilizadores.
+  ```
+
+---
+
+## ATA Chapter 56: Windows 🪟
+
+- **[GP‑AM‑AMPEL‑0201‑56‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de ventanas de la aeronave.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un informe introductorio que detalle la importancia, tipos y requisitos de las ventanas en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0201‑56‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones aprobadas para ventanas de la aeronave.  
+  *Optimal Format(s):* `.pdf`, `.dwg`, `.svg`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y normas de instalación y mantenimiento de las ventanas.
+  ```
+
+---
+
+## ATA Chapter 57: Wings 🛩️
+
+- **[GP‑AM‑AMPEL‑0201‑57‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce el diseño y funciones de las alas.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que explique la importancia del diseño de las alas y sus principales componentes estructurales y aerodinámicos.
+  ```
+
+- **[GP‑AM‑AMPEL‑0201‑57‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y procedimientos para el diseño estructural de las alas.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y métodos de fabricación, así como los procedimientos de mantenimiento para las alas.
+  ```
+
+---
+
+## ATA Chapter 58: Wing Anti-Icing ❄️
+
+- **[GP‑AM‑AMPEL‑0100‑58‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce el sistema de anti-icing para alas.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa la importancia y fundamentos del sistema de anti-icing para alas.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑58‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y procedimientos del sistema de anti-icing en alas.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones, componentes y procedimientos de operación del sistema de anti-icing para alas.
+  ```
+
+---
+
+## ATA Chapter 70: Standard Practices - Engine 🛠️
+
+- **[GP‑AM‑AMPEL‑0100‑70‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce las prácticas estándar para el sistema Q-01.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que explique las prácticas estándar para la operación y mantenimiento del sistema de propulsión Q-01.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑70‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, MAN)  
+  *Descripción:* Procedimientos de inspección y mantenimiento para el Q-01.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las prácticas estándar para la inspección y el mantenimiento del sistema de propulsión Q-01.
+  ```
+
+---
+
+## ATA Chapter 71: Powerplant (Q-01 Propulsion System) ⚙️
+
+- **[GP‑AM‑AMPEL‑0100‑71‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce el sistema de propulsión Q-01 como grupo motriz.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa la arquitectura y componentes del sistema de propulsión Q-01.
+  ```
+
+---
+
+## ATA Chapter 72: Engine (Q-01) 🚀
+
+- **[GP‑AM‑AMPEL‑0100‑72‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce el núcleo del Q-01 y su tecnología de entanglement.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que explique la tecnología subyacente del Q-01 y sus principales componentes.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑72‑B‑001‑A](#)**
+  *Tipo:* Being Tested (Development) (RPT, RES)  
+  *Descripción:* Pruebas de integración y desempeño del Q-01.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.csv`  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un informe técnico sobre las pruebas en desarrollo del Q-01, incluyendo análisis de desempeño y resultados preliminares.
+  ```
+
+---
+
+## ATA Chapter 72‑Q01: Propulsion – Quantum Extension ✨
+
+- **[GP‑AM‑AMPEL‑0100‑72‑Q01‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce la extensión cuántica del sistema de propulsión Q-01.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que explique el concepto de extensión cuántica en sistemas de propulsión y sus fundamentos teóricos.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑72‑Q01‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y límites operativos para la extensión cuántica.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y límites de la extensión cuántica en el sistema de propulsión.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑72‑Q01‑B‑001‑A](#)**
+  *Tipo:* Being Tested (Development) (RPT, RES)  
+  *Descripción:* Pruebas del módulo QEE en el contexto de extensión cuántica.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.csv`  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un informe técnico sobre las pruebas en desarrollo del módulo de extensión cuántica QEE, incluyendo metodologías y resultados preliminares.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑72‑Q01‑B‑THEO‑001‑A](#)**
+  *Tipo:* Speculative (Studying) (RPT, CAL)  
+  *Descripción:* Conceptos avanzados de manipulación de campos cuánticos en propulsión.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.md`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento exploratorio que discuta la viabilidad y aplicaciones de la manipulación de campos cuánticos para mejorar la eficiencia de la propulsión.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑72‑Q01‑C‑001‑A](#)**
+  *Tipo:* Condensed (Formal Scientific Consensus) (OV, REF)  
+  *Descripción:* Resumen de los fundamentos teóricos de la extensión cuántica.  
+  *Optimal Format(s):* `.md`, `.pdf`, Wiki Page  
+  **Prompt Adicional:**
+  ```markdown
+  Elabora un resumen técnico condensado que compile los fundamentos teóricos y normativas para la extensión cuántica de sistemas de propulsión.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑72‑Q01‑D‑001‑A](#)**
+  *Tipo:* Auto‑Adaptive Configuration (SDD, PROC)  
+  *Descripción:* Optimización del control del campo cuántico mediante IA en la extensión.  
+  *Optimal Format(s):* `.json`, `.yaml`, `.md`, API Spec  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un documento técnico que explique cómo se utilizan algoritmos de IA para optimizar el control y la estabilidad del campo cuántico en la extensión del sistema de propulsión.
+  ```
+
+---
+
+## ATA Chapter 73: Engine Oil System 🛢️
+
+- **[GP‑AM‑AMPEL‑0100‑73‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce el sistema de lubricación del motor.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa el funcionamiento y la importancia del sistema de lubricación en motores aeronáuticos.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑73‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y procedimientos para el sistema de aceite.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones, procedimientos de mantenimiento y protocolos de seguridad para el sistema de lubricación del motor.
+  ```
+
+---
+
+## ATA Chapter 74: Engine Fuel and Control ⛽
+
+- **[GP‑AM‑AMPEL‑0100‑74‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de combustible y control del motor.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa la integración y funcionamiento de los sistemas de combustible y control en motores aeronáuticos.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑74‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y procedimientos para el sistema de combustible.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y protocolos de operación del sistema de combustible.
+  ```
+
+---
+
+## ATA Chapter 75: Engine Bleed Air System ⚙️
+
+- **[GP‑AM‑AMPEL‑0100‑75‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce el sistema de aire de sangrado del motor.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que explique la función y la importancia del sistema de aire de sangrado en motores aeronáuticos.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑75‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y procedimientos para el sistema de aire de sangrado.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y procedimientos de operación del sistema de aire de sangrado.
+  ```
+
+---
+
+## ATA Chapter 76: Engine Air Inlet and Exhaust 💨
+
+- **[GP‑AM‑AMPEL‑0100‑76‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de admisión y escape de aire del motor.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa el funcionamiento y la importancia de los sistemas de admisión y escape de aire en motores aeronáuticos.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑76‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y procedimientos para los sistemas de admisión y escape.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y protocolos de operación para los sistemas de admisión y escape de aire.
+  ```
+
+---
+
+## ATA Chapter 77: Engine Indicating 🎛️
+
+- **[GP‑AM‑AMPEL‑0100‑77‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de instrumentación del motor.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa la importancia de la instrumentación para el monitoreo del rendimiento del motor.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑77‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y normas para la instrumentación del motor.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y normas de los sistemas de instrumentación del motor.
+  ```
+
+---
+
+## ATA Chapter 78: Engine Starting 🚀
+
+- **[GP‑AM‑AMPEL‑0100‑78‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de arranque del motor.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa los componentes y procedimientos de arranque de motores aeronáuticos.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑78‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Procedimientos y especificaciones para el arranque del motor.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y procedimientos para el arranque del motor, incluyendo protocolos de verificación.
+  ```
+
+---
+
+## ATA Chapter 86: Cockpit Doors 🚪
+
+- **[GP‑AM‑AMPEL‑0100‑86‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de puertas del cockpit.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa las funciones y características de las puertas del cockpit en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑86‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y protocolos para puertas del cockpit.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones, protocolos de emergencia y medidas de seguridad para las puertas del cockpit.
+  ```
+
+---
+
+## ATA Chapter 87: Passenger/Crew Doors 🚪
+
+- **[GP‑AM‑AMPEL‑0100‑87‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de puertas para pasajeros y tripulación.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que detalle la importancia y funcionalidades de las puertas para pasajeros y tripulación.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑87‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Procedimientos y especificaciones para puertas de pasajeros y tripulación.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones, protocolos de evacuación y procedimientos de emergencia para puertas de pasajeros y tripulación.
+  ```
+
+---
+
+## ATA Chapter 88: Cargo Doors 🚪
+
+- **[GP‑AM‑AMPEL‑0100‑88‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de puertas de carga.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa las características y la importancia de los sistemas de puertas de carga en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑88‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Procedimientos y especificaciones para puertas de carga.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle los procedimientos de operación y seguridad para las puertas de carga.
+  ```
+
+---
+
+## ATA Chapter 89: Landing Gear Doors 🚪
+
+- **[GP‑AM‑AMPEL‑0100‑89‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de puertas del tren de aterrizaje.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa la función y características de las puertas del tren de aterrizaje.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑89‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Procedimientos y especificaciones para puertas del tren de aterrizaje.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y procedimientos para la operación de las puertas del tren de aterrizaje.
+  ```
+
+---
+
+## ATA Chapter 90: Equipment Doors / Access Panels 🚪
+
+- **[GP‑AM‑AMPEL‑0100‑90‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de puertas y paneles de acceso.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que explique la importancia y funcionamiento de los sistemas de puertas y paneles de acceso en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑90‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones aprobadas para paneles y puertas de acceso.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y procedimientos para la instalación y mantenimiento de puertas y paneles de acceso.
+  ```
+
+---
+
+## ATA Chapter 91: Cockpit Windows 🪟
+
+- **[GP‑AM‑AMPEL‑0100‑91‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de ventanas del cockpit.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un informe introductorio que describa la importancia de las ventanas del cockpit en términos de visibilidad y seguridad operacional.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑91‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones y normativas aprobadas para ventanas del cockpit.  
+  *Optimal Format(s):* `.pdf`, `.dwg`, `.svg`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones, instalación y mantenimiento de las ventanas del cockpit.
+  ```
+
+---
+
+## ATA Chapter 92: Cabin Windows 🪟
+
+- **[GP‑AM‑AMPEL‑0100‑92‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de ventanas de cabina.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa la importancia y características de las ventanas de cabina en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑92‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones aprobadas para ventanas de cabina y vistas para pasajeros.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y criterios de instalación para las ventanas de cabina, garantizando la seguridad y confort.
+  ```
+
+---
+
+## ATA Chapter 93: Observation/Special Purpose Windows 🪟
+
+- **[GP‑AM‑AMPEL‑0100‑93‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce los sistemas de ventanas para observación y usos especiales.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa las aplicaciones y características de las ventanas diseñadas para observación y usos especiales en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑93‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Especificaciones aprobadas para ventanas de observación.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las especificaciones y protocolos para la instalación y mantenimiento de ventanas de observación y usos especiales.
+  ```
+
+---
+
+## ATA Chapter 99: Special / Emerging Tech 🚀
+
+- **[GP‑AM‑AMPEL‑0100‑99‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce tecnologías especiales y emergentes en la aeronave.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa las innovaciones tecnológicas emergentes en aeronaves, con énfasis en aplicaciones prácticas.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑99‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Integraciones y casos de seguridad para tecnologías emergentes.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un manual operativo aprobado que detalle las integraciones y medidas de seguridad para la implementación de tecnologías emergentes en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑99‑B‑001‑A](#)**
+  *Tipo:* Being Tested (Development) (RPT, RES)  
+  *Descripción:* Pruebas de integración de suites de sensores avanzados para tecnologías emergentes.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.csv`  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un informe técnico sobre las pruebas en desarrollo de suites de sensores avanzados para tecnologías emergentes, incluyendo metodologías y resultados preliminares.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑99‑B‑THEO‑001‑A](#)**
+  *Tipo:* Speculative (Studying) (RPT, CAL)  
+  *Descripción:* Conceptos de sensores y actuadores cuánticos para integración de tecnologías emergentes.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.md`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento exploratorio que analice la viabilidad y aplicaciones de sensores y actuadores cuánticos en la integración de tecnologías emergentes en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑99‑C‑001‑A](#)**
+  *Tipo:* Condensed (Formal Scientific Consensus) (OV, REF)  
+  *Descripción:* Resumen de principios de innovación y preparación tecnológica en el sector aeroespacial.  
+  *Optimal Format(s):* `.md`, `.pdf`, Wiki Page  
+  **Prompt Adicional:**
+  ```markdown
+  Elabora un resumen técnico condensado que compile los principios de innovación, preparación tecnológica y normativas para la adopción de tecnologías emergentes en aeronaves.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑99‑D‑001‑A](#)**
+  *Tipo:* Auto‑Adaptive Configuration (SDD, PROC)  
+  *Descripción:* Gestión adaptativa de la adopción tecnológica mediante IA.  
+  *Optimal Format(s):* `.json`, `.yaml`, `.md`, API Spec  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un documento técnico que explique cómo se utilizan algoritmos de IA para gestionar la adopción y el ciclo de vida de tecnologías emergentes en la industria aeronáutica.
+  ```
+
+---
+
+## ATA Chapter 100: Certification and Documentation 📜
+
+- **[GP‑AM‑AMPEL‑0100‑100‑001‑A](#)**
+  *Tipo:* General Document (OV)  
+  *Descripción:* Introduce el plan de certificación y la base documental para la aeronave.  
+  *Optimal Format(s):* `.md`, `.docx`, `.pdf`  
+  **Prompt Adicional:**
+  ```markdown
+  Genera un documento introductorio que describa el plan de certificación y la base documental que cumplirá la aeronave con los requisitos regulatorios.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑100‑A‑001‑A](#)**
+  *Tipo:* Approved (In Service) (PROC, SP)  
+  *Descripción:* Documentación oficial de certificación y cumplimiento regulatorio.  
+  *Optimal Format(s):* `.pdf`, `.xml`, `.html`  
+  **Prompt Adicional:**
+  ```markdown
+  Desarrolla un paquete de certificación que incluya todas las evidencias, reportes de cumplimiento y documentación necesaria para la aprobación regulatoria de la aeronave.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑100‑B‑001‑A](#)**
+  *Tipo:* Being Tested (Development) (RPT, RES)  
+  *Descripción:* Pruebas y validaciones para la certificación.  
+  *Optimal Format(s):* `.docx`, `.pdf`, `.csv`  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un informe técnico sobre las pruebas y validaciones realizadas para cumplir con los requisitos de certificación, incluyendo resultados y análisis de conformidad.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑100‑C‑001‑A](#)**
+  *Tipo:* Condensed (Formal Scientific Consensus) (OV, REF)  
+  *Descripción:* Resumen de la documentación de certificación y cumplimiento regulatorio.  
+  *Optimal Format(s):* `.md`, `.pdf`, Wiki Page  
+  **Prompt Adicional:**
+  ```markdown
+  Elabora un resumen técnico condensado que compile toda la documentación de certificación, evidencias de cumplimiento y planes de mantenimiento para la aeronave.
+  ```
+
+- **[GP‑AM‑AMPEL‑0100‑100‑D‑001‑A](#)**
+  *Tipo:* Auto‑Adaptive Configuration (SDD, PROC)  
+  *Descripción:* Gestión y actualización de la documentación de certificación mediante IA.  
+  *Optimal Format(s):* `.json`, `.yaml`, `.md`, API Spec  
+  **Prompt Adicional:**
+  ```markdown
+  Redacta un documento técnico que describa cómo se utilizan algoritmos de IA para gestionar y actualizar dinámicamente la documentación de certificación y mantenimiento de la aeronave.
+  ```
+
+---
+
+# 📑 Nota General
+Todos estos ítems forman parte del sistema COAFI, permitiendo la trazabilidad y actualización dinámica de la documentación a lo largo del ciclo de vida del proyecto AMPEL360XWLRGA. Los "Optimal Format(s)" son recomendaciones que facilitan la interoperabilidad en el ecosistema digital de GAIA AIR. En un entorno real, los enlaces interactivos dirigirían a la información detallada de cada documento.
+
+Si necesitas profundizar en algún capítulo o realizar ajustes adicionales, ¡solo indícamelo!
+```
+
+---
+
+Esta es la **lista completa** de documentos por capítulo ATA, con sus formatos óptimos y prompts generativos. Puedes utilizar esta plantilla para gestionar la documentación técnica digitalizada del AMPEL360XWLRGA y adaptarla conforme avance el proyecto.
 
 ```mermaid
 graph TD;
