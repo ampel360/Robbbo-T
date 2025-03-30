@@ -4969,12 +4969,7 @@ Puedes personalizar o ampliar cada entrada según las necesidades específicas d
 
 ---
 
-```markdown
-# 📑 Lista Completa de Documentos por Capítulo ATA – AMPEL360XWLRGA
 
-Cada ítem detalla el código (enlace simulado), tipo, descripción, formatos óptimos y un prompt generativo adicional.
-
----
 
 ## ATA Chapter 07: Lifting & Shoring 🏗️
 
@@ -6741,7 +6736,6 @@ Cada ítem detalla el código (enlace simulado), tipo, descripción, formatos ó
 # 📑 Nota General
 Todos estos ítems forman parte del sistema COAFI, permitiendo la trazabilidad y actualización dinámica de la documentación a lo largo del ciclo de vida del proyecto AMPEL360XWLRGA. Los "Optimal Format(s)" son recomendaciones que facilitan la interoperabilidad en el ecosistema digital de GAIA AIR. En un entorno real, los enlaces interactivos dirigirían a la información detallada de cada documento.
 
-Si necesitas profundizar en algún capítulo o realizar ajustes adicionales, ¡solo indícamelo!
 ```
 
 ---
