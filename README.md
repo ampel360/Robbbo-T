@@ -1,8 +1,18 @@
 
-# Robbbo-T Repository - Combined Table of Contents
+# Robbbo-T Repository
 
-**scope in repository: living functional and sustainable aestethics. Application Humanity**
+---
 
+## 🌍 Scope
+
+**Living Functional and Sustainable Aesthetics**  
+*Application: Humanity*
+
+Questo repository nasce come spazio di progettazione aperto, documentazione viva e riflessione tecnica orientata alla sostenibilità, all’etica distribuita e all’innovazione condivisa. Ogni modulo, manifesto o modello qui presente è parte di un ecosistema progettuale che mira a integrare funzionalità, bellezza e responsabilità umana.
+
+---
+
+ - **Combined Table of Content**
 ---
 
 ## README.md
