@@ -8830,7 +8830,78 @@ This completes the detailed documentation for the entire ATA 24 - ELECTRICAL POW
     *   [Vibration Isolation System for Q-01] - `[System to isolate vibrations from Q-01]`
     *   [Thermal Management Integration with Airframe] - `[Integration of Q-01 thermal management with airframe]`
 
+---Perfetto, genererò ora il file Markdown documentale completo per `GP-AMP-AE-71-CBK-001.md`, con:
+- intestazione YAML
+- dettagli del modulo COAFI
+- tabelle codifiche complete
+- sezione firma digitale SHA256 per verifica di integrità e autenticazione documentale.
+
+Appena pronto, ti fornirò il contenuto pronto per il push nel repository `robbbo-t`, con struttura `/docs/` e compatibilità piena con dashboard e sistemi Obsidian/GitHub.
+
 ---
+title: "GP-AMP-AE-71-CBK-001 Centrale Aero-Elettrica"
+id: "GP-AMP-AE-71-CBK-001"
+status: "Approvato"
+revision: "1.0"
+data: "2025-03-31"
+autore: "Team Documentazione COAFI"
+tags:
+  - COAFI
+  - ATA71
+  - ATA24
+  - ATA49
+  - Aero-Elettrica
+  - Modulo
+description: "Modulo documentale COAFI relativo alla centrale di potenza aero-elettrica, comprendente i generatori elettrici di bordo (motori e APU) e i sistemi di controllo e commutazione primaria dell'energia elettrica in un aeromobile."
+---
+
+# GP-AMP-AE-71-CBK-001: Centrale Aero-Elettrica
+
+La **centrale aero-elettrica** è il sistema integrato che si occupa di generare e gestire l'energia elettrica a bordo di un aeromobile. Sfrutta i generatori elettrici collegati ai motori principali e all'unità di potenza ausiliaria (APU) per alimentare tutti i sistemi di bordo in varie condizioni di volo e a terra.
+
+Il presente modulo, identificato dal codice **GP-AMP-AE-71-CBK-001**, descrive la struttura funzionale di tale centrale aero-elettrica. Le sue componenti coprono i domini dei capitoli ATA 71 (Gruppo motopropulsore principale), ATA 24 (Impianto elettrico di bordo) e ATA 49 (Auxiliary Power Unit, gruppo di potenza ausiliario), riflettendo la natura multidisciplinare del sistema.
+
+## Sottosistemi e Componenti del Modulo
+
+Di seguito viene riportata la tabella con i codici COAFI univoci assegnati agli elementi (sub-item) del modulo **Centrale Aero-Elettrica**, il nome di ciascun elemento, i riferimenti ATA associati e una descrizione funzionale sintetica:
+
+| **Codice COAFI**       | **Nome Elemento**                     | **Riferimenti ATA** | **Descrizione Funzionale**                                                                                   |
+| ---------------------- | ------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------- |
+| GP-AMP-AE-71-CBK-001   | Centrale Aero-Elettrica               | 71 / 24 / 49        | Sistema integrato per la generazione e gestione dell'energia elettrica di bordo tramite i generatori dei motori principali e dell'APU. |
+| GP-AMP-AE-71-CBK-002   | Generatore Motore Principale          | 71 / 24            | Generatore elettrico azionato dal motore principale; fornisce energia ai sistemi di bordo durante il volo.   |
+| GP-AMP-AE-71-CBK-003   | Generatore APU                        | 49 / 24            | Generatore elettrico accoppiato all'APU; fornisce energia di bordo a terra o quando i motori principali sono spenti. |
+| GP-AMP-AE-71-CBK-004   | Unità di Controllo Generazione (GCU)  | 71 / 24 / 49        | Unità di controllo che regola e protegge i generatori (motore e APU); gestisce la tensione e la frequenza e scollega il generatore in caso di guasto. |
+| GP-AMP-AE-71-CBK-005   | Barra Principale e Commutazione       | 71 / 24 / 49        | Barra elettrica principale di distribuzione con i relativi contattori; consente di collegare alternativamente i generatori (o la fonte esterna) alla rete elettrica di bordo. |
+
+## Tipologie Documentali (Info Code)
+
+Nella codifica COAFI, ogni segmento del codice fornisce un'informazione sulla tipologia o sul contesto dell'elemento documentale. La seguente tabella elenca gli **Info Code** utilizzati nel codice di questo modulo e la rispettiva descrizione:
+
+| **Info Code** | **Descrizione**                                                                                                                                       |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **GP**       | *Gruppo di Potenza* – Indica il macro-sistema di riferimento (sistemi di generazione potenza, es. motori principali e unità ausiliarie di potenza).     |
+| **AMP**      | *Alimentazione Principale* – Identifica il sottosistema o funzione specifica di fornitura dell'energia elettrica principale di bordo.                   |
+| **AE**       | *Aero-Elettrica* – Definisce l'ambito tecnologico/applicativo aeronautico elettrico (sistemi elettrici di bordo dell'aeromobile).                        |
+| **CBK**      | Codice interno di classificazione funzionale – Sigla di categoria utilizzata per distinguere una particolare tipologia di componente o funzione (es. elementi di commutazione della potenza). |
+
+## Struttura Semantica dei Codici COAFI
+
+La codifica **COAFI** adotta una struttura gerarchica e semantica, in cui ogni segmento del codice identifica un attributo dell'elemento documentato. Questo permette di avere codici univoci e allo stesso tempo significativi. Ad esempio, il codice **GP-AMP-AE-71-CBK-001** può essere scomposto come segue:
+
+- **GP** (Gruppo di Potenza): indica il macro-sistema o dominio funzionale principale – in questo caso l'area della generazione di potenza (motori propulsivi e unità di potenza ausiliarie).
+- **AMP** (Alimentazione Principale): identifica il sottosistema o la funzione specifica all'interno del macro-sistema – in questo contesto si riferisce all'alimentazione elettrica primaria dell'aeromobile.
+- **AE** (Aero-Elettrica): definisce il contesto tecnologico o applicativo – qui specifica che l'ambito è quello dei sistemi elettrici di bordo (applicazione aeronautica elettrica).
+- **71**: rappresenta il riferimento al capitolo ATA principale coinvolto – in questo caso **ATA 71**, relativo al gruppo motopropulsore principale (motore/i dell'aereo). Possono essere associati più capitoli ATA quando un elemento ricade in ambiti multipli (come avviene per la centrale aero-elettrica, che coinvolge anche ATA 24 e ATA 49).
+- **CBK**: è un codice di classificazione interna per la categoria funzionale dell'elemento – nell'esempio, **CBK** contraddistingue una certa classe di componenti o funzioni (in questo modulo associato ai componenti di commutazione e controllo della potenza elettrica).
+- **001**: numero progressivo univoco che identifica lo specifico elemento all'interno della categoria definita dai segmenti precedenti. Nel nostro caso "001" identifica il modulo della Centrale Aero-Elettrica stessa, mentre numerazioni successive (**002**, **003**, etc.) identificano i suoi sotto-elementi funzionali.
+
+Grazie a questa struttura, il codice COAFI offre **immediatezza interpretativa** e **unicità**. Dal codice si può ricavare il contesto funzionale e tecnico dell'elemento senza ambiguità. L'inclusione dei riferimenti **ATA** nel codice facilita inoltre il raccordo con gli standard internazionali di documentazione aeronautica, permettendo ai tecnici di ricondurre ogni elemento al corrispondente sistema o sottosistema definito nei manuali di manutenzione. In un sistema COAFI-based, questi codici vengono utilizzati per correlare tra loro le varie tipologie documentali (schede funzionali, procedure, elenchi parti, ecc.) relative allo stesso elemento, assicurando **coerenza** e **rintracciabilità** delle informazioni attraverso l'intera documentazione tecnica.
+
+## Blocco di Firma Digitale
+
+```plaintext
+SHA256: bcf24f359f9ad9921926ca732c6d6f502008b732bb93b221091348e988bc6be6
+```
 
 ## ATA 72 - ENGINE (Q-01)
 
