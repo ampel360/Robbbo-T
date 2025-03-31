@@ -1,6 +1,8 @@
 
 # Robbbo-T Repository - Combined Table of Contents
 
+**scope in repository: living functional and sustainable aestethics. Application Humanity**
+
 ---
 
 ## README.md
