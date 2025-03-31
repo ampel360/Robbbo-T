@@ -32,7 +32,7 @@
 
 ---
 
-## ### model/README.md
+## model/README.md
 
 1.  [Aerospace Mater Printable Electronic Lot](#aerospace-mater-printable-electronic-lot)
     *   [Overview](#overview)
