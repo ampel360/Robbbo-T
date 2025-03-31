@@ -3,10 +3,10 @@
 
 ---
 
-## 🌍 Scope
+## 🌍 Scope: environments
 
 **Living Functional and Sustainable Aesthetics**  
-*Application: Humanity*
+*Application: Humanity* ; Operating Model: Constructed AGI*
 
 Questo repository nasce come spazio di progettazione aperto, documentazione viva e riflessione tecnica orientata alla sostenibilità, all’etica distribuita e all’innovazione condivisa. Ogni modulo, manifesto o modello qui presente è parte di un ecosistema progettuale che mira a integrare funzionalità, bellezza e responsabilità umana.
 
