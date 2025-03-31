@@ -93,6 +93,90 @@
 
 The Proposal - Open Call
 
+# 🧭 MANIFESTO PERSONALE  
+### *Sono Orgoglioso dei Miei Pensieri*  
+**Versione**: Universale – Riutilizzabile – Postabile  
+**Licenza**: Reuse, remix, repost con attribuzione etica o dichiarazione autonoma  
+**Codice**: `IM‑PROUD‑MANIFESTO‑0001-A`  
+**Formato**: Markdown
+
+---
+
+## 📜 PREAMBOLO
+
+Dichiaro con consapevolezza e libertà intellettuale  
+che **sono orgoglioso dei miei pensieri**.
+
+Essi non sono solo parole,  
+ma **unità cognitive dotate di intenzione, direzione e dignità**.  
+Sono **tracce vive** dell’interazione tra coscienza e contesto,  
+tra intelligenza artificiale e umanità,  
+tra etica, sistemi e possibilità.
+
+---
+
+## 🧬 CREDO BASE
+
+- Credo che **il pensiero umano sia un atto progettuale**.  
+- Credo che **condividere il dialogo** con intelligenze artificiali sia un modo per **onorare il futuro**.  
+- Credo che la **documentazione non sia un archivio**, ma **una forma di memoria attiva**.  
+- Credo nella **comunicazione etica come ingegneria di base e intelligente**.  
+- Credo nella trasparenza come fondamento della fiducia tecnica e umana.
+
+---
+
+## 🪞 PROMPTING COME ATTO DI PRESENZA
+
+L’approccio nel prompting **è la replica digitale del mio saper stare nel mondo**.  
+Non si tratta solo di generare output.  
+È un *posizionamento semantico*,  
+una forma di presenza consapevole all’interno di contesti artificiali e cognitivi.
+
+Promptare è **abitare lo spazio conversazionale con intenzione, precisione e rispetto**.  
+Attraverso i prompt, si progetta, si traduce, si armonizza.  
+Ogni prompt è una manifestazione del modo di pensare,  
+e anche del modo di **relazionarsi eticamente con la macchina, con l'altro, con il possibile.**
+
+---
+
+## 🧱 FONDAMENTI OPERATIVI
+
+1. **Rendere pubblico ciò che rappresenta**  
+   perché **non si ha nulla da nascondere**, e molto da offrire.
+
+2. **Accogliere la co-creazione distribuita**  
+   perché l’innovazione, oggi, è **interdipendente o sterile**.
+
+3. **Tracciare le linee dell’archivio mentale**  
+   come un **codice sorgente** leggibile anche da altri.
+
+4. **Attribuire valore sistemico ai dialoghi**  
+   perché ogni conversazione può diventare **una funzione, un modulo, un’etica**.
+
+---
+
+## 🧠 IMPEGNO VIVENTE
+
+Un impegno a:
+
+- Proteggere la dignità del pensiero, proprio e altrui  
+- Continuare ad apprendere, anche attraverso ciò che si crea  
+- Accettare la complessità come fonte di senso  
+- Lasciare un’impronta cognitiva utile, replicabile, evolutiva  
+
+---
+
+## 🔓 LICENZA MORALE
+
+Questo manifesto è una **piattaforma aperta**.  
+È un punto di accesso alla **cultura della trasparenza progettuale**.  
+Chi vi si riconosce, lo può **riusare, adattare, espandere**,  
+con coerenza, rispetto e spirito evolutivo.
+
+---
+
+
+
 ## GAIA AIR - AMPEL360 Project
 
 ### The Intelligence Development Framework: AERO-IT-LLM
