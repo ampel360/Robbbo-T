@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Aer, execute } from 'qiskit';
 
 type StepFunction = (request: any, context: any) => Promise<any>;
 type TransformFunction = (input: any, context: any) => any;
@@ -92,6 +93,28 @@ export class OrchestrationBuilder {
   public withErrorHandler(handler: ErrorHandlerFunction): OrchestrationBuilder {
     this.currentStep.errorHandler = handler;
     return this;
+  }
+
+  public withQuantumOptimization(): OrchestrationBuilder {
+    this.currentStep.execute = async (request: any, context: any) => {
+      const quantumBackend = Aer.getBackend('qasm_simulator');
+      const quantumCircuit = this.createQuantumCircuit(request);
+      const result = await execute(quantumCircuit, quantumBackend).result();
+      return this.processQuantumResult(result);
+    };
+    return this;
+  }
+
+  private createQuantumCircuit(request: any) {
+    // Create and return a quantum circuit based on the request
+    // This is a placeholder implementation
+    return {};
+  }
+
+  private processQuantumResult(result: any) {
+    // Process and return the result of the quantum computation
+    // This is a placeholder implementation
+    return result;
   }
 
   public build(): (request: any) => Promise<any> {
