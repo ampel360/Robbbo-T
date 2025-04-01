@@ -20,6 +20,7 @@ The scope encompasses:
 - Damage tolerance inspections
 - Fuel system limitations
 - Electrical wiring interconnection system (EWIS) limitations
+- Quantum computing integration requirements
 
 ### 1.2 Document Structure
 

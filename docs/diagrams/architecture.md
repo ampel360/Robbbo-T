@@ -1,4 +1,3 @@
-
 ```mermaid
 graph TD
 Client[Client Applications] -->|Requests| Gateway[API Gateway]
@@ -10,6 +9,7 @@ MSF[Microservices with API Facades]
 TF[Transformation Framework]
 MDA[Metadata-Driven APIs]
 AO[API Orchestration]
+QO[Quantum Optimization]
 end
 
 IntegrationLayer -->|Communicates with| BackendSystems
@@ -20,6 +20,7 @@ SOAP[SOAP Services]
 GraphQL[GraphQL Services]
 gRPC[gRPC Services]
 Legacy[Legacy Systems]
+Quantum[Quantum Systems]
 end
 
 AL -->|Translates protocols| BackendSystems
@@ -27,6 +28,7 @@ MSF -->|Provides interfaces| BackendSystems
 TF -->|Transforms data| BackendSystems
 MDA -->|Generates endpoints| BackendSystems
 AO -->|Orchestrates calls| BackendSystems
+QO -->|Optimizes with quantum computing| BackendSystems
 
 subgraph "Developer Tools"
 Documentation[API Documentation]
@@ -37,4 +39,3 @@ end
 
 IntegrationLayer -.->|Supports| Developer Tools
 ```
-
