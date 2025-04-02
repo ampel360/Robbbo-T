@@ -1,5 +1,3 @@
-[The file .github/workflows/readme.md in the add-api-integration-strategy branch is currently empty. You can view it here.
-](https://claude.site/artifacts/72220a12-5af4-48df-a0d3-d3c08e1a7d6b)
 # GitHub Workflows
 
 This directory contains the GitHub Actions workflows that automate various processes in our API Integration Strategy project.

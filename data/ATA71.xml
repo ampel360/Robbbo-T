@@ -29,6 +29,14 @@
         <para>Figure 2: Power Plant Installation Overview</para>
         <graphic boardNo="ILL-GPAM-AMPEL-0201-71-INSTALL-001"/>
       </figure>
+      <figure id="fig-quantum-propulsion">
+        <para>Figure 3: Quantum Propulsion System Overview</para>
+        <graphic boardNo="ILL-GPAM-AMPEL-0201-71-QUANTUM-001"/>
+      </figure>
+      <figure id="fig-thermal-management">
+        <para>Figure 4: Thermal Management System Diagram</para>
+        <graphic boardNo="ILL-GPAM-AMPEL-0201-71-THERMAL-001"/>
+      </figure>
     </illustrations>
   </content>
 </dmodule>
