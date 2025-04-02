@@ -960,4 +960,3 @@ For detailed information on specific aircraft systems, refer to the following AT
 - **Content:** Plan outlining the documentation required to maintain the aircraft's airworthiness throughout its operational life, including updates to maintenance programs and airworthiness limitations (links to ATA 05).
 
 ---
-```
