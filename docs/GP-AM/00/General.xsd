@@ -425,7 +425,120 @@
 - **[GP-AM-EDR-72-001-DESC-A](#ata-72--power-plant-engine-q-01-core)**: Power Plant Engine Description Document
 - **[GP-AM-EDR-72-002-PROC-A](#ata-72--power-plant-engine-q-01-core)**: Power Plant Engine Operation Procedures
 
-### ATA 73 – Engine Fuel and Control (Q-01 Energy Input & Control) {#ata-73--engine-fuel-and-control-q-01-energy-input-control}
+### 6.53 ATA 73 – Engine Fuel and Control (Q-01 Energy Input & Control) {#ata-73--engine-fuel-and-control-q-01-energy-input-control}
 
 #### **GP-AM-AMPEL-0100-73-001-A: Engine Fuel and Control Description and Operation (ATA 73)**
-- **
+- **[GP-AM-EDR-73-001-DESC-A](#ata-73--engine-fuel-and-control-q-01-energy-input-control)**: Q-01 Energy Input Control System Description
+- **[GP-AM-EDR-73-002-PROC-A](#ata-73--engine-fuel-and-control-q-01-energy-input-control)**: Q-01 Energy Input Control System Operation Procedures
+
+#### **GP-AM-AMPEL-0100-73-002-A: Q-01 Thrust Control System Description (ATA 73)**
+- **[GP-AM-EDR-73-003-DESC-A](#ata-73--engine-fuel-and-control-q-01-energy-input-control)**: Q-01 Thrust Control System Description (incl. Control Laws)
+- **[GP-AM-EDR-73-004-PROC-A](#ata-73--engine-fuel-and-control-q-01-energy-input-control)**: Q-01 Thrust Control Operation Procedures
+
+### 6.54 ATA 74 – Ignition (Q-01 Activation/Initiation) {#ata-74--ignition-q-01-activation-initiation}
+
+#### **GP-AM-AMPEL-0100-74-001-A: Q-01 Activation System Description and Procedures (ATA 74)**
+- **[GP-AM-EDR-74-001-DESC-A](#ata-74--ignition-q-01-activation-initiation)**: Q-01 Activation System Description Document
+- **[GP-AM-EDR-74-002-PROC-A](#ata-74--ignition-q-01-activation-initiation)**: Q-01 Activation Sequence Procedures
+
+### 6.55 ATA 75 – Air (Q-01 Cooling & Environmental Interface) {#ata-75--air-q-01-cooling--environmental-interface}
+
+#### **GP-AM-AMPEL-0100-75-001-A: Q-01 Cryogenic Cooling System (CCS) Description and Operation (ATA 75)**
+- **[GP-AM-EDR-75-001-DESC-A](#ata-75--air-q-01-cooling--environmental-interface)**: Q-01 CCS Description Document
+- **[GP-AM-EDR-75-002-PROC-A](#ata-75--air-q-01-cooling--environmental-interface)**: Q-01 CCS Operation and Servicing Procedures
+
+#### **GP-AM-AMPEL-0100-75-002-A: Q-01 Environmental Interface Description (ATA 75)**
+- **[GP-AM-EDR-75-003-DESC-A](#ata-75--air-q-01-cooling--environmental-interface)**: Q-01 Thermal Interface Description
+- **[GP-AM-DRW-75-004-DWG-A](#ata-75--air-q-01-cooling--environmental-interface)**: Q-01 Cooling System Schematic
+
+### 6.56 ATA 76 – Engine Controls (Q-01 Quantum Field Control) {#ata-76--engine-controls-q-01-quantum-field-control}
+
+#### **GP-AM-AMPEL-0100-76-001-A: Quantum Field Control Unit (QFCU) Description and Operation (ATA 76)**
+- **[GP-AM-EDR-76-001-DESC-A](#ata-76--engine-controls-q-01-quantum-field-control)**: QFCU Hardware and Software Description
+- **[GP-AM-EDR-76-002-PROC-A](#ata-76--engine-controls-q-01-quantum-field-control)**: QFCU Operation and Diagnostics Procedures
+- **[GP-AM-CAL-76-003-CAL-A](#ata-76--engine-controls-q-01-quantum-field-control)**: QFCU Control Algorithm Analysis
+
+### 6.57 ATA 77 – Engine Indicating (Q-01 Quantum State Indicating) {#ata-77--engine-indicating-q-01-quantum-state-indicating}
+
+#### **GP-AM-AMPEL-0100-77-001-A: Q-01 Indicating System Description (ATA 77)**
+- **[GP-AM-EDR-77-001-DESC-A](#ata-77--engine-indicating-q-01-quantum-state-indicating)**: Q-01 Sensor Suite Description
+- **[GP-AM-EDR-77-002-DESC-A](#ata-77--engine-indicating-q-01-quantum-state-indicating)**: Flight Deck Display Integration Description
+- **[GP-AM-CAL-77-003-CAL-A](#ata-77--engine-indicating-q-01-quantum-state-indicating)**: Q-01 Parameter Calibration Data
+
+### 6.58 ATA 78 – Exhaust (Q-01 Byproduct Management / Thrust Vectoring) {#ata-78--exhaust-q-01-byproduct-management--thrust-vectoring}
+
+#### **GP-AM-AMPEL-0100-78-001-A: Q-01 Byproduct Management System Description and Operation (ATA 78)**
+- **[GP-AM-EDR-78-001-DESC-A](#ata-78--exhaust-q-01-byproduct-management--thrust-vectoring)**: Byproduct Management System Description (if applicable)
+- **[GP-AM-EDR-78-002-RPT-A](#ata-78--exhaust-q-01-byproduct-management--thrust-vectoring)**: Environmental Emission Report (Zero Emission Verification)
+
+#### **GP-AM-AMPEL-0100-78-002-A: Thrust Vectoring System Description and Operation (If Applicable) (ATA 78)**
+- **[GP-AM-EDR-78-003-DESC-A](#ata-78--exhaust-q-01-byproduct-management--thrust-vectoring)**: Thrust Vectoring Mechanism Description
+- **[GP-AM-EDR-78-004-PROC-A](#ata-78--exhaust-q-01-byproduct-management--thrust-vectoring)**: Thrust Vectoring Control Procedures
+
+### 6.59 ATA 79 – Oil (Q-01 Lubrication/Coolant Systems) {#ata-79--oil-q-01-lubricationcoolant-systems}
+
+#### **GP-AM-AMPEL-0100-79-001-A: Q-01 Support Systems Coolant/Lubrication Description (ATA 79)**
+- **[GP-AM-EDR-79-001-DESC-A](#ata-79--oil-q-01-lubricationcoolant-systems)**: Q-01 Aux Coolant/Lube System Description
+- **[GP-AM-EDR-79-002-PROC-A](#ata-79--oil-q-01-lubricationcoolant-systems)**: Q-01 Aux Coolant/Lube Servicing Procedures
+- **[GP-AM-SPEC-79-003-SPEC-A](#ata-79--oil-q-01-lubricationcoolant-systems)**: Q-01 Aux Coolant/Lube Fluid Specifications
+
+### 6.60 ATA 80 – Starting (Q-01 System Priming/Initialization) {#ata-80--starting-q-01-system-priminginitialization}
+
+#### **GP-AM-AMPEL-0100-80-001-A: Q-01 Initialization Sequence and Procedures (ATA 80)**
+- **[GP-AM-EDR-80-001-PROC-A](#ata-80--starting-q-01-system-priminginitialization)**: Q-01 Startup and Initialization Procedure
+- **[GP-AM-EDR-80-002-DESC-A](#ata-80--starting-q-01-system-priminginitialization)**: Q-01 Initialization System Logic Description
+- **[GP-AM-TEST-80-003-TEST-A](#ata-80--starting-q-01-system-priminginitialization)**: Q-01 Initialization Test Plan
+
+### 6.61 ATA 91 – Charts {#ata-91--charts}
+
+#### **GP-AM-AMPEL-0100-91-001-A: Aircraft General Arrangement Drawings (ATA 91)**
+- **[GP-AM-DRW-91-001-DWG-A](#ata-91--charts)**: General Arrangement Drawing Set
+- **[GP-AM-DATA-91-002-DATA-A](#ata-91--charts)**: Aircraft Zoning and Station Data
+
+#### **GP-AM-AMPEL-0100-91-002-A: System Schematics Index (ATA 91)**
+- **[GP-AM-IDX-91-003-IDX-A](#ata-91--charts)**: Master Schematic Index
+- **[GP-AM-REF-91-004-REF-A](#ata-91--charts)**: Cross-Reference to System-Specific Schematics
+
+### 6.62 ATA 92 – Aircraft Wiring Diagrams (Consolidated) {#ata-92--aircraft-wiring-diagrams-consolidated}
+
+#### **GP-AM-AMPEL-0100-92-001-A: Wiring Diagram Manual (WDM) Usage Guide (ATA 92)**
+- **[GP-AM-MAN-92-001-MAN-A](#ata-92--aircraft-wiring-diagrams-consolidated)**: WDM Introduction and User Guide
+- **[GP-AM-SPEC-92-002-SPEC-A](#ata-92--aircraft-wiring-diagrams-consolidated)**: Wiring Standards and Specifications
+
+#### **GP-AM-AMPEL-0100-92-00X-A: Specific Wiring Diagram Sets (ATA 92)**
+- **[GP-AM-WDM-92-XXX-WDM-A](#ata-92--aircraft-wiring-diagrams-consolidated)**: (Index or reference to the comprehensive WDM dataset, typically managed electronically)
+
+### 6.63 ATA 97 – Scheduled Maintenance {#ata-97--scheduled-maintenance}
+
+#### **GP-AM-AMPEL-0100-97-001-A: Scheduled Maintenance Checks (Types A-D) (ATA 97)**
+- **[GP-AM-MPD-97-001-MPD-A](#ata-97--scheduled-maintenance)**: Maintenance Planning Document (MPD)
+- **[GP-AM-PROC-97-002-PROC-A](#ata-97--scheduled-maintenance)**: Type A Check Procedures
+- **[GP-AM-PROC-97-003-PROC-A](#ata-97--scheduled-maintenance)**: Type B Check Procedures
+- **[GP-AM-PROC-97-004-PROC-A](#ata-97--scheduled-maintenance)**: Type C Check Procedures
+- **[GP-AM-PROC-97-005-PROC-A](#ata-97--scheduled-maintenance)**: Type D Check Procedures
+
+### 6.64 ATA 99 – General (Miscellaneous) {#ata-99--general-miscellaneous}
+
+#### **GP-AM-AMPEL-0100-99-001-A: Software Configuration and Loading Procedures (ATA 99)**
+- **[GP-AM-PROC-99-001-PROC-A](#ata-99--general-miscellaneous)**: Software Loading Procedures
+- **[GP-AM-SPEC-99-002-SPEC-A](#ata-99--general-miscellaneous)**: Software Part Number Configuration Index
+
+#### **GP-AM-AMPEL-0100-99-002-A: System Integration Test Reports Summary (ATA 99)**
+- **[GP-AM-IDX-99-003-IDX-A](#ata-99--general-miscellaneous)**: Integration Test Report Index
+- **[GP-AM-RPT-99-004-RPT-A](#ata-99--general-miscellaneous)**: Master Integration Test Summary Report
+
+### 6.65 ATA 100 – Certification and Documentation {#ata-100--certification-and-documentation}
+
+#### **GP-AM-AMPEL-0100-100-001-A: Certification Plan and Basis (ATA 100)**
+- **[GP-AM-CERT-100-001-PLAN-A](#ata-100--certification-and-documentation)**: Aircraft Certification Plan
+- **[GP-AM-CERT-100-002-DATA-A](#ata-100--certification-and-documentation)**: Certification Basis Document
+
+#### **GP-AM-AMPEL-0100-100-002-A: Master Compliance Record Index (ATA 100)**
+- **[GP-AM-CERT-100-003-IDX-A](#ata-100--certification-and-documentation)**: Certification Compliance Matrix/Index
+- **[GP-AM-CERT-100-004-RPT-A](#ata-100--certification-and-documentation)**: Summary Compliance Report
+
+#### **GP-AM-AMPEL-0100-100-003-A: Continued Airworthiness Documentation Plan (ATA 100)**
+- **[GP-AM-CERT-100-005-PLAN-A](#ata-100--certification-and-documentation)**: Instructions for Continued Airworthiness (ICA) Plan
+- **[GP-AM-REF-100-006-REF-A](#ata-100--certification-and-documentation)**: Reference to Airworthiness Limitations Section (ALS) (Link to ATA 05)
+```
+```
