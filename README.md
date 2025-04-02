@@ -1527,6 +1527,21 @@ graph TD
 
 > Este modelo será referenciado dentro de la documentación del sistema de tren de aterrizaje y vinculado a los requisitos y análisis mediante trazabilidad TwinFi/MOD-XAI.
 
+#### 🔗 10.4.1 Live 3D Intelligent Viewer Link
+
+A fully operational version of the intelligent 3D image-based visualizer for LG-ACT-001 is available online.
+
+**Access it here:**  
+👉 [https://imagen-ai-gaiaair-softwares.vercel.app/](https://imagen-ai-gaiaair-softwares.vercel.app/)
+
+**Features:**
+- AI-based image decomposition and component detection
+- Real-time interactive assembly visualization
+- Component isolation, sectioning, and dynamic transformations
+- Integrated metadata overlays and TwinFi/MOD-XAI tracing
+- Ready for simulation overlays and annotation layers (PMI, FEM, CFD)
+
+This tool is part of the GAIA AIR validation infrastructure and supports the transition to a full 5D OCR visual verification and interaction paradigm.
 
 
 
