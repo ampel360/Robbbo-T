@@ -1158,17 +1158,1332 @@ All 3D models must include the following metadata:
 | Detailed Interface 3D | .jt | 3D-100-ASM-INT-2.0.jt | Compliance, Aerospace |
 | Manufacturing Model with PMI | .3dpdf | 3D-100-MBD-GSE-2.0.3dpdf | Compliance, Aerospace |
 
-## Implementation Guidelines
+# GAIA AIR COAFI Documentation Templates Guide
 
-To implement this comprehensive documentation and 3D design standard:
+## Overview
 
-1. **Template Repository**: Create standardized templates for each document type and 3D model with embedded metadata fields
-2. **Automated Validation**: Implement validation checks to ensure proper naming conventions and metadata completion
-3. **Version Control**: Establish a version control system that tracks document and model evolution from PDR to CDR
-4. **Cross-Reference Database**: Maintain relationships between documents and 3D models across ATA chapters
-5. **Approval Workflow**: Define approval paths based on document type, ATA chapter, and operational mode
-6. **CAD Management System**: Establish a centralized PDM/PLM system to manage all 3D design data
-7. **Master Model Approach**: Implement a master model philosophy where
+This guide provides standardized templates for the GAIA AIR COAFI – Aircraft Standard Digital Library (GAIA-CO-ASD-LIB) standard. GitHub Copilot can use these templates to generate documentation that complies with the standard.
+
+## File Format Standards
+
+### Document Formats
+
+| File Type | Format | Purpose |
+|-----------|--------|---------|
+| Requirements | .reqif | Requirements management |
+| Word Documents | .docx | Reports, procedures, specifications |
+| Spreadsheets | .xlsx | Analysis, matrices, lists |
+| Presentations | .pptx | Reviews, briefings |
+| Diagrams | .vsdx | Architecture, flows, schematics |
+| Drawings | .dwg | 2D engineering drawings |
+| PDF | .pdf | Final deliverables, signed documents |
+
+### 3D Design Formats
+
+| File Type | Format | Purpose | Software |
+|-----------|--------|---------|----------|
+| 3D CAD Models | .stp, .step | Industry standard exchange format | Multiple CAD systems |
+| Native CAD | .catpart, .catproduct | Detailed design (CATIA) | CATIA |
+| Native CAD | .prt, .asm | Detailed design (NX) | Siemens NX |
+| Native CAD | .sldprt, .sldasm | Detailed design (SolidWorks) | SolidWorks |
+| Lightweight Visualization | .jt | Visualization and review | Multiple viewers |
+| Mesh Models | .stl | 3D printing, simplified analysis | Multiple systems |
+| Point Cloud | .xyz, .pts | Scan data, reverse engineering | Multiple systems |
+| FEA Models | .fem, .nas | Finite Element Analysis | NASTRAN, ANSYS |
+| CFD Models | .cgns | Computational Fluid Dynamics | FLUENT, CFX |
+| PMI/MBD | .3dpdf | Product Manufacturing Information | Multiple viewers |
+
+## Naming Convention
+
+### Document Naming Convention
+
+Format: `[TYPE]-[ATA]-[DESCRIPTION]-[VERSION].[ext]`
+
+Where:
+- **TYPE**: Document type (REQ=Requirements, DES=Design, ANA=Analysis, TST=Test, ICD=Interface Control, DWG=Drawing)
+- **ATA**: Two-digit ATA chapter number
+- **DESCRIPTION**: Brief description of the document
+- **VERSION**: Version number (PDR=1.0, CDR=2.0, with increments)
+- **ext**: File extension
+
+### 3D Design Naming Convention
+
+Format: `3D-[ATA]-[TYPE]-[DESCRIPTION]-[VERSION].[ext]`
+
+Where:
+- **3D**: Prefix for all 3D design files
+- **ATA**: Two-digit ATA chapter number
+- **TYPE**: Design type (ASM=Assembly, PRT=Part, FEM=FEA Model, CFD=CFD Model, MBD=Model Based Definition)
+- **DESCRIPTION**: Brief description of the component
+- **VERSION**: Version number (PDR=1.0, CDR=2.0, with increments)
+- **ext**: File extension
+
+## Metadata Requirements
+
+### Document Metadata
+
+All documents must include the following metadata:
+- **Document ID**: Unique identifier
+- **Title**: Document title
+- **Author**: Author name
+- **Date**: Creation/revision date
+- **Version**: Version number
+- **Status**: Draft, Review, Approved
+- **Classification**: Proprietary, Export Controlled, etc.
+- **Focus Area**: Compliance, Innovation, Integrated, Aerospace, IT, All
+- **ATA Chapter**: Relevant ATA chapter
+- **Review Status**: PDR, CDR, etc.
+- **Approval Signatures**: Required approvals
+
+### 3D Design Metadata
+
+All 3D models must include the following metadata:
+- **Author**: Designer name
+- **Creation Date**: Initial creation date
+- **Last Modified**: Last modification date
+- **Approval Status**: Draft, Reviewed, Approved
+- **Material**: Material specification
+- **Weight**: Component weight
+- **Revision History**: Change log
+- **Reference Documents**: Associated documentation
+- **Classification**: Proprietary, Export Controlled, etc.
+
+
+## Document Templates
+
+## 9. Infrastructure & Implementation Specifications
+
+This section provides the technical foundation required to deploy, automate, and manage the GAIA AIR COAFI documentation framework in alignment with modern engineering, simulation, and traceability environments.
+
+### 9.1 Automated Validation System
+
+#### Architecture Overview
+
+- JSON Schema validation logic per document type
+- FEM file parsing and rendering (Three.js overlay)
+- CEU-compliant Base64 hash verification
+- XAI tag injection and MOD-TWIN/MOD-QSIM integration
+- Endpoint structure: `/validate`, `/hash`, `/xai`
+
+### 9.2 Version Control Software & Configuration
+
+- Git Strategy: `main`, `dev`, `release/*`, `hotfix/*`
+- Pre-commit hooks for metadata checks, Mermaid diagram rendering
+- LFS configuration for `.stp`, `.fem`, `.cgns`
+- Signed commits and changelog sync with document metadata
+
+### 9.3 Cross-Reference Database Schema (PostgreSQL)
+
+- Tables: `documents`, `cross_references`, `ata_chapters`, `xai_tags`
+- Foreign keys to link `REQ`, `DES`, `ANA`, `TST`, `DWG`, `MBD`
+- RESTful API support: `/xref/:doc_id`, `/ata/:chapter_id`
+- Triggered updates from GitHub via webhook events
+
+### 9.4 Approval Workflow Diagrams
+
+Rendered in Mermaid:
+
+```mermaid
+flowchart TD
+    DRAFT --> REVIEW
+    REVIEW -->|PDR Pass| CDR
+    REVIEW -->|PDR Fail| REVISION
+    CDR -->|CDR Pass| APPROVED
+    CDR -->|CDR Fail| REVISION
+    REVISION --> REVIEW
+```
+
+- Digital sign-off integrated via MOD-CHAIN
+- Validation status linked to GitHub PR checks
+
+### 9.5 PDM/PLM System Selection & Implementation
+
+- Criteria: Open API, MBD & PMI support, Git/GitHub integration, CM2 compliance
+- Recommended platforms: Aras Innovator, 3DEXPERIENCE, OpenBOM (open-source case)
+- Implementation phases: Discovery → Pilot → Migration → Integration with GAIA AIR TwinFi
+
+### 9.6 Master Model Methodology
+
+- Single source of truth via `.catproduct` / `.asm` → linked `REQ/DES/ANA/TST`
+- PMI injected in native CAD, exported as `.3dpdf`, `.step`, `.jt`
+- Metadata sync with COAFI registry and MOD-XAI
+- Simulation results linked via TwinID anchor (e.g. Q01-VIBE-A)
+
+### 9.7 TwinID/DocID Global Hash System
+
+- SHA256 + CEU Base64 encoding: `twinid_hash = base64(sha256(doc_binary))`
+- Unique ID format: `TID-ATA-TYPE-YYYYMMDD-[8chars]`
+- Stored on MOD-CHAIN smart contract with timestamp
+- Integrated with FEM visual validator and COAFI registry
+
+
+### Common Document Structure
+
+All documents should follow this general structure:
+
+```markdown
+# [DOCUMENT TITLE]
+
+## Document Metadata
+| Field | Value |
+|-------|-------|
+| Document ID | [TYPE]-[ATA]-[DESCRIPTION]-[VERSION] |
+| Title | [Document Title] |
+| Author | [Author Name] |
+| Date | [Creation/Revision Date] |
+| Version | [Version Number] |
+| Status | [Draft/Review/Approved] |
+| Classification | [Proprietary/Export Controlled/etc.] |
+| Focus Area | [Compliance/Innovation/Integrated/Aerospace/IT/All] |
+| ATA Chapter | [Relevant ATA Chapter] |
+| Review Status | [PDR/CDR/etc.] |
+| Approval Signatures | [Required Approvals] |
+
+## Revision History
+| Version | Date | Author | Description of Changes |
+|---------|------|--------|------------------------|
+| 1.0 | YYYY-MM-DD | [Name] | Initial release |
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Scope](#scope)
+3. [References](#references)
+4. [Definitions](#definitions)
+5. [Main Content Sections...]
+6. [Appendices](#appendices)
+
+## 1. Introduction
+[Brief introduction to the document purpose]
+
+## 2. Scope
+[Define the scope of the document]
+
+## 3. References
+[List of reference documents with their GAIA AIR COAFI document IDs]
+
+## 4. Definitions
+[Key terms and definitions]
+
+## [Main Content Sections...]
+[Document-specific content sections]
+
+## Appendices
+[Any appendices or attachments]
+```
+
+### 1. Requirements Document Template (REQ)
+```
+# [SYSTEM NAME] Requirements Specification
+
+## Document Metadata
+
+| Field | Value
+|-----|-----
+| Document ID | REQ-[ATA]-[DESCRIPTION]-[VERSION]
+| Title | [System Name] Requirements Specification
+| Author | [Author Name]
+| Date | [Creation/Revision Date]
+| Version | [Version Number]
+| Status | [Draft/Review/Approved]
+| Classification | [Proprietary/Export Controlled/etc.]
+| Focus Area | [Compliance/Innovation/Integrated/Aerospace/IT/All]
+| ATA Chapter | [Relevant ATA Chapter]
+| Review Status | [PDR/CDR/etc.]
+| Approval Signatures | [Required Approvals]
+
+
+## Revision History
+
+| Version | Date | Author | Description of Changes
+|-----|-----
+| 1.0 | YYYY-MM-DD | [Name] | Initial release
+
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Scope](#scope)
+3. [References](#references)
+4. [Definitions](#definitions)
+5. [System Overview](#system-overview)
+6. [Functional Requirements](#functional-requirements)
+7. [Performance Requirements](#performance-requirements)
+8. [Interface Requirements](#interface-requirements)
+9. [Environmental Requirements](#environmental-requirements)
+10. [Safety Requirements](#safety-requirements)
+11. [Verification Methods](#verification-methods)
+12. [Traceability Matrix](#traceability-matrix)
+13. [Appendices](#appendices)
+
+
+## 1. Introduction
+
+[Brief introduction to the system and purpose of this requirements document]
+
+## 2. Scope
+
+[Define the scope of the requirements specification]
+
+## 3. References
+
+[List of reference documents with their GAIA AIR COAFI document IDs]
+
+## 4. Definitions
+
+[Key terms and definitions]
+
+## 5. System Overview
+
+[High-level description of the system]
+
+## 6. Functional Requirements
+
+### 6.1 [Functional Area 1]
+
+| Req ID | Requirement Description | Priority | Rationale | Source
+|-----|-----
+| REQ-[ATA]-FUNC-001 | [Requirement text] | [H/M/L] | [Rationale] | [Source doc ID]
+| REQ-[ATA]-FUNC-002 | [Requirement text] | [H/M/L] | [Rationale] | [Source doc ID]
+
+
+### 6.2 [Functional Area 2]
+
+| Req ID | Requirement Description | Priority | Rationale | Source
+|-----|-----
+| REQ-[ATA]-FUNC-003 | [Requirement text] | [H/M/L] | [Rationale] | [Source doc ID]
+| REQ-[ATA]-FUNC-004 | [Requirement text] | [H/M/L] | [Rationale] | [Source doc ID]
+
+
+## 7. Performance Requirements
+
+| Req ID | Requirement Description | Value/Range | Units | Conditions | Priority
+|-----|-----
+| REQ-[ATA]-PERF-001 | [Requirement text] | [Value] | [Units] | [Conditions] | [H/M/L]
+| REQ-[ATA]-PERF-002 | [Requirement text] | [Value] | [Units] | [Conditions] | [H/M/L]
+
+
+## 8. Interface Requirements
+
+### 8.1 External Interfaces
+
+| Req ID | Interface ID | Connected System | Description | Protocol/Standard
+|-----|-----
+| REQ-[ATA]-INTF-001 | Int-[Code1]-to-[Code2] | [System Name] | [Description] | [Protocol]
+| REQ-[ATA]-INTF-002 | Int-[Code1]-to-[Code2] | [System Name] | [Description] | [Protocol]
+
+
+### 8.2 Internal Interfaces
+
+| Req ID | Interface ID | Connected Component | Description | Protocol/Standard
+|-----|-----
+| REQ-[ATA]-INTF-003 | Int-[Code1]-to-[Code2] | [Component Name] | [Description] | [Protocol]
+| REQ-[ATA]-INTF-004 | Int-[Code1]-to-[Code2] | [Component Name] | [Description] | [Protocol]
+
+
+## 9. Environmental Requirements
+
+| Req ID | Requirement Description | Value/Range | Units | Conditions | Priority
+|-----|-----
+| REQ-[ATA]-ENV-001 | [Requirement text] | [Value] | [Units] | [Conditions] | [H/M/L]
+| REQ-[ATA]-ENV-002 | [Requirement text] | [Value] | [Units] | [Conditions] | [H/M/L]
+
+
+## 10. Safety Requirements
+
+| Req ID | Requirement Description | Hazard Level | Rationale | Source
+|-----|-----
+| REQ-[ATA]-SAFE-001 | [Requirement text] | [Level] | [Rationale] | [Source doc ID]
+| REQ-[ATA]-SAFE-002 | [Requirement text] | [Level] | [Rationale] | [Source doc ID]
+
+
+## 11. Verification Methods
+
+| Req ID | Verification Method | Test Reference | Success Criteria
+|-----|-----
+| REQ-[ATA]-FUNC-001 | [Analysis/Test/Inspection/Demo] | [Test doc ID] | [Criteria]
+| REQ-[ATA]-FUNC-002 | [Analysis/Test/Inspection/Demo] | [Test doc ID] | [Criteria]
+
+
+## 12. Traceability Matrix
+
+| Req ID | Parent Requirement | Child Requirements | Verification Test | Status
+|-----|-----
+| REQ-[ATA]-FUNC-001 | [Parent Req ID] | [Child Req IDs] | [Test ID] | [Open/Verified/Closed]
+| REQ-[ATA]-FUNC-002 | [Parent Req ID] | [Child Req IDs] | [Test ID] | [Open/Verified/Closed]
+
+
+## Appendices
+
+[Any appendices or attachments]
+```
+
+### 2. Design Document Template (DES)
+
+```markdown
+# [SYSTEM NAME] Design Description
+
+## Document Metadata
+| Field | Value |
+|-------|-------|
+| Document ID | DES-[ATA]-[DESCRIPTION]-[VERSION] |
+| Title | [System Name] Design Description |
+| Author | [Author Name] |
+| Date | [Creation/Revision Date] |
+| Version | [Version Number] |
+| Status | [Draft/Review/Approved] |
+| Classification | [Proprietary/Export Controlled/etc.] |
+| Focus Area | [Compliance/Innovation/Integrated/Aerospace/IT/All] |
+| ATA Chapter | [Relevant ATA Chapter] |
+| Review Status | [PDR/CDR/etc.] |
+| Approval Signatures | [Required Approvals] |
+
+## Revision History
+| Version | Date | Author | Description of Changes |
+|---------|------|--------|------------------------|
+| 1.0 | YYYY-MM-DD | [Name] | Initial release |
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Scope](#scope)
+3. [References](#references)
+4. [Definitions](#definitions)
+5. [System Overview](#system-overview)
+6. [Design Constraints](#design-constraints)
+7. [Architectural Design](#architectural-design)
+8. [Component Design](#component-design)
+9. [Interface Design](#interface-design)
+10. [Materials and Manufacturing](#materials-and-manufacturing)
+11. [Design Analysis](#design-analysis)
+12. [Design Verification](#design-verification)
+13. [Appendices](#appendices)
+
+## 1. Introduction
+[Brief introduction to the system and purpose of this design document]
+
+## 2. Scope
+[Define the scope of the design description]
+
+## 3. References
+[List of reference documents with their GAIA AIR COAFI document IDs]
+
+## 4. Definitions
+[Key terms and definitions]
+
+## 5. System Overview
+[High-level description of the system design]
+
+## 6. Design Constraints
+[List of constraints that influenced the design]
+
+## 7. Architectural Design
+
+### 7.1 System Architecture
+[Description of the overall system architecture with diagrams]
+
+### 7.2 Functional Decomposition
+[Breakdown of system functions and allocation to components]
+
+### 7.3 Physical Architecture
+[Description of the physical arrangement of components]
+
+## 8. Component Design
+
+### 8.1 [Component 1 Name] ([AGIS Component Code])
+
+#### 8.1.1 Description
+[Detailed description of the component]
+
+#### 8.1.2 Specifications
+[Technical specifications]
+
+#### 8.1.3 Design Rationale
+[Explanation of design decisions]
+
+#### 8.1.4 Dependencies
+[List of dependencies with other components]
+
+| Source Component | Dependency Type | Target Component | Description |
+|-----------------|----------------|-----------------|-------------|
+| [AGIS Code] | [FUNC/PHYS/DATA/PWR/INTF] | [AGIS Code] | [Description] |
+
+### 8.2 [Component 2 Name] ([AGIS Component Code])
+[Similar structure as 8.1]
+
+## 9. Interface Design
+
+### 9.1 External Interfaces
+
+| Interface ID | Connected System | Description | Protocol/Standard | Diagram Reference |
+|-------------|-----------------|-------------|-------------------|-------------------|
+| Int-[Code1]-to-[Code2] | [System Name] | [Description] | [Protocol] | [Figure X] |
+
+### 9.2 Internal Interfaces
+
+| Interface ID | Connected Components | Description | Protocol/Standard | Diagram Reference |
+|-------------|---------------------|-------------|-------------------|-------------------|
+| Int-[Code1]-to-[Code2] | [Component Names] | [Description] | [Protocol] | [Figure Y] |
+
+## 10. Materials and Manufacturing
+
+### 10.1 Materials Selection
+[Description of materials used and selection rationale]
+
+### 10.2 Manufacturing Processes
+[Description of manufacturing methods]
+
+### 10.3 Special Processes
+[Any special manufacturing processes required]
+
+## 11. Design Analysis
+
+### 11.1 Performance Analysis
+[Summary of performance analysis results]
+
+### 11.2 Structural Analysis
+[Summary of structural analysis results]
+
+### 11.3 Thermal Analysis
+[Summary of thermal analysis results]
+
+### 11.4 Safety Analysis
+[Summary of safety analysis results]
+
+## 12. Design Verification
+
+### 12.1 Verification Approach
+[Description of how the design will be verified]
+
+### 12.2 Requirements Traceability
+[Mapping of design elements to requirements]
+
+| Design Element | Requirement ID | Verification Method | Status |
+|---------------|---------------|-------------------|--------|
+| [Element] | REQ-[ATA]-XXX-### | [Method] | [Status] |
+
+## Appendices
+[Any appendices or attachments]
+```
+
+### 3. Analysis Document Template (ANA)
+
+```markdown
+# [ANALYSIS TYPE] Analysis Report
+
+## Document Metadata
+| Field | Value |
+|-------|-------|
+| Document ID | ANA-[ATA]-[DESCRIPTION]-[VERSION] |
+| Title | [Analysis Type] Analysis Report |
+| Author | [Author Name] |
+| Date | [Creation/Revision Date] |
+| Version | [Version Number] |
+| Status | [Draft/Review/Approved] |
+| Classification | [Proprietary/Export Controlled/etc.] |
+| Focus Area | [Compliance/Innovation/Integrated/Aerospace/IT/All] |
+| ATA Chapter | [Relevant ATA Chapter] |
+| Review Status | [PDR/CDR/etc.] |
+| Approval Signatures | [Required Approvals] |
+
+## Revision History
+| Version | Date | Author | Description of Changes |
+|---------|------|--------|------------------------|
+| 1.0 | YYYY-MM-DD | [Name] | Initial release |
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Scope](#scope)
+3. [References](#references)
+4. [Definitions](#definitions)
+5. [Analysis Methodology](#analysis-methodology)
+6. [Analysis Models](#analysis-models)
+7. [Assumptions](#assumptions)
+8. [Analysis Results](#analysis-results)
+9. [Conclusions](#conclusions)
+10. [Recommendations](#recommendations)
+11. [Appendices](#appendices)
+
+## 1. Introduction
+[Brief introduction to the purpose of this analysis]
+
+## 2. Scope
+[Define the scope of the analysis]
+
+## 3. References
+[List of reference documents with their GAIA AIR COAFI document IDs]
+
+## 4. Definitions
+[Key terms and definitions]
+
+## 5. Analysis Methodology
+[Description of the analysis methods used]
+
+## 6. Analysis Models
+
+### 6.1 Model Description
+[Description of the analysis models]
+
+### 6.2 Model Validation
+[Description of how the models were validated]
+
+### 6.3 Model Limitations
+[Known limitations of the analysis models]
+
+## 7. Assumptions
+[List of assumptions made for the analysis]
+
+| ID | Assumption | Justification | Impact if Invalid |
+|----|-----------|--------------|-------------------|
+| ASM-001 | [Assumption text] | [Justification] | [Impact] |
+| ASM-002 | [Assumption text] | [Justification] | [Impact] |
+
+## 8. Analysis Results
+
+### 8.1 [Result Category 1]
+[Description of results with tables, graphs, etc.]
+
+### 8.2 [Result Category 2]
+[Description of results with tables, graphs, etc.]
+
+### 8.3 Sensitivity Analysis
+[Results of sensitivity analysis if applicable]
+
+## 9. Conclusions
+[Summary of conclusions drawn from the analysis]
+
+## 10. Recommendations
+[Recommendations based on the analysis results]
+
+## Appendices
+[Any appendices or attachments]
+```
+
+### 4. Test Document Template (TST)
+
+```markdown
+# [SYSTEM/COMPONENT NAME] Test Plan
+
+## Document Metadata
+| Field | Value |
+|-------|-------|
+| Document ID | TST-[ATA]-[DESCRIPTION]-[VERSION] |
+| Title | [System/Component Name] Test Plan |
+| Author | [Author Name] |
+| Date | [Creation/Revision Date] |
+| Version | [Version Number] |
+| Status | [Draft/Review/Approved] |
+| Classification | [Proprietary/Export Controlled/etc.] |
+| Focus Area | [Compliance/Innovation/Integrated/Aerospace/IT/All] |
+| ATA Chapter | [Relevant ATA Chapter] |
+| Review Status | [PDR/CDR/etc.] |
+| Approval Signatures | [Required Approvals] |
+
+## Revision History
+| Version | Date | Author | Description of Changes |
+|---------|------|--------|------------------------|
+| 1.0 | YYYY-MM-DD | [Name] | Initial release |
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Scope](#scope)
+3. [References](#references)
+4. [Definitions](#definitions)
+5. [Test Items](#test-items)
+6. [Features to be Tested](#features-to-be-tested)
+7. [Test Approach](#test-approach)
+8. [Test Environment](#test-environment)
+9. [Test Cases](#test-cases)
+10. [Test Schedule](#test-schedule)
+11. [Responsibilities](#responsibilities)
+12. [Risks and Contingencies](#risks-and-contingencies)
+13. [Approvals](#approvals)
+14. [Appendices](#appendices)
+
+## 1. Introduction
+[Brief introduction to the purpose of this test plan]
+
+## 2. Scope
+[Define the scope of the test plan]
+
+## 3. References
+[List of reference documents with their GAIA AIR COAFI document IDs]
+
+## 4. Definitions
+[Key terms and definitions]
+
+## 5. Test Items
+[List of items (components, systems) to be tested]
+
+| Item ID | AGIS Component Code | Description | Version |
+|---------|-------------------|-------------|---------|
+| ITEM-001 | [AGIS Code] | [Description] | [Version] |
+| ITEM-002 | [AGIS Code] | [Description] | [Version] |
+
+## 6. Features to be Tested
+[List of features/requirements to be verified by testing]
+
+| Feature ID | Requirement ID | Description | Priority |
+|-----------|---------------|-------------|----------|
+| FT-001 | REQ-[ATA]-XXX-### | [Description] | [H/M/L] |
+| FT-002 | REQ-[ATA]-XXX-### | [Description] | [H/M/L] |
+
+## 7. Test Approach
+[Description of the overall approach to testing]
+
+## 8. Test Environment
+
+### 8.1 Hardware
+[Description of test hardware]
+
+### 8.2 Software
+[Description of test software]
+
+### 8.3 Test Tools
+[Description of test tools]
+
+### 8.4 Test Facilities
+[Description of test facilities]
+
+## 9. Test Cases
+
+### 9.1 [Test Category 1]
+
+#### Test Case TC-001
+
+| Field | Value |
+|-------|-------|
+| Test Case ID | TC-001 |
+| Test Title | [Test Title] |
+| Requirement IDs | REQ-[ATA]-XXX-### |
+| Preconditions | [Preconditions] |
+| Test Steps | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] |
+| Expected Results | [Expected Results] |
+| Pass/Fail Criteria | [Criteria] |
+| Special Requirements | [Special Requirements] |
+
+#### Test Case TC-002
+[Similar structure as TC-001]
+
+### 9.2 [Test Category 2]
+[Similar structure as 9.1]
+
+## 10. Test Schedule
+[Test schedule with milestones]
+
+| Milestone | Planned Date | Responsible |
+|-----------|-------------|------------|
+| [Milestone 1] | YYYY-MM-DD | [Name] |
+| [Milestone 2] | YYYY-MM-DD | [Name] |
+
+## 11. Responsibilities
+[List of roles and responsibilities for testing]
+
+| Role | Responsibilities | Assigned To |
+|------|-----------------|------------|
+| [Role 1] | [Responsibilities] | [Name] |
+| [Role 2] | [Responsibilities] | [Name] |
+
+## 12. Risks and Contingencies
+[Identification of risks and contingency plans]
+
+| Risk ID | Description | Probability | Impact | Mitigation |
+|---------|------------|------------|--------|-----------|
+| RISK-001 | [Description] | [H/M/L] | [H/M/L] | [Mitigation] |
+| RISK-002 | [Description] | [H/M/L] | [H/M/L] | [Mitigation] |
+
+## 13. Approvals
+[Required approvals for test execution and completion]
+
+| Role | Name | Signature | Date |
+|------|------|----------|------|
+| [Role 1] | [Name] | ____________ | YYYY-MM-DD |
+| [Role 2] | [Name] | ____________ | YYYY-MM-DD |
+
+## Appendices
+[Any appendices or attachments]
+```
+
+### 5. Interface Control Document Template (ICD)
+
+```markdown
+# Interface Control Document: [INTERFACE NAME]
+
+## Document Metadata
+| Field | Value |
+|-------|-------|
+| Document ID | ICD-[ATA]-[DESCRIPTION]-[VERSION] |
+| Title | Interface Control Document: [Interface Name] |
+| Author | [Author Name] |
+| Date | [Creation/Revision Date] |
+| Version | [Version Number] |
+| Status | [Draft/Review/Approved] |
+| Classification | [Proprietary/Export Controlled/etc.] |
+| Focus Area | [Compliance/Innovation/Integrated/Aerospace/IT/All] |
+| ATA Chapter | [Relevant ATA Chapter] |
+| Review Status | [PDR/CDR/etc.] |
+| Approval Signatures | [Required Approvals] |
+
+## Revision History
+| Version | Date | Author | Description of Changes |
+|---------|------|--------|------------------------|
+| 1.0 | YYYY-MM-DD | [Name] | Initial release |
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Scope](#scope)
+3. [References](#references)
+4. [Definitions](#definitions)
+5. [Interface Overview](#interface-overview)
+6. [Interface Components](#interface-components)
+7. [Physical Interface](#physical-interface)
+8. [Electrical Interface](#electrical-interface)
+9. [Data Interface](#data-interface)
+10. [Functional Interface](#functional-interface)
+11. [Environmental Requirements](#environmental-requirements)
+12. [Interface Verification](#interface-verification)
+13. [Appendices](#appendices)
+
+## 1. Introduction
+[Brief introduction to the purpose of this interface control document]
+
+## 2. Scope
+[Define the scope of the interface control document]
+
+## 3. References
+[List of reference documents with their GAIA AIR COAFI document IDs]
+
+## 4. Definitions
+[Key terms and definitions]
+
+## 5. Interface Overview
+
+### 5.1 Interface Identification
+| Field | Value |
+|-------|-------|
+| Interface ID | Int-[Code1]-to-[Code2] |
+| System 1 | [System Name] ([AGIS Code]) |
+| System 2 | [System Name] ([AGIS Code]) |
+| Interface Type | [Mechanical/Electrical/Data/Fluid/etc.] |
+| Interface Purpose | [Brief description of interface purpose] |
+
+### 5.2 Interface Diagram
+[High-level diagram showing the interface between systems]
+
+## 6. Interface Components
+
+| Component ID | AGIS Component Code | Description | System |
+|-------------|-------------------|-------------|--------|
+| COMP-001 | [AGIS Code] | [Description] | [System 1/2] |
+| COMP-002 | [AGIS Code] | [Description] | [System 1/2] |
+
+## 7. Physical Interface
+
+### 7.1 Mechanical Interface
+
+#### 7.1.1 Mounting
+[Description of mounting provisions]
+
+#### 7.1.2 Dimensions
+[Critical dimensions and tolerances]
+
+#### 7.1.3 Weight
+[Weight constraints]
+
+#### 7.1.4 Mechanical Loads
+[Load transfer requirements]
+
+### 7.2 Fluid Interface (if applicable)
+
+#### 7.2.1 Fluid Type
+[Specification of fluid]
+
+#### 7.2.2 Flow Requirements
+[Flow rates, pressures, temperatures]
+
+#### 7.2.3 Connection Type
+[Description of connection hardware]
+
+## 8. Electrical Interface
+
+### 8.1 Power Requirements
+[Power specifications]
+
+### 8.2 Connector Specifications
+[Connector types, pin assignments]
+
+### 8.3 Grounding Requirements
+[Grounding specifications]
+
+### 8.4 EMI/EMC Requirements
+[Electromagnetic compatibility requirements]
+
+## 9. Data Interface
+
+### 9.1 Protocol
+[Communication protocol specifications]
+
+### 9.2 Data Format
+[Data structure and format]
+
+### 9.3 Timing Requirements
+[Timing constraints]
+
+### 9.4 Error Handling
+[Error detection and handling]
+
+## 10. Functional Interface
+
+### 10.1 Operational States
+[Description of operational states and transitions]
+
+### 10.2 Control Functions
+[Control functions across the interface]
+
+### 10.3 Monitoring Functions
+[Monitoring functions across the interface]
+
+## 11. Environmental Requirements
+[Environmental conditions the interface must withstand]
+
+## 12. Interface Verification
+
+### 12.1 Verification Methods
+[Methods for verifying the interface]
+
+### 12.2 Test Requirements
+[Specific tests required for interface verification]
+
+## Appendices
+[Any appendices or attachments]
+```
+
+### 6. Drawing Template (DWG)
+
+```markdown
+# Drawing Template Specification
+
+## Document Metadata
+| Field | Value |
+|-------|-------|
+| Document ID | DWG-[ATA]-[DESCRIPTION]-[VERSION] |
+| Title | Drawing Template Specification |
+| Author | [Author Name] |
+| Date | [Creation/Revision Date] |
+| Version | [Version Number] |
+| Status | [Draft/Review/Approved] |
+| Classification | [Proprietary/Export Controlled/etc.] |
+| Focus Area | [Compliance/Innovation/Integrated/Aerospace/IT/All] |
+| ATA Chapter | [Relevant ATA Chapter] |
+| Review Status | [PDR/CDR/etc.] |
+| Approval Signatures | [Required Approvals] |
+
+## Revision History
+| Version | Date | Author | Description of Changes |
+|---------|------|--------|------------------------|
+| 1.0 | YYYY-MM-DD | [Name] | Initial release |
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Scope](#scope)
+3. [References](#references)
+4. [Drawing Sheet Formats](#drawing-sheet-formats)
+5. [Title Block](#title-block)
+6. [Revision Block](#revision-block)
+7. [Parts List](#parts-list)
+8. [Drawing Zones](#drawing-zones)
+9. [General Notes](#general-notes)
+10. [Drawing Views](#drawing-views)
+11. [Dimensioning and Tolerancing](#dimensioning-and-tolerancing)
+12. [Surface Texture](#surface-texture)
+13. [Welding Symbols](#welding-symbols)
+14. [Appendices](#appendices)
+
+## 1. Introduction
+[Brief introduction to the purpose of this drawing template specification]
+
+## 2. Scope
+[Define the scope of the drawing template specification]
+
+## 3. References
+[List of reference documents with their GAIA AIR COAFI document IDs]
+
+## 4. Drawing Sheet Formats
+
+### 4.1 Standard Sheet Sizes
+| Size | Dimensions (mm) | Dimensions (in) | Usage |
+|------|----------------|----------------|-------|
+| A0 | 841 × 1189 | 33.1 × 46.8 | Large assemblies, system layouts |
+| A1 | 594 × 841 | 23.4 × 33.1 | Assembly drawings, installation drawings |
+| A2 | 420 × 594 | 16.5 × 23.4 | Medium-sized assemblies, schematics |
+| A3 | 297 × 420 | 11.7 × 16.5 | Component drawings, small assemblies |
+| A4 | 210 × 297 | 8.3 × 11.7 | Small component drawings, parts lists |
+
+### 4.2 Drawing Borders
+[Description of drawing borders, margins, and frame requirements]
+
+### 4.3 Sheet Numbering
+[Description of sheet numbering convention for multi-sheet drawings]
+
+## 5. Title Block
+
+### 5.1 Title Block Layout
+[Description of title block layout with dimensions]
+
+### 5.2 Required Fields
+| Field | Description | Format |
+|-------|-------------|--------|
+| Drawing Number | AGIS document ID | DWG-[ATA]-[DESCRIPTION]-[VERSION] |
+| Title | Drawing title | [Component/Assembly Name] |
+| ATA Chapter | ATA chapter number | [XX] |
+| Scale | Drawing scale | [Scale] |
+| Sheet | Sheet number and total | [X] of [Y] |
+| Size | Drawing sheet size | [A0/A1/A2/A3/A4] |
+| Drawn By | Original drafter | [Name] |
+| Checked By | Drawing checker | [Name] |
+| Approved By | Drawing approver | [Name] |
+| Date | Drawing date | YYYY-MM-DD |
+| CAGE Code | Commercial and Government Entity Code | [XXXXX] |
+| Classification | Security classification | [Classification] |
+| Weight | Component/assembly weight | [Value] [Units] |
+| Material | Material specification | [Material] |
+| Finish | Surface finish specification | [Finish] |
+| Next Assembly | Next higher assembly | [AGIS Code] |
+| Contract No. | Contract number | [Contract Number] |
+
+## 6. Revision Block
+
+### 6.1 Revision Block Layout
+[Description of revision block layout with dimensions]
+
+### 6.2 Required Fields
+| Field | Description | Format |
+|-------|-------------|--------|
+| Rev | Revision letter/number | [Rev] |
+| Description | Description of changes | [Description] |
+| Date | Revision date | YYYY-MM-DD |
+| Approved | Approver name/initials | [Name/Initials] |
+| ECR/ECO | Engineering Change Request/Order | [ECR/ECO Number] |
+
+## 7. Parts List
+
+### 7.1 Parts List Layout
+[Description of parts list layout with dimensions]
+
+### 7.2 Required Fields
+| Field | Description | Format |
+|-------|-------------|--------|
+| Item | Item number | [Number] |
+| AGIS Code | Component AGIS code | [AGIS Code] |
+| Part Number | Manufacturer part number | [Part Number] |
+| Description | Component description | [Description] |
+| Material | Material specification | [Material] |
+| Quantity | Quantity required | [Quantity] |
+| Notes | Special notes | [Notes] |
+
+## 8. Drawing Zones
+[Description of drawing zone system for reference purposes]
+
+## 9. General Notes
+
+### 9.1 Standard Notes
+[List of standard notes to be included on drawings]
+
+### 9.2 Special Notes
+[Guidelines for special notes]
+
+## 10. Drawing Views
+
+### 10.1 View Arrangement
+[Guidelines for arrangement of views]
+
+### 10.2 View Labeling
+[Guidelines for labeling views]
+
+### 10.3 Section Views
+[Guidelines for section views]
+
+### 10.4 Detail Views
+[Guidelines for detail views]
+
+## 11. Dimensioning and Tolerancing
+
+### 11.1 Dimensioning Standards
+[Reference to applicable dimensioning standards]
+
+### 11.2 Tolerancing Methods
+[Guidelines for tolerancing methods]
+
+### 11.3 Geometric Dimensioning and Tolerancing
+[Guidelines for GD&T application]
+
+## 12. Surface Texture
+[Guidelines for surface texture symbols and specifications]
+
+## 13. Welding Symbols
+[Guidelines for welding symbols]
+
+## Appendices
+[Any appendices or attachments]
+```
+
+### 7. Model-Based Definition (MBD) Template
+
+```markdown
+# Model-Based Definition (MBD) Template Specification
+
+## Document Metadata
+| Field | Value |
+|-------|-------|
+| Document ID | 3D-[ATA]-MBD-[DESCRIPTION]-[VERSION] |
+| Title | Model-Based Definition Template Specification |
+| Author | [Author Name] |
+| Date | [Creation/Revision Date] |
+| Version | [Version Number] |
+| Status | [Draft/Review/Approved] |
+| Classification | [Proprietary/Export Controlled/etc.] |
+| Focus Area | [Compliance/Innovation/Integrated/Aerospace/IT/All] |
+| ATA Chapter | [Relevant ATA Chapter] |
+| Review Status | [PDR/CDR/etc.] |
+| Approval Signatures | [Required Approvals] |
+
+## Revision History
+| Version | Date | Author | Description of Changes |
+|---------|------|--------|------------------------|
+| 1.0 | YYYY-MM-DD | [Name] | Initial release |
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Scope](#scope)
+3. [References](#references)
+4. [Definitions](#definitions)
+5. [MBD Overview](#mbd-overview)
+6. [Model Structure](#model-structure)
+7. [Product Manufacturing Information (PMI)](#product-manufacturing-information-pmi)
+8. [Annotations](#annotations)
+9. [Views and Presentations](#views-and-presentations)
+10. [Validation Requirements](#validation-requirements)
+11. [Derivative Formats](#derivative-formats)
+12. [Appendices](#appendices)
+
+## 1. Introduction
+[Brief introduction to the purpose of this MBD template specification]
+
+## 2. Scope
+[Define the scope of the MBD template specification]
+
+## 3. References
+[List of reference documents with their GAIA AIR COAFI document IDs]
+
+## 4. Definitions
+[Key terms and definitions]
+
+## 5. MBD Overview
+
+### 5.1 MBD Concept
+[Description of the Model-Based Definition concept]
+
+### 5.2 Benefits of MBD
+[Description of the benefits of using MBD]
+
+### 5.3 MBD vs. Traditional Drawings
+[Comparison of MBD and traditional drawings]
+
+## 6. Model Structure
+
+### 6.1 Model Organization
+[Guidelines for organizing the 3D model]
+
+### 6.2 Feature Naming
+[Guidelines for naming features in the model]
+
+### 6.3 Coordinate Systems
+[Requirements for coordinate systems]
+
+### 6.4 Reference Geometry
+[Requirements for reference geometry]
+
+## 7. Product Manufacturing Information (PMI)
+
+### 7.1 PMI Types
+| PMI Type | Description | Application Guidelines |
+|----------|-------------|------------------------|
+| Dimensions | Size and location dimensions | [Guidelines] |
+| Tolerances | Dimensional tolerances | [Guidelines] |
+| GD&T | Geometric tolerances | [Guidelines] |
+| Surface Finish | Surface texture requirements | [Guidelines] |
+| Notes | Text annotations | [Guidelines] |
+| Weld Symbols | Welding requirements | [Guidelines] |
+| Other Symbols | Other manufacturing symbols | [Guidelines] |
+
+### 7.2 PMI Presentation
+[Guidelines for presenting PMI in the model]
+
+### 7.3 PMI Semantic Requirements
+[Requirements for semantic (machine-readable) PMI]
+
+## 8. Annotations
+
+### 8.1 Text Annotations
+[Guidelines for text annotations]
+
+### 8.2 Dimension Annotations
+[Guidelines for dimension annotations]
+
+### 8.3 Tolerance Annotations
+[Guidelines for tolerance annotations]
+
+### 8.4 Feature Control Frames
+[Guidelines for feature control frames]
+
+### 8.5 Notes and Flag Notes
+[Guidelines for notes and flag notes]
+
+## 9. Views and Presentations
+
+### 9.1 Saved Views
+[Requirements for saved views]
+
+### 9.2 View Organization
+[Guidelines for organizing views]
+
+### 9.3 View Naming
+[Guidelines for naming views]
+
+### 9.4 Required Views
+[List of required views for different component types]
+
+## 10. Validation Requirements
+
+### 10.1 Model Validation
+[Requirements for validating the 3D model]
+
+### 10.2 PMI Validation
+[Requirements for validating PMI]
+
+### 10.3 Validation Tools
+[Approved tools for validation]
+
+### 10.4 Validation Reports
+[Requirements for validation reports]
+
+## 11. Derivative Formats
+
+### 11.1 3D PDF
+[Requirements for 3D PDF derivatives]
+
+### 11.2 STEP AP242
+[Requirements for STEP AP242 derivatives]
+
+### 11.3 JT Format
+[Requirements for JT format derivatives]
+
+### 11.4 Neutral Format Requirements
+[General requirements for neutral formats]
+
+## Appendices
+[Any appendices or attachments]
+```
+
+
+## GitHub Copilot Instructions
+
+### How to Use These Templates with GitHub Copilot
+
+1. **Template Selection**: When starting a new document, prompt GitHub Copilot to use the appropriate template based on the document type:
+
+
+```plaintext
+// Example prompt for GitHub Copilot
+Create a requirements document for the ECS system using the GAIA AIR COAFI REQ template for ATA chapter 21
+```
+
+2. **Document Completion**: After the template structure is generated, prompt GitHub Copilot to help complete specific sections:
+
+
+```plaintext
+// Example prompt for GitHub Copilot
+Complete the Functional Requirements section for the ECS temperature control capabilities
+```
+
+3. **Metadata Generation**: Ask GitHub Copilot to generate appropriate metadata based on the document context:
+
+
+```plaintext
+// Example prompt for GitHub Copilot
+Generate the document metadata for this ECS requirements document for PDR review
+```
+
+4. **Requirement Generation**: For requirements documents, prompt GitHub Copilot to generate well-formed requirements:
+
+
+```plaintext
+// Example prompt for GitHub Copilot
+Generate 5 functional requirements for the ECS temperature control system following the GAIA AIR COAFI format
+```
+
+5. **Consistency Checking**: Ask GitHub Copilot to check for consistency with other documents:
+
+
+```plaintext
+// Example prompt for GitHub Copilot
+Check if these requirements are consistent with the ECS design document DES-21-ECS-1.0.docx
+```
+
+### Example Document Generation Workflow
+
+1. **Start with Template**:
+
+
+```plaintext
+// Prompt for GitHub Copilot
+Create a requirements document for the Landing Gear system using the GAIA AIR COAFI REQ template for ATA chapter 32
+```
+
+2. **Fill in Metadata**:
+
+
+```plaintext
+// Prompt for GitHub Copilot
+Fill in the document metadata for this Landing Gear requirements document with Document ID REQ-32-LG-1.0, for PDR review
+```
+
+3. **Generate System Overview**:
+
+
+```plaintext
+// Prompt for GitHub Copilot
+Write a system overview section for the Landing Gear system
+```
+
+4. **Generate Requirements**:
+
+
+```plaintext
+// Prompt for GitHub Copilot
+Generate functional requirements for the Landing Gear extension and retraction capabilities
+```
+
+5. **Complete Document**:
+
+
+```plaintext
+// Prompt for GitHub Copilot
+Complete the remaining sections of the Landing Gear requirements document
+```
+
+### Best Practices for Using Templates with GitHub Copilot
+
+1. **Be Specific**: Provide specific ATA chapters, document types, and content requirements in your prompts
+2. **Incremental Development**: Build documents incrementally, section by section
+3. **Review and Refine**: Always review GitHub Copilot's output and refine as needed
+4. **Maintain Consistency**: Ensure consistency across related documents by referencing other document IDs
+5. **Follow Naming Conventions**: Always adhere to the GAIA AIR COAFI naming conventions
+6. **Include Required Metadata**: Ensure all required metadata fields are completed
+7. **Use Standard Terminology**: Use aerospace industry standard terminology and definitions
+
+
+By following these guidelines and using the templates provided, you can efficiently generate documentation that complies with the GAIA AIR COAFI – Aircraft Standard Digital Library (GAIA-CO-ASD-LIB) standard.
+
+
 
 
 ## 🌍 Scope: environments
