@@ -2,7 +2,1172 @@
 
 # Robbbo-T Repository
 
----
+# Aircraft Standard Digital Deliverables Catalogue 01-04-25
+
+## File Format Standards
+
+### Document Formats
+
+| File Type | Format | Purpose |
+|-----------|--------|---------|
+| Requirements | .reqif | Requirements management |
+| Word Documents | .docx | Reports, procedures, specifications |
+| Spreadsheets | .xlsx | Analysis, matrices, lists |
+| Presentations | .pptx | Reviews, briefings |
+| Diagrams | .vsdx | Architecture, flows, schematics |
+| Drawings | .dwg | 2D engineering drawings |
+| PDF | .pdf | Final deliverables, signed documents |
+
+### 3D Design Formats
+
+| File Type | Format | Purpose | Software |
+|-----------|--------|---------|----------|
+| 3D CAD Models | .stp, .step | Industry standard exchange format | Multiple CAD systems |
+| Native CAD | .catpart, .catproduct | Detailed design (CATIA) | CATIA |
+| Native CAD | .prt, .asm | Detailed design (NX) | Siemens NX |
+| Native CAD | .sldprt, .sldasm | Detailed design (SolidWorks) | SolidWorks |
+| Lightweight Visualization | .jt | Visualization and review | Multiple viewers |
+| Mesh Models | .stl | 3D printing, simplified analysis | Multiple systems |
+| Point Cloud | .xyz, .pts | Scan data, reverse engineering | Multiple systems |
+| FEA Models | .fem, .nas | Finite Element Analysis | NASTRAN, ANSYS |
+| CFD Models | .cgns | Computational Fluid Dynamics | FLUENT, CFX |
+| PMI/MBD | .3dpdf | Product Manufacturing Information | Multiple viewers |
+
+## Naming Convention
+
+### Document Naming Convention
+
+Format: `[TYPE]-[ATA]-[DESCRIPTION]-[VERSION].[ext]`
+
+Where:
+- **TYPE**: Document type (REQ=Requirements, DES=Design, ANA=Analysis, TST=Test, ICD=Interface Control, DWG=Drawing)
+- **ATA**: Two-digit ATA chapter number
+- **DESCRIPTION**: Brief description of the document
+- **VERSION**: Version number (PDR=1.0, CDR=2.0, with increments)
+- **ext**: File extension
+
+### 3D Design Naming Convention
+
+Format: `3D-[ATA]-[TYPE]-[DESCRIPTION]-[VERSION].[ext]`
+
+Where:
+- **3D**: Prefix for all 3D design files
+- **ATA**: Two-digit ATA chapter number
+- **TYPE**: Design type (ASM=Assembly, PRT=Part, FEM=FEA Model, CFD=CFD Model, MBD=Model Based Definition)
+- **DESCRIPTION**: Brief description of the component
+- **VERSION**: Version number (PDR=1.0, CDR=2.0, with increments)
+- **ext**: File extension
+
+## Metadata Requirements
+
+### Document Metadata
+
+All documents must include the following metadata:
+- **Document ID**: Unique identifier
+- **Title**: Document title
+- **Author**: Author name
+- **Date**: Creation/revision date
+- **Version**: Version number
+- **Status**: Draft, Review, Approved
+- **Classification**: Proprietary, Export Controlled, etc.
+- **Focus Area**: Compliance, Innovation, Integrated, Aerospace, IT, All
+- **ATA Chapter**: Relevant ATA chapter
+- **Review Status**: PDR, CDR, etc.
+- **Approval Signatures**: Required approvals
+
+### 3D Design Metadata
+
+All 3D models must include the following metadata:
+- **Author**: Designer name
+- **Creation Date**: Initial creation date
+- **Last Modified**: Last modification date
+- **Approval Status**: Draft, Reviewed, Approved
+- **Material**: Material specification
+- **Weight**: Component weight
+- **Revision History**: Change log
+- **Reference Documents**: Associated documentation
+- **Classification**: Proprietary, Export Controlled, etc.
+
+## ATA Chapter Deliverables
+
+### ATA 00 - General
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| High-Level Requirements | .reqif | REQ-00-GEN-1.0.reqif | Compliance, All |
+| Conceptual Architecture | .vsdx | DES-00-ARCH-1.0.vsdx | Integrated, All |
+| Certification Strategy | .docx | DES-00-CERT-1.0.docx | Compliance, Aerospace |
+| COAFI Overview | .pptx | DES-00-COAFI-1.0.pptx | Innovation, All |
+| Overall Aircraft Concept | .stp | 3D-00-ASM-AIRCRAFT-1.0.stp | Integrated, All |
+| Conceptual Envelope | .jt | 3D-00-PRT-ENVELOPE-1.0.jt | Compliance, Aerospace |
+| Coordinate System Definition | .catproduct | 3D-00-ASM-COORD-1.0.catproduct | Compliance, All |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Final Requirements Baseline | .reqif | REQ-00-GEN-2.0.reqif | Compliance, All |
+| Final Architecture | .vsdx | DES-00-ARCH-2.0.vsdx | Integrated, All |
+| Master Compliance Index | .xlsx | REQ-00-COMPL-2.0.xlsx | Compliance, Aerospace |
+| System Design Description | .docx | DES-00-SDD-2.0.docx | Integrated, All |
+| Final Aircraft Assembly | .stp | 3D-00-ASM-AIRCRAFT-2.0.stp | Integrated, All |
+| Final Envelope | .jt | 3D-00-PRT-ENVELOPE-2.0.jt | Compliance, Aerospace |
+| Master Geometry | .catproduct | 3D-00-ASM-MASTER-2.0.catproduct | Integrated, All |
+| Digital Twin Framework | .jt | 3D-00-ASM-DTWIN-2.0.jt | Innovation, All |
+
+### ATA 05 - Time Limits / Maintenance Checks
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Maintenance Philosophy | .docx | DES-05-MAINT-1.0.docx | Compliance, Aerospace |
+| Airworthiness Limits Concept | .docx | REQ-05-AWLIM-1.0.docx | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| MPD Structure | .docx | DES-05-MPD-2.0.docx | Compliance, Aerospace |
+| Life Limits List | .xlsx | ANA-05-LIFE-2.0.xlsx | Compliance, Aerospace |
+| Airworthiness Limitations | .docx | REQ-05-AWLIM-2.0.docx | Compliance, Aerospace |
+
+### ATA 06 - Dimensions and Areas
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Preliminary Dimensions Data | .xlsx | ANA-06-DIM-1.0.xlsx | Compliance, Aerospace |
+| Conceptual Layout | .dwg | DWG-06-LAYOUT-1.0.dwg | Integrated, Aerospace |
+| Dimensional 3D Reference | .stp | 3D-06-ASM-DIM-1.0.stp | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Final Dimensions Data | .xlsx | ANA-06-DIM-2.0.xlsx | Compliance, Aerospace |
+| Final Layout | .dwg | DWG-06-LAYOUT-2.0.dwg | Compliance, Aerospace |
+| Final Dimensional 3D Model | .stp | 3D-06-ASM-DIM-2.0.stp | Compliance, Aerospace |
+| Zoning 3D Model | .jt | 3D-06-ASM-ZONE-2.0.jt | Compliance, Aerospace |
+
+### ATA 07 - Lifting, Shoring
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Conceptual Lifting Points | .dwg | DWG-07-LIFT-1.0.dwg | Compliance, Aerospace |
+| Initial Stress Analysis | .xlsx | ANA-07-STRESS-1.0.xlsx | Compliance, Aerospace |
+| Draft Lifting Concept | .docx | DES-07-PROC-1.0.docx | Compliance, Aerospace |
+| Lifting Points 3D Model | .stp | 3D-07-ASM-LIFT-1.0.stp | Compliance, Aerospace |
+| Preliminary FEA Model | .fem | 3D-07-FEM-LIFT-1.0.fem | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Detailed Lifting Points | .dwg | DWG-07-LIFT-2.0.dwg | Compliance, Aerospace |
+| Final Stress Analysis | .xlsx | ANA-07-STRESS-2.0.xlsx | Compliance, Aerospace |
+| GSE Interface Specification | .docx | ICD-07-GSE-2.0.docx | Compliance, Aerospace |
+| Detailed Lifting Points 3D | .stp | 3D-07-ASM-LIFT-2.0.stp | Compliance, Aerospace |
+| Final FEA Model | .fem | 3D-07-FEM-LIFT-2.0.fem | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-07-MBD-LIFT-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 08 - Leveling and Weighing
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Draft Leveling Concept | .docx | DES-08-LEVEL-1.0.docx | Compliance, Aerospace |
+| Accuracy Requirements | .docx | REQ-08-ACC-1.0.docx | Compliance, Aerospace |
+| Leveling Points 3D Model | .stp | 3D-08-ASM-LEVEL-1.0.stp | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Detailed Leveling Procedure | .docx | DES-08-LEVEL-2.0.docx | Compliance, Aerospace |
+| Procedure Validation Plan | .docx | TST-08-VAL-2.0.docx | Compliance, Aerospace |
+| Equipment Interface | .docx | ICD-08-EQUIP-2.0.docx | Compliance, Aerospace |
+| Detailed Leveling Points 3D | .stp | 3D-08-ASM-LEVEL-2.0.stp | Compliance, Aerospace |
+| Equipment Interface 3D | .jt | 3D-08-ASM-EQUIP-2.0.jt | Compliance, Aerospace |
+
+### ATA 09 - Towing and Taxiing
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Interface Concept | .dwg | DWG-09-TOW-1.0.dwg | Compliance, Aerospace |
+| Draft Towing Concept | .docx | DES-09-PROC-1.0.docx | Compliance, Aerospace |
+| Limitations Specification | .docx | REQ-09-LIM-1.0.docx | Compliance, Aerospace |
+| Towing Interface 3D Model | .stp | 3D-09-ASM-TOW-1.0.stp | Compliance, Aerospace |
+| Preliminary Stress Model | .fem | 3D-09-FEM-TOW-1.0.fem | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Detailed Interface | .dwg | DWG-09-TOW-2.0.dwg | Compliance, Aerospace |
+| Detailed Towing Procedure | .docx | DES-09-PROC-2.0.docx | Compliance, Aerospace |
+| Turning Radius and Loads | .xlsx | ANA-09-TURN-2.0.xlsx | Compliance, Aerospace |
+| Detailed Towing Interface 3D | .stp | 3D-09-ASM-TOW-2.0.stp | Compliance, Aerospace |
+| Final Stress Model | .fem | 3D-09-FEM-TOW-2.0.fem | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-09-MBD-TOW-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 10 - Parking, Mooring, Storage
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Draft Parking/Mooring Concepts | .docx | DES-10-PARK-1.0.docx | Compliance, Aerospace |
+| Environmental Requirements | .docx | REQ-10-ENV-1.0.docx | Compliance, Aerospace |
+| Mooring Points 3D Model | .stp | 3D-10-ASM-MOOR-1.0.stp | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Detailed Parking/Mooring Procedures | .docx | DES-10-PARK-2.0.docx | Compliance, Aerospace |
+| Covers and Plugs Specification | .docx | REQ-10-COVER-2.0.docx | Compliance, Aerospace |
+| Detailed Mooring Points 3D | .stp | 3D-10-ASM-MOOR-2.0.stp | Compliance, Aerospace |
+| Covers and Plugs 3D | .stp | 3D-10-ASM-COVER-2.0.stp | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-10-MBD-MOOR-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 11 - Placards and Markings
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Draft Placards List | .xlsx | ANA-11-PLAC-1.0.xlsx | Compliance, Aerospace |
+| Draft Livery Concept | .docx | DES-11-LIVERY-1.0.docx | Integrated, Aerospace |
+| Placards Location 3D | .jt | 3D-11-ASM-PLAC-1.0.jt | Compliance, Aerospace |
+| Livery Concept 3D | .jt | 3D-11-ASM-LIVERY-1.0.jt | Integrated, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Final Placards List | .xlsx | ANA-11-PLAC-2.0.xlsx | Compliance, Aerospace |
+| Location Drawings | .dwg | DWG-11-LOC-2.0.dwg | Compliance, Aerospace |
+| Final Livery/Material | .docx | DES-11-LIVERY-2.0.docx | Integrated, Aerospace |
+| Final Placards Location 3D | .jt | 3D-11-ASM-PLAC-2.0.jt | Compliance, Aerospace |
+| Final Livery 3D | .jt | 3D-11-ASM-LIVERY-2.0.jt | Integrated, Aerospace |
+
+### ATA 12 - Servicing
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Conceptual Access/Ports | .dwg | DWG-12-ACCESS-1.0.dwg | Compliance, Aerospace |
+| Fluid Types Specification | .docx | REQ-12-FLUID-1.0.docx | Compliance, Aerospace |
+| Draft Servicing Concept | .docx | DES-12-SERV-1.0.docx | Compliance, Aerospace |
+| Service Points 3D Model | .stp | 3D-12-ASM-SERV-1.0.stp | Compliance, Aerospace |
+| Access Doors 3D Model | .stp | 3D-12-ASM-ACCESS-1.0.stp | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Detailed Access/Ports | .dwg | DWG-12-ACCESS-2.0.dwg | Compliance, Aerospace |
+| Final Fluid Specifications | .docx | REQ-12-FLUID-2.0.docx | Compliance, Aerospace |
+| Detailed Servicing Procedures | .docx | DES-12-SERV-2.0.docx | Compliance, Aerospace |
+| Detailed Service Points 3D | .stp | 3D-12-ASM-SERV-2.0.stp | Compliance, Aerospace |
+| Detailed Access Doors 3D | .stp | 3D-12-ASM-ACCESS-2.0.stp | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-12-MBD-SERV-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 18 - Vibration and Noise Analysis
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Preliminary Vibration/Noise Models | .xlsx | ANA-18-VIB-1.0.xlsx | Compliance, Aerospace |
+| Control Strategy | .docx | DES-18-CTRL-1.0.docx | Integrated, Aerospace |
+| Limits Requirements | .docx | REQ-18-LIM-1.0.docx | Compliance, Aerospace |
+| Vibration Analysis Model | .fem | 3D-18-FEM-VIB-1.0.fem | Compliance, Aerospace |
+| Acoustic Model | .fem | 3D-18-FEM-ACOUSTIC-1.0.fem | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Detailed Vibration/Noise Results | .xlsx | ANA-18-VIB-2.0.xlsx | Compliance, Aerospace |
+| Control Treatments | .docx | DES-18-TREAT-2.0.docx | Integrated, Aerospace |
+| Measurement Test Plan | .docx | TST-18-MEAS-2.0.docx | Compliance, Aerospace |
+| Final Vibration Analysis Model | .fem | 3D-18-FEM-VIB-2.0.fem | Compliance, Aerospace |
+| Final Acoustic Model | .fem | 3D-18-FEM-ACOUSTIC-2.0.fem | Compliance, Aerospace |
+| Treatment Installation 3D | .stp | 3D-18-ASM-TREAT-2.0.stp | Integrated, Aerospace |
+
+### ATA 20 - Standard Practices - Airframe
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Materials/Processes Philosophy | .docx | REQ-20-MAT-1.0.docx | Compliance, Aerospace |
+| Manual Outline | .docx | DES-20-MAN-1.0.docx | Compliance, Aerospace |
+| Standard Joints 3D Models | .stp | 3D-20-ASM-JOINT-1.0.stp | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Final Materials/Processes | .docx | REQ-20-MAT-2.0.docx | Compliance, Aerospace |
+| Manual Draft Sections | .docx | DES-20-MAN-2.0.docx | Compliance, Aerospace |
+| Key Standard Repairs Draft | .docx | DES-20-REPAIR-2.0.docx | Compliance, Aerospace |
+| Detailed Standard Joints 3D | .stp | 3D-20-ASM-JOINT-2.0.stp | Compliance, Aerospace |
+| Standard Repair 3D Models | .stp | 3D-20-ASM-REPAIR-2.0.stp | Compliance, Aerospace |
+| Manufacturing Models with PMI | .3dpdf | 3D-20-MBD-STD-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 21 - Air Conditioning and Pressurization (ECS)
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| ECS Requirements | .reqif | REQ-21-ECS-1.0.reqif | Compliance, Aerospace |
+| ECS Concept Description | .docx | DES-21-ECS-1.0.docx | Integrated, Aerospace |
+| ECS Architecture | .vsdx | DES-21-ARCH-1.0.vsdx | Integrated, Aerospace |
+| Preliminary Loads | .xlsx | ANA-21-LOAD-1.0.xlsx | Compliance, Aerospace |
+| Draft Interface Control | .docx | ICD-21-ECS-1.0.docx | Compliance, Aerospace |
+| ECS Conceptual Layout | .stp | 3D-21-ASM-ECS-1.0.stp | Integrated, Aerospace |
+| Ducting Concept | .catpart | 3D-21-PRT-DUCT-1.0.catpart | Compliance, Aerospace |
+| Flow Simulation | .cgns | 3D-21-CFD-FLOW-1.0.cgns | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| ECS Requirements Trace Matrix | .xlsx | REQ-21-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed ECS System Design | .docx | DES-21-ECS-2.0.docx | Integrated, Aerospace |
+| ECS Installation | .dwg | DWG-21-INST-2.0.dwg | Compliance, Aerospace |
+| Final Loads/Performance | .xlsx | ANA-21-LOAD-2.0.xlsx | Compliance, Aerospace |
+| Final Interface Control | .docx | ICD-21-ECS-2.0.docx | Compliance, Aerospace |
+| ECS Test Plan | .docx | TST-21-ECS-2.0.docx | Compliance, Aerospace |
+| ECS Detailed Assembly | .stp | 3D-21-ASM-ECS-2.0.stp | Integrated, Aerospace |
+| Detailed Components | .catpart | 3D-21-PRT-COMP-2.0.catpart | Compliance, Aerospace |
+| Final Flow Simulation | .cgns | 3D-21-CFD-FLOW-2.0.cgns | Compliance, Aerospace |
+| Thermal Analysis | .fem | 3D-21-FEM-THERM-2.0.fem | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-21-MBD-ECS-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 22 - Autoflight (AFCS)
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| AFCS Requirements | .reqif | REQ-22-AFCS-1.0.reqif | Compliance, Aerospace |
+| AFCS Concept Description | .docx | DES-22-AFCS-1.0.docx | Innovation, Aerospace |
+| Software/Hardware Architecture | .vsdx | DES-22-ARCH-1.0.vsdx | Innovation, Integrated |
+| Preliminary Algorithm | .xlsx | ANA-22-ALGO-1.0.xlsx | Innovation, IT |
+| Draft Interface Control | .docx | ICD-22-AFCS-1.0.docx | Compliance, IT |
+| AI Concept/Risk Report | .docx | ANA-22-AI-1.0.docx | Innovation, IT |
+| AFCS Hardware Concept | .stp | 3D-22-ASM-AFCS-1.0.stp | Innovation, Aerospace |
+| Sensor Placement | .jt | 3D-22-ASM-SENSOR-1.0.jt | Innovation, Integrated |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| AFCS Requirements Trace Matrix | .xlsx | REQ-22-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed AFCS System Design | .docx | DES-22-AFCS-2.0.docx | Integrated, Aerospace |
+| Hardware Drawing | .dwg | DWG-22-HW-2.0.dwg | Compliance, Aerospace |
+| Software Detailed Specification | .docx | REQ-22-SW-2.0.docx | Integrated, IT |
+| Final Algorithm/Simulation | .xlsx | ANA-22-ALGO-2.0.xlsx | Innovation, IT |
+| Test Plan/Cases | .docx | TST-22-AFCS-2.0.docx | Compliance, Integrated |
+| AFCS Hardware Detailed | .stp | 3D-22-ASM-AFCS-2.0.stp | Innovation, Aerospace |
+| Detailed Sensor Integration | .jt | 3D-22-ASM-SENSOR-2.0.jt | Innovation, Integrated |
+| Installation Space Envelope | .catpart | 3D-22-PRT-SPACE-2.0.catpart | Compliance, Aerospace |
+| Cooling Analysis | .fem | 3D-22-FEM-THERM-2.0.fem | Compliance, IT |
+
+### ATA 23 - Communications (COM)
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| COM Requirements | .reqif | REQ-23-COM-1.0.reqif | Compliance, Aerospace |
+| COM Concept Description | .docx | DES-23-COM-1.0.docx | Integrated, Aerospace |
+| COM Architecture | .vsdx | DES-23-ARCH-1.0.vsdx | Integrated, IT |
+| Link Budget Concept | .xlsx | ANA-23-LINK-1.0.xlsx | Compliance, IT |
+| QCS Feasibility Report | .docx | ANA-23-QCS-1.0.docx | Innovation, IT |
+| COM Hardware Concept | .stp | 3D-23-ASM-COM-1.0.stp | Integrated, Aerospace |
+| Antenna Placement Concept | .jt | 3D-23-ASM-ANT-1.0.jt | Compliance, Aerospace |
+| EMI Analysis Model | .fem | 3D-23-FEM-EMI-1.0.fem | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| COM Requirements Trace Matrix | .xlsx | REQ-23-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed COM System Design | .docx | DES-23-COM-2.0.docx | Integrated, Aerospace |
+| Installation/Antenna Drawing | .dwg | DWG-23-ANT-2.0.dwg | Compliance, Aerospace |
+| Hardware/Software Specification | .docx | REQ-23-HWSW-2.0.docx | Integrated, IT |
+| Final Link Budget | .xlsx | ANA-23-LINK-2.0.xlsx | Compliance, IT |
+| COM Test Plan | .docx | TST-23-COM-2.0.docx | Compliance, Aerospace |
+| COM Hardware Detailed | .stp | 3D-23-ASM-COM-2.0.stp | Integrated, Aerospace |
+| Detailed Antenna Integration | .stp | 3D-23-ASM-ANT-2.0.stp | Compliance, Aerospace |
+| Final EMI Analysis | .fem | 3D-23-FEM-EMI-2.0.fem | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-23-MBD-COM-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 24 - Electrical Power (EPS)
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| EPS Requirements | .reqif | REQ-24-EPS-1.0.reqif | Compliance, Aerospace |
+| EPS Concept Description | .docx | DES-24-EPS-1.0.docx | Integrated, Aerospace |
+| EPS Architecture | .vsdx | DES-24-ARCH-1.0.vsdx | Integrated, Aerospace |
+| Preliminary ELA/Q-Batt Size | .xlsx | ANA-24-ELA-1.0.xlsx | Innovation, Aerospace |
+| Technology Readiness Level/Risk | .docx | ANA-24-TRL-1.0.docx | Innovation, Aerospace |
+| EPS Conceptual Layout | .stp | 3D-24-ASM-EPS-1.0.stp | Integrated, Aerospace |
+| Distribution Concept | .jt | 3D-24-ASM-DIST-1.0.jt | Compliance, Aerospace |
+| Battery Concept | .catpart | 3D-24-PRT-BATT-1.0.catpart | Innovation, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| EPS Requirements Trace Matrix | .xlsx | REQ-24-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed EPS System Design | .docx | DES-24-EPS-2.0.docx | Integrated, Aerospace |
+| Distribution/Installation Drawing | .dwg | DWG-24-DIST-2.0.dwg | Compliance, Aerospace |
+| Final ELA/Q-Batt Performance | .xlsx | ANA-24-ELA-2.0.xlsx | Innovation, Aerospace |
+| EPS Test Plan | .docx | TST-24-EPS-2.0.docx | Compliance, Aerospace |
+| EPS Detailed Assembly | .stp | 3D-24-ASM-EPS-2.0.stp | Integrated, Aerospace |
+| Detailed Distribution | .jt | 3D-24-ASM-DIST-2.0.jt | Compliance, Aerospace |
+| Detailed Battery Design | .catpart | 3D-24-PRT-BATT-2.0.catpart | Innovation, Aerospace |
+| Thermal Analysis | .fem | 3D-24-FEM-THERM-2.0.fem | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-24-MBD-EPS-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 25 - Equipment / Furnishings
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Layout/PaxEx Requirements | .reqif | REQ-25-PAXEX-1.0.reqif | Compliance, Aerospace |
+| Conceptual Layout | .dwg | DWG-25-LAYOUT-1.0.dwg | Integrated, Aerospace |
+| Key Component Concepts | .docx | REQ-25-COMP-1.0.docx | Integrated, Aerospace |
+| Interior 3D Layout | .stp | 3D-25-ASM-INT-1.0.stp | Integrated, Aerospace |
+| Seat Concept | .catpart | 3D-25-PRT-SEAT-1.0.catpart | Integrated, Aerospace |
+| Galley Concept | .catpart | 3D-25-PRT-GALLEY-1.0.catpart | Integrated, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Requirements Trace Matrix | .xlsx | REQ-25-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Layout/Installation | .dwg | DWG-25-LAYOUT-2.0.dwg | Compliance, Aerospace |
+| Final Component Selection | .docx | REQ-25-COMP-2.0.docx | Compliance, Aerospace |
+| Safety/Flammability Test Plan | .docx | TST-25-SAFETY-2.0.docx | Compliance, Aerospace |
+| Detailed Interior 3D | .stp | 3D-25-ASM-INT-2.0.stp | Integrated, Aerospace |
+| Detailed Seat Design | .catpart | 3D-25-PRT-SEAT-2.0.catpart | Integrated, Aerospace |
+| Detailed Galley Design | .catpart | 3D-25-PRT-GALLEY-2.0.catpart | Integrated, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-25-MBD-INT-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 26 - Fire Protection
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Fire Protection Requirements | .reqif | REQ-26-FIRE-1.0.reqif | Compliance, Aerospace |
+| Fire Protection Concept | .docx | DES-26-FIRE-1.0.docx | Compliance, Aerospace |
+| Detection/Suppression Zones | .vsdx | DES-26-ZONES-1.0.vsdx | Compliance, Aerospace |
+| Preliminary Hazard Analysis | .xlsx | ANA-26-HAZ-1.0.xlsx | Compliance, Aerospace |
+| QRFSS Feasibility Report | .docx | ANA-26-QRFSS-1.0.docx | Innovation, Aerospace |
+| Fire Protection System 3D | .stp | 3D-26-ASM-FIRE-1.0.stp | Compliance, Aerospace |
+| Detection Zones 3D | .jt | 3D-26-ASM-DETECT-1.0.jt | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Fire Protection Requirements Trace Matrix | .xlsx | REQ-26-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Fire Protection System Design | .docx | DES-26-FIRE-2.0.docx | Compliance, Aerospace |
+| Installation Drawing | .dwg | DWG-26-INST-2.0.dwg | Compliance, Aerospace |
+| Hardware Specification | .docx | REQ-26-HW-2.0.docx | Compliance, Aerospace |
+| Final Hazard/Safety Analysis | .xlsx | ANA-26-HAZ-2.0.xlsx | Compliance, Aerospace |
+| Fire Protection Test Plan | .docx | TST-26-FIRE-2.0.docx | Compliance, Aerospace |
+| Detailed Fire Protection 3D | .stp | 3D-26-ASM-FIRE-2.0.stp | Compliance, Aerospace |
+| Detailed Detection Zones 3D | .jt | 3D-26-ASM-DETECT-2.0.jt | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-26-MBD-FIRE-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 27 - Flight Controls (FCS)
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| FCS Requirements | .reqif | REQ-27-FCS-1.0.reqif | Compliance, Aerospace |
+| FCS Concept Description | .docx | DES-27-FCS-1.0.docx | Integrated, Aerospace |
+| Actuation Concept Architecture | .vsdx | DES-27-ACT-1.0.vsdx | Integrated, Aerospace |
+| Preliminary Loads/Aero | .xlsx | ANA-27-LOADS-1.0.xlsx | Compliance, Aerospace |
+| Q-FCAS Concept Report | .docx | ANA-27-QFCAS-1.0.docx | Innovation, Aerospace |
+| FCS Conceptual Layout | .stp | 3D-27-ASM-FCS-1.0.stp | Integrated, Aerospace |
+| Actuation Concept | .catproduct | 3D-27-ASM-ACT-1.0.catproduct | Integrated, Aerospace |
+| Control Surface Kinematics | .jt | 3D-27-ASM-KINEM-1.0.jt | Compliance, Aerospace |
+| Preliminary Stress Model | .fem | 3D-27-FEM-STRESS-1.0.fem | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| FCS Requirements Trace Matrix | .xlsx | REQ-27-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed FCS System Design | .docx | DES-27-FCS-2.0.docx | Integrated, Aerospace |
+| Installation/Mechanism Drawing | .dwg | DWG-27-MECH-2.0.dwg | Compliance, Aerospace |
+| Final Loads/Performance | .xlsx | ANA-27-LOADS-2.0.xlsx | Compliance, Aerospace |
+| Software/Hardware Specification | .docx | REQ-27-HWSW-2.0.docx | Integrated, Aerospace |
+| Test Plan/Cases | .docx | TST-27-FCS-2.0.docx | Compliance, Aerospace |
+| FCS Detailed Assembly | .stp | 3D-27-ASM-FCS-2.0.stp | Integrated, Aerospace |
+| Detailed Actuation System | .catproduct | 3D-27-ASM-ACT-2.0.catproduct | Integrated, Aerospace |
+| Final Kinematics Simulation | .jt | 3D-27-ASM-KINEM-2.0.jt | Compliance, Aerospace |
+| Final Stress Model | .fem | 3D-27-FEM-STRESS-2.0.fem | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-27-MBD-FCS-2.0.3dpdf | Compliance, Aerospace |
+| Aerodynamic Analysis | .cgns | 3D-27-CFD-AERO-2.0.cgns | Compliance, Aerospace |
+
+### ATA 28 - Fuel (Hydrogen)
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Fuel System Requirements | .reqif | REQ-28-FUEL-1.0.reqif | Compliance, Aerospace |
+| Fuel System Concept | .docx | DES-28-FUEL-1.0.docx | Innovation, Aerospace |
+| Storage/Distribution Concept | .vsdx | DES-28-STOR-1.0.vsdx | Innovation, Aerospace |
+| Preliminary Sizing | .xlsx | ANA-28-SIZE-1.0.xlsx | Compliance, Aerospace |
+| Safety Concept Analysis | .docx | ANA-28-SAFETY-1.0.docx | Compliance, Aerospace |
+| Fuel System Concept | .stp | 3D-28-ASM-FUEL-1.0.stp | Innovation, Aerospace |
+| Tank Concept | .catpart | 3D-28-PRT-TANK-1.0.catpart | Innovation, Aerospace |
+| Flow Simulation Concept | .cgns | 3D-28-CFD-FLOW-1.0.cgns | Innovation, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Fuel System Requirements Trace Matrix | .xlsx | REQ-28-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Fuel System Design | .docx | DES-28-FUEL-2.0.docx | Integrated, Aerospace |
+| Installation/Plumbing Drawing | .dwg | DWG-28-PLUMB-2.0.dwg | Compliance, Aerospace |
+| Final Sizing/Performance | .xlsx | ANA-28-SIZE-2.0.xlsx | Compliance, Aerospace |
+| Components Specification | .docx | REQ-28-COMP-2.0.docx | Compliance, Aerospace |
+| Fuel System Test Plan | .docx | TST-28-FUEL-2.0.docx | Compliance, Aerospace |
+| Fuel System Detailed | .stp | 3D-28-ASM-FUEL-2.0.stp | Innovation, Aerospace |
+| Detailed Tank Design | .catpart | 3D-28-PRT-TANK-2.0.catpart | Innovation, Aerospace |
+| Final Flow Simulation | .cgns | 3D-28-CFD-FLOW-2.0.cgns | Innovation, Aerospace |
+| Thermal Analysis | .fem | 3D-28-FEM-THERM-2.0.fem | Compliance, Aerospace |
+| Stress Analysis | .fem | 3D-28-FEM-STRESS-2.0.fem | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-28-MBD-FUEL-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 29 - Hydraulic Power
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Hydraulic System Requirements | .reqif | REQ-29-HYD-1.0.reqif | Compliance, Aerospace |
+| Hydraulic System Concept | .docx | DES-29-HYD-1.0.docx | Compliance, Aerospace |
+| Hydraulic System Architecture | .vsdx | DES-29-ARCH-1.0.vsdx | Compliance, Aerospace |
+| Preliminary Pressure/Flow | .xlsx | ANA-29-FLOW-1.0.xlsx | Compliance, Aerospace |
+| Hydraulic System 3D Concept | .stp | 3D-29-ASM-HYD-1.0.stp | Compliance, Aerospace |
+| Reservoir Concept | .catpart | 3D-29-PRT-RES-1.0.catpart | Compliance, Aerospace |
+| Flow Simulation | .cgns | 3D-29-CFD-FLOW-1.0.cgns | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Hydraulic System Requirements Trace Matrix | .xlsx | REQ-29-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Hydraulic System Design | .docx | DES-29-HYD-2.0.docx | Compliance, Aerospace |
+| Schematics/Installation Drawing | .dwg | DWG-29-SCHEM-2.0.dwg | Compliance, Aerospace |
+| Final Analysis | .xlsx | ANA-29-FLOW-2.0.xlsx | Compliance, Aerospace |
+| Components Specification | .docx | REQ-29-COMP-2.0.docx | Compliance, Aerospace |
+| Hydraulic System Test Plan | .docx | TST-29-HYD-2.0.docx | Compliance, Aerospace |
+| Hydraulic System Detailed | .stp | 3D-29-ASM-HYD-2.0.stp | Compliance, Aerospace |
+| Detailed Components | .catpart | 3D-29-PRT-COMP-2.0.catpart | Compliance, Aerospace |
+| Final Flow Simulation | .cgns | 3D-29-CFD-FLOW-2.0.cgns | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-29-MBD-HYD-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 30 - Ice and Rain Protection
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Ice/Rain Protection Requirements | .reqif | REQ-30-ICE-1.0.reqif | Compliance, Aerospace |
+| Ice/Rain Protection Concept | .docx | DES-30-ICE-1.0.docx | Integrated, Aerospace |
+| Ice/Rain Protection Architecture | .vsdx | DES-30-ARCH-1.0.vsdx | Integrated, Aerospace |
+| Preliminary Power Requirement | .xlsx | ANA-30-POWER-1.0.xlsx | Compliance, Aerospace |
+| QE-IDS Concept Report | .docx | ANA-30-QEIDS-1.0.docx | Innovation, Aerospace |
+| Ice Protection System 3D | .stp | 3D-30-ASM-ICE-1.0.stp | Integrated, Aerospace |
+| Protected Areas 3D | .jt | 3D-30-ASM-AREA-1.0.jt | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Ice/Rain Protection Requirements Trace Matrix | .xlsx | REQ-30-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Ice/Rain Protection System Design | .docx | DES-30-ICE-2.0.docx | Integrated, Aerospace |
+| Installation Drawing | .dwg | DWG-30-INST-2.0.dwg | Compliance, Aerospace |
+| Final Power/Performance | .xlsx | ANA-30-POWER-2.0.xlsx | Compliance, Aerospace |
+| Hardware Specification | .docx | REQ-30-HW-2.0.docx | Compliance, Aerospace |
+| Ice/Rain Protection Test Plan | .docx | TST-30-ICE-2.0.docx | Compliance, Aerospace |
+| Detailed Ice Protection 3D | .stp | 3D-30-ASM-ICE-2.0.stp | Integrated, Aerospace |
+| Final Protected Areas 3D | .jt | 3D-30-ASM-AREA-2.0.jt | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-30-MBD-ICE-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 31 - Indicating / Recording Systems
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Display/Recording Requirements | .reqif | REQ-31-DISP-1.0.reqif | Compliance, Aerospace |
+| Indicating/Recording Concept | .docx | DES-31-IND-1.0.docx | Integrated, Aerospace |
+| Hardware/Software Architecture | .vsdx | DES-31-ARCH-1.0.vsdx | Integrated, IT |
+| Q-DMRS Concept Report | .docx | ANA-31-QDMRS-1.0.docx | Innovation, IT |
+| Display System 3D Concept | .stp | 3D-31-ASM-DISP-1.0.stp | Integrated, Aerospace |
+| Recorder Placement 3D | .jt | 3D-31-ASM-REC-1.0.jt | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Indicating/Recording Requirements Trace Matrix | .xlsx | REQ-31-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Indicating/Recording System Design | .docx | DES-31-IND-2.0.docx | Integrated, Aerospace |
+| Hardware Installation Drawing | .dwg | DWG-31-INST-2.0.dwg | Compliance, Aerospace |
+| Software/Display Formats Specification | .docx | REQ-31-SW-2.0.docx | Integrated, IT |
+| Indicating/Recording Test Plan | .docx | TST-31-IND-2.0.docx | Compliance, Aerospace |
+| Detailed Display System 3D | .stp | 3D-31-ASM-DISP-2.0.stp | Integrated, Aerospace |
+| Detailed Recorder Installation | .jt | 3D-31-ASM-REC-2.0.jt | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-31-MBD-IND-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 32 - Landing Gear (LG)
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| LG Requirements | .reqif | REQ-32-LG-1.0.reqif | Compliance, Aerospace |
+| LG Concept Description | .docx | DES-32-LG-1.0.docx | Integrated, Aerospace |
+| Conceptual Layout | .dwg | DWG-32-LAYOUT-1.0.dwg | Compliance, Aerospace |
+| Preliminary Loads | .xlsx | ANA-32-LOADS-1.0.xlsx | Compliance, Aerospace |
+| Q-LGAS Concept Report | .docx | ANA-32-QLGAS-1.0.docx | Innovation, Aerospace |
+| LG Conceptual Layout | .stp | 3D-32-ASM-LG-1.0.stp | Integrated, Aerospace |
+| Retraction Kinematics | .jt | 3D-32-ASM-RETRACT-1.0.jt | Compliance, Aerospace |
+| Preliminary Stress Model | .fem | 3D-32-FEM-STRESS-1.0.fem | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| LG Requirements Trace Matrix | .xlsx | REQ-32-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed LG System Design | .docx | DES-32-LG-2.0.docx | Integrated, Aerospace |
+| Detailed Structure/Mechanism | .dwg | DWG-32-MECH-2.0.dwg | Compliance, Aerospace |
+| Final Loads/Stress/Performance | .xlsx | ANA-32-LOADS-2.0.xlsx | Compliance, Aerospace |
+| Components Specification | .docx | REQ-32-COMP-2.0.docx | Compliance, Aerospace |
+| Test Plan | .docx | TST-32-LG-2.0.docx | Compliance, Aerospace |
+| LG Detailed Assembly | .stp | 3D-32-ASM-LG-2.0.stp | Integrated, Aerospace |
+| Final Retraction Kinematics | .jt | 3D-32-ASM-RETRACT-2.0.jt | Compliance, Aerospace |
+| Final Stress Model | .fem | 3D-32-FEM-STRESS-2.0.fem | Compliance, Aerospace |
+| Drop Test Simulation | .fem | 3D-32-FEM-DROP-2.0.fem | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-32-MBD-LG-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 33 - Lights
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Lighting Requirements | .reqif | REQ-33-LIGHT-1.0.reqif | Compliance, Aerospace |
+| Lighting Concept Description | .docx | DES-33-LIGHT-1.0.docx | Integrated, Aerospace |
+| Conceptual Placement | .dwg | DWG-33-PLACE-1.0.dwg | Compliance, Aerospace |
+| Technology Concept - Q-LS | .docx | REQ-33-QLS-1.0.docx | Innovation, Aerospace |
+| Lighting System 3D Concept | .stp | 3D-33-ASM-LIGHT-1.0.stp | Integrated, Aerospace |
+| Lighting Coverage 3D | .jt | 3D-33-ASM-COV-1.0.jt | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Lighting Requirements Trace Matrix | .xlsx | REQ-33-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Lighting System Design | .docx | DES-33-LIGHT-2.0.docx | Integrated, Aerospace |
+| Installation/Wiring Drawing | .dwg | DWG-33-INST-2.0.dwg | Compliance, Aerospace |
+| Fixtures Specification | .docx | REQ-33-FIX-2.0.docx | Compliance, Aerospace |
+| Lighting Test Plan | .docx | TST-33-LIGHT-2.0.docx | Compliance, Aerospace |
+| Detailed Lighting System 3D | .stp | 3D-33-ASM-LIGHT-2.0.stp | Integrated, Aerospace |
+| Final Lighting Coverage 3D | .jt | 3D-33-ASM-COV-2.0.jt | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-33-MBD-LIGHT-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 34 - Navigation (NAV)
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Navigation Requirements | .reqif | REQ-34-NAV-1.0.reqif | Compliance, Aerospace |
+| Navigation Concept Description | .docx | DES-34-NAV-1.0.docx | Integrated, Aerospace |
+| Sensor Fusion Concept Architecture | .vsdx | DES-34-FUSION-1.0.vsdx | Innovation, IT |
+| Preliminary Accuracy Calculation | .xlsx | ANA-34-ACC-1.0.xlsx | Compliance, Aerospace |
+| QNS Feasibility Report | .docx | ANA-34-QNS-1.0.docx | Innovation, IT |
+| Navigation System 3D Concept | .stp | 3D-34-ASM-NAV-1.0.stp | Integrated, Aerospace |
+| Sensor Placement 3D | .jt | 3D-34-ASM-SENSOR-1.0.jt | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Navigation Requirements Trace Matrix | .xlsx | REQ-34-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Navigation System Design | .docx | DES-34-NAV-2.0.docx | Integrated, Aerospace |
+| Hardware Installation Drawing | .dwg | DWG-34-INST-2.0.dwg | Compliance, Aerospace |
+| Software/Hardware Specification | .docx | REQ-34-HWSW-2.0.docx | Integrated, IT |
+| Final Accuracy/Performance | .xlsx | ANA-34-ACC-2.0.xlsx | Compliance, Aerospace |
+| Navigation Test Plan | .docx | TST-34-NAV-2.0.docx | Compliance, Aerospace |
+| Detailed Navigation System 3D | .stp | 3D-34-ASM-NAV-2.0.stp | Integrated, Aerospace |
+| Final Sensor Placement 3D | .jt | 3D-34-ASM-SENSOR-2.0.jt | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-34-MBD-NAV-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 35 - Oxygen
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Oxygen System Requirements | .reqif | REQ-35-OXY-1.0.reqif | Compliance, Aerospace |
+| Oxygen System Concept | .docx | DES-35-OXY-1.0.docx | Compliance, Aerospace |
+| Storage/Distribution Concept | .vsdx | DES-35-DIST-1.0.vsdx | Compliance, Aerospace |
+| Preliminary Sizing | .xlsx | ANA-35-SIZE-1.0.xlsx | Compliance, Aerospace |
+| Oxygen System 3D Concept | .stp | 3D-35-ASM-OXY-1.0.stp | Compliance, Aerospace |
+| Distribution 3D Concept | .jt | 3D-35-ASM-DIST-1.0.jt | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Oxygen System Requirements Trace Matrix | .xlsx | REQ-35-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Oxygen System Design | .docx | DES-35-OXY-2.0.docx | Compliance, Aerospace |
+| Installation/Plumbing Drawing | .dwg | DWG-35-PLUMB-2.0.dwg | Compliance, Aerospace |
+| Final Sizing | .xlsx | ANA-35-SIZE-2.0.xlsx | Compliance, Aerospace |
+| Components Specification | .docx | REQ-35-COMP-2.0.docx | Compliance, Aerospace |
+| Oxygen System Test Plan | .docx | TST-35-OXY-2.0.docx | Compliance, Aerospace |
+| Detailed Oxygen System 3D | .stp | 3D-35-ASM-OXY-2.0.stp | Compliance, Aerospace |
+| Detailed Distribution 3D | .jt | 3D-35-ASM-DIST-2.0.jt | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-35-MBD-OXY-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 36 - Pneumatic
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Pneumatic System Requirements | .reqif | REQ-36-PNEU-1.0.reqif | Compliance, Aerospace |
+| Pneumatic System Concept | .docx | DES-36-PNEU-1.0.docx | Compliance, Aerospace |
+| Pneumatic System Architecture | .vsdx | DES-36-ARCH-1.0.vsdx | Compliance, Aerospace |
+| Preliminary Demand/Supply | .xlsx | ANA-36-FLOW-1.0.xlsx | Compliance, Aerospace |
+| Pneumatic System 3D Concept | .stp | 3D-36-ASM-PNEU-1.0.stp | Compliance, Aerospace |
+| Ducting 3D Concept | .jt | 3D-36-ASM-DUCT-1.0.jt | Compliance, Aerospace |
+| Flow Simulation | .cgns | 3D-36-CFD-FLOW-1.0.cgns | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Pneumatic System Requirements Trace Matrix | .xlsx | REQ-36-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Pneumatic System Design | .docx | DES-36-PNEU-2.0.docx | Compliance, Aerospace |
+| Ducting/Installation Drawing | .dwg | DWG-36-DUCT-2.0.dwg | Compliance, Aerospace |
+| Final Analysis | .xlsx | ANA-36-FLOW-2.0.xlsx | Compliance, Aerospace |
+| Components Specification | .docx | REQ-36-COMP-2.0.docx | Compliance, Aerospace |
+| Pneumatic System Test Plan | .docx | TST-36-PNEU-2.0.docx | Compliance, Aerospace |
+| Detailed Pneumatic System 3D | .stp | 3D-36-ASM-PNEU-2.0.stp | Compliance, Aerospace |
+| Detailed Ducting 3D | .jt | 3D-36-ASM-DUCT-2.0.jt | Compliance, Aerospace |
+| Final Flow Simulation | .cgns | 3D-36-CFD-FLOW-2.0.cgns | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-36-MBD-PNEU-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 38 - Water / Waste
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Water/Waste System Requirements | .reqif | REQ-38-WATER-1.0.reqif | Compliance, Aerospace |
+| Water/Waste System Concept | .docx | DES-38-WATER-1.0.docx | Compliance, Aerospace |
+| Conceptual Layout | .dwg | DWG-38-LAYOUT-1.0.dwg | Compliance, Aerospace |
+| Water/Waste System 3D Concept | .stp | 3D-38-ASM-WATER-1.0.stp | Compliance, Aerospace |
+| Tank Concept | .catpart | 3D-38-PRT-TANK-1.0.catpart | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Water/Waste System Requirements Trace Matrix | .xlsx | REQ-38-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Water/Waste System Design | .docx | DES-38-WATER-2.0.docx | Compliance, Aerospace |
+| Installation/Plumbing Drawing | .dwg | DWG-38-PLUMB-2.0.dwg | Compliance, Aerospace |
+| Components Specification | .docx | REQ-38-COMP-2.0.docx | Compliance, Aerospace |
+| Water/Waste System Test Plan | .docx | TST-38-WATER-2.0.docx | Compliance, Aerospace |
+| Detailed Water/Waste System 3D | .stp | 3D-38-ASM-WATER-2.0.stp | Compliance, Aerospace |
+| Detailed Tank Design | .catpart | 3D-38-PRT-TANK-2.0.catpart | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-38-MBD-WATER-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 45 - Central Maintenance System (CMS)
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| CMS Requirements | .reqif | REQ-45-CMS-1.0.reqif | Compliance, Integrated |
+| CMS Concept Description | .docx | DES-45-CMS-1.0.docx | Innovation, IT |
+| Hardware/Software Architecture | .vsdx | DES-45-ARCH-1.0.vsdx | Innovation, IT |
+| Draft Interface Control | .docx | ICD-45-CMS-1.0.docx | Compliance, IT |
+| AI/Q-CMS Concept Report | .docx | ANA-45-QCMS-1.0.docx | Innovation, IT |
+| CMS Hardware 3D Concept | .stp | 3D-45-ASM-CMS-1.0.stp | Innovation, IT |
+| Interface Concept 3D | .jt | 3D-45-ASM-INT-1.0.jt | Compliance, IT |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| CMS Requirements Trace Matrix | .xlsx | REQ-45-MATRIX-2.0.xlsx | Compliance, Integrated |
+| Detailed CMS System Design | .docx | DES-45-CMS-2.0.docx | Innovation, IT |
+| Hardware Installation Drawing | .dwg | DWG-45-INST-2.0.dwg | Compliance, Aerospace |
+| Software Detailed/Algorithms | .docx | REQ-45-SW-2.0.docx | Innovation, IT |
+| Final Interface Control | .docx | ICD-45-CMS-2.0.docx | Compliance, IT |
+| CMS Test Plan | .docx | TST-45-CMS-2.0.docx | Compliance, Integrated |
+| Detailed CMS Hardware 3D | .stp | 3D-45-ASM-CMS-2.0.stp | Innovation, IT |
+| Detailed Interface 3D | .jt | 3D-45-ASM-INT-2.0.jt | Compliance, IT |
+| Manufacturing Model with PMI | .3dpdf | 3D-45-MBD-CMS-2.0.3dpdf | Compliance, IT |
+
+### ATA 46 - Information Systems
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Network/Security/Data Requirements | .reqif | REQ-46-NET-1.0.reqif | Compliance, IT |
+| Network Concept Architecture | .vsdx | DES-46-NET-1.0.vsdx | Innovation, IT |
+| Protocol Concepts | .docx | REQ-46-PROTO-1.0.docx | Innovation, IT |
+| Draft Interface Control | .docx | ICD-46-NET-1.0.docx | Compliance, IT |
+| Q-INI Concept Report | .docx | ANA-46-QINI-1.0.docx | Innovation, IT |
+| Network Hardware 3D Concept | .stp | 3D-46-ASM-NET-1.0.stp | Innovation, IT |
+| Rack Layout 3D | .jt | 3D-46-ASM-RACK-1.0.jt | Compliance, IT |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Information Systems Requirements Trace Matrix | .xlsx | REQ-46-MATRIX-2.0.xlsx | Compliance, IT |
+| Detailed Information Systems Design | .docx | DES-46-INFO-2.0.docx | Innovation, IT |
+| Network Layout/Hardware Install | .dwg | DWG-46-NET-2.0.dwg | Compliance, IT |
+| Software/Hardware/Security Config | .docx | REQ-46-CONFIG-2.0.docx | Compliance, IT |
+| Final Interface Control | .docx | ICD-46-NET-2.0.docx | Compliance, IT |
+| Information Systems Test Plan | .docx | TST-46-INFO-2.0.docx | Compliance, IT |
+| Detailed Network Hardware 3D | .stp | 3D-46-ASM-NET-2.0.stp | Innovation, IT |
+| Final Rack Layout 3D | .jt | 3D-46-ASM-RACK-2.0.jt | Compliance, IT |
+| Manufacturing Model with PMI | .3dpdf | 3D-46-MBD-NET-2.0.3dpdf | Compliance, IT |
+
+### ATA 49 - Airborne Auxiliary Power (APU)
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| APU Requirements | .reqif | REQ-49-APU-1.0.reqif | Compliance, Aerospace |
+| APU Concept Description | .docx | DES-49-APU-1.0.docx | Integrated, Aerospace |
+| Preliminary Power Output | .xlsx | ANA-49-POWER-1.0.xlsx | Compliance, Aerospace |
+| APU 3D Concept | .stp | 3D-49-ASM-APU-1.0.stp | Integrated, Aerospace |
+| Installation Concept 3D | .jt | 3D-49-ASM-INST-1.0.jt | Compliance, Aerospace |
+| Thermal Analysis | .fem | 3D-49-FEM-THERM-1.0.fem | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| APU Requirements Trace Matrix | .xlsx | REQ-49-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed APU System Design | .docx | DES-49-APU-2.0.docx | Integrated, Aerospace |
+| Installation Drawing | .dwg | DWG-49-INST-2.0.dwg | Compliance, Aerospace |
+| Final Performance | .xlsx | ANA-49-POWER-2.0.xlsx | Compliance, Aerospace |
+| Unit Specification | .docx | REQ-49-UNIT-2.0.docx | Compliance, Aerospace |
+| APU Test Plan | .docx | TST-49-APU-2.0.docx | Compliance, Aerospace |
+| Detailed APU 3D | .stp | 3D-49-ASM-APU-2.0.stp | Integrated, Aerospace |
+| Final Installation 3D | .jt | 3D-49-ASM-INST-2.0.jt | Compliance, Aerospace |
+| Final Thermal Analysis | .fem | 3D-49-FEM-THERM-2.0.fem | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-49-MBD-APU-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 51 - Structures - General / Standard Practices
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Design Criteria | .docx | REQ-51-CRIT-1.0.docx | Compliance, Aerospace |
+| Loads Philosophy | .docx | ANA-51-LOADS-1.0.docx | Compliance, Aerospace |
+| Repair Philosophy Outline | .docx | DES-51-REPAIR-1.0.docx | Compliance, Aerospace |
+| Standard Structural Details 3D | .stp | 3D-51-ASM-STD-1.0.stp | Compliance, Aerospace |
+| Loads Model | .fem | 3D-51-FEM-LOADS-1.0.fem | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Final Criteria/Materials | .docx | REQ-51-CRIT-2.0.docx | Compliance, Aerospace |
+| Final Loads Report | .docx | ANA-51-LOADS-2.0.docx | Compliance, Aerospace |
+| Key Repair Concepts Draft | .docx | DES-51-REPAIR-2.0.docx | Compliance, Aerospace |
+| Detailed Standard Details 3D | .stp | 3D-51-ASM-STD-2.0.stp | Compliance, Aerospace |
+| Final Loads Model | .fem | 3D-51-FEM-LOADS-2.0.fem | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-51-MBD-STD-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 52 - Doors
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Doors Requirements | .reqif | REQ-52-DOOR-1.0.reqif | Compliance, Aerospace |
+| Conceptual Design | .dwg | DWG-52-DOOR-1.0.dwg | Compliance, Aerospace |
+| Preliminary Loads | .xlsx | ANA-52-LOADS-1.0.xlsx | Compliance, Aerospace |
+| Doors 3D Concept | .stp | 3D-52-ASM-DOOR-1.0.stp | Compliance, Aerospace |
+| Mechanism Concept 3D | .jt | 3D-52-ASM-MECH-1.0.jt | Compliance, Aerospace |
+| Preliminary Stress Model | .fem | 3D-52-FEM-STRESS-1.0.fem | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Doors Requirements Trace Matrix | .xlsx | REQ-52-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Design/Mechanisms | .dwg | DWG-52-MECH-2.0.dwg | Compliance, Aerospace |
+| Final Stress/Loads | .xlsx | ANA-52-LOADS-2.0.xlsx | Compliance, Aerospace |
+| Doors Test Plan | .docx | TST-52-DOOR-2.0.docx | Compliance, Aerospace |
+| Detailed Doors 3D | .stp | 3D-52-ASM-DOOR-2.0.stp | Compliance, Aerospace |
+| Detailed Mechanism 3D | .jt | 3D-52-ASM-MECH-2.0.jt | Compliance, Aerospace |
+| Final Stress Model | .fem | 3D-52-FEM-STRESS-2.0.fem | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-52-MBD-DOOR-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 53 - Fuselage
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Fuselage Requirements | .reqif | REQ-53-FUS-1.0.reqif | Compliance, Aerospace |
+| Conceptual Layout/Sections | .dwg | DWG-53-LAYOUT-1.0.dwg | Compliance, Aerospace |
+| Preliminary Stress/Loads | .xlsx | ANA-53-STRESS-1.0.xlsx | Compliance, Aerospace |
+| Fuselage Conceptual Model | .stp | 3D-53-ASM-FUS-1.0.stp | Compliance, Aerospace |
+| Section Concepts | .catpart | 3D-53-PRT-SECTION-1.0.catpart | Compliance, Aerospace |
+| Preliminary Stress Model | .fem | 3D-53-FEM-STRESS-1.0.fem | Compliance, Aerospace |
+| Aerodynamic Concept | .cgns | 3D-53-CFD-AERO-1.0.cgns | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Fuselage Requirements Trace Matrix | .xlsx | REQ-53-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed "Build-to-Print" | .dwg | DWG-53-BUILD-2.0.dwg | Compliance, Aerospace |
+| Final Stress/Fatigue/DT | .xlsx | ANA-53-STRESS-2.0.xlsx | Compliance, Aerospace |
+| Structural Test Plan | .docx | TST-53-STRUCT-2.0.docx | Compliance, Aerospace |
+| Fuselage Detailed Assembly | .stp | 3D-53-ASM-FUS-2.0.stp | Compliance, Aerospace |
+| Detailed Sections | .catpart | 3D-53-PRT-SECTION-2.0.catpart | Compliance, Aerospace |
+| Final Stress Model | .fem | 3D-53-FEM-STRESS-2.0.fem | Compliance, Aerospace |
+| Fatigue/Damage Tolerance Model | .fem | 3D-53-FEM-FATIGUE-2.0.fem | Compliance, Aerospace |
+| Final Aerodynamic Analysis | .cgns | 3D-53-CFD-AERO-2.0.cgns | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-53-MBD-FUS-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 54 - Nacelles / Pylons
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Nacelles/Pylons Requirements | .reqif | REQ-54-NAC-1.0.reqif | Compliance, Aerospace |
+| Conceptual Design | .dwg | DWG-54-NAC-1.0.dwg | Compliance, Aerospace |
+| Preliminary Loads/Vibe | .xlsx | ANA-54-LOADS-1.0.xlsx | Compliance, Aerospace |
+| Nacelle/Pylon 3D Concept | .stp | 3D-54-ASM-NAC-1.0.stp | Compliance, Aerospace |
+| Preliminary Stress Model | .fem | 3D-54-FEM-STRESS-1.0.fem | Compliance, Aerospace |
+| Aerodynamic Concept | .cgns | 3D-54-CFD-AERO-1.0.cgns | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Nacelles/Pylons Requirements Trace Matrix | .xlsx | REQ-54-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Design | .dwg | DWG-54-NAC-2.0.dwg | Compliance, Aerospace |
+| Final Stress/Aero/Vibe | .xlsx | ANA-54-STRESS-2.0.xlsx | Compliance, Aerospace |
+| Nacelles/Pylons Test Plan | .docx | TST-54-NAC-2.0.docx | Compliance, Aerospace |
+| Detailed Nacelle/Pylon 3D | .stp | 3D-54-ASM-NAC-2.0.stp | Compliance, Aerospace |
+| Final Stress Model | .fem | 3D-54-FEM-STRESS-2.0.fem | Compliance, Aerospace |
+| Final Aerodynamic Analysis | .cgns | 3D-54-CFD-AERO-2.0.cgns | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-54-MBD-NAC-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 55 - Stabilizers
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Stabilizers Requirements | .reqif | REQ-55-STAB-1.0.reqif | Compliance, Aerospace |
+| Conceptual Design | .dwg | DWG-55-STAB-1.0.dwg | Compliance, Aerospace |
+| Preliminary Loads/Aero | .xlsx | ANA-55-LOADS-1.0.xlsx | Compliance, Aerospace |
+| Stabilizers 3D Concept | .stp | 3D-55-ASM-STAB-1.0.stp | Compliance, Aerospace |
+| Preliminary Stress Model | .fem | 3D-55-FEM-STRESS-1.0.fem | Compliance, Aerospace |
+| Aerodynamic Concept | .cgns | 3D-55-CFD-AERO-1.0.cgns | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Stabilizers Requirements Trace Matrix | .xlsx | REQ-55-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Design | .dwg | DWG-55-STAB-2.0.dwg | Compliance, Aerospace |
+| Final Stress/Aero | .xlsx | ANA-55-STRESS-2.0.xlsx | Compliance, Aerospace |
+| Stabilizers Test Plan | .docx | TST-55-STAB-2.0.docx | Compliance, Aerospace |
+| Detailed Stabilizers 3D | .stp | 3D-55-ASM-STAB-2.0.stp | Compliance, Aerospace |
+| Final Stress Model | .fem | 3D-55-FEM-STRESS-2.0.fem | Compliance, Aerospace |
+| Final Aerodynamic Analysis | .cgns | 3D-55-CFD-AERO-2.0.cgns | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-55-MBD-STAB-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 56 - Windows
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Windows Requirements | .reqif | REQ-56-WIN-1.0.reqif | Compliance, Aerospace |
+| Conceptual Design | .dwg | DWG-56-WIN-1.0.dwg | Compliance, Aerospace |
+| Material Concept | .docx | REQ-56-MAT-1.0.docx | Compliance, Aerospace |
+| Windows 3D Concept | .stp | 3D-56-ASM-WIN-1.0.stp | Compliance, Aerospace |
+| Preliminary Stress Model | .fem | 3D-56-FEM-STRESS-1.0.fem | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Windows Requirements Trace Matrix | .xlsx | REQ-56-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Design/Installation | .dwg | DWG-56-INST-2.0.dwg | Compliance, Aerospace |
+| Final Material/Coatings | .docx | REQ-56-MAT-2.0.docx | Compliance, Aerospace |
+| Bird Strike/Pressure Test Plan | .docx | TST-56-BIRD-2.0.docx | Compliance, Aerospace |
+| Detailed Windows 3D | .stp | 3D-56-ASM-WIN-2.0.stp | Compliance, Aerospace |
+| Final Stress Model | .fem | 3D-56-FEM-STRESS-2.0.fem | Compliance, Aerospace |
+| Bird Strike Simulation | .fem | 3D-56-FEM-BIRD-2.0.fem | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-56-MBD-WIN-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 57 - Wings
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Wing Requirements | .reqif | REQ-57-WING-1.0.reqif | Compliance, Aerospace |
+| Conceptual Design/Airfoil | .dwg | DWG-57-AIRFOIL-1.0.dwg | Compliance, Aerospace |
+| Preliminary Loads/Aero | .xlsx | ANA-57-LOADS-1.0.xlsx | Compliance, Aerospace |
+| Morphing Concept | .docx | REQ-57-MORPH-1.0.docx | Innovation, Aerospace |
+| Wing Conceptual Model | .stp | 3D-57-ASM-WING-1.0.stp | Compliance, Aerospace |
+| Airfoil Definition | .catpart | 3D-57-PRT-AIRFOIL-1.0.catpart | Compliance, Aerospace |
+| Preliminary Stress Model | .fem | 3D-57-FEM-STRESS-1.0.fem | Compliance, Aerospace |
+| Aerodynamic Concept | .cgns | 3D-57-CFD-AERO-1.0.cgns | Compliance, Aerospace |
+| Morphing Concept | .jt | 3D-57-ASM-MORPH-1.0.jt | Innovation, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Wing Requirements Trace Matrix | .xlsx | REQ-57-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed "Build-to-Print" | .dwg | DWG-57-BUILD-2.0.dwg | Compliance, Aerospace |
+| Final Stress/Aero/Fatigue/DT | .xlsx | ANA-57-STRESS-2.0.xlsx | Compliance, Aerospace |
+| Morphing Mechanism Detailed | .docx | REQ-57-MORPH-2.0.docx | Innovation, Aerospace |
+| Structural Test Plan | .docx | TST-57-STRUCT-2.0.docx | Compliance, Aerospace |
+| Wing Detailed Assembly | .stp | 3D-57-ASM-WING-2.0.stp | Compliance, Aerospace |
+| Detailed Airfoil/Structure | .catpart | 3D-57-PRT-AIRFOIL-2.0.catpart | Compliance, Aerospace |
+| Final Stress Model | .fem | 3D-57-FEM-STRESS-2.0.fem | Compliance, Aerospace |
+| Fatigue/Damage Tolerance Model | .fem | 3D-57-FEM-FATIGUE-2.0.fem | Compliance, Aerospace |
+| Final Aerodynamic Analysis | .cgns | 3D-57-CFD-AERO-2.0.cgns | Compliance, Aerospace |
+| Detailed Morphing Mechanism | .jt | 3D-57-ASM-MORPH-2.0.jt | Innovation, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-57-MBD-WING-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 70-80 - Power Plant (Q-01 Quantum Propulsion)
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Q-01 Requirements | .reqif | REQ-71-Q01-1.0.reqif | Innovation, Aerospace |
+| Q-01 Concept Description | .docx | DES-71-Q01-1.0.docx | Innovation, Aerospace |
+| Q-01 Architecture | .vsdx | DES-71-ARCH-1.0.vsdx | Innovation, Aerospace |
+| Preliminary Performance | .xlsx | ANA-71-PERF-1.0.xlsx | Innovation, Aerospace |
+| Safety Concept Analysis | .docx | ANA-71-SAFETY-1.0.docx | Compliance, Aerospace |
+| Q-01 Conceptual Model | .stp | 3D-71-ASM-Q01-1.0.stp | Innovation, Aerospace |
+| Containment Concept | .catpart | 3D-71-PRT-CONTAIN-1.0.catpart | Innovation, Aerospace |
+| Thermal Simulation | .cgns | 3D-71-CFD-THERM-1.0.cgns | Innovation, Aerospace |
+| Preliminary Stress Model | .fem | 3D-71-FEM-STRESS-1.0.fem | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Q-01 Requirements Trace Matrix | .xlsx | REQ-71-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Q-01 System Design | .docx | DES-71-Q01-2.0.docx | Innovation, Aerospace |
+| Installation Drawing | .dwg | DWG-71-INST-2.0.dwg | Compliance, Aerospace |
+| Final Performance | .xlsx | ANA-71-PERF-2.0.xlsx | Innovation, Aerospace |
+| Final Safety Analysis | .docx | ANA-71-SAFETY-2.0.docx | Compliance, Aerospace |
+| Q-01 Test Plan | .docx | TST-71-Q01-2.0.docx | Compliance, Aerospace |
+| Q-01 Detailed Assembly | .stp | 3D-71-ASM-Q01-2.0.stp | Innovation, Aerospace |
+| Detailed Components | .catpart | 3D-71-PRT-COMP-2.0.catpart | Innovation, Aerospace |
+| Final Thermal Simulation | .cgns | 3D-71-CFD-THERM-2.0.cgns | Innovation, Aerospace |
+| Final Stress Model | .fem | 3D-71-FEM-STRESS-2.0.fem | Compliance, Aerospace |
+| Vibration Analysis | .fem | 3D-71-FEM-VIB-2.0.fem | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-71-MBD-Q01-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 91 - Charts & Diagrams
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Preliminary Wiring Diagrams | .vsdx | DWG-91-WIRE-1.0.vsdx | Compliance, Aerospace |
+| Preliminary System Schematics | .vsdx | DWG-91-SCHEM-1.0.vsdx | Compliance, Aerospace |
+| Preliminary Logic Diagrams | .vsdx | DWG-91-LOGIC-1.0.vsdx | Compliance, IT |
+| Preliminary Block Diagrams | .vsdx | DWG-91-BLOCK-1.0.vsdx | Integrated, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Final Wiring Diagrams | .vsdx | DWG-91-WIRE-2.0.vsdx | Compliance, Aerospace |
+| Final System Schematics | .vsdx | DWG-91-SCHEM-2.0.vsdx | Compliance, Aerospace |
+| Final Logic Diagrams | .vsdx | DWG-91-LOGIC-2.0.vsdx | Compliance, IT |
+| Final Block Diagrams | .vsdx | DWG-91-BLOCK-2.0.vsdx | Integrated, Aerospace |
+| Troubleshooting Diagrams | .vsdx | DWG-91-TRBL-2.0.vsdx | Compliance, Aerospace |
+
+### ATA 92 - Electrical System Installation
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Electrical Installation Requirements | .reqif | REQ-92-ELEC-1.0.reqif | Compliance, Aerospace |
+| Electrical Installation Concept | .docx | DES-92-ELEC-1.0.docx | Compliance, Aerospace |
+| Preliminary Routing | .dwg | DWG-92-ROUTE-1.0.dwg | Compliance, Aerospace |
+| Electrical Installation 3D Concept | .stp | 3D-92-ASM-ELEC-1.0.stp | Compliance, Aerospace |
+| Harness Concept | .catpart | 3D-92-PRT-HARNESS-1.0.catpart | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Electrical Installation Requirements Matrix | .xlsx | REQ-92-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Electrical Installation Design | .docx | DES-92-ELEC-2.0.docx | Compliance, Aerospace |
+| Final Routing/Installation Drawing | .dwg | DWG-92-ROUTE-2.0.dwg | Compliance, Aerospace |
+| Connector/Pin Lists | .xlsx | DATA-92-CONN-2.0.xlsx | Compliance, Aerospace |
+| Electrical Installation Test Plan | .docx | TST-92-ELEC-2.0.docx | Compliance, Aerospace |
+| Detailed Electrical Installation 3D | .stp | 3D-92-ASM-ELEC-2.0.stp | Compliance, Aerospace |
+| Detailed Harness Design | .catpart | 3D-92-PRT-HARNESS-2.0.catpart | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-92-MBD-ELEC-2.0.3dpdf | Compliance, Aerospace |
+
+### ATA 97 - Image Recording
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Image Recording Requirements | .reqif | REQ-97-IMG-1.0.reqif | Compliance, Aerospace |
+| Image Recording Concept | .docx | DES-97-IMG-1.0.docx | Integrated, IT |
+| Camera/Sensor Placement Concept | .dwg | DWG-97-CAM-1.0.dwg | Compliance, Aerospace |
+| Q-IRS Concept Report | .docx | ANA-97-QIRS-1.0.docx | Innovation, IT |
+| Image Recording System 3D Concept | .stp | 3D-97-ASM-IMG-1.0.stp | Integrated, IT |
+| Camera Placement 3D | .jt | 3D-97-ASM-CAM-1.0.jt | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Image Recording Requirements Matrix | .xlsx | REQ-97-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed Image Recording System Design | .docx | DES-97-IMG-2.0.docx | Integrated, IT |
+| Camera/Sensor Installation Drawing | .dwg | DWG-97-CAM-2.0.dwg | Compliance, Aerospace |
+| Hardware/Software Specification | .docx | REQ-97-HWSW-2.0.docx | Integrated, IT |
+| Image Recording Test Plan | .docx | TST-97-IMG-2.0.docx | Compliance, Aerospace |
+| Detailed Image Recording System 3D | .stp | 3D-97-ASM-IMG-2.0.stp | Integrated, IT |
+| Final Camera Placement 3D | .jt | 3D-97-ASM-CAM-2.0.jt | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-97-MBD-IMG-2.0.3dpdf | Compliance, IT |
+
+### ATA 99 - Electronic System Diagnostics
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Diagnostics Requirements | .reqif | REQ-99-DIAG-1.0.reqif | Compliance, IT |
+| Diagnostics Concept | .docx | DES-99-DIAG-1.0.docx | Innovation, IT |
+| Diagnostics Architecture | .vsdx | DES-99-ARCH-1.0.vsdx | Innovation, IT |
+| Q-AEDS Concept Report | .docx | ANA-99-QAEDS-1.0.docx | Innovation, IT |
+| Diagnostics Hardware 3D Concept | .stp | 3D-99-ASM-DIAG-1.0.stp | Innovation, IT |
+| Interface Concept 3D | .jt | 3D-99-ASM-INT-1.0.jt | Compliance, IT |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| Diagnostics Requirements Matrix | .xlsx | REQ-99-MATRIX-2.0.xlsx | Compliance, IT |
+| Detailed Diagnostics System Design | .docx | DES-99-DIAG-2.0.docx | Innovation, IT |
+| Hardware Installation Drawing | .dwg | DWG-99-INST-2.0.dwg | Compliance, IT |
+| Software Detailed/Algorithms | .docx | REQ-99-SW-2.0.docx | Innovation, IT |
+| Diagnostics Test Plan | .docx | TST-99-DIAG-2.0.docx | Compliance, IT |
+| Detailed Diagnostics Hardware 3D | .stp | 3D-99-ASM-DIAG-2.0.stp | Innovation, IT |
+| Detailed Interface 3D | .jt | 3D-99-ASM-INT-2.0.jt | Compliance, IT |
+| Manufacturing Model with PMI | .3dpdf | 3D-99-MBD-DIAG-2.0.3dpdf | Compliance, IT |
+
+### ATA 100 - Ground Support Equipment (GSE)
+
+#### PDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| GSE Requirements | .reqif | REQ-100-GSE-1.0.reqif | Compliance, Aerospace |
+| GSE Concept Description | .docx | DES-100-GSE-1.0.docx | Compliance, Aerospace |
+| Preliminary GSE List | .xlsx | DATA-100-LIST-1.0.xlsx | Compliance, Aerospace |
+| Key GSE Concepts 3D | .stp | 3D-100-ASM-GSE-1.0.stp | Compliance, Aerospace |
+| Interface Concept 3D | .jt | 3D-100-ASM-INT-1.0.jt | Compliance, Aerospace |
+
+#### CDR Package
+| Document | Format | Filename | Metadata Focus |
+|----------|--------|----------|---------------|
+| GSE Requirements Matrix | .xlsx | REQ-100-MATRIX-2.0.xlsx | Compliance, Aerospace |
+| Detailed GSE Design | .docx | DES-100-GSE-2.0.docx | Compliance, Aerospace |
+| Final GSE List/Specifications | .xlsx | DATA-100-LIST-2.0.xlsx | Compliance, Aerospace |
+| GSE Interface Control | .docx | ICD-100-GSE-2.0.docx | Compliance, Aerospace |
+| GSE Test Plan | .docx | TST-100-GSE-2.0.docx | Compliance, Aerospace |
+| Detailed GSE 3D | .stp | 3D-100-ASM-GSE-2.0.stp | Compliance, Aerospace |
+| Detailed Interface 3D | .jt | 3D-100-ASM-INT-2.0.jt | Compliance, Aerospace |
+| Manufacturing Model with PMI | .3dpdf | 3D-100-MBD-GSE-2.0.3dpdf | Compliance, Aerospace |
+
+## Implementation Guidelines
+
+To implement this comprehensive documentation and 3D design standard:
+
+1. **Template Repository**: Create standardized templates for each document type and 3D model with embedded metadata fields
+2. **Automated Validation**: Implement validation checks to ensure proper naming conventions and metadata completion
+3. **Version Control**: Establish a version control system that tracks document and model evolution from PDR to CDR
+4. **Cross-Reference Database**: Maintain relationships between documents and 3D models across ATA chapters
+5. **Approval Workflow**: Define approval paths based on document type, ATA chapter, and operational mode
+6. **CAD Management System**: Establish a centralized PDM/PLM system to manage all 3D design data
+7. **Master Model Approach**: Implement a master model philosophy where
+
 
 ## 🌍 Scope: environments
 
