@@ -567,17 +567,17 @@ For detailed information on specific aircraft systems, refer to the following AT
 #### **GP-AM-AMPEL-0100-32-001-A: Landing Gear System Description and Operation (ATA 32)**
 - **Document Link:** `GPAM-AMPEL-0201-32-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-32-001-A-001-00_EN-US`)
 - **Document Type:** System Description (SDD)
-- **Content:** Description of main and nose landing gear structure, extension/retraction mechanisms, shock absorbers.
+- **Content:** Detailed description of the landing gear components, extension and retraction mechanisms, and feedback systems.
 
 #### **GP-AM-AMPEL-0100-32-002-A: Landing Gear Control and Indication (ATA 32)**
 - **Document Link:** `GPAM-AMPEL-0201-32-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-32-002-A-001-00_EN-US`)
 - **Document Type:** System Description (SDD)
-- **Content:** Description of the control levers, sequencing logic, position indication, warning systems, steering, and braking systems (including anti-skid).
+- **Content:** Detailed descriptions of the control levers, sequencing logic, position indication, and warning systems.
 
 #### **GP-AM-AMPEL-0100-32-003-A: Quantum-Optimized Landing Gear Actuation System (Q-LGAS) Description (ATA 32)**
 - **Document Link:** `GPAM-AMPEL-0201-32-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-32-003-A-001-00_EN-US`)
 - **Document Type:** System Description (SDD) / Technical Specification
-- **Content:** Description of potential quantum-enhanced actuation or sensing for lighter weight, faster response, or improved reliability.
+- **Content:** Detailed descriptions of the quantum-enhanced actuation or sensing systems.
 
 ### 6.24 ATA 33 – Lights
 
@@ -960,4 +960,3 @@ For detailed information on specific aircraft systems, refer to the following AT
 - **Content:** Plan outlining the documentation required to maintain the aircraft's airworthiness throughout its operational life, including updates to maintenance programs and airworthiness limitations (links to ATA 05).
 
 ---
-```
