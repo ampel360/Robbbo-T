@@ -2,7 +2,7 @@
 
 # Robbbo-T Repository - Central Source Data Base
 
-Below a complete Data Module Required Delivery Packages (DMRDP) covering whole digital building blocks to documenmt and treace in Aerospace domain 
+Below a complete Data Module Required Delivery Packages (DMRDP) covering whole digital building blocks to documenmt, track and audit in Aerospace Industry domain 
 
 # GAIA AIR COAFI – Aircraft Standard Digital Library (GAIA-CO-ASD-LIB)
 **Amedeo Pelliccia**
