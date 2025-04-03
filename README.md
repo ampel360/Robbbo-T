@@ -3,8 +3,6 @@
 [https://gaia-air-splcogen.vercel.app/](https://gaia-air-splcogen.vercel.app/)
 
 
-![image](https://github.com/user-attachments/assets/a32d95e5-16ae-408f-9f9a-2245e8ae2d80)
-
 
 # Robbbo-T Repository - Central Source Data Base
 
