@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """
-Semantic Bridge Router for COAFI API
-Provides endpoints for semantic queries, memory operations, and system statistics.
+Semantic Bridge Router para COAFI API
+Proporciona endpoints para consultas semánticas, operaciones de memoria y estadísticas del sistema.
+Compatible con sistemas federados y auditoría distribuida.
 """
 
 import time
 import logging
+import uuid
 from typing import Dict, List, Any, Optional
 from datetime import datetime, timedelta
 
-from fastapi import APIRouter, Depends, HTTPException, Query, Body
+from fastapi import APIRouter, Depends, HTTPException, Query, Body, Security, status
+from fastapi.security import OAuth2PasswordBearer, SecurityScopes
 from pydantic import BaseModel, Field
 
 # Import memory service
@@ -26,12 +29,30 @@ except ImportError:
     MEMORY_SERVICE_AVAILABLE = False
     logging.warning("Memory service not available. Using mock implementations.")
 
+# Import auth dependencies (placeholder - would be implemented in auth.py)
+try:
+    from dependencies.auth import get_current_active_user, verify_token_permissions
+    AUTH_AVAILABLE = True
+except ImportError:
+    AUTH_AVAILABLE = False
+    logging.warning("Auth dependencies not available. Using mock implementations.")
+
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("coafi.semantic_bridge")
 
 # Create router
 router = APIRouter()
+
+# OAuth2 scheme for token authentication
+oauth2_scheme = OAuth2PasswordBearer(
+    tokenUrl="token",
+    scopes={
+        "memory:read": "Read access to memory system",
+        "memory:write": "Write access to memory system",
+        "memory:admin": "Administrative access to memory system"
+    }
+)
 
 # Models for API requests and responses
 class SemanticQueryRequest(BaseModel):
@@ -52,6 +73,8 @@ class SemanticQueryResponse(BaseModel):
     processing_time: float
     token_count: int = 0
     query_embedding: Optional[List[float]] = None
+    request_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    timestamp: str = Field(default_factory=lambda: datetime.now().isoformat())
 
 class MemoryItemRequest(BaseModel):
     """Request model for adding memory items"""
@@ -64,6 +87,8 @@ class MemoryItemResponse(BaseModel):
     success: bool
     id: Optional[str] = None
     error: Optional[str] = None
+    request_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    timestamp: str = Field(default_factory=lambda: datetime.now().isoformat())
 
 class MemoryCleanupRequest(BaseModel):
     """Request model for memory cleanup operations"""
@@ -76,12 +101,16 @@ class MemoryCleanupResponse(BaseModel):
     success: bool
     stats: Optional[Dict[str, Any]] = None
     error: Optional[str] = None
+    request_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    timestamp: str = Field(default_factory=lambda: datetime.now().isoformat())
 
 class SystemStatsResponse(BaseModel):
     """Response model for system statistics"""
     vector_db: Dict[str, Any] = Field(default_factory=dict)
     cache: Dict[str, Any] = Field(default_factory=dict)
     metrics: Dict[str, Any] = Field(default_factory=dict)
+    request_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    timestamp: str = Field(default_factory=lambda: datetime.now().isoformat())
 
 class QueryLogEntry(BaseModel):
     """Model for query log entries"""
@@ -92,16 +121,30 @@ class QueryLogEntry(BaseModel):
     processing_time: float = 0
     result_count: int = 0
     cache_hit: bool = False
+    user_id: Optional[str] = None
+    request_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
 
 class QueryLogsResponse(BaseModel):
     """Response model for query logs"""
     logs: List[Dict[str, Any]]
     total: int
+    request_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    timestamp: str = Field(default_factory=lambda: datetime.now().isoformat())
 
 class TrendDataResponse(BaseModel):
     """Response model for trend data"""
     dates: List[str]
     values: List[float]
+    request_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    timestamp: str = Field(default_factory=lambda: datetime.now().isoformat())
+
+class User(BaseModel):
+    """Simple user model for mock auth"""
+    id: str
+    username: str
+    email: str
+    scopes: List[str] = []
+    is_active: bool = True
 
 # Mock implementations for when memory service is not available
 class MockMemoryService:
@@ -145,22 +188,57 @@ class MockMemoryService:
         """Mock store implementation"""
         return f"mock_{int(time.time())}"
 
+# Mock auth functions
+async def mock_get_current_user(security_scopes: SecurityScopes, token: str = Depends(oauth2_scheme)):
+    """Mock implementation of get_current_user"""
+    if token == "invalid":
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid authentication credentials",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    
+    # Check if the user has the required scopes
+    if security_scopes.scopes:
+        user_scopes = ["memory:read"]  # Default scope for testing
+        for scope in security_scopes.scopes:
+            if scope not in user_scopes:
+                raise HTTPException(
+                    status_code=status.HTTP_403_FORBIDDEN,
+                    detail=f"Not enough permissions. Required: {security_scopes.scope_str}",
+                    headers={"WWW-Authenticate": f"Bearer scope=\"{security_scopes.scope_str}\""},
+                )
+    
+    return User(
+        id="user123",
+        username="testuser",
+        email="test@example.com",
+        scopes=["memory:read"]
+    )
+
 # Initialize mock service if needed
 if not MEMORY_SERVICE_AVAILABLE:
     mock_memory_service = MockMemoryService()
+
+# Use the appropriate auth dependency
+get_current_user = get_current_active_user if AUTH_AVAILABLE else mock_get_current_user
 
 # Query logs storage (in-memory for demo)
 query_logs = []
 
 # Endpoints
 @router.post("/", response_model=SemanticQueryResponse)
-async def semantic_query(query: SemanticQueryRequest):
+async def semantic_query(
+    query: SemanticQueryRequest,
+    current_user: Optional[User] = Depends(get_current_user)
+):
     """
     Execute a semantic query against the memory system
     
     Returns semantically similar content based on the query text
     """
     start_time = time.time()
+    request_id = str(uuid.uuid4())
     
     try:
         # Create memory query from request
@@ -210,7 +288,9 @@ async def semantic_query(query: SemanticQueryRequest):
             "token_count": token_count,
             "processing_time": processing_time,
             "result_count": len(results_dict),
-            "cache_hit": stats.get("cache_hit_rate", 0) > 0 if isinstance(stats, dict) else stats.cache_hit_rate > 0
+            "cache_hit": stats.get("cache_hit_rate", 0) > 0 if isinstance(stats, dict) else stats.cache_hit_rate > 0,
+            "user_id": current_user.id if current_user else None,
+            "request_id": request_id
         })
         
         # Limit query logs to last 1000 entries
@@ -223,7 +303,9 @@ async def semantic_query(query: SemanticQueryRequest):
             "total_results": len(results_dict),
             "processing_time": processing_time,
             "token_count": token_count,
-            "query_embedding": query_embedding[:5] if query.include_metadata else None  # Only include first 5 dimensions
+            "query_embedding": query_embedding[:5] if query.include_metadata else None,  # Only include first 5 dimensions
+            "request_id": request_id,
+            "timestamp": datetime.now().isoformat()
         }
     
     except Exception as e:
@@ -236,13 +318,16 @@ async def generate_rag_response(
     context_results: List[Dict[str, Any]] = Body(..., embed=True),
     model: str = Body("gpt-4o", embed=True),
     temperature: float = Body(0.7, embed=True),
-    include_citations: bool = Body(True, embed=True)
+    include_citations: bool = Body(True, embed=True),
+    current_user: User = Security(get_current_user, scopes=["memory:read"])
 ):
     """
     Generate a response using Retrieval-Augmented Generation (RAG)
     
     Uses the provided context results to generate a response to the query
     """
+    request_id = str(uuid.uuid4())
+    
     try:
         if not MEMORY_SERVICE_AVAILABLE:
             # Mock implementation
@@ -250,7 +335,9 @@ async def generate_rag_response(
             return {
                 "response": f"This is a mock RAG response to: {query}\n\nBased on the provided context, I can tell you that aerospace documentation requires precision and technical accuracy. [1][2]",
                 "model": model,
-                "processing_time": 0.5
+                "processing_time": 0.5,
+                "request_id": request_id,
+                "timestamp": datetime.now().isoformat()
             }
         
         # Convert context results to MemoryResult objects
@@ -280,7 +367,9 @@ async def generate_rag_response(
         return {
             "response": response,
             "model": model,
-            "processing_time": processing_time
+            "processing_time": processing_time,
+            "request_id": request_id,
+            "timestamp": datetime.now().isoformat()
         }
     
     except Exception as e:
@@ -288,17 +377,30 @@ async def generate_rag_response(
         raise HTTPException(status_code=500, detail=f"Error generating RAG response: {str(e)}")
 
 @router.post("/memory", response_model=MemoryItemResponse)
-async def add_memory_item(item: MemoryItemRequest):
+async def add_memory_item(
+    item: MemoryItemRequest,
+    current_user: User = Security(get_current_user, scopes=["memory:write"])
+):
     """
     Add a new item to the memory system
     
     Stores content with associated metadata for future retrieval
     """
+    request_id = str(uuid.uuid4())
+    
     try:
         # Generate a unique ID based on timestamp and content hash
         import hashlib
         content_hash = hashlib.md5(item.content.encode()).hexdigest()[:8]
         item_id = f"mem_{int(time.time())}_{content_hash}"
+        
+        # Add user info to metadata for auditing
+        if "audit" not in item.metadata:
+            item.metadata["audit"] = {}
+        
+        item.metadata["audit"]["created_by"] = current_user.id
+        item.metadata["audit"]["created_at"] = datetime.now().isoformat()
+        item.metadata["audit"]["request_id"] = request_id
         
         if MEMORY_SERVICE_AVAILABLE:
             # Get embedding for the content
@@ -317,7 +419,9 @@ async def add_memory_item(item: MemoryItemRequest):
             
             return {
                 "success": True,
-                "id": stored_id
+                "id": stored_id,
+                "request_id": request_id,
+                "timestamp": datetime.now().isoformat()
             }
         else:
             # Use mock implementation
@@ -325,23 +429,32 @@ async def add_memory_item(item: MemoryItemRequest):
             
             return {
                 "success": True,
-                "id": stored_id
+                "id": stored_id,
+                "request_id": request_id,
+                "timestamp": datetime.now().isoformat()
             }
     
     except Exception as e:
         logger.error(f"Error adding memory item: {e}")
         return {
             "success": False,
-            "error": str(e)
+            "error": str(e),
+            "request_id": request_id,
+            "timestamp": datetime.now().isoformat()
         }
 
 @router.post("/memory/cleanup", response_model=MemoryCleanupResponse)
-async def cleanup_memory(request: MemoryCleanupRequest):
+async def cleanup_memory(
+    request: MemoryCleanupRequest,
+    current_user: User = Security(get_current_user, scopes=["memory:admin"])
+):
     """
     Run cleanup operations on the memory system
     
     Supports deduplication, quality filtering, and compression
     """
+    request_id = str(uuid.uuid4())
+    
     try:
         if not MEMORY_SERVICE_AVAILABLE:
             # Mock implementation
@@ -351,8 +464,15 @@ async def cleanup_memory(request: MemoryCleanupRequest):
                 "stats": {
                     "processed": 100,
                     "affected": 15,
-                    "bytes_saved": 1024 * 1024 * 2  # 2 MB
-                }
+                    "bytes_saved": 1024 * 1024 * 2,  # 2 MB
+                    "operation": request.cleanup_type,
+                    "threshold": request.similarity_threshold,
+                    "folder_id": request.folder_id,
+                    "executed_by": current_user.id,
+                    "executed_at": datetime.now().isoformat()
+                },
+                "request_id": request_id,
+                "timestamp": datetime.now().isoformat()
             }
         
         # In a real implementation, this would call the memory service cleanup method
@@ -362,24 +482,37 @@ async def cleanup_memory(request: MemoryCleanupRequest):
             "stats": {
                 "processed": 100,
                 "affected": 15,
-                "bytes_saved": 1024 * 1024 * 2  # 2 MB
-            }
+                "bytes_saved": 1024 * 1024 * 2,  # 2 MB
+                "operation": request.cleanup_type,
+                "threshold": request.similarity_threshold,
+                "folder_id": request.folder_id,
+                "executed_by": current_user.id,
+                "executed_at": datetime.now().isoformat()
+            },
+            "request_id": request_id,
+            "timestamp": datetime.now().isoformat()
         }
     
     except Exception as e:
         logger.error(f"Error cleaning up memory: {e}")
         return {
             "success": False,
-            "error": str(e)
+            "error": str(e),
+            "request_id": request_id,
+            "timestamp": datetime.now().isoformat()
         }
 
 @router.get("/stats", response_model=SystemStatsResponse)
-async def get_system_stats():
+async def get_system_stats(
+    current_user: User = Security(get_current_user, scopes=["memory:read"])
+):
     """
     Get system statistics and metrics
     
     Returns information about vector database, cache, and performance metrics
     """
+    request_id = str(uuid.uuid4())
+    
     try:
         if not MEMORY_SERVICE_AVAILABLE:
             # Mock implementation
@@ -418,7 +551,9 @@ async def get_system_stats():
                             {"hour": "20:00", "avg_time": 130, "count": 10}
                         ]
                     }
-                }
+                },
+                "request_id": request_id,
+                "timestamp": datetime.now().isoformat()
             }
         
         # In a real implementation, this would get stats from the memory service
@@ -459,7 +594,9 @@ async def get_system_stats():
                         {"hour": "20:00", "avg_time": 130, "count": 10}
                     ]
                 }
-            }
+            },
+            "request_id": request_id,
+            "timestamp": datetime.now().isoformat()
         }
         
         return stats
@@ -473,13 +610,16 @@ async def get_query_logs(
     start_time: Optional[str] = None,
     end_time: Optional[str] = None,
     mood_id: Optional[str] = None,
-    limit: int = Query(100, ge=1, le=1000)
+    limit: int = Query(100, ge=1, le=1000),
+    current_user: User = Security(get_current_user, scopes=["memory:admin"])
 ):
     """
     Get query logs for the specified time period
     
     Filters logs by time range and mood, with pagination
     """
+    request_id = str(uuid.uuid4())
+    
     try:
         # Parse time range
         start_dt = datetime.fromisoformat(start_time) if start_time else datetime.now() - timedelta(days=1)
@@ -505,7 +645,9 @@ async def get_query_logs(
         
         return {
             "logs": limited_logs,
-            "total": len(filtered_logs)
+            "total": len(filtered_logs),
+            "request_id": request_id,
+            "timestamp": datetime.now().isoformat()
         }
     
     except Exception as e:
@@ -513,12 +655,17 @@ async def get_query_logs(
         raise HTTPException(status_code=500, detail=f"Error getting query logs: {str(e)}")
 
 @router.get("/trend", response_model=TrendDataResponse)
-async def get_memory_trend(days: int = Query(7, ge=1, le=30)):
+async def get_memory_trend(
+    days: int = Query(7, ge=1, le=30),
+    current_user: User = Security(get_current_user, scopes=["memory:read"])
+):
     """
     Get memory usage trend data
     
     Returns daily memory usage for the specified number of days
     """
+    request_id = str(uuid.uuid4())
+    
     try:
         # Generate mock trend data
         now = datetime.now()
@@ -536,7 +683,9 @@ async def get_memory_trend(days: int = Query(7, ge=1, le=30)):
         
         return {
             "dates": dates,
-            "values": values
+            "values": values,
+            "request_id": request_id,
+            "timestamp": datetime.now().isoformat()
         }
     
     except Exception as e:
