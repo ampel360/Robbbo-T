@@ -1413,17 +1413,16 @@ GAIA AIR está diseñado para una implementación incremental que proporciona va
 
 ### 12.2. Hitos Clave
 
-| Hito | Descripción | Plazo
-|-----|-----
-| **Fundación Digital** | Digital Thread Orchestrator operativo con conectores básicos | Mes 3
-| **Trazabilidad End-to-End** | Capacidad para seguir componentes a través de todo el ciclo de vida | Mes 6
-| **Gemelos Digitales Operativos** | Primeros gemelos digitales en producción con datos reales | Mes 9
-| **Optimización Sostenible** | Capacidades de optimización con consideraciones de sostenibilidad | Mes 12
-| **Mantenimiento Predictivo** | Sistema predictivo operativo con precisión >90% | Mes 15
-| **Integración Astronáutica** | Componente astronáutico integrado y operativo | Mes 21
-| **Autonomía Inicial** | Primeras capacidades de optimización autónoma | Mes 27
-| **Sistema Completo** | Todas las capacidades implementadas y operativas | Mes 36
-
+| Hito                        | Descripción                                                                 | Plazo |
+|-----------------------------|-----------------------------------------------------------------------------|-------|
+| Fundación Digital           | Digital Thread Orchestrator operativo con conectores básicos                | Mes 3 |
+| Trazabilidad End-to-End     | Capacidad para seguir componentes a través de todo el ciclo de vida         | Mes 6 |
+| Gemelos Digitales Operativos| Primeros gemelos digitales en producción con datos reales                   | Mes 9 |
+| Optimización Sostenible     | Capacidades de optimización con consideraciones de sostenibilidad           | Mes 12|
+| Mantenimiento Predictivo    | Sistema predictivo operativo con precisión >90%                             | Mes 15|
+| Integración Astronáutica    | Componente astronáutico integrado y operativo                               | Mes 21|
+| Autonomía Inicial           | Primeras capacidades de optimización autónoma                               | Mes 27|
+| Sistema Completo            | Todas las capacidades implementadas y operativas                            | Mes 36|
 
 ### 12.3. Estrategia de Adopción
 
