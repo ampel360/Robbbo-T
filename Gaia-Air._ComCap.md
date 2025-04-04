@@ -1330,10 +1330,10 @@ flowchart TB
 
     OnPremises --> CoreServices
     Cloud --> CoreServices
-    CoreServices --> "APIs Públicas"
-    CoreServices --> "Orquestación"
-    CoreServices --> "Analítica Avanzada"
-    CoreServices --> "Almacenamiento Centralizado"
+    CoreServices --> APIS_Publicas["APIs Públicas"]
+    CoreServices --> Orquestacion["Orquestación"]
+    CoreServices --> Analitica_Avanzada["Analítica Avanzada"]
+    CoreServices --> Almacenamiento_Centralizado["Almacenamiento Centralizado"]
   end
 ```
 
