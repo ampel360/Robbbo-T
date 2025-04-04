@@ -45,9 +45,6 @@ graph TD;
     K["ML Pipeline"] --> D
     K --> L["Modelos Predictivos"]
     M["CLI/SDKs"] --> B
-    Excelente idea. Aquí tienes el contenido formateado como un README.md completo para el Digital Thread Orchestrator:
-
-```markdown project="GAIA AIR" file="README.md"
 ...
 ```
 
