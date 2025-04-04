@@ -1,7 +1,10 @@
 import React from "react";
 import { Metadata } from "next";
 import UsersWidget from "./widgets/UsersWidget";
-import TokensWidget from "./widgets/TokensWidget"; // <-- Importa correctamente
+import TokensWidget from "./widgets/TokensWidget";
+import NodeStatusWidget from "./widgets/NodeStatusWidget"; 
+import TelemetryWidget from "./widgets/Telemetrywidget";    
+import AIInsightsWidget from "./widgets/AIInsightswidget";  
 
 export const metadata: Metadata = {
   title: "Dashboard | COAFI",
@@ -18,11 +21,12 @@ export default function DashboardLayout({
       {/* Sidebar o widgets a la izquierda */}
       <aside className="col-span-1 space-y-4">
         <UsersWidget />
-        <TokensWidget /> {/* <-- Agrega como componente modular */}
+        <TokensWidget />
         <NodeStatusWidget />
         <TelemetryWidget />
         <AIInsightsWidget />
       </aside>
+
       {/* Contenido principal */}
       <main className="col-span-3 bg-white rounded-xl shadow p-6">
         {children}
