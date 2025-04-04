@@ -165,4 +165,3 @@ Utilidades de línea de comandos:
 5. **Documentación como Código**: Mantener la documentación junto al código y actualizarla con cada cambio.
 
 
-¿Le gustaría que profundice en algún aspecto específico de esta estructura o que le proporcione ejemplos de configuración para alguno de los archivos mencionados?
