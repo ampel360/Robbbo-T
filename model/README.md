@@ -1,4 +1,8 @@
-## Aerospace Mater Printable Electronic Lot
+## Aerospace Mater/Mesh Printable Electronic Lot/Layer - Quantum Sensors (chips distribuidos ligeros y interconnectados embebidos en estructura ligera)
+
+**Distributed Intelligence as Paintable/Printable Skin** 
+
+# AMPEL DI-PK
 
 ### Overview
 
