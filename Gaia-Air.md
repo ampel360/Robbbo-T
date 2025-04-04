@@ -95,7 +95,7 @@
 
 ## Executive Summary
 
-GAIA AIR (Global Aerospace Intelligent Architecture for Industrial Revolution) representa una arquitectura digital integral diseñada específicamente para transformar la industria aeroespacial mediante la integración de tecnologías avanzadas, prácticas sostenibles y continuidad digital completa. Este documento describe exhaustivamente las capacidades del sistema, proporcionando una visión detallada de sus componentes, funcionalidades y valor estratégico.
+GAIA AIR (Global Aerospace Intelligent Architecture for Agile Industrial Revolution) representa una arquitectura digital integral diseñada específicamente para transformar la industria aeroespacial mediante la integración de tecnologías avanzadas, prácticas sostenibles y continuidad digital completa. Este documento describe exhaustivamente las capacidades del sistema, proporcionando una visión detallada de sus componentes, funcionalidades y valor estratégico.
 
 La arquitectura GAIA AIR se estructura en tres capas principales (Diseño y Documentación, Producción Industrial, y Servicios y Operaciones) interconectadas a través del Digital Thread Orchestrator, que actúa como columna vertebral del sistema. Esta estructura se complementa con un Componente Astronáutico especializado que extiende las capacidades del sistema al entorno espacial.
 
@@ -119,18 +119,20 @@ Este documento proporciona una descripción exhaustiva de las capacidades de GAI
 GAIA AIR implementa una arquitectura de capas interconectadas que abarca todo el ciclo de vida de productos aeroespaciales, desde la concepción inicial hasta el fin de vida útil. El sistema está diseñado con un enfoque en sostenibilidad, trazabilidad y optimización continua.
 
 ```mermaid
-Arquitectura Conceptual GAIA AIR.download-icon {
-            cursor: pointer;
-            transform-origin: center;
-        }
-        .download-icon .arrow-part {
-            transition: transform 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95);
-             transform-origin: center;
-        }
-        button:has(.download-icon):hover .download-icon .arrow-part, button:has(.download-icon):focus-visible .download-icon .arrow-part {
-          transform: translateY(-1.5px);
-        }
-        #mermaid-diagram-r8aip{font-family:var(--font-geist-sans);font-size:12px;fill:#000000;}#mermaid-diagram-r8aip .error-icon{fill:#552222;}#mermaid-diagram-r8aip .error-text{fill:#552222;stroke:#552222;}#mermaid-diagram-r8aip .edge-thickness-normal{stroke-width:1px;}#mermaid-diagram-r8aip .edge-thickness-thick{stroke-width:3.5px;}#mermaid-diagram-r8aip .edge-pattern-solid{stroke-dasharray:0;}#mermaid-diagram-r8aip .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-diagram-r8aip .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-diagram-r8aip .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-diagram-r8aip .marker{fill:#666;stroke:#666;}#mermaid-diagram-r8aip .marker.cross{stroke:#666;}#mermaid-diagram-r8aip svg{font-family:var(--font-geist-sans);font-size:12px;}#mermaid-diagram-r8aip p{margin:0;}#mermaid-diagram-r8aip .label{font-family:var(--font-geist-sans);color:#000000;}#mermaid-diagram-r8aip .cluster-label text{fill:#333;}#mermaid-diagram-r8aip .cluster-label span{color:#333;}#mermaid-diagram-r8aip .cluster-label span p{background-color:transparent;}#mermaid-diagram-r8aip .label text,#mermaid-diagram-r8aip span{fill:#000000;color:#000000;}#mermaid-diagram-r8aip .node rect,#mermaid-diagram-r8aip .node circle,#mermaid-diagram-r8aip .node ellipse,#mermaid-diagram-r8aip .node polygon,#mermaid-diagram-r8aip .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-diagram-r8aip .rough-node .label text,#mermaid-diagram-r8aip .node .label text{text-anchor:middle;}#mermaid-diagram-r8aip .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-diagram-r8aip .node .label{text-align:center;}#mermaid-diagram-r8aip .node.clickable{cursor:pointer;}#mermaid-diagram-r8aip .arrowheadPath{fill:#333333;}#mermaid-diagram-r8aip .edgePath .path{stroke:#666;stroke-width:2.0px;}#mermaid-diagram-r8aip .flowchart-link{stroke:#666;fill:none;}#mermaid-diagram-r8aip .edgeLabel{background-color:white;text-align:center;}#mermaid-diagram-r8aip .edgeLabel p{background-color:white;}#mermaid-diagram-r8aip .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-diagram-r8aip .labelBkg{background-color:rgba(255, 255, 255, 0.5);}#mermaid-diagram-r8aip .cluster rect{fill:hsl(0, 0%, 98.9215686275%);stroke:#707070;stroke-width:1px;}#mermaid-diagram-r8aip .cluster text{fill:#333;}#mermaid-diagram-r8aip .cluster span{color:#333;}#mermaid-diagram-r8aip div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:var(--font-geist-sans);font-size:12px;background:hsl(-160, 0%, 93.3333333333%);border:1px solid #707070;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-diagram-r8aip .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#000000;}#mermaid-diagram-r8aip .flowchart-link{stroke:hsl(var(--gray-400));stroke-width:1px;}#mermaid-diagram-r8aip .marker,#mermaid-diagram-r8aip marker,#mermaid-diagram-r8aip marker *{fill:hsl(var(--gray-400))!important;stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-r8aip .label,#mermaid-diagram-r8aip text,#mermaid-diagram-r8aip text>tspan{fill:hsl(var(--black))!important;color:hsl(var(--black))!important;}#mermaid-diagram-r8aip .background,#mermaid-diagram-r8aip rect.relationshipLabelBox{fill:hsl(var(--white))!important;}#mermaid-diagram-r8aip .entityBox,#mermaid-diagram-r8aip .attributeBoxEven{fill:hsl(var(--gray-150))!important;}#mermaid-diagram-r8aip .attributeBoxOdd{fill:hsl(var(--white))!important;}#mermaid-diagram-r8aip .label-container,#mermaid-diagram-r8aip rect.actor{fill:hsl(var(--white))!important;stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-r8aip line{stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-r8aip :root{--mermaid-font-family:var(--font-geist-sans);}Componente AstronáuticoCapa de Servicios y OperacionesCapa de Producción IndustrialCapa de Diseño y DocumentaciónDigital Thread OrchestratorDiseño Asistido por IAGestión de Datos de ProductoSimulación y AnálisisDocumentación TécnicaPlanificación y ControlFabricación DigitalControl de Calidad InteligenteGemelos Digitales de ProducciónSostenibilidad en ProducciónGestión de MantenimientoMonitoreo de RendimientoGemelos Digitales OperativosSostenibilidad OperativaServicios de Valor AñadidoPlanificación de MisiónDiseño EspacialEntorno EspacialSistemas de Soporte VitalMecánica Orbital
+flowchart TB
+  subgraph ConceptualArchitecture["Arquitectura Conceptual GAIA AIR"]
+    direction TB
+    Layer1["Capa de Diseño y Documentación"] 
+    Layer2["Capa de Producción Industrial"] 
+    Layer3["Capa de Servicios y Operaciones"]
+    DigitalThread["Digital Thread Orchestrator"]
+    AstronauticComponent["Componente Astronáutico"]
+
+    DigitalThread --> Layer1
+    DigitalThread --> Layer2
+    DigitalThread --> Layer3
+    DigitalThread --> AstronauticComponent
+  end
 ```
 
 ### 1.2. Principios Fundamentales
@@ -1289,52 +1291,71 @@ GAIA AIR proporciona un conjunto integral de métricas y KPIs para evaluar su im
 ### 11.1. Vista de Componentes
 
 ```mermaid
-Arquitectura de Componentes GAIA AIR.download-icon {
-            cursor: pointer;
-            transform-origin: center;
-        }
-        .download-icon .arrow-part {
-            transition: transform 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95);
-             transform-origin: center;
-        }
-        button:has(.download-icon):hover .download-icon .arrow-part, button:has(.download-icon):focus-visible .download-icon .arrow-part {
-          transform: translateY(-1.5px);
-        }
-        #mermaid-diagram-rb41q{font-family:var(--font-geist-sans);font-size:12px;fill:#000000;}#mermaid-diagram-rb41q .error-icon{fill:#552222;}#mermaid-diagram-rb41q .error-text{fill:#552222;stroke:#552222;}#mermaid-diagram-rb41q .edge-thickness-normal{stroke-width:1px;}#mermaid-diagram-rb41q .edge-thickness-thick{stroke-width:3.5px;}#mermaid-diagram-rb41q .edge-pattern-solid{stroke-dasharray:0;}#mermaid-diagram-rb41q .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-diagram-rb41q .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-diagram-rb41q .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-diagram-rb41q .marker{fill:#666;stroke:#666;}#mermaid-diagram-rb41q .marker.cross{stroke:#666;}#mermaid-diagram-rb41q svg{font-family:var(--font-geist-sans);font-size:12px;}#mermaid-diagram-rb41q p{margin:0;}#mermaid-diagram-rb41q .label{font-family:var(--font-geist-sans);color:#000000;}#mermaid-diagram-rb41q .cluster-label text{fill:#333;}#mermaid-diagram-rb41q .cluster-label span{color:#333;}#mermaid-diagram-rb41q .cluster-label span p{background-color:transparent;}#mermaid-diagram-rb41q .label text,#mermaid-diagram-rb41q span{fill:#000000;color:#000000;}#mermaid-diagram-rb41q .node rect,#mermaid-diagram-rb41q .node circle,#mermaid-diagram-rb41q .node ellipse,#mermaid-diagram-rb41q .node polygon,#mermaid-diagram-rb41q .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-diagram-rb41q .rough-node .label text,#mermaid-diagram-rb41q .node .label text{text-anchor:middle;}#mermaid-diagram-rb41q .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-diagram-rb41q .node .label{text-align:center;}#mermaid-diagram-rb41q .node.clickable{cursor:pointer;}#mermaid-diagram-rb41q .arrowheadPath{fill:#333333;}#mermaid-diagram-rb41q .edgePath .path{stroke:#666;stroke-width:2.0px;}#mermaid-diagram-rb41q .flowchart-link{stroke:#666;fill:none;}#mermaid-diagram-rb41q .edgeLabel{background-color:white;text-align:center;}#mermaid-diagram-rb41q .edgeLabel p{background-color:white;}#mermaid-diagram-rb41q .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-diagram-rb41q .labelBkg{background-color:rgba(255, 255, 255, 0.5);}#mermaid-diagram-rb41q .cluster rect{fill:hsl(0, 0%, 98.9215686275%);stroke:#707070;stroke-width:1px;}#mermaid-diagram-rb41q .cluster text{fill:#333;}#mermaid-diagram-rb41q .cluster span{color:#333;}#mermaid-diagram-rb41q div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:var(--font-geist-sans);font-size:12px;background:hsl(-160, 0%, 93.3333333333%);border:1px solid #707070;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-diagram-rb41q .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#000000;}#mermaid-diagram-rb41q .flowchart-link{stroke:hsl(var(--gray-400));stroke-width:1px;}#mermaid-diagram-rb41q .marker,#mermaid-diagram-rb41q marker,#mermaid-diagram-rb41q marker *{fill:hsl(var(--gray-400))!important;stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-rb41q .label,#mermaid-diagram-rb41q text,#mermaid-diagram-rb41q text>tspan{fill:hsl(var(--black))!important;color:hsl(var(--black))!important;}#mermaid-diagram-rb41q .background,#mermaid-diagram-rb41q rect.relationshipLabelBox{fill:hsl(var(--white))!important;}#mermaid-diagram-rb41q .entityBox,#mermaid-diagram-rb41q .attributeBoxEven{fill:hsl(var(--gray-150))!important;}#mermaid-diagram-rb41q .attributeBoxOdd{fill:hsl(var(--white))!important;}#mermaid-diagram-rb41q .label-container,#mermaid-diagram-rb41q rect.actor{fill:hsl(var(--white))!important;stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-rb41q line{stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-rb41q :root{--mermaid-font-family:var(--font-geist-sans);}Capa de Servicios deInfraestructuraDigital Thread OrchestratorCapa de Servicios de DominioCapa de Servicios de AplicaciónCapa de PresentaciónDashboards ContextualesVisualización 3D/4DInterfaces ColaborativasPortales de AutoservicioRealidad Aumentada/VirtualServicios de DiseñoServicios de ProducciónServicios de OperacionesServicios AstronáuticosServicios AnalíticosGestión de ProductosGestión de ProcesosGestión de RecursosGestión de CalidadGestión de SostenibilidadBus de EventosGestor de EntidadesMotor de ReglasGestor de RelacionesRegistro de TrazabilidadGestión de IdentidadesGestión de APIsAlmacenamientoProcesamientoComunicaciones
+flowchart LR
+  subgraph ComponentArchitecture["Arquitectura de Componentes"]
+    subgraph InfraServices["Capa de Servicios de Infraestructura"]
+      Storage["Almacenamiento"]
+      Processing["Procesamiento"]
+      Comms["Comunicaciones"]
+    end
+    subgraph AppService["Capa de Servicios de Aplicación"]
+      DesignServices["Servicios de Diseño"]
+      ProductionServices["Servicios de Producción"]
+      OperationServices["Servicios de Operaciones"]
+      AstronauticServices["Servicios Astronáuticos"]
+      AnalyticsServices["Servicios Analíticos"]
+    end
+    subgraph PresentationLayer["Capa de Presentación"]
+      Dashboards["Dashboards Contextuales"]
+      Visualization3D["Visualización 3D/4D"]
+      CollaborativeInterfaces["Interfaces Colaborativas"]
+      SelfService["Portales de Autoservicio"]
+      ARVR["Realidad Aumentada/Virtual"]
+    end
+
+    InfraServices --> AppService
+    AppService --> PresentationLayer
+  end
 ```
 
 ### 11.2. Vista de Despliegue
 
 ```mermaid
-Arquitectura de Despliegue GAIA AIR.download-icon {
-            cursor: pointer;
-            transform-origin: center;
-        }
-        .download-icon .arrow-part {
-            transition: transform 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95);
-             transform-origin: center;
-        }
-        button:has(.download-icon):hover .download-icon .arrow-part, button:has(.download-icon):focus-visible .download-icon .arrow-part {
-          transform: translateY(-1.5px);
-        }
-        #mermaid-diagram-rb605{font-family:var(--font-geist-sans);font-size:12px;fill:#000000;}#mermaid-diagram-rb605 .error-icon{fill:#552222;}#mermaid-diagram-rb605 .error-text{fill:#552222;stroke:#552222;}#mermaid-diagram-rb605 .edge-thickness-normal{stroke-width:1px;}#mermaid-diagram-rb605 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-diagram-rb605 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-diagram-rb605 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-diagram-rb605 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-diagram-rb605 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-diagram-rb605 .marker{fill:#666;stroke:#666;}#mermaid-diagram-rb605 .marker.cross{stroke:#666;}#mermaid-diagram-rb605 svg{font-family:var(--font-geist-sans);font-size:12px;}#mermaid-diagram-rb605 p{margin:0;}#mermaid-diagram-rb605 .label{font-family:var(--font-geist-sans);color:#000000;}#mermaid-diagram-rb605 .cluster-label text{fill:#333;}#mermaid-diagram-rb605 .cluster-label span{color:#333;}#mermaid-diagram-rb605 .cluster-label span p{background-color:transparent;}#mermaid-diagram-rb605 .label text,#mermaid-diagram-rb605 span{fill:#000000;color:#000000;}#mermaid-diagram-rb605 .node rect,#mermaid-diagram-rb605 .node circle,#mermaid-diagram-rb605 .node ellipse,#mermaid-diagram-rb605 .node polygon,#mermaid-diagram-rb605 .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-diagram-rb605 .rough-node .label text,#mermaid-diagram-rb605 .node .label text{text-anchor:middle;}#mermaid-diagram-rb605 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-diagram-rb605 .node .label{text-align:center;}#mermaid-diagram-rb605 .node.clickable{cursor:pointer;}#mermaid-diagram-rb605 .arrowheadPath{fill:#333333;}#mermaid-diagram-rb605 .edgePath .path{stroke:#666;stroke-width:2.0px;}#mermaid-diagram-rb605 .flowchart-link{stroke:#666;fill:none;}#mermaid-diagram-rb605 .edgeLabel{background-color:white;text-align:center;}#mermaid-diagram-rb605 .edgeLabel p{background-color:white;}#mermaid-diagram-rb605 .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-diagram-rb605 .labelBkg{background-color:rgba(255, 255, 255, 0.5);}#mermaid-diagram-rb605 .cluster rect{fill:hsl(0, 0%, 98.9215686275%);stroke:#707070;stroke-width:1px;}#mermaid-diagram-rb605 .cluster text{fill:#333;}#mermaid-diagram-rb605 .cluster span{color:#333;}#mermaid-diagram-rb605 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:var(--font-geist-sans);font-size:12px;background:hsl(-160, 0%, 93.3333333333%);border:1px solid #707070;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-diagram-rb605 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#000000;}#mermaid-diagram-rb605 .flowchart-link{stroke:hsl(var(--gray-400));stroke-width:1px;}#mermaid-diagram-rb605 .marker,#mermaid-diagram-rb605 marker,#mermaid-diagram-rb605 marker *{fill:hsl(var(--gray-400))!important;stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-rb605 .label,#mermaid-diagram-rb605 text,#mermaid-diagram-rb605 text>tspan{fill:hsl(var(--black))!important;color:hsl(var(--black))!important;}#mermaid-diagram-rb605 .background,#mermaid-diagram-rb605 rect.relationshipLabelBox{fill:hsl(var(--white))!important;}#mermaid-diagram-rb605 .entityBox,#mermaid-diagram-rb605 .attributeBoxEven{fill:hsl(var(--gray-150))!important;}#mermaid-diagram-rb605 .attributeBoxOdd{fill:hsl(var(--white))!important;}#mermaid-diagram-rb605 .label-container,#mermaid-diagram-rb605 rect.actor{fill:hsl(var(--white))!important;stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-rb605 line{stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-rb605 :root{--mermaid-font-family:var(--font-geist-sans);}Dispositivos ClienteEdge ComputingEntorno On-PremisesEntorno CloudServicios CoreAlmacenamiento CentralizadoAnalítica AvanzadaOrquestaciónAPIs PúblicasServicios CríticosAlmacenamiento LocalProcesamiento SensibleIntegración LegacySeguridad PerimetralDispositivos IoTGateways IndustrialesProcesamiento LocalCaché EdgeSeguridad EdgeEstaciones de TrabajoDispositivos MóvilesWearablesDispositivos AR/VREquipos Especializados
+flowchart TB
+  subgraph DeploymentArchitecture["Arquitectura de Despliegue"]
+    EdgeComputing["Edge Computing"]
+    OnPremises["Entorno On-Premises"]
+    Cloud["Entorno Cloud"]
+    CoreServices["Servicios Core"]
+
+    OnPremises --> CoreServices
+    Cloud --> CoreServices
+    CoreServices --> "APIs Públicas"
+    CoreServices --> "Orquestación"
+    CoreServices --> "Analítica Avanzada"
+    CoreServices --> "Almacenamiento Centralizado"
+  end
 ```
 
 ### 11.3. Vista de Datos
 
 ```mermaid
-Arquitectura de Datos GAIA AIR.download-icon {
-            cursor: pointer;
-            transform-origin: center;
-        }
-        .download-icon .arrow-part {
-            transition: transform 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95);
-             transform-origin: center;
-        }
-        button:has(.download-icon):hover .download-icon .arrow-part, button:has(.download-icon):focus-visible .download-icon .arrow-part {
-          transform: translateY(-1.5px);
-        }
-        #mermaid-diagram-rb6vk{font-family:var(--font-geist-sans);font-size:12px;fill:#000000;}#mermaid-diagram-rb6vk .error-icon{fill:#552222;}#mermaid-diagram-rb6vk .error-text{fill:#552222;stroke:#552222;}#mermaid-diagram-rb6vk .edge-thickness-normal{stroke-width:1px;}#mermaid-diagram-rb6vk .edge-thickness-thick{stroke-width:3.5px;}#mermaid-diagram-rb6vk .edge-pattern-solid{stroke-dasharray:0;}#mermaid-diagram-rb6vk .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-diagram-rb6vk .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-diagram-rb6vk .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-diagram-rb6vk .marker{fill:#666;stroke:#666;}#mermaid-diagram-rb6vk .marker.cross{stroke:#666;}#mermaid-diagram-rb6vk svg{font-family:var(--font-geist-sans);font-size:12px;}#mermaid-diagram-rb6vk p{margin:0;}#mermaid-diagram-rb6vk .label{font-family:var(--font-geist-sans);color:#000000;}#mermaid-diagram-rb6vk .cluster-label text{fill:#333;}#mermaid-diagram-rb6vk .cluster-label span{color:#333;}#mermaid-diagram-rb6vk .cluster-label span p{background-color:transparent;}#mermaid-diagram-rb6vk .label text,#mermaid-diagram-rb6vk span{fill:#000000;color:#000000;}#mermaid-diagram-rb6vk .node rect,#mermaid-diagram-rb6vk .node circle,#mermaid-diagram-rb6vk .node ellipse,#mermaid-diagram-rb6vk .node polygon,#mermaid-diagram-rb6vk .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-diagram-rb6vk .rough-node .label text,#mermaid-diagram-rb6vk .node .label text{text-anchor:middle;}#mermaid-diagram-rb6vk .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-diagram-rb6vk .node .label{text-align:center;}#mermaid-diagram-rb6vk .node.clickable{cursor:pointer;}#mermaid-diagram-rb6vk .arrowheadPath{fill:#333333;}#mermaid-diagram-rb6vk .edgePath .path{stroke:#666;stroke-width:2.0px;}#mermaid-diagram-rb6vk .flowchart-link{stroke:#666;fill:none;}#mermaid-diagram-rb6vk .edgeLabel{background-color:white;text-align:center;}#mermaid-diagram-rb6vk .edgeLabel p{background-color:white;}#mermaid-diagram-rb6vk .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-diagram-rb6vk .labelBkg{background-color:rgba(255, 255, 255, 0.5);}#mermaid-diagram-rb6vk .cluster rect{fill:hsl(0, 0%, 98.9215686275%);stroke:#707070;stroke-width:1px;}#mermaid-diagram-rb6vk .cluster text{fill:#333;}#mermaid-diagram-rb6vk .cluster span{color:#333;}#mermaid-diagram-rb6vk div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:var(--font-geist-sans);font-size:12px;background:hsl(-160, 0%, 93.3333333333%);border:1px solid #707070;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-diagram-rb6vk .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#000000;}#mermaid-diagram-rb6vk .flowchart-link{stroke:hsl(var(--gray-400));stroke-width:1px;}#mermaid-diagram-rb6vk .marker,#mermaid-diagram-rb6vk marker,#mermaid-diagram-rb6vk marker *{fill:hsl(var(--gray-400))!important;stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-rb6vk .label,#mermaid-diagram-rb6vk text,#mermaid-diagram-rb6vk text>tspan{fill:hsl(var(--black))!important;color:hsl(var(--black))!important;}#mermaid-diagram-rb6vk .background,#mermaid-diagram-rb6vk rect.relationshipLabelBox{fill:hsl(var(--white))!important;}#mermaid-diagram-rb6vk .entityBox,#mermaid-diagram-rb6vk .attributeBoxEven{fill:hsl(var(--gray-150))!important;}#mermaid-diagram-rb6vk .attributeBoxOdd{fill:hsl(var(--white))!important;}#mermaid-diagram-rb6vk .label-container,#mermaid-diagram-rb6vk rect.actor{fill:hsl(var(--white))!important;stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-rb6vk line{stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-rb6vk :root{--mermaid-font-family:var(--font-geist-sans);}Consumo de DatosProcesamiento AnalíticoAlmacenamientoIngestión y ProcesamientoFuentes de DatosSistemas CAD/CAESensores IoTSistemas MES/ERPTelemetría OperativaDatos ExternosConectores EspecializadosProcesamiento en Tiempo RealETL/ELTValidación y LimpiezaEnriquecimientoLago de DatosBases RelacionalesBases NoSQLAlmacén de Series TemporalesAlmacén de GrafosProcesamiento BatchProcesamiento StreamingMachine LearningAnálisis PredictivoProcesamiento SemánticoAPIs de DatosServicios de ConsultaVisualizaciónExportaciónNotificaciones
+flowchart TB
+  subgraph DataArchitecture["Arquitectura de Datos"]
+    DataIngestion["Ingestión y Procesamiento"]
+    DataSources["Fuentes de Datos"] 
+    DataLakes["Lago de Datos"]
+    RelationalDBs["Bases Relacionales"]
+    NoSQLDBs["Bases NoSQL"]
+    TimeSeriesDBs["Almacén de Series Temporales"]
+    GraphDBs["Almacén de Grafos"]
+    APIs["APIs de Datos"]
+
+    DataSources --> DataIngestion
+    DataIngestion --> DataLakes
+    DataLakes --> RelationalDBs & NoSQLDBs & TimeSeriesDBs & GraphDBs
+    DataIngestion --> APIs
+  end
 ```
 
 ---
