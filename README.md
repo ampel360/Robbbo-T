@@ -7,6 +7,22 @@
 
 # GAIA AIR - Arquitectura Digital Integral
 
+---
+title: GAIA AIR: Comprehensive Capabilities Document (COMCAP)
+author: Amedeo Pelliccia
+version: 1.0
+date: 2025-04-04
+classification: Industrial Ejemplar
+email: amedeo.pelliccia@gmail.com
+orcid: https://orcid.org/0000-0000-0000-0000
+location: Madrid & Worldwide
+github: https://github.com/Amepelliccia
+academia: https://academia.edu/amedeopelliccia
+linkedin: https://www.linkedin.com/in/amepelliccia/
+badge: Mastering-Theory Pro 🧠
+---
+
+
 Este documento proporciona una visión completa de la arquitectura GAIA AIR, detallando las capas, componentes, flujos de información y estructura del repositorio. Sirve como referencia principal para cualquier persona que trabaje en el sistema.
 
 El documento incluye:
