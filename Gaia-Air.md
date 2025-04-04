@@ -8,120 +8,93 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]
-### GAIA AIR: Comprehensive Capabilities Document (COMCAP)
+
+# GAIA AIR: Comprehensive Capabilities Document (COMCAP)
 
 ## Índice Interactivo
 
 1. [Resumen Ejecutivo](#executive-summary)
+
 2. [Visión General del Sistema](#1-visión-general-del-sistema)
+   - [Arquitectura Conceptual](#11-arquitectura-conceptual)
+   - [Principios Fundamentales](#12-principios-fundamentales)
+   - [Valor Estratégico](#13-valor-estratégico)
 
-1. [Arquitectura Conceptual](#11-arquitectura-conceptual)
-2. [Principios Fundamentales](#12-principios-fundamentales)
-3. [Valor Estratégico](#13-valor-estratégico)
+3. [Digital Thread Orchestrator](#2-capacidades-del-digital-thread-orchestrator)
+   - [Gestión de Eventos y Mensajería](#21-gestión-de-eventos-y-mensajería)
+   - [Trazabilidad y Auditoría](#22-trazabilidad-y-auditoría)
+   - [Gestión de Relaciones y Metadatos](#23-gestión-de-relaciones-y-metadatos)
+   - [Integración y Conectividad](#24-integración-y-conectividad)
+   - [Seguridad y Gobernanza](#25-seguridad-y-gobernanza)
+   - [Analítica y Visualización](#26-analítica-y-visualización)
 
+4. [Capa de Diseño y Documentación](#3-capacidades-de-la-capa-de-diseño-y-documentación)
+   - [Diseño Asistido por IA](#31-diseño-asistido-por-ia)
+   - [Gestión de Datos de Producto](#32-gestión-de-datos-de-producto-pdmplm)
+   - [Simulación y Análisis](#33-simulación-y-análisis)
+   - [Documentación Técnica](#34-documentación-técnica)
 
+5. [Capa de Producción Industrial](#4-capacidades-de-la-capa-de-producción-industrial)
+   - [Planificación y Control](#41-planificación-y-control-de-producción)
+   - [Fabricación Digital](#42-fabricación-digital)
+   - [Control de Calidad Inteligente](#43-control-de-calidad-inteligente)
+   - [Gemelos Digitales de Producción](#44-gemelos-digitales-de-producción)
+   - [Sostenibilidad en Producción](#45-sostenibilidad-en-producción)
 
-3. [Capacidades del Digital Thread Orchestrator](#2-capacidades-del-digital-thread-orchestrator)
+6. [Capa de Servicios y Operaciones](#5-capacidades-de-la-capa-de-servicios-y-operaciones)
+   - [Gestión de Mantenimiento](#51-gestión-de-mantenimiento)
+   - [Monitoreo de Rendimiento](#52-monitoreo-de-rendimiento)
+   - [Gemelos Digitales Operativos](#53-gemelos-digitales-operativos)
+   - [Sostenibilidad Operativa](#54-sostenibilidad-operativa)
+   - [Servicios de Valor Añadido](#55-servicios-de-valor-añadido)
 
-1. [Gestión de Eventos y Mensajería](#21-gestión-de-eventos-y-mensajería)
-2. [Trazabilidad y Auditoría](#22-trazabilidad-y-auditoría)
-3. [Gestión de Relaciones y Metadatos](#23-gestión-de-relaciones-y-metadatos)
-4. [Integración y Conectividad](#24-integración-y-conectividad)
-5. [Seguridad y Gobernanza](#25-seguridad-y-gobernanza)
-6. [Analítica y Visualización](#26-analítica-y-visualización)
+7. [Componente Astronáutico](#6-capacidades-del-componente-astronáutico)
+   - [Planificación de Misión Espacial](#61-planificación-de-misión-espacial)
+   - [Diseño Espacial](#62-diseño-espacial)
+   - [Entorno Espacial](#63-entorno-espacial)
+   - [Sistemas de Soporte Vital](#64-sistemas-de-soporte-vital)
+   - [Mecánica Orbital](#65-mecánica-orbital)
 
-
-
-4. [Capacidades de la Capa de Diseño y Documentación](#3-capacidades-de-la-capa-de-diseño-y-documentación)
-
-1. [Diseño Asistido por IA](#31-diseño-asistido-por-ia)
-2. [Gestión de Datos de Producto](#32-gestión-de-datos-de-producto-pdmplm)
-3. [Simulación y Análisis](#33-simulación-y-análisis)
-4. [Documentación Técnica](#34-documentación-técnica)
-
-
-
-5. [Capacidades de la Capa de Producción Industrial](#4-capacidades-de-la-capa-de-producción-industrial)
-
-1. [Planificación y Control de Producción](#41-planificación-y-control-de-producción)
-2. [Fabricación Digital](#42-fabricación-digital)
-3. [Control de Calidad Inteligente](#43-control-de-calidad-inteligente)
-4. [Gemelos Digitales de Producción](#44-gemelos-digitales-de-producción)
-5. [Sostenibilidad en Producción](#45-sostenibilidad-en-producción)
-
-
-
-6. [Capacidades de la Capa de Servicios y Operaciones](#5-capacidades-de-la-capa-de-servicios-y-operaciones)
-
-1. [Gestión de Mantenimiento](#51-gestión-de-mantenimiento)
-2. [Monitoreo de Rendimiento](#52-monitoreo-de-rendimiento)
-3. [Gemelos Digitales Operativos](#53-gemelos-digitales-operativos)
-4. [Sostenibilidad Operativa](#54-sostenibilidad-operativa)
-5. [Servicios de Valor Añadido](#55-servicios-de-valor-añadido)
-
-
-
-7. [Capacidades del Componente Astronáutico](#6-capacidades-del-componente-astronáutico)
-
-1. [Planificación de Misión Espacial](#61-planificación-de-misión-espacial)
-2. [Diseño Espacial](#62-diseño-espacial)
-3. [Entorno Espacial](#63-entorno-espacial)
-4. [Sistemas de Soporte Vital](#64-sistemas-de-soporte-vital)
-5. [Mecánica Orbital](#65-mecánica-orbital)
-
-
-
-8. [Capacidades de Integración y Despliegue](#7-capacidades-de-integración-y-despliegue)
-
-1. [Interoperabilidad](#71-interoperabilidad)
-2. [Opciones de Despliegue](#72-opciones-de-despliegue)
-3. [Escalabilidad y Rendimiento](#73-escalabilidad-y-rendimiento)
-
-
+8. [Integración y Despliegue](#7-capacidades-de-integración-y-despliegue)
+   - [Interoperabilidad](#71-interoperabilidad)
+   - [Opciones de Despliegue](#72-opciones-de-despliegue)
+   - [Escalabilidad y Rendimiento](#73-escalabilidad-y-rendimiento)
 
 9. [Seguridad y Cumplimiento](#8-seguridad-y-cumplimiento)
-
-1. [Seguridad de Datos](#81-seguridad-de-datos)
-2. [Control de Acceso](#82-control-de-acceso)
-3. [Cumplimiento Regulatorio](#83-cumplimiento-regulatorio)
-
-
+   - [Seguridad de Datos](#81-seguridad-de-datos)
+   - [Control de Acceso](#82-control-de-acceso)
+   - [Cumplimiento Regulatorio](#83-cumplimiento-regulatorio)
 
 10. [Casos de Uso y Escenarios](#9-casos-de-uso-y-escenarios)
+    - [Diseño y Desarrollo](#91-diseño-y-desarrollo)
+    - [Producción y Calidad](#92-producción-y-calidad)
+    - [Operaciones y Mantenimiento](#93-operaciones-y-mantenimiento)
+    - [Astronáutica y Espacio](#94-astronáutica-y-espacio)
 
-1. [Diseño y Desarrollo](#91-diseño-y-desarrollo)
-2. [Producción y Calidad](#92-producción-y-calidad)
-3. [Operaciones y Mantenimiento](#93-operaciones-y-mantenimiento)
-4. [Astronáutica y Espacio](#94-astronáutica-y-espacio)
-
-
-
-11. [Métricas de Rendimiento y KPIs](#10-métricas-de-rendimiento-y-kpis)
-
-1. [Métricas de Eficiencia Operativa](#101-métricas-de-eficiencia-operativa)
-2. [Métricas de Sostenibilidad](#102-métricas-de-sostenibilidad)
-3. [Métricas de Calidad y Fiabilidad](#103-métricas-de-calidad-y-fiabilidad)
-4. [Métricas de Valor de Negocio](#104-métricas-de-valor-de-negocio)
-
-
+11. [Métricas y KPIs](#10-métricas-de-rendimiento-y-kpis)
+    - [Eficiencia Operativa](#101-métricas-de-eficiencia-operativa)
+    - [Sostenibilidad](#102-métricas-de-sostenibilidad)
+    - [Calidad y Fiabilidad](#103-métricas-de-calidad-y-fiabilidad)
+    - [Valor de Negocio](#104-métricas-de-valor-de-negocio)
 
 12. [Arquitectura Técnica](#11-arquitectura-técnica)
-
-1. [Vista de Componentes](#111-vista-de-componentes)
-2. [Vista de Despliegue](#112-vista-de-despliegue)
-3. [Vista de Datos](#113-vista-de-datos)
-
-
+    - [Vista de Componentes](#111-vista-de-componentes)
+    - [Vista de Despliegue](#112-vista-de-despliegue)
+    - [Vista de Datos](#113-vista-de-datos)
 
 13. [Roadmap de Implementación](#12-roadmap-de-implementación)
-
-1. [Fases de Implementación](#121-fases-de-implementación)
-2. [Hitos Clave](#122-hitos-clave)
-3. [Estrategia de Adopción](#123-estrategia-de-adopción)
-
-
+    - [Fases de Implementación](#121-fases-de-implementación)
+    - [Hitos Clave](#122-hitos-clave)
+    - [Estrategia de Adopción](#123-estrategia-de-adopción)
 
 14. [Conclusión](#13-conclusión)
+
+---
+
+**Documento Preparado por:** Amedeo Pelliccia  
+**Fecha:** 4 de Abril de 2025  
+**Versión:** 1.0  
+**Clasificación:** Industrial Ejemplar
 
 
 ---
