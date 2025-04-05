@@ -1,4 +1,3 @@
----
 
 ### Documentación Completa del Módulo SpaceEnvironment (Dominio GP-AS, ATA 34)
 
