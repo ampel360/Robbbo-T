@@ -774,9 +774,14 @@ graph LR
 
 #### 8.2.1 Vista General del Sistema
 
+![image](https://github.com/user-attachments/assets/36178cbf-5a93-4807-bbbe-926aac2e37aa)
+
 *[Insertar Figura 8.1: Ilustración 3D del sistema completo]*
 
 #### 8.2.2 Componentes Principales
+
+![QPU_CryogenicSystem_Labelled](https://github.com/user-attachments/assets/4f4c36c8-97b0-47ff-991e-a2231b984154)
+
 
 *[Insertar Figura 8.2: Despiece QPU y criogénico]*
 
