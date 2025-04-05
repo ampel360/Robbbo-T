@@ -1369,40 +1369,42 @@ To replace QPU control electronics that have reached end of life or show degrade
 
 
 
-### 7.2 Common Issues and Solutions
+## 7.2 Common Issues and Solutions
 
-| Subsystem | Symptom | Possible Causes | Diagnostic Steps | Solution | Reference
-|-----|-----
-| **Cooling System** | Temperature fluctuations | Compressor issues, Coolant level low, Filter clogged | Check pressure gauges, Inspect coolant level, Check filter condition | Replace filter, Add coolant, Service compressor | TSHOOT-COOL-001
-| **Cooling System** | Unable to reach operating temperature | Vacuum loss, Coolant contamination, Compressor failure | Check vacuum levels, Analyze coolant, Test compressor | Repair vacuum leak, Replace coolant, Repair/replace compressor | TSHOOT-COOL-002
-| **QPU** | Reduced coherence time | Temperature instability, Control line interference, Qubit degradation | Measure temperature stability, Check control signals, Run qubit diagnostics | Stabilize cooling, Fix signal interference, Recalibrate qubits | TSHOOT-QPU-001
-| **QPU** | Gate fidelity below specification | Calibration drift, Control electronics issues, Crosstalk | Run calibration diagnostics, Check control signals, Measure crosstalk | Recalibrate system, Repair/replace electronics, Update crosstalk compensation | TSHOOT-QPU-002
-| **Radiation Sensors** | Elevated background readings | Contamination, Electronic noise, Detector damage | Check for contamination, Measure noise levels, Test detector response | Clean detector, Fix noise source, Replace detector | TSHOOT-RAD-001
-| **Radiation Sensors** | Poor energy resolution | High voltage drift, Preamplifier issues, Temperature effects | Check high voltage, Test preamplifier, Monitor temperature | Adjust high voltage, Repair/replace preamplifier, Stabilize temperature | TSHOOT-RAD-002
-| **Debris Detectors** | False detections | Optical interference, Electronic noise, Software threshold issues | Check for light sources, Measure noise levels, Review threshold settings | Remove interference, Fix noise source, Adjust thresholds | TSHOOT-DEB-001
-| **Debris Detectors** | Reduced detection range | Optical misalignment, Detector degradation, Power issues | Check alignment, Test detector sensitivity, Measure power levels | Realign optics, Clean/replace detector, Fix power supply | TSHOOT-DEB-002
-| **Power Systems** | UPS frequent cycling | Battery degradation, Load issues, Input power problems | Test battery, Measure load, Check input power quality | Replace battery, Reduce load, Fix input power | TSHOOT-PWR-001
-| **Power Systems** | Voltage fluctuations | Loose connections, Regulator issues, Overloading | Check connections, Test regulators, Measure current draw | Tighten connections, Replace regulator, Redistribute load | TSHOOT-PWR-002
-| **Network Systems** | Connection drops | Cable issues, Switch problems, Configuration errors | Test cables, Check switch status, Review configurations | Replace cables, Reset/replace switch, Fix configuration | TSHOOT-NET-001
-| **Network Systems** | Slow performance | Bandwidth saturation, Hardware issues, Routing problems | Measure traffic, Test hardware, Check routing tables | Optimize traffic, Upgrade hardware, Fix routing | TSHOOT-NET-002
-| **Software Systems** | System crashes | Memory leaks, Resource exhaustion, Software bugs | Check memory usage, Monitor resources, Review error logs | Restart services, Apply patches, Update software | TSHOOT-SOFT-001
-| **Software Systems** | Database errors | Corruption, Disk space issues, Index problems | Check database integrity, Verify disk space, Analyze indexes | Repair database, Free disk space, Rebuild indexes | TSHOOT-SOFT-002
+| Subsystem         | Symptom                        | Possible Causes                                        | Diagnostic Steps                                                    | Solution                                               | Reference         |
+|------------------|--------------------------------|--------------------------------------------------------|---------------------------------------------------------------------|--------------------------------------------------------|-------------------|
+| Cooling System    | Temperature fluctuations        | Compressor issues, Coolant level low, Filter clogged   | Check pressure gauges, Inspect coolant level, Check filter condition | Replace filter, Add coolant, Service compressor        | TSHOOT-COOL-001   |
+| Cooling System    | Unable to reach operating temperature | Vacuum loss, Coolant contamination, Compressor failure | Check vacuum levels, Analyze coolant, Test compressor              | Repair vacuum leak, Replace coolant, Repair/replace compressor | TSHOOT-COOL-002   |
+| QPU              | Reduced coherence time          | Temperature instability, Control line interference, Qubit degradation | Measure temperature stability, Check control signals, Run qubit diagnostics | Stabilize cooling, Fix signal interference, Recalibrate qubits | TSHOOT-QPU-001    |
+| QPU              | Gate fidelity below specification | Calibration drift, Control electronics issues, Crosstalk | Run calibration diagnostics, Check control signals, Measure crosstalk | Recalibrate system, Repair/replace electronics, Update crosstalk compensation | TSHOOT-QPU-002    |
+| Radiation Sensors | Elevated background readings    | Contamination, Electronic noise, Detector damage       | Check for contamination, Measure noise levels, Test detector response | Clean detector, Fix noise source, Replace detector     | TSHOOT-RAD-001    |
+| Radiation Sensors | Poor energy resolution          | High voltage drift, Preamplifier issues, Temperature effects | Check high voltage, Test preamplifier, Monitor temperature          | Adjust high voltage, Repair/replace preamplifier, Stabilize temperature | TSHOOT-RAD-002    |
+| Debris Detectors  | False detections                | Optical interference, Electronic noise, Software threshold issues | Check for light sources, Measure noise levels, Review threshold settings | Remove interference, Fix noise source, Adjust thresholds | TSHOOT-DEB-001    |
+| Debris Detectors  | Reduced detection range         | Optical misalignment, Detector degradation, Power issues | Check alignment, Test detector sensitivity, Measure power levels    | Realign optics, Clean/replace detector, Fix power supply | TSHOOT-DEB-002    |
+| Power Systems     | UPS frequent cycling            | Battery degradation, Load issues, Input power problems  | Test battery, Measure load, Check input power quality               | Replace battery, Reduce load, Fix input power          | TSHOOT-PWR-001    |
+| Power Systems     | Voltage fluctuations            | Loose connections, Regulator issues, Overloading        | Check connections, Test regulators, Measure current draw            | Tighten connections, Replace regulator, Redistribute load | TSHOOT-PWR-002    |
+| Network Systems   | Connection drops                | Cable issues, Switch problems, Configuration errors     | Test cables, Check switch status, Review configurations             | Replace cables, Reset/replace switch, Fix configuration | TSHOOT-NET-001    |
+| Network Systems   | Slow performance                | Bandwidth saturation, Hardware issues, Routing problems | Measure traffic, Test hardware, Check routing tables                | Optimize traffic, Upgrade hardware, Fix routing        | TSHOOT-NET-002    |
+| Software Systems  | System crashes                  | Memory leaks, Resource exhaustion, Software bugs        | Check memory usage, Monitor resources, Review error logs            | Restart services, Apply patches, Update software       | TSHOOT-SOFT-001   |
+| Software Systems  | Database errors                 | Corruption, Disk space issues, Index problems           | Check database integrity, Verify disk space, Analyze indexes        | Repair database, Free disk space, Rebuild indexes      | TSHOOT-SOFT-002   |
+
 
 
 ### 7.3 Diagnostic Tools
 
-| Tool | Purpose | Usage | Location
-|-----|-----
-| System Diagnostic Software | Comprehensive system testing | Run full diagnostics or targeted subsystem tests | Control computer, /opt/sems/diagnostics/
-| QPU Calibration Tools | Test and calibrate quantum processor | Verify qubit performance, Run calibration routines | Control computer, /opt/sems/qpu/tools/
-| Helium Leak Detector | Find leaks in cryogenic system | Test all connections and seals | Maintenance storage, Cabinet C
-| Digital Multimeter | Electrical measurements | Test voltages, resistances, continuity | Tool cabinet, Drawer 2
-| Oscilloscope | Signal analysis | Verify timing, Check signal integrity | Rack 3, Position 32U
-| Radiation Test Sources | Calibrate radiation detectors | Energy calibration, Efficiency testing | Radiation safe, Shelf 3
-| Network Analyzer | Test network performance | Bandwidth testing, Latency measurement | Tool cabinet, Drawer 4
-| Thermal Imager | Identify hot spots | Check for thermal issues | Tool cabinet, Drawer 5
-| Vibration Analyzer | Measure mechanical vibrations | Diagnose mechanical problems | Maintenance storage, Cabinet D
-| Spectrum Analyzer | RF signal analysis | Check for interference, Verify signal quality | Rack 3, Position 30U
+| Tool                   | Purpose                        | Usage                                             | Location                            |
+|------------------------|--------------------------------|---------------------------------------------------|-------------------------------------|
+| System Diagnostic Software | Comprehensive system testing    | Run full diagnostics or targeted subsystem tests  | Control computer, /opt/sems/diagnostics/ |
+| QPU Calibration Tools      | Test and calibrate quantum processor | Verify qubit performance, Run calibration routines | Control computer, /opt/sems/qpu/tools/ |
+| Helium Leak Detector       | Find leaks in cryogenic system     | Test all connections and seals                    | Maintenance storage, Cabinet C      |
+| Digital Multimeter         | Electrical measurements            | Test voltages, resistances, continuity            | Tool cabinet, Drawer 2              |
+| Oscilloscope               | Signal analysis                    | Verify timing, Check signal integrity             | Rack 3, Position 32U                |
+| Radiation Test Sources     | Calibrate radiation detectors      | Energy calibration, Efficiency testing            | Radiation safe, Shelf 3             |
+| Network Analyzer           | Test network performance           | Bandwidth testing, Latency measurement            | Tool cabinet, Drawer 4              |
+| Thermal Imager             | Identify hot spots                 | Check for thermal issues                          | Tool cabinet, Drawer 5              |
+| Vibration Analyzer         | Measure mechanical vibrations      | Diagnose mechanical problems                      | Maintenance storage, Cabinet D      |
+| Spectrum Analyzer          | RF signal analysis                 | Check for interference, Verify signal quality     | Rack 3, Position 30U                |
+
 
 
 ### 7.4 When to Escalate
@@ -1422,33 +1424,33 @@ Escalate maintenance issues to the next support level when:
 ---
 
 ## 8. Spare Parts Inventory
-
 ### 8.1 Critical Spare Parts
 
-| Part Number | Description | Minimum Quantity | Reorder Point | Storage Location | Shelf Life | Special Storage Requirements
-|-----|-----
-| GA-CRYO-FILT-001 | Cryogenic Filter Element | 4 | 2 | Cabinet A, Shelf 1 | 2 years | Sealed package
-| GA-CRYO-SEAL-001 | Cryogenic Seal Kit | 2 | 1 | Cabinet A, Shelf 2 | 3 years | Temperature controlled
-| GA-CRYO-OIL-001 | Compressor Oil, 1L | 2 | 1 | Cabinet B, Shelf 1 | 5 years | None
-| GA-RAD-DET-001 | Radiation Detector Element | 2 | 1 | Cabinet C, Shelf 1 | 5 years | ESD protection, Humidity controlled
-| GA-DEB-LASER-001 | Debris Detector Laser Module | 1 | 1 | Cabinet C, Shelf 2 | 3 years | ESD protection
-| GA-QPU-CTRL-001 | QPU Control Electronics Module | 1 | 1 | Cabinet D, Shelf 1 | 5 years | ESD protection, Temperature controlled
-| GA-PWR-UPS-BAT-001 | UPS Battery Set | 1 | 1 | Cabinet B, Shelf 2 | 2 years | Temperature controlled
-| GA-NET-SWITCH-001 | Network Switch | 1 | 1 | Cabinet D, Shelf 2 | 7 years | ESD protection
+| Part Number         | Description                        | Minimum Quantity | Reorder Point | Storage Location     | Shelf Life | Special Storage Requirements              |
+|---------------------|------------------------------------|------------------|----------------|------------------------|------------|--------------------------------------------|
+| GA-CRYO-FILT-001    | Cryogenic Filter Element           | 4                | 2              | Cabinet A, Shelf 1     | 2 years    | Sealed package                              |
+| GA-CRYO-SEAL-001    | Cryogenic Seal Kit                 | 2                | 1              | Cabinet A, Shelf 2     | 3 years    | Temperature controlled                      |
+| GA-CRYO-OIL-001     | Compressor Oil, 1L                 | 2                | 1              | Cabinet B, Shelf 1     | 5 years    | None                                         |
+| GA-RAD-DET-001      | Radiation Detector Element         | 2                | 1              | Cabinet C, Shelf 1     | 5 years    | ESD protection, Humidity controlled         |
+| GA-DEB-LASER-001    | Debris Detector Laser Module       | 1                | 1              | Cabinet C, Shelf 2     | 3 years    | ESD protection                              |
+| GA-QPU-CTRL-001     | QPU Control Electronics Module     | 1                | 1              | Cabinet D, Shelf 1     | 5 years    | ESD protection, Temperature controlled      |
+| GA-PWR-UPS-BAT-001  | UPS Battery Set                    | 1                | 1              | Cabinet B, Shelf 2     | 2 years    | Temperature controlled                      |
+| GA-NET-SWITCH-001   | Network Switch                     | 1                | 1              | Cabinet D, Shelf 2     | 7 years    | ESD protection                              |
 
+---
 
 ### 8.2 Consumable Parts
 
-| Part Number | Description | Minimum Quantity | Reorder Point | Storage Location | Shelf Life | Usage Rate
-|-----|-----
-| GA-CLEAN-WIPE-001 | Optical Cleaning Wipes | 100 | 50 | Cabinet E, Shelf 1 | 3 years | ~10/month
-| GA-CLEAN-SOL-001 | Optical Cleaning Solution, 500ml | 2 | 1 | Cabinet E, Shelf 1 | 2 years | ~1/3 months
-| GA-THERMAL-001 | Thermal Interface Material, 10g | 5 | 3 | Cabinet E, Shelf 2 | 2 years | ~1/2 months
-| GA-CRYO-GAS-001 | Helium Gas Cylinder, 99.999% | 2 | 1 | Gas Storage Area | 10 years | ~1/6 months
-| GA-TOOL-GLOVE-001 | ESD Gloves, Pair | 10 | 5 | Cabinet E, Shelf 3 | 1 year | ~2/month
-| GA-TOOL-SWAB-001 | Cleaning Swabs, Pack of 50 | 2 | 1 | Cabinet E, Shelf 1 | 3 years | ~1/2 months
-| GA-CABLE-TIE-001 | Cable Ties, Pack of 100 | 2 | 1 | Cabinet E, Shelf 4 | 10 years | ~1/3 months
-| GA-LABEL-001 | Equipment Labels, Roll | 2 | 1 | Cabinet E, Shelf 4 | 5 years | ~1/6 months
+| Part Number         | Description                          | Minimum Quantity | Reorder Point | Storage Location     | Shelf Life | Usage Rate     |
+|---------------------|--------------------------------------|------------------|----------------|------------------------|------------|----------------|
+| GA-CLEAN-WIPE-001   | Optical Cleaning Wipes              | 100              | 50             | Cabinet E, Shelf 1     | 3 years    | ~10/month      |
+| GA-CLEAN-SOL-001    | Optical Cleaning Solution, 500ml    | 2                | 1              | Cabinet E, Shelf 1     | 2 years    | ~1/3 months    |
+| GA-THERMAL-001      | Thermal Interface Material, 10g     | 5                | 3              | Cabinet E, Shelf 2     | 2 years    | ~1/2 months    |
+| GA-CRYO-GAS-001     | Helium Gas Cylinder, 99.999%        | 2                | 1              | Gas Storage Area       | 10 years   | ~1/6 months    |
+| GA-TOOL-GLOVE-001   | ESD Gloves, Pair                    | 10               | 5              | Cabinet E, Shelf 3     | 1 year     | ~2/month       |
+| GA-TOOL-SWAB-001    | Cleaning Swabs, Pack of 50          | 2                | 1              | Cabinet E, Shelf 1     | 3 years    | ~1/2 months    |
+| GA-CABLE-TIE-001    | Cable Ties, Pack of 100             | 2                | 1              | Cabinet E, Shelf 4     | 10 years   | ~1/3 months    |
+| GA-LABEL-001        | Equipment Labels, Roll              | 2                | 1              | Cabinet E, Shelf 4     | 5 years    | ~1/6 months    |
 
 
 ### 8.3 Spare Parts Management
@@ -2433,8 +2435,6 @@ To calibrate the range measurement accuracy of the debris detection system.
 
 ---
 
-## Appendix F: Reference Diagrams
-
 ### F.1 System Block Diagram
 
 ```plaintext
@@ -2458,10 +2458,7 @@ To calibrate the range measurement accuracy of the debris detection system.
 ┌───▼───────────┐ ┌─▼───────────────┐ ┌─▼───────────────┐ ┌─▼─────────────┐ ┌─────▼───────────┐
 │Alpha/Beta/Gamma│ │Optical Detection │ │Cryogenic Cooling│ │UPS & Power Dist│ │INFRANET Interface│
 │   Detectors   │ │     System      │ │     System      │ │    System      │ │      System      │
-└───────────────┘ └─────────────────┘ └─────────────────┘ └───────────────┘ └───────────────────┘I'll format this comprehensive maintenance manual appendix as a Markdown document to preserve its detailed structure and technical content.
-
-```markdown project="Space Environment Monitoring System" file="GP-AM-EDR-37-003-MAINT-A-Appendices.md"
-...
+└───────────────┘ └─────────────────┘ └─────────────────┘ └───────────────┘ └───────────────────┘
 ```
 
 ### F.2 Cooling System Schematic
@@ -2516,10 +2513,16 @@ To calibrate the range measurement accuracy of the debris detection system.
                   │                  │                  │
           ┌───────▼───────┐          │                  │
           │               │          │                  │
-  ┌───────▼───────┐ ┌
+          ... (diagram continues as needed)
 ```
 
 ---
+
+**END OF DOCUMENT**
+
+*This document contains proprietary information and is provided on a need-to-know basis. Unauthorized reproduction or distribution is prohibited.*
+
+
 
 **END OF DOCUMENT**
 
