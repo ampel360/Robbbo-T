@@ -698,44 +698,58 @@ Los procedimientos de emergencia definen las acciones a tomar en caso de situaci
 ```mermaid
 graph TD
     subgraph "Sistema de Entorno Espacial"
-        A[Sistemas de Sensores] --> B(Unidad de Procesamiento);
-        C[Subsistema Criogénico] --> B;
-        D[Subsistema de Potencia] --> B;
-        D --> A;
-        D --> C;
-        D --> E;
-        B --> E(Subsistema de Comunicaciones);
-        E --> F{INFRANET / Aviónica};
-        A --> F;
+        A[Sistemas de Sensores] --> B[Unidad de Procesamiento]
+        C[Subsistema Criogénico] --> B
+        D[Subsistema de Potencia] --> B
+        D --> A
+        D --> C
+        D --> E
+        B --> E[Subsistema de Comunicaciones]
+        E --> F[INFRANET / Avionica]
+        A --> F
     end
 
     subgraph "Sistemas de Sensores"
         A1[Sensores de Radiación]
-        A2[Detección de Escombros (LIDAR)]
+        A2[Detección de Escombros LIDAR]
         A3[Monitores Clima Espacial]
+        A1 --> A
+        A2 --> A
+        A3 --> A
     end
 
     subgraph "Unidad de Procesamiento"
         B1[Procesamiento Clásico]
-        B2[Unidad de Procesamiento Cuántico (QPU)]
+        B2[Unidad de Procesamiento Cuántico QPU]
         B3[Motor de Análisis y Predicción]
+        B1 --> B
+        B2 --> B
+        B3 --> B
     end
 
     subgraph "Subsistema Criogénico"
         C1[Compresor]
         C2[Cabezal Frío]
         C3[Controlador T°]
+        C1 --> C
+        C2 --> C
+        C3 --> C
     end
 
-     subgraph "Subsistema de Potencia"
+    subgraph "Subsistema de Potencia"
         D1[Gestión de Potencia]
         D2[UPS Interno]
+        D1 --> D
+        D2 --> D
     end
 
-     subgraph "Subsistema de Comunicaciones"
-        E1[Interfaz Aviónica]
+    subgraph "Subsistema de Comunicaciones"
+        E1[Interfaz Avionica]
         E2[Interfaz INFRANET]
         E3[Módulo Seguridad]
+        E1 --> E
+        E2 --> E
+        E3 --> E
     end
 ```
 
@@ -743,17 +757,17 @@ graph TD
 
 ```mermaid
 graph LR
-    Sensores -->|Datos Crudos| P(Procesamiento Señal);
-    P -->|Datos Calibrados| A(Análisis / Fusión);
-    A -->|Info Situacional| Q(QPU Análisis Predictivo);
-    Q -->|Predicciones/Riesgos| D(Toma Decisiones / Alertas);
-    D --> Nav(Sistema Navegación);
-    D --> Ctrl(Sistema Control Vuelo);
-    D --> Prot(Sistemas Protección);
-    D --> INF(Interfaz INFRANET);
-    INF <--> Net(Red INFRANET / Otros Nodos);
-    Ext(Datos Externos Clima Espacial) --> INF;
-    INF --> A;
+    Sensores -->|Datos Crudos| P(Procesamiento Señal)
+    P -->|Datos Calibrados| A(Análisis / Fusión)
+    A -->|Info Situacional| Q(QPU Análisis Predictivo)
+    Q -->|Predicciones/Riesgos| D(Toma Decisiones / Alertas)
+    D --> Nav(Sistema Navegación)
+    D --> Ctrl(Sistema Control Vuelo)
+    D --> Prot(Sistemas Protección)
+    D --> INF(Interfaz INFRANET)
+    INF <--> Net(Red INFRANET / Otros Nodos)
+    Ext(Datos Externos Clima Espacial) --> INF
+    INF --> A
 ```
 
 ### 8.2 Ilustraciones del Sistema
