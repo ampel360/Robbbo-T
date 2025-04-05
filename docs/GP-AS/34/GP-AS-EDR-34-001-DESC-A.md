@@ -774,17 +774,16 @@ graph LR
 
 #### 8.2.1 Vista General del Sistema
 
-![image](https://github.com/user-attachments/assets/36178cbf-5a93-4807-bbbe-926aac2e37aa)
+![image](https://github.com/user-attachments/assets/bc1c1c07-0e90-44a2-afd6-0c3007f4ec63)
+
 
 *[Insertar Figura 8.1: Ilustración 3D del sistema completo]*
 
 
 #### 8.2.2 Componentes Principales
 
-["C:\Users\amate\Downloads\20250405_1231_Cryogenic Detector Assembly Exploded_simple_compose_01jr2r2vqyef78awhrj7p04cyr.mp4"
-](https://sora.com/g/gen_01jr2r2vqyef78awhrj7p04cyr)
 
-![image](https://github.com/user-attachments/assets/9cad67fe-7433-4ccf-8d86-98d67c8356f7)
+![image](https://github.com/user-attachments/assets/6b99f2b9-7664-4f67-a3a4-8c1629244601)
 
 *[Insertar Figura 8.2: Despiece QPU y criogénico]*
 
