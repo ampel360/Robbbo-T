@@ -466,6 +466,1489 @@ Form for documenting the complete installation, including serial numbers, softwa
 
 ---
 
-**END OF DOCUMENT**
+# GP-AM-EDR-37-002-INST-A: Installation Procedure
 
-*This document contains proprietary information and is provided on a need-to-know basis. Unauthorized reproduction or distribution is prohibited.*
+## Appendices
+
+## Table of Contents - Appendices
+- [Appendix A: Installation Checklist](#appendix-a-installation-checklist)
+- [Appendix B: Cable Connection Diagrams](#appendix-b-cable-connection-diagrams)
+- [Appendix C: Network Configuration Templates](#appendix-c-network-configuration-templates)
+- [Appendix D: Torque Specifications](#appendix-d-torque-specifications)
+- [Appendix E: Software Configuration Parameters](#appendix-e-software-configuration-parameters)
+- [Appendix F: Security Configuration Guide](#appendix-f-security-configuration-guide)
+- [Appendix G: Installation Record](#appendix-g-installation-record)
+
+---
+
+## Appendix A: Installation Checklist
+
+### Pre-Installation Checklist
+
+| Task | Verification Method | Completed | Date | Technician | Notes |
+|------|---------------------|-----------|------|------------|-------|
+| Facility dimensions verified | Physical measurement | □ | | | |
+| Floor loading capacity verified | Structural assessment | □ | | | |
+| Power requirements verified | Electrical inspection | □ | | | |
+| Network infrastructure verified | Network testing | □ | | | |
+| Environmental conditions verified | Temperature/humidity monitoring | □ | | | |
+| All components received | Inventory check | □ | | | |
+| All components inspected for damage | Visual inspection | □ | | | |
+| Required tools available | Inventory check | □ | | | |
+| Required personnel present | Attendance verification | □ | | | |
+| Safety briefing conducted | Attendance record | □ | | | |
+
+### Rack and Structure Installation
+
+| Task | Verification Method | Completed | Date | Technician | Notes |
+|------|---------------------|-----------|------|------------|-------|
+| Floor mounting points marked | Visual inspection | □ | | | |
+| Vibration isolation mounts installed | Torque verification | □ | | | |
+| Primary rack assembled | Visual inspection | □ | | | |
+| Rack leveled | Level measurement | □ | | | |
+| Rack secured to floor | Torque verification | □ | | | |
+| Secondary structures installed | Visual inspection | □ | | | |
+| Cable management installed | Visual inspection | □ | | | |
+
+### Power System Installation
+
+| Task | Verification Method | Completed | Date | Technician | Notes |
+|------|---------------------|-----------|------|------------|-------|
+| Main PDU installed | Visual inspection | □ | | | |
+| Main power connected | Electrical testing | □ | | | |
+| Secondary PDUs installed | Visual inspection | □ | | | |
+| UPS installed | Visual inspection | □ | | | |
+| UPS connected | Electrical testing | □ | | | |
+| Grounding verified | Resistance measurement | □ | | | |
+| Power cables labeled | Visual inspection | □ | | | |
+
+### Cooling System Installation
+
+| Task | Verification Method | Completed | Date | Technician | Notes |
+|------|---------------------|-----------|------|------------|-------|
+| Compressor unit installed | Visual inspection | □ | | | |
+| Heat exchanger installed | Visual inspection | □ | | | |
+| Cryogenic lines installed | Visual inspection | □ | | | |
+| Secondary cooling installed | Visual inspection | □ | | | |
+| QPU cooling connected | Visual inspection | □ | | | |
+| System pressure tested | Pressure gauge reading | □ | | | |
+| System evacuated | Vacuum gauge reading | □ | | | |
+| System charged | Pressure gauge reading | □ | | | |
+
+### QPU Installation
+
+| Task | Verification Method | Completed | Date | Technician | Notes |
+|------|---------------------|-----------|------|------------|-------|
+| ESD protection verified | Resistance measurement | □ | | | |
+| QPU unpacked | Visual inspection | □ | | | |
+| QPU inspected | Visual inspection | □ | | | |
+| Mounting bracket installed | Torque verification | □ | | | |
+| QPU mounted | Visual inspection | □ | | | |
+| QPU secured | Torque verification | □ | | | |
+| Cooling connected | Leak test | □ | | | |
+| Power connected | Continuity test | □ | | | |
+| Data cables connected | Continuity test | □ | | | |
+
+### Sensor Installation
+
+| Task | Verification Method | Completed | Date | Technician | Notes |
+|------|---------------------|-----------|------|------------|-------|
+| Radiation sensor frame installed | Visual inspection | □ | | | |
+| Radiation sensors installed | Visual inspection | □ | | | |
+| Radiation sensor cooling connected | Leak test | □ | | | |
+| Radiation sensor cables connected | Continuity test | □ | | | |
+| Debris detector controller installed | Visual inspection | □ | | | |
+| Primary debris detector installed | Visual inspection | □ | | | |
+| Secondary debris detector installed | Visual inspection | □ | | | |
+| Debris detector cables connected | Continuity test | □ | | | |
+| Sensor alignment verified | Laser alignment | □ | | | |
+
+### Control and Network Installation
+
+| Task | Verification Method | Completed | Date | Technician | Notes |
+|------|---------------------|-----------|------|------------|-------|
+| Control computer installed | Visual inspection | □ | | | |
+| Monitoring system installed | Visual inspection | □ | | | |
+| Control panel installed | Visual inspection | □ | | | |
+| Primary network switch installed | Visual inspection | □ | | | |
+| Redundant network switch installed | Visual inspection | □ | | | |
+| Security appliance installed | Visual inspection | □ | | | |
+| Internal network connected | Cable testing | □ | | | |
+| External network connected | Cable testing | □ | | | |
+
+### System Configuration
+
+| Task | Verification Method | Completed | Date | Technician | Notes |
+|------|---------------------|-----------|------|------------|-------|
+| Power-up sequence completed | Visual verification | □ | | | |
+| Software installed | Installation log | □ | | | |
+| System configured | Configuration report | □ | | | |
+| Radiation sensors calibrated | Calibration report | □ | | | |
+| Debris detectors calibrated | Calibration report | □ | | | |
+| QPU calibrated | Calibration report | □ | | | |
+| INFRANET connection configured | Connection test | □ | | | |
+| INFRANET services configured | Service test | □ | | | |
+
+### System Verification
+
+| Task | Verification Method | Completed | Date | Technician | Notes |
+|------|---------------------|-----------|------|------------|-------|
+| Power systems tested | Test report | □ | | | |
+| Cooling systems tested | Test report | □ | | | |
+| Radiation sensors tested | Test report | □ | | | |
+| Debris detectors tested | Test report | □ | | | |
+| QPU operation tested | Test report | □ | | | |
+| Network connectivity tested | Test report | □ | | | |
+| Software systems tested | Test report | □ | | | |
+| INFRANET integration tested | Test report | □ | | | |
+| Performance verification completed | Test report | □ | | | |
+| System security scan completed | Scan report | □ | | | |
+| Final inspection completed | Inspection report | □ | | | |
+
+### System Activation
+
+| Task | Verification Method | Completed | Date | Technician | Notes |
+|------|---------------------|-----------|------|------------|-------|
+| Authorization obtained | Authorization document | □ | | | |
+| System set to STANDBY | Status verification | □ | | | |
+| Subsystems ready status verified | Status verification | □ | | | |
+| System set to NORMAL | Status verification | □ | | | |
+| 24-hour monitoring completed | Monitoring log | □ | | | |
+| System declared operational | Operational certificate | □ | | | |
+
+**Installation Approval**
+
+| Role | Name | Signature | Date |
+|------|------|-----------|------|
+| Installation Lead | | | |
+| Quality Assurance | | | |
+| Customer Representative | | | |
+| System Engineer | | | |
+| Security Officer | | | |
+
+---
+
+## Appendix B: Cable Connection Diagrams
+
+### B.1 Power Distribution Diagram
+...
+```
+
+Main Power Feed (3-phase)
+│
+▼
+┌─────────────┐
+│   Main PDU  │
+└─────┬───────┘
+│
+┌────────────────┬──────┴───────┬────────────────┐
+│                │              │                │
+┌────▼─────┐    ┌─────▼────┐   ┌─────▼────┐     ┌─────▼────┐
+│  UPS PDU  │    │ QPU PDU  │   │ Cryo PDU │     │Sensor PDU│
+└────┬─────┘    └─────┬────┘   └─────┬────┘     └─────┬────┘
+│                │              │                │
+┌────────┴───────┐       │              │                │
+│                │       │              │                │
+┌────▼─────┐    ┌─────▼────┐  │         ┌────▼────┐     ┌────▼─────┐
+│  Control  │    │ Network  │  │         │Cryogenic│     │Radiation │
+│ Computer  │    │Equipment │  │         │ System  │     │ Sensors  │
+└──────────┘    └──────────┘  │         └─────────┘     └──────────┘
+│
+┌────▼────┐
+│   QPU   │
+└─────────┘
+
+```
+### B.2 Network Connection Diagram
+
+```
+
+External Network
+│
+▼
+┌───────────────┐
+│   Security    │
+│   Appliance   │
+└───────┬───────┘
+│
+┌─────────────────┴─────────────────┐
+│                                   │
+┌─────▼─────┐                       ┌─────▼─────┐
+│  Primary  │                       │ Redundant │
+│  Switch   │                       │  Switch   │
+└─────┬─────┘                       └─────┬─────┘
+│                                   │
+┌──────────────┼───────────────┬──────────────────┘
+│              │               │
+┌─────▼─────┐  ┌─────▼─────┐   ┌─────▼─────┐
+│  Control  │  │Monitoring │   │   QPU     │
+│ Computer  │  │  System   │   │ Controller│
+└─────┬─────┘  └─────┬─────┘   └─────┬─────┘
+│              │               │
+│         ┌────┴────┐     ┌────▼────┐
+│         │ Control  │     │Radiation│
+│         │  Panel   │     │Sensors  │
+│         └─────────┘     └─────────┘
+│
+│         ┌─────────┐     ┌─────────┐
+└────────►│ Debris  │     │ Debris  │
+│Detector1│     │Detector2│
+└────┬────┘     └────┬────┘
+└──────────────┘
+
+```
+### B.3 Cooling System Diagram
+
+```
+
+┌─────────────┐
+│ Compressor  │
+│    Unit     │
+└──────┬──────┘
+│
+│ High Pressure Line
+│
+┌──────▼──────┐
+│   Primary   │
+│Heat Exchanger│
+└──────┬──────┘
+│
+│ Distribution Manifold
+┌─────────────────┼─────────────────┐
+│                 │                 │
+┌─────▼─────┐     ┌─────▼─────┐     ┌─────▼─────┐
+│    QPU    │     │ Radiation │     │ Secondary │
+│  Cooling  │     │  Sensor   │     │   Heat    │
+│  Circuit  │     │  Cooling  │     │ Exchanger │
+└─────┬─────┘     └─────┬─────┘     └─────┬─────┘
+│                 │                 │
+└─────────────────┼─────────────────┘
+│
+│ Return Line
+▼
+┌─────────────┐
+│ Compressor  │
+│    Unit     │
+└─────────────┘
+
+```
+
+### B.4 Sensor Connection Diagram
+
+```
+
+┌─────────────┐
+│  Control    │
+│  Computer   │
+└──────┬──────┘
+│
+│ Data Bus
+┌─────────────────┼─────────────────┐
+│                 │                 │
+┌─────▼─────┐     ┌─────▼─────┐     ┌─────▼─────┐
+│ Radiation │     │  Debris   │     │  Debris   │
+│  Sensor   │     │ Detector  │     │ Detector  │
+│ Controller│     │Controller │     │ Controller │
+└─────┬─────┘     └─────┬─────┘     └─────┬─────┘
+│                 │                 │
+┌───────┴───────┐         │                 │
+│               │         │                 │
+┌─────▼─────┐   ┌─────▼─────┐   │                 │
+│ Radiation │   │ Radiation │   │                 │
+│ Sensor 1  │   │ Sensor 2  │   │                 │
+└───────────┘   └───────────┘   │                 │
+│                 │
+┌─────────────┐   ┌─────────────┐                 │
+│ Radiation   │   │ Radiation   │                 │
+│ Sensor 3    │   │ Sensor 4    │                 │
+└─────────────┘   └─────────────┘                 │
+│
+┌─────▼─────┐
+│  Debris   │
+│ Detector 1│
+└───────────┘
+┌───────────┐
+│  Debris   │
+│ Detector 2│
+└───────────┘
+```
+
+---
+
+## Appendix C: Network Configuration Templates
+
+### C.1 Standard Deployment Configuration
+
+```yaml
+# Network Configuration Template: GAIA-AIR-CONF-STD
+# For standard deployments in controlled environments
+
+# System Identification
+system:
+  name: "SEMS-{LOCATION_CODE}"
+  description: "Space Environment Monitoring System - Standard Deployment"
+  location: "{DEPLOYMENT_LOCATION}"
+  contact: "{PRIMARY_CONTACT}"
+
+# Network Interfaces
+interfaces:
+  management:
+    name: "mgmt0"
+    type: "1000BASE-T"
+    ip_assignment: "static"
+    ip_address: "192.168.1.10"
+    subnet_mask: "255.255.255.0"
+    gateway: "192.168.1.1"
+    vlan: 10
+    
+  infranet_primary:
+    name: "inf0"
+    type: "10GBASE-SR"
+    ip_assignment: "static"
+    ip_address: "10.10.{LOCATION_ID}.10"
+    subnet_mask: "255.255.255.0"
+    gateway: "10.10.{LOCATION_ID}.1"
+    vlan: 100
+    
+  infranet_backup:
+    name: "inf1"
+    type: "10GBASE-SR"
+    ip_assignment: "static"
+    ip_address: "10.20.{LOCATION_ID}.10"
+    subnet_mask: "255.255.255.0"
+    gateway: "10.20.{LOCATION_ID}.1"
+    vlan: 200
+    
+  sensor_network:
+    name: "sens0"
+    type: "1000BASE-T"
+    ip_assignment: "static"
+    ip_address: "172.16.1.1"
+    subnet_mask: "255.255.255.0"
+    gateway: null  # Isolated network
+    vlan: 300
+
+# DNS Configuration
+dns:
+  primary: "10.1.1.10"
+  secondary: "10.1.1.11"
+  search_domains:
+    - "local.gaia-air.com"
+    - "gaia-air.com"
+    - "infranet.org"
+
+# NTP Configuration
+ntp:
+  primary: "10.1.1.20"
+  secondary: "10.1.1.21"
+  tertiary: "pool.ntp.org"
+
+# VLAN Configuration
+vlans:
+  - id: 10
+    name: "Management"
+    description: "Management Network"
+  - id: 100
+    name: "INFRANET-Primary"
+    description: "Primary INFRANET Connection"
+  - id: 200
+    name: "INFRANET-Backup"
+    description: "Backup INFRANET Connection"
+  - id: 300
+    name: "Sensor-Network"
+    description: "Internal Sensor Network"
+
+# Routing Configuration
+static_routes:
+  - destination: "10.0.0.0/8"
+    gateway: "10.10.{LOCATION_ID}.1"
+    interface: "inf0"
+    metric: 10
+  - destination: "10.0.0.0/8"
+    gateway: "10.20.{LOCATION_ID}.1"
+    interface: "inf1"
+    metric: 20
+
+# Firewall Configuration
+firewall:
+  default_policy: "deny"
+  rules:
+    - name: "Allow-Management"
+      source: "192.168.1.0/24"
+      destination: "192.168.1.10"
+      protocol: "tcp"
+      ports: [22, 443, 5900]
+      action: "allow"
+    - name: "Allow-INFRANET"
+      source: "10.0.0.0/8"
+      destination: "10.10.{LOCATION_ID}.10"
+      protocol: "tcp"
+      ports: [443, 8443, 9443]
+      action: "allow"
+    - name: "Allow-NTP"
+      source: "any"
+      destination: "any"
+      protocol: "udp"
+      ports: [123]
+      action: "allow"
+    - name: "Allow-DNS"
+      source: "any"
+      destination: "any"
+      protocol: "udp"
+      ports: [53]
+      action: "allow"
+
+# QoS Configuration
+qos:
+  classes:
+    - name: "critical"
+      priority: 1
+      bandwidth: "30%"
+      dscp: "ef"
+    - name: "management"
+      priority: 2
+      bandwidth: "20%"
+      dscp: "af31"
+    - name: "normal"
+      priority: 3
+      bandwidth: "40%"
+      dscp: "af21"
+    - name: "bulk"
+      priority: 4
+      bandwidth: "10%"
+      dscp: "be"
+  
+  mappings:
+    - traffic: "protocol=tcp and port=443"
+      class: "critical"
+    - traffic: "protocol=tcp and port=22"
+      class: "management"
+    - traffic: "protocol=udp and port=123"
+      class: "management"
+```
+
+### C.2 Enhanced Monitoring Configuration
+
+```yaml
+# Network Configuration Template: GAIA-AIR-CONF-ENH
+# For enhanced monitoring deployments with additional sensors
+
+# System Identification
+system:
+  name: "SEMS-ENH-{LOCATION_CODE}"
+  description: "Space Environment Monitoring System - Enhanced Deployment"
+  location: "{DEPLOYMENT_LOCATION}"
+  contact: "{PRIMARY_CONTACT}"
+
+# Network Interfaces
+interfaces:
+  management:
+    name: "mgmt0"
+    type: "1000BASE-T"
+    ip_assignment: "static"
+    ip_address: "192.168.1.10"
+    subnet_mask: "255.255.255.0"
+    gateway: "192.168.1.1"
+    vlan: 10
+    
+  infranet_primary:
+    name: "inf0"
+    type: "10GBASE-SR"
+    ip_assignment: "static"
+    ip_address: "10.10.{LOCATION_ID}.10"
+    subnet_mask: "255.255.255.0"
+    gateway: "10.10.{LOCATION_ID}.1"
+    vlan: 100
+    
+  infranet_backup:
+    name: "inf1"
+    type: "10GBASE-SR"
+    ip_assignment: "static"
+    ip_address: "10.20.{LOCATION_ID}.10"
+    subnet_mask: "255.255.255.0"
+    gateway: "10.20.{LOCATION_ID}.1"
+    vlan: 200
+    
+  sensor_network_primary:
+    name: "sens0"
+    type: "1000BASE-T"
+    ip_assignment: "static"
+    ip_address: "172.16.1.1"
+    subnet_mask: "255.255.255.0"
+    gateway: null  # Isolated network
+    vlan: 300
+    
+  sensor_network_secondary:
+    name: "sens1"
+    type: "1000BASE-T"
+    ip_assignment: "static"
+    ip_address: "172.16.2.1"
+    subnet_mask: "255.255.255.0"
+    gateway: null  # Isolated network
+    vlan: 301
+    
+  external_sensors:
+    name: "ext0"
+    type: "1000BASE-T"
+    ip_assignment: "static"
+    ip_address: "172.16.3.1"
+    subnet_mask: "255.255.255.0"
+    gateway: null  # Isolated network
+    vlan: 302
+
+# DNS Configuration
+dns:
+  primary: "10.1.1.10"
+  secondary: "10.1.1.11"
+  search_domains:
+    - "local.gaia-air.com"
+    - "gaia-air.com"
+    - "infranet.org"
+
+# NTP Configuration
+ntp:
+  primary: "10.1.1.20"
+  secondary: "10.1.1.21"
+  tertiary: "pool.ntp.org"
+
+# VLAN Configuration
+vlans:
+  - id: 10
+    name: "Management"
+    description: "Management Network"
+  - id: 100
+    name: "INFRANET-Primary"
+    description: "Primary INFRANET Connection"
+  - id: 200
+    name: "INFRANET-Backup"
+    description: "Backup INFRANET Connection"
+  - id: 300
+    name: "Sensor-Network-Primary"
+    description: "Primary Internal Sensor Network"
+  - id: 301
+    name: "Sensor-Network-Secondary"
+    description: "Secondary Internal Sensor Network"
+  - id: 302
+    name: "External-Sensors"
+    description: "External Sensor Network"
+
+# Enhanced Monitoring Configuration
+monitoring:
+  snmp:
+    enabled: true
+    version: "3"
+    community: "{SNMP_COMMUNITY}"
+    security_level: "authPriv"
+    auth_protocol: "SHA"
+    auth_password: "{SNMP_AUTH_PASSWORD}"
+    priv_protocol: "AES"
+    priv_password: "{SNMP_PRIV_PASSWORD}"
+    
+  netflow:
+    enabled: true
+    collector: "10.1.1.30"
+    port: 9996
+    version: 9
+    
+  syslog:
+    enabled: true
+    server: "10.1.1.40"
+    port: 514
+    protocol: "tcp"
+    facility: "local7"
+    
+  packet_capture:
+    enabled: true
+    interfaces: ["inf0", "inf1"]
+    buffer_size: "1GB"
+    rotation: "hourly"
+    retention: "7d"
+```
+
+### C.3 Research Configuration
+
+```yaml
+# Network Configuration Template: GAIA-AIR-CONF-RES
+# For research deployments with advanced QPU capabilities
+
+# System Identification
+system:
+  name: "SEMS-RES-{LOCATION_CODE}"
+  description: "Space Environment Monitoring System - Research Deployment"
+  location: "{DEPLOYMENT_LOCATION}"
+  contact: "{PRIMARY_CONTACT}"
+
+# Network Interfaces
+interfaces:
+  management:
+    name: "mgmt0"
+    type: "1000BASE-T"
+    ip_assignment: "static"
+    ip_address: "192.168.1.10"
+    subnet_mask: "255.255.255.0"
+    gateway: "192.168.1.1"
+    vlan: 10
+    
+  infranet_primary:
+    name: "inf0"
+    type: "100GBASE-SR4"  # Upgraded for research
+    ip_assignment: "static"
+    ip_address: "10.10.{LOCATION_ID}.10"
+    subnet_mask: "255.255.255.0"
+    gateway: "10.10.{LOCATION_ID}.1"
+    vlan: 100
+    
+  infranet_backup:
+    name: "inf1"
+    type: "100GBASE-SR4"  # Upgraded for research
+    ip_assignment: "static"
+    ip_address: "10.20.{LOCATION_ID}.10"
+    subnet_mask: "255.255.255.0"
+    gateway: "10.20.{LOCATION_ID}.1"
+    vlan: 200
+    
+  sensor_network:
+    name: "sens0"
+    type: "10GBASE-T"  # Upgraded for research
+    ip_assignment: "static"
+    ip_address: "172.16.1.1"
+    subnet_mask: "255.255.255.0"
+    gateway: null  # Isolated network
+    vlan: 300
+    
+  qpu_network:
+    name: "qpu0"
+    type: "100GBASE-SR4"
+    ip_assignment: "static"
+    ip_address: "172.16.10.1"
+    subnet_mask: "255.255.255.0"
+    gateway: null  # Isolated network
+    vlan: 400
+    
+  research_network:
+    name: "res0"
+    type: "100GBASE-SR4"
+    ip_assignment: "static"
+    ip_address: "172.16.20.1"
+    subnet_mask: "255.255.255.0"
+    gateway: "172.16.20.254"
+    vlan: 500
+
+# Research-Specific Configuration
+research:
+  qpu_cluster:
+    enabled: true
+    nodes: 4
+    interconnect: "InfiniBand HDR"
+    bandwidth: "200Gbps"
+    
+  data_storage:
+    type: "NVMe over Fabric"
+    capacity: "500TB"
+    throughput: "50GB/s"
+    
+  compute_cluster:
+    enabled: true
+    nodes: 16
+    cpu_cores_per_node: 64
+    gpu_per_node: 8
+    memory_per_node: "1TB"
+    
+  quantum_network:
+    enabled: true
+    key_distribution: "QKD"
+    entanglement_sources: 2
+```
+
+---
+
+
+## Appendix D: Torque Specifications
+
+### D.1 Mechanical Fastener Torque Specifications
+
+| Component | Fastener Type | Size | Material | Torque (Nm) | Notes |
+|-----------|---------------|------|----------|-------------|-------|
+| Rack to Floor | Expansion Anchor | M12 | Stainless Steel | 60-65 | Use calibrated torque wrench |
+| Rack Rails | Hex Bolt | M8 | Stainless Steel | 22-25 | Apply thread locker |
+| Equipment to Rack | Cage Nut/Screw | M6 | Stainless Steel | 8-10 | Do not overtighten |
+| QPU Mounting Bracket | Hex Bolt | M8 | Titanium | 18-20 | Clean threads before assembly |
+| QPU to Bracket | Precision Bolt | M6 | Titanium | 9-10 | Use torque screwdriver |
+| Radiation Sensor Frame | Hex Bolt | M8 | Stainless Steel | 22-25 | Apply thread locker |
+| Radiation Sensors | Precision Bolt | M5 | Stainless Steel | 5-6 | Use torque screwdriver |
+| Debris Detector Mount | Hex Bolt | M10 | Stainless Steel | 40-45 | Apply thread locker |
+| Debris Detector | Precision Bolt | M6 | Titanium | 8-9 | Use torque screwdriver |
+| Vibration Isolation Mounts | Hex Bolt | M12 | Stainless Steel | 55-60 | Do not compress isolator |
+| PDU Mounting | Rack Screw | M6 | Stainless Steel | 8-10 | Verify ground connection |
+| UPS Mounting | Rack Screw | M6 | Stainless Steel | 8-10 | Use all mounting points |
+| Control Computer | Rack Screw | M6 | Stainless Steel | 8-10 | Standard rack mount |
+| Network Equipment | Rack Screw | M6 | Stainless Steel | 8-10 | Standard rack mount |
+
+### D.2 Fluid Connection Torque Specifications
+
+| Connection Type | Size | Material | Torque (Nm) | Notes |
+|-----------------|------|----------|-------------|-------|
+| Cryogenic Line - Compressor | 1" NPT | Stainless Steel | 80-85 | Use backup wrench |
+| Cryogenic Line - Heat Exchanger | 3/4" NPT | Stainless Steel | 60-65 | Use backup wrench |
+| Cryogenic Line - Distribution | 1/2" NPT | Stainless Steel | 45-50 | Use backup wrench |
+| Cryogenic Line - QPU | 3/8" VCR | Stainless Steel | 20-22 | Use new gasket |
+| Cryogenic Line - Sensors | 1/4" VCR | Stainless Steel | 8-10 | Use new gasket |
+| Cooling Water - Main | 1" NPT | Stainless Steel | 80-85 | Use PTFE tape |
+| Cooling Water - Distribution | 1/2" NPT | Stainless Steel | 45-50 | Use PTFE tape |
+| Cooling Water - Components | 3/8" NPT | Stainless Steel | 35-40 | Use PTFE tape |
+| Vacuum Line - Main | KF-50 | Stainless Steel | Hand tight + clamp | Verify O-ring placement |
+| Vacuum Line - QPU | KF-25 | Stainless Steel | Hand tight + clamp | Verify O-ring placement |
+| Vacuum Line - Sensors | KF-16 | Stainless Steel | Hand tight + clamp | Verify O-ring placement |
+| Helium Line - Supply | VCR 1/2" | Stainless Steel | 30-35 | Use new gasket |
+| Helium Line - Return | VCR 1/2" | Stainless Steel | 30-35 | Use new gasket |
+
+### D.3 Electrical Connection Torque Specifications
+
+| Connection Type | Size | Material | Torque (Nm) | Notes |
+|-----------------|------|----------|-------------|-------|
+| Main Power Terminal | M10 | Copper | 25-30 | Verify connection resistance |
+| PDU Power Terminal | M8 | Copper | 15-20 | Verify connection resistance |
+| UPS Power Terminal | M8 | Copper | 15-20 | Verify connection resistance |
+| Ground Bus Bar | M10 | Copper | 25-30 | Clean contact surfaces |
+| QPU Power Terminal | M6 | Gold-plated | 8-10 | Use insulated tools |
+| Sensor Power Terminal | M4 | Gold-plated | 2-3 | Use insulated tools |
+| Control Panel Terminal | M4 | Copper | 2-3 | Verify wire seating |
+| Network Equipment | RJ45 | N/A | Hand tight | Verify locking tab engagement |
+| Fiber Optic Connector | LC | N/A | Hand tight | Clean before connection |
+| Coaxial Connector | SMA | Gold-plated | 0.8-1.0 | Use calibrated torque wrench |
+| RF Connector | N-Type | Silver-plated | 1.5-2.0 | Use calibrated torque wrench |
+
+---
+
+## Appendix E: Software Configuration Parameters
+
+### E.1 Core System Parameters
+
+| Parameter | Description | Default Value | Valid Range | Notes |
+|-----------|-------------|---------------|-------------|-------|
+| system.name | System identifier | SEMS-LOCATION | String | Must be unique in INFRANET |
+| system.location.latitude | Geographic latitude | 0.0 | -90.0 to 90.0 | Decimal degrees |
+| system.location.longitude | Geographic longitude | 0.0 | -180.0 to 180.0 | Decimal degrees |
+| system.location.altitude | Geographic altitude | 0.0 | -500.0 to 10000.0 | Meters above sea level |
+| system.mode | Operational mode | STANDBY | STANDBY, NORMAL, ALERT, EMERGENCY, MAINTENANCE | Initial mode after installation |
+| system.update_frequency | Environment scan frequency | 60000 | 1000 to 3600000 | Milliseconds |
+| system.log_level | System logging level | INFO | DEBUG, INFO, WARN, ERROR | Set to DEBUG during installation |
+| system.data_retention | Data retention period | 90 | 1 to 365 | Days |
+| system.auto_update | Enable automatic updates | false | true, false | Enable after verification |
+| system.time_sync | Time synchronization method | NTP | NTP, PTP, GNSS | NTP recommended for most installations |
+
+### E.2 Sensor Configuration Parameters
+
+| Parameter | Description | Default Value | Valid Range | Notes |
+|-----------|-------------|---------------|-------------|-------|
+| sensors.radiation.enabled | Enable radiation sensors | true | true, false | |
+| sensors.radiation.sampling_rate | Radiation sampling rate | 1000 | 100 to 10000 | Milliseconds |
+| sensors.radiation.calibration_factor | Calibration factor | 1.0 | 0.5 to 2.0 | Determined during calibration |
+| sensors.radiation.alert_threshold.low | Low radiation alert | 10.0 | 1.0 to 100.0 | μSv/h |
+| sensors.radiation.alert_threshold.medium | Medium radiation alert | 50.0 | 10.0 to 500.0 | μSv/h |
+| sensors.radiation.alert_threshold.high | High radiation alert | 100.0 | 50.0 to 1000.0 | μSv/h |
+| sensors.debris.enabled | Enable debris detectors | true | true, false | |
+| sensors.debris.sampling_rate | Debris sampling rate | 500 | 100 to 5000 | Milliseconds |
+| sensors.debris.sensitivity | Detector sensitivity | 0.8 | 0.1 to 1.0 | Higher values detect smaller objects |
+| sensors.debris.min_object_size | Minimum detectable size | 1.0 | 0.1 to 10.0 | Centimeters |
+| sensors.debris.field_of_view | Detector field of view | 120.0 | 30.0 to 180.0 | Degrees |
+| sensors.debris.max_range | Maximum detection range | 100.0 | 10.0 to 1000.0 | Meters |
+
+### E.3 QPU Configuration Parameters
+
+| Parameter | Description | Default Value | Valid Range | Notes |
+|-----------|-------------|---------------|-------------|-------|
+| qpu.enabled | Enable QPU | true | true, false | |
+| qpu.operating_temperature | Target temperature | 4.2 | 2.0 to 10.0 | Kelvin |
+| qpu.temperature_tolerance | Temperature tolerance | 0.1 | 0.01 to 1.0 | Kelvin |
+| qpu.qubit_count | Active qubits | 128 | 16 to 1024 | Depends on QPU model |
+| qpu.coherence_time_target | Target coherence time | 100 | 10 to 1000 | Milliseconds |
+| qpu.error_correction | Enable error correction | true | true, false | |
+| qpu.error_correction.method | Error correction method | SURFACE | SURFACE, REPETITION, STEANE | Depends on QPU model |
+| qpu.calibration_interval | Calibration interval | 86400 | 3600 to 604800 | Seconds |
+| qpu.power_saving_mode | Enable power saving | false | true, false | Reduces performance |
+| qpu.max_entanglement_distance | Max entanglement | 64 | 2 to 1024 | Qubits |
+
+### E.4 INFRANET Configuration Parameters
+
+| Parameter | Description | Default Value | Valid Range | Notes |
+|-----------|-------------|---------------|-------------|-------|
+| infranet.enabled | Enable INFRANET | true | true, false | |
+| infranet.node_id | INFRANET node ID | sems-LOCATION | String | Must be unique in INFRANET |
+| infranet.primary_endpoint | Primary endpoint | infranet.gaia-air.com | String | FQDN or IP address |
+| infranet.backup_endpoint | Backup endpoint | backup.infranet.gaia-air.com | String | FQDN or IP address |
+| infranet.connection_timeout | Connection timeout | 30000 | 5000 to 120000 | Milliseconds |
+| infranet.retry_interval | Retry interval | 60000 | 5000 to 300000 | Milliseconds |
+| infranet.max_retries | Maximum retries | 10 | 1 to 100 | Before alerting |
+| infranet.tls_version | TLS version | 1.3 | 1.2, 1.3 | Minimum version |
+| infranet.certificate_path | Certificate path | /etc/sems/certs/infranet.crt | String | Full path to certificate |
+| infranet.private_key_path | Private key path | /etc/sems/certs/infranet.key | String | Full path to private key |
+| infranet.ca_path | CA certificate path | /etc/sems/certs/ca.crt | String | Full path to CA certificate |
+
+### E.5 Data Sharing Policy Parameters
+
+| Parameter | Description | Default Value | Valid Range | Notes |
+|-----------|-------------|---------------|-------------|-------|
+| sharing.space_objects | Share space objects | true | true, false | |
+| sharing.space_weather | Share space weather | true | true, false | |
+| sharing.radiation_data | Share radiation data | true | true, false | |
+| sharing.conjunction_warnings | Share conjunction warnings | true | true, false | |
+| sharing.system_status | Share system status | true | true, false | |
+| sharing.confidentiality | Default confidentiality | RESTRICTED | PUBLIC, RESTRICTED, CONFIDENTIAL | |
+| sharing.data_retention | Shared data retention | 72 | 1 to 8760 | Hours |
+| sharing.anonymize_data | Anonymize shared data | false | true, false | |
+| sharing.encryption_required | Require encryption | true | true, false | |
+| sharing.integrity_check | Require integrity check | true | true, false | |
+
+---
+
+## Appendix F: Security Configuration Guide
+
+### F.1 Access Control Configuration
+
+#### F.1.1 User Roles and Permissions
+
+| Role | Description | Permissions |
+|------|-------------|-------------|
+| Administrator | System administration | Full system access, configuration changes, user management |
+| Operator | System operation | System monitoring, mode changes, alert acknowledgment |
+| Analyst | Data analysis | Read-only access to all data, export capabilities |
+| Maintenance | System maintenance | Hardware diagnostics, calibration, software updates |
+| Auditor | System auditing | Read-only access to logs and configuration |
+| INFRANET | INFRANET integration | Limited API access for data exchange |
+
+#### F.1.2 Authentication Configuration
+
+```yaml
+# Authentication Configuration
+authentication:
+  # Local Authentication
+  local:
+    enabled: true
+    password_policy:
+      min_length: 12
+      require_uppercase: true
+      require_lowercase: true
+      require_numbers: true
+      require_special: true
+      max_age_days: 90
+      history_count: 10
+    account_lockout:
+      max_attempts: 5
+      lockout_duration_minutes: 30
+      reset_attempts_after_minutes: 15
+      
+  # LDAP Authentication
+  ldap:
+    enabled: false  # Enable for enterprise deployments
+    server: "ldap.gaia-air.com"
+    port: 636
+    use_ssl: true
+    bind_dn: "cn=sems-bind,ou=service-accounts,dc=gaia-air,dc=com"
+    bind_password: "{LDAP_BIND_PASSWORD}"
+    user_base_dn: "ou=users,dc=gaia-air,dc=com"
+    user_filter: "(objectClass=person)"
+    group_base_dn: "ou=groups,dc=gaia-air,dc=com"
+    group_filter: "(objectClass=groupOfNames)"
+    
+  # Multi-Factor Authentication
+  mfa:
+    enabled: true
+    methods:
+      - type: "totp"
+        name: "Time-based One-Time Password"
+        enabled: true
+      - type: "smart_card"
+        name: "Smart Card / PIV"
+        enabled: true
+      - type: "push"
+        name: "Mobile App Push Notification"
+        enabled: false
+    required_for_roles:
+      - "Administrator"
+      - "Operator"
+    grace_period_days: 0  # No grace period for security-critical system
+```
+
+#### F.1.3 Session Management
+
+```yaml
+# Session Management Configuration
+sessions:
+  timeout_minutes: 15
+  max_concurrent_sessions: 3
+  remember_me_allowed: false
+  idle_timeout_minutes: 5
+  secure_cookies: true
+  http_only_cookies: true
+  same_site_cookies: "strict"
+```
+
+### F.2 Network Security Configuration
+
+#### F.2.1 TLS Configuration
+
+```yaml
+# TLS Configuration
+tls:
+  minimum_version: "1.3"
+  cipher_suites:
+    - "TLS_AES_256_GCM_SHA384"
+    - "TLS_CHACHA20_POLY1305_SHA256"
+    - "TLS_AES_128_GCM_SHA256"
+  certificate:
+    type: "rsa"
+    key_size: 4096
+    signature_algorithm: "sha384WithRSAEncryption"
+    validity_days: 365
+  dhparam_size: 4096
+  hsts:
+    enabled: true
+    max_age_seconds: 31536000
+    include_subdomains: true
+    preload: true
+```
+
+#### F.2.2 API Security
+
+```yaml
+# API Security Configuration
+api_security:
+  rate_limiting:
+    enabled: true
+    requests_per_minute: 60
+    burst: 10
+  authentication:
+    methods:
+      - "jwt"
+      - "certificate"
+    token_lifetime_minutes: 15
+  cors:
+    enabled: false
+    allowed_origins: []
+    allowed_methods: []
+    allowed_headers: []
+    expose_headers: []
+    allow_credentials: false
+    max_age_seconds: 0
+```
+
+### F.3 Data Protection Configuration
+
+#### F.3.1 Encryption Configuration
+
+```yaml
+# Encryption Configuration
+encryption:
+  # Data at Rest
+  data_at_rest:
+    enabled: true
+    algorithm: "AES-256-GCM"
+    key_management: "hardware_security_module"
+    
+  # Data in Transit
+  data_in_transit:
+    enabled: true
+    minimum_tls_version: "1.3"
+    
+  # Database Encryption
+  database:
+    enabled: true
+    algorithm: "AES-256-GCM"
+    encrypted_fields:
+      - "user_credentials"
+      - "api_keys"
+      - "private_data"
+      
+  # Backup Encryption
+  backups:
+    enabled: true
+    algorithm: "AES-256-GCM"
+    key_rotation_days: 90
+```
+
+#### F.3.2 Key Management
+
+```yaml
+# Key Management Configuration
+key_management:
+  hsm:
+    enabled: true
+    type: "network"  # network or pci
+    address: "hsm.gaia-air.com"
+    port: 1792
+    partition: "sems"
+    
+  key_rotation:
+    data_encryption_keys:
+      automatic: true
+      interval_days: 90
+    master_keys:
+      automatic: false
+      interval_days: 365
+      
+  backup:
+    enabled: true
+    location: "/secure/key-backup"
+    encryption: true
+    access_control:
+      roles:
+        - "Administrator"
+      dual_control: true
+```
+
+### F.4 Audit and Logging Configuration
+
+```yaml
+# Audit and Logging Configuration
+audit:
+  enabled: true
+  log_level: "INFO"
+  
+  events:
+    authentication:
+      enabled: true
+      include:
+        - "success"
+        - "failure"
+    authorization:
+      enabled: true
+      include:
+        - "success"
+        - "failure"
+    configuration:
+      enabled: true
+      include:
+        - "view"
+        - "modify"
+    data_access:
+      enabled: true
+      include:
+        - "read"
+        - "write"
+        - "delete"
+    system:
+      enabled: true
+      include:
+        - "startup"
+        - "shutdown"
+        - "mode_change"
+        
+  retention:
+    days: 365
+    max_size_gb: 500
+    
+  export:
+    syslog:
+      enabled: true
+      server: "syslog.gaia-air.com"
+      port: 514
+      protocol: "TCP"
+      format: "CEF"
+    file:
+      enabled: true
+      path: "/var/log/sems/audit"
+      max_file_size_mb: 100
+     
+
+
+#### F.1.2 Authentication Configuration
+
+```yaml
+# Authentication Configuration
+authentication:
+  # Local Authentication
+  local:
+    enabled: true
+    password_policy:
+      min_length: 12
+      require_uppercase: true
+      require_lowercase: true
+      require_numbers: true
+      require_special: true
+      max_age_days: 90
+      history_count: 10
+    account_lockout:
+      max_attempts: 5
+      lockout_duration_minutes: 30
+      reset_attempts_after_minutes: 15
+      
+  # LDAP Authentication
+  ldap:
+    enabled: false  # Enable for enterprise deployments
+    server: "ldap.gaia-air.com"
+    port: 636
+    use_ssl: true
+    bind_dn: "cn=sems-bind,ou=service-accounts,dc=gaia-air,dc=com"
+    bind_password: "{LDAP_BIND_PASSWORD}"
+    user_base_dn: "ou=users,dc=gaia-air,dc=com"
+    user_filter: "(objectClass=person)"
+    group_base_dn: "ou=groups,dc=gaia-air,dc=com"
+    group_filter: "(objectClass=groupOfNames)"
+    
+  # Multi-Factor Authentication
+  mfa:
+    enabled: true
+    methods:
+      - type: "totp"
+        name: "Time-based One-Time Password"
+        enabled: true
+      - type: "smart_card"
+        name: "Smart Card / PIV"
+        enabled: true
+      - type: "push"
+        name: "Mobile App Push Notification"
+        enabled: false
+    required_for_roles:
+      - "Administrator"
+      - "Operator"
+    grace_period_days: 0  # No grace period for security-critical system
+```
+
+#### F.1.3 Session Management
+
+```yaml
+# Session Management Configuration
+sessions:
+  timeout_minutes: 15
+  max_concurrent_sessions: 3
+  remember_me_allowed: false
+  idle_timeout_minutes: 5
+  secure_cookies: true
+  http_only_cookies: true
+  same_site_cookies: "strict"
+```
+
+### F.2 Network Security Configuration
+
+#### F.2.1 TLS Configuration
+
+```yaml
+# TLS Configuration
+tls:
+  minimum_version: "1.3"
+  cipher_suites:
+    - "TLS_AES_256_GCM_SHA384"
+    - "TLS_CHACHA20_POLY1305_SHA256"
+    - "TLS_AES_128_GCM_SHA256"
+  certificate:
+    type: "rsa"
+    key_size: 4096
+    signature_algorithm: "sha384WithRSAEncryption"
+    validity_days: 365
+  dhparam_size: 4096
+  hsts:
+    enabled: true
+    max_age_seconds: 31536000
+    include_subdomains: true
+    preload: true
+```
+
+#### F.2.2 API Security
+
+```yaml
+# API Security Configuration
+api_security:
+  rate_limiting:
+    enabled: true
+    requests_per_minute: 60
+    burst: 10
+  authentication:
+    methods:
+      - "jwt"
+      - "certificate"
+    token_lifetime_minutes: 15
+  cors:
+    enabled: false
+    allowed_origins: []
+    allowed_methods: []
+    allowed_headers: []
+    expose_headers: []
+    allow_credentials: false
+    max_age_seconds: 0
+```
+
+### F.3 Data Protection Configuration
+
+#### F.3.1 Encryption Configuration
+
+```yaml
+# Encryption Configuration
+encryption:
+  # Data at Rest
+  data_at_rest:
+    enabled: true
+    algorithm: "AES-256-GCM"
+    key_management: "hardware_security_module"
+    
+  # Data in Transit
+  data_in_transit:
+    enabled: true
+    minimum_tls_version: "1.3"
+    
+  # Database Encryption
+  database:
+    enabled: true
+    algorithm: "AES-256-GCM"
+    encrypted_fields:
+      - "user_credentials"
+      - "api_keys"
+      - "private_data"
+      
+  # Backup Encryption
+  backups:
+    enabled: true
+    algorithm: "AES-256-GCM"
+    key_rotation_days: 90
+```
+
+#### F.3.2 Key Management
+
+```yaml
+# Key Management Configuration
+key_management:
+  hsm:
+    enabled: true
+    type: "network"  # network or pci
+    address: "hsm.gaia-air.com"
+    port: 1792
+    partition: "sems"
+    
+  key_rotation:
+    data_encryption_keys:
+      automatic: true
+      interval_days: 90
+    master_keys:
+      automatic: false
+      interval_days: 365
+      
+  backup:
+    enabled: true
+    location: "/secure/key-backup"
+    encryption: true
+    access_control:
+      roles:
+        - "Administrator"
+      dual_control: true
+```
+
+### F.4 Audit and Logging Configuration
+
+```yaml
+# Audit and Logging Configuration
+audit:
+  enabled: true
+  log_level: "INFO"
+  
+  events:
+    authentication:
+      enabled: true
+      include:
+        - "success"
+        - "failure"
+    authorization:
+      enabled: true
+      include:
+        - "success"
+        - "failure"
+    configuration:
+      enabled: true
+      include:
+        - "view"
+        - "modify"
+    data_access:
+      enabled: true
+      include:
+        - "read"
+        - "write"
+        - "delete"
+    system:
+      enabled: true
+      include:
+        - "startup"
+        - "shutdown"
+        - "mode_change"
+        
+  retention:
+    days: 365
+    max_size_gb: 500
+    
+  export:
+    syslog:
+      enabled: true
+      server: "syslog.gaia-air.com"
+      port: 514
+      protocol: "TCP"
+      format: "CEF"
+    file:
+      enabled: true
+      path: "/var/log/sems/audit"
+      max_file_size_mb: 100
+      max_files: 100
+```
+
+### F.5 Security Hardening Checklist
+
+| Category | Item | Configuration | Verification Method
+|-----|-----|-----|-----|-----|-----
+| Operating System | Unnecessary services disabled | systemctl disable [service] | systemctl list-unit-files
+| Operating System | Firewall enabled | ufw enable | ufw status
+| Operating System | SELinux/AppArmor enabled | SELINUX=enforcing | getenforce
+| Operating System | Secure boot enabled | UEFI setting | mokutil --sb-state
+| Operating System | Automatic updates | unattended-upgrades | dpkg -l unattended-upgrades
+| Operating System | Password authentication disabled for SSH | PasswordAuthentication no | sshd -T
+| Operating System | Root login disabled | PermitRootLogin no | sshd -T
+| Operating System | Strong SSH algorithms | Ciphers, MACs, KexAlgorithms | sshd -T
+| Network | Unused ports closed | See firewall rules | nmap -sT -p- localhost
+| Network | Network segmentation | VLAN configuration | ip -d link show
+| Network | Intrusion detection | Snort/Suricata | service status
+| Network | Secure DNS | DNS over TLS | dig +tls
+| Application | Default credentials changed | All systems | Manual verification
+| Application | Debug mode disabled | production mode | Configuration check
+| Application | Error handling secure | No detailed errors | Manual testing
+| Application | Input validation | All inputs | Manual testing
+| Application | Output encoding | All outputs | Manual testing
+| Application | CSRF protection | All forms | Manual testing
+| Application | Content Security Policy | CSP headers | curl -I
+| Database | Minimal privileges | Least privilege | Manual verification
+| Database | Connection encryption | TLS | Manual verification
+| Database | Query parameterization | Prepared statements | Code review
+| Physical | Rack locks | Installed and locked | Visual inspection
+| Physical | Tamper-evident seals | Applied to enclosures | Visual inspection
+| Physical | CCTV coverage | Installed and operational | Visual verification
+| Physical | Access control | Card readers operational | Test access
+
+
+---
+
+## Appendix G: Installation Record
+
+### G.1 System Identification
+
+| Field | Value
+|-----|-----|-----|-----|-----|-----
+| System Name | 
+| Serial Number | 
+| Installation Location | 
+| Installation Date | 
+| Installation Team Lead | 
+| Customer Representative | 
+
+
+### G.2 Hardware Components
+
+| Component | Model | Serial Number | Firmware Version | Installation Date | Installed By | Verified By
+|-----|-----|-----|-----|-----|-----
+| Main Rack |  |  | N/A |  |  | 
+| QPU |  |  |  |  |  | 
+| Cryogenic Compressor |  |  |  |  |  | 
+| Heat Exchanger |  |  |  |  |  | 
+| Radiation Sensor 1 |  |  |  |  |  | 
+| Radiation Sensor 2 |  |  |  |  |  | 
+| Radiation Sensor 3 |  |  |  |  |  | 
+| Radiation Sensor 4 |  |  |  |  |  | 
+| Debris Detector 1 |  |  |  |  |  | 
+| Debris Detector 2 |  |  |  |  |  | 
+| Control Computer |  |  |  |  |  | 
+| Monitoring System |  |  |  |  |  | 
+| Primary Network Switch |  |  |  |  |  | 
+| Backup Network Switch |  |  |  |  |  | 
+| Security Appliance |  |  |  |  |  | 
+| UPS |  |  |  |  |  | 
+| Main PDU |  |  |  |  |  | 
+| Secondary PDUs |  |  |  |  |  | 
+
+
+### G.3 Software Components
+
+| Component | Version | Installation Date | Installed By | Verified By | License Information
+|-----|-----|-----|-----|-----|-----
+| Operating System |  |  |  |  | 
+| SEMS Core Software |  |  |  |  | 
+| QPU Control Software |  |  |  |  | 
+| Sensor Management Software |  |  |  |  | 
+| Database System |  |  |  |  | 
+| INFRANET Client |  |  |  |  | 
+| Monitoring Software |  |  |  |  | 
+| Security Software |  |  |  |  | 
+| Backup Software |  |  |  |  | 
+
+
+### G.4 Network Configuration
+
+| Interface | MAC Address | IP Address | Subnet Mask | Gateway | VLAN | Verified By
+|-----|-----|-----|-----|-----|-----
+| Management |  |  |  |  |  | 
+| INFRANET Primary |  |  |  |  |  | 
+| INFRANET Backup |  |  |  |  |  | 
+| Sensor Network |  |  |  |  |  | 
+| QPU Network |  |  |  |  |  | 
+
+
+### G.5 Test Results
+
+| Test ID | Description | Result | Date | Performed By | Verified By | Notes
+|-----|-----|-----|-----|-----|-----
+| SYS-01 | Power Systems |  |  |  |  | 
+| SYS-02 | Cooling Systems |  |  |  |  | 
+| SYS-03 | Radiation Sensors |  |  |  |  | 
+| SYS-04 | Debris Detectors |  |  |  |  | 
+| SYS-05 | QPU Operation |  |  |  |  | 
+| SYS-06 | Network Connectivity |  |  |  |  | 
+| SYS-07 | Software Systems |  |  |  |  | 
+| SYS-08 | INFRANET Integration |  |  |  |  | 
+| PERF-01 | Radiation Sensitivity |  |  |  |  | 
+| PERF-02 | Debris Detection |  |  |  |  | 
+| PERF-03 | Orbit Calculation |  |  |  |  | 
+| PERF-04 | Conjunction Analysis |  |  |  |  | 
+| PERF-05 | System Response Time |  |  |  |  | 
+| PERF-06 | Data Throughput |  |  |  |  | 
+
+
+### G.6 Calibration Results
+
+| Sensor | Calibration Date | Calibration Value | Reference Standard | Performed By | Verified By | Next Calibration Due
+|-----|-----|-----|-----|-----|-----
+| Radiation Sensor 1 |  |  |  |  |  | 
+| Radiation Sensor 2 |  |  |  |  |  | 
+| Radiation Sensor 3 |  |  |  |  |  | 
+| Radiation Sensor 4 |  |  |  |  |  | 
+| Debris Detector 1 |  |  |  |  |  | 
+| Debris Detector 2 |  |  |  |  |  | 
+| QPU Reference |  |  |  |  |  | 
+
+
+### G.7 Installation Deviations and Issues
+
+| Issue ID | Description | Impact | Resolution | Date Resolved | Resolved By | Approved By
+|-----|-----|-----|-----|-----|-----
+|  |  |  |  |  |  | 
+|  |  |  |  |  |  | 
+|  |  |  |  |  |  | 
+
+
+### G.8 Final Approval
+
+| Role | Name | Signature | Date | Comments
+|-----|-----|-----|-----|-----|-----
+| Installation Team Lead |  |  |  | 
+| Quality Assurance |  |  |  | 
+| Customer Representative |  |  |  | 
+| System Engineer |  |  |  | 
+| Security Officer |  |  |  | 
+
+
+I hereby certify that the Space Environment Monitoring System has been installed according to the specifications in GP-AM-EDR-37-002-INST-A and has passed all required verification tests.
+
+**Installation Completion Date:** _____________________
+
+**System Operational Date:** _____________________
+
+**Warranty Period Start:** _____________________
+
+**Warranty Period End:** _____________________
+
+```plaintext
+
+This completes the detailed appendices for the Space Environment Monitoring System installation procedure, providing comprehensive checklists, diagrams, configuration templates, specifications, and documentation forms necessary for a successful installation.
+```
