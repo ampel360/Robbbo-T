@@ -1787,37 +1787,37 @@ audit:
       max_files: 100
 ```
 
+
 ### F.5 Security Hardening Checklist
 
-| Category | Item | Configuration | Verification Method
-|-----|-----|-----|-----|-----|-----
-| Operating System | Unnecessary services disabled | systemctl disable [service] | systemctl list-unit-files
-| Operating System | Firewall enabled | ufw enable | ufw status
-| Operating System | SELinux/AppArmor enabled | SELINUX=enforcing | getenforce
-| Operating System | Secure boot enabled | UEFI setting | mokutil --sb-state
-| Operating System | Automatic updates | unattended-upgrades | dpkg -l unattended-upgrades
-| Operating System | Password authentication disabled for SSH | PasswordAuthentication no | sshd -T
-| Operating System | Root login disabled | PermitRootLogin no | sshd -T
-| Operating System | Strong SSH algorithms | Ciphers, MACs, KexAlgorithms | sshd -T
-| Network | Unused ports closed | See firewall rules | nmap -sT -p- localhost
-| Network | Network segmentation | VLAN configuration | ip -d link show
-| Network | Intrusion detection | Snort/Suricata | service status
-| Network | Secure DNS | DNS over TLS | dig +tls
-| Application | Default credentials changed | All systems | Manual verification
-| Application | Debug mode disabled | production mode | Configuration check
-| Application | Error handling secure | No detailed errors | Manual testing
-| Application | Input validation | All inputs | Manual testing
-| Application | Output encoding | All outputs | Manual testing
-| Application | CSRF protection | All forms | Manual testing
-| Application | Content Security Policy | CSP headers | curl -I
-| Database | Minimal privileges | Least privilege | Manual verification
-| Database | Connection encryption | TLS | Manual verification
-| Database | Query parameterization | Prepared statements | Code review
-| Physical | Rack locks | Installed and locked | Visual inspection
-| Physical | Tamper-evident seals | Applied to enclosures | Visual inspection
-| Physical | CCTV coverage | Installed and operational | Visual verification
-| Physical | Access control | Card readers operational | Test access
-
+| Category | Item | Configuration | Verification Method |
+|----------|------|---------------|---------------------|
+| Operating System | Unnecessary services disabled | systemctl disable [service] | systemctl list-unit-files |
+| Operating System | Firewall enabled | ufw enable | ufw status |
+| Operating System | SELinux/AppArmor enabled | SELINUX=enforcing | getenforce |
+| Operating System | Secure boot enabled | UEFI setting | mokutil --sb-state |
+| Operating System | Automatic updates | unattended-upgrades | dpkg -l unattended-upgrades |
+| Operating System | Password authentication disabled for SSH | PasswordAuthentication no | sshd -T |
+| Operating System | Root login disabled | PermitRootLogin no | sshd -T |
+| Operating System | Strong SSH algorithms | Ciphers, MACs, KexAlgorithms | sshd -T |
+| Network | Unused ports closed | See firewall rules | nmap -sT -p- localhost |
+| Network | Network segmentation | VLAN configuration | ip -d link show |
+| Network | Intrusion detection | Snort/Suricata | service status |
+| Network | Secure DNS | DNS over TLS | dig +tls |
+| Application | Default credentials changed | All systems | Manual verification |
+| Application | Debug mode disabled | production mode | Configuration check |
+| Application | Error handling secure | No detailed errors | Manual testing |
+| Application | Input validation | All inputs | Manual testing |
+| Application | Output encoding | All outputs | Manual testing |
+| Application | CSRF protection | All forms | Manual testing |
+| Application | Content Security Policy | CSP headers | curl -I |
+| Database | Minimal privileges | Least privilege | Manual verification |
+| Database | Connection encryption | TLS | Manual verification |
+| Database | Query parameterization | Prepared statements | Code review |
+| Physical | Rack locks | Installed and locked | Visual inspection |
+| Physical | Tamper-evident seals | Applied to enclosures | Visual inspection |
+| Physical | CCTV coverage | Installed and operational | Visual verification |
+| Physical | Access control | Card readers operational | Test access |
 
 ---
 
@@ -1825,118 +1825,110 @@ audit:
 
 ### G.1 System Identification
 
-| Field | Value
-|-----|-----|-----|-----|-----|-----
-| System Name | 
-| Serial Number | 
-| Installation Location | 
-| Installation Date | 
-| Installation Team Lead | 
-| Customer Representative | 
-
+| Field | Value |
+|-------|-------|
+| System Name |  |
+| Serial Number |  |
+| Installation Location |  |
+| Installation Date |  |
+| Installation Team Lead |  |
+| Customer Representative |  |
 
 ### G.2 Hardware Components
 
-| Component | Model | Serial Number | Firmware Version | Installation Date | Installed By | Verified By
-|-----|-----|-----|-----|-----|-----
-| Main Rack |  |  | N/A |  |  | 
-| QPU |  |  |  |  |  | 
-| Cryogenic Compressor |  |  |  |  |  | 
-| Heat Exchanger |  |  |  |  |  | 
-| Radiation Sensor 1 |  |  |  |  |  | 
-| Radiation Sensor 2 |  |  |  |  |  | 
-| Radiation Sensor 3 |  |  |  |  |  | 
-| Radiation Sensor 4 |  |  |  |  |  | 
-| Debris Detector 1 |  |  |  |  |  | 
-| Debris Detector 2 |  |  |  |  |  | 
-| Control Computer |  |  |  |  |  | 
-| Monitoring System |  |  |  |  |  | 
-| Primary Network Switch |  |  |  |  |  | 
-| Backup Network Switch |  |  |  |  |  | 
-| Security Appliance |  |  |  |  |  | 
-| UPS |  |  |  |  |  | 
-| Main PDU |  |  |  |  |  | 
-| Secondary PDUs |  |  |  |  |  | 
-
+| Component | Model | Serial Number | Firmware Version | Installation Date | Installed By | Verified By |
+|-----------|-------|---------------|------------------|-------------------|--------------|-------------|
+| Main Rack |  |  | N/A |  |  |  |
+| QPU |  |  |  |  |  |  |
+| Cryogenic Compressor |  |  |  |  |  |  |
+| Heat Exchanger |  |  |  |  |  |  |
+| Radiation Sensor 1 |  |  |  |  |  |  |
+| Radiation Sensor 2 |  |  |  |  |  |  |
+| Radiation Sensor 3 |  |  |  |  |  |  |
+| Radiation Sensor 4 |  |  |  |  |  |  |
+| Debris Detector 1 |  |  |  |  |  |  |
+| Debris Detector 2 |  |  |  |  |  |  |
+| Control Computer |  |  |  |  |  |  |
+| Monitoring System |  |  |  |  |  |  |
+| Primary Network Switch |  |  |  |  |  |  |
+| Backup Network Switch |  |  |  |  |  |  |
+| Security Appliance |  |  |  |  |  |  |
+| UPS |  |  |  |  |  |  |
+| Main PDU |  |  |  |  |  |  |
+| Secondary PDUs |  |  |  |  |  |  |
 
 ### G.3 Software Components
 
-| Component | Version | Installation Date | Installed By | Verified By | License Information
-|-----|-----|-----|-----|-----|-----
-| Operating System |  |  |  |  | 
-| SEMS Core Software |  |  |  |  | 
-| QPU Control Software |  |  |  |  | 
-| Sensor Management Software |  |  |  |  | 
-| Database System |  |  |  |  | 
-| INFRANET Client |  |  |  |  | 
-| Monitoring Software |  |  |  |  | 
-| Security Software |  |  |  |  | 
-| Backup Software |  |  |  |  | 
-
+| Component | Version | Installation Date | Installed By | Verified By | License Information |
+|-----------|---------|-------------------|--------------|-------------|---------------------|
+| Operating System |  |  |  |  |  |
+| SEMS Core Software |  |  |  |  |  |
+| QPU Control Software |  |  |  |  |  |
+| Sensor Management Software |  |  |  |  |  |
+| Database System |  |  |  |  |  |
+| INFRANET Client |  |  |  |  |  |
+| Monitoring Software |  |  |  |  |  |
+| Security Software |  |  |  |  |  |
+| Backup Software |  |  |  |  |  |
 
 ### G.4 Network Configuration
 
-| Interface | MAC Address | IP Address | Subnet Mask | Gateway | VLAN | Verified By
-|-----|-----|-----|-----|-----|-----
-| Management |  |  |  |  |  | 
-| INFRANET Primary |  |  |  |  |  | 
-| INFRANET Backup |  |  |  |  |  | 
-| Sensor Network |  |  |  |  |  | 
-| QPU Network |  |  |  |  |  | 
-
+| Interface | MAC Address | IP Address | Subnet Mask | Gateway | VLAN | Verified By |
+|-----------|-------------|------------|-------------|---------|------|-------------|
+| Management |  |  |  |  |  |  |
+| INFRANET Primary |  |  |  |  |  |  |
+| INFRANET Backup |  |  |  |  |  |  |
+| Sensor Network |  |  |  |  |  |  |
+| QPU Network |  |  |  |  |  |  |
 
 ### G.5 Test Results
 
-| Test ID | Description | Result | Date | Performed By | Verified By | Notes
-|-----|-----|-----|-----|-----|-----
-| SYS-01 | Power Systems |  |  |  |  | 
-| SYS-02 | Cooling Systems |  |  |  |  | 
-| SYS-03 | Radiation Sensors |  |  |  |  | 
-| SYS-04 | Debris Detectors |  |  |  |  | 
-| SYS-05 | QPU Operation |  |  |  |  | 
-| SYS-06 | Network Connectivity |  |  |  |  | 
-| SYS-07 | Software Systems |  |  |  |  | 
-| SYS-08 | INFRANET Integration |  |  |  |  | 
-| PERF-01 | Radiation Sensitivity |  |  |  |  | 
-| PERF-02 | Debris Detection |  |  |  |  | 
-| PERF-03 | Orbit Calculation |  |  |  |  | 
-| PERF-04 | Conjunction Analysis |  |  |  |  | 
-| PERF-05 | System Response Time |  |  |  |  | 
-| PERF-06 | Data Throughput |  |  |  |  | 
-
+| Test ID | Description | Result | Date | Performed By | Verified By | Notes |
+|---------|-------------|--------|------|--------------|-------------|-------|
+| SYS-01 | Power Systems |  |  |  |  |  |
+| SYS-02 | Cooling Systems |  |  |  |  |  |
+| SYS-03 | Radiation Sensors |  |  |  |  |  |
+| SYS-04 | Debris Detectors |  |  |  |  |  |
+| SYS-05 | QPU Operation |  |  |  |  |  |
+| SYS-06 | Network Connectivity |  |  |  |  |  |
+| SYS-07 | Software Systems |  |  |  |  |  |
+| SYS-08 | INFRANET Integration |  |  |  |  |  |
+| PERF-01 | Radiation Sensitivity |  |  |  |  |  |
+| PERF-02 | Debris Detection |  |  |  |  |  |
+| PERF-03 | Orbit Calculation |  |  |  |  |  |
+| PERF-04 | Conjunction Analysis |  |  |  |  |  |
+| PERF-05 | System Response Time |  |  |  |  |  |
+| PERF-06 | Data Throughput |  |  |  |  |  |
 
 ### G.6 Calibration Results
 
-| Sensor | Calibration Date | Calibration Value | Reference Standard | Performed By | Verified By | Next Calibration Due
-|-----|-----|-----|-----|-----|-----
-| Radiation Sensor 1 |  |  |  |  |  | 
-| Radiation Sensor 2 |  |  |  |  |  | 
-| Radiation Sensor 3 |  |  |  |  |  | 
-| Radiation Sensor 4 |  |  |  |  |  | 
-| Debris Detector 1 |  |  |  |  |  | 
-| Debris Detector 2 |  |  |  |  |  | 
-| QPU Reference |  |  |  |  |  | 
-
+| Sensor | Calibration Date | Calibration Value | Reference Standard | Performed By | Verified By | Next Calibration Due |
+|--------|------------------|-------------------|--------------------|--------------|-------------|----------------------|
+| Radiation Sensor 1 |  |  |  |  |  |  |
+| Radiation Sensor 2 |  |  |  |  |  |  |
+| Radiation Sensor 3 |  |  |  |  |  |  |
+| Radiation Sensor 4 |  |  |  |  |  |  |
+| Debris Detector 1 |  |  |  |  |  |  |
+| Debris Detector 2 |  |  |  |  |  |  |
+| QPU Reference |  |  |  |  |  |  |
 
 ### G.7 Installation Deviations and Issues
 
-| Issue ID | Description | Impact | Resolution | Date Resolved | Resolved By | Approved By
-|-----|-----|-----|-----|-----|-----
-|  |  |  |  |  |  | 
-|  |  |  |  |  |  | 
-|  |  |  |  |  |  | 
-
+| Issue ID | Description | Impact | Resolution | Date Resolved | Resolved By | Approved By |
+|----------|-------------|--------|------------|---------------|-------------|-------------|
+|  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |
 
 ### G.8 Final Approval
 
-| Role | Name | Signature | Date | Comments
-|-----|-----|-----|-----|-----|-----
-| Installation Team Lead |  |  |  | 
-| Quality Assurance |  |  |  | 
-| Customer Representative |  |  |  | 
-| System Engineer |  |  |  | 
-| Security Officer |  |  |  | 
-
+| Role | Name | Signature | Date | Comments |
+|------|------|-----------|------|----------|
+| Installation Team Lead |  |  |  |  |
+| Quality Assurance |  |  |  |  |
+| Customer Representative |  |  |  |  |
+| System Engineer |  |  |  |  |
+| Security Officer |  |  |  |  |
 
 I hereby certify that the Space Environment Monitoring System has been installed according to the specifications in GP-AM-EDR-37-002-INST-A and has passed all required verification tests.
 
@@ -1948,7 +1940,6 @@ I hereby certify that the Space Environment Monitoring System has been installed
 
 **Warranty Period End:** _____________________
 
-```plaintext
 
-This completes the detailed appendices for the Space Environment Monitoring System installation procedure, providing comprehensive checklists, diagrams, configuration templates, specifications, and documentation forms necessary for a successful installation.
+```
 ```
