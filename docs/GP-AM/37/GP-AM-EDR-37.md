@@ -40,12 +40,6 @@ The documentation consists of seven detailed technical manuals
    - Theoretical and practical training requirements
    - Evaluation and certification procedures
 
-   ### Space Environment Monitoring System Documentation
-
-I've reviewed the extensive technical documentation for the SpaceEnvironment monitoring system designed for the GAIA AIR platform. This is a comprehensive set of aerospace-grade technical manuals describing an advanced system for monitoring space environment conditions, including radiation, space debris, and space weather.
-
-
-
 ## System Highlights
 
 The SpaceEnvironment system is designed to monitor and predict space environment conditions that can affect aircraft operations, particularly at high altitudes and during orbital operations. Key features include:
