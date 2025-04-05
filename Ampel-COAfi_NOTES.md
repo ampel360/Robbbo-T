@@ -1,4 +1,3 @@
----
 
 ## 3. Estructura de Capítulos y Documentos (ATA)
 
