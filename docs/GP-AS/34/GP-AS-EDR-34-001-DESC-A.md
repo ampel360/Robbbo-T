@@ -778,14 +778,16 @@ graph LR
 
 *[Insertar Figura 8.1: Ilustración 3D del sistema completo]*
 
+
 #### 8.2.2 Componentes Principales
 
-![QPU_CryogenicSystem_Labelled](https://github.com/user-attachments/assets/4f4c36c8-97b0-47ff-991e-a2231b984154)
+["C:\Users\amate\Downloads\20250405_1231_Cryogenic Detector Assembly Exploded_simple_compose_01jr2r2vqyef78awhrj7p04cyr.mp4"
+](https://sora.com/g/gen_01jr2r2vqyef78awhrj7p04cyr)
 
+![image](https://github.com/user-attachments/assets/9cad67fe-7433-4ccf-8d86-98d67c8356f7)
 
 *[Insertar Figura 8.2: Despiece QPU y criogénico]*
 
-*[Insertar Figura 8.3: Detalle detectores de radiación]*
 
 *[Insertar Figura 8.4: Ilustración sistema LIDAR]*
 
