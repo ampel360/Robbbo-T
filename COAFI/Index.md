@@ -157,7 +157,7 @@ This document defines the backbone of FFI: a multi-domain, audit-ready, AI-inter
 
 [Return to COAFI.MD Main Document](COAFI.md)
 
----
+[https://v0-narrativa-qdot-json.vercel.app/](https://chatgpt.com/canvas/shared/67f40ac69f288191b339ec284c1baf45)
 
 ## Part 0: Project Foundations - Manifesto, Research & Theory (GP-FD) 🌱🔬
 
