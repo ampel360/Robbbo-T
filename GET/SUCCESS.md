@@ -1,13 +1,60 @@
-API GETSUCCESS SYSTEM
+# GAIA AIR
 
-1. **[GetSUCCESS](https://capgemini.sharepoint.com/sites/GetSuccess744?web=1&EntityRepresentationId=8c870b9b-5c86-4d4a-bc7f-2b8ed78d2f8d)**: Este documento ofrece una visión general de los diferentes productos de GetSUCCESS y la información más importante. Incluye sesiones de concienciación para RRHH, vídeos introductorios a SuccessFactors, y entrenamientos en profundidad[1](https://capgemini.sharepoint.com/sites/GetSUCCESS360?web=1).
+Plataforma de ingeniería unificada con enfoque regenerativo para la industria aeroespacial
 
-2. **[GetSuccess](https://capgemini.sharepoint.com/sites/GetSuccess744?web=1&EntityRepresentationId=8c870b9b-5c86-4d4a-bc7f-2b8ed78d2f8d)**: Este documento menciona que para acompañarte en tu desarrollo y mejorar el rendimiento, es importante empoderarse para lograr el máximo crecimiento posible a través de prioridades, actividades, feedback continuo y revisiones periódicas[2](https://capgemini.sharepoint.com/sites/GetSuccess744?web=1).
+## Acceder a Dashboard
+[Iniciar Sesión](#)
 
-3. **[GetSUCCESS - Enablement Sessions - Open](https://capgemini.sharepoint.com/sites/GetSUCCESS-EnablementSessions?web=1&EntityRepresentationId=6330a2e6-3447-4834-8a1c-8ca752de63f1)**: Este documento detalla las sesiones de habilitación abiertas para GetSUCCESS, enfocándose en la capacitación y el desarrollo de habilidades[3](https://capgemini.sharepoint.com/sites/GetSUCCESS-EnablementSessions?web=1).
+## Ecosistema GAIA AIR
 
-4. **[GetSUCCESS-at-a-Glance for HR](https://capgemini.sharepoint.com/sites/next-store/Shared%20Documents/02%20General/GetSUCCESS/For%20HR%20pathway/GetSUCCESS-at-a-Glance%20for%20HR.pdf?web=1&EntityRepresentationId=e1a54323-ac90-4ce4-8754-90a9849aced5)**: Este documento ofrece una visión general de los diferentes productos de GetSUCCESS y la información más importante. Incluye sesiones de concienciación para RRHH, vídeos introductorios a SuccessFactors, y entrenamientos en profundidad[4](https://capgemini.sharepoint.com/sites/next-store/Shared%20Documents/02%20General/GetSUCCESS/For%20HR%20pathway/GetSUCCESS-at-a-Glance%20for%20HR.pdf?web=1).
+### Gestión del Ciclo de Vida
+Plataforma integrada de gestión del ciclo de vida del producto
+Monitoreo en tiempo real y gestión unificada de todos los aspectos del ciclo de vida de productos aeroespaciales.
 
-5. **[Priority Modification Notice](https://outlook.office365.com/owa/?ItemID=AQMkADg3NGYzOWIwLTE3ZmEtNGNlOC05MTYzLThlYTNiZGVmMGI5YwBGAAADsU%2fxpshhRUOwcE7lhab5vAcAK6vOEnr3wUumpdVwm7onegAAAgELAAAAgLdttgK1pkC9kRue6U%2bUXgADLEeb2QAAAA%3d%3d&exvsurl=1&viewmodel=ReadMessageItem&EntityRepresentationId=bbe10fa5-0391-41fc-99a5-bd8890ee2896)**: Un correo que menciona una actualización en el Plan de Prioridades para Amedeo Pelliccia en GetSUCCESS. Los cambios en el Plan de Prioridades son realizados por el empleado, su People Manager, o el equipo de soporte cuando son solicitados por la unidad de negocio del empleado[5](https://outlook.office365.com/owa/?ItemID=AQMkADg3NGYzOWIwLTE3ZmEtNGNlOC05MTYzLThlYTNiZGVmMGI5YwBGAAADsU%2fxpshhRUOwcE7lhab5vAcAK6vOEnr3wUumpdVwm7onegAAAgELAAAAgLdttgK1pkC9kRue6U%2bUXgADLEeb2QAAAA%3d%3d&exvsurl=1&viewmodel=ReadMessageItem).
+[Explorar PLM](#)
 
-Espero que esta información te sea útil. ¿Hay algo más que te gustaría saber o discutir sobre este tema?
+### Visión Estratégica
+Roadmap y dirección estratégica de GAIA AIR
+Nuestra misión, visión, objetivos estratégicos y principios que guían el desarrollo de la plataforma.
+
+[Ver Visión](#)
+
+### Diferenciación Estratégica
+Ventajas competitivas frente a soluciones tradicionales
+Cómo nos diferenciamos de soluciones como Autodesk Fusion con nuestro enfoque integrado de hardware y software.
+
+[Ver Diferenciadores](#)
+
+### Finanzas Regenerativas
+Modelo financiero autosostenible y regenerativo
+Nuestro enfoque REGEN FIN que minimiza la dependencia externa y maximiza la autonomía a través de ciclos de reinversión.
+
+[Explorar Modelo](#)
+
+### GAIA TOKEN
+Valor tokenizado para ingeniería circular
+Nuestra propia marca de valor en crypto como referencia para toda la ingeniería circular y regenerativa.
+
+[Ver Token](#)
+
+## Plataforma Integrada
+
+### Sistema embebido de monitoreo y gestión
+Plataforma de monitoreo en tiempo real embebida directamente en nuestros productos aeroespaciales.
+
+[Ver Plataforma](#)
+
+## Características Principales
+
+### Integración Total
+Unificación perfecta de diseño, fabricación y operación en una única plataforma cohesiva.
+
+### Fabricación Integrada
+Capacidades de fabricación propias a través de COROBOT para materializar nuestros diseños.
+
+### Modelo Regenerativo
+Enfoque financiero y operativo que se autoalimenta y crece de forma sostenible.
+
+### Ecosistema Colaborativo
+Plataforma que conecta a todos los stakeholders en un entorno de colaboración fluida.
+```
