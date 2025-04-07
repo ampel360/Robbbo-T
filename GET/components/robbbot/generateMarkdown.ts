@@ -1,3 +1,6 @@
+Here is the `generateMarkdown.ts` file content you provided:
+
+```ts
 export function generateMarkdown(logs: { code: string; description: string; status: string }[]) {
   const now = new Date().toLocaleString('es-ES');
 
@@ -22,6 +25,9 @@ ${table}
 
 **Estado del Sistema**: ${status}
 
-Versión: \`ROBBO-T-GAIA-ICSDB-001\`
+Versión: \`ROBBBO-T-GAIA-ICSDB-001\`
 `;
 }
+```
+
+You can place this content in the file located at `/components/robbbot/utils/generateMarkdown.ts` in your repository. If you need further assistance with integrating this or any other part of your project, please let me know!
