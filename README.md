@@ -1,5 +1,7 @@
 ![image](https://github.com/user-attachments/assets/6168ae77-6b34-47a0-a3e1-fc75992f26b7)
 
+[![.github/workflows/create-repo-structure.yml](https://github.com/Robbbo-T/Robbbo-T/actions/workflows/create-repo-structure.yml/badge.svg?event=branch_protection_rule)](https://github.com/Robbbo-T/Robbbo-T/actions/workflows/create-repo-structure.yml)
+
 [https://gaia-air-splcogen.vercel.app/](https://gaia-air-splcogen.vercel.app/)
 	
 
