@@ -10,29 +10,30 @@ This XSD schema will define:
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   COAFI.xsd - Unified Conceptual XML Schema Definition for GAIA AIR COAFI Documentation
-  Purpose: Defines the structure for various COAFI Data Module types (General, Design, RCOS, PPSC, PDM, EoL).
-  Version: 0.1 (Conceptual Unified Schema)
+  Purpose: Defines the structure for various COAFI Data Module types, incorporating refinements.
+  Version: 0.2 (Conceptual Unified Schema - Enhanced)
   Date: 2024-12-08
-  Based on: Conceptual DTDs (gaia-air.dtd, Gendesign.dtd, RCOS.dtd, PPSC.dtd, PDM.dtd, DC-FUNC-EoL.dtd)
+  Based on: Conceptual DTDs and Critical Analysis Feedback
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://www.gaia-air.com/coafi/schema/v1"
-           xmlns:coafi="http://www.gaia-air.com/coafi/schema/v1"
+           targetNamespace="http://www.gaia-air.com/coafi/schema/v2" <!-- Updated namespace for v0.2 -->
+           xmlns:coafi="http://www.gaia-air.com/coafi/schema/v2"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
 
   <xs:annotation>
     <xs:documentation xml:lang="en">
-      Unified Conceptual XML Schema for GAIA AIR COAFI Data Modules.
-      This schema defines the structure for various document types including General (from gaia-air.dtd),
-      Design Documents (Gendesign.dtd), Robotics Cooperating Systems (RCOS.dtd),
-      Post Production Services & Customer Caring (PPSC.dtd), Predictive Data Maintenance &
-      Quantum Continuous Optimization (PDM.dtd), and Dignified Component Functional End of Life (DC-FUNC-EoL.dtd).
-      It utilizes reusable types and groups for common structures.
+      Unified Conceptual XML Schema (Version 0.2) for GAIA AIR COAFI Data Modules.
+      Incorporates refinements based on critical analysis, including standardized date types,
+      XAI labeling support, QDOT integration hooks, and improved annotations.
+      Prepared for potential future modularization (common types vs. document-specific types).
     </xs:documentation>
   </xs:annotation>
 
-  <!-- ================== Simple Type Definitions (Enumerations, Patterns) ================== -->
+  <!-- ====================================================================== -->
+  <!-- == SECTION 1: COMMON SIMPLE TYPE DEFINITIONS                       == -->
+  <!-- == (Conceptually could be in COAFI-CommonTypes.xsd)               == -->
+  <!-- ====================================================================== -->
 
   <xs:simpleType name="statusCodes">
     <xs:restriction base="xs:string">
@@ -67,6 +68,9 @@ This XSD schema will define:
   </xs:simpleType>
 
   <xs:simpleType name="infoCodes">
+    <xs:annotation>
+        <xs:documentation>Defines allowed COAFI Info Codes. A separate mapping document (e.g., coafi-s1000d-mapping.xml) should define equivalence to standard S1000D Info Codes for interoperability.</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="OV"/> <xs:enumeration value="SP"/> <xs:enumeration value="REQ"/>
       <xs:enumeration value="DD"/> <xs:enumeration value="SDD"/> <xs:enumeration value="DWG"/>
@@ -77,328 +81,140 @@ This XSD schema will define:
       <xs:enumeration value="SPEC"/> <xs:enumeration value="ADMIN"/> <xs:enumeration value="REF"/>
       <xs:enumeration value="SVC"/> <xs:enumeration value="PDM"/> <xs:enumeration value="QCOPT"/>
       <xs:enumeration value="EOL"/>
-      <!-- Add other custom info codes as needed -->
+      <!-- Add other custom info codes -->
     </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="changeTypes">
       <xs:restriction base="xs:string">
-          <xs:enumeration value="add"/>
-          <xs:enumeration value="delete"/>
-          <xs:enumeration value="modify"/>
+          <xs:enumeration value="add"/> <xs:enumeration value="delete"/> <xs:enumeration value="modify"/>
       </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="listTypes">
       <xs:restriction base="xs:string">
-          <xs:enumeration value="ordered"/>
-          <xs:enumeration value="unordered"/>
-          <xs:enumeration value="bullet"/>
-          <xs:enumeration value="step"/>
+          <xs:enumeration value="ordered"/> <xs:enumeration value="unordered"/>
+          <xs:enumeration value="bullet"/> <xs:enumeration value="step"/>
       </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="interfaceTypes">
       <xs:restriction base="xs:string">
-          <xs:enumeration value="api"/>
-          <xs:enumeration value="physical"/>
-          <xs:enumeration value="data"/>
-          <xs:enumeration value="network"/>
-          <xs:enumeration value="human"/>
-          <xs:enumeration value="robotControl"/>
-          <xs:enumeration value="safetyIO"/>
-          <xs:enumeration value="quantumInterface"/>
-          <xs:enumeration value="aiModel"/>
+          <xs:enumeration value="api"/> <xs:enumeration value="physical"/> <xs:enumeration value="data"/>
+          <xs:enumeration value="network"/> <xs:enumeration value="human"/> <xs:enumeration value="robotControl"/>
+          <xs:enumeration value="safetyIO"/> <xs:enumeration value="quantumInterface"/> <xs:enumeration value="aiModel"/>
       </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="eolPathwayTypes">
       <xs:restriction base="xs:string">
-          <xs:enumeration value="redeployment"/>
-          <xs:enumeration value="repurposing"/>
-          <xs:enumeration value="refurbishment"/>
-          <xs:enumeration value="componentHarvesting"/>
-          <xs:enumeration value="materialRecycling"/>
-          <xs:enumeration value="secureDisposal"/>
-          <xs:enumeration value="researchDonation"/>
+          <xs:enumeration value="redeployment"/> <xs:enumeration value="repurposing"/> <xs:enumeration value="refurbishment"/>
+          <xs:enumeration value="componentHarvesting"/> <xs:enumeration value="materialRecycling"/>
+          <xs:enumeration value="secureDisposal"/> <xs:enumeration value="researchDonation"/>
       </xs:restriction>
   </xs:simpleType>
 
-  <!-- Add other simple types for patterns (e.g., dmCode pattern) if needed -->
   <xs:simpleType name="dmCodePattern">
+      <xs:annotation>
+          <xs:documentation>
+              Defines the pattern for COAFI Infocodes (dmCode).
+              Example breakdown (adjust based on final definition):
+              GP- = GAIA Project Prefix
+              [FD|AM|SM|CM|CN|GB|PM|CIC|RCOS|PPSC|PDM|EOL] = Part Identifier
+              [A-Z0-9-]+ = Project/System/Subsystem specific codes (variable length)
+              \d{4} = COAFI Part Numerical Identifier (e.g., 0100 for Part I)
+              (-\d{2,3}(-[A-Z0-9]+)?)? = Optional ATA/AS Chapter/Section code
+              \d{3} = Sequential Document Number
+              [A-Z] = Revision Letter
+              This pattern is complex; refer to external documentation for detailed breakdown.
+          </xs:documentation>
+      </xs:annotation>
       <xs:restriction base="xs:string">
-          <!-- Example pattern - ADJUST TO MATCH YOUR EXACT COAFI CODE SYNTAX -->
           <xs:pattern value="GP-(FD|AM|SM|CM|CN|GB|PM|CIC|RCOS|PPSC|PDM|EOL)-[A-Z0-9\-]+-\d{4}(-\d{2,3}(-[A-Z0-9]+)?)?-\d{3}-[A-Z]"/>
       </xs:restriction>
   </xs:simpleType>
 
 
-  <!-- ================== Reusable Attribute Group ================== -->
+  <!-- ====================================================================== -->
+  <!-- == SECTION 2: COMMON ATTRIBUTE GROUP & INLINE ELEMENTS             == -->
+  <!-- == (Conceptually could be in COAFI-CommonTypes.xsd)               == -->
+  <!-- ====================================================================== -->
+
   <xs:attributeGroup name="commonAttrs">
     <xs:attribute name="id" type="xs:ID" use="optional"/>
     <xs:attribute name="changeMark" type="xs:string" use="optional"/>
     <xs:attribute name="changeType" type="coafi:changeTypes" use="optional"/>
     <xs:attribute name="reasonForUpdateRef" type="xs:IDREF" use="optional"/>
     <xs:attribute name="securityLevel" type="coafi:securityClassifications" use="optional" default="internal"/>
+    <xs:attribute name="xaiLabel" type="xs:string" use="optional">
+        <xs:annotation><xs:documentation>Label for Explainable AI (XAI) narrative engine processing.</xs:documentation></xs:annotation>
+    </xs:attribute>
   </xs:attributeGroup>
 
-  <!-- ================== Reusable Complex Type for Mixed Content ================== -->
+  <!-- Group defining allowed inline elements within text content -->
+  <xs:group name="textContentInlineGroup">
+      <xs:choice>
+          <xs:element name="emphasis" type="coafi:emphasisType"/>
+          <xs:element name="term" type="coafi:termType"/>
+          <xs:element name="internalRef" type="coafi:internalRefType"/>
+          <xs:element name="externalRef" type="coafi:externalRefType"/>
+          <xs:element name="figureRef" type="coafi:figureRefType"/>
+          <xs:element name="tableRef" type="coafi:tableRefType"/>
+          <xs:element name="symbol" type="coafi:symbolType"/>
+          <xs:element name="measurement" type="coafi:measurementType"/>
+          <xs:element name="partNumber" type="coafi:partNumberType"/>
+          <xs:element name="softRef" type="coafi:softRefType"/>
+          <xs:element name="qdotRef" type="coafi:qdotRefType"/> <!-- Added QDOT Reference -->
+      </xs:choice>
+  </xs:group>
+
+  <!-- Type for elements allowing mixed text and inline elements -->
   <xs:complexType name="textContentType" mixed="true">
-    <xs:annotation>
-        <xs:documentation>Base type for elements allowing mixed text and inline elements.</xs:documentation>
-    </xs:annotation>
-    <xs:choice minOccurs="0" maxOccurs="unbounded">
-      <xs:element name="emphasis" type="coafi:emphasisType"/>
-      <xs:element name="term" type="coafi:termType"/>
-      <xs:element name="internalRef" type="coafi:internalRefType"/>
-      <xs:element name="externalRef" type="coafi:externalRefType"/>
-      <xs:element name="list" type="coafi:listType"/>
-      <xs:element name="figureRef" type="coafi:figureRefType"/>
-      <xs:element name="tableRef" type="coafi:tableRefType"/>
-      <xs:element name="symbol" type="coafi:symbolType"/>
-      <xs:element name="measurement" type="coafi:measurementType"/>
-      <xs:element name="partNumber" type="coafi:partNumberType"/>
-      <xs:element name="softRef" type="coafi:softRefType"/>
-      <!-- Add other allowed inline elements here -->
-    </xs:choice>
+      <xs:group ref="coafi:textContentInlineGroup" minOccurs="0" maxOccurs="unbounded"/>
   </xs:complexType>
 
-  <!-- ================== Complex Type for Identification and Status Section ================== -->
-  <xs:complexType name="identAndStatusSectionType">
-    <xs:sequence>
-      <xs:element name="dmAddress" type="coafi:dmAddressType"/>
-      <xs:element name="dmStatus" type="coafi:dmStatusType"/>
-      <xs:element name="dmMetadata" type="coafi:dmMetadataType" minOccurs="0"/>
-      <xs:element name="dmRef" type="coafi:dmRefType" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <!-- == Sub-Types for Ident and Status == -->
-  <xs:complexType name="dmAddressType">
-    <xs:sequence>
-      <xs:element name="dmIdent" type="coafi:dmIdentType"/>
-      <xs:element name="dmc" type="xs:string" minOccurs="0"/> <!-- Optional S1000D Code -->
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="dmIdentType">
-    <xs:sequence>
-      <xs:element name="dmCode" type="coafi:dmCodePattern"/>
-      <xs:element name="modelIdentCode" type="xs:string"/>
-      <xs:element name="systemDiffCode" type="xs:string"/>
-      <xs:element name="systemCode" type="xs:string"/>
-      <xs:element name="subSystemCode" type="xs:string"/>
-      <xs:element name="subSubSystemCode" type="xs:string"/>
-      <xs:element name="assyCode" type="xs:string"/>
-      <xs:element name="disassyCode" type="xs:string"/>
-      <xs:element name="disassyCodeVariant" type="xs:string"/>
-      <xs:element name="infoCode" type="coafi:infoCodes"/>
-      <xs:element name="infoCodeVariant" type="xs:string"/>
-      <xs:element name="itemLocationCode" type="xs:string"/>
-      <xs:element name="language" type="xs:language"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="dmStatusType">
-    <xs:sequence>
-      <xs:element name="status" type="coafi:statusType"/>
-      <xs:element name="security" type="coafi:securityType"/>
-      <xs:element name="enterprise" type="coafi:enterpriseType"/>
-      <xs:element name="originator" type="coafi:originatorType"/>
-      <xs:element name="dateIssued" type="coafi:dateType"/>
-      <xs:element name="revisionInfo" type="coafi:revisionInfoType"/>
-      <xs:element name="qualityAssurance" type="coafi:qualityAssuranceType" minOccurs="0"/>
-      <xs:element name="applicability" type="coafi:applicabilityType" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="statusType">
-      <xs:attribute name="statusCode" type="coafi:statusCodes" use="required"/>
-      <xs:attribute name="verificationLevel" type="coafi:verificationLevels" use="optional" default="unverified"/>
-      <xs:attribute name="reasonForChange" type="xs:string" use="optional"/>
-  </xs:complexType>
-
-  <xs:complexType name="securityType">
-      <xs:attribute name="classification" type="coafi:securityClassifications" use="required"/>
-      <xs:attribute name="caveats" type="xs:string" use="optional"/>
-  </xs:complexType>
-
-  <xs:complexType name="enterpriseType">
-      <xs:sequence>
-          <xs:element name="responsiblePartnerCompany" type="coafi:responsiblePartnerCompanyType"/>
-          <xs:element name="authoringSystem" type="xs:string" minOccurs="0"/>
-      </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="responsiblePartnerCompanyType">
-      <xs:simpleContent>
-          <xs:extension base="xs:string">
-              <xs:attribute name="enterpriseCode" type="xs:string" use="optional"/>
-          </xs:extension>
-      </xs:simpleContent>
-  </xs:complexType>
-
-  <xs:complexType name="originatorType">
-      <xs:sequence>
-          <xs:element name="originatorName" type="xs:string"/>
-          <xs:element name="contactInfo" type="coafi:contactInfoType" minOccurs="0" maxOccurs="unbounded"/>
-      </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="contactInfoType">
+  <!-- Definitions for specific inline elements -->
+  <xs:complexType name="emphasisType">
        <xs:simpleContent>
            <xs:extension base="xs:string">
-               <xs:attribute name="type" use="optional">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:enumeration value="email"/>
-                            <xs:enumeration value="phone"/>
-                            <xs:enumeration value="address"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:attribute>
+               <xs:attribute name="emphasisType" default="italic">
+                   <xs:simpleType>
+                       <xs:restriction base="xs:string">
+                           <xs:enumeration value="bold"/> <xs:enumeration value="italic"/> <xs:enumeration value="underline"/>
+                       </xs:restriction>
+                   </xs:simpleType>
+               </xs:attribute>
            </xs:extension>
        </xs:simpleContent>
   </xs:complexType>
-
-  <xs:complexType name="dateType">
-      <xs:attribute name="year" type="xs:gYear" use="required"/>
-      <xs:attribute name="month" type="xs:gMonthDay" use="required"/> <!-- Approximation, might need refinement -->
-      <xs:attribute name="day" type="xs:gDay" use="required"/> <!-- Approximation -->
-      <!-- Consider using xs:date type for the attribute instead -->
-  </xs:complexType>
-
-  <xs:complexType name="revisionInfoType">
-      <xs:sequence>
-          <xs:element name="revision" type="coafi:revisionType" maxOccurs="unbounded"/>
-      </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="revisionType">
-      <xs:sequence>
-          <xs:element name="revisionNumber" type="xs:string"/>
-          <xs:element name="dateRevised" type="coafi:dateType"/>
-          <xs:element name="revisionReason" type="xs:string"/>
-      </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="qualityAssuranceType">
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <xs:element name="verification" type="coafi:verificationType"/>
-          <xs:element name="validation" type="coafi:validationType"/>
-      </xs:choice>
-  </xs:complexType>
-
-   <xs:complexType name="verificationType">
-       <xs:sequence>
-           <xs:element name="verifier" type="xs:string"/>
-           <xs:element name="dateVerified" type="coafi:dateType"/>
-           <xs:element name="method" type="xs:string"/>
-       </xs:sequence>
+   <xs:complexType name="termType">
+       <xs:simpleContent>
+           <xs:extension base="xs:string">
+               <xs:attribute name="definitionRef" type="xs:IDREF" use="optional"/>
+           </xs:extension>
+       </xs:simpleContent>
    </xs:complexType>
-
-   <xs:complexType name="validationType">
-       <xs:sequence>
-           <xs:element name="validator" type="xs:string"/>
-           <xs:element name="dateValidated" type="coafi:dateType"/>
-           <xs:element name="method" type="xs:string"/>
-       </xs:sequence>
-   </xs:complexType>
-
-   <xs:complexType name="applicabilityType">
-        <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element name="applicabilityText" type="xs:string"/>
-            <xs:element name="productAttribute" type="coafi:productAttributeType"/>
-        </xs:choice>
-   </xs:complexType>
-
-   <xs:complexType name="productAttributeType">
-       <xs:attribute name="attributeName" type="xs:string" use="required"/>
-       <xs:attribute name="attributeValue" type="xs:string" use="required"/>
-   </xs:complexType>
-
-  <xs:complexType name="dmMetadataType">
-    <xs:sequence>
-      <xs:element name="keywords" type="xs:string" minOccurs="0"/>
-      <xs:element name="abstract" type="coafi:abstractType" minOccurs="0"/>
-      <xs:element name="relatedInfo" type="coafi:relatedInfoType" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="abstractType">
-      <xs:sequence>
-          <xs:element name="levelledPara" type="coafi:levelledParaType" maxOccurs="unbounded"/>
-      </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="relatedInfoType">
-      <xs:attribute name="infoType" type="xs:string" use="required"/>
-      <xs:attribute name="infoValue" type="xs:string" use="required"/>
-  </xs:complexType>
-
-  <xs:complexType name="dmRefType">
-    <xs:sequence>
-      <xs:element name="internalRef" type="coafi:internalRefType" minOccurs="0" maxOccurs="unbounded"/>
-      <xs:element name="externalRef" type="coafi:externalRefType" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <!-- ================== Common Content Element Types ================== -->
-
-  <xs:complexType name="levelledParaType">
-      <xs:complexContent mixed="true">
-          <xs:extension base="coafi:textContentType">
-              <xs:attributeGroup ref="coafi:commonAttrs"/>
-          </xs:extension>
-      </xs:complexContent>
-  </xs:complexType>
-
-  <xs:complexType name="emphasisType">
-      <xs:simpleContent>
-          <xs:extension base="xs:string">
-              <xs:attribute name="emphasisType" default="italic">
-                  <xs:simpleType>
-                      <xs:restriction base="xs:string">
-                          <xs:enumeration value="bold"/>
-                          <xs:enumeration value="italic"/>
-                          <xs:enumeration value="underline"/>
-                      </xs:restriction>
-                  </xs:simpleType>
-              </xs:attribute>
-          </xs:extension>
-      </xs:simpleContent>
-  </xs:complexType>
-
-  <xs:complexType name="termType">
-      <xs:simpleContent>
-          <xs:extension base="xs:string">
-              <xs:attribute name="definitionRef" type="xs:IDREF" use="optional"/>
-          </xs:extension>
-      </xs:simpleContent>
-  </xs:complexType>
-
-  <xs:complexType name="internalRefType">
-      <xs:attribute name="targetDmCode" type="xs:string" use="required"/> <!-- Consider dmCodePattern -->
-      <xs:attribute name="targetElementId" type="xs:IDREF" use="optional"/>
-      <xs:attribute name="targetType" use="optional">
+   <xs:complexType name="internalRefType">
+       <xs:attribute name="targetDmCode" type="xs:string" use="required"/> <!-- Consider dmCodePattern -->
+       <xs:attribute name="targetElementId" type="xs:IDREF" use="optional"/>
+       <xs:attribute name="targetType" use="optional">
            <xs:simpleType>
                <xs:restriction base="xs:string">
-                    <xs:enumeration value="figure"/> <xs:enumeration value="table"/> <xs:enumeration value="section"/>
-                    <xs:enumeration value="para"/> <xs:enumeration value="step"/> <xs:enumeration value="definition"/>
-                    <xs:enumeration value="requirement"/> <xs:enumeration value="component"/> <xs:enumeration value="interface"/>
-                    <xs:enumeration value="robot"/> <xs:enumeration value="safety"/> <xs:enumeration value="service"/>
-                    <xs:enumeration value="plan"/> <xs:enumeration value="procedure"/> <xs:enumeration value="manual"/>
-                    <xs:enumeration value="algorithm"/> <xs:enumeration value="model"/> <xs:enumeration value="criterion"/>
-                    <xs:enumeration value="pathway"/> <xs:enumeration value="role"/>
+                   <xs:enumeration value="figure"/> <xs:enumeration value="table"/> <xs:enumeration value="section"/>
+                   <xs:enumeration value="para"/> <xs:enumeration value="step"/> <xs:enumeration value="definition"/>
+                   <xs:enumeration value="requirement"/> <xs:enumeration value="component"/> <xs:enumeration value="interface"/>
+                   <xs:enumeration value="robot"/> <xs:enumeration value="safety"/> <xs:enumeration value="service"/>
+                   <xs:enumeration value="plan"/> <xs:enumeration value="procedure"/> <xs:enumeration value="manual"/>
+                   <xs:enumeration value="algorithm"/> <xs:enumeration value="model"/> <xs:enumeration value="criterion"/>
+                   <xs:enumeration value="pathway"/> <xs:enumeration value="role"/>
                </xs:restriction>
            </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="displayText" type="xs:string" use="optional"/>
-  </xs:complexType>
-
-  <xs:complexType name="externalRefType">
-      <xs:simpleContent>
-          <xs:extension base="xs:string">
+       </xs:attribute>
+       <xs:attribute name="displayText" type="xs:string" use="optional"/>
+   </xs:complexType>
+   <xs:complexType name="externalRefType">
+       <xs:simpleContent>
+           <xs:extension base="xs:string">
                <xs:attribute name="href" type="xs:anyURI" use="required"/>
                <xs:attribute name="refType" default="document">
                    <xs:simpleType>
@@ -409,8 +225,70 @@ This XSD schema will define:
                        </xs:restriction>
                    </xs:simpleType>
                </xs:attribute>
+           </xs:extension>
+       </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="figureRefType">
+       <xs:attribute name="targetFigureId" type="xs:IDREF" use="required"/>
+   </xs:complexType>
+   <xs:complexType name="tableRefType">
+       <xs:attribute name="targetTableId" type="xs:IDREF" use="required"/>
+   </xs:complexType>
+   <xs:complexType name="symbolType">
+       <xs:simpleContent>
+           <xs:extension base="xs:string">
+               <xs:attribute name="symbolName" type="xs:string" use="required"/>
+           </xs:extension>
+       </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="measurementType">
+       <xs:sequence>
+           <xs:element name="value" type="xs:string"/>
+           <xs:element name="unit" type="coafi:unitType"/>
+       </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="unitType">
+       <xs:simpleContent>
+           <xs:extension base="xs:string">
+               <xs:attribute name="unitSystem" default="SI">
+                   <xs:simpleType> <xs:restriction base="xs:string">
+                       <xs:enumeration value="SI"/> <xs:enumeration value="imperial"/> <xs:enumeration value="standard"/>
+                   </xs:restriction> </xs:simpleType>
+               </xs:attribute>
+           </xs:extension>
+       </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="partNumberType">
+       <xs:simpleContent>
+           <xs:extension base="xs:string">
+               <xs:attribute name="manufacturerCode" type="xs:string" use="optional"/>
+           </xs:extension>
+       </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="softRefType">
+       <xs:attribute name="targetSoftwareId" type="xs:string" use="required"/>
+       <xs:attribute name="targetFunctionId" type="xs:string" use="optional"/>
+   </xs:complexType>
+   <xs:complexType name="qdotRefType">
+       <xs:annotation><xs:documentation>Reference to a QDOT semantic model element.</xs:documentation></xs:annotation>
+       <xs:attribute name="href" type="xs:anyURI" use="required"/> <!-- Link to the .qdot file or resource -->
+       <xs:attribute name="nodeId" type="xs:string" use="optional"/> <!-- Specific node ID within the QDOT model -->
+       <xs:attribute name="geometryRef" type="xs:string" use="optional"/> <!-- Reference to related geometry -->
+       <xs:attribute name="semanticsRef" type="xs:string" use="optional"/> <!-- Reference to semantic concepts -->
+   </xs:complexType>
+
+
+  <!-- ====================================================================== -->
+  <!-- == SECTION 3: COMMON BLOCK ELEMENT TYPES                           == -->
+  <!-- == (Conceptually could be in COAFI-CommonTypes.xsd)               == -->
+  <!-- ====================================================================== -->
+
+  <xs:complexType name="levelledParaType">
+      <xs:complexContent mixed="true">
+          <xs:extension base="coafi:textContentType">
+              <xs:attributeGroup ref="coafi:commonAttrs"/>
           </xs:extension>
-      </xs:simpleContent>
+      </xs:complexContent>
   </xs:complexType>
 
   <xs:complexType name="listType">
@@ -424,36 +302,33 @@ This XSD schema will define:
   <xs:complexType name="listItemType">
       <xs:choice maxOccurs="unbounded">
           <xs:element name="levelledPara" type="coafi:levelledParaType"/>
-          <xs:element name="list" type="coafi:listType"/> <!-- Allow nested lists -->
+          <xs:element name="list" type="coafi:listType"/>
       </xs:choice>
+      <!-- Removed commonAttrs here, usually applied to list or container -->
   </xs:complexType>
 
-  <xs:complexType name="figureType">
-      <xs:sequence>
-          <xs:element name="title" type="xs:string" minOccurs="0"/>
-          <xs:element name="graphic" type="coafi:graphicType"/>
-          <xs:element name="caption" type="coafi:captionType" minOccurs="0"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="coafi:commonAttrs"/>
-  </xs:complexType>
+   <xs:complexType name="figureType">
+       <xs:sequence>
+           <xs:element name="title" type="xs:string" minOccurs="0"/>
+           <xs:element name="graphic" type="coafi:graphicType"/>
+           <xs:element name="caption" type="coafi:captionType" minOccurs="0"/>
+       </xs:sequence>
+       <xs:attributeGroup ref="coafi:commonAttrs"/>
+   </xs:complexType>
 
-  <xs:complexType name="graphicType">
-      <xs:attribute name="href" type="xs:anyURI" use="required"/>
-      <xs:attribute name="altText" type="xs:string" use="required"/>
-      <xs:attribute name="scale" type="xs:string" use="optional"/>
-      <xs:attribute name="reproductionWidth" type="xs:string" use="optional"/>
-      <xs:attribute name="reproductionHeight" type="xs:string" use="optional"/>
-  </xs:complexType>
+   <xs:complexType name="graphicType">
+       <xs:attribute name="href" type="xs:anyURI" use="required"/>
+       <xs:attribute name="altText" type="xs:string" use="required"/>
+       <xs:attribute name="scale" type="xs:string" use="optional"/>
+       <xs:attribute name="reproductionWidth" type="xs:string" use="optional"/>
+       <xs:attribute name="reproductionHeight" type="xs:string" use="optional"/>
+   </xs:complexType>
 
-  <xs:complexType name="captionType">
+   <xs:complexType name="captionType">
        <xs:sequence>
            <xs:element name="levelledPara" type="coafi:levelledParaType" maxOccurs="unbounded"/>
        </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="figureRefType">
-      <xs:attribute name="targetFigureId" type="xs:IDREF" use="required"/>
-  </xs:complexType>
+   </xs:complexType>
 
   <xs:complexType name="tableType">
       <xs:sequence>
@@ -463,33 +338,14 @@ This XSD schema will define:
           <xs:element name="tableFoot" type="coafi:tableFootType" minOccurs="0"/>
       </xs:sequence>
       <xs:attributeGroup ref="coafi:commonAttrs"/>
-      <xs:attribute name="frame" default="all">
-          <xs:simpleType>
-              <xs:restriction base="xs:string">
-                  <xs:enumeration value="all"/> <xs:enumeration value="none"/>
-                  <xs:enumeration value="sides"/> <xs:enumeration value="topbot"/>
-              </xs:restriction>
-          </xs:simpleType>
-      </xs:attribute>
+      <xs:attribute name="frame" default="all"> <xs:simpleType><xs:restriction base="xs:string"> <xs:enumeration value="all"/> <xs:enumeration value="none"/> <xs:enumeration value="sides"/> <xs:enumeration value="topbot"/> </xs:restriction></xs:simpleType> </xs:attribute>
       <xs:attribute name="colsep" type="xs:boolean" default="true"/>
       <xs:attribute name="rowsep" type="xs:boolean" default="true"/>
   </xs:complexType>
 
-  <xs:complexType name="tableHeadType">
-      <xs:sequence>
-          <xs:element name="tableRow" type="coafi:tableRowType" maxOccurs="unbounded"/>
-      </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="tableBodyType">
-      <xs:sequence>
-          <xs:element name="tableRow" type="coafi:tableRowType" maxOccurs="unbounded"/>
-      </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="tableFootType">
-      <xs:sequence>
-          <xs:element name="tableRow" type="coafi:tableRowType" maxOccurs="unbounded"/>
-      </xs:sequence>
-  </xs:complexType>
+  <xs:complexType name="tableHeadType"> <xs:sequence><xs:element name="tableRow" type="coafi:tableRowType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
+  <xs:complexType name="tableBodyType"> <xs:sequence><xs:element name="tableRow" type="coafi:tableRowType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
+  <xs:complexType name="tableFootType"> <xs:sequence><xs:element name="tableRow" type="coafi:tableRowType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
 
   <xs:complexType name="tableRowType">
       <xs:choice maxOccurs="unbounded">
@@ -502,7 +358,7 @@ This XSD schema will define:
       <xs:sequence>
           <xs:element name="levelledPara" type="coafi:levelledParaType" maxOccurs="unbounded"/>
       </xs:sequence>
-       <!-- Add attributes for header cells if needed -->
+      <!-- Attributes for header cells can be added here if needed -->
   </xs:complexType>
 
   <xs:complexType name="tableEntryType">
@@ -510,22 +366,10 @@ This XSD schema will define:
           <xs:element name="levelledPara" type="coafi:levelledParaType"/>
           <xs:element name="list" type="coafi:listType"/>
       </xs:choice>
-      <xs:attribute name="align" default="left">
-           <xs:simpleType><xs:restriction base="xs:string">
-               <xs:enumeration value="left"/><xs:enumeration value="center"/><xs:enumeration value="right"/><xs:enumeration value="justify"/>
-           </xs:restriction></xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="valign" default="middle">
-           <xs:simpleType><xs:restriction base="xs:string">
-               <xs:enumeration value="top"/><xs:enumeration value="middle"/><xs:enumeration value="bottom"/>
-           </xs:restriction></xs:simpleType>
-      </xs:attribute>
+      <xs:attribute name="align" default="left"> <xs:simpleType><xs:restriction base="xs:string"> <xs:enumeration value="left"/><xs:enumeration value="center"/><xs:enumeration value="right"/><xs:enumeration value="justify"/> </xs:restriction></xs:simpleType> </xs:attribute>
+      <xs:attribute name="valign" default="middle"> <xs:simpleType><xs:restriction base="xs:string"> <xs:enumeration value="top"/><xs:enumeration value="middle"/><xs:enumeration value="bottom"/> </xs:restriction></xs:simpleType> </xs:attribute>
       <xs:attribute name="colSpan" type="xs:positiveInteger" use="optional"/>
       <xs:attribute name="rowSpan" type="xs:positiveInteger" use="optional"/>
-  </xs:complexType>
-
-  <xs:complexType name="tableRefType">
-      <xs:attribute name="targetTableId" type="xs:IDREF" use="required"/>
   </xs:complexType>
 
   <xs:complexType name="definitionListType">
@@ -546,7 +390,6 @@ This XSD schema will define:
   <xs:complexType name="definitionType">
       <xs:complexContent mixed="true">
           <xs:extension base="coafi:textContentType"/>
-          <!-- No commonAttrs here as it's part of definitionItem -->
       </xs:complexContent>
   </xs:complexType>
 
@@ -568,85 +411,17 @@ This XSD schema will define:
   </xs:complexType>
 
   <!-- Caution, Warning, Attention reuse noteType structure conceptually -->
-  <xs:complexType name="cautionType">
-      <xs:sequence>
-          <xs:element name="title" type="xs:string" minOccurs="0"/>
-          <xs:choice maxOccurs="unbounded">
-              <xs:element name="levelledPara" type="coafi:levelledParaType"/>
-              <xs:element name="list" type="coafi:listType"/>
-          </xs:choice>
-      </xs:sequence>
-      <xs:attributeGroup ref="coafi:commonAttrs"/>
-  </xs:complexType>
-  <xs:complexType name="warningType">
-       <xs:sequence>
-           <xs:element name="title" type="xs:string" minOccurs="0"/>
-           <xs:choice maxOccurs="unbounded">
-               <xs:element name="levelledPara" type="coafi:levelledParaType"/>
-               <xs:element name="list" type="coafi:listType"/>
-           </xs:choice>
-       </xs:sequence>
-       <xs:attributeGroup ref="coafi:commonAttrs"/>
-  </xs:complexType>
-   <xs:complexType name="attentionType">
-       <xs:sequence>
-           <xs:element name="title" type="xs:string" minOccurs="0"/>
-           <xs:choice maxOccurs="unbounded">
-               <xs:element name="levelledPara" type="coafi:levelledParaType"/>
-               <xs:element name="list" type="coafi:listType"/>
-           </xs:choice>
-       </xs:sequence>
-       <xs:attributeGroup ref="coafi:commonAttrs"/>
-   </xs:complexType>
+  <xs:complexType name="cautionType"> <xs:sequence> <xs:element name="title" type="xs:string" minOccurs="0"/> <xs:choice maxOccurs="unbounded"> <xs:element name="levelledPara" type="coafi:levelledParaType"/> <xs:element name="list" type="coafi:listType"/> </xs:choice> </xs:sequence> <xs:attributeGroup ref="coafi:commonAttrs"/> </xs:complexType>
+  <xs:complexType name="warningType"> <xs:sequence> <xs:element name="title" type="xs:string" minOccurs="0"/> <xs:choice maxOccurs="unbounded"> <xs:element name="levelledPara" type="coafi:levelledParaType"/> <xs:element name="list" type="coafi:listType"/> </xs:choice> </xs:sequence> <xs:attributeGroup ref="coafi:commonAttrs"/> </xs:complexType>
+  <xs:complexType name="attentionType"> <xs:sequence> <xs:element name="title" type="xs:string" minOccurs="0"/> <xs:choice maxOccurs="unbounded"> <xs:element name="levelledPara" type="coafi:levelledParaType"/> <xs:element name="list" type="coafi:listType"/> </xs:choice> </xs:sequence> <xs:attributeGroup ref="coafi:commonAttrs"/> </xs:complexType>
 
-  <xs:complexType name="symbolType">
-      <xs:simpleContent>
-          <xs:extension base="xs:string">
-              <xs:attribute name="symbolName" type="xs:string" use="required"/>
-          </xs:extension>
-      </xs:simpleContent>
-  </xs:complexType>
-
-  <xs:complexType name="measurementType">
-      <xs:sequence>
-          <xs:element name="value" type="xs:string"/> <!-- Use string for flexibility, validation via patterns later -->
-          <xs:element name="unit" type="coafi:unitType"/>
-      </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="unitType">
-       <xs:simpleContent>
-           <xs:extension base="xs:string">
-               <xs:attribute name="unitSystem" default="SI">
-                   <xs:simpleType>
-                       <xs:restriction base="xs:string">
-                            <xs:enumeration value="SI"/> <xs:enumeration value="imperial"/> <xs:enumeration value="standard"/>
-                       </xs:restriction>
-                   </xs:simpleType>
-               </xs:attribute>
-           </xs:extension>
-       </xs:simpleContent>
-  </xs:complexType>
-
-  <xs:complexType name="partNumberType">
-      <xs:simpleContent>
-          <xs:extension base="xs:string">
-               <xs:attribute name="manufacturerCode" type="xs:string" use="optional"/>
-          </xs:extension>
-      </xs:simpleContent>
-  </xs:complexType>
-
-  <xs:complexType name="softRefType">
-      <xs:attribute name="targetSoftwareId" type="xs:string" use="required"/>
-      <xs:attribute name="targetFunctionId" type="xs:string" use="optional"/>
-  </xs:complexType>
-
-  <xs:complexType name="proceduralStepsType">
+   <xs:complexType name="proceduralStepsType">
        <xs:sequence>
            <xs:element name="title" type="xs:string" minOccurs="0"/>
            <xs:element name="step" type="coafi:stepType" maxOccurs="unbounded"/>
        </xs:sequence>
        <xs:attributeGroup ref="coafi:commonAttrs"/>
-  </xs:complexType>
+   </xs:complexType>
    <xs:complexType name="stepType">
        <xs:choice minOccurs="0" maxOccurs="unbounded">
            <xs:element name="levelledPara" type="coafi:levelledParaType"/>
@@ -661,228 +436,97 @@ This XSD schema will define:
        <xs:attributeGroup ref="coafi:commonAttrs"/>
    </xs:complexType>
 
-  <!-- ================== Specific Content Section Types ================== -->
+  <xs:complexType name="titleType" mixed="true">
+      <xs:group ref="coafi:textContentInlineGroup" minOccurs="0" maxOccurs="unbounded"/>
+  </xs:complexType>
+
+  <xs:complexType name="sectionType">
+     <xs:annotation><xs:documentation>Recursive definition for nested sections.</xs:documentation></xs:annotation>
+     <xs:sequence>
+         <xs:element name="title" type="coafi:titleType"/>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+             <xs:element name="levelledPara" type="coafi:levelledParaType"/>
+             <xs:element name="section" type="coafi:sectionType"/> <!-- Recursive call -->
+             <xs:element name="figure" type="coafi:figureType"/>
+             <xs:element name="table" type="coafi:tableType"/>
+             <xs:element name="proceduralSteps" type="coafi:proceduralStepsType"/>
+             <xs:element name="definitionList" type="coafi:definitionListType"/>
+             <xs:element name="noteList" type="coafi:noteListType"/>
+             <xs:element name="caution" type="coafi:cautionType"/>
+             <xs:element name="warning" type="coafi:warningType"/>
+             <xs:element name="attention" type="coafi:attentionType"/>
+             <!-- Add other allowed block elements within a section -->
+         </xs:choice>
+     </xs:sequence>
+     <xs:attributeGroup ref="coafi:commonAttrs"/>
+  </xs:complexType>
+
+  <!-- ====================================================================== -->
+  <!-- == SECTION 4: IDENT & STATUS SECTION TYPE (COMMON)                 == -->
+  <!-- == (Conceptually could be in COAFI-CommonTypes.xsd)               == -->
+  <!-- ====================================================================== -->
+
+  <xs:complexType name="identAndStatusSectionType">
+      <xs:annotation><xs:documentation>Common Identification and Status section for all COAFI DMs.</xs:documentation></xs:annotation>
+      <xs:sequence>
+          <xs:element name="dmAddress" type="coafi:dmAddressType"/>
+          <xs:element name="dmStatus" type="coafi:dmStatusType"/>
+          <xs:element name="dmMetadata" type="coafi:dmMetadataType" minOccurs="0"/>
+          <xs:element name="dmRef" type="coafi:dmRefType" minOccurs="0"/>
+      </xs:sequence>
+  </xs:complexType>
+
+  <!-- Other sub-types for Ident & Status already defined in Section 2 -->
+
+  <!-- ====================================================================== -->
+  <!-- == SECTION 5: SPECIFIC CONTENT SECTION TYPES                       == -->
+  <!-- == (Conceptually could be in separate XSDs importing common types) == -->
+  <!-- ====================================================================== -->
 
   <!-- == Type for General Content (from gaia-air.dtd) == -->
   <xs:complexType name="generalContentType">
-    <xs:sequence>
-      <xs:element name="dmTitle" type="xs:string"/>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="levelledPara" type="coafi:levelledParaType"/>
-        <xs:element name="section" type="coafi:sectionType"/> <!-- Allow nested sections -->
-        <xs:element name="figure" type="coafi:figureType"/>
-        <xs:element name="table" type="coafi:tableType"/>
-        <xs:element name="proceduralSteps" type="coafi:proceduralStepsType"/>
-        <xs:element name="definitionList" type="coafi:definitionListType"/>
-        <xs:element name="noteList" type="coafi:noteListType"/>
-        <xs:element name="caution" type="coafi:cautionType"/>
-        <xs:element name="warning" type="coafi:warningType"/>
-        <xs:element name="attention" type="coafi:attentionType"/>
-      </xs:choice>
-    </xs:sequence>
+      <xs:annotation><xs:documentation>Content model for general purpose Data Modules (OV, RPT, etc.).</xs:documentation></xs:annotation>
+      <xs:sequence>
+          <xs:element name="dmTitle" type="xs:string"/>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="levelledPara" type="coafi:levelledParaType"/>
+              <xs:element name="section" type="coafi:sectionType"/>
+              <xs:element name="figure" type="coafi:figureType"/>
+              <xs:element name="table" type="coafi:tableType"/>
+              <xs:element name="proceduralSteps" type="coafi:proceduralStepsType"/>
+              <xs:element name="definitionList" type="coafi:definitionListType"/>
+              <xs:element name="noteList" type="coafi:noteListType"/>
+              <xs:element name="caution" type="coafi:cautionType"/>
+              <xs:element name="warning" type="coafi:warningType"/>
+              <xs:element name="attention" type="coafi:attentionType"/>
+          </xs:choice>
+      </xs:sequence>
   </xs:complexType>
-
-  <!-- Recursive definition for section -->
-   <xs:complexType name="sectionType">
-       <xs:sequence>
-           <xs:element name="title" type="coafi:titleType"/>
-           <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:element name="levelledPara" type="coafi:levelledParaType"/>
-               <xs:element name="section" type="coafi:sectionType"/> <!-- Recursive call -->
-               <xs:element name="figure" type="coafi:figureType"/>
-               <xs:element name="table" type="coafi:tableType"/>
-               <xs:element name="proceduralSteps" type="coafi:proceduralStepsType"/>
-               <xs:element name="definitionList" type="coafi:definitionListType"/>
-               <xs:element name="noteList" type="coafi:noteListType"/>
-               <xs:element name="caution" type="coafi:cautionType"/>
-               <xs:element name="warning" type="coafi:warningType"/>
-               <xs:element name="attention" type="coafi:attentionType"/>
-           </xs:choice>
-       </xs:sequence>
-       <xs:attributeGroup ref="coafi:commonAttrs"/>
-   </xs:complexType>
-
-   <xs:complexType name="titleType" mixed="true">
-        <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element name="emphasis" type="coafi:emphasisType"/>
-            <xs:element name="term" type="coafi:termType"/>
-            <!-- Other inline elements if needed in titles -->
-        </xs:choice>
-   </xs:complexType>
 
   <!-- == Type for Design Document Content (from Gendesign.dtd) == -->
   <xs:complexType name="designContentType">
-    <xs:sequence>
-        <xs:element name="dmTitle" type="xs:string"/>
-        <xs:element name="introduction" type="coafi:designIntroductionType"/>
-        <xs:element name="requirementsTraceability" type="coafi:requirementsTraceabilityType" minOccurs="0"/>
-        <xs:element name="systemOverview" type="coafi:systemOverviewType" minOccurs="0"/>
-        <xs:element name="detailedDesign" type="coafi:detailedDesignType"/>
-        <xs:element name="interfaceDefinitions" type="coafi:interfaceDefinitionsType" minOccurs="0"/>
-        <xs:element name="designRationale" type="coafi:designRationaleType" minOccurs="0"/>
-        <xs:element name="failureHandling" type="coafi:failureHandlingType" minOccurs="0"/>
-        <xs:element name="securityConsiderations" type="coafi:securityConsiderationsType" minOccurs="0"/>
-        <xs:element name="performanceConsiderations" type="coafi:performanceConsiderationsType" minOccurs="0"/>
-        <xs:element name="maintainabilityConsiderations" type="coafi:maintainabilityConsiderationsType" minOccurs="0"/>
-        <xs:element name="deploymentConsiderations" type="coafi:deploymentConsiderationsType" minOccurs="0"/>
-        <xs:element name="futureWork" type="coafi:futureWorkType" minOccurs="0"/>
-    </xs:sequence>
+      <xs:annotation><xs:documentation>Content model for Design Documents (InfoCode DD).</xs:documentation></xs:annotation>
+      <xs:sequence>
+          <xs:element name="dmTitle" type="xs:string"/>
+          <xs:element name="introduction" type="coafi:designIntroductionType"/>
+          <xs:element name="requirementsTraceability" type="coafi:requirementsTraceabilityType" minOccurs="0"/>
+          <xs:element name="systemOverview" type="coafi:systemOverviewType" minOccurs="0"/>
+          <xs:element name="detailedDesign" type="coafi:detailedDesignType"/>
+          <xs:element name="interfaceDefinitions" type="coafi:interfaceDefinitionsType" minOccurs="0"/>
+          <xs:element name="designRationale" type="coafi:designRationaleType" minOccurs="0"/>
+          <xs:element name="failureHandling" type="coafi:failureHandlingType" minOccurs="0"/>
+          <xs:element name="securityConsiderations" type="coafi:securityConsiderationsType" minOccurs="0"/>
+          <xs:element name="performanceConsiderations" type="coafi:performanceConsiderationsType" minOccurs="0"/>
+          <xs:element name="maintainabilityConsiderations" type="coafi:maintainabilityConsiderationsType" minOccurs="0"/>
+          <xs:element name="deploymentConsiderations" type="coafi:deploymentConsiderationsType" minOccurs="0"/>
+          <xs:element name="futureWork" type="coafi:futureWorkType" minOccurs="0"/>
+      </xs:sequence>
   </xs:complexType>
-
-  <!-- Sub-types for Design Content -->
-    <xs:complexType name="designIntroductionType">
-        <xs:sequence>
-            <xs:element name="purpose"> <xs:complexType><xs:sequence><xs:element name="levelledPara" type="coafi:levelledParaType" maxOccurs="unbounded"/></xs:sequence></xs:complexType> </xs:element>
-            <xs:element name="scope"> <xs:complexType><xs:sequence><xs:element name="levelledPara" type="coafi:levelledParaType" maxOccurs="unbounded"/></xs:sequence></xs:complexType> </xs:element>
-            <xs:element name="definitions" type="coafi:definitionListType" minOccurs="0"/>
-            <xs:element name="references" minOccurs="0"> <xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="internalRef" type="coafi:internalRefType"/><xs:element name="externalRef" type="coafi:externalRefType"/></xs:choice></xs:complexType> </xs:element>
-        </xs:sequence>
-    </xs:complexType>
-    <xs:complexType name="requirementsTraceabilityType">
-        <xs:choice maxOccurs="unbounded">
-            <xs:element name="levelledPara" type="coafi:levelledParaType"/>
-            <xs:element name="reqLinkTable" type="coafi:tableType"/>
-        </xs:choice>
-    </xs:complexType>
-    <xs:complexType name="systemOverviewType">
-         <xs:choice maxOccurs="unbounded">
-             <xs:element name="levelledPara" type="coafi:levelledParaType"/>
-             <xs:element name="figure" type="coafi:figureType"/>
-         </xs:choice>
-    </xs:complexType>
-    <xs:complexType name="detailedDesignType">
-         <xs:choice maxOccurs="unbounded">
-             <xs:element name="levelledPara" type="coafi:levelledParaType"/>
-             <xs:element name="section" type="coafi:sectionType"/>
-             <xs:element name="component" type="coafi:componentType"/>
-             <xs:element name="algorithm" type="coafi:algorithmType"/>
-             <xs:element name="dataStructure" type="coafi:dataStructureType"/>
-             <xs:element name="stateMachine" type="coafi:stateMachineType"/>
-             <xs:element name="designConstraint" type="coafi:designConstraintType"/>
-         </xs:choice>
-    </xs:complexType>
-    <xs:complexType name="interfaceDefinitionsType">
-        <xs:sequence>
-            <xs:element name="levelledPara" type="coafi:levelledParaType" minOccurs="0"/>
-            <xs:element name="interfaceSpec" type="coafi:interfaceSpecType" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-    <xs:complexType name="designRationaleType">
-        <xs:sequence>
-            <xs:element name="levelledPara" type="coafi:levelledParaType" minOccurs="0"/>
-            <xs:element name="tradeStudyRef" type="coafi:internalRefType" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-    <xs:complexType name="failureHandlingType">
-        <xs:sequence>
-            <xs:element name="levelledPara" type="coafi:levelledParaType" minOccurs="0"/>
-            <xs:element name="errorHandlingSpec" type="coafi:errorHandlingSpecType" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-    <xs:complexType name="securityConsiderationsType"> <xs:sequence><xs:element name="levelledPara" type="coafi:levelledParaType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="performanceConsiderationsType">
-        <xs:sequence>
-            <xs:element name="levelledPara" type="coafi:levelledParaType" minOccurs="0"/>
-            <xs:element name="performanceTarget" type="coafi:performanceTargetType" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-    <xs:complexType name="maintainabilityConsiderationsType"> <xs:sequence><xs:element name="levelledPara" type="coafi:levelledParaType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="deploymentConsiderationsType"> <xs:sequence><xs:element name="levelledPara" type="coafi:levelledParaType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="futureWorkType"> <xs:sequence><xs:element name="levelledPara" type="coafi:levelledParaType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
-
-    <!-- Component and other design-specific types -->
-    <xs:complexType name="componentType">
-        <xs:sequence>
-            <xs:element name="componentName" type="xs:string"/>
-            <xs:element name="componentDesc" type="coafi:levelledParaContainer"/>
-            <xs:element name="interfaceSpec" type="coafi:interfaceSpecType" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="subComponentRef" type="coafi:subComponentRefType" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="designDetail" type="coafi:designDetailType" minOccurs="0"/>
-        </xs:sequence>
-        <xs:attributeGroup ref="coafi:commonAttrs"/>
-        <xs:attribute name="componentId" type="xs:ID" use="required"/>
-    </xs:complexType>
-    <xs:complexType name="subComponentRefType">
-        <xs:attribute name="refComponentId" type="xs:IDREF" use="required"/>
-    </xs:complexType>
-    <xs:complexType name="designDetailType">
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-             <xs:group ref="coafi:textContentInlineGroup"/> <!-- Allow inline text elements -->
-             <xs:element name="figure" type="coafi:figureType"/>
-             <xs:element name="table" type="coafi:tableType"/>
-             <xs:element name="algorithm" type="coafi:algorithmType"/>
-             <xs:element name="dataStructure" type="coafi:dataStructureType"/>
-             <xs:element name="stateMachine" type="coafi:stateMachineType"/>
-         </xs:choice>
-    </xs:complexType>
-    <xs:complexType name="interfaceSpecType">
-        <xs:sequence>
-             <xs:element name="interfaceName" type="xs:string"/>
-             <xs:element name="interfaceType" type="coafi:interfaceTypes"/>
-             <xs:element name="interfaceDesc" type="coafi:levelledParaContainer"/>
-             <xs:element name="protocol" type="coafi:refTextType" minOccurs="0"/>
-             <xs:element name="dataFormat" type="coafi:refTextType" minOccurs="0"/>
-             <xs:element name="signalList" type="coafi:signalListType" minOccurs="0"/>
-        </xs:sequence>
-        <xs:attributeGroup ref="coafi:commonAttrs"/>
-        <xs:attribute name="interfaceId" type="xs:ID" use="required"/>
-    </xs:complexType>
-    <xs:complexType name="signalListType"> <xs:sequence><xs:element name="signal" type="coafi:signalType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="signalType"> <xs:sequence><xs:element name="signalName" type="xs:string"/><xs:element name="signalType" type="xs:string"/><xs:element name="signalDesc" type="coafi:levelledParaContainer"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="algorithmType">
-         <xs:sequence>
-             <xs:element name="algorithmName" type="xs:string"/>
-             <xs:element name="algorithmDesc" type="coafi:levelledParaContainer"/>
-             <xs:element name="pseudoCode" type="xs:string" minOccurs="0"/>
-             <xs:element name="flowChartRef" type="coafi:figureRefType" minOccurs="0"/>
-             <xs:element name="performanceAnalysis" type="coafi:levelledParaContainer" minOccurs="0"/>
-         </xs:sequence>
-         <xs:attributeGroup ref="coafi:commonAttrs"/>
-    </xs:complexType>
-    <xs:complexType name="dataStructureType">
-         <xs:sequence>
-             <xs:element name="dataStructureName" type="xs:string"/>
-             <xs:element name="dataStructureDesc" type="coafi:levelledParaContainer"/>
-             <xs:element name="fieldList" type="coafi:fieldListType" minOccurs="0"/>
-             <xs:element name="schemaRef" type="coafi:schemaRefType" minOccurs="0"/>
-         </xs:sequence>
-         <xs:attributeGroup ref="coafi:commonAttrs"/>
-    </xs:complexType>
-    <xs:complexType name="fieldListType"> <xs:sequence><xs:element name="field" type="coafi:fieldType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="fieldType"> <xs:sequence><xs:element name="fieldName" type="xs:string"/><xs:element name="fieldType" type="xs:string"/><xs:element name="fieldDesc" type="coafi:levelledParaContainer"/><xs:element name="fieldConstraints" type="xs:string" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="schemaRefType"> <xs:attribute name="href" type="xs:anyURI" use="required"/> </xs:complexType>
-    <xs:complexType name="stateMachineType">
-        <xs:sequence>
-            <xs:element name="title" type="xs:string" minOccurs="0"/>
-            <xs:element name="state" type="coafi:stateType" maxOccurs="unbounded"/>
-            <xs:element name="transition" type="coafi:transitionType" maxOccurs="unbounded"/>
-        </xs:sequence>
-        <xs:attributeGroup ref="coafi:commonAttrs"/>
-    </xs:complexType>
-    <xs:complexType name="stateType"> <xs:sequence><xs:element name="stateName" type="xs:string"/><xs:element name="stateDesc" type="coafi:levelledParaContainer"/><xs:element name="entryAction" type="xs:string" minOccurs="0"/><xs:element name="exitAction" type="xs:string" minOccurs="0"/></xs:sequence> <xs:attribute name="id" type="xs:ID" use="required"/> </xs:complexType>
-    <xs:complexType name="transitionType"> <xs:sequence><xs:element name="fromState" type="coafi:stateRefType"/><xs:element name="toState" type="coafi:stateRefType"/><xs:element name="trigger" type="xs:string"/><xs:element name="guard" type="xs:string" minOccurs="0"/><xs:element name="action" type="xs:string" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="stateRefType"> <xs:attribute name="targetStateId" type="xs:IDREF" use="required"/> </xs:complexType>
-    <xs:complexType name="designConstraintType">
-        <xs:sequence><xs:element name="levelledPara" type="coafi:levelledParaType" maxOccurs="unbounded"/></xs:sequence>
-        <xs:attribute name="constraintType"> <xs:simpleType><xs:restriction base="xs:string"> <xs:enumeration value="performance"/><xs:enumeration value="cost"/><xs:enumeration value="weight"/><xs:enumeration value="safety"/><xs:enumeration value="regulatory"/><xs:enumeration value="material"/> </xs:restriction></xs:simpleType> </xs:attribute>
-    </xs:complexType>
-    <xs:complexType name="errorHandlingSpecType"> <xs:sequence><xs:element name="errorCode" type="xs:string" minOccurs="0"/><xs:element name="errorDesc" type="coafi:levelledParaContainer"/><xs:element name="recoveryAction" type="coafi:levelledParaContainer"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="performanceTargetType"> <xs:sequence><xs:element name="targetMetric" type="xs:string"/><xs:element name="targetValue" type="xs:string"/><xs:element name="rationale" type="coafi:levelledParaContainer"/></xs:sequence> </xs:complexType>
-
-    <!-- Utility type for elements containing only levelledPara -->
-    <xs:complexType name="levelledParaContainer">
-         <xs:sequence><xs:element name="levelledPara" type="coafi:levelledParaType" maxOccurs="unbounded"/></xs:sequence>
-    </xs:complexType>
-    <!-- Utility type for text that can also be a reference -->
-    <xs:complexType name="refTextType" mixed="true">
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-             <xs:element name="internalRef" type="coafi:internalRefType"/>
-             <xs:element name="externalRef" type="coafi:externalRefType"/>
-         </xs:choice>
-    </xs:complexType>
+    <!-- Sub-types for Design Content already defined in Section 2 -->
 
   <!-- == Type for RCOS Content (from RCOS.dtd) == -->
   <xs:complexType name="rcosContentType">
+      <xs:annotation><xs:documentation>Content model for Robotics Cooperating Systems Documents (SDD, DD).</xs:documentation></xs:annotation>
       <xs:sequence>
           <xs:element name="dmTitle" type="xs:string"/>
           <xs:element name="introduction" type="coafi:rcosIntroductionType"/>
@@ -897,44 +541,11 @@ This XSD schema will define:
           <xs:element name="futureConsiderations" type="coafi:futureConsiderationsType" minOccurs="0"/>
       </xs:sequence>
   </xs:complexType>
-    <!-- Sub-types for RCOS Content -->
-    <xs:complexType name="rcosIntroductionType"> <xs:sequence><xs:element name="purpose" type="coafi:levelledParaContainer"/><xs:element name="scope" type="coafi:levelledParaContainer"/><xs:element name="definitions" type="coafi:definitionListType" minOccurs="0"/><xs:element name="references" type="coafi:refContainerType" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="rcosOverviewType"> <xs:sequence><xs:element name="systemContext" type="coafi:levelledParaContainer"/><xs:element name="highLevelGoals"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="list" type="coafi:listType"/></xs:choice></xs:complexType></xs:element><xs:element name="architectureDiagram"><xs:complexType><xs:sequence><xs:element name="figure" type="coafi:figureType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element></xs:sequence> </xs:complexType>
-    <xs:complexType name="roboticSystemDefinitionsType"> <xs:sequence><xs:element name="roboticSystem" type="coafi:roboticSystemType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="roboticSystemType">
-        <xs:sequence>
-            <xs:element name="robotName" type="xs:string"/>
-            <xs:element name="specifications" type="coafi:specificationsType"/>
-            <xs:element name="endEffector" type="coafi:endEffectorType" minOccurs="0"/>
-            <xs:element name="controlSystem" type="coafi:controlSystemType"/>
-            <xs:element name="sensorSuite" type="coafi:sensorSuiteType" minOccurs="0"/>
-            <xs:element name="interfaces" minOccurs="0"><xs:complexType><xs:sequence><xs:element name="interfaceSpec" type="coafi:interfaceSpecType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element>
-        </xs:sequence>
-        <xs:attributeGroup ref="coafi:commonAttrs"/>
-        <xs:attribute name="robotId" type="xs:ID" use="required"/>
-        <xs:attribute name="robotType" use="required"> <xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value="articulatedArm"/><xs:enumeration value="scara"/><xs:enumeration value="cartesian"/><xs:enumeration value="cylindrical"/><xs:enumeration value="parallel"/><xs:enumeration value="mobile"/><xs:enumeration value="agv"/><xs:enumeration value="cobot"/><xs:enumeration value="custom"/></xs:restriction></xs:simpleType> </xs:attribute>
-        <xs:attribute name="manufacturer" type="xs:string" use="optional"/>
-        <xs:attribute name="model" type="xs:string" use="optional"/>
-    </xs:complexType>
-    <xs:complexType name="specificationsType"> <xs:sequence><xs:element name="specParam" type="coafi:specParamType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="specParamType"> <xs:sequence><xs:element name="paramName" type="xs:string"/><xs:element name="paramValue" type="xs:string"/><xs:element name="paramUnit" type="xs:string" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="endEffectorType"> <xs:sequence><xs:element name="effectorType" type="xs:string"/><xs:element name="effectorDesc" type="coafi:levelledParaContainer"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="controlSystemType"> <xs:sequence><xs:element name="controllerType" type="xs:string"/><xs:element name="programmingLanguage" type="xs:string" minOccurs="0"/><xs:element name="controlSoftwareRef" type="coafi:refElementType" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="sensorSuiteType"> <xs:sequence><xs:element name="sensor" type="coafi:sensorType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="sensorType"> <xs:sequence><xs:element name="sensorType" type="xs:string"/><xs:element name="sensorDesc" type="coafi:levelledParaContainer"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="coordinationMechanismType"> <xs:sequence><xs:element name="coordinationStrategy" type="coafi:levelledParaContainer"/><xs:element name="communicationProtocol" type="coafi:communicationProtocolType"/><xs:element name="sharedWorkspaceMgmt" type="coafi:levelledParaContainer"/><xs:element name="collisionAvoidance" type="coafi:levelledParaContainer"/><xs:element name="synchronizationLogic" type="coafi:levelledParaContainer"/><xs:element name="taskAllocation" type="coafi:levelledParaContainer" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="communicationProtocolType"> <xs:sequence><xs:element name="protocolName" type="xs:string"/><xs:element name="protocolDetails" type="coafi:refTextContainerType" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="productionLineIntegrationType"> <xs:sequence><xs:element name="physicalLayout"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="figure" type="coafi:figureType"/></xs:choice></xs:complexType></xs:element><xs:element name="materialHandling" type="coafi:levelledParaContainer"/><xs:element name="upstreamInterface" type="coafi:interfaceContainerType" minOccurs="0"/><xs:element name="downstreamInterface" type="coafi:interfaceContainerType" minOccurs="0"/><xs:element name="mesScadaInterface" type="coafi:interfaceContainerType" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="safetySystemType"> <xs:sequence><xs:element name="safetyConceptDesc" type="coafi:levelledParaContainer"/><xs:element name="eStopSystem" type="coafi:levelledParaContainer"/><xs:element name="safetyZones"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="figure" type="coafi:figureType"/></xs:choice></xs:complexType></xs:element><xs:element name="collaborativeFeatures" type="coafi:levelledParaContainer" minOccurs="0"/><xs:element name="safetyController" type="coafi:refElementType" minOccurs="0"/><xs:element name="riskAssessmentRef" type="coafi:refElementType"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="operationalOverviewType"> <xs:sequence><xs:element name="startUpProcedure" type="coafi:levelledParaContainer" minOccurs="0"/><xs:element name="normalOperation" type="coafi:levelledParaContainer" minOccurs="0"/><xs:element name="shutDownProcedure" type="coafi:levelledParaContainer" minOccurs="0"/><xs:element name="errorRecovery" type="coafi:levelledParaContainer" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="performanceMetricsType"> <xs:sequence><xs:element name="metric" type="coafi:metricType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="metricType"> <xs:sequence><xs:element name="metricName" type="xs:string"/><xs:element name="metricTarget" type="xs:string"/><xs:element name="metricActual" type="xs:string" minOccurs="0"/><xs:element name="measurementMethod" type="coafi:levelledParaContainer"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="nonFunctionalRequirementsType"> <xs:sequence><xs:element name="requirement" type="coafi:requirementType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="requirementType"> <xs:sequence><xs:element name="reqId" type="xs:string" minOccurs="0"/><xs:element name="reqDesc" type="coafi:levelledParaContainer"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="futureConsiderationsType"> <xs:sequence><xs:element name="potentialUpgrades" type="coafi:levelledParaContainer" minOccurs="0"/><xs:element name="integrationOpportunities" type="coafi:levelledParaContainer" minOccurs="0"/></xs:sequence> </xs:complexType>
+    <!-- Sub-types for RCOS Content already defined in Section 2 -->
 
   <!-- == Type for PPSC Content (from PPSC.dtd) == -->
   <xs:complexType name="ppscContentType">
+      <xs:annotation><xs:documentation>Content model for Post Production Services & Customer Caring Documents (MAN, PROC, PLAN, SVC).</xs:documentation></xs:annotation>
       <xs:sequence>
           <xs:element name="dmTitle" type="xs:string"/>
           <xs:element name="introduction" type="coafi:ppscIntroductionType"/>
@@ -947,215 +558,116 @@ This XSD schema will define:
           <xs:element name="appendix" type="coafi:appendixType" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
   </xs:complexType>
-    <!-- Sub-types for PPSC Content -->
-    <xs:complexType name="ppscIntroductionType"> <xs:sequence><xs:element name="purpose" type="coafi:levelledParaContainer"/><xs:element name="scope" type="coafi:levelledParaContainer"/><xs:element name="targetAudience" type="coafi:levelledParaContainer" minOccurs="0"/><xs:element name="definitions" type="coafi:definitionListType" minOccurs="0"/><xs:element name="references" type="coafi:refContainerType" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="serviceOfferingType">
-        <xs:sequence>
-             <xs:element name="serviceName" type="xs:string"/>
-             <xs:element name="serviceDescription"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="figure" type="coafi:figureType"/></xs:choice></xs:complexType></xs:element>
-             <xs:element name="serviceLevelAgreement" type="coafi:refTextContainerType" minOccurs="0"/>
-             <xs:element name="prerequisites" minOccurs="0"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="list" type="coafi:listType"/></xs:choice></xs:complexType></xs:element>
-             <xs:element name="includedItems" type="coafi:listType" minOccurs="0"/>
-             <xs:element name="optionalItems" type="coafi:listType" minOccurs="0"/>
-             <xs:element name="pricingModelRef" type="coafi:refElementType" minOccurs="0"/>
-        </xs:sequence>
-         <xs:attributeGroup ref="coafi:commonAttrs"/>
-         <xs:attribute name="serviceId" type="xs:ID" use="required"/>
-    </xs:complexType>
-    <xs:complexType name="supportStructureType"> <xs:sequence><xs:element name="contactPoints"><xs:complexType><xs:sequence><xs:element name="contact" type="coafi:contactType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element><xs:element name="escalationProcedure" type="coafi:proceduralStepsType"/><xs:element name="supportHours" type="xs:string" minOccurs="0"/><xs:element name="remoteSupport" type="coafi:levelledParaContainer" minOccurs="0"/><xs:element name="onSiteSupport" type="coafi:levelledParaContainer" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="contactType"> <xs:sequence><xs:element name="contactType" type="xs:string"/><xs:element name="contactDetail" type="xs:string"/><xs:element name="contactHours" type="xs:string" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="maintenanceProgramsType"> <xs:sequence><xs:element name="programOverview" type="coafi:programOverviewType" minOccurs="0" maxOccurs="unbounded"/><xs:element name="maintenancePlanRef" type="coafi:refElementType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="programOverviewType"> <xs:sequence><xs:element name="programName" type="xs:string"/><xs:element name="programDesc" type="coafi:levelledParaContainer"/><xs:element name="eligibility" type="coafi:levelledParaContainer" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="trainingProgramsType"> <xs:sequence><xs:element name="programOverview" type="coafi:programOverviewType" minOccurs="0" maxOccurs="unbounded"/><xs:element name="trainingCourseRef" type="coafi:refElementType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="upgradePathsType"> <xs:sequence><xs:element name="upgradeOption" type="coafi:upgradeOptionType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="upgradeOptionType"> <xs:sequence><xs:element name="upgradeName" type="xs:string"/><xs:element name="upgradeDesc" type="coafi:levelledParaContainer"/><xs:element name="applicability" type="coafi:applicabilityType"/><xs:element name="prerequisiteUpgrades" minOccurs="0"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="list" type="coafi:listType"/></xs:choice></xs:complexType></xs:element><xs:element name="impactAnalysisRef" type="coafi:refElementType" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="feedbackMechanismType"> <xs:sequence><xs:element name="feedbackChannels"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="list" type="coafi:listType"/></xs:choice></xs:complexType></xs:element><xs:element name="feedbackProcess" type="coafi:levelledParaContainer"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="appendixType"> <xs:sequence><xs:element name="title" type="xs:string" minOccurs="0"/><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="figure" type="coafi:figureType"/><xs:element name="table" type="coafi:tableType"/><xs:element name="list" type="coafi:listType"/></xs:choice></xs:sequence> <xs:attributeGroup ref="coafi:commonAttrs"/> </xs:complexType>
+    <!-- Sub-types for PPSC Content already defined in Section 2 -->
 
   <!-- == Type for PDM/QCOPT Content (from PDM.dtd) == -->
   <xs:complexType name="pdmQcoptContentType">
-        <xs:sequence>
-            <xs:element name="dmTitle" type="xs:string"/>
-            <xs:element name="introduction" type="coafi:pdmIntroductionType"/>
-            <xs:element name="systemArchitecture" type="coafi:pdmSystemArchitectureType" minOccurs="0"/>
-            <xs:element name="predictiveMaintenanceModule" type="coafi:pdmModuleType"/>
-            <xs:element name="quantumOptimizationModule" type="coafi:qcoptModuleType"/>
-            <xs:element name="parallelThreadingModule" type="coafi:parallelThreadingModuleType"/>
-            <xs:element name="dataIntegration" type="coafi:dataIntegrationType"/>
-            <xs:element name="operationalWorkflow" type="coafi:operationalWorkflowType" minOccurs="0"/>
-            <xs:element name="performanceEvaluation" type="coafi:performanceEvaluationType" minOccurs="0"/>
-            <xs:element name="securityPrivacy" type="coafi:securityPrivacyType" minOccurs="0"/>
-            <xs:element name="futureEnhancements" type="coafi:futureEnhancementsType" minOccurs="0"/>
-        </xs:sequence>
+      <xs:annotation><xs:documentation>Content model for Predictive Data Maintenance & Quantum Continuous Optimization Documents (SDD, DD, CAL, PROC).</xs:documentation></xs:annotation>
+      <xs:sequence>
+          <xs:element name="dmTitle" type="xs:string"/>
+          <xs:element name="introduction" type="coafi:pdmIntroductionType"/>
+          <xs:element name="systemArchitecture" type="coafi:pdmSystemArchitectureType" minOccurs="0"/>
+          <xs:element name="predictiveMaintenanceModule" type="coafi:pdmModuleType"/>
+          <xs:element name="quantumOptimizationModule" type="coafi:qcoptModuleType"/>
+          <xs:element name="parallelThreadingModule" type="coafi:parallelThreadingModuleType"/>
+          <xs:element name="dataIntegration" type="coafi:dataIntegrationType"/>
+          <xs:element name="operationalWorkflow" type="coafi:operationalWorkflowType" minOccurs="0"/>
+          <xs:element name="performanceEvaluation" type="coafi:performanceEvaluationType" minOccurs="0"/>
+          <xs:element name="securityPrivacy" type="coafi:securityPrivacyType" minOccurs="0"/>
+          <xs:element name="futureEnhancements" type="coafi:futureEnhancementsType" minOccurs="0"/>
+      </xs:sequence>
   </xs:complexType>
-    <!-- Sub-types for PDM/QCOPT Content -->
-    <xs:complexType name="pdmIntroductionType"> <xs:sequence><xs:element name="purpose" type="coafi:levelledParaContainer"/><xs:element name="scope" type="coafi:levelledParaContainer"/><xs:element name="definitions" type="coafi:definitionListType" minOccurs="0"/><xs:element name="references" type="coafi:refContainerType" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="pdmSystemArchitectureType"> <xs:sequence><xs:element name="overviewDiagram"><xs:complexType><xs:sequence><xs:element name="figure" type="coafi:figureType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element><xs:element name="componentDescription" minOccurs="0"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="internalRef" type="coafi:internalRefType"/></xs:choice></xs:complexType></xs:element><xs:element name="interfaceSummary" minOccurs="0"><xs:complexType><xs:choice><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="tableRef" type="coafi:tableRefType"/></xs:choice></xs:complexType></xs:element></xs:sequence> </xs:complexType>
-    <xs:complexType name="pdmModuleType"> <xs:sequence><xs:element name="pdmOverview" type="coafi:levelledParaContainer"/><xs:element name="dataSources"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="list" type="coafi:listType"/></xs:choice></xs:complexType></xs:element><xs:element name="featureEngineering" minOccurs="0"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="algorithm" type="coafi:algorithmType"/></xs:choice></xs:complexType></xs:element><xs:element name="predictionModels"><xs:complexType><xs:sequence><xs:element name="modelDescription" type="coafi:modelDescriptionType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element><xs:element name="alertMechanism" type="coafi:levelledParaContainer"/><xs:element name="integrationWithCMS"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="interfaceSpec" type="coafi:interfaceSpecType"/></xs:choice></xs:complexType></xs:element></xs:sequence> </xs:complexType>
-    <xs:complexType name="modelDescriptionType"> <xs:sequence><xs:element name="modelName" type="xs:string"/><xs:element name="modelType" type="xs:string"/><xs:element name="modelInputFeatures" type="coafi:listType"/><xs:element name="modelOutput" type="xs:string"/><xs:element name="performanceMetricsRef" type="coafi:refElementType" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="qcoptModuleType"> <xs:sequence><xs:element name="qcoptOverview" type="coafi:levelledParaContainer"/><xs:element name="optimizationProblems"><xs:complexType><xs:sequence><xs:element name="problemDescription" type="coafi:problemDescriptionType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element><xs:element name="quantumAlgorithms"><xs:complexType><xs:sequence><xs:element name="algorithmDescription" type="coafi:qcAlgorithmDescriptionType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element><xs:element name="hardwareInterface" minOccurs="0"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="interfaceSpec" type="coafi:interfaceSpecType"/></xs:choice></xs:complexType></xs:element><xs:element name="integrationWithQAO"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="interfaceSpec" type="coafi:interfaceSpecType"/></xs:choice></xs:complexType></xs:element></xs:sequence> </xs:complexType>
-    <xs:complexType name="problemDescriptionType"> <xs:sequence><xs:element name="problemName" type="xs:string"/><xs:element name="objectiveFunction" type="coafi:levelledParaContainer"/><xs:element name="constraints"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="list" type="coafi:listType"/></xs:choice></xs:complexType></xs:element></xs:sequence> </xs:complexType>
-    <xs:complexType name="qcAlgorithmDescriptionType"> <xs:sequence><xs:element name="algorithmName" type="xs:string"/><xs:element name="algorithmTheoryRef" type="coafi:refElementType"/><xs:element name="suitability" type="coafi:levelledParaContainer"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="parallelThreadingModuleType"> <xs:sequence><xs:element name="threadingOverview" type="coafi:levelledParaContainer"/><xs:element name="bittIntegration"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="interfaceSpec" type="coafi:interfaceSpecType"/></xs:choice></xs:complexType></xs:element><xs:element name="threadTypes" minOccurs="0"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="list" type="coafi:listType"/></xs:choice></xs:complexType></xs:element><xs:element name="synchronizationPoints" type="coafi:levelledParaContainer"/><xs:element name="performanceConsiderations" type="coafi:levelledParaContainer"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="dataIntegrationType"> <xs:sequence><xs:element name="dataSourcesRef"><xs:complexType><xs:sequence><xs:element name="internalRef" type="coafi:internalRefType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element><xs:element name="dataFlowDiagram" minOccurs="0"><xs:complexType><xs:sequence><xs:element name="figure" type="coafi:figureType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element><xs:element name="dataTransformation" type="coafi:levelledParaContainer" minOccurs="0"/><xs:element name="dataValidation" type="coafi:levelledParaContainer" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="operationalWorkflowType"> <xs:choice><xs:element name="proceduralSteps" type="coafi:proceduralStepsType"/><xs:element name="workflowDiagram"><xs:complexType><xs:sequence><xs:element name="figure" type="coafi:figureType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element></xs:choice> </xs:complexType>
-    <xs:complexType name="performanceEvaluationType"> <xs:sequence><xs:element name="metricsDefinition"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="list" type="coafi:listType"/></xs:choice></xs:complexType></xs:element><xs:element name="baselineComparison" minOccurs="0"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="tableRef" type="coafi:tableRefType"/></xs:choice></xs:complexType></xs:element><xs:element name="simulationResults" minOccurs="0"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="figure" type="coafi:figureType"/><xs:element name="tableRef" type="coafi:tableRefType"/></xs:choice></xs:complexType></xs:element><xs:element name="testResultsRef" minOccurs="0"><xs:complexType><xs:sequence><xs:element name="internalRef" type="coafi:internalRefType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element></xs:sequence> </xs:complexType>
-    <xs:complexType name="securityPrivacyType"> <xs:sequence><xs:element name="dataSecurityMeasures" type="coafi:levelledParaContainer"/><xs:element name="accessControl" type="coafi:levelledParaContainer"/><xs:element name="privacyConsiderations" type="coafi:levelledParaContainer"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="futureEnhancementsType"> <xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="list" type="coafi:listType"/></xs:choice> </xs:complexType>
-
+    <!-- Sub-types for PDM/QCOPT Content already defined in Section 2 -->
 
   <!-- == Type for DC-FUNC-EoL Content (from DC-FUNC-EoL.dtd) == -->
   <xs:complexType name="dcFuncEolContentType">
+      <xs:annotation><xs:documentation>Content model for Dignified Component Functional End of Life Protocol Documents (PROC, PLAN).</xs:documentation></xs:annotation>
       <xs:sequence>
-            <xs:element name="dmTitle" type="xs:string"/>
-            <xs:element name="introduction" type="coafi:eolIntroductionType"/>
-            <xs:element name="eolCriteria" type="coafi:eolCriteriaType"/>
-            <xs:element name="functionalAssessmentProcedure" type="coafi:functionalAssessmentProcedureType"/>
-            <xs:element name="dataHandlingProcedure" type="coafi:dataHandlingProcedureType"/>
-            <xs:element name="decommissioningProcedure" type="coafi:decommissioningProcedureType"/>
-            <xs:element name="dispositionPathways" type="coafi:dispositionPathwaysType"/>
-            <xs:element name="ethicalConsiderations" type="coafi:ethicalConsiderationsType"/>
-            <xs:element name="recordKeepingRequirements" type="coafi:recordKeepingRequirementsType"/>
-            <xs:element name="rolesAndResponsibilities" type="coafi:rolesAndResponsibilitiesType"/>
+          <xs:element name="dmTitle" type="xs:string"/>
+          <xs:element name="introduction" type="coafi:eolIntroductionType"/>
+          <xs:element name="eolCriteria" type="coafi:eolCriteriaType"/>
+          <xs:element name="functionalAssessmentProcedure" type="coafi:functionalAssessmentProcedureType"/>
+          <xs:element name="dataHandlingProcedure" type="coafi:dataHandlingProcedureType"/>
+          <xs:element name="decommissioningProcedure" type="coafi:decommissioningProcedureType"/>
+          <xs:element name="dispositionPathways" type="coafi:dispositionPathwaysType"/>
+          <xs:element name="ethicalConsiderations" type="coafi:ethicalConsiderationsType"/>
+          <xs:element name="recordKeepingRequirements" type="coafi:recordKeepingRequirementsType"/>
+          <xs:element name="rolesAndResponsibilities" type="coafi:rolesAndResponsibilitiesType"/>
       </xs:sequence>
   </xs:complexType>
-    <!-- Sub-types for DC-FUNC-EoL Content -->
-    <xs:complexType name="eolIntroductionType"> <xs:sequence><xs:element name="purpose" type="coafi:levelledParaContainer"/><xs:element name="scope" type="coafi:levelledParaContainer"/><xs:element name="definitions" type="coafi:definitionListType" minOccurs="0"/><xs:element name="references" type="coafi:refContainerType" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="eolCriteriaType"> <xs:sequence><xs:element name="levelledPara" type="coafi:levelledParaType" minOccurs="0"/><xs:element name="criterion" type="coafi:criterionType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="criterionType"> <xs:sequence><xs:element name="criterionDesc" type="xs:string"/><xs:element name="threshold" type="xs:string" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="functionalAssessmentProcedureType"> <xs:sequence><xs:element name="assessmentOverview" type="coafi:levelledParaContainer"/><xs:element name="assessmentSteps" type="coafi:proceduralStepsType"/><xs:element name="requiredEquipment" type="coafi:listType" minOccurs="0"/><xs:element name="reportingRequirements" type="coafi:levelledParaContainer"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="dataHandlingProcedureType"> <xs:sequence><xs:element name="assessment" type="coafi:levelledParaContainer"/><xs:element name="sanitization" type="coafi:proceduralStepsType" minOccurs="0"/><xs:element name="archiving" type="coafi:proceduralStepsType" minOccurs="0"/><xs:element name="destruction" type="coafi:proceduralStepsType" minOccurs="0"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="decommissioningProcedureType"> <xs:sequence><xs:element name="safetyPrecautions"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="warning" type="coafi:warningType"/><xs:element name="caution" type="coafi:cautionType"/><xs:element name="note" type="coafi:noteType"/><xs:element name="list" type="coafi:listType"/></xs:choice></xs:complexType></xs:element><xs:element name="removalSteps" type="coafi:proceduralStepsType"/><xs:element name="environmentalPrecautions"><xs:complexType><xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="list" type="coafi:listType"/></xs:choice></xs:complexType></xs:element></xs:sequence> </xs:complexType>
-    <xs:complexType name="dispositionPathwaysType"> <xs:sequence><xs:element name="decisionTree" minOccurs="0"><xs:complexType><xs:sequence><xs:element name="figure" type="coafi:figureType"/></xs:sequence></xs:complexType></xs:element><xs:element name="pathway" type="coafi:pathwayType" maxOccurs="unbounded"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="pathwayType"> <xs:sequence><xs:element name="pathwayCriteria" type="coafi:levelledParaContainer"/><xs:element name="pathwayProcedureRef" type="coafi:internalRefType"/></xs:sequence> <xs:attribute name="pathwayType" type="coafi:eolPathwayTypes" use="required"/> </xs:complexType>
-    <xs:complexType name="ethicalConsiderationsType"> <xs:choice maxOccurs="unbounded"><xs:element name="levelledPara" type="coafi:levelledParaType"/><xs:element name="list" type="coafi:listType"/></xs:choice> </xs:complexType>
-    <xs:complexType name="recordKeepingRequirementsType"> <xs:sequence><xs:element name="requiredRecords" type="coafi:listType"/><xs:element name="storageLocation" type="coafi:levelledParaContainer"/><xs:element name="retentionPeriod" type="xs:string"/></xs:sequence> </xs:complexType>
-    <xs:complexType name="rolesAndResponsibilitiesType"> <xs:sequence><xs:element name="levelledPara" type="coafi:levelledParaType" minOccurs="0"/><xs:element name="roleTable" type="coafi:tableType" minOccurs="0"/></xs:sequence> </xs:complexType>
+    <!-- Sub-types for DC-FUNC-EoL Content already defined in Section 2 -->
 
+  <!-- ====================================================================== -->
+  <!-- == SECTION 6: TOP-LEVEL ELEMENT DEFINITIONS (ROOT ELEMENTS)        == -->
+  <!-- == (Conceptually, each could be the focus of a sub-schema)        == -->
+  <!-- ====================================================================== -->
 
-  <!-- Utility Types (repeated for clarity if not imported) -->
-   <xs:complexType name="refContainerType" mixed="true">
-       <xs:choice minOccurs="0" maxOccurs="unbounded">
-           <xs:element name="internalRef" type="coafi:internalRefType"/>
-           <xs:element name="externalRef" type="coafi:externalRefType"/>
-       </xs:choice>
-   </xs:complexType>
-   <xs:complexType name="refElementType">
-       <xs:choice>
-            <xs:element name="internalRef" type="coafi:internalRefType"/>
-            <xs:element name="externalRef" type="coafi:externalRefType"/>
-       </xs:choice>
-   </xs:complexType>
-   <xs:complexType name="refTextContainerType" mixed="true">
-        <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element name="internalRef" type="coafi:internalRefType"/>
-            <xs:element name="externalRef" type="coafi:externalRefType"/>
-        </xs:choice>
-   </xs:complexType>
-   <xs:complexType name="interfaceContainerType">
-        <xs:sequence>
-            <xs:element name="levelledPara" type="coafi:levelledParaType" minOccurs="0"/>
-            <xs:element name="interfaceSpec" type="coafi:interfaceSpecType" maxOccurs="unbounded"/>
-        </xs:sequence>
-   </xs:complexType>
+  <xs:element name="coafiGeneralDm">
+      <xs:annotation><xs:documentation>Root element for a General COAFI Data Module.</xs:documentation></xs:annotation>
+      <xs:complexType>
+          <xs:sequence>
+              <xs:element name="identAndStatusSection" type="coafi:identAndStatusSectionType"/>
+              <xs:element name="content" type="coafi:generalContentType"/>
+          </xs:sequence>
+          <xs:attribute name="schemaVersion" type="xs:string" use="required"/>
+      </xs:complexType>
+  </xs:element>
 
-   <!-- Reusable group for inline text elements -->
-    <xs:group name="textContentInlineGroup">
-        <xs:choice>
-            <xs:element name="emphasis" type="coafi:emphasisType"/>
-            <xs:element name="term" type="coafi:termType"/>
-            <xs:element name="internalRef" type="coafi:internalRefType"/>
-            <xs:element name="externalRef" type="coafi:externalRefType"/>
-            <xs:element name="figureRef" type="coafi:figureRefType"/>
-            <xs:element name="tableRef" type="coafi:tableRefType"/>
-            <xs:element name="symbol" type="coafi:symbolType"/>
-            <xs:element name="measurement" type="coafi:measurementType"/>
-            <xs:element name="partNumber" type="coafi:partNumberType"/>
-            <xs:element name="softRef" type="coafi:softRefType"/>
-        </xs:choice>
-    </xs:group>
+  <xs:element name="coafiDesignDoc">
+       <xs:annotation><xs:documentation>Root element for a COAFI Design Document (DD).</xs:documentation></xs:annotation>
+       <xs:complexType>
+           <xs:sequence>
+               <xs:element name="identAndStatusSection" type="coafi:identAndStatusSectionType"/>
+               <xs:element name="designContent" type="coafi:designContentType"/>
+           </xs:sequence>
+           <xs:attribute name="schemaVersion" type="xs:string" use="required"/>
+       </xs:complexType>
+  </xs:element>
 
+  <xs:element name="coafiRcosDoc">
+      <xs:annotation><xs:documentation>Root element for a COAFI Robotics Cooperating Systems Document.</xs:documentation></xs:annotation>
+      <xs:complexType>
+          <xs:sequence>
+              <xs:element name="identAndStatusSection" type="coafi:identAndStatusSectionType"/>
+              <xs:element name="rcosContent" type="coafi:rcosContentType"/>
+          </xs:sequence>
+          <xs:attribute name="schemaVersion" type="xs:string" use="required"/>
+      </xs:complexType>
+  </xs:element>
 
-  <!-- ================== Top-Level Element Definitions (One for each DM Type) ================== -->
+  <xs:element name="coafiPpscDoc">
+      <xs:annotation><xs:documentation>Root element for a COAFI Post Production Services & Customer Caring Document.</xs:documentation></xs:annotation>
+      <xs:complexType>
+          <xs:sequence>
+              <xs:element name="identAndStatusSection" type="coafi:identAndStatusSectionType"/>
+              <xs:element name="ppscContent" type="coafi:ppscContentType"/>
+          </xs:sequence>
+          <xs:attribute name="schemaVersion" type="xs:string" use="required"/>
+      </xs:complexType>
+  </xs:element>
 
-  <xs:element name="coafiGeneralDm" type="coafi:coafiGeneralDmType"/>
-  <xs:complexType name="coafiGeneralDmType">
-      <xs:sequence>
-          <xs:element name="identAndStatusSection" type="coafi:identAndStatusSectionType"/>
-          <xs:element name="content" type="coafi:generalContentType"/>
-      </xs:sequence>
-  </xs:complexType>
+  <xs:element name="coafiPdmQcoptDoc">
+       <xs:annotation><xs:documentation>Root element for a COAFI Predictive Data Maintenance & Quantum Continuous Optimization Document.</xs:documentation></xs:annotation>
+       <xs:complexType>
+           <xs:sequence>
+               <xs:element name="identAndStatusSection" type="coafi:identAndStatusSectionType"/>
+               <xs:element name="pdmQcoptContent" type="coafi:pdmQcoptContentType"/>
+           </xs:sequence>
+           <xs:attribute name="schemaVersion" type="xs:string" use="required"/>
+       </xs:complexType>
+  </xs:element>
 
-  <xs:element name="coafiDesignDoc" type="coafi:coafiDesignDocType"/>
-   <xs:complexType name="coafiDesignDocType">
-       <xs:sequence>
-           <xs:element name="identAndStatusSection" type="coafi:identAndStatusSectionType"/>
-           <xs:element name="designContent" type="coafi:designContentType"/>
-       </xs:sequence>
-   </xs:complexType>
+  <xs:element name="coafiDcFuncEolDoc">
+       <xs:annotation><xs:documentation>Root element for a COAFI Dignified Component Functional End of Life Protocol Document.</xs:documentation></xs:annotation>
+       <xs:complexType>
+           <xs:sequence>
+               <xs:element name="identAndStatusSection" type="coafi:identAndStatusSectionType"/>
+               <xs:element name="dcFuncEolContent" type="coafi:dcFuncEolContentType"/>
+           </xs:sequence>
+           <xs:attribute name="schemaVersion" type="xs:string" use="required"/>
+       </xs:complexType>
+  </xs:element>
 
-  <xs:element name="coafiRcosDoc" type="coafi:coafiRcosDocType"/>
-  <xs:complexType name="coafiRcosDocType">
-      <xs:sequence>
-          <xs:element name="identAndStatusSection" type="coafi:identAndStatusSectionType"/>
-          <xs:element name="rcosContent" type="coafi:rcosContentType"/>
-      </xs:sequence>
-  </xs:complexType>
-
-  <xs:element name="coafiPpscDoc" type="coafi:coafiPpscDocType"/>
-  <xs:complexType name="coafiPpscDocType">
-      <xs:sequence>
-          <xs:element name="identAndStatusSection" type="coafi:identAndStatusSectionType"/>
-          <xs:element name="ppscContent" type="coafi:ppscContentType"/>
-      </xs:sequence>
-  </xs:complexType>
-
-  <xs:element name="coafiPdmQcoptDoc" type="coafi:coafiPdmQcoptDocType"/>
-  <xs:complexType name="coafiPdmQcoptDocType">
-      <xs:sequence>
-          <xs:element name="identAndStatusSection" type="coafi:identAndStatusSectionType"/>
-          <xs:element name="pdmQcoptContent" type="coafi:pdmQcoptContentType"/>
-      </xs:sequence>
-  </xs:complexType>
-
-  <xs:element name="coafiDcFuncEolDoc" type="coafi:coafiDcFuncEolDocType"/>
-  <xs:complexType name="coafiDcFuncEolDocType">
-      <xs:sequence>
-          <xs:element name="identAndStatusSection" type="coafi:identAndStatusSectionType"/>
-          <xs:element name="dcFuncEolContent" type="coafi:dcFuncEolContentType"/>
-      </xs:sequence>
-  </xs:complexType>
-
-  <!-- Add other root elements for other specific Info Codes if needed -->
+  <!-- Add other root elements for other specific Info Codes/document types as needed -->
 
 </xs:schema>
-```
-
-**Key Features of this Unified XSD:**
-
-1.  **Single Schema (`COAFI.xsd`):** Defines the structure for multiple COAFI document types within one file.
-2.  **Target Namespace:** Establishes a namespace (`http://www.gaia-air.com/coafi/schema/v1`) for COAFI elements.
-3.  **Reusable Common Types:**
-    *   `identAndStatusSectionType`: Defines the common metadata block structure.
-    *   `textContentType`, `levelledParaType`, `listType`, `figureType`, `tableType`, `internalRefType`, `externalRefType`, etc.: Define common content elements reusable across different document types.
-    *   Simple Types: Enumerations for controlled vocabularies (status codes, info codes, security levels, etc.).
-    *   `commonAttrs` Attribute Group: Defines common attributes like `id`.
-4.  **Specific Content Types:** Defines dedicated complex types for the unique content structures of each document type:
-    *   `generalContentType`
-    *   `designContentType`
-    *   `rcosContentType`
-    *   `ppscContentType`
-    *   `pdmQcoptContentType`
-    *   `dcFuncEolContentType`
-5.  **Multiple Root Elements:** Defines separate root elements (`coafiGeneralDm`, `coafiDesignDoc`, `coafiRcosDoc`, etc.). An XML instance document would use the root element corresponding to its type (e.g., a Design Document XML would start with `<coafi:coafiDesignDoc ...>`). This provides clear typing for each document instance.
-6.  **XSD Compliance:** Uses standard XML Schema Definition language syntax.
-7.  **Detailed Structure:** Incorporates the finer-grained elements and attributes discussed for each DTD concept (e.g., specific elements for PDM models, QCOPT algorithms, RCOS coordination, EoL pathways).
-8.  **Annotations:** Includes basic annotations explaining the purpose of the schema and key types.
-
-**How to Use:**
-
-1.  **Save:** Save this code as `COAFI.xsd`.
-2.  **Validate:** Use an XML editor or validation tool (like `xmllint` or IDE plugins) to validate XML documents against this schema.
-3.  **Authoring:** Use this schema to guide the creation of structured XML documents for your COAFI Data Modules. An XML editor with schema support will provide auto-completion and validation during authoring.
-
-This unified XSD provides a robust, albeit complex, foundation for ensuring consistency and validating the structure of your diverse COAFI documentation set. It successfully merges the concepts from the individual conceptual DTDs into a single, coherent schema definition.
