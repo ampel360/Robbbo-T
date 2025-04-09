@@ -28,6 +28,12 @@ The following documents form an integral part of this specification:
 - GP-AM-EDR-00-001-SDD-A: Overall Aircraft System Description Document
 - GP-AM-EDR-00-002-OV-A: COAFI Framework Overview for Part I
 - GP-AM-EDR-00-003-RPT-A: Airworthiness & Certification Requirements Report
+- GP-AM-AMPEL-0100-00-001-A: GP-AM-00 General Document - Intro & General
+- GP-CM-BITT-ARCH-001-A: Detailed Design - BlockThread Identificated Tree (BITT) Architecture
+- GP-GB-RCOS-PL1-WING-001-A: Robotics Cooperating System Description - Wing Box Assembly Cell 3
+- GP-PM-AMPEL-MAINT-PLAN-GOLD-001-A: AMPEL360XWLRGA - Gold Maintenance Service Plan
+- GP-CM-QCOPT-SCHED-ALGO-001-A: QCOPT - QAOA Algorithm Design for HPC Resource Scheduling
+- GP-PM-EOL-SENSOR-TEMP-001-A: Dignified Component Functional End of Life Protocol - Temperature Sensors (XYZ-T1)
 
 ### 1.4 Terminology and Abbreviations
 
@@ -231,6 +237,24 @@ The following key documents provide additional detail on the general aircraft sy
 - **GP-AM-EDR-00-003-RPT-A**: Airworthiness & Certification Requirements Report
   - Documents the certification basis and airworthiness requirements
   - Addresses the unique challenges of certifying novel technologies
+
+- **GP-AM-AMPEL-0100-00-001-A**: GP-AM-00 General Document - Intro & General
+  - Provides a general introduction to Part I (Airframes - GP-AM) of the COAFI documentation set for the AMPEL360XWLRGA program
+
+- **GP-CM-BITT-ARCH-001-A**: Detailed Design - BlockThread Identificated Tree (BITT) Architecture
+  - Provides the detailed design for the BITT architecture
+
+- **GP-GB-RCOS-PL1-WING-001-A**: Robotics Cooperating System Description - Wing Box Assembly Cell 3
+  - Describes the cooperating robotic system used for wing box primary structure assembly in Cell 3
+
+- **GP-PM-AMPEL-MAINT-PLAN-GOLD-001-A**: AMPEL360XWLRGA - Gold Maintenance Service Plan
+  - Outlines the comprehensive Gold Maintenance Service Plan offered for the AMPEL360XWLRGA aircraft
+
+- **GP-CM-QCOPT-SCHED-ALGO-001-A**: QCOPT - QAOA Algorithm Design for HPC Resource Scheduling
+  - Details the design of the Quantum Approximate Optimization Algorithm (QAOA) used within the QCOPT module for optimizing HPC resource scheduling
+
+- **GP-PM-EOL-SENSOR-TEMP-001-A**: Dignified Component Functional End of Life Protocol - Temperature Sensors (XYZ-T1)
+  - Defines the procedure for assessing and dispositioning Temperature Sensor Model XYZ-T1 at its functional end of life
 
 ### 6.3 Cross-References to Other ATA Chapters
 
