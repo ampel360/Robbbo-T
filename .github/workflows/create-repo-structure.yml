@@ -741,3 +741,91 @@ jobs:
           #### **GP-AM-AMPEL-0100-26-001-A: Fire Detection System Description and Operation (ATA 26)**
           - **Document Link:** `GP
           EOL
+
+      - name: Create GitHub Issue for Capgemini Spain
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issueTitle = "New Organization Registration Request: Capgemini Spain";
+            const issueBody = `
+### **New Organization Registration Request: Capgemini Spain**
+
+#### **Name of the organization**
+**Capgemini Spain**
+
+---
+
+#### **Official website**
+https://www.capgemini.com/es-es/
+
+---
+
+#### **Country**
+**Spain**
+
+---
+
+#### **City**
+**Madrid**
+
+---
+
+#### **Type of organization**
+- **Engineering**
+- **Research Organization**
+- **Company**
+- **Consulting Firm**
+
+(*Multi-type classification suggested based on active engagement in engineering R&D, software development, and scientific projects*)
+
+---
+
+#### **Parent organization**
+**Capgemini SE**  
+ROR: https://ror.org/01bjdm005
+
+---
+
+#### **Description / Purpose**
+Capgemini Spain is the Spanish operational and legal branch of Capgemini SE, a global leader in technology, engineering, and consulting services. It spearheads initiatives in AI, aerospace systems, quantum computing, sustainability, and digital engineering.
+
+Capgemini Spain is deeply engaged in:
+- Engineering-intensive projects across the EU and nationally
+- Strategic partnerships in aviation, defense, and space technology
+- Research platforms involving AI, federated systems, and data ethics
+
+It contributes to both industrial innovation and scientific reproducibility via ORCID-linked outputs, project documentation, and open science platforms.
+
+---
+
+#### **Justification for separate ROR ID**
+Capgemini Spain:
+- Operates as a legal and fiscal entity distinct from the parent company
+- Leads engineering and scientific research initiatives with Spanish and EU institutions
+- Has identifiable staff contributing to ORCID-registered publications and replicable projects
+- Requires clear attribution in systems like GAIA AIR, Zenodo, ORCID, DataCite, and national R&D repositories
+
+A separate ROR ID would ensure proper affiliation tracking, reproducibility auditing, and funding traceability.
+
+---
+
+#### **Additional supporting links**
+- ORCID: Amedeo Pelliccia – Capgemini Spain
+- Capgemini Spain – Engineering & Innovation
+- GAIA AIR Engineering Contributor Node
+- Capgemini España S.L. – Legal Info
+
+---
+
+Puedes copiar y pegar esta plantilla en un nuevo Issue en el repositorio de ROR en GitHub. Si necesitas ayuda adicional para crear el Issue o cualquier otra cosa, ¡solo dímelo! 😊
+            `;
+
+            const { data: issue } = await github.issues.create({
+              owner: 'ROR',
+              repo: 'ROR',
+              title: issueTitle,
+              body: issueBody,
+            });
+
+            core.info(`Created issue: ${issue.html_url}`);
