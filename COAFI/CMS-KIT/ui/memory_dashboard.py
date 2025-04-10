@@ -819,6 +819,7 @@ def execute_query(n_clicks, query_text, mood, min_similarity, token_limit):
     results = query_results.get("results", [])
     processing_time = query_results.get("processing_time", 0)
     total_tokens = query_results.get("token_count", 0)
+    validation_score = query_results.get("validationScore", 0)
     
     # Create results cards
     result_cards = []
@@ -858,19 +859,25 @@ def execute_query(n_clicks, query_text, mood, min_similarity, token_limit):
                         html.H4(f"{len(results)}", className="mb-0"),
                         html.P("Results Found", className="text-muted mb-0")
                     ], className="text-center")
-                ], width=4),
+                ], width=3),
                 dbc.Col([
                     html.Div([
                         html.H4(f"{total_tokens}", className="mb-0"),
                         html.P("Total Tokens", className="text-muted mb-0")
                     ], className="text-center")
-                ], width=4),
+                ], width=3),
                 dbc.Col([
                     html.Div([
                         html.H4(f"{processing_time * 1000:.1f} ms", className="mb-0"),
                         html.P("Processing Time", className="text-muted mb-0")
                     ], className="text-center")
-                ], width=4),
+                ], width=3),
+                dbc.Col([
+                    html.Div([
+                        html.H4(f"{validation_score:.2f}", className="mb-0"),
+                        html.P("Validation Score", className="text-muted mb-0")
+                    ], className="text-center")
+                ], width=3),
             ])
         ])
     ])
@@ -985,6 +992,54 @@ def update_system_info(n_intervals):
     except Exception as e:
         logger.error(f"Error updating system info: {e}")
         return html.P(f"Error fetching system information: {str(e)}", className="text-danger")
+
+@app.callback(
+    Output("operation-results-container", "children"),
+    [
+        Input("adjust-license-button", "n_clicks")
+    ],
+    [
+        State("license-id", "value"),
+        State("feedback", "value")
+    ],
+    prevent_initial_call=True
+)
+def adjust_license(n_clicks, license_id, feedback):
+    """Adjust license state based on feedback and context changes"""
+    if not license_id or not feedback:
+        return html.P("Please provide license ID and feedback", className="text-center text-danger")
+    
+    try:
+        payload = {
+            "license_id": license_id,
+            "feedback": feedback
+        }
+        
+        response = requests.post(f"{FASTAPI_URL}/adjust_license", json=payload)
+        if response.status_code == 200:
+            result = response.json()
+            if result.get("success", False):
+                return html.Div([
+                    html.H4("License Adjusted Successfully", className="text-success"),
+                    html.P(f"Adjusted State: {result.get('id')}")
+                ])
+            else:
+                return html.Div([
+                    html.H4("Error Adjusting License", className="text-danger"),
+                    html.P(result.get("error", "Unknown error"))
+                ])
+        else:
+            logger.error(f"Error adjusting license: {response.status_code}")
+            return html.Div([
+                html.H4("Error Adjusting License", className="text-danger"),
+                html.P(f"API error: {response.status_code}")
+            ])
+    except Exception as e:
+        logger.error(f"Error adjusting license: {e}")
+        return html.Div([
+            html.H4("Error Adjusting License", className="text-danger"),
+            html.P(str(e))
+        ])
 
 # Run the app
 if __name__ == "__main__":

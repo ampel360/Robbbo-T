@@ -75,6 +75,7 @@ class SemanticQueryResponse(BaseModel):
     query_embedding: Optional[List[float]] = None
     request_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     timestamp: str = Field(default_factory=lambda: datetime.now().isoformat())
+    validationScore: Optional[float] = None
 
 class MemoryItemRequest(BaseModel):
     """Request model for adding memory items"""
@@ -305,7 +306,8 @@ async def semantic_query(
             "token_count": token_count,
             "query_embedding": query_embedding[:5] if query.include_metadata else None,  # Only include first 5 dimensions
             "request_id": request_id,
-            "timestamp": datetime.now().isoformat()
+            "timestamp": datetime.now().isoformat(),
+            "validationScore": stats.get("avg_similarity", 0.0)
         }
     
     except Exception as e:
@@ -369,7 +371,8 @@ async def generate_rag_response(
             "model": model,
             "processing_time": processing_time,
             "request_id": request_id,
-            "timestamp": datetime.now().isoformat()
+            "timestamp": datetime.now().isoformat(),
+            "validationScore": sum(result.similarity_score for result in memory_results) / len(memory_results) if memory_results else 0.0
         }
     
     except Exception as e:
@@ -691,3 +694,44 @@ async def get_memory_trend(
     except Exception as e:
         logger.error(f"Error getting memory trend: {e}")
         raise HTTPException(status_code=500, detail=f"Error getting memory trend: {str(e)}")
+
+@router.post("/adjust_license", response_model=MemoryItemResponse)
+async def adjust_license(
+    license_id: str = Body(..., embed=True),
+    feedback: Dict[str, Any] = Body(..., embed=True),
+    current_user: User = Security(get_current_user, scopes=["memory:admin"])
+):
+    """
+    Adjust the license state based on feedback and context changes
+    
+    Takes feedback and context changes as input to re-ponderate existing license states
+    """
+    request_id = str(uuid.uuid4())
+    
+    try:
+        if MEMORY_SERVICE_AVAILABLE:
+            adjusted_state = await memory_service.adjust_license(license_id, feedback)
+            return {
+                "success": True,
+                "id": adjusted_state,
+                "request_id": request_id,
+                "timestamp": datetime.now().isoformat()
+            }
+        else:
+            # Mock implementation
+            time.sleep(0.5)
+            return {
+                "success": True,
+                "id": f"adjusted_{license_id}",
+                "request_id": request_id,
+                "timestamp": datetime.now().isoformat()
+            }
+    
+    except Exception as e:
+        logger.error(f"Error adjusting license: {e}")
+        return {
+            "success": False,
+            "error": str(e),
+            "request_id": request_id,
+            "timestamp": datetime.now().isoformat()
+        }
