@@ -1,8 +1,37 @@
-![image](https://github.com/user-attachments/assets/6168ae77-6b34-47a0-a3e1-fc75992f26b7)
+# Robbbo-T Repository
 
 [![.github/workflows/create-repo-structure.yml](https://github.com/Robbbo-T/Robbbo-T/actions/workflows/create-repo-structure.yml/badge.svg?event=branch_protection_rule)](https://github.com/Robbbo-T/Robbbo-T/actions/workflows/create-repo-structure.yml)
 
-[https://gaia-air-splcogen.vercel.app/](https://gaia-air-splcogen.vercel.app/)
+## Identification Code and Version Control
+
+This repository adheres to strict version control and traceability standards to ensure all exports and released issues are identifiable and validated technical content. Below is an overview of the identification and versioning structure:
+
+- **Identification Code**: GAIA-AIR-COAFI-[ModuleID]-[Version]
+  - *ModuleID*: Unique identifier for each data module.
+  - *Version*: Semantic versioning (e.g., `v1.0.0`).
+- **Version Control**: All changes, issues, and releases are tracked through GitHub's version control system, ensuring transparency and reproducibility.
+
+## GAIA AIR Framework
+
+GAIA AIR embodies a hybrid holistic architecture, merging foundational scientific branches like **Heuritmática** (uniting physics principles and mathematical theorems) directly into the design and operation of intelligent aerospace systems. This architecture supports robotics, intelligent identities, and next-generation air and space mobility.
+
+### COAFI Framework
+
+The **COAFI framework** documents the integration of operational procedures and advanced technologies, including:
+- **Artificial Intelligence (AI)**
+- **Quantum Computing**
+- **Boron Nitride Nanotube (BNNT) Materials**
+
+COAFI provides traceable links from theoretical principles to practical applications, enabling:
+- Unprecedented levels of explainability
+- Optimization of aerospace system performance
+- Sustainable design and operation
+
+Visit the [GAIA AIR SPLCOGEN Portal](https://gaia-air-splcogen.vercel.app/) for more information.
+
+---
+
+This repository is a collaborative effort under **The Proposal - Open Call** initiative.
 	
 
 # Robbbo-T Repository - Central Source Data Base
