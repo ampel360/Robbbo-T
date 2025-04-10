@@ -73,38 +73,47 @@ El documento incluye:
 
 GAIA AIR implementa una arquitectura digital integral para gestionar el ciclo de vida completo de productos aeroespaciales sostenibles. Esta arquitectura está diseñada para conectar todas las fases del desarrollo, desde la conceptualización y diseño hasta la producción, operación y mantenimiento, con un enfoque en sostenibilidad, trazabilidad y eficiencia.
 
-```mermaid
-flowchart TD
-    subgraph design_layer [Design & Documentation Layer]
-        A1["Semantic Memory System"]
-        A2["PLM & Digital Twins"]
-        A3["Aero. Ontologies"]
-    end
+   ```mermaid
+   flowchart TD
+       subgraph design_layer [Design & Documentation Layer]
+           A1["Semantic Memory System"]
+           A2["PLM & Digital Twins"]
+           A3["Aero. Ontologies"]
+       end
 
-    subgraph production_layer [Industrial Production Layer]
-        B1["Manufacturing Digital Twins"]
-        B2["Advanced MES"]
-        B3["Quality Control"]
-    end
+       subgraph production_layer [Industrial Production Layer]
+           B1["Manufacturing Digital Twins"]
+           B2["Advanced MES"]
+           B3["Quality Control"]
+       end
 
-    subgraph operations_layer [Services & Operations Layer]
-        C1["Predictive Maintenance"]
-        C2["Supply Chain Management"]
-        C3["Lifecycle Analysis"]
-    end
+       subgraph operations_layer [Services & Operations Layer]
+           C1["Predictive Maintenance"]
+           C2["Supply Chain Management"]
+           C3["Lifecycle Analysis"]
+       end
 
-    D["Digital Thread Orchestrator"]
+       D["Digital Thread Orchestrator"]
 
-    %% Connections
-    A1 --> A2
-    A2 --> A3
-    A2 --> B1
-    B2 --> D
-    D --> C1
-    B2 --> B3
-    B3 --> C2
-    C2 --> C3
-```
+       %% Connections
+       A1 --> A2
+       A2 --> A3
+       A2 --> B1
+       B2 --> D
+       D --> C1
+       B2 --> B3
+       B3 --> C2
+       C2 --> C3
+   ```
+
+3. **Preview Locally**:
+   If you want to preview the diagram locally before committing it to GitHub:
+   - Use tools like [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor/) to test and visualize the diagram.
+
+4. **Alternative Rendering**:
+   If GitHub or your current platform doesn't support Mermaid diagrams, consider exporting the diagram as an image or embedding it in the repository.
+
+Let me know if you need further guidance!
 
 ## Principios Arquitectónicos
 
