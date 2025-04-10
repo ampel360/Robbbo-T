@@ -49,7 +49,7 @@ export class OrchestrationBuilder {
     this.currentStep.execute = async (request: any, context: any) => {
       const url = `${serviceUrl}${endpoint}`;
       const response = await axios.post(url, request);
-      return response.data;
+      return this.ponderateActuation(response.data, context);
     };
     
     return this;
@@ -115,6 +115,26 @@ export class OrchestrationBuilder {
     // Process and return the result of the quantum computation
     // This is a placeholder implementation
     return result;
+  }
+
+  private ponderateActuation(response: any, context: any) {
+    const wcrScore = response.wcrScore;
+    let weightedLicenseState;
+
+    if (wcrScore >= 0.90) {
+      weightedLicenseState = 'fullyGranted';
+    } else if (wcrScore >= 0.75) {
+      weightedLicenseState = 'grantedWithConditions';
+    } else if (wcrScore >= 0.50) {
+      weightedLicenseState = 'ponderatedActuationPendingReview';
+    } else {
+      weightedLicenseState = 'ponderatedActuationPendingReview';
+    }
+
+    return {
+      ...response,
+      weightedLicenseState,
+    };
   }
 
   public build(): (request: any) => Promise<any> {

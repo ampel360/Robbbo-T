@@ -65,6 +65,7 @@ class SemanticQueryResponse(BaseModel):
     query_embedding_dimension: int = 1536
     cache_hit: bool = False
     trace_id: str = ""
+    validationScore: Optional[float] = None
 
 class RAGRequest(BaseModel):
     query: str
@@ -79,6 +80,7 @@ class RAGResponse(BaseModel):
     token_usage: Dict[str, int]
     processing_time: float
     trace_id: str
+    validationScore: Optional[float] = None
 
 class AccessControlPolicy(BaseModel):
     mood_id: Optional[str] = None
@@ -804,7 +806,8 @@ class RAGProcessor:
                 sources=sources,
                 token_usage=token_usage,
                 processing_time=time.time() - start_time,
-                trace_id=trace_id
+                trace_id=trace_id,
+                validationScore=self._calculate_validation_score(request.context_results)
             )
             
         except Exception as e:
@@ -815,7 +818,8 @@ class RAGProcessor:
                 sources=[],
                 token_usage={"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0},
                 processing_time=time.time() - start_time,
-                trace_id=trace_id
+                trace_id=trace_id,
+                validationScore=None
             )
     
     def _prepare_context(self, results: List[RetrievalResult]) -> str:
@@ -845,6 +849,15 @@ class RAGProcessor:
                 })
         
         return sources
+
+    def _calculate_validation_score(self, results: List[RetrievalResult]) -> float:
+        """Calcula un puntaje de validación basado en los resultados recuperados"""
+        if not results:
+            return 0.0
+        
+        # Ejemplo simple: promedio de las puntuaciones de similitud
+        total_score = sum(result.similarity_score for result in results)
+        return total_score / len(results)
 
 # Clase adaptadora para el sistema de memoria
 class MemoryAdapter:
@@ -963,7 +976,8 @@ class MemoryAdapter:
             processing_time=processing_time,
             query_embedding_dimension=self.vector_ops.vector_dimension,
             cache_hit=cache_hit,
-            trace_id=trace_id
+            trace_id=trace_id,
+            validationScore=self._calculate_validation_score(results)
         )
     
     async def generate_rag_response(self, request: RAGRequest) -> RAGResponse:
