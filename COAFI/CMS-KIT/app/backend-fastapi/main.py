@@ -4,9 +4,11 @@ Main entry point for COAFI FastAPI backend.
 Initializes routers, middleware, and memory services.
 """
 
-from fastapi import FastAPI
+from fastapi import FastAPI, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
+import zipfile, os, tempfile, subprocess, shutil
+import mimetypes
 
 # Import your custom routers
 from routers.services import semantic_bridge  # <-- asegúrate que semantic_bridge.py tiene router = APIRouter()
@@ -26,6 +28,81 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+LANG_COMMANDS = {
+    '.py': ['python'],
+    '.js': ['node'],
+    '.sh': ['bash'],
+}
+
+TEST_FILE_PATTERNS = ['test_', '.spec.']
+
+@app.post("/run-zip/")
+async def run_zip(file: UploadFile):
+    if file.content_type != "application/zip":
+        raise HTTPException(status_code=400, detail="File must be a ZIP archive.")
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        zip_path = os.path.join(tmpdir, file.filename)
+        
+        with open(zip_path, "wb") as f:
+            f.write(await file.read())
+
+        try:
+            with zipfile.ZipFile(zip_path, "r") as zip_ref:
+                zip_ref.extractall(tmpdir)
+        except zipfile.BadZipFile:
+            raise HTTPException(status_code=400, detail="Invalid ZIP file.")
+
+        results = execute_files(tmpdir)
+
+        return results
+
+def execute_files(directory):
+    results = {}
+
+    for root, _, files in os.walk(directory):
+        for file in files:
+            file_ext = os.path.splitext(file)[1]
+            cmd = LANG_COMMANDS.get(file_ext)
+            
+            if cmd:
+                filepath = os.path.join(root, file)
+                exec_cmd = cmd + [filepath]
+
+                # Check if it's a test file
+                is_test = any(pattern in file for pattern in TEST_FILE_PATTERNS)
+
+                try:
+                    completed_process = subprocess.run(
+                        exec_cmd,
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE,
+                        timeout=10,
+                        text=True
+                    )
+
+                    results[file] = {
+                        "test_file": is_test,
+                        "stdout": completed_process.stdout.strip(),
+                        "stderr": completed_process.stderr.strip(),
+                        "returncode": completed_process.returncode,
+                    }
+
+                except subprocess.TimeoutExpired:
+                    results[file] = {
+                        "test_file": is_test,
+                        "error": "Execution timeout",
+                        "returncode": -1
+                    }
+                except Exception as e:
+                    results[file] = {
+                        "test_file": is_test,
+                        "error": str(e),
+                        "returncode": -1
+                    }
+
+    return results
 
 # Mount routers
 app.include_router(semantic_bridge.router, prefix="/semantic-query", tags=["Semantic Query"])
