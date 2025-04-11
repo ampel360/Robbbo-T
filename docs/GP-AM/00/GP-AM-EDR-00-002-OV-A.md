@@ -35,6 +35,12 @@ The following documents form an integral part of this specification:
 - GP-AM-AMPEL-0100-00-001-A: Aircraft General – System Description (ATA 00)
 - GP-AM-EDR-00-001-SDD-A: Overall Aircraft System Description Document
 - GP-AM-EDR-00-003-RPT-A: Airworthiness & Certification Requirements Report
+- GP-AM-AMPEL-0100-00-001-A: GP-AM-00 General Document - Intro & General
+- GP-CM-BITT-ARCH-001-A: Detailed Design - BlockThread Identificated Tree (BITT) Architecture
+- GP-GB-RCOS-PL1-WING-001-A: Robotics Cooperating System Description - Wing Box Assembly Cell 3
+- GP-PM-AMPEL-MAINT-PLAN-GOLD-001-A: AMPEL360XWLRGA - Gold Maintenance Service Plan
+- GP-CM-QCOPT-SCHED-ALGO-001-A: QCOPT - QAOA Algorithm Design for HPC Resource Scheduling
+- GP-PM-EOL-SENSOR-TEMP-001-A: Dignified Component Functional End of Life Protocol - Temperature Sensors (XYZ-T1)
 
 ### 1.4 Terminology and Abbreviations
 

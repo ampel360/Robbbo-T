@@ -1,12 +1,3 @@
-
-This XSD schema will define:
-
-1.  A common structure for the **Identification and Status Section**, reusable across all document types.
-2.  A set of common **Content Elements** (paragraphs, lists, figures, tables, references, etc.).
-3.  Specific **Content Structures** tailored to each document type (General, Design, RCOS, PPSC, PDM, DC-FUNC-EoL).
-4.  A mechanism (likely using `xs:choice` or defining separate root elements referencing common types) to allow validation against the specific document type structure. I will opt for **defining separate root elements** for clarity.
-
-```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   COAFI.xsd - Unified Conceptual XML Schema Definition for GAIA AIR COAFI Documentation
