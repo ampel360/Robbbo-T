@@ -10,6 +10,7 @@ import uvicorn
 
 # Import your custom routers
 from routers.services import semantic_bridge  # <-- asegúrate que semantic_bridge.py tiene router = APIRouter()
+from routers import review  # Import the new review router
 
 app = FastAPI(
     title="COAFI Quantum Memory API",
@@ -28,6 +29,7 @@ app.add_middleware(
 
 # Mount routers
 app.include_router(semantic_bridge.router, prefix="/semantic-query", tags=["Semantic Query"])
+app.include_router(review.router, prefix="/review", tags=["Year-End Review"])  # Include the new review router
 
 # Health check route
 @app.get("/")
