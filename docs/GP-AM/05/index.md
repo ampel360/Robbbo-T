@@ -15,7 +15,7 @@
 - **[GP-AM-AMPEL-0100-00-001-A](#ata-101--general-data-module)**: GP-AM-00 General Document - Intro & General
 
 #### **GP-CM-BITT-ARCH-001-A: Design Document (ATA 102)**
-- **[GP-CM-BITT-ARCH-001-A](#ata-102--design-document)**: Detailed Design - BlockThread Identificated Tree (BITT) Architecture
+- **[GP-CM-BITT-ARCH-001-A](#ata-102--design-document)**: Detailed Design - BlockThread Identification Tree (BITT) Architecture
 
 #### **GP-GB-RCOS-PL1-WING-001-A: Robotics Cooperating Systems (ATA 103)**
 - **[GP-GB-RCOS-PL1-WING-001-A](#ata-103--robotics-cooperating-systems)**: Robotics Cooperating System Description - Wing Box Assembly Cell 3
