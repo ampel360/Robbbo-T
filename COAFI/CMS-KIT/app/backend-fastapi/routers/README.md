@@ -59,6 +59,54 @@ Router central para operaciones de búsqueda semántica, generación de embeddin
 
 ---
 
+### 📄 `document-interdependencies` – Interdependencias de Documentos
+
+Router para identificar y rastrear interdependencias entre documentos en diferentes dominios.
+
+**Endpoints disponibles:**
+
+| Método | Ruta                         | Descripción                                               | Seguridad         |
+|--------|------------------------------|-----------------------------------------------------------|-------------------|
+| GET    | `/document-interdependencies`| Identificar y rastrear interdependencias entre documentos | Requiere token    |
+
+---
+
+### 📄 `document-status` – Estado de Documentos
+
+Router para rastrear el estado de finalización de documentos, ciclos de revisión y flujos de aprobación.
+
+**Endpoints disponibles:**
+
+| Método | Ruta                         | Descripción                                               | Seguridad         |
+|--------|------------------------------|-----------------------------------------------------------|-------------------|
+| GET    | `/document-status`           | Rastrear el estado de finalización de documentos          | Requiere token    |
+
+---
+
+### 📄 `update-related-documents` – Actualización de Documentos Relacionados
+
+Router para actualizar automáticamente los documentos relacionados cuando se realizan cambios.
+
+**Endpoints disponibles:**
+
+| Método | Ruta                         | Descripción                                               | Seguridad         |
+|--------|------------------------------|-----------------------------------------------------------|-------------------|
+| POST   | `/update-related-documents`  | Actualizar automáticamente los documentos relacionados    | Requiere token    |
+
+---
+
+### 📄 `integrate-version-control` – Integración de Control de Versiones
+
+Router para asegurar que todos los documentos se gestionen en un sistema de control de versiones que mantenga el historial de revisiones.
+
+**Endpoints disponibles:**
+
+| Método | Ruta                         | Descripción                                               | Seguridad         |
+|--------|------------------------------|-----------------------------------------------------------|-------------------|
+| POST   | `/integrate-version-control` | Asegurar la gestión de documentos en un sistema de control de versiones | Requiere token    |
+
+---
+
 ## 🎯 Objetivo General
 
 > Desacoplar y escalar funcionalidades del backend para permitir:

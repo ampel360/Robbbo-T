@@ -1,4 +1,3 @@
-```tsx
 'use client'
 
 import { useEffect } from 'react'
@@ -8,7 +7,7 @@ import { useDashboardStore } from '@/lib/stores/dashboard'
 import { LoaderCircle } from 'lucide-react'
 
 export default function DashboardPage() {
-  const { nodes, fetchNodes, loading } = useDashboardStore()
+  const { nodes, fetchNodes, loading, documentInterdependencies, documentStatus, updateRelatedDocuments, integrateVersionControl } = useDashboardStore()
 
   useEffect(() => {
     fetchNodes()
@@ -36,10 +35,33 @@ export default function DashboardPage() {
           ))
         )}
       </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+        <Card>
+          <CardContent className="p-4">
+            <h2 className="font-semibold text-lg">Document Interdependencies</h2>
+            <p className="text-sm text-muted-foreground">{documentInterdependencies}</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4">
+            <h2 className="font-semibold text-lg">Document Status</h2>
+            <p className="text-sm text-muted-foreground">{documentStatus}</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4">
+            <h2 className="font-semibold text-lg">Update Related Documents</h2>
+            <p className="text-sm text-muted-foreground">{updateRelatedDocuments}</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4">
+            <h2 className="font-semibold text-lg">Integrate Version Control</h2>
+            <p className="text-sm text-muted-foreground">{integrateVersionControl}</p>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   )
 }
-```
-
-
-
