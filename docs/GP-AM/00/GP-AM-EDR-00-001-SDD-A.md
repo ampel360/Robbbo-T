@@ -4,6 +4,8 @@
 
 The **GP-AM-EDR-00-001-SDD-A** is the foundational System Description Document (SDD) for the AMPEL360XWLRGA aircraft. This comprehensive technical document provides a complete system-level description of the entire aircraft, serving as the primary reference for understanding the aircraft's architecture, systems integration, and operational capabilities.
 
+For a detailed Table of Contents for all COAFI Parts (0-VI), refer to the [COAFI Index](../../COAFI/Index.md).
+
 ## Document Purpose
 
 This SDD serves multiple critical functions within the AMPEL360XWLRGA documentation framework:

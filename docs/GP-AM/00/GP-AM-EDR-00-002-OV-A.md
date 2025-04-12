@@ -18,6 +18,8 @@ The scope of this document encompasses:
 - The approach to interface management
 - The implementation strategy for the AMPEL360XWLRGA aircraft
 
+For a detailed Table of Contents for all COAFI Parts (0-VI), refer to the [COAFI Index](../../COAFI/Index.md).
+
 ### 1.2 Document Structure
 
 This document is organized as follows:
