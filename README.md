@@ -13,6 +13,227 @@ Repositorio único en **MetaNube** que centraliza configuraciones personales, ru
 
 ---
 
+**File 1: `GP-FD-00-001-OV-A.md`**
+
+```markdown
+# GP-FD-00-001-OV-A: Introduction & Program Vision Overview
+
+**COAFI Part:** 0 - Program Foundations (GP-FD)
+**Chapter:** FD.00 - Introduction & Program Vision
+**Subject:** 00-01 - Introduction & Program Vision Overview
+**Info Code(s):** OV
+**Version:** A (Initial Draft)
+**Status:** Draft
+**Classification:** Internal Use Only
+**Date:** 2024-03-29
+**Author:** GAIA AIR Core Team
+
+[Return to AToC.md](../AToC.md)
+[Return to COAFI.MD Main Document](../COAFI.md)
+
+---
+
+## 1. Purpose and Scope
+
+This document serves as the foundational entry point to the **GAIA AIR** program and the **COAFI (Cosmic Omnidevelopable Aero Foresights Index)** documentation library. Its purpose is to articulate the overarching vision, mission, and guiding philosophy that drive the development of GAIA AIR's integrated aerospace ecosystem.
+
+The scope encompasses the high-level strategic intent, including the integration of atmospheric flight (Airframes - [Part I](./ToC-GP-AM.md)), exo-atmospheric systems (Spaceframes - [Part II](./ToC-GP-SM.md)), common digital infrastructure ([Part III](./ToC-GP-CN.md)), ground support ([Part IV](./ToC-GP-GB.md)), operational management ([Part V](./ToC-GP-PM.md)), and advanced robotics ([Part VI](./ToC-GP-RS.md)).
+
+## 2. GAIA AIR Vision Statement (Summary)
+
+GAIA AIR envisions a future where aerospace technology operates in symbiotic harmony with planetary and cosmic ecosystems. We aim to engineer intelligent, sustainable, and ethically-guided systems for air, space, and beyond, leveraging advancements in:
+
+*   **Artificial Intelligence (AI):** Federated, explainable AI (i-Aher0) for design, operations, and maintenance.
+*   **Quantum Technologies:** Quantum-augmented computing (QAO), sensing, and propulsion (QEE/QSM).
+*   **Advanced Materials:** Lightweight, resilient, and sustainable materials (AMPEL/BNNT).
+*   **Decentralized Trust:** Blockchain infrastructure (BITT) for verifiable data provenance and process integrity.
+
+Our mission is to develop and deploy aerospace capabilities that are not only high-performing but also regenerative, responsible, and transparent, contributing positively to human progress and cosmic understanding.
+
+## 3. Role of COAFI
+
+The COAFI framework is the **Master Index** and structural backbone for all technical knowledge ("Mastery Manuals") within GAIA AIR. It ensures:
+
+*   **Traceability:** Linking foundational principles ([Part 0](./ToC-GP-FD.md)) through design, implementation, and operation.
+*   **Modularity:** Enabling independent development and integration of system components.
+*   **Consistency:** Providing a standardized structure and nomenclature across all domains.
+*   **Accessibility:** Serving as the central navigation point for all technical documentation.
+
+Refer to [AToC.md](../AToC.md) for the complete index structure.
+
+## 4. Guiding Principles
+
+The GAIA AIR vision is built upon core principles detailed in [GP-FD-00-002-OV-A.md](./GP-FD-00-002-OV-A.md), including:
+
+*   Ethical Design and Operation (Ref: [FD.04](./ToC-GP-FD.md#fd04-ethical-ai--operational-framework))
+*   Sustainability and Lifecycle Responsibility (Ref: [GP-PM-LIFE-*](../GP-PM/GP-PM-LIFE-0500-04-*.md))
+*   Transparency and Explainability (XAI)
+*   Federated Collaboration and Open Standards (where applicable)
+*   Human-Centricity and Safety
+
+## 5. Program Roadmap Overview
+
+A high-level overview of the program's phased development and strategic milestones is provided in [GP-FD-00-003-PLAN-A.md](./GP-FD-00-003-PLAN-A.md).
+
+## 6. References and Further Reading
+
+*   [GP-FD-00-002-OV-A.md](./GP-FD-00-002-OV-A.md): Core Principles of GAIA AIR
+*   [GP-FD-00-003-PLAN-A.md](./GP-FD-00-003-PLAN-A.md): Program Roadmap & Phasing
+*   [GP-FD-01-*](./ToC-GP-FD.md#fd01-key-theories--proofs): Key Theories & Proofs Documents
+*   [../AToC.md](../AToC.md): Master Table of Contents
+
+---
+```
+
+---
+
+**File 2: `GP-AM-AMPEL-0100-00-004-OV-A.md`**
+
+```markdown
+# GP-AM-AMPEL-0100-00-004-OV-A: Core Design Principles (Airframe)
+
+**COAFI Part:** I - Flight Systems (AMPEL360XWLRGA) (GP-AM)
+**Chapter:** ATA 00 - Intro & General
+**Subject:** 00-20 - Core Design Principles
+**Info Code(s):** OV
+**Version:** A (Initial Draft)
+**Status:** Draft
+**Classification:** Internal Use Only
+**Date:** 2024-03-29
+**Author:** GAIA AIR Airframe Design Team
+
+[Return to AToC.md](../../AToC.md)
+[Return to Part I ToC](../ToC-GP-AM.md)
+[Return to COAFI.MD Main Document](../../COAFI.md)
+
+---
+
+## 1. Purpose and Scope
+
+This document outlines the core design principles that govern the development of the **AMPEL360XWLRGA** airframe system within the GAIA AIR program. These principles translate the overarching GAIA AIR vision ([GP-FD-00-001-OV-A.md](../../GP-FD/GP-FD-00-001-OV-A.md)) into specific guidelines for atmospheric flight systems detailed in COAFI [Part I](../ToC-GP-AM.md).
+
+The scope includes foundational principles influencing structural design, aerodynamics, propulsion integration, systems engineering, materials selection, manufacturing, and lifecycle management for the airframe.
+
+## 2. Foundational Design Principles
+
+The design of the AMPEL360XWLRGA airframe adheres to the following core principles:
+
+1.  **Safety First:** Design choices prioritize inherent safety, exceeding regulatory requirements ([GP-FD-02-002-REQ-A.md](../../GP-FD/GP-FD-02-002-REQ-A.md)). This includes robust structural integrity (ATA 5X), redundant systems (e.g., ATA 27, 29), and advanced hazard detection/mitigation (ATA 26, 30).
+2.  **Maximized Efficiency:** Strive for optimal aerodynamic performance (ATA 57), energy efficiency (hybrid/quantum propulsion integration - ATA 7X), and minimized operational waste throughout the flight envelope.
+3.  **Sustainability & Circularity:** Employ advanced, sustainable materials (AMPEL Philosophy - [GP-AM-AMPEL-0100-00-005-OV-A.md](./GP-AM-AMPEL-0100-00-005-OV-A.md)) and design for disassembly, reuse, and responsible end-of-life management ([GP-PM-LIFE-0500-04-005-PLAN-A.md](../../GP-PM/GP-PM-LIFE-0500-04-005-PLAN-A.md)). Minimize environmental impact during manufacturing and operation.
+4.  **Intelligent Integration:** Seamlessly integrate AI (i-Aher0) for diagnostics ([ATA 45](./GP-AM-AMPEL-0100-45-*.md)), prognostics, adaptive flight control ([ATA 22](./GP-AM-AMPEL-0100-22-*.md)), and operational optimization. Ensure secure data flow and processing ([Part III](../../GP-CN/ToC-GP-CN.md)).
+5.  **Manufacturability & Maintainability:** Design for efficient, potentially automated production (Ref: [Part IV](../../GP-GB/ToC-GP-GB.md)), and ease of maintenance, leveraging predictive insights ([ATA 05](./GP-AM-AMPEL-0100-05-*.md)) and accessible design (ATA 06, 12).
+6.  **Adaptability & Modularity:** Design systems with inherent flexibility to accommodate future technology insertions (e.g., upgraded sensors, propulsion modules - ATA 99) and mission variations with minimal redesign.
+7.  **Human-Centric Operation:** Ensure intuitive interfaces ([ATA 31](./GP-AM-AMPEL-0100-31-*.md)), pilot/crew workload reduction, and enhanced passenger experience ([ATA 25](./GP-AM-AMPEL-0100-25-*.md)) where applicable.
+
+## 3. Relationship to GAIA AIR Core Principles
+
+These airframe-specific principles directly support the broader GAIA AIR program principles outlined in [GP-FD-00-002-OV-A.md](../../GP-FD/GP-FD-00-002-OV-A.md), applying them within the context of atmospheric vehicle design and operation. Ethical considerations ([GP-FD-04-*](../../GP-FD/GP-FD-04-*.md)) guide the implementation of intelligent systems within the airframe.
+
+## 4. Application Across ATA Chapters
+
+These principles influence the requirements, design choices, and validation criteria documented across all relevant ATA chapters within [Part I](../ToC-GP-AM.md). Specific examples are elaborated within the respective system/component documentation (e.g., SDD, SPEC, DD).
+
+## 5. References and Further Reading
+
+*   [GP-FD-00-001-OV-A.md](../../GP-FD/GP-FD-00-001-OV-A.md): Program Vision Overview
+*   [GP-FD-00-002-OV-A.md](../../GP-FD/GP-FD-00-002-OV-A.md): Core Principles of GAIA AIR
+*   [GP-AM-AMPEL-0100-00-005-OV-A.md](./GP-AM-AMPEL-0100-00-005-OV-A.md): Advanced Materials Philosophy (AMPEL)
+*   [../ToC-GP-AM.md](../ToC-GP-AM.md): Part I Table of Contents (Airframe)
+
+---
+```
+
+---
+
+**File 3: `GP-SM-AMPELPLUS-0200-71-001-OV-A.md`**
+
+```markdown
+# GP-SM-AMPELPLUS-0200-71-001-OV-A: Propulsion System Overview (Spacecraft)
+
+**COAFI Part:** II - Spaceframes (AMPEL+) (GP-SM)
+**Chapter:** AS 71 - Propulsion Systems (Spacecraft)
+**Subject:** 71-01 - Propulsion System Overview (Main, RCS, Quantum)
+**Info Code(s):** OV, SDD
+**Version:** A (Initial Draft)
+**Status:** Draft
+**Classification:** Internal Use Only
+**Date:** 2024-03-29
+**Author:** GAIA AIR Spaceframe Propulsion Team
+
+[Return to AToC.md](../../AToC.md)
+[Return to Part II ToC](../ToC-GP-SM.md)
+[Return to COAFI.MD Main Document](../../COAFI.md)
+
+---
+
+## 1. Purpose and Scope
+
+This document provides a high-level overview and system description (OV/SDD) of the propulsion systems employed by the **AMPEL+** spaceframes within the GAIA AIR program ([Part II](../ToC-GP-SM.md)). It outlines the different propulsion types, their primary functions, architectural integration, and links to detailed design and operational documentation.
+
+The scope covers main propulsion for orbital maneuvering and trajectory changes, Reaction Control Systems (RCS) for attitude control and fine adjustments, and the integration strategy for advanced concepts like Quantum Propulsion (QEE/QSM).
+
+## 2. Propulsion Architecture Philosophy
+
+The AMPEL+ propulsion architecture is designed for:
+
+*   **Mission Adaptability:** Supporting diverse mission profiles from LEO to cislunar and potentially beyond (Ref: [GP-SM-AMPELPLUS-0200-00-002-OV-A.md](../GP-SM-AMPELPLUS-0200-00-002-OV-A.md)).
+*   **High Efficiency:** Maximizing specific impulse (Isp) and propellant utilization for mission longevity and payload capacity.
+*   **Reliability & Safety:** Incorporating redundancy, robust health monitoring ([AS 45](../GP-SM-AMPELPLUS-0200-45-*.md)), and safe propellant handling procedures ([AS 73](../GP-SM-AMPELPLUS-0200-73-*.md)).
+*   **Modularity:** Enabling integration of different propulsion technologies based on mission needs.
+*   **Advanced Technology Integration:** Providing pathways for incorporating novel propulsion systems like Quantum Thrusters.
+
+## 3. Propulsion System Types Overview
+
+AMPEL+ spaceframes utilize a hybrid approach, potentially integrating the following systems:
+
+1.  **Main Propulsion System (Chemical/Electric):**
+    *   **Function:** Primary delta-V maneuvers (orbital changes, burns).
+    *   **Technologies:** May include high-performance chemical engines (cryogenic or storable bipropellants) or advanced electric propulsion (Hall effect thrusters, ion engines) depending on mission requirements.
+    *   **Details:** [GP-SM-AMPELPLUS-0200-71-10-DD-A.md](./GP-SM-AMPELPLUS-0200-71-10-DD-A.md), [AS 72](../GP-SM-AMPELPLUS-0200-72-*.md) Engine Details.
+
+2.  **Reaction Control System (RCS):**
+    *   **Function:** Attitude control, fine maneuvering, ullage, docking adjustments (Ref: [AS 88](../GP-SM-AMPELPLUS-0200-88-*.md)).
+    *   **Technologies:** Typically utilizes smaller chemical thrusters (monopropellant or bipropellant).
+    *   **Details:** [GP-SM-AMPELPLUS-0200-71-20-DD-A.md](./GP-SM-AMPELPLUS-0200-71-20-DD-A.md), [GP-SM-AMPELPLUS-0200-71-21-SPEC-A.md](./GP-SM-AMPELPLUS-0200-71-21-SPEC-A.md).
+
+3.  **Quantum Propulsion System (QPS - Q-Thruster):**
+    *   **Function:** Potential for high-efficiency, low/no-propellant primary or auxiliary propulsion based on QEE/QSM principles ([GP-FD-01-002-OV-A.md](../../GP-FD/GP-FD-01-002-OV-A.md)).
+    *   **Technologies:** Utilizes Quantum Ejector Engine / Quantum State Modulator modules.
+    *   **Status:** Advanced R&D / Technology Insertion Path.
+    *   **Details:** [GP-SM-AMPELPLUS-0200-72-Q01-*](./GP-SM-AMPELPLUS-0200-72-Q01-*.md).
+
+## 4. System Integration
+
+Propulsion systems are tightly integrated with other spacecraft subsystems:
+
+*   **Guidance, Navigation & Control (GNC - AS 22):** Provides thrust commands and attitude control inputs.
+*   **Electrical Power Subsystem (EPS - AS 24):** Supplies power, especially critical for electric and quantum propulsion.
+*   **Thermal Control System (STCS - AS 21):** Manages heat generated by propulsion components.
+*   **Structures (AS 51, 54):** Provides mounting and manages thrust loads.
+*   **Command & Data Handling (C&DH - AS 31):** Processes commands and telemetry.
+*   **Propellant Management (AS 73):** Stores and delivers propellant/coolant.
+
+## 5. Safety and Reliability
+
+Safety considerations include propellant handling protocols, redundant valve/control systems, FDIR ([AS 45](../GP-SM-AMPELPLUS-0200-45-*.md)), and emergency shutdown procedures ([AS 76](../GP-SM-AMPELPLUS-0200-76-*.md)). Reliability is addressed through component selection, testing ([TV-*](../../GP-PM/ToC-GP-PM.md#pm03-testing--validation)), and predictive health monitoring.
+
+## 6. References and Further Reading
+
+*   [../ToC-GP-SM.md](../ToC-GP-SM.md): Part II Table of Contents (Spaceframe)
+*   [AS 72](../GP-SM-AMPELPLUS-0200-72-*.md): Engine Details (Chemical/Electric)
+*   [AS 72-Q01](../GP-SM-AMPELPLUS-0200-72-Q01-*.md): Quantum Propulsion Extension
+*   [AS 73](../GP-SM-AMPELPLUS-0200-73-*.md): Propellant Management
+*   [AS 22](../GP-SM-AMPELPLUS-0200-22-*.md): Guidance, Navigation & Control (GNC)
+*   [AS 24](../GP-SM-AMPELPLUS-0200-24-*.md): Electrical Power Subsystem (EPS)
+*   [AS 45](../GP-SM-AMPELPLUS-0200-45-*.md): Spacecraft Health Management System (SHMS)
+*   [GP-FD-01-002-OV-A.md](../../GP-FD/GP-FD-01-002-OV-A.md): Quantum Propulsion Theory Principles
+
+---
+
+````
+---
+
 ## 📁 Estructura del Repositorio
 
 ```mdx
