@@ -17,39 +17,6 @@ Repositorio único en **MetaNube** que centraliza configuraciones personales, ru
 
 ```mdx
 
-
-
-key
-Get API key
-Studio
-Dashboard
-Documentation
-open_in_new
-Amedeo Pelliccia
-Copy of COAFI Mastery Manuals Index
-GAIA AIR: COAFI Master Table of Contents (AToC.md) - Index to Technical Mastery Manuals
-(Note: This Master Table of Contents (AToC.md) serves as the central index for the entire COAFI (Cosmic Omnidevelopable Aero Foresights Index) technical documentation library, often referred to as the GAIA AIR "Mastery Manuals". It provides a fully enumerated, hierarchical structure linking to specific COAFI Data Modules (documents) identified by their unique Infocode and filename. Document Types (Info Codes) are indicated for each entry. The detailed technical content resides within the linked .md files.)*
-Return to COAFI.MD Main Document
-Document Parts Overview
-Part	Domain	Code	Theme	Purpose within COAFI Library
-Part 0	Program Foundations	GP-FD	Vision, Theories, Compliance, Ethics	Foundational Principles & Context Manuals
-Part I	Flight Systems (AMPEL360XWLRGA)	GP-AM	Aircraft Systems (Atmospheric)	Airframe Design, System & Maintenance Manuals
-Part II	Spaceframes (AMPEL+)	GP-SM	Spacecraft Systems (Exo-atmospheric)	Spaceframe Design, System & Ops Manuals
-Part III	Common Networks & Systems	GP-CN	AI, QAO, Security, Blockchain, BITT, AMPEL Core	Shared Digital Infrastructure Manuals
-Part IV	Ground Infrastructure & Automation	GP-GB	Launchpads, Fuel, Data Nodes, Ground Robotics	Ground Support & Automation Manuals
-Part V	Project Management & Operations	GP-PM	Certification, WBS, Training, Lifecycle (EoL)	Program Management & Operational Manuals
-Part VI	Robotic Systems (RAME Fleet)	GP-RS	Advanced Space Robotics & Operations	Robotic Systems Design & Ops Manuals
-Master Index - Contents
-(Links below point to relative file locations within the COAFI documentation structure)
-... (content truncated for brevity — full ToC structure preserved in document) ...
-The core change is in the framing and presentation rather than a fundamental restructuring, as the previous fully enumerated version already functioned as this index. We will make the purpose explicit and ensure the formatting consistently supports this role.
-Refinements:
-Explicit Purpose: Add introductory text clearly stating this ToC.md is the master index linking to all detailed COAFI technical documents ("Mastery Manuals").
-Focus on Links: Ensure every lowest-level entry is clearly presented as a link to a specific document file.
-Consistent Format: Maintain the [Filename](./Filename): Subject Number: Subject Name - *(Info Code(s))* format for maximum clarity.
-Clarity on Scope: Reiterate that this ToC defines the structure and location of the detailed manuals/documents.
-Removal of "White Book" Context: Eliminate any language specific to a "White Book"; this is the master COAFI index.
-Info Code Mapping Note: Retain the note that the specific Info Code assignments are illustrative and depend on the final content of each document.
 # GAIA AIR: COAFI Master Table of Contents (AToC.md) - Index to Technical Mastery Manuals
 
 **(Note:** This Master Table of Contents (AToC.md) serves as the central index for the entire **COAFI (Cosmic Omnidevelopable Aero Foresights Index)** technical documentation library, often referred to as the GAIA AIR "Mastery Manuals". It provides a fully enumerated, hierarchical structure linking to specific COAFI Data Modules (documents) identified by their unique Infocode and filename. Document Types (Info Codes) are indicated for each entry. The detailed technical content resides within the linked `.md` files.)*
