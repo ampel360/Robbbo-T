@@ -13,6 +13,7 @@ import mimetypes
 # Import your custom routers
 from routers.services import semantic_bridge  # <-- asegúrate que semantic_bridge.py tiene router = APIRouter()
 from routers import review  # Import the new review router
+from core.memory.memory_service import memory_service  # Import the memory service
 
 app = FastAPI(
     title="COAFI Quantum Memory API",
@@ -103,6 +104,22 @@ def execute_files(directory):
                     }
 
     return results
+
+@app.get("/document-interdependencies")
+async def document_interdependencies():
+    return await memory_service.getDocumentInterdependencies()
+
+@app.get("/document-status")
+async def document_status():
+    return await memory_service.getDocumentStatus()
+
+@app.post("/update-related-documents")
+async def update_related_documents(document_id: str):
+    return await memory_service.updateRelatedDocuments(document_id)
+
+@app.post("/integrate-version-control")
+async def integrate_version_control():
+    return await memory_service.integrateVersionControl()
 
 # Mount routers
 app.include_router(semantic_bridge.router, prefix="/semantic-query", tags=["Semantic Query"])
