@@ -1,5 +1,12 @@
 # GAIA AIR – Configuración Personal de Acceso a Mi Información
 
+```Co-CiT
+"A good team is not made by similarity,
+but by difference aligned in purpose.
+And a good agent is not one that follows,
+but one that makes the right divergence count." Robbbo-T's QuTies
+```
+
 [![Repo Structure](https://github.com/Robbbo-T/Robbbo-T/actions/workflows/create-repo-structure.yml/badge.svg?event=branch_protection_rule)](https://github.com/Robbbo-T/Robbbo-T/actions/workflows/create-repo-structure.yml)
 
 Repositorio único en **MetaNube** que centraliza configuraciones personales, rutas de propiedad y derechos individuales. Parte de la arquitectura integral **GAIA AIR**.
