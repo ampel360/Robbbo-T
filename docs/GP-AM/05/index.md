@@ -28,3 +28,5 @@
 
 #### **GP-PM-EOL-SENSOR-TEMP-001-A: End of Life Protocol (ATA 106)**
 - **[GP-PM-EOL-SENSOR-TEMP-001-A](#ata-106--end-of-life-protocol)**: Dignified Component Functional End of Life Protocol - Temperature Sensors (XYZ-T1)
+
+For a detailed Table of Contents for all COAFI Parts (0-VI), refer to the [COAFI Index](../../COAFI/Index.md).
