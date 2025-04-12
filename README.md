@@ -1,6 +1,29 @@
-# Robbbo-T Repository
+# GAIA AIR – Configuración Personal de Acceso a Mi Información
 
-[![.github/workflows/create-repo-structure.yml](https://github.com/Robbbo-T/Robbbo-T/actions/workflows/create-repo-structure.yml/badge.svg?event=branch_protection_rule)](https://github.com/Robbbo-T/Robbbo-T/actions/workflows/create-repo-structure.yml)
+[![Repo Structure](https://github.com/Robbbo-T/Robbbo-T/actions/workflows/create-repo-structure.yml/badge.svg?event=branch_protection_rule)](https://github.com/Robbbo-T/Robbbo-T/actions/workflows/create-repo-structure.yml)
+
+Repositorio único en **MetaNube** que centraliza configuraciones personales, rutas de propiedad y derechos individuales. Parte de la arquitectura integral **GAIA AIR**.
+
+---
+
+## 📁 Estructura del Repositorio
+
+```mdx
+configuracion_personal_acceso_mi_informacion/
+├── directorios/ 
+├── rutas/ 
+├── derechos/ 
+├── scripts/ 
+└── README.md
+```
+
+## 🛡️ Seguridad
+
+Este repositorio puede ser privado. Si trabajas con credenciales o rutas sensibles, asegúrate de configurar adecuadamente los archivos `.gitignore` y las variables de entorno.
+
+---
+
+© Robbbo-T · Todos los derechos reservados.](https://github.com/Robbbo-T/Robbbo-T/actions/workflows/create-repo-structure.yml/badge.svg?event=branch_protection_rule)](https://github.com/Robbbo-T/Robbbo-T/actions/workflows/create-repo-structure.yml)
 
 ## Identification Code and Version Control
 
