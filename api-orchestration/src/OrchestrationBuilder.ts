@@ -23,6 +23,7 @@ export class OrchestrationBuilder {
     'payment-service': 'http://payment-service-api:8080',
     'logistics-service': 'http://logistics-service-api:8080',
     'notification-service': 'http://notification-service-api:8080',
+    'document-service': 'http://document-service-api:8080', // Added document service
   };
 
   constructor(name: string) {
@@ -223,5 +224,15 @@ export class OrchestrationBuilder {
         { version: '1.1', date: '2023-02-01', changes: 'Minor updates' }
       ]
     };
+  }
+
+  public async generateTechnicalReferenceDocument(request: any): Promise<any> {
+    const serviceUrl = this.serviceRegistry['document-service'];
+    if (!serviceUrl) {
+      throw new Error('Document service not available');
+    }
+
+    const response = await axios.post(`${serviceUrl}/generate`, request);
+    return response.data;
   }
 }

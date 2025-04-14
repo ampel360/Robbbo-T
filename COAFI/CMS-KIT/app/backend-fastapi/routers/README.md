@@ -107,6 +107,42 @@ Router para asegurar que todos los documentos se gestionen en un sistema de cont
 
 ---
 
+### 📄 `generate-document` – Generación de Documentos Técnicos
+
+Router para generar documentos técnicos estándar en cumplimiento con la industria aeroespacial.
+
+**Endpoints disponibles:**
+
+| Método | Ruta                         | Descripción                                               | Seguridad         |
+|--------|------------------------------|-----------------------------------------------------------|-------------------|
+| POST   | `/generate-document`         | Generar un documento técnico estándar                     | Requiere token    |
+
+**Ejemplo de solicitud:**
+
+```json
+{
+  "title": "Technical Reference Document",
+  "content": "This is the content of the technical reference document.",
+  "metadata": {
+    "author": "John Doe",
+    "date": "2023-01-01",
+    "version": "1.0"
+  }
+}
+```
+
+**Ejemplo de respuesta:**
+
+```json
+{
+  "document_id": "doc-12345",
+  "status": "generated",
+  "url": "http://example.com/documents/doc-12345"
+}
+```
+
+---
+
 ## 🎯 Objetivo General
 
 > Desacoplar y escalar funcionalidades del backend para permitir:
