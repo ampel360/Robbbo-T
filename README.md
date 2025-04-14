@@ -1,4 +1,4 @@
-# GAIA AIR – Aerospace Domained Configuration and Content Geneneration for Technical Engineering and technical project management data 
+# GAIA AIR – Aerospace Domained Configuration and Content Geneneration for Design engineering and Technical Project SL/WD
 
 ```Co-CiT 
 "A good team is not made by similarity,
