@@ -1,6 +1,6 @@
-# GAIA AIR – Configuración Personal de Acceso a Mi Información
+# GAIA AIR – Configuration and Content Geneneration for Technical Engineering and technical project management data 
 
-```Co-CiT
+```Co-CiT 
 "A good team is not made by similarity,
 but by difference aligned in purpose.
 And a good agent is not one that follows,
