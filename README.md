@@ -1,795 +1,3997 @@
-name: Create API Integration Repository Structure
-
-on:
-  workflow_dispatch:
-
-jobs:
-  create-structure:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        
-      - name: Set up directory structure
-        run: |
-          mkdir -p adaptation-layer/src
-          mkdir -p microservices-facades/src
-          mkdir -p transformation-framework/src
-          mkdir -p metadata-driven-approach/src
-          mkdir -p api-orchestration/src
-          mkdir -p common/src
-          mkdir -p docs/diagrams
-          
-      - name: Create package.json
-        run: |
-          cat > package.json << 'EOL'
-          {
-            "name": "api-integration-strategy",
-            "version": "1.0.0",
-            "description": "Comprehensive API Integration Strategy with multiple approaches",
-            "scripts": {
-              "start:adaptation": "node adaptation-layer/src/index.js",
-              "start:facades": "node microservices-facades/src/index.js",
-              "start:transformation": "node transformation-framework/src/index.js",
-              "start:metadata": "node metadata-driven-approach/src/index.js",
-              "start:orchestration": "node api-orchestration/src/index.js",
-              "test": "jest"
-            },
-            "keywords": ["api", "integration", "rest", "graphql", "soap", "facade", "adaptation", "transformation"],
-            "author": "Robbbo-T",
-            "license": "MIT",
-            "dependencies": {
-              "express": "^4.18.2",
-              "axios": "^1.3.4",
-              "graphql": "^16.6.0",
-              "apollo-server-express": "^3.12.0",
-              "soap": "^1.0.0",
-              "protobufjs": "^7.2.3",
-              "ajv": "^8.12.0",
-              "openapi-types": "^12.1.0",
-              "swagger-ui-express": "^4.6.2"
-            },
-            "devDependencies": {
-              "typescript": "^5.0.4",
-              "jest": "^29.5.0",
-              "supertest": "^6.3.3",
-              "@types/express": "^4.17.17",
-              "@types/node": "^18.15.11"
+[
+  {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "COAFI Master Structure",
+    "description": "Schema for the entire COAFI documentation library hierarchy, representing the AToC.md structure as JSON.",
+    "type": "object",
+    "properties": {
+      "coafiLibrary": {
+        "type": "object",
+        "description": "Contains the different parts of the COAFI library.",
+        "properties": {
+          "partsOverview": {
+            "type": "array",
+            "description": "Metadata about each COAFI Part.",
+            "items": {
+              "$ref": "#/definitions/CoafiPartOverview"
+            }
+          },
+          "partsContent": {
+            "type": "array",
+            "description": "Content structure for each COAFI Part.",
+            "items": {
+              "$ref": "#/definitions/CoafiPartContent"
             }
           }
-          EOL
-          
-      - name: Create architecture diagram
-        run: |
-          cat > docs/diagrams/architecture-diagram.mmd << 'EOL'
-          graph TD
-              Client[Client Applications] --> Gateway[API Gateway]
-              Gateway --> AL[Adaptation Layer]
-              Gateway --> MSF[Microservices with API Facades]
-              Gateway --> TF[Transformation Framework]
-              Gateway --> MDA[Metadata-Driven Approach]
-              Gateway --> AO[API Orchestration]
-              
-              AL -->|Transforms| Backend1[Backend Services]
-              MSF --> |Routes to| Backend2[Backend Services]
-              TF --> |Converts data for| Backend3[Backend Services]
-              MDA --> |Generates endpoints for| Backend4[Backend Services]
-              AO --> |Orchestrates calls to| Backend5[Backend Services]
-              
-              subgraph "Integration Strategies"
-                  AL
-                  MSF
-                  TF
-                  MDA
-                  AO
-              end
-              
-              subgraph "Backend Systems"
-                  Backend1
-                  Backend2
-                  Backend3
-                  Backend4
-                  Backend5
-              end
-          EOL
-      
-      - name: Create CONTRIBUTING.md
-        run: |
-          cat > CONTRIBUTING.md << 'EOL'
-          # Contributing to API Integration Strategy
-          
-          Thank you for considering contributing to this project! Here's how you can help:
-          
-          ## Code of Conduct
-          
-          This project adheres to a Code of Conduct. By participating, you are expected to uphold this code.
-          
-          ## How to Contribute
-          
-          1. Fork the repository
-          2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-          3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-          4. Push to the branch (`git push origin feature/amazing-feature`)
-          5. Open a Pull Request
-          
-          ## Development Setup
-          
-          ```bash
-          npm install
-          ```
-          
-          ## Testing
-          
-          ```bash
-          npm test
-          ```
-          
-          ## Style Guide
-          
-          Please follow the existing code style and structure.
-          
-          ## Issue Reporting
-          
-          For bug reports or feature requests, please use the GitHub issue tracker.
-          EOL
-          
-      - name: Create LICENSE
-        run: |
-          cat > LICENSE << 'EOL'
-          MIT License
-          
-          Copyright (c) 2025 Robbbo-T
-          
-          Permission is hereby granted, free of charge, to any person obtaining a copy
-          of this software and associated documentation files (the "Software"), to deal
-          in the Software without restriction, including without limitation the rights
-          to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-          copies of the Software, and to permit persons to whom the Software is
-          furnished to do so, subject to the following conditions:
-          
-          The above copyright notice and this permission notice shall be included in all
-          copies or substantial portions of the Software.
-          
-          THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-          IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-          FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-          AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-          LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-          OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-          SOFTWARE.
-          EOL
-          
-      - name: Initialize approach directories with READMEs
-        run: |
-          for dir in adaptation-layer microservices-facades transformation-framework metadata-driven-approach api-orchestration common; do
-            cat > ${dir}/README.md << EOL
-          # ${dir}
-          
-          This directory contains the implementation for the ${dir} approach of the API Integration Strategy.
-          
-          ## Overview
-          
-          TODO: Add specific information about this approach.
-          
-          ## Getting Started
-          
-          \`\`\`bash
-          npm install
-          npm run start:${dir#*/}
-          \`\`\`
-          
-          ## Architecture
-          
-          TODO: Add architecture diagram specific to this approach.
-          
-          ## Implementation Details
-          
-          TODO: Add implementation details.
-          EOL
-          done
-          
-      - name: Create API Orchestration sample
-        run: |
-          mkdir -p api-orchestration/src/examples
-          cat > api-orchestration/src/examples/OrderProcessingOrchestration.ts << 'EOL'
-          import { OrchestrationBuilder } from '../OrchestrationBuilder';
-          
-          /**
-           * Example Order Processing Orchestration that coordinates between
-           * multiple backend services to process an order
-           */
-          export function createOrderProcessingOrchestration() {
-            const builder = new OrchestrationBuilder('order-processing');
-            
-            return builder
-              .step('validate-inventory')
-                .callService('inventory-service', '/api/check-availability')
-                .withRequestTransform((request) => ({
-                  productIds: request.items.map(item => item.productId),
-                  quantities: request.items.map(item => item.quantity)
-                }))
-                .withResponseCondition((response) => response.allAvailable)
-              .step('process-payment')
-                .callService('payment-service', '/api/payments')
-                .withRequestTransform((request, context) => ({
-                  amount: request.totalAmount,
-                  currency: request.currency,
-                  paymentMethod: request.paymentDetails,
-                  orderId: context.orderId
-                }))
-              .step('reserve-inventory')
-                .callService('inventory-service', '/api/reserve')
-                .withRequestTransform((request, context) => ({
-                  orderId: context.orderId,
-                  items: request.items
-                }))
-              .step('create-shipment')
-                .callService('logistics-service', '/api/shipments')
-                .withRequestTransform((request, context) => ({
-                  orderId: context.orderId,
-                  address: request.shippingAddress,
-                  items: request.items
-                }))
-              .step('send-confirmation')
-                .callService('notification-service', '/api/notify')
-                .withRequestTransform((request, context) => ({
-                  to: request.customerEmail,
-                  template: 'order-confirmation',
-                  data: {
-                    orderId: context.orderId,
-                    items: request.items,
-                    total: request.totalAmount,
-                    shipmentId: context.shipmentId
-                  }
-                }))
-              .build();
+        },
+        "required": [
+          "partsOverview",
+          "partsContent"
+        ]
+      }
+    },
+    "required": [
+      "coafiLibrary"
+    ],
+    "definitions": {
+      "CoafiPartOverview": {
+        "type": "object",
+        "properties": {
+          "part": {
+            "type": "string",
+            "description": "e.g., Part 0, Part I"
+          },
+          "domain": {
+            "type": "string",
+            "description": "e.g., Program Foundations, Flight Systems"
+          },
+          "code": {
+            "type": "string",
+            "pattern": "^GP-[A-Z]{2}$",
+            "description": "e.g., GP-FD, GP-AM"
+          },
+          "theme": {
+            "type": "string"
+          },
+          "purpose": {
+            "type": "string",
+            "description": "Purpose within COAFI Library"
           }
-          EOL
-          
-      - name: Validate XML against S1000D Schema
-        run: |
-          xmllint --noout --schema schemas/S1000D_6.0_Schema.xsd data/ATA71.xml
-
-      - name: Run BREX Compliance Check
-        run: |
-          python tools/brex_check.py rules/ProjectBREX.xml data/ATA71.xml
-
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git commit -m "Initialize API Integration Strategy repository structure"
-          git push
-
-      - name: Create Aircraft General – System Description (ATA 00)
-        run: |
-          mkdir -p docs/GP-AM/00
-          cat > docs/GP-AM/00/GP-AM-AMPEL-0100-00-001-A.md << 'EOL'
-          # GP-AM-AMPEL-0100-00-001-A: Aircraft General – System Description (ATA 00)
-
-          **Document ID:** GP-AM-AMPEL-0100-00-001-A  
-          **Revision:** A  
-          **Status:** Released  
-          **Date:** 2025-01-15  
-
-          ## 1. Introduction
-
-          ### 1.1 Purpose and Scope
-
-          This document provides a comprehensive overview of the AMPEL360XWLRGA aircraft system. It serves as the primary entry point to the complete aircraft documentation and establishes the foundation for all subsequent technical documentation. The scope encompasses the general characteristics, design philosophy, operational concept, and high-level specifications of the aircraft.
-
-          ### 1.2 Document Structure
-
-          This document is organized as follows:
-          - Section 1: Introduction and document overview
-          - Section 2: Aircraft concept and mission profile
-          - Section 3: General characteristics and specifications
-          - Section 4: Design philosophy and innovation areas
-          - Section 5: Operational concept
-          - Section 6: Documentation schema and navigation
-
-          ### 1.3 Applicable Documents
-
-          The following documents form an integral part of this specification:
-
-          - GP-AM-EDR-00-001-SDD-A: Overall Aircraft System Description Document
-          - GP-AM-EDR-00-002-OV-A: COAFI Framework Overview for Part I
-          - GP-AM-EDR-00-003-RPT-A: Airworthiness & Certification Requirements Report
-
-          ### 1.4 Terminology and Abbreviations
-
-          | Abbreviation | Definition |
-          |--------------|------------|
-          | AEHCS | Advanced Energy Harvesting and Conversion System |
-          | ATA | Air Transport Association |
-          | COAFI | Comprehensive Operational and Functional Integration |
-          | CCS | Cryogenic Cooling System |
-          | QEE | Quantum Entanglement Engine |
-          | XWLRGA | Extended Wide Long Range Green Aircraft |
-
-          ## 2. Aircraft Concept and Mission Profile
-
-          ### 2.1 Concept Overview
-
-          The AMPEL360XWLRGA (Atmospheric Multi-Propulsion Eco-Logical 360° Extended Wide Long Range Green Aircraft) represents a revolutionary approach to commercial aviation. It is designed as a 100% green, zero-emission aircraft that integrates conventional aerospace technologies with quantum propulsion systems and advanced sustainable energy solutions.
-
-          The aircraft embodies GAIA Air's commitment to transforming air transportation through radical innovation while maintaining the highest standards of safety, reliability, and operational efficiency.
-
-          ### 2.2 Mission Profile
-
-          The AMPEL360XWLRGA is designed to fulfill the following mission profiles:
-
-          - **Primary Mission**: Long-range commercial passenger transport (up to 12,000 km) with zero direct emissions
-          - **Secondary Mission**: Medium-range high-capacity routes (3,000-6,000 km)
-          - **Tertiary Mission**: Specialized cargo transport for time-sensitive, high-value goods
-
-          The aircraft is optimized for:
-          - Cruise altitude: 10,000-13,000 meters
-          - Cruise speed: Mach 0.85-0.92
-          - Maximum operating altitude: 15,000 meters
-          - Range with maximum payload: 12,000 kilometers
-
-          ### 2.3 Market Positioning
-
-          The AMPEL360XWLRGA is positioned as a flagship long-range aircraft that demonstrates the viability of zero-emission aviation at scale. It targets the premium long-haul market segment while establishing new standards for environmental performance in commercial aviation.
-
-          ## 3. General Characteristics and Specifications
-
-          ### 3.1 Aircraft Configuration
-
-          The AMPEL360XWLRGA features a wide-body, twin-aisle configuration with the following key characteristics:
-
-          - **Fuselage**: Extended wide-body design with optimized aerodynamics
-          - **Wings**: High-aspect ratio composite wings with advanced aerodynamic features
-          - **Empennage**: Conventional tail configuration with composite structures
-          - **Landing Gear**: Retractable tricycle configuration with multi-wheel bogies
-          - **Propulsion**: Hybrid system combining hydrogen fuel cells, quantum propulsion, and advanced energy harvesting
-
-          ### 3.2 Dimensions
-
-          | Parameter | Value | Units |
-          |-----------|-------|-------|
-          | Overall Length | 73.8 | meters |
-          | Wingspan | 68.5 | meters |
-          | Height | 19.4 | meters |
-          | Cabin Width (interior) | 5.96 | meters |
-          | Cabin Length | 55.7 | meters |
-          | Cabin Height | 2.55 | meters |
-
-          ### 3.3 Weights
-
-          | Parameter | Value | Units |
-          |-----------|-------|-------|
-          | Maximum Takeoff Weight (MTOW) | 280,000 | kg |
-          | Maximum Landing Weight (MLW) | 223,000 | kg |
-          | Maximum Zero Fuel Weight (MZFW) | 195,000 | kg |
-          | Operating Empty Weight (OEW) | 138,000 | kg |
-          | Maximum Payload | 57,000 | kg |
-          | Maximum Fuel Capacity | 85,000 | kg |
-
-          ### 3.4 Performance
-
-          | Parameter | Value | Units |
-          |-----------|-------|-------|
-          | Maximum Range | 12,000 | km |
-          | Cruise Speed | 945 | km/h |
-          | Maximum Operating Mach Number (MMO) | 0.92 | Mach |
-          | Service Ceiling | 15,000 | meters |
-          | Takeoff Field Length (MTOW, SL, ISA) | 2,850 | meters |
-          | Landing Field Length (MLW, SL, ISA) | 1,800 | meters |
-          | Maximum Operating Altitude | 15,000 | meters |
-
-          ### 3.5 Capacity
-
-          | Configuration | Passengers | Class Distribution |
-          |---------------|------------|-------------------|
-          | Three-class | 350 | 40 First, 60 Business, 250 Economy |
-          | Two-class | 410 | 60 Business, 350 Economy |
-          | Single-class | 480 | All Economy |
-          | Cargo | 57,000 kg | Full cargo configuration |
-
-          ## 4. Design Philosophy and Innovation Areas
-
-          ### 4.1 Design Philosophy
-
-          The AMPEL360XWLRGA embodies the following design principles:
-
-          - **Zero Emissions**: Elimination of direct carbon emissions through innovative propulsion
-          - **Sustainability**: Use of sustainable materials and manufacturing processes
-          - **Safety**: Uncompromising approach to safety through redundancy and fail-safe design
-          - **Efficiency**: Optimization of energy use across all aircraft systems
-          - **Passenger Experience**: Enhanced comfort, space, and amenities
-          - **Operational Flexibility**: Adaptability to various route structures and mission profiles
-          - **Future-Proof Design**: Accommodation of technology evolution through modular systems
-
-          ### 4.2 Key Innovation Areas
-
-          #### 4.2.1 Propulsion Systems
-
-          The aircraft features a revolutionary multi-modal propulsion system:
-
-          - **Primary**: Q-01 Quantum Entanglement Engine (QEE) with Cryogenic Cooling System
-          - **Secondary**: Hydrogen fuel cell electric propulsion
-          - **Tertiary**: Advanced Energy Harvesting and Conversion System (AEHCS)
-
-          #### 4.2.2 Materials and Structures
-
-          - Advanced carbon-nanotube reinforced composites
-          - Self-healing structural materials
-          - Biomimetic design principles for weight optimization
-          - Integrated structural health monitoring
-
-          #### 4.2.3 Aerodynamics
-
-          - Active flow control surfaces
-          - Morphing wing technology
-          - Boundary layer ingestion propulsion integration
-          - Laminar flow optimization
-
-          #### 4.2.4 Systems Integration
-
-          - Comprehensive Operational and Functional Integration (COAFI) framework
-          - Distributed electrical architecture
-          - Quantum-secured communications
-          - Advanced sensor fusion and data analytics
-
-          #### 4.2.5 Passenger Experience
-
-          - Customizable cabin environments
-          - Enhanced pressurization (equivalent to 1,500m altitude)
-          - Active noise cancellation
-          - Immersive entertainment systems
-          - Biometric passenger flow management
-
-          ## 5. Operational Concept
-
-          ### 5.1 Normal Operations
-
-          The AMPEL360XWLRGA is designed for conventional airline operations with enhanced capabilities:
-
-          - Standard airport infrastructure compatibility
-          - Reduced turnaround times through optimized systems
-          - Enhanced dispatch reliability through redundant systems
-          - Simplified maintenance procedures
-          - Reduced crew workload through automation
-
-          ### 5.2 Ground Operations
-
-          - Automated pre-flight checks
-          - Integrated ground support equipment interfaces
-          - Rapid hydrogen refueling capability
-          - Quantum propulsion system ground servicing
-          - Enhanced baggage and cargo handling
-
-          ### 5.3 Flight Operations
-
-          - Optimized flight profiles for energy efficiency
-          - Automated energy management
-          - Enhanced navigation precision
-          - Reduced weather sensitivity
-          - Extended operational envelope
-
-          ### 5.4 Maintenance Concept
-
-          - Condition-based maintenance approach
-          - Integrated health monitoring systems
-          - Predictive maintenance capabilities
-          - Modular design for rapid component replacement
-          - Remote diagnostics and troubleshooting
-
-          ## 6. Documentation Schema and Navigation
-
-          ### 6.1 Documentation Structure
-
-          The AMPEL360XWLRGA documentation follows the ATA chapter system with adaptations for novel technologies. This document (GP-AM-AMPEL-0100-00-001-A) serves as the entry point to the complete documentation set.
-
-          ### 6.2 Supporting Documents
-
-          The following key documents provide additional detail on the general aircraft system:
-
-          - **GP-AM-EDR-00-001-SDD-A**: Overall Aircraft System Description Document
-            - Provides detailed system-level description of the entire aircraft
-            - Serves as the primary reference for understanding the aircraft's architecture
-
-          - **GP-AM-EDR-00-002-OV-A**: COAFI Framework Overview for Part I
-            - Outlines the Comprehensive Operational and Functional Integration framework
-            - Explains the methodology for system integration
-
-          - **GP-AM-EDR-00-003-RPT-A**: Airworthiness & Certification Requirements Report
-            - Documents the certification basis and airworthiness requirements
-            - Addresses the unique challenges of certifying novel technologies
-
-          ### 6.3 Cross-References to Other ATA Chapters
-
-          For detailed information on specific aircraft systems, refer to the following ATA chapters within the documentation suite (referencing the master index JSON `COAFI-P1-AMPEL360-0001-A.json` for specific DMCs):
-
-          - **ATA 05-12**: General aircraft documentation (Maintenance Programs, Dimensions, Servicing, etc.)
-          - **ATA 20-49**: Aircraft systems (ECS, Autoflight, Comms, Power, Controls, Fuel, Hydraulics, Nav, CMS, etc.)
-          - **ATA 51-57**: Structures (Fuselage, Wings, Doors, Stabilizers, etc.)
-          - **ATA 71-80**: Power plant (Installation, Engine Core, Controls, Indicating, etc., adapted for Q-01)
-          - **ATA 91-100**: Charts, Wiring, Certification, etc.
-
-          *(Note: The following sections provide direct links to specific key documents within selected ATA chapters for convenience. The complete list resides in the master JSON index.)*
-
-          ### 6.4 ATA 07 – Lifting, Shoring, and Related Procedures
-
-          #### **GP-AM-AMPEL-0100-07-001-A: Lifting Procedures and Diagrams (ATA 07)**
-          - **Document Link:** `GPAM-AMPEL-0201-07-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-07-001-A-001-00_EN-US`)
-          - **Document Type:** Maintenance Procedure
-          - **Content:** Detailed steps for aircraft lifting using specified points and equipment. Includes safety precautions.
-
-          #### **GP-AM-AMPEL-0100-07-002-A: Shoring Procedures and Diagrams (ATA 07)**
-          - **Document Link:** `GPAM-AMPEL-0201-07-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-07-002-A-001-00_EN-US`)
-          - **Document Type:** Maintenance Procedure
-          - **Content:** Procedures for supporting the aircraft structure during maintenance activities, including shoring point diagrams.
-
-          ### 6.5 ATA 08 – Leveling and Weighing
-
-          #### **GP-AM-AMPEL-0100-08-001-A: Leveling Procedures (ATA 08)**
-          - **Document Link:** `GPAM-AMPEL-0201-08-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-08-001-A-001-00_EN-US`)
-          - **Document Type:** Maintenance Procedure
-          - **Content:** Instructions for leveling the aircraft for maintenance or weighing.
-
-          #### **GP-AM-AMPEL-0100-08-002-A: Weighing Procedures (ATA 08)**
-          - **Document Link:** `GPAM-AMPEL-0201-08-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-08-002-A-001-00_EN-US`)
-          - **Document Type:** Maintenance Procedure
-          - **Content:** Procedures for accurately weighing the aircraft to determine weight and balance.
-
-          ### 6.6 ATA 09 – Towing and Taxiing
-
-          #### **GP-AM-AMPEL-0100-09-001-A: Towing Procedures (ATA 09)**
-          - **Document Link:** `GPAM-AMPEL-0201-09-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-09-001-A-001-00_EN-US`)
-          - **Document Type:** Operational Procedure
-          - **Content:** Ground handling procedures for towing the aircraft, including tow bar connections and limitations.
-
-          #### **GP-AM-AMPEL-0100-09-002-A: Taxiing Procedures (ATA 09)**
-          - **Document Link:** `GPAM-AMPEL-0201-09-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-09-002-A-001-00_EN-US`)
-          - **Document Type:** Operational Procedure
-          - **Content:** Standard operating procedures for taxiing the aircraft under its own power.
-
-          ### 6.7 ATA 10 – Parking, Mooring, Storage, and Return to Service
-
-          #### **GP-AM-AMPEL-0100-10-001-A: Parking Procedures (ATA 10)**
-          - **Document Link:** `GPAM-AMPEL-0201-10-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-10-001-A-001-00_EN-US`)
-          - **Document Type:** Operational Procedure
-          - **Content:** Procedures for parking the aircraft, including brake setting and chocking.
-
-          #### **GP-AM-AMPEL-0100-10-002-A: Mooring Procedures (ATA 10)**
-          - **Document Link:** `GPAM-AMPEL-0201-10-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-10-002-A-001-00_EN-US`)
-          - **Document Type:** Operational Procedure
-          - **Content:** Instructions for securing the aircraft in high-wind conditions or during extended parking.
-
-          #### **GP-AM-AMPEL-0100-10-003-A: Storage Procedures (ATA 10)**
-          - **Document Link:** `GPAM-AMPEL-0201-10-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-10-003-A-001-00_EN-US`)
-          - **Document Type:** Operational Procedure / Maintenance Procedure
-          - **Content:** Procedures for preparing and maintaining the aircraft during short-term or long-term storage.
-
-          #### **GP-AM-AMPEL-0100-10-004-A: Return to Service Procedures (ATA 10)**
-          - **Document Link:** `GPAM-AMPEL-0201-10-004-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-10-004-A-001-00_EN-US`)
-          - **Document Type:** Maintenance Procedure
-          - **Content:** Steps required to de-preserve and prepare the aircraft for operational service after storage.
-
-          ### 6.8 ATA 11 – Placards and Markings
-
-          #### **GP-AM-AMPEL-0100-11-001-A: Exterior Placard Locations (ATA 11)**
-          - **Document Link:** `GPAM-AMPEL-0201-11-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-11-001-A-001-00_EN-US`)
-          - **Document Type:** Technical Drawing / Data
-          - **Content:** Diagrams showing the location and content of all required exterior placards.
-
-          #### **GP-AM-AMPEL-0100-11-002-A: Interior Placard Locations (ATA 11)**
-          - **Document Link:** `GPAM-AMPEL-0201-11-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-11-002-A-001-00_EN-US`)
-          - **Document Type:** Technical Drawing / Data
-          - **Content:** Diagrams showing the location and content of all required interior (cockpit and cabin) placards.
-
-          #### **GP-AM-AMPEL-0100-11-003-A: Marking Specifications (ATA 11)**
-          - **Document Link:** `GPAM-AMPEL-0201-11-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-11-003-A-001-00_EN-US`)
-          - **Document Type:** Technical Specification
-          - **Content:** Specifications for aircraft livery, mandatory markings, materials, and application methods.
-
-          ### 6.9 ATA 12 – Servicing
-
-          #### **GP-AM-AMPEL-0100-12-001-A: Fluid Servicing Procedures (ATA 12)**
-          - **Document Link:** `GPAM-AMPEL-0201-12-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-12-001-A-001-00_EN-US`)
-          - **Document Type:** Maintenance Procedure
-          - **Content:** Procedures for servicing hydraulic fluid, engine oil/coolant (adapted for Q-01), etc.
-
-          #### **GP-AM-AMPEL-0100-12-002-A: Nitrogen/Oxygen Servicing Procedures (ATA 12)**
-          - **Document Link:** `GPAM-AMPEL-0201-12-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-12-002-A-001-00_EN-US`)
-          - **Document Type:** Maintenance Procedure
-          - **Content:** Procedures for servicing high-pressure nitrogen (e.g., landing gear struts) and oxygen systems.
-
-          #### **GP-AM-AMPEL-0100-12-003-A: Lubrication Procedures (ATA 12)**
-          - **Document Link:** `GPAM-AMPEL-0201-12-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-12-003-A-001-00_EN-US`)
-          - **Document Type:** Maintenance Procedure
-          - **Content:** Detailed lubrication schedule and procedures for various aircraft components.
-
-          #### **GP-AM-AMPEL-0100-12-004-A: Water Servicing Procedures (ATA 12)**
-          - **Document Link:** `GPAM-AMPEL-0201-12-004-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-12-004-A-001-00_EN-US`)
-          - **Document Type:** Maintenance Procedure
-          - **Content:** Procedures for servicing the potable water system and waste system (rinse/flush).
-
-          ### 6.10 ATA 18 – Vibration and Noise Analysis
-
-          #### **GP-AM-AMPEL-0100-18-001-A: Vibration Analysis Procedures (ATA 18)**
-          - **Document Link:** `GPAM-AMPEL-0201-18-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-18-001-A-001-00_EN-US`)
-          - **Document Type:** Maintenance Procedure / Diagnostic
-          - **Content:** Procedures for collecting and analyzing vibration data from engines (Q-01), APU, and rotating machinery.
-
-          #### **GP-AM-AMPEL-0100-18-002-A: Noise Level Measurement Procedures (ATA 18)**
-          - **Document Link:** `GPAM-AMPEL-0201-18-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-18-002-A-001-00_EN-US`)
-          - **Document Type:** Maintenance Procedure / Test
-          - **Content:** Procedures for measuring exterior and interior noise levels for certification and troubleshooting.
-
-          #### **GP-AM-AMPEL-0100-18-003-A: Vibration and Noise Limits and Acceptability Criteria (ATA 18)**
-          - **Document Link:** `GPAM-AMPEL-0201-18-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-18-003-A-001-00_EN-US`)
-          - **Document Type:** Technical Specification / Data
-          - **Content:** Specifies the acceptable limits for vibration and noise levels during various operational phases.
-
-          ### 6.11 ATA 20 – Standard Practices - Airframe
-
-          #### **GP-AM-AMPEL-0100-20-001-A: Airframe Standard Practices Manual (ATA 20)**
-          - **Document Link:** `GPAM-AMPEL-0201-20-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-20-001-A-001-00_EN-US`)
-          - **Document Type:** Maintenance Manual / Standard
-          - **Content:** General procedures, techniques, and standards for airframe maintenance (e.g., fastener installation, sealing, composite repair basics).
-
-          #### **GP-AM-AMPEL-0100-20-002-A: Corrosion Prevention and Control Program (CPCP)**
-          - **Document Link:** `GPAM-AMPEL-0201-20-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-20-002-A-001-00_EN-US`)
-          - **Document Type:** Maintenance Program / Plan
-          - **Content:** Outlines the program for preventing and controlling corrosion on the aircraft structure.
-
-          #### **GP-AM-AMPEL-0100-20-003-A: Non-Destructive Testing (NDT) Manual**
-          - **Document Link:** `GPAM-AMPEL-0201-20-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-20-003-A-001-00_EN-US`)
-          - **Document Type:** Maintenance Procedure / Manual
-          - **Content:** Specific procedures for various NDT methods (ultrasonic, eddy current, radiography, etc.) applicable to the aircraft structure.
-
-          ### 6.12 ATA 21 – Air Conditioning and Pressurization
-
-          #### **GP-AM-AMPEL-0100-21-001-A: Air Conditioning System Description and Operation (ATA 21)**
-          - **Document Link:** `GPAM-AMPEL-0201-21-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-21-001-A-001-00_EN-US`)
-          - **Document Type:** System Description (SDD)
-          - **Content:** Detailed description of the air conditioning packs, distribution, and temperature control.
-
-          #### **GP-AM-AMPEL-0100-21-002-A: Pressurization System Description and Operation (ATA 21)**
-          - **Document Link:** `GPAM-AMPEL-0201-21-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-21-002-A-001-00_EN-US`)
-          - **Document Type:** System Description (SDD)
-          - **Content:** Detailed description of the cabin pressure control system, including outflow valves and controllers.
-
-          #### **GP-AM-AMPEL-0100-21-003-A: Quantum Enhanced Air Purification System (QE-APS) Description (ATA 21)**
-          - **Document Link:** `GPAM-AMPEL-0201-21-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-21-003-A-001-00_EN-US`)
-          - **Document Type:** System Description (SDD) / Technical Specification
-          - **Content:** Description of the novel QE-APS technology for air filtration and revitalization.
-
-          ### 6.13 ATA 22 – Autoflight
-
-          #### **GP-AM-AMPEL-0100-22-001-A: Autopilot System Description and Operation (ATA 22)**
-          - **Document Link:** `GPAM-AMPEL-0201-22-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-22-001-A-001-00_EN-US`)
-          - **Document Type:** System Description (SDD)
-          - **Content:** Description of the autopilot modes, flight director, and servo control systems.
-
-          #### **GP-AM-AMPEL-0100-22-002-A: Flight Management System (FMS) Description and Operation (ATA 22)**
-          - **Document Link:** `GPAM-AMPEL-0201-22-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-22-002-A-001-00_EN-US`)
-          - **Document Type:** System Description (SDD) / Operational Manual
-          - **Content:** Description of FMS capabilities, database structure, flight planning, and performance management.
-
-          #### **GP-AM-AMPEL-0100-22-003-A: AI-Enhanced Flight Control System (AI-FCS) Description (ATA 22)**
-          - **Document Link:** `GPAM-AMPEL-0201-22-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-22-003-A-001-00_EN-US`)
-          - **Document Type:** System Description (SDD) / Technical Specification
-          - **Content:** Description of the AI algorithms (OIP, Heuristics), learning capabilities, and integration with conventional autoflight.
-
-          ### 6.14 ATA 23 – Communications
-
-          #### **GP-AM-AMPEL-0100-23-001-A: Communication Systems Overview (ATA 23)**
-          - **Document Link:** `GPAM-AMPEL-0201-23-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-23-001-A-001-00_EN-US`)
-          - **Document Type:** System Overview / Architecture
-          - **Content:** High-level overview of all communication systems (VHF, HF, SATCOM, Datalink, QCS) and their interactions.
-
-          #### **GP-AM-AMPEL-0100-23-002-A: Satellite Communication (SATCOM) System Description and Operation (ATA 23)**
-          - **Document Link:** `GPAM-AMPEL-0201-23-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-23-002-A-001-00_EN-US`)
-          - **Document Type:** System Description (SDD)
-          - **Content:** Detailed description of the SATCOM equipment, antenna, network providers, and capabilities.
-
-          #### **GP-AM-AMPEL-0100-23-003-A: Air-to-Ground Communication System Description and Operation (ATA 23)**
-          - **Document Link:** `GPAM-AMPEL-0201-23-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-23-003-A-001-00_EN-US`)
-          - **Document Type:** System Description (SDD)
-          - **Content:** Description of VHF/HF voice and data communication systems, ACARS, etc.
-
-          #### **GP-AM-AMPEL-0100-23-004-A: Quantum Communication System (QCS) Description (ATA 23)**
-          - **Document Link:** `GPAM-AMPEL-0201-23-004-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-23-004-A-001-00_EN-US`)
-          - **Document Type:** System Description (SDD) / Technical Specification
-          - **Content:** Description of the quantum communication hardware, protocols (potentially QKD), and integration for secure data links.
-
-          ### 6.15 ATA 24 – Electrical Power
-
-          #### **GP-AM-AMPEL-0100-24-001-A: Electrical Power Generation System Description and Operation (ATA 24)**
-          - **Document Link:** `GPAM-AMPEL-0201-24-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-24-001-A-001-00_EN-US`)
-          - **Document Type:** System Description (SDD)
-          - **Content:** Description of primary power generation sources (AEHCS, Fuel Cells, Q-01 bleed if any) and control.
-
-          #### **GP-AM-AMPEL-0100-24-002-A: Electrical Power Distribution System Description and Operation (ATA 24)**
-          - **Document Link:** `GPAM-AMPEL-0201-24-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-24-002-A-001-00_EN-US`)
-          - **Document Type:** System Description (SDD)
-          - **Content:** Description of the HVDC/LVDC architecture, bus bars, circuit breakers, contactors, and wiring philosophy.
-
-          #### **GP-AM-AMPEL-0100-24-003-A: Quantum Energy Management System (Q-EMS / AAESCCCTS) Description (ATA 24)**
-          - **Document Link:** `GPAM-AMPEL-0201-24-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-24-003-A-001-00_EN-US`) / `AGIS-MOD-AAESCCCTS-01`
-          - **Document Type:** System Description (SDD) / Module Specification
-          - **Content:** Description of energy storage (Quantum Batteries), power conversion, intelligent load management, and integration with MOD-XAI/QUAD.
-
-          ### 6.16 ATA 25 – Equipment / Furnishings
-
-          #### **GP-AM-AMPEL-0100-25-001-A: Flight Deck Equipment and Furnishings (ATA 25)**
-          - **Document Link:** `GPAM-AMPEL-0201-25-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-25-001-A-001-00_EN-US`)
-          - **Document Type:** System Description / Drawing Set
-          - **Content:** Layout, specifications, and part numbers for cockpit seats, panels, controls integration, etc.
-
-          #### **GP-AM-AMPEL-0100-25-002-A: Cabin Equipment and Furnishings (ATA 25)**
-          - **Document Link:** `GPAM-AMPEL-0201-25-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-25-002-A-001-00_EN-US`)
-          - **Document Type:** System Description / Drawing Set / Catalog
-          - **Content:** Layout, specifications for passenger seats, galleys, lavatories, overhead bins, lighting integration, IFE hardware.
-
-          #### **GP-AM-AMPEL-0100-25-003-A: Emergency Equipment (ATA 25)**
-          - **Document Link:** `GPAM-AMPEL-0201-25-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-25-003-A-001-00_EN-US`)
-          - **Document Type:** System Description / Data
-          - **Content:** Location, description, and maintenance requirements for emergency equipment (slides, rafts, first aid kits, fire extinguishers, ELTs).
-
-          ### 6.17 ATA 26 – Fire Protection
-
-          #### **GP-AM-AMPEL-0100-26-001-A: Fire Detection System Description and Operation (ATA 26)**
-          - **Document Link:** `GP
-          EOL
-
-      - name: Create GitHub Issue for Capgemini Spain
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const issueTitle = "New Organization Registration Request: Capgemini Spain";
-            const issueBody = `
-### **New Organization Registration Request: Capgemini Spain**
-
-#### **Name of the organization**
-**Capgemini Spain**
-
----
-
-#### **Official website**
-https://www.capgemini.com/es-es/
-
----
-
-#### **Country**
-**Spain**
-
----
-
-#### **City**
-**Madrid**
-
----
-
-#### **Type of organization**
-- **Engineering**
-- **Research Organization**
-- **Company**
-- **Consulting Firm**
-
-(*Multi-type classification suggested based on active engagement in engineering R&D, software development, and scientific projects*)
-
----
-
-#### **Parent organization**
-**Capgemini SE**  
-ROR: https://ror.org/01bjdm005
-
----
-
-#### **Description / Purpose**
-Capgemini Spain is the Spanish operational and legal branch of Capgemini SE, a global leader in technology, engineering, and consulting services. It spearheads initiatives in AI, aerospace systems, quantum computing, sustainability, and digital engineering.
-
+        },
+        "required": [
+          "part",
+          "domain",
+          "code",
+          "theme",
+          "purpose"
+        ]
+      },
+      "CoafiPartContent": {
+        "type": "object",
+        "properties": {
+          "partId": {
+            "type": "string",
+            "pattern": "^GP-[A-Z]{2}$",
+            "description": "e.g., GP-FD, GP-AM"
+          },
+          "partTitle": {
+            "type": "string",
+            "description": "e.g., Program Foundations, Airframes"
+          },
+          "nodes": {
+            "type": "array",
+            "description": "Top-level nodes (chapters/subjects) within this part.",
+            "items": {
+              "$ref": "#/definitions/CoafiNode"
+            }
+          },
+          "appendix": {
+            "type": "array",
+            "description": "Appendix nodes for this part.",
+            "items": {
+              "$ref": "#/definitions/CoafiNode"
+            }
+          }
+        },
+        "required": [
+          "partId",
+          "partTitle",
+          "nodes"
+        ]
+      },
+      "CoafiNode": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique COAFI Identifier (e.g., GP-FD-00-001-OV-A, GP-AM-AMPEL-0100-00-001-OV-A). Pattern varies slightly per part."
+          },
+          "title": {
+            "type": "string",
+            "description": "Human-readable title (e.g., Introduction & Program Vision Overview)"
+          },
+          "coafiPart": {
+            "type": "string",
+            "pattern": "^GP-[A-Z]{2}$",
+            "description": "Parent Part ID (e.g., GP-FD)"
+          },
+          "chapter": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "ATA/AS/CN/etc. chapter code (e.g., FD.00, ATA 21)"
+          },
+          "subjectNumber": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Subject number/identifier within the chapter (e.g., 00-01, 71-01)"
+          },
+          "infoCodes": {
+            "type": "array",
+            "description": "Document type codes.",
+            "items": {
+              "type": "string",
+              "enum": [
+                "OV",
+                "SPEC",
+                "REQ",
+                "DD",
+                "SDD",
+                "DWG",
+                "CAL",
+                "RPT",
+                "TEST",
+                "RES",
+                "MAN",
+                "PROC",
+                "CAT",
+                "GLO",
+                "PLAN",
+                "ICD",
+                "BOM",
+                "SWD",
+                "ADMIN",
+                "REF",
+                "FIG",
+                "LIST",
+                "CONOPS",
+                "WBS",
+                "DATA",
+                "IDX",
+                "MPD",
+                "WDM",
+                "CERT",
+                "PRES",
+                "BASE",
+                "MD",
+                "JSON",
+                "SCRIPT",
+                "NB"
+              ]
+            }
+          },
+          "filePath": {
+            "type": "string",
+            "format": "uri-relative",
+            "description": "Relative path to the content file (e.g., ./GP-FD/GP-FD-00-001-OV-A.md)"
+          },
+          "version": {
+            "type": "string",
+            "description": "Document version (e.g., A, 1.0)"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Draft",
+              "In Review",
+              "Approved",
+              "Released",
+              "Obsolete",
+              "Placeholder"
+            ]
+          },
+          "classification": {
+            "type": "string",
+            "default": "Internal Use Only"
+          },
+          "date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date",
+            "description": "Last modified date"
+          },
+          "author": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Responsible team/individual"
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Brief summary or abstract of the node's content."
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Keywords for searchability."
+          },
+          "relatedLinks": {
+            "type": "array",
+            "description": "Links to other COAFI nodes.",
+            "items": {
+              "$ref": "#/definitions/RelatedCoafiLink"
+            }
+          },
+          "externalLinks": {
+            "type": "array",
+            "description": "Links to non-COAFI resources.",
+            "items": {
+              "$ref": "#/definitions/ExternalLink"
+            }
+          },
+          "children": {
+            "type": "array",
+            "description": "Nested child nodes forming the hierarchy.",
+            "items": {
+              "$ref": "#/definitions/CoafiNode"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "coafiPart",
+          "infoCodes",
+          "filePath",
+          "version",
+          "status"
+        ]
+      },
+      "RelatedCoafiLink": {
+        "type": "object",
+        "properties": {
+          "relatedId": {
+            "type": "string",
+            "description": "ID of the related COAFI node"
+          },
+          "relationshipType": {
+            "type": "string",
+            "enum": [
+              "References",
+              "Refines",
+              "Supersedes",
+              "Supports",
+              "Verifies",
+              "ChildOf",
+              "ParentOf",
+              "Implements",
+              "Requires",
+              "TestedBy"
+            ],
+            "description": "Nature of the link"
+          }
+        },
+        "required": [
+          "relatedId",
+          "relationshipType"
+        ]
+      },
+      "ExternalLink": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL or URI to the external resource"
+          },
+          "description": {
+            "type": "string",
+            "description": "Brief description of the linked resource"
+          },
+          "linkType": {
+            "type": "string",
+            "enum": [
+              "ProcedureDoc",
+              "StakeholderBrief",
+              "TestReport",
+              "ExternalStandard",
+              "SourceCode",
+              "Dataset",
+              "Schema",
+              "SignedPackage",
+              "Visualization"
+            ],
+            "description": "Type of external resource"
+          }
+        },
+        "required": [
+          "url",
+          "description",
+          "linkType"
+        ]
+      }
+    }
+  },
+  {
+    "coafiLibrary": {
+      "partsOverview": [
+        {
+          "part": "Part 0",
+          "domain": "Program Foundations",
+          "code": "GP-FD",
+          "theme": "Vision, Theories, Compliance, Ethics, Structure",
+          "purpose": "Foundational Principles & Context Manuals"
+        },
+        {
+          "part": "Part I",
+          "domain": "Flight Systems (AMPEL360XWLRGA)",
+          "code": "GP-AM",
+          "theme": "Aircraft Systems (Atmospheric)",
+          "purpose": "Airframe Design, System & Maintenance Manuals"
+        },
+        {
+          "part": "Part II",
+          "domain": "Spaceframes (AMPEL+)",
+          "code": "GP-SM",
+          "theme": "Spacecraft Systems (Exo-atmospheric)",
+          "purpose": "Spaceframe Design, System & Ops Manuals"
+        },
+        {
+          "part": "Part III",
+          "domain": "Common Networks & Systems",
+          "code": "GP-CN",
+          "theme": "AI, QAO, Security, Blockchain, BITT, AMPEL Core",
+          "purpose": "Shared Digital Infrastructure Manuals"
+        },
+        {
+          "part": "Part IV",
+          "domain": "Ground Infrastructure & Automation",
+          "code": "GP-GB",
+          "theme": "Launchpads, Fuel, Data Nodes, Ground Robotics",
+          "purpose": "Ground Support & Automation Manuals"
+        },
+        {
+          "part": "Part V",
+          "domain": "Project Management & Operations",
+          "code": "GP-PM",
+          "theme": "Certification, WBS, Training, Lifecycle (EoL)",
+          "purpose": "Program Management & Operational Manuals"
+        },
+        {
+          "part": "Part VI",
+          "domain": "Robotic Systems (RAME Fleet)",
+          "code": "GP-RS",
+          "theme": "Advanced Space Robotics & Operations",
+          "purpose": "Robotic Systems Design & Ops Manuals"
+        }
+      ],
+      "partsContent": [
+        {
+          "partId": "GP-FD",
+          "partTitle": "Project Foundations - Manifesto, Research & Theory",
+          "nodes": [
+            {
+              "id": "GP-FD-00-CHAPTER",
+              "title": "FD.00: Introduction & Program Vision",
+              "coafiPart": "GP-FD",
+              "chapter": "FD.00",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-FD/FD.00",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter FD.00",
+              "keywords": ["Introduction", "Vision", "FD.00"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-FD-00-001-OV-A",
+                  "title": "Introduction & Program Vision Overview",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.00",
+                  "subjectNumber": "00-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-FD-00-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": "2024-03-29",
+                  "author": "GAIA AIR Core Team",
+                  "description": "Foundational entry point to the GAIA AIR program and COAFI library.",
+                  "keywords": ["Introduction", "Vision", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-00-002-OV-A",
+                  "title": "Core Principles of GAIA AIR",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.00",
+                  "subjectNumber": "00-02",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-FD-00-002-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Core Principles", "GAIA AIR", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-00-003-PLAN-A",
+                  "title": "Program Roadmap & Phasing",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.00",
+                  "subjectNumber": "00-03",
+                  "infoCodes": ["PLAN"],
+                  "filePath": "./GP-FD-00-003-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Roadmap", "Phasing", "Plan"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-00-004-RPT-A",
+                  "title": "Long-Term Cosmic Impetus & Goals",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.00",
+                  "subjectNumber": "00-04",
+                  "infoCodes": ["RPT"],
+                  "filePath": "./GP-FD-00-004-RPT-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Cosmic", "Goals", "Report"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-00-005-SDD-A",
+                  "title": "AI-Driven Vision Monitoring & Adaptation System",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.00",
+                  "subjectNumber": "00-05",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-FD-00-005-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AI", "Vision", "Monitoring", "Adaptation", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-FD-01-CHAPTER",
+              "title": "FD.01: Key Theories & Proofs",
+              "coafiPart": "GP-FD",
+              "chapter": "FD.01",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-FD/FD.01",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter FD.01",
+              "keywords": ["Theories", "Proofs", "FD.01"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                 {
+                  "id": "GP-FD-01-001-OV-A",
+                  "title": "Key Theories & Proofs Overview",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.01",
+                  "subjectNumber": "01-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-FD-01-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Theories", "Proofs", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-01-002-OV-A",
+                  "title": "Quantum Propulsion Theory Principles (QEE/QSM)",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.01",
+                  "subjectNumber": "01-02",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-FD-01-002-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Quantum Propulsion", "QEE", "QSM", "Theory", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-01-003-OV-A",
+                  "title": "Federated AI Theory Principles (i-Aher0)",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.01",
+                  "subjectNumber": "01-03",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-FD-01-003-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Federated AI", "i-Aher0", "Theory", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-01-004-OV-A",
+                  "title": "BNNT/Carbon-Lattice Composites Theoretical Basis (AMPEL)",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.01",
+                  "subjectNumber": "01-04",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-FD-01-004-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["BNNT", "Carbon-Lattice", "Composites", "AMPEL", "Theory", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-01-005-RES-A",
+                  "title": "Q-Thruster Conceptual Proofs & Validation Data",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.01",
+                  "subjectNumber": "01-05",
+                  "infoCodes": ["RES", "RPT"],
+                  "filePath": "./GP-FD-01-005-RES-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Q-Thruster", "Proofs", "Validation", "Data", "Research", "Report"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-01-006-RES-A",
+                  "title": "AI Model Validation Reports (Foundational)",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.01",
+                  "subjectNumber": "01-06",
+                  "infoCodes": ["RES", "RPT"],
+                  "filePath": "./GP-FD-01-006-RES-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AI", "Model Validation", "Report", "Research"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-FD-02-CHAPTER",
+              "title": "FD.02: Regulatory & Standards Base",
+              "coafiPart": "GP-FD",
+              "chapter": "FD.02",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-FD/FD.02",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter FD.02",
+              "keywords": ["Regulatory", "Standards", "Compliance", "FD.02"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                 {
+                  "id": "GP-FD-02-001-OV-A",
+                  "title": "Regulatory & Standards Overview",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.02",
+                  "subjectNumber": "02-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-FD-02-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Regulatory", "Standards", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-02-002-REQ-A",
+                  "title": "Applicable Airworthiness Regulations (FAA/EASA)",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.02",
+                  "subjectNumber": "02-02",
+                  "infoCodes": ["REQ", "LIST"],
+                  "filePath": "./GP-FD-02-002-REQ-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Airworthiness", "Regulations", "FAA", "EASA", "Requirements", "List"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-02-003-REQ-A",
+                  "title": "Applicable Space Standards (NASA/ESA/ECSS/Commercial)",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.02",
+                  "subjectNumber": "02-03",
+                  "infoCodes": ["REQ", "LIST"],
+                  "filePath": "./GP-FD-02-003-REQ-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Space Standards", "NASA", "ESA", "ECSS", "Commercial Space", "Requirements", "List"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-02-004-REQ-A",
+                  "title": "Relevant ISO Standards (9001, 14001, 27001, etc.)",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.02",
+                  "subjectNumber": "02-04",
+                  "infoCodes": ["REQ", "REF"],
+                  "filePath": "./GP-FD-02-004-REQ-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["ISO Standards", "ISO 9001", "ISO 14001", "ISO 27001", "Requirements", "Reference"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-02-005-OV-A",
+                  "title": "COAFI Alignment with ATA/S1000D/AS Standards",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.02",
+                  "subjectNumber": "02-05",
+                  "infoCodes": ["OV", "REF"],
+                  "filePath": "./GP-FD-02-005-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["COAFI", "Alignment", "ATA", "S1000D", "AS Standards", "Overview", "Reference"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-02-006-SDD-A",
+                  "title": "AI-Driven Regulatory Watch & Compliance Mapping System",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.02",
+                  "subjectNumber": "02-06",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-FD-02-006-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AI", "Regulatory Watch", "Compliance Mapping", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-FD-03-CHAPTER",
+              "title": "FD.03: Cross-Disciplinary Research",
+              "coafiPart": "GP-FD",
+              "chapter": "FD.03",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-FD/FD.03",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter FD.03",
+              "keywords": ["Research", "Cross-Disciplinary", "FD.03"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-FD-03-001-OV-A",
+                  "title": "Cross-Disciplinary Research Overview",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.03",
+                  "subjectNumber": "03-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-FD-03-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Cross-Disciplinary", "Research", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-03-002-OV-A",
+                  "title": "Multi-Physics Simulation Principles",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.03",
+                  "subjectNumber": "03-02",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-FD-03-002-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Multi-Physics", "Simulation", "Principles", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-03-003-RPT-A",
+                  "title": "Quantum Computing Applications in Aerospace - Research Report",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.03",
+                  "subjectNumber": "03-03",
+                  "infoCodes": ["RPT"],
+                  "filePath": "./GP-FD-03-003-RPT-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Quantum Computing", "Aerospace", "Applications", "Research", "Report"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-03-004-RPT-A",
+                  "title": "Cosmic Vacuum Energy & Propulsion Research Report",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.03",
+                  "subjectNumber": "03-04",
+                  "infoCodes": ["RPT"],
+                  "filePath": "./GP-FD-03-004-RPT-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Vacuum Energy", "Cosmic", "Propulsion", "Research", "Report"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-03-005-PLAN-A",
+                  "title": "Advanced Materials R&D Pipeline Plan",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.03",
+                  "subjectNumber": "03-05",
+                  "infoCodes": ["PLAN", "RPT"],
+                  "filePath": "./GP-FD-03-005-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Advanced Materials", "R&D", "Pipeline", "Plan", "Report"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-03-006-LIST-A",
+                  "title": "Academic & Industrial Research Partnerships List",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.03",
+                  "subjectNumber": "03-06",
+                  "infoCodes": ["LIST", "REF"],
+                  "filePath": "./GP-FD-03-006-LIST-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Research", "Partnerships", "Academic", "Industrial", "List", "Reference"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-FD-04-CHAPTER",
+              "title": "FD.04: Ethical AI & Operational Framework",
+              "coafiPart": "GP-FD",
+              "chapter": "FD.04",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-FD/FD.04",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter FD.04",
+              "keywords": ["AI", "Ethics", "Operational Framework", "FD.04"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-FD-04-001-OV-A",
+                  "title": "Ethical AI Framework Overview",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.04",
+                  "subjectNumber": "04-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-FD-04-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Ethical AI", "Framework", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-04-002-PLAN-A",
+                  "title": "GAIA AIR AI Ethics Policy & Plan",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.04",
+                  "subjectNumber": "04-02",
+                  "infoCodes": ["PLAN", "REQ"],
+                  "filePath": "./GP-FD-04-002-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AI Ethics", "Policy", "Plan", "Requirements"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-04-003-PROC-A",
+                  "title": "Bias Detection & Mitigation Procedures",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.04",
+                  "subjectNumber": "04-03",
+                  "infoCodes": ["PROC"],
+                  "filePath": "./GP-FD-04-003-PROC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Bias Detection", "Mitigation", "AI", "Procedure"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-04-004-REQ-A",
+                  "title": "Explainable AI (XAI) Audit Trail Requirements",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.04",
+                  "subjectNumber": "04-04",
+                  "infoCodes": ["REQ", "SPEC"],
+                  "filePath": "./GP-FD-04-004-REQ-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["XAI", "Explainable AI", "Audit Trail", "Requirements", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-04-005-RPT-A",
+                  "title": "Ethical Framework for Autonomous Decision Making - Research Report",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.04",
+                  "subjectNumber": "04-05",
+                  "infoCodes": ["RPT"],
+                  "filePath": "./GP-FD-04-005-RPT-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Ethical Framework", "Autonomous Decision Making", "Research", "Report"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-FD-05-CHAPTER",
+              "title": "FD.05: COAFI Documentation Standard",
+              "coafiPart": "GP-FD",
+              "chapter": "FD.05",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-FD/FD.05",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter FD.05",
+              "keywords": ["COAFI", "Documentation Standard", "Metadata", "FD.05"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-FD-05-001-OV-A",
+                  "title": "COAFI Documentation Standard Overview",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.05",
+                  "subjectNumber": "05-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-FD-05-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["COAFI", "Documentation Standard", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-05-002-SPEC-A",
+                  "title": "COAFI Infocode & Naming Convention Specification",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.05",
+                  "subjectNumber": "05-02",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-FD-05-002-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["COAFI", "Infocode", "Naming Convention", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-05-003-SPEC-A",
+                  "title": "COAFI Document Metadata Specification",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.05",
+                  "subjectNumber": "05-03",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-FD-05-003-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["COAFI", "Metadata", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-FD-05-004-PROC-A",
+                  "title": "COAFI Document Creation & Versioning Procedure",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.05",
+                  "subjectNumber": "05-04",
+                  "infoCodes": ["PROC"],
+                  "filePath": "./GP-FD-05-004-PROC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["COAFI", "Document Creation", "Versioning", "Procedure"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-FD-06-CHAPTER",
+              "title": "FD.06: COAFI Structure & Metadata Schema",
+              "coafiPart": "GP-FD",
+              "chapter": "FD.06",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-FD/FD.06",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter FD.06",
+              "keywords": ["COAFI", "Schema", "JSON", "Metadata", "Structure", "FD.06"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-FD-06-001-SPEC-A",
+                  "title": "COAFI Document Hierarchy JSON Schema",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.06",
+                  "subjectNumber": "06-01",
+                  "infoCodes": ["SPEC", "JSON"],
+                  "filePath": "./GP-FD-06-001-SPEC-A.json",
+                  "version": "A",
+                  "status": "Approved",
+                  "classification": "Internal Use Only",
+                  "date": "2024-03-29",
+                  "author": "GAIA AIR CM Team",
+                  "description": "JSON Schema defining the structure and metadata for the entire COAFI library.",
+                  "keywords": ["COAFI", "JSON Schema", "Metadata", "Hierarchy", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-FD-07-CHAPTER",
+              "title": "FD.07 - FD.99: Reserved Future Sections",
+              "coafiPart": "GP-FD",
+              "chapter": "FD.07-FD.99",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-FD/FD.07-FD.99",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for reserved chapters FD.07 through FD.99",
+              "keywords": ["Reserved", "Future", "Placeholder", "FD.07-FD.99"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                 {
+                  "id": "GP-FD-07-001-OV-A",
+                  "title": "Reserved - Long-Term Interplanetary Vision Detail",
+                  "coafiPart": "GP-FD",
+                  "chapter": "FD.07",
+                  "subjectNumber": "07-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-FD-07-001-OV-A.md",
+                  "version": "A",
+                  "status": "Placeholder",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Reserved", "Interplanetary", "Vision", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ],
+          "appendix": []
+        },
+        {
+          "partId": "GP-AM",
+          "partTitle": "Airframes – AMPEL360XWLRGA",
+          "nodes": [
+            {
+              "id": "GP-AM-AMPEL-0100-00-CHAPTER",
+              "title": "ATA Chapter 00: Intro & General",
+              "coafiPart": "GP-AM",
+              "chapter": "ATA 00",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-AM/ATA00",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for ATA Chapter 00",
+              "keywords": ["ATA 00", "Introduction", "General", "Airframe"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-AM-AMPEL-0100-00-001-OV-A",
+                  "title": "Intro & General Overview",
+                  "coafiPart": "GP-AM",
+                  "chapter": "ATA 00",
+                  "subjectNumber": "00-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-AM-AMPEL-0100-00-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": "2024-03-29",
+                  "author": "GAIA AIR Airframe Design Team",
+                  "description": null,
+                  "keywords": ["Introduction", "General", "Overview", "ATA 00"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-AM-AMPEL-0100-00-002-REQ-A",
+                  "title": "Regulatory Compliance Overview",
+                  "coafiPart": "GP-AM",
+                  "chapter": "ATA 00",
+                  "subjectNumber": "00-10",
+                  "infoCodes": ["REQ"],
+                  "filePath": "./GP-AM-AMPEL-0100-00-002-REQ-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Regulatory", "Compliance", "Overview", "Requirements", "ATA 00"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-AM-AMPEL-0100-00-003-PLAN-A",
+                  "title": "Certification Strategy",
+                  "coafiPart": "GP-AM",
+                  "chapter": "ATA 00",
+                  "subjectNumber": "00-11",
+                  "infoCodes": ["PLAN"],
+                  "filePath": "./GP-AM-AMPEL-0100-00-003-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Certification", "Strategy", "Plan", "ATA 00"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-AM-AMPEL-0100-00-004-OV-A",
+                  "title": "Core Design Principles",
+                  "coafiPart": "GP-AM",
+                  "chapter": "ATA 00",
+                  "subjectNumber": "00-20",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-AM-AMPEL-0100-00-004-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": "2024-03-29",
+                  "author": "GAIA AIR Airframe Design Team",
+                  "description": "Outlines core principles for airframe design within GAIA AIR.",
+                  "keywords": ["Design Principles", "Core", "Overview", "ATA 00"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-AM-AMPEL-0100-00-005-OV-A",
+                  "title": "Advanced Materials Philosophy (AMPEL)",
+                  "coafiPart": "GP-AM",
+                  "chapter": "ATA 00",
+                  "subjectNumber": "00-21",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-AM-AMPEL-0100-00-005-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AMPEL", "Advanced Materials", "Philosophy", "Overview", "ATA 00"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-AM-AMPEL-0100-00-006-SDD-A",
+                  "title": "AI-Driven Document Adaptation System Description",
+                  "coafiPart": "GP-AM",
+                  "chapter": "ATA 00",
+                  "subjectNumber": "00-30",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-AM-AMPEL-0100-00-006-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AI", "Document Adaptation", "SDD", "ATA 00"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-AM-AMPEL-0100-01-CHAPTER",
+              "title": "ATA Chapter 01: Aircraft General",
+              "coafiPart": "GP-AM",
+              "chapter": "ATA 01",
+              "subjectNumber": null,
+              "infoCodes": [
+                "IDX"
+              ],
+              "filePath": "#/GP-AM/ATA01",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for ATA Chapter 01",
+              "keywords": [
+                "ATA 01",
+                "Aircraft General",
+                "Identification",
+                "Specifications"
+              ],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": []
+            }
+          ],
+          "appendix": []
+        },
+        {
+          "partId": "GP-SM",
+          "partTitle": "Spaceframes – AMPEL+ (GAIA SPACE)",
+          "nodes": [
+            {
+              "id": "GP-SM-AMPELPLUS-0200-00-CHAPTER",
+              "title": "AS Chapter 00: Intro & General (Spacecraft)",
+              "coafiPart": "GP-SM",
+              "chapter": "AS 00",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-SM/AS00",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for AS Chapter 00",
+              "keywords": ["AS 00", "Introduction", "General", "Spacecraft"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": []
+            },
+             {
+              "id": "GP-SM-AMPELPLUS-0200-71-CHAPTER",
+              "title": "AS Chapter 71: Propulsion Systems (Spacecraft)",
+              "coafiPart": "GP-SM",
+              "chapter": "AS 71",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-SM/AS71",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for AS Chapter 71",
+              "keywords": ["AS 71", "Propulsion", "Spacecraft"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                  {
+                    "id": "GP-SM-AMPELPLUS-0200-71-001-OV-A",
+                    "title": "Propulsion System Overview (Main, RCS, Quantum)",
+                    "coafiPart": "GP-SM",
+                    "chapter": "AS 71",
+                    "subjectNumber": "71-01",
+                    "infoCodes": ["OV", "SDD"],
+                    "filePath": "./GP-SM-AMPELPLUS-0200-71-001-OV-A.md",
+                    "version": "A",
+                    "status": "Draft",
+                    "classification": "Internal Use Only",
+                    "date": "2024-03-29",
+                    "author": "GAIA AIR Spaceframe Propulsion Team",
+                    "description": "High-level overview of spacecraft propulsion systems.",
+                    "keywords": ["Propulsion", "Overview", "Spacecraft", "RCS", "Quantum", "SDD"],
+                    "relatedLinks": [],
+                    "externalLinks": [],
+                    "children": []
+                  }
+              ]
+            }
+          ],
+          "appendix": []
+        },
+        {
+          "partId": "GP-CN",
+          "partTitle": "Common Networks & Systems",
+          "nodes": [
+            {
+              "id": "GP-CN-AI-0300-01-CHAPTER",
+              "title": "CN.01: GAIA AI Core (i-Aher0)",
+              "coafiPart": "GP-CN",
+              "chapter": "CN.01",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-CN/CN.01",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter CN.01",
+              "keywords": ["CN.01", "AI", "Core", "i-Aher0"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-CN-AI-0300-01-001-OV-A",
+                  "title": "i-Aher0 AI Core Architecture Overview",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.01",
+                  "subjectNumber": "01-01",
+                  "infoCodes": ["OV", "SDD"],
+                  "filePath": "./GP-CN-AI-0300-01-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["i-Aher0", "AI", "Core", "Architecture", "Overview", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-AI-0300-01-002-SPEC-A",
+                  "title": "Core AI Model Specification (Federated Learning)",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.01",
+                  "subjectNumber": "01-02",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-CN-AI-0300-01-002-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AI", "Model", "Specification", "Federated Learning"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-AI-0300-01-003-PROC-A",
+                  "title": "AI Model Training & Validation Procedure",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.01",
+                  "subjectNumber": "01-03",
+                  "infoCodes": ["PROC"],
+                  "filePath": "./GP-CN-AI-0300-01-003-PROC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AI", "Model", "Training", "Validation", "Procedure"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-AI-0300-01-004-REF-A",
+                  "title": "Reference to Ethical AI Framework (FD.04)",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.01",
+                  "subjectNumber": "01-04",
+                  "infoCodes": ["REF"],
+                  "filePath": "./GP-CN-AI-0300-01-004-REF-A.md",
+                  "version": "A",
+                  "status": "Placeholder",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Reference", "Ethical AI", "Framework", "FD.04"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-AI-0300-01-005-ICD-A",
+                  "title": "i-Aher0 API & Integration Interface Control Document",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.01",
+                  "subjectNumber": "01-05",
+                  "infoCodes": ["ICD"],
+                  "filePath": "./GP-CN-AI-0300-01-005-ICD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["i-Aher0", "API", "Integration", "ICD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-CN-QAO-0300-02-CHAPTER",
+              "title": "CN.02: Quantum-Augmented Orchestration (QAO)",
+              "coafiPart": "GP-CN",
+              "chapter": "CN.02",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-CN/CN.02",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter CN.02",
+              "keywords": ["CN.02", "QAO", "Quantum", "Orchestration"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-CN-QAO-0300-02-001-OV-A",
+                  "title": "QAO System Architecture Overview",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.02",
+                  "subjectNumber": "02-01",
+                  "infoCodes": ["OV", "SDD"],
+                  "filePath": "./GP-CN-QAO-0300-02-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["QAO", "Architecture", "Overview", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-QAO-0300-02-002-SPEC-A",
+                  "title": "QAO Algorithm Specification (Optimization, Simulation)",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.02",
+                  "subjectNumber": "02-02",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-CN-QAO-0300-02-002-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["QAO", "Algorithm", "Optimization", "Simulation", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-QAO-0300-02-003-ICD-A",
+                  "title": "QAO Interface Control Document (AI, BITT, Vehicle Systems)",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.02",
+                  "subjectNumber": "02-03",
+                  "infoCodes": ["ICD"],
+                  "filePath": "./GP-CN-QAO-0300-02-003-ICD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["QAO", "Interface", "ICD", "AI", "BITT", "Vehicle Systems"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-QAO-0300-02-004-SDD-A",
+                  "title": "Quantum Computing Resource Access & Management Description",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.02",
+                  "subjectNumber": "02-04",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-CN-QAO-0300-02-004-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Quantum Computing", "Resource Management", "Access", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-CN-SEC-0300-03-CHAPTER",
+              "title": "CN.03: Cybersecurity Framework",
+              "coafiPart": "GP-CN",
+              "chapter": "CN.03",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-CN/CN.03",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter CN.03",
+              "keywords": ["CN.03", "Cybersecurity", "Security", "Framework", "QKD"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-CN-SEC-0300-03-001-OV-A",
+                  "title": "Cybersecurity Framework Overview",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.03",
+                  "subjectNumber": "03-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-CN-SEC-0300-03-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Cybersecurity", "Framework", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-SEC-0300-03-002-PLAN-A",
+                  "title": "GAIA AIR Cybersecurity Policy & Plan",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.03",
+                  "subjectNumber": "03-02",
+                  "infoCodes": ["PLAN", "REQ"],
+                  "filePath": "./GP-CN-SEC-0300-03-002-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Cybersecurity", "Policy", "Plan", "Requirements"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-SEC-0300-03-003-SPEC-A",
+                  "title": "Quantum Key Distribution (QKD) Network Specification",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.03",
+                  "subjectNumber": "03-03",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-CN-SEC-0300-03-003-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["QKD", "Quantum Key Distribution", "Network", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-SEC-0300-03-004-SDD-A",
+                  "title": "AI-Driven Intrusion Detection & Prevention System (IDPS) Description",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.03",
+                  "subjectNumber": "03-04",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-CN-SEC-0300-03-004-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AI", "IDPS", "Intrusion Detection", "Intrusion Prevention", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-SEC-0300-03-005-PROC-A",
+                  "title": "Security Incident Response Procedure",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.03",
+                  "subjectNumber": "03-05",
+                  "infoCodes": ["PROC"],
+                  "filePath": "./GP-CN-SEC-0300-03-005-PROC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Security", "Incident Response", "Procedure"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-CN-BC-0300-04-CHAPTER",
+              "title": "CN.04: Blockchain Infrastructure (BITT)",
+              "coafiPart": "GP-CN",
+              "chapter": "CN.04",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-CN/CN.04",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter CN.04",
+              "keywords": ["CN.04", "Blockchain", "BITT", "Infrastructure", "Ledger"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                 {
+                  "id": "GP-CN-BC-0300-04-001-OV-A",
+                  "title": "BITT Blockchain Infrastructure Overview",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.04",
+                  "subjectNumber": "04-01",
+                  "infoCodes": ["OV", "SDD"],
+                  "filePath": "./GP-CN-BC-0300-04-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["BITT", "Blockchain", "Infrastructure", "Overview", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-BC-0300-04-002-SPEC-A",
+                  "title": "BITT Ledger Design & Consensus Mechanism Specification",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.04",
+                  "subjectNumber": "04-02",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-CN-BC-0300-04-002-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["BITT", "Ledger", "Consensus Mechanism", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-BC-0300-04-003-SPEC-A",
+                  "title": "Smart Contract Specification (Data Logging, Access Control)",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.04",
+                  "subjectNumber": "04-03",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-CN-BC-0300-04-003-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Smart Contract", "Data Logging", "Access Control", "Specification", "BITT"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-BC-0300-04-004-SDD-A",
+                  "title": "BITT Node Deployment & Management Description",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.04",
+                  "subjectNumber": "04-04",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-CN-BC-0300-04-004-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["BITT", "Node", "Deployment", "Management", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-BC-0300-04-005-SPEC-A",
+                  "title": "BITT Security & Cryptography Specification",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.04",
+                  "subjectNumber": "04-05",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-CN-BC-0300-04-005-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["BITT", "Security", "Cryptography", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-CN-BITT-0300-05-CHAPTER",
+              "title": "CN.05: BITT Application Layer",
+              "coafiPart": "GP-CN",
+              "chapter": "CN.05",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-CN/CN.05",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter CN.05",
+              "keywords": ["CN.05", "BITT", "Application Layer", "Blockchain"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                 {
+                  "id": "GP-CN-BITT-0300-05-001-OV-A",
+                  "title": "BITT Application Layer Overview",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.05",
+                  "subjectNumber": "05-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-CN-BITT-0300-05-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["BITT", "Application Layer", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-BITT-0300-05-002-SDD-A",
+                  "title": "Immutable Flight Data Logging System Description",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.05",
+                  "subjectNumber": "05-02",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-CN-BITT-0300-05-002-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["BITT", "Immutable", "Flight Data", "Logging", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-BITT-0300-05-003-SDD-A",
+                  "title": "Maintenance Record Traceability System Description",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.05",
+                  "subjectNumber": "05-03",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-CN-BITT-0300-05-003-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["BITT", "Maintenance Record", "Traceability", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-BITT-0300-05-004-SDD-A",
+                  "title": "Supply Chain & Component Provenance Tracking Description",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.05",
+                  "subjectNumber": "05-04",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-CN-BITT-0300-05-004-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["BITT", "Supply Chain", "Provenance", "Tracking", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-BITT-0300-05-005-SDD-A",
+                  "title": "Regulatory Compliance Verification System Description",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.05",
+                  "subjectNumber": "05-05",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-CN-BITT-0300-05-005-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["BITT", "Regulatory Compliance", "Verification", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-CN-AMPELCORE-0300-06-CHAPTER",
+              "title": "CN.06: AMPEL Core Systems",
+              "coafiPart": "GP-CN",
+              "chapter": "CN.06",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-CN/CN.06",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter CN.06",
+              "keywords": ["CN.06", "AMPEL", "Core Systems", "Materials", "SHM", "DTO"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-CN-AMPELCORE-0300-06-001-OV-A",
+                  "title": "AMPEL Core Systems Overview",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.06",
+                  "subjectNumber": "06-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-CN-AMPELCORE-0300-06-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AMPEL", "Core Systems", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-AMPELCORE-0300-06-002-SDD-A",
+                  "title": "Advanced Materials Database (AAMPEL-DB) Description",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.06",
+                  "subjectNumber": "06-02",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-CN-AMPELCORE-0300-06-002-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AMPEL", "AAMPEL-DB", "Materials Database", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-AMPELCORE-0300-06-003-SDD-A",
+                  "title": "AI Structural Health Monitoring (AI-SHM) Core Logic Description",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.06",
+                  "subjectNumber": "06-03",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-CN-AMPELCORE-0300-06-003-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AMPEL", "AI-SHM", "Structural Health Monitoring", "AI", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-AMPELCORE-0300-06-004-SDD-A",
+                  "title": "Digital Twin Orchestration (DTO) Platform Description",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.06",
+                  "subjectNumber": "06-04",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-CN-AMPELCORE-0300-06-004-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AMPEL", "DTO", "Digital Twin", "Orchestration", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-AMPELCORE-0300-06-005-ICD-A",
+                  "title": "AMPEL Core Systems Interface Control Document",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.06",
+                  "subjectNumber": "06-05",
+                  "infoCodes": ["ICD"],
+                  "filePath": "./GP-CN-AMPELCORE-0300-06-005-ICD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AMPEL", "Core Systems", "Interface", "ICD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-CN-NET-0300-07-CHAPTER",
+              "title": "CN.07: Common Network Infrastructure",
+              "coafiPart": "GP-CN",
+              "chapter": "CN.07",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-CN/CN.07",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter CN.07",
+              "keywords": ["CN.07", "Network", "Infrastructure", "Common"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-CN-NET-0300-07-001-OV-A",
+                  "title": "Common Network Infrastructure Overview (Air/Space/Ground)",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.07",
+                  "subjectNumber": "07-01",
+                  "infoCodes": ["OV", "SDD"],
+                  "filePath": "./GP-CN-NET-0300-07-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Network", "Infrastructure", "Common", "Air", "Space", "Ground", "Overview", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-NET-0300-07-002-SPEC-A",
+                  "title": "Network Protocol & QoS Specification",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.07",
+                  "subjectNumber": "07-02",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-CN-NET-0300-07-002-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Network", "Protocol", "QoS", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-NET-0300-07-003-SDD-A",
+                  "title": "Data Routing & Management Description",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.07",
+                  "subjectNumber": "07-03",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-CN-NET-0300-07-003-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Data Routing", "Data Management", "Network", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-CN-NET-0300-07-004-DWG-A",
+                  "title": "High-Level Network Topology Drawing",
+                  "coafiPart": "GP-CN",
+                  "chapter": "CN.07",
+                  "subjectNumber": "07-04",
+                  "infoCodes": ["DWG", "FIG"],
+                  "filePath": "./GP-CN-NET-0300-07-004-DWG-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Network Topology", "Drawing", "Figure"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ],
+          "appendix": [
+            {
+              "id": "GP-CN-0300-APP-A-CHAPTER",
+              "title": "Appendix A: Glossary",
+              "coafiPart": "GP-CN",
+              "chapter": "APP-A",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-CN/APPA",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Appendix A",
+              "keywords": ["Appendix", "Glossary", "Common Systems", "Networks"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-CN-0300-APP-A-001-GLO-A",
+                  "title": "Glossary of Network & Systems Terms & Acronyms",
+                  "coafiPart": "GP-CN",
+                  "chapter": "APP-A",
+                  "subjectNumber": "A-01",
+                  "infoCodes": ["GLO"],
+                  "filePath": "./GP-CN-0300-APP-A-001-GLO-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Glossary", "Terms", "Acronyms", "Network", "Systems", "Appendix"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-CN-0300-APP-B-CHAPTER",
+              "title": "Appendix B: References",
+              "coafiPart": "GP-CN",
+              "chapter": "APP-B",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-CN/APPB",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Appendix B",
+              "keywords": ["Appendix", "References", "Common Systems", "Networks"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-CN-0300-APP-B-001-REF-A",
+                  "title": "Referenced COAFI Documents (Common Systems)",
+                  "coafiPart": "GP-CN",
+                  "chapter": "APP-B",
+                  "subjectNumber": "B-01",
+                  "infoCodes": ["REF", "LIST"],
+                  "filePath": "./GP-CN-0300-APP-B-001-REF-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["References", "COAFI", "Common Systems", "List", "Appendix"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "partId": "GP-GB",
+          "partTitle": "Ground Infrastructure & Automation",
+          "nodes": [
+            {
+              "id": "GP-GB-LPAD-0400-01-CHAPTER",
+              "title": "GB.01: Launch & Landing Facilities",
+              "coafiPart": "GP-GB",
+              "chapter": "GB.01",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-GB/GB.01",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter GB.01",
+              "keywords": ["GB.01", "Launch", "Landing", "Facilities", "Ground"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                 {
+                  "id": "GP-GB-LPAD-0400-01-001-OV-A",
+                  "title": "Launch & Landing Facility Overview",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.01",
+                  "subjectNumber": "01-01",
+                  "infoCodes": ["OV", "DD"],
+                  "filePath": "./GP-GB-LPAD-0400-01-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Launch Facility", "Landing Facility", "Overview", "Design Document"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-LPAD-0400-01-002-SPEC-A",
+                  "title": "Launch Pad/Runway Design Specification",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.01",
+                  "subjectNumber": "01-02",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-GB-LPAD-0400-01-002-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Launch Pad", "Runway", "Design", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-LPAD-0400-01-003-SDD-A",
+                  "title": "Automated Pad Operations System Description",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.01",
+                  "subjectNumber": "01-03",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-GB-LPAD-0400-01-003-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Automated", "Pad Operations", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-LPAD-0400-01-004-PROC-A",
+                  "title": "Launch/Landing Safety Procedures",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.01",
+                  "subjectNumber": "01-04",
+                  "infoCodes": ["PROC", "REQ"],
+                  "filePath": "./GP-GB-LPAD-0400-01-004-PROC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Launch Safety", "Landing Safety", "Procedure", "Requirements"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-LPAD-0400-01-005-DWG-A",
+                  "title": "Facility Layout Drawing",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.01",
+                  "subjectNumber": "01-05",
+                  "infoCodes": ["DWG"],
+                  "filePath": "./GP-GB-LPAD-0400-01-005-DWG-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Facility Layout", "Drawing", "Launchpad"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-GB-FUEL-0400-02-CHAPTER",
+              "title": "GB.02: Fueling & Servicing Systems",
+              "coafiPart": "GP-GB",
+              "chapter": "GB.02",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-GB/GB.02",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter GB.02",
+              "keywords": ["GB.02", "Fueling", "Servicing", "Ground", "Hydrogen", "SAF"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-GB-FUEL-0400-02-001-OV-A",
+                  "title": "Fueling & Servicing Systems Overview",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.02",
+                  "subjectNumber": "02-01",
+                  "infoCodes": ["OV", "SDD"],
+                  "filePath": "./GP-GB-FUEL-0400-02-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Fueling", "Servicing", "Overview", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-FUEL-0400-02-002-SPEC-A",
+                  "title": "Cryogenic Hydrogen (LH2) Storage & Transfer Specification",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.02",
+                  "subjectNumber": "02-02",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-GB-FUEL-0400-02-002-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["LH2", "Cryogenic Hydrogen", "Storage", "Transfer", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-FUEL-0400-02-003-SPEC-A",
+                  "title": "Sustainable Aviation Fuel (SAF) Storage & Transfer Specification",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.02",
+                  "subjectNumber": "02-03",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-GB-FUEL-0400-02-003-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["SAF", "Sustainable Aviation Fuel", "Storage", "Transfer", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-FUEL-0400-02-004-SDD-A",
+                  "title": "Automated Fueling System Description",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.02",
+                  "subjectNumber": "02-04",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-GB-FUEL-0400-02-004-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Automated Fueling", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-FUEL-0400-02-005-PROC-A",
+                  "title": "Fluid & Consumables Servicing Procedure",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.02",
+                  "subjectNumber": "02-05",
+                  "infoCodes": ["PROC"],
+                  "filePath": "./GP-GB-FUEL-0400-02-005-PROC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Fluid Servicing", "Consumables", "Procedure"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-GB-NODE-0400-03-CHAPTER",
+              "title": "GB.03: Ground Data Network & Control Centers",
+              "coafiPart": "GP-GB",
+              "chapter": "GB.03",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-GB/GB.03",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter GB.03",
+              "keywords": ["GB.03", "Ground Network", "Data Node", "Control Center", "MCC"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-GB-NODE-0400-03-001-OV-A",
+                  "title": "Ground Data Network & Control Centers Overview",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.03",
+                  "subjectNumber": "03-01",
+                  "infoCodes": ["OV", "SDD"],
+                  "filePath": "./GP-GB-NODE-0400-03-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Ground Data Network", "Control Center", "MCC", "Overview", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-NODE-0400-03-002-SPEC-A",
+                  "title": "Ground Data Network Architecture Specification",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.03",
+                  "subjectNumber": "03-02",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-GB-NODE-0400-03-002-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Ground Data Network", "Architecture", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-NODE-0400-03-003-SDD-A",
+                  "title": "Mission Control Center (MCC) Functional Description",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.03",
+                  "subjectNumber": "03-03",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-GB-NODE-0400-03-003-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Mission Control Center", "MCC", "Functional Description", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-NODE-0400-03-004-ICD-A",
+                  "title": "Ground Network Interface Control Document (Vehicle Comms)",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.03",
+                  "subjectNumber": "03-04",
+                  "infoCodes": ["ICD"],
+                  "filePath": "./GP-GB-NODE-0400-03-004-ICD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Ground Network", "Interface", "ICD", "Vehicle Communications"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-NODE-0400-03-005-SDD-A",
+                  "title": "AI-Assisted Ground Operations Monitoring System",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.03",
+                  "subjectNumber": "03-05",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-GB-NODE-0400-03-005-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AI", "Ground Operations", "Monitoring", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-GB-GROBO-0400-04-CHAPTER",
+              "title": "GB.04: Ground Robotics & Automation",
+              "coafiPart": "GP-GB",
+              "chapter": "GB.04",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-GB/GB.04",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter GB.04",
+              "keywords": ["GB.04", "Ground Robotics", "Automation", "GSE"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-GB-GROBO-0400-04-001-OV-A",
+                  "title": "Ground Robotics & Automation Overview",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.04",
+                  "subjectNumber": "04-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-GB-GROBO-0400-04-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Ground Robotics", "Automation", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-GROBO-0400-04-002-SPEC-A",
+                  "title": "Autonomous Towing Vehicle Specification",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.04",
+                  "subjectNumber": "04-02",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-GB-GROBO-0400-04-002-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Autonomous Towing Vehicle", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-GROBO-0400-04-003-SPEC-A",
+                  "title": "Robotic Maintenance Platform Specification",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.04",
+                  "subjectNumber": "04-03",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-GB-GROBO-0400-04-003-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Robotic Maintenance", "Platform", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-GROBO-0400-04-004-SDD-A",
+                  "title": "Automated Inspection System Description (Drones, Crawlers)",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.04",
+                  "subjectNumber": "04-04",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-GB-GROBO-0400-04-004-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Automated Inspection", "Drones", "Crawlers", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-GROBO-0400-04-005-ICD-A",
+                  "title": "Ground Robotics Control & Data Interface Document",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.04",
+                  "subjectNumber": "04-05",
+                  "infoCodes": ["ICD"],
+                  "filePath": "./GP-GB-GROBO-0400-04-005-ICD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Ground Robotics", "Control Interface", "Data Interface", "ICD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-GB-GSE-0400-05-CHAPTER",
+              "title": "GB.05: Ground Support Equipment (GSE)",
+              "coafiPart": "GP-GB",
+              "chapter": "GB.05",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-GB/GB.05",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter GB.05",
+              "keywords": ["GB.05", "GSE", "Ground Support Equipment"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                 {
+                  "id": "GP-GB-GSE-0400-05-001-OV-A",
+                  "title": "GSE Overview",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.05",
+                  "subjectNumber": "05-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-GB-GSE-0400-05-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["GSE", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-GSE-0400-05-002-LIST-A",
+                  "title": "Standard GSE List",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.05",
+                  "subjectNumber": "05-02",
+                  "infoCodes": ["LIST"],
+                  "filePath": "./GP-GB-GSE-0400-05-002-LIST-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["GSE", "List", "Standard"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-GSE-0400-05-003-SPEC-A",
+                  "title": "GSE Specification (Power Carts, Jacks, Test Equipment)",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.05",
+                  "subjectNumber": "05-03",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-GB-GSE-0400-05-003-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["GSE", "Specification", "Power Cart", "Jack", "Test Equipment"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-GB-GSE-0400-05-004-PROC-A",
+                  "title": "GSE Operating & Maintenance Procedures",
+                  "coafiPart": "GP-GB",
+                  "chapter": "GB.05",
+                  "subjectNumber": "05-04",
+                  "infoCodes": ["PROC"],
+                  "filePath": "./GP-GB-GSE-0400-05-004-PROC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["GSE", "Operating Procedure", "Maintenance Procedure"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ],
+          "appendix": [
+            {
+              "id": "GP-GB-0400-APP-A-CHAPTER",
+              "title": "Appendix A: Glossary",
+              "coafiPart": "GP-GB",
+              "chapter": "APP-A",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-GB/APPA",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Appendix A",
+              "keywords": ["Appendix", "Glossary", "Ground Infrastructure"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                 {
+                  "id": "GP-GB-0400-APP-A-001-GLO-A",
+                  "title": "Glossary of Ground Infrastructure Terms & Acronyms",
+                  "coafiPart": "GP-GB",
+                  "chapter": "APP-A",
+                  "subjectNumber": "A-01",
+                  "infoCodes": ["GLO"],
+                  "filePath": "./GP-GB-0400-APP-A-001-GLO-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Glossary", "Terms", "Acronyms", "Ground Infrastructure", "Appendix"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-GB-0400-APP-B-CHAPTER",
+              "title": "Appendix B: References",
+              "coafiPart": "GP-GB",
+              "chapter": "APP-B",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-GB/APPB",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Appendix B",
+              "keywords": ["Appendix", "References", "Ground Infrastructure"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                 {
+                  "id": "GP-GB-0400-APP-B-001-REF-A",
+                  "title": "Referenced COAFI Documents (Ground Systems)",
+                  "coafiPart": "GP-GB",
+                  "chapter": "APP-B",
+                  "subjectNumber": "B-01",
+                  "infoCodes": ["REF", "LIST"],
+                  "filePath": "./GP-GB-0400-APP-B-001-REF-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["References", "COAFI", "Ground Systems", "List", "Appendix"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "partId": "GP-PM",
+          "partTitle": "Project Management & Operations",
+          "nodes": [
+            {
+              "id": "GP-PM-CERT-0500-01-CHAPTER",
+              "title": "PM.01: Certification & Compliance Management",
+              "coafiPart": "GP-PM",
+              "chapter": "PM.01",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-PM/PM.01",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter PM.01",
+              "keywords": ["PM.01", "Certification", "Compliance", "Project Management"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                 {
+                  "id": "GP-PM-CERT-0500-01-001-OV-A",
+                  "title": "Certification & Compliance Overview",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.01",
+                  "subjectNumber": "01-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-PM-CERT-0500-01-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Certification", "Compliance", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-CERT-0500-01-002-PLAN-A",
+                  "title": "Master Certification Plan (Air & Space)",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.01",
+                  "subjectNumber": "01-02",
+                  "infoCodes": ["PLAN"],
+                  "filePath": "./GP-PM-CERT-0500-01-002-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Certification Plan", "Master Plan", "Air", "Space"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-CERT-0500-01-003-PROC-A",
+                  "title": "Regulatory Agency Liaison Procedure",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.01",
+                  "subjectNumber": "01-03",
+                  "infoCodes": ["PROC"],
+                  "filePath": "./GP-PM-CERT-0500-01-003-PROC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Regulatory Agency", "Liaison", "Procedure", "Certification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-CERT-0500-01-004-PROC-A",
+                  "title": "Compliance Documentation Management Procedure",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.01",
+                  "subjectNumber": "01-04",
+                  "infoCodes": ["PROC"],
+                  "filePath": "./GP-PM-CERT-0500-01-004-PROC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Compliance", "Documentation Management", "Procedure"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-CERT-0500-01-005-REF-A",
+                  "title": "Reference to FD.02 Regulatory Base",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.01",
+                  "subjectNumber": "01-05",
+                  "infoCodes": ["REF"],
+                  "filePath": "./GP-PM-CERT-0500-01-005-REF-A.md",
+                  "version": "A",
+                  "status": "Placeholder",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Reference", "Regulatory Base", "FD.02"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-PM-WBS-0500-02-CHAPTER",
+              "title": "PM.02: Work Breakdown Structure (WBS) & Program Planning",
+              "coafiPart": "GP-PM",
+              "chapter": "PM.02",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-PM/PM.02",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter PM.02",
+              "keywords": ["PM.02", "WBS", "Work Breakdown Structure", "Planning"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-PM-WBS-0500-02-001-OV-A",
+                  "title": "WBS & Program Planning Overview",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.02",
+                  "subjectNumber": "02-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-PM-WBS-0500-02-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["WBS", "Program Planning", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-WBS-0500-02-002-WBS-A",
+                  "title": "Master Program Work Breakdown Structure",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.02",
+                  "subjectNumber": "02-02",
+                  "infoCodes": ["WBS"],
+                  "filePath": "./GP-PM-WBS-0500-02-002-WBS-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["WBS", "Master Program", "Work Breakdown Structure"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-WBS-0500-02-003-PLAN-A",
+                  "title": "Integrated Master Schedule (IMS)",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.02",
+                  "subjectNumber": "02-03",
+                  "infoCodes": ["PLAN"],
+                  "filePath": "./GP-PM-WBS-0500-02-003-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["IMS", "Integrated Master Schedule", "Plan"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-WBS-0500-02-004-PLAN-A",
+                  "title": "Resource Management Plan",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.02",
+                  "subjectNumber": "02-04",
+                  "infoCodes": ["PLAN"],
+                  "filePath": "./GP-PM-WBS-0500-02-004-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Resource Management", "Plan"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-WBS-0500-02-005-SDD-A",
+                  "title": "AI-Assisted Program Management Tools Description",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.02",
+                  "subjectNumber": "02-05",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-PM-WBS-0500-02-005-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AI", "Program Management", "Tools", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-PM-TRAIN-0500-03-CHAPTER",
+              "title": "PM.03: Training & Qualification Programs",
+              "coafiPart": "GP-PM",
+              "chapter": "PM.03",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-PM/PM.03",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter PM.03",
+              "keywords": ["PM.03", "Training", "Qualification", "Programs"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-PM-TRAIN-0500-03-001-OV-A",
+                  "title": "Training & Qualification Overview",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.03",
+                  "subjectNumber": "03-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-PM-TRAIN-0500-03-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Training", "Qualification", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-TRAIN-0500-03-002-PLAN-A",
+                  "title": "Flight Crew Training Program Plan",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.03",
+                  "subjectNumber": "03-02",
+                  "infoCodes": ["PLAN", "SPEC"],
+                  "filePath": "./GP-PM-TRAIN-0500-03-002-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Flight Crew", "Training", "Plan", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-TRAIN-0500-03-003-PLAN-A",
+                  "title": "Maintenance Technician Training Program Plan",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.03",
+                  "subjectNumber": "03-03",
+                  "infoCodes": ["PLAN", "SPEC"],
+                  "filePath": "./GP-PM-TRAIN-0500-03-003-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Maintenance Technician", "Training", "Plan", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-TRAIN-0500-03-004-PLAN-A",
+                  "title": "Ground Operations Crew Training Program Plan",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.03",
+                  "subjectNumber": "03-04",
+                  "infoCodes": ["PLAN", "SPEC"],
+                  "filePath": "./GP-PM-TRAIN-0500-03-004-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Ground Operations", "Crew", "Training", "Plan", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-TRAIN-0500-03-005-PLAN-A",
+                  "title": "AI Systems Operator/Analyst Training Program Plan",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.03",
+                  "subjectNumber": "03-05",
+                  "infoCodes": ["PLAN", "SPEC"],
+                  "filePath": "./GP-PM-TRAIN-0500-03-005-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["AI Systems", "Operator", "Analyst", "Training", "Plan", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-PM-LIFE-0500-04-CHAPTER",
+              "title": "PM.04: Lifecycle Management",
+              "coafiPart": "GP-PM",
+              "chapter": "PM.04",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-PM/PM.04",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter PM.04",
+              "keywords": ["PM.04", "Lifecycle Management", "EoL"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-PM-LIFE-0500-04-001-OV-A",
+                  "title": "Lifecycle Management Overview",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.04",
+                  "subjectNumber": "04-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-PM-LIFE-0500-04-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Lifecycle Management", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-LIFE-0500-04-002-PLAN-A",
+                  "title": "Design & Development Phase Plan",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.04",
+                  "subjectNumber": "04-02",
+                  "infoCodes": ["PLAN"],
+                  "filePath": "./GP-PM-LIFE-0500-04-002-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Design", "Development", "Phase", "Plan"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-LIFE-0500-04-003-PLAN-A",
+                  "title": "Production & Manufacturing Plan",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.04",
+                  "subjectNumber": "04-03",
+                  "infoCodes": ["PLAN"],
+                  "filePath": "./GP-PM-LIFE-0500-04-003-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Production", "Manufacturing", "Plan"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-LIFE-0500-04-004-PLAN-A",
+                  "title": "Operations & Sustainment Plan",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.04",
+                  "subjectNumber": "04-04",
+                  "infoCodes": ["PLAN"],
+                  "filePath": "./GP-PM-LIFE-0500-04-004-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Operations", "Sustainment", "Plan"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-LIFE-0500-04-005-PLAN-A",
+                  "title": "End-of-Life (EoL), Decommissioning & Recycling Plan",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.04",
+                  "subjectNumber": "04-05",
+                  "infoCodes": ["PLAN"],
+                  "filePath": "./GP-PM-LIFE-0500-04-005-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["End-of-Life", "EoL", "Decommissioning", "Recycling", "Plan"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-PM-QA-0500-05-CHAPTER",
+              "title": "PM.05: Quality Assurance & Configuration Management",
+              "coafiPart": "GP-PM",
+              "chapter": "PM.05",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-PM/PM.05",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter PM.05",
+              "keywords": ["PM.05", "Quality Assurance", "QA", "Configuration Management", "CM"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                 {
+                  "id": "GP-PM-QA-0500-05-001-OV-A",
+                  "title": "QA & CM Overview",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.05",
+                  "subjectNumber": "05-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-PM-QA-0500-05-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Quality Assurance", "QA", "Configuration Management", "CM", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-QA-0500-05-002-PLAN-A",
+                  "title": "Quality Management System (QMS) Plan",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.05",
+                  "subjectNumber": "05-02",
+                  "infoCodes": ["PLAN", "REQ"],
+                  "filePath": "./GP-PM-QA-0500-05-002-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["QMS", "Quality Management System", "Plan", "Requirements"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-QA-0500-05-003-PLAN-A",
+                  "title": "Configuration Management (CM) Plan",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.05",
+                  "subjectNumber": "05-03",
+                  "infoCodes": ["PLAN", "REQ"],
+                  "filePath": "./GP-PM-QA-0500-05-003-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["CM", "Configuration Management", "Plan", "Requirements"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-QA-0500-05-004-PROC-A",
+                  "title": "Audit & Inspection Procedure",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.05",
+                  "subjectNumber": "05-04",
+                  "infoCodes": ["PROC"],
+                  "filePath": "./GP-PM-QA-0500-05-004-PROC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Audit", "Inspection", "Procedure", "QA"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-QA-0500-05-005-PROC-A",
+                  "title": "Non-Conformance Reporting & Corrective Action Procedure",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.05",
+                  "subjectNumber": "05-05",
+                  "infoCodes": ["PROC"],
+                  "filePath": "./GP-PM-QA-0500-05-005-PROC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Non-Conformance", "Corrective Action", "Procedure", "QA"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-PM-RISK-0500-06-CHAPTER",
+              "title": "PM.06: Risk Management",
+              "coafiPart": "GP-PM",
+              "chapter": "PM.06",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-PM/PM.06",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter PM.06",
+              "keywords": ["PM.06", "Risk Management"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-PM-RISK-0500-06-001-OV-A",
+                  "title": "Risk Management Overview",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.06",
+                  "subjectNumber": "06-01",
+                  "infoCodes": ["OV"],
+                  "filePath": "./GP-PM-RISK-0500-06-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Risk Management", "Overview"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-RISK-0500-06-002-PLAN-A",
+                  "title": "Risk Management Plan",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.06",
+                  "subjectNumber": "06-02",
+                  "infoCodes": ["PLAN"],
+                  "filePath": "./GP-PM-RISK-0500-06-002-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Risk Management", "Plan"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-RISK-0500-06-003-PROC-A",
+                  "title": "Risk Identification & Assessment Procedure",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.06",
+                  "subjectNumber": "06-03",
+                  "infoCodes": ["PROC"],
+                  "filePath": "./GP-PM-RISK-0500-06-003-PROC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Risk Identification", "Risk Assessment", "Procedure"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-RISK-0500-06-004-LIST-A",
+                  "title": "Program Risk Register",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.06",
+                  "subjectNumber": "06-04",
+                  "infoCodes": ["LIST"],
+                  "filePath": "./GP-PM-RISK-0500-06-004-LIST-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Risk Register", "List"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-PM-RISK-0500-06-005-PLAN-A",
+                  "title": "Risk Mitigation & Contingency Plan",
+                  "coafiPart": "GP-PM",
+                  "chapter": "PM.06",
+                  "subjectNumber": "06-05",
+                  "infoCodes": ["PLAN"],
+                  "filePath": "./GP-PM-RISK-0500-06-005-PLAN-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Risk Mitigation", "Contingency", "Plan"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ],
+          "appendix": [
+            {
+              "id": "GP-PM-0500-APP-A-CHAPTER",
+              "title": "Appendix A: Glossary",
+              "coafiPart": "GP-PM",
+              "chapter": "APP-A",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-PM/APPA",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Appendix A",
+              "keywords": ["Appendix", "Glossary", "Project Management"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                 {
+                  "id": "GP-PM-0500-APP-A-001-GLO-A",
+                  "title": "Glossary of Project Management Terms & Acronyms",
+                  "coafiPart": "GP-PM",
+                  "chapter": "APP-A",
+                  "subjectNumber": "A-01",
+                  "infoCodes": ["GLO"],
+                  "filePath": "./GP-PM-0500-APP-A-001-GLO-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["Glossary", "Terms", "Acronyms", "Project Management", "Appendix"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-PM-0500-APP-B-CHAPTER",
+              "title": "Appendix B: References",
+              "coafiPart": "GP-PM",
+              "chapter": "APP-B",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-PM/APPB",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Appendix B",
+              "keywords": ["Appendix", "References", "Project Management"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                 {
+                  "id": "GP-PM-0500-APP-B-001-REF-A",
+                  "title": "Referenced COAFI Documents (PM & Ops)",
+                  "coafiPart": "GP-PM",
+                  "chapter": "APP-B",
+                  "subjectNumber": "B-01",
+                  "infoCodes": ["REF", "LIST"],
+                  "filePath": "./GP-PM-0500-APP-B-001-REF-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["References", "COAFI", "Project Management", "Operations", "List", "Appendix"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "partId": "GP-RS",
+          "partTitle": "Robotic Systems (RAME Fleet)",
+          "nodes": [
+            {
+              "id": "GP-RS-RAME-0600-01-CHAPTER",
+              "title": "RS.01: RAME Fleet Architecture & Concepts of Operations (CONOPS)",
+              "coafiPart": "GP-RS",
+              "chapter": "RS.01",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-RS/RS.01",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter RS.01",
+              "keywords": ["RS.01", "RAME", "Robotics", "Architecture", "CONOPS"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                 {
+                  "id": "GP-RS-RAME-0600-01-001-OV-A",
+                  "title": "RAME Fleet Architecture Overview",
+                  "coafiPart": "GP-RS",
+                  "chapter": "RS.01",
+                  "subjectNumber": "01-01",
+                  "infoCodes": ["OV", "SDD"],
+                  "filePath": "./GP-RS-RAME-0600-01-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["RAME", "Fleet", "Architecture", "Overview", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-RS-RAME-0600-01-002-CONOPS-A",
+                  "title": "RAME Fleet Concept of Operations (On-Orbit Servicing, Inspection)",
+                  "coafiPart": "GP-RS",
+                  "chapter": "RS.01",
+                  "subjectNumber": "01-02",
+                  "infoCodes": ["CONOPS"],
+                  "filePath": "./GP-RS-RAME-0600-01-002-CONOPS-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["RAME", "Fleet", "CONOPS", "Concept of Operations", "On-Orbit Servicing", "Inspection"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-RS-RAME-0600-01-003-SPEC-A",
+                  "title": "RAME Fleet Performance Requirements Specification",
+                  "coafiPart": "GP-RS",
+                  "chapter": "RS.01",
+                  "subjectNumber": "01-03",
+                  "infoCodes": ["SPEC", "REQ"],
+                  "filePath": "./GP-RS-RAME-0600-01-003-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["RAME", "Fleet", "Performance", "Requirements", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-RS-RAME-0600-02-CHAPTER",
+              "title": "RS.02: RAME Unit Design & Specifications",
+              "coafiPart": "GP-RS",
+              "chapter": "RS.02",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-RS/RS.02",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter RS.02",
+              "keywords": ["RS.02", "RAME", "Unit Design", "Specifications"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-RS-RAME-0600-02-001-OV-A",
+                  "title": "RAME Unit Design Overview",
+                  "coafiPart": "GP-RS",
+                  "chapter": "RS.02",
+                  "subjectNumber": "02-01",
+                  "infoCodes": ["OV", "DD"],
+                  "filePath": "./GP-RS-RAME-0600-02-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["RAME", "Unit Design", "Overview", "Design Document"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-RS-RAME-0600-02-002-SPEC-A",
+                  "title": "Robotic Manipulator Specification",
+                  "coafiPart": "GP-RS",
+                  "chapter": "RS.02",
+                  "subjectNumber": "02-02",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-RS-RAME-0600-02-002-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["RAME", "Robotic Manipulator", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-RS-RAME-0600-02-003-SPEC-A",
+                  "title": "Mobility System Specification (Thrusters, Grapples)",
+                  "coafiPart": "GP-RS",
+                  "chapter": "RS.02",
+                  "subjectNumber": "02-03",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-RS-RAME-0600-02-003-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["RAME", "Mobility", "Thrusters", "Grapples", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-RS-RAME-0600-02-004-SPEC-A",
+                  "title": "Sensor Suite Specification (Cameras, LiDAR, Thermal)",
+                  "coafiPart": "GP-RS",
+                  "chapter": "RS.02",
+                  "subjectNumber": "02-04",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-RS-RAME-0600-02-004-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["RAME", "Sensors", "Cameras", "LiDAR", "Thermal", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-RS-RAME-0600-02-005-SPEC-A",
+                  "title": "Power & Thermal System Specification",
+                  "coafiPart": "GP-RS",
+                  "chapter": "RS.02",
+                  "subjectNumber": "02-05",
+                  "infoCodes": ["SPEC"],
+                  "filePath": "./GP-RS-RAME-0600-02-005-SPEC-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["RAME", "Power", "Thermal", "Specification"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-RS-RAME-0600-02-006-DWG-A",
+                  "title": "RAME Unit Assembly Drawing",
+                  "coafiPart": "GP-RS",
+                  "chapter": "RS.02",
+                  "subjectNumber": "02-06",
+                  "infoCodes": ["DWG"],
+                  "filePath": "./GP-RS-RAME-0600-02-006-DWG-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["RAME", "Assembly Drawing", "Drawing"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "GP-RS-RAME-0600-03-CHAPTER",
+              "title": "RS.03: RAME Control Systems",
+              "coafiPart": "GP-RS",
+              "chapter": "RS.03",
+              "subjectNumber": null,
+              "infoCodes": ["IDX"],
+              "filePath": "#/GP-RS/RS.03",
+              "version": "A",
+              "status": "Placeholder",
+              "classification": "Internal Use Only",
+              "date": null,
+              "author": null,
+              "description": "Container node for Chapter RS.03",
+              "keywords": ["RS.03", "RAME", "Control Systems", "Autonomy", "Teleoperation"],
+              "relatedLinks": [],
+              "externalLinks": [],
+              "children": [
+                {
+                  "id": "GP-RS-RAME-0600-03-001-OV-A",
+                  "title": "RAME Control System Architecture Overview",
+                  "coafiPart": "GP-RS",
+                  "chapter": "RS.03",
+                  "subjectNumber": "03-01",
+                  "infoCodes": ["OV", "SDD"],
+                  "filePath": "./GP-RS-RAME-0600-03-001-OV-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["RAME", "Control System", "Architecture", "Overview", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-RS-RAME-0600-03-002-SDD-A",
+                  "title": "Autonomous Control Logic Description",
+                  "coafiPart": "GP-RS",
+                  "chapter": "RS.03",
+                  "subjectNumber": "03-02",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-RS-RAME-0600-03-002-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["RAME", "Autonomous Control", "Logic", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                },
+                {
+                  "id": "GP-RS-RAME-0600-03-003-SDD-A",
+                  "title": "Teleoperation Interface & Control Description",
+                  "coafiPart": "GP-RS",
+                  "chapter": "RS.03",
+                  "subjectNumber": "03-03",
+                  "infoCodes": ["SDD"],
+                  "filePath": "./GP-RS-RAME-0600-03-003-SDD-A.md",
+                  "version": "A",
+                  "status": "Draft",
+                  "classification": "Internal Use Only",
+                  "date": null,
+                  "author": null,
+                  "description": null,
+                  "keywords": ["RAME", "Teleoperation", "Interface", "Control", "SDD"],
+                  "relatedLinks": [],
+                  "externalLinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ],
+          "appendix": []
+        }
+      ]
+    }
+  }
+]
 Capgemini Spain is deeply engaged in:
 - Engineering-intensive projects across the EU and nationally
 - Strategic partnerships in aviation, defense, and space technology
@@ -817,8 +4019,6 @@ A separate ROR ID would ensure proper affiliation tracking, reproducibility audi
 - Capgemini España S.L. – Legal Info
 
 ---
-
-Puedes copiar y pegar esta plantilla en un nuevo Issue en el repositorio de ROR en GitHub. Si necesitas ayuda adicional para crear el Issue o cualquier otra cosa, ¡solo dímelo! 😊
             `;
 
             const { data: issue } = await github.issues.create({
