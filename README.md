@@ -1756,24 +1756,31 @@
 
 ### RS.05: RAME Maintenance & Servicing Procedures
 *Covers the maintenance plan and procedures for RAME units, including on-orbit refueling/recharging and component replacement.*
-*   [GP-RS-RAME-0600-05-001-OV-A.md](./GP-RS-RAME-0600-05-001-OV-A.md):
-                  "children": []
-                }
-              ]
-            }
-          ],
-          "appendix": []
-        }
-      ]
-    }
-  }
-]
-Capgemini Spain is deeply engaged in:
-- Engineering-intensive projects across the EU and nationally
-- Strategic partnerships in aviation, defense, and space technology
-- Research platforms involving AI, federated systems, and data ethics
+*   [GP-RS-RAME-0600-05-001-OV-A.md](./GP-RS-RAME-0600-05-001-OV-A.md): 05-01: RAME Maintenance & Servicing Overview - *(OV)*
+*   [GP-RS-RAME-0600-05-002-PROC-A.md](./GP-RS-RAME-0600-05-002-PROC-A.md): 05-02: On-Orbit Refueling/Recharging Procedure - *(PROC)*
+*   [GP-RS-RAME-0600-05-003-PROC-A.md](./GP-RS-RAME-0600-05-003-PROC-A.md): 05-03: Component Replacement Procedure (Ground/Orbit) - *(PROC)*
+*   [GP-RS-RAME-0600-05-004-PLAN-A.md](./GP-RS-RAME-0600-05-004-PLAN-A.md): 05-04: RAME Maintenance Plan - *(PLAN)*
 
-It contributes to both industrial innovation and scientific reproducibility via ORCID-linked outputs, project documentation, and open science platforms.
+### RS.06: RAME Software & AI Modules
+*Details the software architecture and specific AI modules for RAME units, covering perception, sensor fusion, motion planning, control, task execution, and manipulation.*
+*   [GP-RS-RAME-0600-06-001-OV-A.md](./GP-RS-RAME-0600-06-001-OV-A.md): 06-01: RAME Software Architecture Overview - *(OV, SDD)*
+*   [GP-RS-RAME-0600-06-002-SDD-A.md](./GP-RS-RAME-0600-06-002-SDD-A.md): 06-02: Perception & Sensor Fusion Module Description - *(SDD)*
+*   [GP-RS-RAME-0600-06-003-SDD-A.md](./GP-RS-RAME-0600-06-003-SDD-A.md): 06-03: Motion Planning & Control Module Description - *(SDD)*
+*   [GP-RS-RAME-0600-06-004-SDD-A.md](./GP-RS-RAME-0600-06-004-SDD-A.md): 06-04: Task Execution & Manipulation AI Module Description - *(SDD)*
+*   [GP-RS-RAME-0600-06-005-PROC-A.md](./GP-RS-RAME-0600-06-005-PROC-A.md): 06-05: RAME Software Update & Verification Procedure - *(PROC)*
+
+---
+
+## Appendix (Part VI)
+
+### Appendix A: Glossary
+*   [GP-RS-RAME-0600-APP-A-001-GLO-A.md](./GP-RS-RAME-0600-APP-A-001-GLO-A.md): A-01: Glossary of Robotic Systems Terms & Acronyms - *(GLO)*
+
+### Appendix B: References
+*   [GP-RS-RAME-0600-APP-B-001-REF-A.md](./GP-RS-RAME-0600-APP-B-001-REF-A.md): B-01: Referenced COAFI Documents (Robotic Systems) - *(REF, LIST)*
+
+---
+```
 
 ---
 
