@@ -4424,6 +4424,146 @@ This repository is a collaborative effort under **The Proposal - Open Call** ini
 
 # Robbbo-T Repository - Central Source Data Base
 
+**database schema**
+
+```sql
+...-- Create schema for GAIA AIR documentation system
+CREATE SCHEMA IF NOT EXISTS gaia_air;
+
+-- Create InfoCodes table to store document type definitions
+CREATE TABLE IF NOT EXISTS gaia_air.info_codes (
+  code VARCHAR(20) PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  purpose TEXT NOT NULL,
+  format TEXT NOT NULL,
+  category VARCHAR(50) NOT NULL,
+  template_path VARCHAR(255),
+  schema_path VARCHAR(255),
+  renderer_path VARCHAR(255),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create table for document parts/domains
+CREATE TABLE IF NOT EXISTS gaia_air.document_parts (
+  id SERIAL PRIMARY KEY,
+  part_number INTEGER NOT NULL,
+  code VARCHAR(10) NOT NULL UNIQUE,
+  domain VARCHAR(100) NOT NULL,
+  theme VARCHAR(255) NOT NULL,
+  purpose TEXT NOT NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create documents table
+CREATE TABLE IF NOT EXISTS gaia_air.documents (
+  id SERIAL PRIMARY KEY,
+  document_id VARCHAR(50) NOT NULL UNIQUE,
+  title VARCHAR(255) NOT NULL,
+  info_code VARCHAR(20) NOT NULL REFERENCES gaia_air.info_codes(code),
+  part_code VARCHAR(10) REFERENCES gaia_air.document_parts(code),
+  status VARCHAR(100) NOT NULL,
+  revision VARCHAR(10) NOT NULL,
+  author VARCHAR(255) NOT NULL,
+  creation_date TIMESTAMP WITH TIME ZONE NOT NULL,
+  last_modified TIMESTAMP WITH TIME ZONE NOT NULL,
+  description TEXT,
+  content TEXT,
+  metadata JSONB,
+  is_validated BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create document sections table
+CREATE TABLE IF NOT EXISTS gaia_air.document_sections (
+  id SERIAL PRIMARY KEY,
+  document_id INTEGER NOT NULL REFERENCES gaia_air.documents(id) ON DELETE CASCADE,
+  section_name VARCHAR(100) NOT NULL,
+  section_order INTEGER NOT NULL,
+  content TEXT,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE(document_id, section_name)
+);
+
+-- Create document relationships table
+CREATE TABLE IF NOT EXISTS gaia_air.document_relationships (
+  id SERIAL PRIMARY KEY,
+  source_document_id INTEGER NOT NULL REFERENCES gaia_air.documents(id) ON DELETE CASCADE,
+  target_document_id INTEGER NOT NULL REFERENCES gaia_air.documents(id) ON DELETE CASCADE,
+  relationship_type VARCHAR(50) NOT NULL,
+  description TEXT,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE(source_document_id, target_document_id, relationship_type)
+);
+
+-- Create validation history table
+CREATE TABLE IF NOT EXISTS gaia_air.validation_history (
+  id SERIAL PRIMARY KEY,
+  document_id INTEGER NOT NULL REFERENCES gaia_air.documents(id) ON DELETE CASCADE,
+  validator VARCHAR(100) NOT NULL,
+  validation_date TIMESTAMP WITH TIME ZONE NOT NULL,
+  status VARCHAR(50) NOT NULL,
+  comments TEXT,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create users table for authority management
+CREATE TABLE IF NOT EXISTS gaia_air.users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(100) NOT NULL UNIQUE,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  full_name VARCHAR(255) NOT NULL,
+  role VARCHAR(50) NOT NULL,
+  is_authority BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create tags table
+CREATE TABLE IF NOT EXISTS gaia_air.tags (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL UNIQUE,
+  color VARCHAR(20),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create document tags junction table
+CREATE TABLE IF NOT EXISTS gaia_air.document_tags (
+  document_id INTEGER NOT NULL REFERENCES gaia_air.documents(id) ON DELETE CASCADE,
+  tag_id INTEGER NOT NULL REFERENCES gaia_air.tags(id) ON DELETE CASCADE,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (document_id, tag_id)
+);
+
+-- Create document revisions table
+CREATE TABLE IF NOT EXISTS gaia_air.document_revisions (
+  id SERIAL PRIMARY KEY,
+  document_id INTEGER NOT NULL REFERENCES gaia_air.documents(id) ON DELETE CASCADE,
+  revision VARCHAR(10) NOT NULL,
+  content TEXT NOT NULL,
+  metadata JSONB,
+  created_by VARCHAR(100) NOT NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE(document_id, revision)
+);
+
+-- Create key sections table for InfoCodes
+CREATE TABLE IF NOT EXISTS gaia_air.info_code_sections (
+  id SERIAL PRIMARY KEY,
+  info_code VARCHAR(20) NOT NULL REFERENCES gaia_air.info_codes(code) ON DELETE CASCADE,
+  section_name VARCHAR(255) NOT NULL,
+  section_order INTEGER NOT NULL,
+  is_required BOOLEAN DEFAULT TRUE,
+  description TEXT,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE(info_code, section_name)
+);
+```
+
 # GAIA AIR - Arquitectura Digital Integral
 
 ---
@@ -6996,57 +7136,121 @@ Establish a unified, cross-sectoral, and adaptive documentation and operational 
 
 ---
 
-## 🧱 Structural Domains (COAFI Parts I–IX)
-
-- **Part 0 – Foundations**
-  - Principles, ethics, and constitutional logic.
-- **Part I – Airframes**
-  - Structural and functional assemblies, aligned to ATA chapters.
-- **Part II – Spaceframes**
-  - Orbital and transatmospheric systems.
-- **Part III – Subsystems & Technologies**
-  - Quantum propulsion, hydrogen, materials, sensors.
-- **Part IV – Systems Integration**
-  - Twin synchronization, onboard intelligence, cross-domain flow.
-- **Part V – Simulation & Computation**
-  - GACMS (GAIA AIR Computing & Material Simulation).
-- **Part VI – Project Management & Compliance**
-  - PMO, lifecycle traceability, audit chains.
-- **Part VII – Planetary Interfaces**
-  - Ground, atmospheric, extraterrestrial interaction hubs.
-- **Part VIII – Strategic Governance**
-  - Digital constitutional ruleset, federated ethics.
-- **Part IX – Future Extensions**
-  - Reserved for speculative and adaptive architectures.
+Below is a detailed explanation of how your TPSL/TPWD system fits and is anchored within the overall GAIA AIR (COAFI) documentation framework. This explanation reviews the purpose and structure of the two major components—the Technical Project System Specification (TPSL) and the Technical Project Work Description (TPWD)—and shows how they integrate with the already established COAFI Master Table of Contents. Additionally, it explains the rationale for publishing this documentation as part of the comprehensive GAIA AIR architecture.
 
 ---
 
-## 🧩 Integration Frameworks
+## 1. High-Level Overview
 
-- **COAFI Syntax**: Document and object IDs, versioning, cross-reference matrices.
-- **MOD-* Compatibility**: All parts are compatible with modular deployments (e.g., MOD-TWIN, MOD-SEC, MOD-CHAIN).
-- **IM‑PROUD Format**: Documents follow Integrated Markdown Proposition Unified Document standards.
-- **XAI Layer**: Semantic tagging for all functions, parts, and assemblies.
-- **TwinFi & PTIM**: Integrated with pre-trained implementable models and twin identifiers.
+The **TPSL/TPWD** system is designed to serve two complementary roles within GAIA AIR’s documentation ecosystem:
 
----
+1. **TPSL (Technical Project System Specification):**  
+   This component defines the technical and engineering specifications of the project system. It lays out the overall mission context, system architecture, material and component requirements, data and control models, and the verification methodology.
+   
+2. **TPWD (Technical Project Work Description):**  
+   This part describes the work phases and the specific tasks necessary for developing the project. It is organized into clearly defined phases (from Conceptual Definition through Detailed Engineering, Integration & Validation, Operation & Monitoring, and Decommission & Post-Mission Analysis) that ensure every aspect of the project lifecycle is addressed.
 
-## 🛠 Deployment Readiness
-- All modules aligned with GACMS validation.
-- Constitutional ruleset embedded in Part VIII.
-- Compatible with GAIA Quantum Portal and blockchain-based verification.
+Both TPSL and TPWD are essential not only for internal communication and project management but also for external certification processes and eventual publication in accordance with aerospace standards (like S1000D, ATA, etc.).
 
 ---
 
-## 🔄 Governance Cycle
-- Continuous feedback loop from simulation, telemetry, and stakeholders.
-- Ethical checkpoints embedded at each deployment stage.
-- Regeneration triggers linked to impact thresholds (sustainability, inclusion, autonomy).
+## 2. TPSL – Technical Project System Specification
+
+### Purpose and Scope
+- **Mission Configuration Context:**  
+  *Describes the mission environment and operational context.*  
+  For example, TPSL-1 defines whether the mission is Earth-orbit, cislunar, or interplanetary; establishes the celestial environment; and outlines the strategic objectives.
+  
+- **System Architecture:**  
+  *Provides block diagrams and subsystem decompositions.*  
+  TPSL-2 details the technical architecture, including integrations with the AMPEL materials concept and the quantum logic overlays (e.g., Chronos, QAO). This ties into the COAFI documentation by linking to the dedicated parts (such as GP-AM for airframes and GP-SM for spaceframes) where subsystem details are elaborated.
+
+- **Material & Component Specifications:**  
+  *Specifies the aerospace-grade alloys, composites, sensors, etc.*  
+  TPSL-3 itemizes the materials and component requirements (such as those defined by the AMPEL/BNNT philosophy) and ensures that the data is consistent with the structural and material documents found in, for instance, [GP-FD-01-*](../../GP-FD/).
+
+- **Data Models & Control Layers:**  
+  *Describes embedded AI loops, telemetry schemas, and control protocols.*  
+  TPSL-4 sets the standards for software and hardware interconnectivity. This links with Part III, where the common networks (GP-CN) and quantum control systems (QAO) are detailed.
+
+- **Verification Matrix:**  
+  *Cross-references design requirements with test cases and review checkpoints.*  
+  TPSL-5 is a traceability tool that connects each requirement with its verification method. This matrix is key to both internal validation (e.g., using automated test and simulation environments) and external certification efforts.
+
+### Integration with COAFI
+- **Mapping:**  
+  Your TPSL is designed to complement the COAFI structure. For example, many of the individual documents in the GAIA AIR Master ToC (like **GP-FD-00-001-OV-A.md** and **GP-AM-AMPEL-0100-00-004-OV-A.md**) serve as reference points for overarching principles, system designs, and verification processes that are further detailed in TPSL.
+  
+- **Standards Alignment:**  
+  By detailing technical specifications, TPSL supports the certification requirements managed in Part V ([GP-PM](../ToC-GP-PM.md)), thereby creating a seamless pathway from concept to certification.
 
 ---
 
-**→ This markdown serves as the seed of the GAIA AIR COAFI constitutional framework. Expansion and refinement proceed by parts, each with traceable logic, identifiers, and modular integration.**
+## 3. TPWD – Technical Project Work Description
 
+### Purpose and Scope
+- **Phased Approach:**  
+  TPWD is organized into phases that mirror the typical systems engineering lifecycle:
+  
+  - **Phase A – Conceptual Definition:**  
+    Establishes overall requirements, mission objectives, and initial design concepts (aligned with the early COAFI documents in Part 0 and Part I).
+  
+  - **Phase B – Preliminary Design:**  
+    Focuses on creating a digital twin model, defining system boundaries, and setting up interface protocols; it ties back to the conceptual elements outlined in TPSL.
+  
+  - **Phase C – Detailed Engineering:**  
+    Covers the in-depth design (CAD, thermal, structural simulations) and subsystem documentation. Here, each detailed design document (e.g., the DDs and SPECs in the ATA chapters) from Parts I and II are developed and integrated.
+  
+  - **Phase D – Integration & Validation:**  
+    Describes the test benches and integration checklists; these ensure that all subsystems are assembled in accordance with the TPSL requirements.
+  
+  - **Phase E – Operation & Monitoring:**  
+    Details the operational procedures, in-flight diagnostics, and maintenance routines. This phase is closely linked to the operational manuals found in Part V (Project Management & Operations).
+  
+  - **Phase F – Decommission & Post-Mission Analysis:**  
+    Defines the end-of-life procedures, data archiving, and lessons learned, contributing to continual improvement and sustainable practices.
+
+### Integration with COAFI
+- **Lifecycle Consistency:**  
+  TPWD provides the work breakdown structure and a roadmap that connects every phase with the corresponding COAFI document parts. For instance, the integration of maintenance strategies in TPWD-F corresponds to the lifecycle management sections in GP-PM.
+  
+- **Traceability:**  
+  By tracking every phase (from conceptual design to operation and decommissioning), TPWD ensures that all design decisions are traceable back to the master specification (TPSL) and, ultimately, to the higher-level vision set out in the COAFI Master Index.
+
+---
+
+## 4. Mapping to COAFI’s Master ToC
+
+Your repository structure as detailed in the [AToC.md](./AToC.md) file categorizes documentation into Parts 0 through VI based on distinct domains:
+  
+- **Part 0:** Contains foundational principles and program vision documents (e.g., **GP-FD** files) that feed directly into the TPSL.
+- **Part I & II:** Address the technical documentation for airframes and spacecraft (ATA and AS chapters). Many of the documents referenced in TPSL (e.g., structural design documents, regulatory compliance reports, interface control documents) are housed here.
+- **Part III:** Covers the shared digital infrastructure, including AI, blockchain, and quantum networks—areas that are critical to both TPSL (for control models and data streams) and TPWD (for integration).
+- **Parts IV, V, and VI:** Support ground operations, project management, and robotic systems, which are important in the integration and validation phases (as referenced in TPWD).
+
+Each file—from **GP-FD-00-001-OV-A.md** to the various **GP-SM**, **GP-CN**, **GP-GB**, **GP-PM**, and **GP-RS** documents—acts as a building block, ensuring that the TPSL/TPWD system is not only well defined but also fully anchored within an integrated, traceable, and modular documentation ecosystem.
+
+For example, your sample file **GP-AM-AMPEL-0100-00-004-OV-A.md** (Core Design Principles for the airframe) illustrates how specific system philosophies from TPSL are recorded at a granular level, which later tie into the detailed work descriptions in the TPWD phases.
+
+---
+
+## 5. Public-Facing Outputs and Publication Readiness
+
+To ensure broad accessibility and maintain compliance with aerospace standards, the TPSL/TPWD will be produced in multiple output formats:
+- **Handbook Versions:** Exportable as PDFs, Markdown documents, and dynamic web pages through the integrated renderers (e.g., `RendererOV.tsx`).
+- **Version Tagging:** Using a structured tagset such as `GAIA-AIR-TPSL-[Module]-[RevID]` and `GAIA-AIR-TPWD-[Phase]-[Version]` to ensure proper traceability.
+- **Live Dashboards:** Utilizing platforms like Vercel (as seen in your GitHub Actions badge) to provide real-time dashboards tracking project phases.
+- **Interoperability:** Designing the documentation so it can interface with standard aerospace documents (S1000D, ATA) and public repositories like Zenodo, ORCID, and DataCite.
+
+---
+
+## 6. Additional Context: The ROR ID Proposal
+
+Towards the end of your document you provide a **Justification for a separate ROR (Research Organization Registry) ID**:  
+- This proposal helps clearly attribute research initiatives, publications, and project outputs to the legal entity—Capgemini Spain—in separate systems such as ORCID, Zenodo, etc.  
+- It ensures proper funding traceability, reproducibility, and transparency, which dovetail with the GAIA AIR ethos of ethical and traceable engineering.
+
+---
 
 
 ## GAIA AIR - AMPEL360 Project
