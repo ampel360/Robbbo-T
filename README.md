@@ -1,4 +1,9121 @@
-[
+[[
+  {
+    "part": "Part 0",
+    "domain": "Program Foundations",
+    "code": "GP-FD",
+    "theme": "Vision, Theories, Compliance, Ethics",
+    "purpose": "Foundational Principles & Context Manuals",
+    "chapters": [
+      {
+        "chapterCode": "FD.00",
+        "title": "Introduction & Program Vision",
+        "description": "Establishes the overarching goals, vision, and roadmap for the GAIA AIR program and the COAFI framework.",
+        "modules": [
+          {
+            "id": "GP-FD-00-001-OV-A",
+            "subject": "00-01",
+            "title": "Introduction & Program Vision Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-00-002-OV-A",
+            "subject": "00-02",
+            "title": "Core Principles of GAIA AIR",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-00-003-PLAN-A",
+            "subject": "00-03",
+            "title": "Program Roadmap & Phasing",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-00-004-RPT-A",
+            "subject": "00-04",
+            "title": "Long-Term Cosmic Impetus & Goals",
+            "infoCode": ["RPT"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-00-005-SDD-A",
+            "subject": "00-05",
+            "title": "AI-Driven Vision Monitoring & Adaptation System",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "FD.01",
+        "title": "Key Theories & Proofs",
+        "description": "Details the core scientific and theoretical underpinnings of GAIA AIR technologies (Quantum Propulsion, Federated AI, Advanced Materials).",
+        "modules": [
+          {
+            "id": "GP-FD-01-001-OV-A",
+            "subject": "01-01",
+            "title": "Key Theories & Proofs Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-01-002-OV-A",
+            "subject": "01-02",
+            "title": "Quantum Propulsion Theory Principles (QEE/QSM)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-01-003-OV-A",
+            "subject": "01-03",
+            "title": "Federated AI Theory Principles (i-Aher0)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-01-004-OV-A",
+            "subject": "01-04",
+            "title": "BNNT/Carbon-Lattice Composites Theoretical Basis (AMPEL)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-01-005-RES-A",
+            "subject": "01-05",
+            "title": "Q-Thruster Conceptual Proofs & Validation Data",
+            "infoCode": ["RES", "RPT"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-01-006-RES-A",
+            "subject": "01-06",
+            "title": "AI Model Validation Reports (Foundational)",
+            "infoCode": ["RES", "RPT"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "FD.02",
+        "title": "Regulatory & Standards Base",
+        "description": "Outlines the applicable regulatory frameworks (FAA, EASA, Space) and industry standards (ISO, ATA, S1000D) governing GAIA AIR.",
+        "modules": [
+          {
+            "id": "GP-FD-02-001-OV-A",
+            "subject": "02-01",
+            "title": "Regulatory & Standards Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-02-002-REQ-A",
+            "subject": "02-02",
+            "title": "Applicable Airworthiness Regulations (FAA/EASA)",
+            "infoCode": ["REQ", "LIST"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-02-003-REQ-A",
+            "subject": "02-03",
+            "title": "Applicable Space Standards (NASA/ESA/ECSS/Commercial)",
+            "infoCode": ["REQ", "LIST"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-02-004-REQ-A",
+            "subject": "02-04",
+            "title": "Relevant ISO Standards (9001, 14001, 27001, etc.)",
+            "infoCode": ["REQ", "REF"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-02-005-OV-A",
+            "subject": "02-05",
+            "title": "COAFI Alignment with ATA/S1000D/AS Standards",
+            "infoCode": ["OV", "REF"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-02-006-SDD-A",
+            "subject": "02-06",
+            "title": "AI-Driven Regulatory Watch & Compliance Mapping System",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "FD.03",
+        "title": "Cross-Disciplinary Research",
+        "description": "Covers research spanning multiple fields, such as multi-physics simulation, quantum computing applications, and advanced materials R&D.",
+        "modules": [
+           {
+            "id": "GP-FD-03-001-OV-A",
+            "subject": "03-01",
+            "title": "Cross-Disciplinary Research Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-03-002-OV-A",
+            "subject": "03-02",
+            "title": "Multi-Physics Simulation Principles",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-03-003-RPT-A",
+            "subject": "03-03",
+            "title": "Quantum Computing Applications in Aerospace - Research Report",
+            "infoCode": ["RPT"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-03-004-RPT-A",
+            "subject": "03-04",
+            "title": "Cosmic Vacuum Energy & Propulsion Research Report",
+            "infoCode": ["RPT"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-03-005-PLAN-A",
+            "subject": "03-05",
+            "title": "Advanced Materials R&D Pipeline Plan",
+            "infoCode": ["PLAN", "RPT"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-03-006-LIST-A",
+            "subject": "03-06",
+            "title": "Academic & Industrial Research Partnerships List",
+            "infoCode": ["LIST", "REF"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "FD.04",
+        "title": "Ethical AI & Operational Framework",
+        "description": "Defines the ethical policies, bias mitigation strategies, and explainability requirements for AI systems within GAIA AIR.",
+         "modules": [
+          {
+            "id": "GP-FD-04-001-OV-A",
+            "subject": "04-01",
+            "title": "Ethical AI Framework Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-04-002-PLAN-A",
+            "subject": "04-02",
+            "title": "GAIA AIR AI Ethics Policy & Plan",
+            "infoCode": ["PLAN", "REQ"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-04-003-PROC-A",
+            "subject": "04-03",
+            "title": "Bias Detection & Mitigation Procedures",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-04-004-REQ-A",
+            "subject": "04-04",
+            "title": "Explainable AI (XAI) Audit Trail Requirements",
+            "infoCode": ["REQ", "SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-04-005-RPT-A",
+            "subject": "04-05",
+            "title": "Ethical Framework for Autonomous Decision Making - Research Report",
+            "infoCode": ["RPT"],
+            "status": "Draft"
+          }
+        ]
+      },
+       {
+        "chapterCode": "FD.05",
+        "title": "Reserved - Long-Term Interplanetary Vision",
+        "description": "Placeholder for future documentation regarding long-term interplanetary goals and strategies.",
+         "modules": [
+           {
+            "id": "GP-FD-05-001-OV-A",
+            "subject": "05-01",
+            "title": "Reserved - Long-Term Interplanetary Vision Overview",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+          }
+         ]
+      },
+      {
+        "chapterCode": "FD.06",
+        "title": "Foundational Security Architectures & Trust Frameworks",
+        "description": "Analysis of internal certificate usage and trust frameworks (ATA, ATAS, ATAC) informing GAIA AIR security.",
+        "modules": [
+           {
+            "id": "GP-FD-06-001-RPT-A",
+            "subject": "06-01",
+            "title": "Internal Digital Certificate Frameworks Analysis (ATA, ATAS, ATAC)",
+            "infoCode": ["RPT", "REF"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "FD.07-FD.99",
+        "title": "Reserved Future Sections",
+        "description": "Placeholders for future foundational topics as the GAIA AIR program evolves.",
+        "modules": [[
+  {
+    "part": "Part I",
+    "domain": "Flight Systems (AMPEL360XWLRGA)",
+    "code": "GP-AM",
+    "theme": "Aircraft Systems (Atmospheric)",
+    "purpose": "Airframe Design, System & Maintenance Manuals",
+    "chapters": [
+      {
+        "chapterCode": "ATA 00",
+        "title": "Intro & General",
+        "description": "Introduction, general requirements, certification strategy, design principles, and documentation system for the airframe.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-00-001-OV-A",
+            "subject": "00-01",
+            "title": "Intro & General Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-00-002-REQ-A",
+            "subject": "00-10",
+            "title": "Regulatory Compliance Overview",
+            "infoCode": ["REQ"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-00-003-PLAN-A",
+            "subject": "00-11",
+            "title": "Certification Strategy",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-00-004-OV-A",
+            "subject": "00-20",
+            "title": "Core Design Principles",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-00-005-OV-A",
+            "subject": "00-21",
+            "title": "Advanced Materials Philosophy (AMPEL)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-00-006-SDD-A",
+            "subject": "00-30",
+            "title": "AI-Driven Document Adaptation System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 01",
+        "title": "Aircraft General",
+        "description": "Aircraft identification, general specifications, performance characteristics, weight and balance, and operational limits.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-01-001-OV-A",
+            "subject": "01-01",
+            "title": "Aircraft Identification & General Specs Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-01-002-SPEC-A",
+            "subject": "01-02",
+            "title": "Aircraft Identification and Registration Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-01-003-SPEC-A",
+            "subject": "01-03",
+            "title": "General Specifications",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-01-004-RPT-A",
+            "subject": "01-10",
+            "title": "Performance Characteristics Report",
+            "infoCode": ["RPT"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-01-005-LIST-A",
+            "subject": "01-11",
+            "title": "Weight and Balance Data List",
+            "infoCode": ["LIST", "SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-01-006-SPEC-A",
+            "subject": "01-20",
+            "title": "Operational Limits and Restrictions Specification",
+            "infoCode": ["SPEC", "REQ"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-01-007-SDD-A",
+            "subject": "01-21",
+            "title": "AI-Enhanced Operational Monitoring System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 02",
+        "title": "Operations Information",
+        "description": "Procedures for normal, abnormal, and emergency flight operations, including AI-assisted concepts.",
+         "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-02-001-OV-A",
+            "subject": "02-01",
+            "title": "Operations Manual Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-02-002-PROC-A",
+            "subject": "02-10",
+            "title": "Normal Operating Procedures",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-02-003-SDD-A",
+            "subject": "02-11",
+            "title": "AI-Assisted Flight Operations Concept",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-02-004-PROC-A",
+            "subject": "02-20",
+            "title": "Abnormal Operating Procedures",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-02-005-PROC-A",
+            "subject": "02-21",
+            "title": "Emergency Procedures",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 03",
+        "title": "Performance",
+        "description": "Performance data for takeoff, cruise, and landing, including analysis of quantum propulsion impact and AI optimization.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-03-001-OV-A",
+            "subject": "03-01",
+            "title": "Performance Data Overview",
+            "infoCode": ["OV", "RPT"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-03-002-RPT-A",
+            "subject": "03-10",
+            "title": "Takeoff Performance Data Report",
+            "infoCode": ["RPT", "CAL"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-03-003-SDD-A",
+            "subject": "03-11",
+            "title": "Quantum Propulsion Impact on Takeoff Analysis",
+            "infoCode": ["SDD", "RPT"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-03-004-RPT-A",
+            "subject": "03-20",
+            "title": "Cruise Performance Data Report",
+            "infoCode": ["RPT", "CAL"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-03-005-SDD-A",
+            "subject": "03-21",
+            "title": "AI-Optimized Cruise Efficiency System",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-03-006-RPT-A",
+            "subject": "03-30",
+            "title": "Landing Performance Data Report",
+            "infoCode": ["RPT", "CAL"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 04",
+        "title": "Airworthiness",
+        "description": "Airworthiness requirements, certification compliance, continued airworthiness program, and AI-driven monitoring.",
+         "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-04-001-OV-A",
+            "subject": "04-01",
+            "title": "Airworthiness Requirements Overview",
+            "infoCode": ["OV", "REQ"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-04-002-REQ-A",
+            "subject": "04-10",
+            "title": "Certification Standards Compliance Requirements",
+            "infoCode": ["REQ"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-04-003-RPT-A",
+            "subject": "04-11",
+            "title": "Quantum System Certification Challenges Report",
+            "infoCode": ["RPT"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-04-004-PLAN-A",
+            "subject": "04-20",
+            "title": "Continued Airworthiness Maintenance Program",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-04-005-SDD-A",
+            "subject": "04-21",
+            "title": "AI-Driven Airworthiness Monitoring System",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 05",
+        "title": "Time Limits / Maintenance Checks",
+        "description": "Maintenance philosophy, program plan, AI-driven scheduling and prediction, life limits, and structural inspections.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-05-001-OV-A",
+            "subject": "05-01",
+            "title": "Maintenance Philosophy Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-05-002-PLAN-A",
+            "subject": "05-10",
+            "title": "Maintenance Program Plan",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-05-003-SDD-A",
+            "subject": "05-11",
+            "title": "AI-Driven Adaptive Scheduling System (i-Aher0)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-05-004-SDD-A",
+            "subject": "05-20",
+            "title": "Predictive Maintenance System Description (i-Aher0)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-05-005-LIST-A",
+            "subject": "05-50",
+            "title": "Component Life Limits List",
+            "infoCode": ["LIST"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-05-006-REQ-A",
+            "subject": "05-51",
+            "title": "Airworthiness Limitations Section Requirements",
+            "infoCode": ["REQ"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-05-007-PLAN-A",
+            "subject": "05-52",
+            "title": "Structural Inspection Program Plan",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 06",
+        "title": "Dimensions & Areas",
+        "description": "Coordinate systems, overall dimensions, station definitions, maintenance zones, and key reference points.",
+        "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-06-001-OV-A",
+            "subject": "06-01",
+            "title": "Dimensions & Areas Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-06-002-SPEC-A",
+            "subject": "06-02",
+            "title": "Coordinate System & Datum Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-06-003-DWG-A",
+            "subject": "06-10",
+            "title": "Overall Aircraft Dimensions Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-06-004-LIST-A",
+            "subject": "06-11",
+            "title": "Key Component Dimensions List",
+            "infoCode": ["LIST", "SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-06-005-DWG-A",
+            "subject": "06-20",
+            "title": "Fuselage Station Definition Drawing",
+            "infoCode": ["DWG", "SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-06-006-DWG-A",
+            "subject": "06-21",
+            "title": "Wing Station Definition Drawing",
+            "infoCode": ["DWG", "SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-06-007-DWG-A",
+            "subject": "06-22",
+            "title": "Maintenance Zone Diagram",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-06-008-SPEC-A",
+            "subject": "06-30",
+            "title": "Key Reference Point Specification",
+            "infoCode": ["SPEC", "LIST"],
+            "status": "Draft"
+           }
+        ]
+      },
+      {
+        "chapterCode": "ATA 07",
+        "title": "Lifting & Shoring",
+        "description": "Specifications and locations for jacking and shoring points, including automated/robotic systems.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-07-001-OV-A",
+            "subject": "07-01",
+            "title": "Lifting/Shoring Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-07-002-SPEC-A",
+            "subject": "07-10",
+            "title": "Jacking Point Specification & Load Limits",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-07-003-DWG-A",
+            "subject": "07-11",
+            "title": "Jacking Point Location Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-07-004-SDD-A",
+            "subject": "07-12",
+            "title": "Automated/Robotic Jacking System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-07-005-SPEC-A",
+            "subject": "07-20",
+            "title": "Shoring Point Specification & Requirements",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-07-006-DWG-A",
+            "subject": "07-21",
+            "title": "Shoring Point Location Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 08",
+        "title": "Leveling & Weighing",
+        "description": "Procedures for aircraft leveling and weighing, including CG calculation analysis.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-08-001-OV-A",
+            "subject": "08-01",
+            "title": "Leveling & Weighing Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-08-002-PROC-A",
+            "subject": "08-10",
+            "title": "Weighing Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-08-003-CAL-A",
+            "subject": "08-11",
+            "title": "HPC-Based CG Calculation Analysis",
+            "infoCode": ["CAL"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-08-004-PROC-A",
+            "subject": "08-20",
+            "title": "Leveling Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-08-005-DWG-A",
+            "subject": "08-21",
+            "title": "Leveling Point Location Drawing",
+            "infoCode": ["DWG", "SPEC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 09",
+        "title": "Towing & Taxiing",
+        "description": "Procedures, limitations, and specifications for towing and taxiing, including autonomous taxiing systems.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-09-001-OV-A",
+            "subject": "09-01",
+            "title": "Towing & Taxiing Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-09-002-PROC-A",
+            "subject": "09-10",
+            "title": "Towing Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-09-003-SPEC-A",
+            "subject": "09-11",
+            "title": "Towing Limitations Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-09-004-DWG-A",
+            "subject": "09-12",
+            "title": "Towing Point Specification Drawing",
+            "infoCode": ["DWG", "SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-09-005-PROC-A",
+            "subject": "09-20",
+            "title": "Taxi Procedure & Safety Guidelines",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-09-006-SDD-A",
+            "subject": "09-21",
+            "title": "Autonomous Taxiing System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+       {
+        "chapterCode": "ATA 10",
+        "title": "Parking, Mooring, Storage",
+        "description": "Procedures and requirements for parking, mooring, and short/long-term storage, including cryogenic fuel and quantum system considerations.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-10-001-OV-A",
+            "subject": "10-01",
+            "title": "Parking, Mooring, Storage Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-10-002-PROC-A",
+            "subject": "10-10",
+            "title": "Parking & Mooring Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-10-003-REQ-A",
+            "subject": "10-11",
+            "title": "Parking & Mooring Requirements",
+            "infoCode": ["REQ"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-10-004-PROC-A",
+            "subject": "10-20",
+            "title": "Short/Long Term Storage Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-10-005-PROC-A",
+            "subject": "10-21",
+            "title": "Cryogenic Fuel Storage Management Procedure",
+            "infoCode": ["PROC", "SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-10-006-PROC-A",
+            "subject": "10-22",
+            "title": "Quantum System Safing Procedure (Storage)",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 11",
+        "title": "Placards & Markings",
+        "description": "Specifications, locations, and drawings for exterior and interior placards and markings, including hazard markings and AR enhancements.",
+        "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-11-001-OV-A",
+            "subject": "11-01",
+            "title": "Placards & Markings Overview",
+            "infoCode": ["OV", "REF"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-11-002-DWG-A",
+            "subject": "11-10",
+            "title": "Exterior Placard Location Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-11-003-LIST-A",
+            "subject": "11-11",
+            "title": "Exterior Placard List & Specifications",
+            "infoCode": ["LIST", "SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-11-004-SPEC-A",
+            "subject": "11-12",
+            "title": "Quantum/High-Voltage Hazard Marking Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-11-005-DWG-A",
+            "subject": "11-20",
+            "title": "Interior Placard Location Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-11-006-LIST-A",
+            "subject": "11-21",
+            "title": "Interior Placard List & Specifications",
+            "infoCode": ["LIST", "SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-11-007-SDD-A",
+            "subject": "11-22",
+            "title": "AR-Enhanced Placard System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+        ]
+      },
+      {
+        "chapterCode": "ATA 12",
+        "title": "Servicing – Routine",
+        "description": "Procedures for routine servicing including fueling (H2/SAF), fluids, oxygen, quantum system coolant, and cleaning.",
+        "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-12-001-OV-A",
+            "subject": "12-01",
+            "title": "Routine Servicing Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-12-002-PROC-A",
+            "subject": "12-10",
+            "title": "Fueling Procedure (Hydrogen & SAF)",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-12-003-PROC-A",
+            "subject": "12-11",
+            "title": "Oil/Fluid Servicing Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-12-004-PROC-A",
+            "subject": "12-12",
+            "title": "Oxygen Servicing Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-12-005-PROC-A",
+            "subject": "12-13",
+            "title": "Quantum System Coolant Servicing Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-12-006-SPEC-A",
+            "subject": "12-14",
+            "title": "Quantum System Coolant Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-12-007-PROC-A",
+            "subject": "12-20",
+            "title": "Exterior/Interior Cleaning Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           }
+        ]
+      },
+      {
+        "chapterCode": "ATA 13",
+        "title": "Hydraulic Power",
+        "description": "Overview of the minimal hydraulic system, focusing on Electro-Hydrostatic Actuators (EHA) and redundancy.",
+        "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-13-001-OV-A",
+            "subject": "13-01",
+            "title": "Hydraulic System Overview (Minimal/EHA)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-13-002-SPEC-A",
+            "subject": "13-10",
+            "title": "Electro-Hydrostatic Actuator (EHA) Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-13-003-DWG-A",
+            "subject": "13-20",
+            "title": "Hydraulic Line Drawing (Redundancy Only)",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           }
+        ]
+      },
+      {
+        "chapterCode": "ATA 14",
+        "title": "Pneumatic Power",
+        "description": "Overview of the minimal pneumatic system, including ducting if applicable.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-14-001-OV-A",
+            "subject": "14-01",
+            "title": "Pneumatic System Overview (Minimal)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-14-002-DWG-A",
+            "subject": "14-20",
+            "title": "Pneumatic Ducting Drawing (If Applicable)",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 15",
+        "title": "Air Conditioning",
+        "description": "Reference to ATA Chapter 21 for Air Conditioning details.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-15-001-REF-A",
+            "subject": "15-01",
+            "title": "Reference to ATA 21",
+            "infoCode": ["REF"],
+            "status": "ReferenceOnly"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 16",
+        "title": "Pressurization",
+        "description": "Reference to ATA Chapter 21 for Pressurization details.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-16-001-REF-A",
+            "subject": "16-01",
+            "title": "Reference to ATA 21",
+            "infoCode": ["REF"],
+            "status": "ReferenceOnly"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 17",
+        "title": "Environmental Control",
+        "description": "Reference to ATA Chapter 21 for Environmental Control System (ECS) details.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-17-001-REF-A",
+            "subject": "17-01",
+            "title": "Reference to ATA 21",
+            "infoCode": ["REF"],
+            "status": "ReferenceOnly"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 18",
+        "title": "Vibration & Noise",
+        "description": "Vibration and noise control overview, including monitoring systems (HUMS), AI anomaly detection, active noise cancellation, and acoustic liners.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-18-001-OV-A",
+            "subject": "18-01",
+            "title": "Vibration & Noise Control Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-18-002-SDD-A",
+            "subject": "18-10",
+            "title": "Vibration Monitoring System Description (HUMS)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-18-003-SDD-A",
+            "subject": "18-11",
+            "title": "AI-Driven Vibration Anomaly Detection System",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-18-004-SDD-A",
+            "subject": "18-20",
+            "title": "Active Noise Cancellation System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-18-005-SPEC-A",
+            "subject": "18-21",
+            "title": "Acoustic Liner Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          }
+        ]
+      },
+       {
+        "chapterCode": "ATA 19",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder for future ATA chapter assignments.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-19-001-OV-A",
+            "subject": "19-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+          }
+        ]
+      },
+       {
+        "chapterCode": "ATA 20",
+        "title": "Standard Practices – Airframe",
+        "description": "Standard procedures and specifications for airframe construction and maintenance, including advanced composites (BNNT), bonding, NDT, and repair.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-20-001-OV-A",
+            "subject": "20-01",
+            "title": "Standard Practices Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-20-002-PROC-A",
+            "subject": "20-10",
+            "title": "BNNT Composite Fastening Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-20-003-SPEC-A",
+            "subject": "20-11",
+            "title": "BNNT Composite Fastening Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-20-004-PROC-A",
+            "subject": "20-12",
+            "title": "Advanced Adhesive Bonding Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-20-005-SPEC-A",
+            "subject": "20-13",
+            "title": "Advanced Adhesive Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-20-006-PROC-A",
+            "subject": "20-20",
+            "title": "NDT Procedure for Advanced Composites",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-20-007-SPEC-A",
+            "subject": "20-21",
+            "title": "NDT Method Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-20-008-SDD-A",
+            "subject": "20-22",
+            "title": "AI-Enhanced NDT Analysis System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-20-009-PROC-A",
+            "subject": "20-30",
+            "title": "BNNT/Carbon-Lattice Repair Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-20-010-SDD-A",
+            "subject": "20-31",
+            "title": "Digital Twin Guided Repair System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 21",
+        "title": "Air Conditioning & Pressurization",
+        "description": "Details of the Environmental Control System (ECS), including air sources, distribution, filtration, pressurization control, and AI-driven climate zones.",
+        "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-21-001-OV-A",
+            "subject": "21-01",
+            "title": "ECS System Overview & Philosophy",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-21-002-SDD-A",
+            "subject": "21-10",
+            "title": "Air Source System Description (Bleed/Electric)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-21-003-FIG-A",
+            "subject": "21-20",
+            "title": "Cabin Air Distribution Diagram",
+            "infoCode": ["FIG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-21-004-SPEC-A",
+            "subject": "21-21",
+            "title": "Advanced Filtration System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-21-005-SDD-A",
+            "subject": "21-30",
+            "title": "Pressurization Control System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-21-006-SPEC-A",
+            "subject": "21-31",
+            "title": "Outflow Valve Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-21-007-SDD-A",
+            "subject": "21-50",
+            "title": "Air Conditioning Pack Technology (\"Green ECS\")",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-21-008-SDD-A",
+            "subject": "21-60",
+            "title": "AI-Driven Personalized Climate Zones System",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "ATA 22",
+        "title": "Auto Flight",
+        "description": "Architecture and capabilities of the auto flight system, including AI autopilot, quantum-enhanced logic, autothrottle, and FMS/QAO integration.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-22-001-OV-A",
+            "subject": "22-01",
+            "title": "Auto Flight System Architecture Overview",
+            "infoCode": ["OV", "SDD", "FIG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-22-002-SPEC-A",
+            "subject": "22-10",
+            "title": "AI Autopilot Capabilities Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-22-003-SDD-A",
+            "subject": "22-11",
+            "title": "Quantum-Enhanced Control Logic Concept Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-22-004-SDD-A",
+            "subject": "22-30",
+            "title": "Auto Throttle System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-22-005-SDD-A",
+            "subject": "22-80",
+            "title": "FMS Integration with AI & QAO System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 23",
+        "title": "Communications",
+        "description": "Architecture for speech and data communications (VHF/HF/SATCOM, ACARS), audio integration, AI management, and QKD security.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-23-001-OV-A",
+            "subject": "23-01",
+            "title": "Communications System Architecture Overview",
+            "infoCode": ["OV", "SDD", "FIG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-23-002-SDD-A",
+            "subject": "23-10",
+            "title": "Speech Communication Systems Description (VHF/HF/SATCOM)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-23-003-SPEC-A",
+            "subject": "23-11",
+            "title": "Speech Communication Systems Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-23-004-SDD-A",
+            "subject": "23-20",
+            "title": "Data Link System Description (ATC/ACARS)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-23-005-SPEC-A",
+            "subject": "23-21",
+            "title": "Data Link Protocol Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-23-006-SDD-A",
+            "subject": "23-50",
+            "title": "Audio Integrating System Description (Intercom/PA)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-23-007-SDD-A",
+            "subject": "23-70",
+            "title": "AMPEL AI Communications Management Function Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-23-008-SDD-A",
+            "subject": "23-71",
+            "title": "AI Spectrum Optimization Concept",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-23-009-SDD-A",
+            "subject": "23-80",
+            "title": "QKD System Integration Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-23-010-SPEC-A",
+            "subject": "23-81",
+            "title": "QKD Secure Communication Protocol Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "ATA 24",
+        "title": "Electrical Power",
+        "description": "Electrical system architecture, AC/DC generation, batteries, ground power interface, load distribution, AI management, and AEHCS.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-24-001-OV-A",
+            "subject": "24-01",
+            "title": "Electrical System Architecture Overview",
+            "infoCode": ["OV", "SDD", "DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-24-002-SDD-A",
+            "subject": "24-20",
+            "title": "AC Generation System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-24-003-SDD-A",
+            "subject": "24-30",
+            "title": "DC Generation System Description (TRU/Battery)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-24-004-SPEC-A",
+            "subject": "24-31",
+            "title": "Battery System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-24-005-ICD-A",
+            "subject": "24-40",
+            "title": "Ground Power Interface Control Document",
+            "infoCode": ["ICD", "SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-24-006-SDD-A",
+            "subject": "24-50",
+            "title": "Electrical Load Distribution Architecture",
+            "infoCode": ["SDD", "DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-24-007-SDD-A",
+            "subject": "24-51",
+            "title": "AI-Driven Load Management System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-24-008-SDD-A",
+            "subject": "24-60",
+            "title": "AEHCS System Description & Control Logic",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+       {
+        "chapterCode": "ATA 25",
+        "title": "Equipment / Furnishings",
+        "description": "Cabin layout options, crew/passenger seats, VR windows, bins, sustainable materials, cargo loading, galley, and emergency equipment.",
+        "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-25-001-OV-A",
+            "subject": "25-01",
+            "title": "Cabin Layout Overview & Options",
+            "infoCode": ["OV", "FIG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-25-002-SPEC-A",
+            "subject": "25-10",
+            "title": "Crew Seat Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-25-003-SPEC-A",
+            "subject": "25-20",
+            "title": "Passenger Seat Specification (First/Business/Economy)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-25-004-FIG-A",
+            "subject": "25-21",
+            "title": "Passenger Seat Layout Figure",
+            "infoCode": ["FIG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-25-005-SDD-A",
+            "subject": "25-22",
+            "title": "VR Window System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-25-006-SPEC-A",
+            "subject": "25-23",
+            "title": "Overhead Bin Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-25-007-LIST-A",
+            "subject": "25-24",
+            "title": "Sustainable Interior Materials List",
+            "infoCode": ["LIST", "SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-25-008-SDD-A",
+            "subject": "25-40",
+            "title": "Cargo Loading System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-25-009-LIST-A",
+            "subject": "25-50",
+            "title": "Galley Equipment List",
+            "infoCode": ["LIST", "SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-25-010-LIST-A",
+            "subject": "25-60",
+            "title": "Emergency Equipment List",
+            "infoCode": ["LIST"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-25-011-DWG-A",
+            "subject": "25-61",
+            "title": "Emergency Equipment Location Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 26",
+        "title": "Fire Protection",
+        "description": "Fire/smoke detection systems, locations, AI-enhanced algorithms, and extinguisher systems (Halon alternatives) for various zones.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-26-001-OV-A",
+            "subject": "26-01",
+            "title": "Fire Protection System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-26-002-SPEC-A",
+            "subject": "26-10",
+            "title": "Fire/Smoke Detector Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-26-003-DWG-A",
+            "subject": "26-11",
+            "title": "Fire/Smoke Detector Location Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-26-004-SDD-A",
+            "subject": "26-12",
+            "title": "AI-Enhanced Detection Algorithm Description (H2/Battery)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-26-005-SDD-A",
+            "subject": "26-20",
+            "title": "Extinguisher System Description (Halon Alt.)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-26-006-SPEC-A",
+            "subject": "26-21",
+            "title": "Extinguisher Agent Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-26-007-SDD-A",
+            "subject": "26-22",
+            "title": "Engine/APU/Cargo Bay Extinguisher System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 27",
+        "title": "Flight Controls",
+        "description": "Architecture and description of primary and secondary flight control systems (ailerons, rudder, elevators, trim, flaps, spoilers, slats) and GPAM integration.",
+        "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-27-001-OV-A",
+            "subject": "27-01",
+            "title": "Flight Control System Architecture Overview",
+            "infoCode": ["OV", "SDD", "FIG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-27-002-SDD-A",
+            "subject": "27-10",
+            "title": "Aileron System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-27-003-SPEC-A",
+            "subject": "27-11",
+            "title": "Aileron Actuation Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-27-004-SDD-A",
+            "subject": "27-20",
+            "title": "Rudder System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-27-005-SPEC-A",
+            "subject": "27-21",
+            "title": "Rudder Actuation Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-27-006-SDD-A",
+            "subject": "27-30",
+            "title": "Elevator System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-27-007-SPEC-A",
+            "subject": "27-31",
+            "title": "Elevator Actuation Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-27-008-SDD-A",
+            "subject": "27-40",
+            "title": "Stabilizer Trim System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-27-009-SDD-A",
+            "subject": "27-50",
+            "title": "Flap System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-27-010-SPEC-A",
+            "subject": "27-51",
+            "title": "Flap Actuation Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-27-011-SDD-A",
+            "subject": "27-60",
+            "title": "Spoiler System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-27-012-SPEC-A",
+            "subject": "27-61",
+            "title": "Spoiler Actuation Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-27-013-SDD-A",
+            "subject": "27-80",
+            "title": "Slat System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-27-014-SPEC-A",
+            "subject": "27-81",
+            "title": "Slat Actuation Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-27-015-OV-A",
+            "subject": "27-90",
+            "title": "GPAM System Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-27-016-SDD-A",
+            "subject": "27-91",
+            "title": "GPAM Control Logic Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-27-017-ICD-A",
+            "subject": "27-92",
+            "title": "GPAM Interface Control Document (Flight Controls)",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 28",
+        "title": "Fuel",
+        "description": "Fuel system architecture for hybrid Hydrogen/SAF, including cryogenic tanks, distribution, pumps, valves, insulation, and quantity indication.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-28-001-OV-A",
+            "subject": "28-01",
+            "title": "Fuel System Architecture Overview (Hybrid H2/SAF)",
+            "infoCode": ["OV", "SDD", "FIG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-28-002-SPEC-A",
+            "subject": "28-10",
+            "title": "Cryogenic Hydrogen Tank Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-28-003-DWG-A",
+            "subject": "28-11",
+            "title": "Cryogenic Hydrogen Tank Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-28-004-SPEC-A",
+            "subject": "28-12",
+            "title": "SAF Tank Specification (If Applicable)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-28-005-SDD-A",
+            "subject": "28-20",
+            "title": "Fuel Distribution System Description (H2 & SAF)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-28-006-SPEC-A",
+            "subject": "28-21",
+            "title": "Fuel Pump & Valve Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-28-007-SPEC-A",
+            "subject": "28-22",
+            "title": "Cryo-Line Insulation & Safety Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-28-008-SPEC-A",
+            "subject": "28-40",
+            "title": "Fuel Quantity Indicating System (FQIS) Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 29",
+        "title": "Hydraulic Power",
+        "description": "Details of the minimized hydraulic system, focusing on Electro-Hydrostatic Actuators (EHA).",
+        "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-29-001-OV-A",
+            "subject": "29-01",
+            "title": "Hydraulic System Overview (Minimized/EHA Focus)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-29-002-SPEC-A",
+            "subject": "29-10",
+            "title": "Electro-Hydrostatic Actuator (EHA) Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-29-003-DWG-A",
+            "subject": "29-20",
+            "title": "Hydraulic Line Drawing (Redundancy Only)",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-29-004-SDD-A",
+            "subject": "29-30",
+            "title": "Hydraulic System Indication Description (If Retained)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "ATA 30",
+        "title": "Ice & Rain Protection",
+        "description": "Systems for ice and rain protection, including anti-ice/de-ice systems (electro-thermal, electro-impulse), windshield protection, and AI-driven predictive icing detection.",
+         "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-30-001-OV-A",
+            "subject": "30-01",
+            "title": "Ice & Rain Protection Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-30-002-SDD-A",
+            "subject": "30-10",
+            "title": "Wing Anti-Ice System Description (Electro-Thermal)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-30-003-SPEC-A",
+            "subject": "30-11",
+            "title": "Wing Anti-Ice System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-30-004-SDD-A",
+            "subject": "30-20",
+            "title": "Wing De-Ice System Description (Electro-Impulse/Pneumatic)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-30-005-SDD-A",
+            "subject": "30-30",
+            "title": "Nacelle Anti-Ice System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-30-006-SPEC-A",
+            "subject": "30-31",
+            "title": "Nacelle Anti-Ice System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-30-007-SDD-A",
+            "subject": "30-40",
+            "title": "Windshield Heating & Wiper System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-30-008-SPEC-A",
+            "subject": "30-41",
+            "title": "Windshield Heating & Wiper System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-30-009-SPEC-A",
+            "subject": "30-80",
+            "title": "Ice Detection System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-30-010-SDD-A",
+            "subject": "30-81",
+            "title": "AI-Driven Predictive Icing System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 31",
+        "title": "Indicating / Recording",
+        "description": "Cockpit displays (PFD/ND/EICAS), XAI interfaces, flight data recorders, on-board HPC, and sensor data fusion architecture.",
+         "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-31-001-OV-A",
+            "subject": "31-01",
+            "title": "Indicating/Recording System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-31-002-SPEC-A",
+            "subject": "31-10",
+            "title": "Cockpit Display Specification (PFD/ND/EICAS)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-31-003-SDD-A",
+            "subject": "31-11",
+            "title": "Cockpit XAI Interface Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-31-004-SPEC-A",
+            "subject": "31-30",
+            "title": "HPC-Based Flight Data Recorder Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-31-005-SDD-A",
+            "subject": "31-60",
+            "title": "On-Board HPC System Description (Indicating/Recording Focus)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-31-006-SDD-A",
+            "subject": "31-70",
+            "title": "Sensor Data Acquisition & Fusion Architecture Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-31-007-ICD-A",
+            "subject": "31-71",
+            "title": "i-Aher0 Sensor Fusion Interface Control Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 32",
+        "title": "Landing Gear",
+        "description": "Main and nose gear systems, extension/retraction, wheels/tires, braking (electric/regenerative), steering, position indication, and AI health monitoring.",
+         "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-32-001-OV-A",
+            "subject": "32-01",
+            "title": "Landing Gear System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-32-002-SDD-A",
+            "subject": "32-10",
+            "title": "Main Gear Strut & Assembly Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-32-003-DWG-A",
+            "subject": "32-11",
+            "title": "Main Gear Assembly Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-32-004-SDD-A",
+            "subject": "32-20",
+            "title": "Nose Gear Strut & Assembly Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-32-005-DWG-A",
+            "subject": "32-21",
+            "title": "Nose Gear Assembly Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-32-006-SDD-A",
+            "subject": "32-30",
+            "title": "Extension/Retraction Actuation System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-32-007-SPEC-A",
+            "subject": "32-31",
+            "title": "Extension/Retraction Actuation Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-32-008-SPEC-A",
+            "subject": "32-40",
+            "title": "Wheel & Tire Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-32-009-SDD-A",
+            "subject": "32-41",
+            "title": "Braking System Description (Electric/Regenerative)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-32-010-SPEC-A",
+            "subject": "32-42",
+            "title": "Braking System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-32-011-SDD-A",
+            "subject": "32-50",
+            "title": "Nose Wheel Steering System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-32-012-SPEC-A",
+            "subject": "32-51",
+            "title": "Nose Wheel Steering Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-32-013-SDD-A",
+            "subject": "32-60",
+            "title": "Gear Position Indicating System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-32-014-SDD-A",
+            "subject": "32-70",
+            "title": "AI-Driven Landing Gear Health Monitoring System",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 33",
+        "title": "Lights",
+        "description": "Cockpit, cabin (quantum-luminescent, AI-adaptive), exterior, and emergency lighting systems.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-33-001-OV-A",
+            "subject": "33-01",
+            "title": "Lighting System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-33-002-SPEC-A",
+            "subject": "33-10",
+            "title": "Cockpit Lighting Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-33-003-SDD-A",
+            "subject": "33-20",
+            "title": "Cabin Lighting System Description (Quantum-Luminescent)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-33-004-SPEC-A",
+            "subject": "33-21",
+            "title": "Cabin Lighting Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-33-005-SDD-A",
+            "subject": "33-22",
+            "title": "AI-Adaptive Cabin Lighting System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-33-006-LIST-A",
+            "subject": "33-40",
+            "title": "Exterior Lighting List",
+            "infoCode": ["LIST", "SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-33-007-DWG-A",
+            "subject": "33-41",
+            "title": "Exterior Lighting Location Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-33-008-SDD-A",
+            "subject": "33-50",
+            "title": "Emergency Lighting System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-33-009-SPEC-A",
+            "subject": "33-51",
+            "title": "Emergency Lighting Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           }
+        ]
+      },
+      {
+        "chapterCode": "ATA 34",
+        "title": "Navigation",
+        "description": "Navigation system architecture, including air data, inertial reference (IRS/INS), landing aids, GNSS, star trackers, quantum sensor integration, and AI route optimization.",
+         "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-34-001-OV-A",
+            "subject": "34-01",
+            "title": "Navigation System Architecture Overview",
+            "infoCode": ["OV", "SDD", "FIG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-34-002-SDD-A",
+            "subject": "34-10",
+            "title": "Air Data System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-34-003-SPEC-A",
+            "subject": "34-11",
+            "title": "Air Data Sensor Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-34-004-SDD-A",
+            "subject": "34-20",
+            "title": "Inertial Reference System (IRS/INS) Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-34-005-SPEC-A",
+            "subject": "34-21",
+            "title": "Inertial Reference System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-34-006-SDD-A",
+            "subject": "34-22",
+            "title": "Quantum Sensor Integration Concept (INS Enhancement)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-34-007-SPEC-A",
+            "subject": "34-40",
+            "title": "Landing Aid Receiver Specification (ILS/MLS/GLS)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-34-008-SPEC-A",
+            "subject": "34-50",
+            "title": "GNSS Receiver Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-34-009-SDD-A",
+            "subject": "34-60",
+            "title": "Star Tracker System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-34-010-SPEC-A",
+            "subject": "34-61",
+            "title": "Star Tracker Specification (Near-Space Ops)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-34-011-SDD-A",
+            "subject": "34-70",
+            "title": "AI Route Optimization Algorithm Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-34-012-CAL-A",
+            "subject": "34-71",
+            "title": "AI Route Optimization Performance Analysis",
+            "infoCode": ["CAL"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-34-013-ICD-A",
+            "subject": "34-72",
+            "title": "QAO Interface Control Document (Navigation)",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 35",
+        "title": "Oxygen",
+        "description": "Flight crew and passenger oxygen systems, including portable equipment specifications.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-35-001-OV-A",
+            "subject": "35-01",
+            "title": "Oxygen System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-35-002-SDD-A",
+            "subject": "35-10",
+            "title": "Flight Crew Oxygen System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-35-003-SPEC-A",
+            "subject": "35-11",
+            "title": "Flight Crew Oxygen System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-35-004-SDD-A",
+            "subject": "35-20",
+            "title": "Passenger Oxygen System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-35-005-SPEC-A",
+            "subject": "35-21",
+            "title": "Passenger Oxygen System Specification (Chemical/Gaseous)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-35-006-LIST-A",
+            "subject": "35-30",
+            "title": "Portable Oxygen Equipment List",
+            "infoCode": ["LIST", "SPEC"],
+            "status": "Draft"
+          }
+         ]
+      },
+      {
+        "chapterCode": "ATA 36",
+        "title": "Pneumatic",
+        "description": "Overview of the minimized pneumatic system, focusing on bleed air ducting and valves if applicable.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-36-001-OV-A",
+            "subject": "36-01",
+            "title": "Pneumatic System Overview (Minimized Scope)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-36-002-SDD-A",
+            "subject": "36-10",
+            "title": "Bleed Air Ducting & Valves Description (if used)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-36-003-DWG-A",
+            "subject": "36-11",
+            "title": "Bleed Air Ducting Drawing (if used)",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-36-004-SDD-A",
+            "subject": "36-20",
+            "title": "Pneumatic System Indication Description (if applicable)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 37",
+        "title": "Vacuum",
+        "description": "Overview of vacuum systems, if applicable, including lines, components, and indication.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-37-001-OV-A",
+            "subject": "37-01",
+            "title": "Vacuum System Overview (If Applicable)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-37-002-DWG-A",
+            "subject": "37-10",
+            "title": "Vacuum Line Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-37-003-SPEC-A",
+            "subject": "37-11",
+            "title": "Vacuum System Component Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-37-004-SDD-A",
+            "subject": "37-20",
+            "title": "Vacuum System Indication Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 38",
+        "title": "Water / Waste",
+        "description": "Potable water systems, advanced filtration/recycling, lavatory waste systems, and eco-lavatory technology.",
+        "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-38-001-OV-A",
+            "subject": "38-01",
+            "title": "Water/Waste System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-38-002-SDD-A",
+            "subject": "38-10",
+            "title": "Potable Water System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-38-003-SPEC-A",
+            "subject": "38-11",
+            "title": "Potable Water System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-38-004-SDD-A",
+            "subject": "38-12",
+            "title": "Advanced Water Filtration/Recycling System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-38-005-SDD-A",
+            "subject": "38-30",
+            "title": "Lavatory Waste System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-38-006-SPEC-A",
+            "subject": "38-31",
+            "title": "Lavatory Waste System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-38-007-SDD-A",
+            "subject": "38-32",
+            "title": "Eco-Lavatory Technology Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 39",
+        "title": "Electrical/Electronic Panels",
+        "description": "Layout and component specifications for instrument and control panels.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-39-001-OV-A",
+            "subject": "39-01",
+            "title": "Electrical/Electronic Panels Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-39-002-DWG-A",
+            "subject": "39-10",
+            "title": "Instrument Panel Layout Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-39-003-SPEC-A",
+            "subject": "39-11",
+            "title": "Instrument Panel Component Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-39-004-DWG-A",
+            "subject": "39-20",
+            "title": "Control Panel Layout Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-39-005-SPEC-A",
+            "subject": "39-21",
+            "title": "Control Panel Component Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 40",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder.",
+         "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-40-001-OV-A",
+            "subject": "40-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 41",
+        "title": "Water Ballast",
+        "description": "Overview, specifications, and distribution for water ballast systems, if applicable.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-41-001-OV-A",
+            "subject": "41-01",
+            "title": "Water Ballast System Overview (If Applicable)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-41-002-SPEC-A",
+            "subject": "41-10",
+            "title": "Water Ballast Tank Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-41-003-DWG-A",
+            "subject": "41-11",
+            "title": "Water Ballast Tank Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-41-004-SDD-A",
+            "subject": "41-20",
+            "title": "Water Ballast Distribution System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 42",
+        "title": "Integrated Modular Avionics (IMA)",
+        "description": "Overview, core processing modules, and network architecture for IMA systems.",
+        "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-42-001-OV-A",
+            "subject": "42-01",
+            "title": "IMA System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-42-002-SDD-A",
+            "subject": "42-10",
+            "title": "IMA Core Processing Module Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-42-003-SPEC-A",
+            "subject": "42-11",
+            "title": "IMA Core Processing Module Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-42-004-SDD-A",
+            "subject": "42-20",
+            "title": "IMA Network Architecture Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-42-005-FIG-A",
+            "subject": "42-21",
+            "title": "IMA Network Architecture Figure",
+            "infoCode": ["FIG"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 43",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-43-001-OV-A",
+            "subject": "43-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 44",
+        "title": "Cabin Systems",
+        "description": "In-Flight Entertainment (IFE) systems with VR integration and Cabin Management Systems (CMS).",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-44-001-OV-A",
+            "subject": "44-01",
+            "title": "Cabin Systems Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-44-002-SDD-A",
+            "subject": "44-10",
+            "title": "In-Flight Entertainment (IFE) System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-44-003-SPEC-A",
+            "subject": "44-11",
+            "title": "IFE System Specification (VR Integration)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-44-004-SDD-A",
+            "subject": "44-20",
+            "title": "Cabin Management System (CMS) Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-44-005-SPEC-A",
+            "subject": "44-21",
+            "title": "Cabin Management System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          }
+        ]
+      },
+       {
+        "chapterCode": "ATA 45",
+        "title": "Central Maintenance System (CMS)",
+        "description": "Architecture and functionalities of the CMS (i-Aher0), including health reporting, predictive maintenance, AI diagnostics, and Digital Twin Orchestration (DTO).",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-45-001-OV-A",
+            "subject": "45-01",
+            "title": "CMS Architecture Overview (i-Aher0 & DTO)",
+            "infoCode": ["OV", "SDD", "FIG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-45-002-SPEC-A",
+            "subject": "45-10",
+            "title": "Central Maintenance Computer (CMC) Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-45-003-PROC-A",
+            "subject": "45-20",
+            "title": "CMS Software Loading Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-45-004-SPEC-A",
+            "subject": "45-40",
+            "title": "System Health Reporting Format Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-45-005-SDD-A",
+            "subject": "45-41",
+            "title": "Predictive Maintenance Alert Logic Description (PDM)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-45-006-OV-A",
+            "subject": "45-50",
+            "title": "i-Aher0 Diagnostic Capabilities Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-45-007-SDD-A",
+            "subject": "45-51",
+            "title": "AI Fault Detection & Isolation Algorithm Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-45-008-CAL-A",
+            "subject": "45-52",
+            "title": "AI Fault Detection Performance Analysis",
+            "infoCode": ["CAL"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-45-009-OV-A",
+            "subject": "45-60",
+            "title": "Digital Twin Orchestration (DTO) Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-45-010-SDD-A",
+            "subject": "45-61",
+            "title": "DTO Functionality Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-45-011-ICD-A",
+            "subject": "45-62",
+            "title": "DTO Interface Control Document (CMS Integration)",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+          }
+         ]
+      },
+      {
+        "chapterCode": "ATA 46",
+        "title": "Information Systems",
+        "description": "Architecture of on-board information systems, including GQP, EFB integration, IFE network, BITT ledger logging, QAO interface, and cybersecurity functions.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-46-001-OV-A",
+            "subject": "46-01",
+            "title": "Information Systems Architecture Overview",
+            "infoCode": ["OV", "SDD", "FIG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-46-002-SDD-A",
+            "subject": "46-10",
+            "title": "GQP On-Board Interface System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-46-003-ICD-A",
+            "subject": "46-11",
+            "title": "GQP On-Board Interface Control Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-46-004-SDD-A",
+            "subject": "46-20",
+            "title": "Electronic Flight Bag (EFB) Integration Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-46-005-ICD-A",
+            "subject": "46-21",
+            "title": "EFB Interface Control Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-46-006-SPEC-A",
+            "subject": "46-30",
+            "title": "IFE Network Backbone Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-46-007-OV-A",
+            "subject": "46-60",
+            "title": "BITT Ledger Integration Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-46-008-SDD-A",
+            "subject": "46-61",
+            "title": "BITT On-Board Logging System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-46-009-ICD-A",
+            "subject": "46-62",
+            "title": "BITT Interface Control Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-46-010-SDD-A",
+            "subject": "46-63",
+            "title": "QAO On-Board Interface Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-46-011-ICD-A",
+            "subject": "46-64",
+            "title": "QAO Interface Control Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-46-012-OV-A",
+            "subject": "46-70",
+            "title": "i-Aher0 Cybersecurity Functions Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-46-013-SPEC-A",
+            "subject": "46-71",
+            "title": "Intrusion Detection Protocol Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-46-014-PROC-A",
+            "subject": "46-72",
+            "title": "Intrusion Prevention Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 47",
+        "title": "Nitrogen Generation System",
+        "description": "Overview, specifications, distribution, and control systems for Nitrogen Generation Systems (NGS).",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-47-001-OV-A",
+            "subject": "47-01",
+            "title": "NGS Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-47-002-SPEC-A",
+            "subject": "47-10",
+            "title": "Air Separation Module (ASM) Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-47-003-SDD-A",
+            "subject": "47-20",
+            "title": "Nitrogen Distribution System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-47-004-DWG-A",
+            "subject": "47-21",
+            "title": "Nitrogen Distribution System Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-47-005-SDD-A",
+            "subject": "47-30",
+            "title": "NGS Control and Monitoring System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-47-006-SPEC-A",
+            "subject": "47-31",
+            "title": "NGS Control and Monitoring Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 48",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-48-001-OV-A",
+            "subject": "48-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 49",
+        "title": "Airborne Auxiliary Power (AAP)",
+        "description": "Overview, specifications, and starting system for the Auxiliary Power Unit (APU) or alternative systems.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-49-001-OV-A",
+            "subject": "49-01",
+            "title": "APU System Overview (or Alternative)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-49-002-SPEC-A",
+            "subject": "49-10",
+            "title": "APU Engine/Fuel Cell Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-49-003-SDD-A",
+            "subject": "49-70",
+            "title": "APU Starting System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+       {
+        "chapterCode": "ATA 50",
+        "title": "Cargo and Accessory Compartments",
+        "description": "Design, layout, and loading systems for cargo and accessory compartments.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-50-001-OV-A",
+            "subject": "50-01",
+            "title": "Cargo & Accessory Compartments Overview",
+            "infoCode": ["OV", "FIG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-50-002-DD-A",
+            "subject": "50-10",
+            "title": "Cargo Compartment Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-50-003-DWG-A",
+            "subject": "50-11",
+            "title": "Cargo Compartment Layout Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-50-004-ICD-A",
+            "subject": "50-12",
+            "title": "Cargo Loading System Interface Control Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-50-005-SDD-A",
+            "subject": "50-13",
+            "title": "Cargo Loading System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-50-006-DWG-A",
+            "subject": "50-20",
+            "title": "Accessory Compartment Location Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-50-007-LIST-A",
+            "subject": "50-21",
+            "title": "Accessory Compartment Access List",
+            "infoCode": ["LIST"],
+            "status": "Draft"
+          }
+         ]
+      },
+      {
+        "chapterCode": "ATA 51",
+        "title": "Structures – General",
+        "description": "Overall structural design overview, material specifications (BNNT/CFRP), analysis methodology, and AI Structural Health Monitoring (AI-SHM).",
+         "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-51-001-OV-A",
+            "subject": "51-01",
+            "title": "Structural Design Overview",
+            "infoCode": ["OV", "DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-51-002-SPEC-A",
+            "subject": "51-10",
+            "title": "Primary Structural Material Specification (BNNT/CFRP)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-51-003-PROC-A",
+            "subject": "51-11",
+            "title": "AAMPEL-OPT Material Selection Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-51-004-OV-A",
+            "subject": "51-20",
+            "title": "Structural Analysis Methodology Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-51-005-CAL-A",
+            "subject": "51-21",
+            "title": "FEM Analysis Calculation Report",
+            "infoCode": ["CAL", "RPT"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-51-006-SDD-A",
+            "subject": "51-70",
+            "title": "AI-SHM System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 52",
+        "title": "Doors",
+        "description": "Design, specifications, and operating procedures for passenger and cargo doors, including smart actuation and monitoring.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-52-001-OV-A",
+            "subject": "52-01",
+            "title": "Door Systems Overview",
+            "infoCode": ["OV", "LIST"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-52-002-DD-A",
+            "subject": "52-10",
+            "title": "Main Passenger Door Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-52-003-SPEC-A",
+            "subject": "52-11",
+            "title": "Main Passenger Door Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-52-004-PROC-A",
+            "subject": "52-12",
+            "title": "Main Passenger Door Operating Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-52-005-DD-A",
+            "subject": "52-30",
+            "title": "Cargo Door Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-52-006-SPEC-A",
+            "subject": "52-31",
+            "title": "Cargo Door Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-52-007-PROC-A",
+            "subject": "52-32",
+            "title": "Cargo Door Operating Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-52-008-SDD-A",
+            "subject": "52-70",
+            "title": "Smart Door Actuation & Monitoring System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "ATA 53",
+        "title": "Fuselage",
+        "description": "Structural design of the fuselage, including carbon-lattice frame, BNNT composite skin panels, and pressure bulkheads.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-53-001-OV-A",
+            "subject": "53-01",
+            "title": "Fuselage Structural Design Overview",
+            "infoCode": ["OV", "DD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-53-002-DD-A",
+            "subject": "53-10",
+            "title": "Carbon-Lattice Frame Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-53-003-SPEC-A",
+            "subject": "53-11",
+            "title": "Carbon-Lattice Frame Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-53-004-DWG-A",
+            "subject": "53-12",
+            "title": "Carbon-Lattice Frame Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-53-005-SPEC-A",
+            "subject": "53-30",
+            "title": "BNNT Composite Skin Panel Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-53-006-DD-A",
+            "subject": "53-50",
+            "title": "Pressure Bulkhead Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-53-007-DWG-A",
+            "subject": "53-51",
+            "title": "Pressure Bulkhead Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          }
+         ]
+      },
+      {
+        "chapterCode": "ATA 54",
+        "title": "Nacelles/Pylons",
+        "description": "Design overview, specifications, and drawings for engine nacelles and pylons, including acoustic treatment and hybrid/quantum integration.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-54-001-OV-A",
+            "subject": "54-01",
+            "title": "Nacelle & Pylon Design Overview",
+            "infoCode": ["OV", "DD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-54-002-DD-A",
+            "subject": "54-10",
+            "title": "Nacelle Design Document (Hybrid/Quantum Integration)",
+            "infoCode": ["DD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-54-003-SPEC-A",
+            "subject": "54-11",
+            "title": "Nacelle Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-54-004-DWG-A",
+            "subject": "54-12",
+            "title": "Nacelle Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-54-005-SPEC-A",
+            "subject": "54-13",
+            "title": "Acoustic Treatment Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-54-006-DD-A",
+            "subject": "54-50",
+            "title": "Pylon Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-54-007-SPEC-A",
+            "subject": "54-51",
+            "title": "Pylon Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-54-008-DWG-A",
+            "subject": "54-52",
+            "title": "Pylon Drawing & Wing Interface",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 55",
+        "title": "Stabilizers",
+        "description": "Empennage design overview, including horizontal and vertical stabilizer structural design, specifications, and drawings.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-55-001-OV-A",
+            "subject": "55-01",
+            "title": "Empennage Design Overview",
+            "infoCode": ["OV", "DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-55-002-DD-A",
+            "subject": "55-10",
+            "title": "Horizontal Stabilizer Structural Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-55-003-SPEC-A",
+            "subject": "55-11",
+            "title": "Horizontal Stabilizer Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-55-004-DWG-A",
+            "subject": "55-12",
+            "title": "Horizontal Stabilizer Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-55-005-DD-A",
+            "subject": "55-30",
+            "title": "Vertical Stabilizer Structural Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-55-006-SPEC-A",
+            "subject": "55-31",
+            "title": "Vertical Stabilizer Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-55-007-DWG-A",
+            "subject": "55-32",
+            "title": "Vertical Stabilizer Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "ATA 56",
+        "title": "Windows",
+        "description": "Specifications for cockpit windshields and passenger windows, including the VR Window system.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-56-001-OV-A",
+            "subject": "56-01",
+            "title": "Window Systems Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-56-002-SPEC-A",
+            "subject": "56-10",
+            "title": "Cockpit Windshield Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-56-003-SPEC-A",
+            "subject": "56-20",
+            "title": "Passenger Window Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-56-004-SDD-A",
+            "subject": "56-21",
+            "title": "VR Window System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+         ]
+      },
+       {
+        "chapterCode": "ATA 57",
+        "title": "Wings",
+        "description": "Wing design overview (morphing, laminar flow), center box and outer wing structures, slat/flap systems, folding systems, and GPAM integration.",
+         "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-57-001-OV-A",
+            "subject": "57-01",
+            "title": "Wing Design Overview (Morphing, Laminar Flow)",
+            "infoCode": ["OV", "DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-57-002-DD-A",
+            "subject": "57-10",
+            "title": "Wing Center Box Structural Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-57-003-SPEC-A",
+            "subject": "57-11",
+            "title": "Wing Center Box Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-57-004-DWG-A",
+            "subject": "57-12",
+            "title": "Wing Center Box Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-57-005-DD-A",
+            "subject": "57-20",
+            "title": "Outer Wing Structural Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-57-006-SPEC-A",
+            "subject": "57-21",
+            "title": "Outer Wing Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-57-007-DWG-A",
+            "subject": "57-22",
+            "title": "Outer Wing Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-57-008-SDD-A",
+            "subject": "57-40",
+            "title": "Slat & Flap System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-57-009-SDD-A",
+            "subject": "57-50",
+            "title": "Wing Folding System Description (If Applicable)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-57-010-OV-A",
+            "subject": "57-70",
+            "title": "GPAM System Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-57-011-SDD-A",
+            "subject": "57-71",
+            "title": "GPAM Wing Integration Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-57-012-ICD-A",
+            "subject": "57-72",
+            "title": "GPAM Actuation Interface Control Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "ATA 60",
+        "title": "Standard Practices - Engine",
+        "description": "Standard engine maintenance and testing procedures.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-60-001-OV-A",
+            "subject": "60-01",
+            "title": "Standard Engine Practices Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-60-002-OV-A",
+            "subject": "60-10",
+            "title": "Engine Maintenance Procedures Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-60-003-PROC-A",
+            "subject": "60-11",
+            "title": "Engine Maintenance Standard Procedures",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-60-004-OV-A",
+            "subject": "60-20",
+            "title": "Engine Testing Procedures Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-60-005-TEST-A",
+            "subject": "60-21",
+            "title": "Engine Standard Test Procedures",
+            "infoCode": ["TEST"],
+            "status": "Draft"
+          }
+        ]
+      },
+       {
+        "chapterCode": "ATA 61",
+        "title": "Propellers/Propulsors",
+        "description": "Design, specification, and control systems for propellers or other propulsors, if applicable.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-61-001-OV-A",
+            "subject": "61-01",
+            "title": "Propulsor System Overview (If Applicable)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-61-002-DD-A",
+            "subject": "61-10",
+            "title": "Propeller Blade Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-61-003-SPEC-A",
+            "subject": "61-11",
+            "title": "Propeller Blade Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-61-004-SDD-A",
+            "subject": "61-20",
+            "title": "Propeller Control System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 62",
+        "title": "Main Rotor",
+        "description": "Design, specifications, and assembly for main rotor systems, primarily for VTOL configurations.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-62-001-OV-A",
+            "subject": "62-01",
+            "title": "Main Rotor System Overview (If Applicable - VTOL)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-62-002-DD-A",
+            "subject": "62-10",
+            "title": "Main Rotor Blade Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-62-003-SPEC-A",
+            "subject": "62-11",
+            "title": "Main Rotor Blade Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-62-004-SDD-A",
+            "subject": "62-30",
+            "title": "Rotor Head Assembly Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-62-005-DWG-A",
+            "subject": "62-31",
+            "title": "Rotor Head Assembly Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          }
+         ]
+      },
+       {
+        "chapterCode": "ATA 63",
+        "title": "Main Rotor Drive",
+        "description": "Overview and specifications for the main rotor drive system, including shafts, couplings, and gearbox, if applicable.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-63-001-OV-A",
+            "subject": "63-01",
+            "title": "Main Rotor Drive System Overview (If Applicable)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-63-002-SPEC-A",
+            "subject": "63-10",
+            "title": "Drive Shaft and Coupling Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-63-003-SDD-A",
+            "subject": "63-20",
+            "title": "Main Gearbox Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-63-004-SPEC-A",
+            "subject": "63-21",
+            "title": "Main Gearbox Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 64",
+        "title": "Tail Rotor",
+        "description": "Design and specifications for tail rotor systems, if applicable.",
+        "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-64-001-OV-A",
+            "subject": "64-01",
+            "title": "Tail Rotor System Overview (If Applicable)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-64-002-DD-A",
+            "subject": "64-10",
+            "title": "Tail Rotor Blade Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-64-003-SPEC-A",
+            "subject": "64-11",
+            "title": "Tail Rotor Blade Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 65",
+        "title": "Tail Rotor Drive",
+        "description": "Overview and specifications for the tail rotor drive system, if applicable.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-65-001-OV-A",
+            "subject": "65-01",
+            "title": "Tail Rotor Drive System Overview (If Applicable)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-65-002-SPEC-A",
+            "subject": "65-10",
+            "title": "Tail Rotor Drive Shaft Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 66",
+        "title": "Folding Blades/Pylon",
+        "description": "Mechanisms and procedures for folding blades or pylons, if applicable.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-66-001-OV-A",
+            "subject": "66-01",
+            "title": "Folding System Overview (If Applicable)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-66-002-SDD-A",
+            "subject": "66-10",
+            "title": "Blade Folding Mechanism Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-66-003-PROC-A",
+            "subject": "66-11",
+            "title": "Blade Folding Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-66-004-SDD-A",
+            "subject": "66-20",
+            "title": "Pylon Folding Mechanism Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-66-005-PROC-A",
+            "subject": "66-21",
+            "title": "Pylon Folding Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "ATA 67",
+        "title": "Rotors Flight Control",
+        "description": "Flight control systems specifically for rotorcraft, including swashplates, linkages, and stability augmentation.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-67-001-OV-A",
+            "subject": "67-01",
+            "title": "Rotor Flight Control System Overview (If Applicable)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-67-002-SDD-A",
+            "subject": "67-10",
+            "title": "Rotor Control System Description (Swashplate, Linkages)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-67-003-DWG-A",
+            "subject": "67-11",
+            "title": "Rotor Control System Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-67-004-SDD-A",
+            "subject": "67-20",
+            "title": "Stability Augmentation System Description (Rotorcraft)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+         ]
+      },
+      {
+        "chapterCode": "ATA 71",
+        "title": "Power Plant (General)",
+        "description": "General overview of the propulsion system, encompassing hybrid and quantum technologies.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-71-001-OV-A",
+            "subject": "71-01",
+            "title": "Propulsion System Overview (Hybrid & Quantum)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 72",
+        "title": "Engine (Turbine/Piston)",
+        "description": "Details of the hybrid engine architecture, including compressor, hydrogen combustion (LPP), and turbine specifications.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-72-001-OV-A",
+            "subject": "72-01",
+            "title": "Hybrid Engine Architecture Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-72-002-SPEC-A",
+            "subject": "72-30",
+            "title": "Compressor Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-72-003-SDD-A",
+            "subject": "72-40",
+            "title": "Hydrogen Combustion Technology Description (LPP)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-72-004-SPEC-A",
+            "subject": "72-41",
+            "title": "Hydrogen Combustion Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-72-005-SPEC-A",
+            "subject": "72-50",
+            "title": "Turbine Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "ATA 72-Q01",
+        "title": "Propulsion – Quantum Extension",
+        "description": "Overview, specification, theory, integration, and control interface for the Q-Thruster module (QEE/QSM).",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-72-Q01-001-OV-A",
+            "subject": "72-Q01-01",
+            "title": "Q-Thruster Module Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-72-Q01-002-SPEC-A",
+            "subject": "72-Q01-02",
+            "title": "Q-Thruster Module Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-72-Q01-003-OV-A",
+            "subject": "72-Q01-03",
+            "title": "QEE/QSM Theory Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-72-Q01-004-SDD-A",
+            "subject": "72-Q01-04",
+            "title": "QEE/QSM Integration Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-72-Q01-005-ICD-A",
+            "subject": "72-Q01-05",
+            "title": "QEE/QSM Control Interface Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+          }
+        ]
+      },
+       {
+        "chapterCode": "ATA 73",
+        "title": "Engine Fuel and Control",
+        "description": "Engine-side fuel delivery systems and the advanced FADEC system integrating hybrid/quantum control.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-73-001-OV-A",
+            "subject": "73-01",
+            "title": "Engine Fuel & Control System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-73-002-SDD-A",
+            "subject": "73-10",
+            "title": "Fuel Delivery System Description (Engine Side)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-73-003-SPEC-A",
+            "subject": "73-11",
+            "title": "Fuel Delivery System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-73-004-SDD-A",
+            "subject": "73-20",
+            "title": "Advanced FADEC Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-73-005-SPEC-A",
+            "subject": "73-21",
+            "title": "Advanced FADEC Specification (Hybrid/Quantum Integration)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 74",
+        "title": "Ignition",
+        "description": "Overview and specifications for engine ignition system components (exciter, leads, connectors, plugs).",
+         "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-74-001-OV-A",
+            "subject": "74-01",
+            "title": "Ignition System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-74-002-SPEC-A",
+            "subject": "74-10",
+            "title": "Ignition Exciter Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-74-003-SPEC-A",
+            "subject": "74-20",
+            "title": "Ignition Lead & Connector Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-74-004-DWG-A",
+            "subject": "74-21",
+            "title": "Ignition Lead & Connector Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-74-005-SPEC-A",
+            "subject": "74-30",
+            "title": "Igniter Plug Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 75",
+        "title": "Bleed Air",
+        "description": "Overview, ducting, and valves for the bleed air system, if utilized (e.g., for anti-ice).",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-75-001-OV-A",
+            "subject": "75-01",
+            "title": "Bleed Air System Overview (If Applicable)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-75-002-SDD-A",
+            "subject": "75-10",
+            "title": "Bleed Air for Engine Anti-Ice Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-75-003-SDD-A",
+            "subject": "75-30",
+            "title": "Bleed Air Ducting and Valves Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-75-004-DWG-A",
+            "subject": "75-31",
+            "title": "Bleed Air Ducting and Valves Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          }
+        ]
+      },
+       {
+        "chapterCode": "ATA 76",
+        "title": "Engine Controls",
+        "description": "Engine control system overview, including thrust/power lever interfaces and emergency shutdown procedures.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-76-001-OV-A",
+            "subject": "76-01",
+            "title": "Engine Control System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-76-002-SDD-A",
+            "subject": "76-10",
+            "title": "Thrust/Power Lever Interface Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-76-003-ICD-A",
+            "subject": "76-11",
+            "title": "Thrust/Power Lever Interface Control Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-76-004-PROC-A",
+            "subject": "76-20",
+            "title": "Engine Emergency Shutdown Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 77",
+        "title": "Engine Indicating",
+        "description": "Engine indicating systems for thrust/power, temperature, vibration, and AI-driven health monitoring.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-77-001-OV-A",
+            "subject": "77-01",
+            "title": "Engine Indicating System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-77-002-SPEC-A",
+            "subject": "77-10",
+            "title": "Thrust/Power Indication Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-77-003-SPEC-A",
+            "subject": "77-20",
+            "title": "Engine Temperature Monitoring Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-77-004-SDD-A",
+            "subject": "77-30",
+            "title": "Engine Vibration Monitoring System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-77-005-SPEC-A",
+            "subject": "77-31",
+            "title": "Engine Vibration Monitoring Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-77-006-OV-A",
+            "subject": "77-40",
+            "title": "AI-Driven Engine Health Monitoring Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-77-007-SDD-A",
+            "subject": "77-41",
+            "title": "AI-Driven Engine Health Monitoring System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-77-008-ICD-A",
+            "subject": "77-42",
+            "title": "i-Aher0 Interface Control Document (Engine Health)",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+          }
+         ]
+      },
+      {
+        "chapterCode": "ATA 78",
+        "title": "Engine Exhaust",
+        "description": "Design and specifications for exhaust nozzles and thrust reverser systems, if applicable.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-78-001-OV-A",
+            "subject": "78-01",
+            "title": "Engine Exhaust System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-78-002-DD-A",
+            "subject": "78-10",
+            "title": "Exhaust Nozzle Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-78-003-SPEC-A",
+            "subject": "78-11",
+            "title": "Exhaust Nozzle Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-78-004-SDD-A",
+            "subject": "78-30",
+            "title": "Thrust Reverser System Description (If Applicable)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-78-005-SPEC-A",
+            "subject": "78-31",
+            "title": "Thrust Reverser Specification (If Applicable)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          }
+         ]
+      },
+      {
+        "chapterCode": "ATA 79",
+        "title": "Engine Oil",
+        "description": "Engine oil system overview, including tank, distribution (pumps, lines, filters), and indicating systems.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-79-001-OV-A",
+            "subject": "79-01",
+            "title": "Engine Oil System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-79-002-SPEC-A",
+            "subject": "79-10",
+            "title": "Oil Tank Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-79-003-DWG-A",
+            "subject": "79-11",
+            "title": "Oil Tank Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-79-004-SDD-A",
+            "subject": "79-20",
+            "title": "Oil Distribution System Description (Pumps, Lines, Filters)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-79-005-SPEC-A",
+            "subject": "79-21",
+            "title": "Oil Distribution System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-79-006-SDD-A",
+            "subject": "79-30",
+            "title": "Oil Indicating System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-79-007-SPEC-A",
+            "subject": "79-31",
+            "title": "Oil Indicating System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          }
+         ]
+      },
+      {
+        "chapterCode": "ATA 80",
+        "title": "Starting",
+        "description": "Engine starting system overview, including starter motor specifications and ignition system reference.",
+         "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-80-001-OV-A",
+            "subject": "80-01",
+            "title": "Engine Starting System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-80-002-SPEC-A",
+            "subject": "80-10",
+            "title": "Starter Motor Specification (Electric/Pneumatic)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-80-003-SDD-A",
+            "subject": "80-20",
+            "title": "Ignition System Description (Reference to ATA 74)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 81",
+        "title": "Turbines (Reciprocating Engines)",
+        "description": "Not applicable to the AMPEL360XWLRGA.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-81-001-OV-A",
+            "subject": "81-01",
+            "title": "Not Applicable",
+            "infoCode": ["OV"],
+            "status": "NotApplicable"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 82",
+        "title": "Water Injection",
+        "description": "Not applicable to the AMPEL360XWLRGA.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-82-001-OV-A",
+            "subject": "82-01",
+            "title": "Not Applicable",
+            "infoCode": ["OV"],
+            "status": "NotApplicable"
+          }
+        ]
+      },
+       {
+        "chapterCode": "ATA 83",
+        "title": "Accessory Gear Boxes",
+        "description": "Overview, drive specifications, assembly design, and drawings for accessory gearboxes.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-83-001-OV-A",
+            "subject": "83-01",
+            "title": "Accessory Gearbox Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-83-002-SPEC-A",
+            "subject": "83-10",
+            "title": "Gearbox Drive Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-83-003-DD-A",
+            "subject": "83-20",
+            "title": "Gearbox Assembly Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-83-004-DWG-A",
+            "subject": "83-21",
+            "title": "Gearbox Assembly Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "ATA 84",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-84-001-OV-A",
+            "subject": "84-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+          }
+        ]
+      },
+      {
+        "chapterCode": "ATA 85",
+        "title": "Fuel Cell System",
+        "description": "Overview, specifications, processor, and power conditioning for fuel cell systems, if applicable.",
+         "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-85-001-OV-A",
+            "subject": "85-01",
+            "title": "Fuel Cell System Overview (If Applicable)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-85-002-SPEC-A",
+            "subject": "85-10",
+            "title": "Fuel Cell Stack Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-85-003-SDD-A",
+            "subject": "85-20",
+            "title": "Hydrogen Processor Description (If Applicable)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-85-004-SDD-A",
+            "subject": "85-30",
+            "title": "Fuel Cell Power Conditioning Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-85-005-SPEC-A",
+            "subject": "85-31",
+            "title": "Fuel Cell Power Conditioning Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "ATA 91",
+        "title": "Charts",
+        "description": "Collection of performance charts and index to wiring diagram manuals.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-91-001-OV-A",
+            "subject": "91-01",
+            "title": "Charts Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-91-002-FIG-A",
+            "subject": "91-10",
+            "title": "Performance Charts Collection",
+            "infoCode": ["FIG", "RPT"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-91-003-LIST-A",
+            "subject": "91-20",
+            "title": "Wiring Diagram Manual Index",
+            "infoCode": ["LIST", "REF"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "ATA 92",
+        "title": "Electrical System Installation",
+        "description": "Procedures and specifications for wiring and connector installation.",
+         "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-92-001-OV-A",
+            "subject": "92-01",
+            "title": "Electrical Installation Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-92-002-PROC-A",
+            "subject": "92-10",
+            "title": "Wiring Installation Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-92-003-SPEC-A",
+            "subject": "92-11",
+            "title": "Wiring Installation Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-92-004-SPEC-A",
+            "subject": "92-20",
+            "title": "Connector Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-92-005-PROC-A",
+            "subject": "92-21",
+            "title": "Connector Installation Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 95",
+        "title": "Special Equipment",
+        "description": "Overview, list, and specifications for special ground support equipment (GSE).",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-95-001-OV-A",
+            "subject": "95-01",
+            "title": "Special Equipment Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-95-002-LIST-A",
+            "subject": "95-10",
+            "title": "Special Ground Support Equipment List",
+            "infoCode": ["LIST"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-AM-AMPEL-0100-95-003-SPEC-A",
+            "subject": "95-11",
+            "title": "Special Ground Support Equipment Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          }
+         ]
+      },
+      {
+        "chapterCode": "ATA 96",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder.",
+        "modules": [
+          {
+            "id": "GP-AM-AMPEL-0100-96-001-OV-A",
+            "subject": "96-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 97",
+        "title": "Wiring Reporting",
+        "description": "Overview and specification for the wiring list database structure.",
+         "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-97-001-OV-A",
+            "subject": "97-01",
+            "title": "Wiring Reporting System Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-97-002-SPEC-A",
+            "subject": "97-10",
+            "title": "Wiring List Database Structure Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "ATA 99",
+        "title": "Special / Emerging Tech",
+        "description": "Overview, specifications, and integration details for special and emerging technologies like on-board HPC, Quantum Mission Fabric, novel sensors, and long-term R&D (e.g., warp drive).",
+         "modules": [
+           {
+            "id": "GP-AM-AMPEL-0100-99-001-OV-A",
+            "subject": "99-01",
+            "title": "Special Technologies Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-99-002-SPEC-A",
+            "subject": "99-10",
+            "title": "On-Board HPC System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-99-003-SDD-A",
+            "subject": "99-11",
+            "title": "On-Board HPC System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-99-004-ICD-A",
+            "subject": "99-12",
+            "title": "On-Board HPC Interface Control Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-99-005-OV-A",
+            "subject": "99-20",
+            "title": "Quantum Mission Fabric Integration Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-99-006-SDD-A",
+            "subject": "99-21",
+            "title": "Quantum Fabric Interface Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-99-007-ICD-A",
+            "subject": "99-22",
+            "title": "Quantum Fabric Interface Control Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-99-008-LIST-A",
+            "subject": "99-30",
+            "title": "Novel Sensor Technologies List",
+            "infoCode": ["LIST"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-99-009-SPEC-A",
+            "subject": "99-31",
+            "title": "Novel Sensor Technologies Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-AM-AMPEL-0100-99-010-RPT-A",
+            "subject": "99-90",
+            "title": "Warp/Wormhole Drive Research Report (Long-Term R&D)",
+            "infoCode": ["RPT"],
+            "status": "Draft"
+           }
+         ]
+      }
+    ],
+    "appendix": [
+      {
+        "id": "GP-AM-AMPEL-0100-APP-A-001-GLO-A",
+        "title": "A. Glossary of Airframe Terms & Acronyms",
+        "infoCode": ["GLO"],
+        "status": "Draft"
+      },
+      {
+        "id": "GP-AM-AMPEL-0100-APP-B-001-REF-A",
+        "title": "B. Referenced COAFI Documents (Airframe)",
+        "infoCode": ["REF", "LIST"],
+        "status": "Draft"
+      }
+    ]
+  }
+][
+  {
+    "part": "Part II",
+    "domain": "Spaceframes (AMPEL+)",
+    "code": "GP-SM",
+    "theme": "Spacecraft Systems (Exo-atmospheric)",
+    "purpose": "Spaceframe Design, System & Ops Manuals",
+    "chapters": [
+      {
+        "chapterCode": "AS 00",
+        "title": "Intro & General (Spacecraft)",
+        "description": "Introduction, mission profiles, standards alignment, certification, design philosophy, and advanced materials for spacecraft.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-00-001-OV-A",
+            "subject": "00-01",
+            "title": "AS-00 General Document - Intro & Vision",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-00-002-OV-A",
+            "subject": "00-02",
+            "title": "Mission Profiles Overview (Suborbital, Orbital, Cislunar)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-00-003-OV-A",
+            "subject": "00-03",
+            "title": "COAFI Part II Scope & AS Standard Alignment",
+            "infoCode": ["OV", "REF"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-00-004-REQ-A",
+            "subject": "00-10",
+            "title": "Space Compliance & Certification Overview (Launch, Operations)",
+            "infoCode": ["REQ", "OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-00-005-PLAN-A",
+            "subject": "00-11",
+            "title": "Spacecraft Certification Strategy",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-00-006-OV-A",
+            "subject": "00-20",
+            "title": "Spacecraft Design Philosophy (Reusability, Safety, Modularity)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-00-007-OV-A",
+            "subject": "00-21",
+            "title": "Advanced Materials for Space (AMPEL+) Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-00-008-SDD-A",
+            "subject": "00-30",
+            "title": "AI-Driven Document Adaptation System (Spacecraft)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 01",
+        "title": "Spacecraft General",
+        "description": "Spacecraft identification, general specifications (mass, power, volume), performance characteristics (Delta-V, payload), mass properties, CG, and mission constraints.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-01-001-OV-A",
+            "subject": "01-01",
+            "title": "Spacecraft Identification & General Specs Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-01-002-SPEC-A",
+            "subject": "01-02",
+            "title": "Spacecraft Identification and Designation Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-01-003-SPEC-A",
+            "subject": "01-03",
+            "title": "General Specifications (Mass, Power, Volume Budgets)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-01-004-RPT-A",
+            "subject": "01-10",
+            "title": "Mission Performance Characteristics Report (Delta-V, Payload Capacity)",
+            "infoCode": ["RPT", "SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-01-005-LIST-A",
+            "subject": "01-11",
+            "title": "Mass Properties and Center of Gravity (CG) Data List",
+            "infoCode": ["LIST", "SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-01-006-SPEC-A",
+            "subject": "01-20",
+            "title": "Mission Constraints and Operational Limits Specification",
+            "infoCode": ["SPEC", "REQ"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-01-007-SDD-A",
+            "subject": "01-21",
+            "title": "AI-Enhanced Mission Constraint Monitoring System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 02",
+        "title": "Mission Operations Information",
+        "description": "Procedures for pre-launch checkout, launch/ascent, nominal orbital operations (station keeping, attitude control), AI-assisted operations, de-orbit/re-entry/landing, and contingency procedures.",
+        "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-02-001-OV-A",
+            "subject": "02-01",
+            "title": "Mission Operations Handbook Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-02-002-PROC-A",
+            "subject": "02-10",
+            "title": "Pre-Launch Checkout Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-02-003-PROC-A",
+            "subject": "02-11",
+            "title": "Launch & Ascent Sequence Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-02-004-PROC-A",
+            "subject": "02-20",
+            "title": "Nominal Orbital Procedures (Station Keeping, Attitude Control, Maneuvering)",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-02-005-SDD-A",
+            "subject": "02-21",
+            "title": "AI-Assisted Orbital Operations System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-02-006-PROC-A",
+            "subject": "02-30",
+            "title": "De-orbit, Re-entry, and Landing/Recovery Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-02-007-PROC-A",
+            "subject": "02-40",
+            "title": "Contingency Procedures (System Failures, Aborts, Safe Modes)",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           }
+        ]
+      },
+      {
+        "chapterCode": "AS 03",
+        "title": "Mission Performance",
+        "description": "Performance data for ascent trajectory, Delta-V budget, maneuvers, re-entry, and landing, including AI optimization and quantum propulsion impact.",
+        "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-03-001-OV-A",
+            "subject": "03-01",
+            "title": "Mission Performance Data Overview",
+            "infoCode": ["OV", "RPT"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-03-002-RPT-A",
+            "subject": "03-10",
+            "title": "Ascent Trajectory Performance Data Report",
+            "infoCode": ["RPT", "CAL"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-03-003-SDD-A",
+            "subject": "03-11",
+            "title": "Quantum Propulsion Impact on Ascent Profile Analysis",
+            "infoCode": ["SDD", "RPT"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-03-004-RPT-A",
+            "subject": "03-20",
+            "title": "Delta-V Budget and Maneuver Performance Report",
+            "infoCode": ["RPT", "CAL"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-03-005-SDD-A",
+            "subject": "03-21",
+            "title": "AI-Optimized Orbital Maneuvering System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-03-006-RPT-A",
+            "subject": "03-30",
+            "title": "Re-entry Corridor & Landing Performance Report",
+            "infoCode": ["RPT", "CAL"],
+            "status": "Draft"
+           }
+        ]
+      },
+      {
+        "chapterCode": "AS 04",
+        "title": "Spacecraft Safety & Reliability",
+        "description": "Safety and reliability requirements, compliance standards, FMEA/FMECA analysis, reliability program plan, and AI-driven health management.",
+        "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-04-001-OV-A",
+            "subject": "04-01",
+            "title": "Safety & Reliability Requirements Overview",
+            "infoCode": ["OV", "REQ"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-04-002-REQ-A",
+            "subject": "04-10",
+            "title": "Spacecraft Safety Standards Compliance Requirements",
+            "infoCode": ["REQ"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-04-003-RPT-A",
+            "subject": "04-11",
+            "title": "FMEA/FMECA Analysis Report",
+            "infoCode": ["RPT", "CAL"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-04-004-PLAN-A",
+            "subject": "04-20",
+            "title": "Reliability Program Plan",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-04-005-SDD-A",
+            "subject": "04-21",
+            "title": "AI-Driven Fault Prediction & Health Management System (i-Aher0 Space)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+        ]
+      },
+      {
+        "chapterCode": "AS 05",
+        "title": "Maintenance & Servicing (Space)",
+        "description": "Spacecraft maintenance philosophy (on-orbit/ground), program plan, AI scheduling, on-orbit servicing concept (RAME), life-limited items, and critical limitations.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-05-001-OV-A",
+            "subject": "05-01",
+            "title": "Spacecraft Maintenance Philosophy Overview (On-Orbit/Ground)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-05-002-PLAN-A",
+            "subject": "05-10",
+            "title": "Spacecraft Maintenance Program Plan",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-05-003-SDD-A",
+            "subject": "05-11",
+            "title": "AI-Driven Adaptive Maintenance Scheduling (i-Aher0 Space)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-05-004-OV-A",
+            "subject": "05-20",
+            "title": "On-Orbit Servicing Concept Overview (RAME Integration)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-05-005-LIST-A",
+            "subject": "05-50",
+            "title": "Life-Limited Items List (Spacecraft)",
+            "infoCode": ["LIST"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-05-006-REQ-A",
+            "subject": "05-51",
+            "title": "Critical Item Limitations Requirements",
+            "infoCode": ["REQ"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 06",
+        "title": "Dimensions & Coordinate Systems",
+        "description": "Spacecraft coordinate system definition, overall dimensions, key component locations, and station/zone definitions.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-06-001-OV-A",
+            "subject": "06-01",
+            "title": "Dimensions & Coordinate Systems Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-06-002-SPEC-A",
+            "subject": "06-02",
+            "title": "Spacecraft Coordinate System & Datum Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-06-003-DWG-A",
+            "subject": "06-10",
+            "title": "Overall Spacecraft Dimensions Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-06-004-LIST-A",
+            "subject": "06-11",
+            "title": "Key Component Dimensions & Locations List",
+            "infoCode": ["LIST", "SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-06-005-DWG-A",
+            "subject": "06-20",
+            "title": "Station & Zone Definition Drawing",
+            "infoCode": ["DWG", "SPEC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 07",
+        "title": "Handling & Transportation",
+        "description": "Specifications and procedures for spacecraft handling and ground transportation, including lifting points.",
+        "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-07-001-OV-A",
+            "subject": "07-01",
+            "title": "Handling & Transportation Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-07-002-SPEC-A",
+            "subject": "07-10",
+            "title": "Lifting Point Specification & Load Limits",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-07-003-DWG-A",
+            "subject": "07-11",
+            "title": "Lifting Point Location Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-07-004-PROC-A",
+            "subject": "07-20",
+            "title": "Ground Transportation Procedure & Requirements",
+            "infoCode": ["PROC", "REQ"],
+            "status": "Draft"
+           }
+        ]
+      },
+      {
+        "chapterCode": "AS 08",
+        "title": "Mass Properties & Balancing",
+        "description": "Procedures for mass properties measurement, CG/Moment of Inertia calculation, and balancing.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-08-001-OV-A",
+            "subject": "08-01",
+            "title": "Mass Properties & Balancing Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-08-002-PROC-A",
+            "subject": "08-10",
+            "title": "Mass Properties Measurement Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-08-003-CAL-A",
+            "subject": "08-11",
+            "title": "CG & Moment of Inertia Calculation Analysis",
+            "infoCode": ["CAL", "RPT"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-08-004-PROC-A",
+            "subject": "08-20",
+            "title": "Balancing Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 09",
+        "title": "Launch Vehicle Interface",
+        "description": "Mechanical and electrical interface control documents (ICDs) with the launch vehicle, launch environment specifications, and separation procedures.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-09-001-OV-A",
+            "subject": "09-01",
+            "title": "Launch Vehicle Interface Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-09-002-ICD-A",
+            "subject": "09-10",
+            "title": "Mechanical Interface Control Document",
+            "infoCode": ["ICD", "SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-09-003-ICD-A",
+            "subject": "09-20",
+            "title": "Electrical Interface Control Document",
+            "infoCode": ["ICD", "SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-09-004-SPEC-A",
+            "subject": "09-30",
+            "title": "Launch Environment Specification (Loads, Vibration, Acoustics)",
+            "infoCode": ["SPEC", "REQ"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-09-005-PROC-A",
+            "subject": "09-40",
+            "title": "Separation System Procedure & Verification",
+            "infoCode": ["PROC", "TEST"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 10",
+        "title": "Storage & Preservation",
+        "description": "Procedures and environmental requirements for short/long-term spacecraft storage and quantum system safing.",
+        "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-10-001-OV-A",
+            "subject": "10-01",
+            "title": "Storage & Preservation Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-10-002-PROC-A",
+            "subject": "10-10",
+            "title": "Short/Long Term Storage Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-10-003-SPEC-A",
+            "subject": "10-11",
+            "title": "Storage Environmental Requirements Specification",
+            "infoCode": ["SPEC", "REQ"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-10-004-PROC-A",
+            "subject": "10-20",
+            "title": "Quantum System Safing Procedure (Storage)",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           }
+        ]
+      },
+      {
+        "chapterCode": "AS 11",
+        "title": "Placards & Markings (Spacecraft)",
+        "description": "Specifications, locations, and drawings for exterior and interior spacecraft markings and placards, including hazard markings.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-11-001-OV-A",
+            "subject": "11-01",
+            "title": "Placards & Markings Overview",
+            "infoCode": ["OV", "REF"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-11-002-DWG-A",
+            "subject": "11-10",
+            "title": "Exterior Marking Location Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-11-003-LIST-A",
+            "subject": "11-11",
+            "title": "Exterior Marking List & Specifications",
+            "infoCode": ["LIST", "SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-11-004-SPEC-A",
+            "subject": "11-12",
+            "title": "Quantum/High-Voltage Hazard Marking Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-11-005-DWG-A",
+            "subject": "11-20",
+            "title": "Interior Placard Location Drawing (Crewed Modules)",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-11-006-LIST-A",
+            "subject": "11-21",
+            "title": "Interior Placard List & Specifications",
+            "infoCode": ["LIST", "SPEC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 12",
+        "title": "Servicing – Routine (Space)",
+        "description": "Procedures for routine ground and on-orbit servicing, including propellant loading, fluid/gas servicing, quantum system coolant, and consumables.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-12-001-OV-A",
+            "subject": "12-01",
+            "title": "Routine Servicing Overview (Ground & On-Orbit)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-12-002-PROC-A",
+            "subject": "12-10",
+            "title": "Propellant Loading Procedure (Ground)",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-12-003-PROC-A",
+            "subject": "12-11",
+            "title": "Fluid/Gas Servicing Procedure (Ground/Orbit)",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-12-004-PROC-A",
+            "subject": "12-12",
+            "title": "Quantum System Coolant Servicing Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-12-005-SPEC-A",
+            "subject": "12-13",
+            "title": "Consumables Specification (Propellant, Gas, Coolant)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 13",
+        "title": "Fluid Power (Specialized Mechanisms)",
+        "description": "Overview and specifications for specialized fluid power systems (EHA, specific mechanisms).",
+         "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-13-001-OV-A",
+            "subject": "13-01",
+            "title": "Fluid Power System Overview (Minimal/EHA/Specific Use)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-13-002-SPEC-A",
+            "subject": "13-10",
+            "title": "Mechanism Actuation Fluid Specification (If Applicable)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-13-003-DWG-A",
+            "subject": "13-20",
+            "title": "Fluid Line Drawing (Specific Mechanisms Only)",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "AS 14",
+        "title": "Pressurized Gas Systems",
+        "description": "Overview, specifications, and drawings for pressurized gas systems used for propellant pressurization, actuation, etc.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-14-001-OV-A",
+            "subject": "14-01",
+            "title": "Pressurized Gas System Overview (Propellant Pressurization, Actuation)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-14-002-SPEC-A",
+            "subject": "14-10",
+            "title": "High-Pressure Gas Tank Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-14-003-DWG-A",
+            "subject": "14-20",
+            "title": "Gas Distribution Plumbing Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-14-004-SPEC-A",
+            "subject": "14-21",
+            "title": "Regulator and Valve Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 15",
+        "title": "Air Conditioning (Crew Modules)",
+        "description": "Reference to AS 21 (ECLSS) for Air Conditioning details in crewed modules.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-15-001-REF-A",
+            "subject": "15-01",
+            "title": "Reference to AS 21 (ECLSS - Atmosphere Management)",
+            "infoCode": ["REF"],
+            "status": "ReferenceOnly"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 16",
+        "title": "Pressurization (Crew Modules)",
+        "description": "Reference to AS 21 (ECLSS) for Pressurization details in crewed modules.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-16-001-REF-A",
+            "subject": "16-01",
+            "title": "Reference to AS 21 (ECLSS - Atmosphere Management)",
+            "infoCode": ["REF"],
+            "status": "ReferenceOnly"
+          }
+        ]
+      },
+       {
+        "chapterCode": "AS 17",
+        "title": "Environmental Control",
+        "description": "Reference to AS 21 for ECLSS and Thermal Control details.",
+         "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-17-001-REF-A",
+            "subject": "17-01",
+            "title": "Reference to AS 21 (ECLSS & Thermal Control)",
+            "infoCode": ["REF"],
+            "status": "ReferenceOnly"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 18",
+        "title": "Vibration & Acoustic Environment",
+        "description": "Specifications and descriptions for controlling vibration and acoustic environments during launch and on-orbit operations.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-18-001-OV-A",
+            "subject": "18-01",
+            "title": "Vibration & Acoustic Control Overview (Launch & On-Orbit)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-18-002-SPEC-A",
+            "subject": "18-10",
+            "title": "Vibration Environment Specification (Launch, Operations)",
+            "infoCode": ["SPEC", "REQ"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-18-003-SDD-A",
+            "subject": "18-11",
+            "title": "Vibration Isolation System Description (Payloads, QPU)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-18-004-SPEC-A",
+            "subject": "18-20",
+            "title": "Acoustic Environment Specification (Launch)",
+            "infoCode": ["SPEC", "REQ"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-18-005-SDD-A",
+            "subject": "18-21",
+            "title": "Acoustic Dampening Description (Fairing, Interstages)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 19",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-19-001-OV-A",
+            "subject": "19-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+          }
+         ]
+      },
+       {
+        "chapterCode": "AS 20",
+        "title": "Standard Practices – Spacecraft Structure",
+        "description": "Standard practices for spacecraft structures, including AMPEL+ composites, fastening/bonding, NDT, AI analysis, and repair concepts.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-20-001-OV-A",
+            "subject": "20-01",
+            "title": "Standard Structural Practices Overview (Space)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-20-002-PROC-A",
+            "subject": "20-10",
+            "title": "AMPEL+ Composite Fastening & Bonding Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-20-003-SPEC-A",
+            "subject": "20-11",
+            "title": "AMPEL+ Fastening & Bonding Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-20-004-PROC-A",
+            "subject": "20-20",
+            "title": "NDT Procedure for Space Structures",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-20-005-SPEC-A",
+            "subject": "20-21",
+            "title": "NDT Method Specification (Space Application)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-20-006-SDD-A",
+            "subject": "20-22",
+            "title": "AI-Enhanced NDT Analysis System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-20-007-PROC-A",
+            "subject": "20-30",
+            "title": "Structural Repair Procedure (Ground/On-Orbit Concept)",
+            "infoCode": ["PROC", "OV"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "AS 21",
+        "title": "Environmental Control & Life Support (ECLSS)",
+        "description": "Details of ECLSS, including atmosphere, water, waste management, thermal control (STCS), and AI optimization.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-21-001-OV-A",
+            "subject": "21-01",
+            "title": "ECLSS System Overview & Philosophy",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-21-002-SDD-A",
+            "subject": "21-10",
+            "title": "Atmosphere Management System Description (Pressure, Composition, Revitalization)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-21-003-SPEC-A",
+            "subject": "21-11",
+            "title": "Atmosphere Management System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-21-004-SDD-A",
+            "subject": "21-20",
+            "title": "Water Management System Description (Potable, Waste, Recycling)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-21-005-SPEC-A",
+            "subject": "21-21",
+            "title": "Water Management System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-21-006-SDD-A",
+            "subject": "21-30",
+            "title": "Waste Management System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-21-007-SPEC-A",
+            "subject": "21-31",
+            "title": "Waste Management System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-21-008-SDD-A",
+            "subject": "21-50",
+            "title": "Spacecraft Thermal Control System (STCS) Description (Active & Passive)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-21-009-SPEC-A",
+            "subject": "21-51",
+            "title": "STCS Specification (Radiators, Heat Pipes, MLI, Louvers)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-21-010-SDD-A",
+            "subject": "21-60",
+            "title": "AI-Driven ECLSS Optimization System",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 22",
+        "title": "Guidance, Navigation & Control (GNC)",
+        "description": "GNC architecture, AI autopilot, quantum-enhanced algorithms, Attitude Determination & Control System (ADCS) sensors/actuators, orbit determination, and FMS integration.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-22-001-OV-A",
+            "subject": "22-01",
+            "title": "GNC System Architecture Overview",
+            "infoCode": ["OV", "SDD", "FIG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-22-002-SPEC-A",
+            "subject": "22-10",
+            "title": "AI Autopilot & Mission Sequence Capabilities Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-22-003-SDD-A",
+            "subject": "22-11",
+            "title": "Quantum-Enhanced GNC Algorithms Concept Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-22-004-SDD-A",
+            "subject": "22-20",
+            "title": "Attitude Determination & Control System (ADCS) Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-22-005-SPEC-A",
+            "subject": "22-21",
+            "title": "ADCS Sensor Specification (Star Trackers, Sun Sensors, IMU, Gyros, Magnetometers)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-22-006-SPEC-A",
+            "subject": "22-22",
+            "title": "ADCS Actuator Specification (Reaction Wheels, Thrusters, Mag. Torquers, CMGs)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-22-007-SDD-A",
+            "subject": "22-30",
+            "title": "Orbit Determination & Propagation System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-22-008-SDD-A",
+            "subject": "22-80",
+            "title": "Flight Management System (FMS) Integration with AI & QAO",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+       {
+        "chapterCode": "AS 23",
+        "title": "Communications (Spacecraft)",
+        "description": "Spacecraft communications architecture (TT&C, high-rate data, inter-satellite links), audio/video, AI management, and QKD integration.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-23-001-OV-A",
+            "subject": "23-01",
+            "title": "Communications System Architecture Overview (TT&C, Data, Inter-Satellite)",
+            "infoCode": ["OV", "SDD", "FIG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-23-002-SDD-A",
+            "subject": "23-10",
+            "title": "Telemetry, Tracking & Command (TT&C) Subsystem Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-23-003-SPEC-A",
+            "subject": "23-11",
+            "title": "TT&C Transponder & Antenna Specification (S-Band, X-Band, etc.)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-23-004-SDD-A",
+            "subject": "23-20",
+            "title": "High-Rate Data Transmission Subsystem Description (Payload/Science Data, Ka-Band, Laser)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-23-005-SPEC-A",
+            "subject": "23-21",
+            "title": "High-Rate Data Transmitter & Antenna Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-23-006-SDD-A",
+            "subject": "23-50",
+            "title": "Audio/Video Integrating System Description (Crewed Modules/EVA)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-23-007-SDD-A",
+            "subject": "23-70",
+            "title": "AI Communications Management Function Description (Link Selection, Scheduling)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-23-008-SDD-A",
+            "subject": "23-80",
+            "title": "QKD System Integration Description (Space Links)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-23-009-SPEC-A",
+            "subject": "23-81",
+            "title": "QKD Secure Communication Protocol Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          }
+         ]
+      },
+       {
+        "chapterCode": "AS 24",
+        "title": "Electrical Power Subsystem (EPS)",
+        "description": "EPS architecture, power generation (solar, RTG, fuel cell), power storage (batteries, supercaps), distribution (PDU), and AI-driven management.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-24-001-OV-A",
+            "subject": "24-01",
+            "title": "EPS Architecture Overview",
+            "infoCode": ["OV", "SDD", "DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-24-002-SDD-A",
+            "subject": "24-10",
+            "title": "Power Generation System Description (Solar Arrays, RTG, Fuel Cell)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-24-003-SPEC-A",
+            "subject": "24-11",
+            "title": "Power Generation System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-24-004-SDD-A",
+            "subject": "24-30",
+            "title": "Power Storage System Description (Batteries, Supercapacitors)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-24-005-SPEC-A",
+            "subject": "24-31",
+            "title": "Battery System Specification (Space Grade - Li-Ion, etc.)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-24-006-SDD-A",
+            "subject": "24-50",
+            "title": "Power Distribution Unit (PDU) & Control Architecture (BCR, SADE)",
+            "infoCode": ["SDD", "DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-24-007-SDD-A",
+            "subject": "24-51",
+            "title": "AI-Driven Power Management & Load Shedding System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 25",
+        "title": "Crew Systems & Habitability (If Crewed)",
+        "description": "Layout, specifications, and systems for crewed modules, including seats, quarters, stowage, galley, and emergency equipment.",
+         "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-25-001-OV-A",
+            "subject": "25-01",
+            "title": "Crew Module Layout Overview & Options",
+            "infoCode": ["OV", "FIG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-25-002-SPEC-A",
+            "subject": "25-10",
+            "title": "Crew Seat Specification (Launch/Entry/On-Orbit)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-25-003-SPEC-A",
+            "subject": "25-20",
+            "title": "Crew Quarters & Furnishings Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-25-004-SDD-A",
+            "subject": "25-40",
+            "title": "Stowage & Logistics Management System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-25-005-LIST-A",
+            "subject": "25-50",
+            "title": "Galley & Food System Equipment List",
+            "infoCode": ["LIST", "SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-25-006-LIST-A",
+            "subject": "25-60",
+            "title": "Emergency Equipment List (Space Suits, Escape Systems, First Aid)",
+            "infoCode": ["LIST"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-25-007-DWG-A",
+            "subject": "25-61",
+            "title": "Emergency Equipment Location Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "AS 26",
+        "title": "Hazard Detection & Safety",
+        "description": "Systems for detecting hazards (fire, smoke, MMOD, radiation, toxins) and ensuring safety (fire suppression, caution & warning).",
+        "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-26-001-OV-A",
+            "subject": "26-01",
+            "title": "Hazard Detection & Safety System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-26-002-SPEC-A",
+            "subject": "26-10",
+            "title": "Fire/Smoke Detector Specification (Space Environment)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-26-003-DWG-A",
+            "subject": "26-11",
+            "title": "Fire/Smoke Detector Location Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-26-004-SPEC-A",
+            "subject": "26-12",
+            "title": "Micrometeoroid & Orbital Debris (MMOD) Detection Sensor Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-26-005-SPEC-A",
+            "subject": "26-13",
+            "title": "Radiation Environment Monitor Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-26-006-SPEC-A",
+            "subject": "26-14",
+            "title": "Toxic Atmosphere Sensor Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-26-007-SDD-A",
+            "subject": "26-20",
+            "title": "Fire Suppression System Description (Space Rated - CO2, Water Mist, Novec)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-26-008-SPEC-A",
+            "subject": "26-21",
+            "title": "Fire Suppression Agent & System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-26-009-SDD-A",
+            "subject": "26-30",
+            "title": "Caution & Warning System Description (Alarms, Annunciators)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+        ]
+      },
+       {
+        "chapterCode": "AS 27",
+        "title": "Flight Control Actuation (GNC Actuators)",
+        "description": "Overview and specifications for GNC actuators, including RCS thrusters, gimbal actuators, reaction wheels, CMGs, magnetic torquers, and aerodynamic surfaces.",
+         "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-27-001-OV-A",
+            "subject": "27-01",
+            "title": "GNC Actuator Systems Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-27-002-SPEC-A",
+            "subject": "27-10",
+            "title": "Reaction Control System (RCS) Thruster Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-27-003-SPEC-A",
+            "subject": "27-20",
+            "title": "Main Engine Gimbal Actuator Specification (If Applicable)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-27-004-SPEC-A",
+            "subject": "27-30",
+            "title": "Reaction Wheel Assembly (RWA) Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-27-005-SPEC-A",
+            "subject": "27-40",
+            "title": "Control Moment Gyroscope (CMG) Specification (If Applicable)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-27-006-SPEC-A",
+            "subject": "27-50",
+            "title": "Magnetic Torquer Specification (If Applicable)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-27-007-SPEC-A",
+            "subject": "27-60",
+            "title": "Aerodynamic Control Surface Actuator Specification (Re-entry Vehicles)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "AS 28",
+        "title": "Propellant Systems",
+        "description": "Reference to AS 73 for Propellant Management details.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-28-001-REF-A",
+            "subject": "28-01",
+            "title": "Reference to AS 73 (Propellant Management)",
+            "infoCode": ["REF"],
+            "status": "ReferenceOnly"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 29",
+        "title": "Fluid Power (Specific Use)",
+        "description": "Reference to AS 13 (Fluid Power) and AS 52 (Mechanisms) for specific fluid power applications.",
+         "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-29-001-REF-A",
+            "subject": "29-01",
+            "title": "Reference to AS 13 (Fluid Power) & AS 52 (Mechanisms)",
+            "infoCode": ["REF"],
+            "status": "ReferenceOnly"
+           }
+         ]
+      },
+      {
+        "chapterCode": "AS 30",
+        "title": "Thermal Protection System (TPS) & Temperature Control",
+        "description": "Overview, materials, and design for re-entry TPS and general spacecraft temperature control (MLI, radiators), including AI thermal modeling.",
+        "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-30-001-OV-A",
+            "subject": "30-01",
+            "title": "TPS & Temperature Control Overview (Re-entry & Space Environment)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-30-002-SPEC-A",
+            "subject": "30-10",
+            "title": "Re-entry TPS Material Specification (Tiles, Ablatives, Composites)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-30-003-DD-A",
+            "subject": "30-11",
+            "title": "Re-entry TPS Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-30-004-SPEC-A",
+            "subject": "30-20",
+            "title": "Multi-Layer Insulation (MLI) Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-30-005-SPEC-A",
+            "subject": "30-30",
+            "title": "Radiator & Heat Pipe Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-30-006-SPEC-A",
+            "subject": "30-80",
+            "title": "Temperature Sensor Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-30-007-SDD-A",
+            "subject": "30-81",
+            "title": "AI-Driven Thermal Modeling & Control System",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+        ]
+      },
+       {
+        "chapterCode": "AS 31",
+        "title": "Command & Data Handling (C&DH)",
+        "description": "C&DH system overview, including On-Board Computer (OBC), data bus architecture, Mass Memory Unit (MMU), flight software, telemetry/command structure, and HPC/QPU integration.",
+        "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-31-001-OV-A",
+            "subject": "31-01",
+            "title": "C&DH System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-31-002-SPEC-A",
+            "subject": "31-10",
+            "title": "On-Board Computer (OBC) Specification (Main & Redundant)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-31-003-SPEC-A",
+            "subject": "31-20",
+            "title": "Data Bus Architecture Specification (SpaceWire, MIL-STD-1553, CAN, Ethernet)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-31-004-SPEC-A",
+            "subject": "31-30",
+            "title": "Mass Memory Unit (MMU) Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-31-005-SDD-A",
+            "subject": "31-40",
+            "title": "Flight Software Architecture Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-31-006-PROC-A",
+            "subject": "31-41",
+            "title": "Flight Software Upload & Verification Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-31-007-SDD-A",
+            "subject": "31-50",
+            "title": "Telemetry Packet Format & Command Structure Description",
+            "infoCode": ["SDD", "SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-31-008-SDD-A",
+            "subject": "31-60",
+            "title": "HPC/QPU Integration within C&DH Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-31-009-ICD-A",
+            "subject": "31-70",
+            "title": "Subsystem Interface Control Document (C&DH Focus)",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 32",
+        "title": "Landing & Recovery Systems",
+        "description": "Systems for landing and recovery, including parachutes, landing legs/gear, touchdown attenuation, recovery aids, and propulsive landing.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-32-001-OV-A",
+            "subject": "32-01",
+            "title": "Landing & Recovery System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-32-002-SDD-A",
+            "subject": "32-10",
+            "title": "Parachute System Description (Drogue, Main - If Applicable)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-32-003-SPEC-A",
+            "subject": "32-11",
+            "title": "Parachute System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-32-004-SDD-A",
+            "subject": "32-20",
+            "title": "Landing Leg/Gear System Description (Fixed, Deployable)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-32-005-SPEC-A",
+            "subject": "32-21",
+            "title": "Landing Leg/Gear System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-32-006-SDD-A",
+            "subject": "32-30",
+            "title": "Touchdown Attenuation System Description (Crushable Core, Active Suspension)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-32-007-SDD-A",
+            "subject": "32-40",
+            "title": "Post-Landing Recovery Aids Description (Beacons, Flotation, Uprighting)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-32-008-SDD-A",
+            "subject": "32-50",
+            "title": "Propulsive Landing System Description (If Applicable)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 33",
+        "title": "Lighting (Spacecraft)",
+        "description": "Crew module lighting (including AI-adaptive circadian systems), exterior lighting (docking, navigation, inspection), and emergency lighting.",
+         "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-33-001-OV-A",
+            "subject": "33-01",
+            "title": "Lighting System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-33-002-SPEC-A",
+            "subject": "33-10",
+            "title": "Crew Module Lighting Specification (Task, General, Sleep)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-33-003-SDD-A",
+            "subject": "33-20",
+            "title": "AI-Adaptive Circadian Lighting System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-33-004-LIST-A",
+            "subject": "33-40",
+            "title": "Exterior Lighting List (Docking, Navigation, Inspection, Landing)",
+            "infoCode": ["LIST", "SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-33-005-DWG-A",
+            "subject": "33-41",
+            "title": "Exterior Lighting Location Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-33-006-SDD-A",
+            "subject": "33-50",
+            "title": "Emergency Lighting System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 34",
+        "title": "Navigation Sensors & Systems",
+        "description": "Overview and specifications for the navigation sensor suite, referencing GNC components (IMU, Star Tracker, Sun Sensor, GNSS), RPOD sensors, landing sensors, and quantum sensor integration.",
+         "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-34-001-OV-A",
+            "subject": "34-01",
+            "title": "Navigation Sensor Suite Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-34-002-SPEC-A",
+            "subject": "34-10",
+            "title": "Inertial Measurement Unit (IMU) Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-34-003-SPEC-A",
+            "subject": "34-20",
+            "title": "Star Tracker Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-34-004-SPEC-A",
+            "subject": "34-30",
+            "title": "Sun Sensor Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-34-005-SPEC-A",
+            "subject": "34-40",
+            "title": "GNSS Receiver Specification (Space Grade)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-34-006-SPEC-A",
+            "subject": "34-50",
+            "title": "Rendezvous & Docking Sensor Specification (LiDAR, Camera, RF)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-34-007-SPEC-A",
+            "subject": "34-60",
+            "title": "Landing Sensor Specification (Radar/Laser Altimeter, Velocimeter)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-34-008-SDD-A",
+            "subject": "34-70",
+            "title": "Quantum Sensor Integration Concept (Navigation Enhancement)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "AS 35",
+        "title": "Life Support Systems",
+        "description": "Reference to AS 21 (ECLSS) for details on life support systems.",
+         "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-35-001-REF-A",
+            "subject": "35-01",
+            "title": "Reference to AS 21 (ECLSS)",
+            "infoCode": ["REF"],
+            "status": "ReferenceOnly"
+          }
+         ]
+      },
+       {
+        "chapterCode": "AS 36",
+        "title": "Pneumatic Systems (Specific Use)",
+        "description": "Reference to AS 14 for specific uses of pressurized gas systems.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-36-001-REF-A",
+            "subject": "36-01",
+            "title": "Reference to AS 14 (Pressurized Gas Systems)",
+            "infoCode": ["REF"],
+            "status": "ReferenceOnly"
+          }
+         ]
+      },
+      {
+        "chapterCode": "AS 37",
+        "title": "Vacuum Systems",
+        "description": "Not applicable as the space environment is inherently a vacuum.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-37-001-OV-A",
+            "subject": "37-01",
+            "title": "Not Applicable (Space Environment is Vacuum)",
+            "infoCode": ["OV"],
+            "status": "NotApplicable"
+          }
+        ]
+      },
+       {
+        "chapterCode": "AS 38",
+        "title": "Water & Waste Management",
+        "description": "Reference to AS 21 (ECLSS) for details on water and waste management systems.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-38-001-REF-A",
+            "subject": "38-01",
+            "title": "Reference to AS 21 (ECLSS - Water & Waste Management)",
+            "infoCode": ["REF"],
+            "status": "ReferenceOnly"
+          }
+         ]
+      },
+      {
+        "chapterCode": "AS 39",
+        "title": "Crew Interface Panels & Displays",
+        "description": "Overview, layout drawings, specifications, and descriptions for crew interface panels, displays, controls, and HMI software, including AI/XAI interfaces.",
+         "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-39-001-OV-A",
+            "subject": "39-01",
+            "title": "Crew Interface Panels & Displays Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-39-002-DWG-A",
+            "subject": "39-10",
+            "title": "Cockpit/Control Station Layout Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-39-003-SPEC-A",
+            "subject": "39-11",
+            "title": "Display Unit Specification (Space Rated)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-39-004-SPEC-A",
+            "subject": "39-20",
+            "title": "Control Input Device Specification (Joysticks, Keyboards, Switches)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-39-005-SDD-A",
+            "subject": "39-21",
+            "title": "Human-Machine Interface (HMI) Software Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-39-006-SDD-A",
+            "subject": "39-22",
+            "title": "AI/XAI Crew Interface Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 40",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-40-001-OV-A",
+            "subject": "40-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+          }
+        ]
+      },
+       {
+        "chapterCode": "AS 41",
+        "title": "Ballast Systems",
+        "description": "Overview, specification, and mechanism descriptions for ballast systems used for CG control, if applicable.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-41-001-OV-A",
+            "subject": "41-01",
+            "title": "Ballast System Overview (If Applicable for CG Control)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-41-002-SPEC-A",
+            "subject": "41-10",
+            "title": "Ballast Mass Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-41-003-SDD-A",
+            "subject": "41-20",
+            "title": "Ballast Movement Mechanism Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+         ]
+      },
+      {
+        "chapterCode": "AS 42",
+        "title": "Integrated Avionics Architecture",
+        "description": "Overview of the integrated avionics architecture, referencing core processing modules (OBC), network architecture (data bus), and time distribution systems.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-42-001-OV-A",
+            "subject": "42-01",
+            "title": "Integrated Avionics Architecture Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-42-002-SDD-A",
+            "subject": "42-10",
+            "title": "Core Processing Module Description (Ref AS 31 OBC)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-42-003-SPEC-A",
+            "subject": "42-11",
+            "title": "Core Processing Module Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-42-004-SDD-A",
+            "subject": "42-20",
+            "title": "Avionics Network Architecture Description (Ref AS 31 Data Bus)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-42-005-FIG-A",
+            "subject": "42-21",
+            "title": "Avionics Network Architecture Figure",
+            "infoCode": ["FIG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-42-006-SDD-A",
+            "subject": "42-30",
+            "title": "Time Distribution System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+       {
+        "chapterCode": "AS 43",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-43-001-OV-A",
+            "subject": "43-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 44",
+        "title": "Payload & Experiment Systems",
+        "description": "Overview of payload and experiment systems, including standard interface control documents, data handling, and crew science facilities.",
+        "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-44-001-OV-A",
+            "subject": "44-01",
+            "title": "Payload & Experiment Systems Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-44-002-ICD-A",
+            "subject": "44-10",
+            "title": "Standard Payload Interface Control Document (Mechanical, Electrical, Data, Thermal)",
+            "infoCode": ["ICD", "SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-44-003-SDD-A",
+            "subject": "44-20",
+            "title": "Payload Data Handling & Storage Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-44-004-SDD-A",
+            "subject": "44-30",
+            "title": "Crew Science Facilities Description (Glovebox, Racks - If Applicable)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "AS 45",
+        "title": "Spacecraft Health Management System (SHMS)",
+        "description": "Architecture and details of the SHMS (i-Aher0 Space), including sensor fusion, health reporting, AI predictive diagnostics/prognostics, FDIR, and DTO integration.",
+         "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-45-001-OV-A",
+            "subject": "45-01",
+            "title": "SHMS Architecture Overview (i-Aher0 Space & DTO)",
+            "infoCode": ["OV", "SDD", "FIG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-45-002-SPEC-A",
+            "subject": "45-10",
+            "title": "Central Health Monitoring Unit Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-45-003-SDD-A",
+            "subject": "45-20",
+            "title": "Sensor Data Acquisition & Fusion Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-45-004-SPEC-A",
+            "subject": "45-40",
+            "title": "Health & Status Reporting Format Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-45-005-SDD-A",
+            "subject": "45-41",
+            "title": "AI Predictive Diagnostics & Prognostics Logic Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-45-006-OV-A",
+            "subject": "45-50",
+            "title": "i-Aher0 Space Diagnostic Capabilities Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-45-007-SDD-A",
+            "subject": "45-51",
+            "title": "AI Fault Detection, Isolation & Recovery (FDIR) Algorithm Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-45-008-CAL-A",
+            "subject": "45-52",
+            "title": "AI FDIR Performance Analysis",
+            "infoCode": ["CAL"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-45-009-OV-A",
+            "subject": "45-60",
+            "title": "Digital Twin Orchestration (DTO) Integration Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-45-010-SDD-A",
+            "subject": "45-61",
+            "title": "DTO Functionality Description (Spacecraft)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-45-011-ICD-A",
+            "subject": "45-62",
+            "title": "DTO Interface Control Document (SHMS Integration)",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "AS 46",
+        "title": "On-Board Information Systems & Networks",
+        "description": "Architecture of on-board information systems, covering GQP, crew support, payload data networks, BITT logging, QAO interface, and cybersecurity.",
+         "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-46-001-OV-A",
+            "subject": "46-01",
+            "title": "On-Board Information Systems Architecture Overview",
+            "infoCode": ["OV", "SDD", "FIG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-46-002-SDD-A",
+            "subject": "46-10",
+            "title": "GQP On-Board Interface System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-46-003-ICD-A",
+            "subject": "46-11",
+            "title": "GQP On-Board Interface Control Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-46-004-SDD-A",
+            "subject": "46-20",
+            "title": "Crew Support Information System Description (Procedures, Timelines)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-46-005-SPEC-A",
+            "subject": "46-30",
+            "title": "Payload Data Network Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-46-006-OV-A",
+            "subject": "46-60",
+            "title": "BITT Ledger Integration Overview (Spacecraft Data)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-46-007-SDD-A",
+            "subject": "46-61",
+            "title": "BITT On-Board Logging System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-46-008-ICD-A",
+            "subject": "46-62",
+            "title": "BITT Interface Control Document (On-Board)",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-46-009-SDD-A",
+            "subject": "46-63",
+            "title": "QAO On-Board Interface Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-46-010-ICD-A",
+            "subject": "46-64",
+            "title": "QAO Interface Control Document (On-Board)",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-46-011-OV-A",
+            "subject": "46-70",
+            "title": "i-Aher0 Cybersecurity Functions Overview (Spacecraft)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-46-012-SPEC-A",
+            "subject": "46-71",
+            "title": "On-Board Intrusion Detection Protocol Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-46-013-PROC-A",
+            "subject": "46-72",
+            "title": "On-Board Intrusion Prevention/Response Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "AS 47",
+        "title": "Inert Gas Systems",
+        "description": "Not applicable, covered by AS 14 / AS 21.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-47-001-OV-A",
+            "subject": "47-01",
+            "title": "Not Applicable (Covered by AS 14 / AS 21)",
+            "infoCode": ["OV"],
+            "status": "NotApplicable"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 48",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-48-001-OV-A",
+            "subject": "48-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+          }
+        ]
+      },
+       {
+        "chapterCode": "AS 49",
+        "title": "Auxiliary Power Systems",
+        "description": "Overview, specifications, and descriptions for auxiliary and emergency power systems, referencing EPS.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-49-001-OV-A",
+            "subject": "49-01",
+            "title": "Auxiliary & Emergency Power Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-49-002-SPEC-A",
+            "subject": "49-10",
+            "title": "Emergency Battery Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-49-003-SDD-A",
+            "subject": "49-20",
+            "title": "Auxiliary Power Unit Description (Fuel Cell / Chemical - If Applicable)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 50",
+        "title": "Payload Accommodation & Cargo Transfer",
+        "description": "Design, layout, and interfaces for payload accommodation and cargo transfer, including robotic systems.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-50-001-OV-A",
+            "subject": "50-01",
+            "title": "Payload Accommodation & Cargo Transfer Overview",
+            "infoCode": ["OV", "FIG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-50-002-DD-A",
+            "subject": "50-10",
+            "title": "Payload Bay / Cargo Module Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-50-003-DWG-A",
+            "subject": "50-11",
+            "title": "Payload Envelope & Interface Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-50-004-ICD-A",
+            "subject": "50-12",
+            "title": "Payload Deployment/Release System Interface Control Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-50-005-SDD-A",
+            "subject": "50-13",
+            "title": "Robotic Cargo Transfer System Description (If Applicable)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-50-006-DWG-A",
+            "subject": "50-20",
+            "title": "Equipment Bay & Rack Location Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-50-007-LIST-A",
+            "subject": "50-21",
+            "title": "Equipment Bay Access & Constraints List",
+            "infoCode": ["LIST"],
+            "status": "Draft"
+          }
+         ]
+      },
+       {
+        "chapterCode": "AS 51",
+        "title": "Structures (Spacecraft)",
+        "description": "Spacecraft structural design overview considering launch and space environments, AMPEL+ material specification, analysis methodology, and AI-SHM integration.",
+         "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-51-001-OV-A",
+            "subject": "51-01",
+            "title": "Structural Design Overview (Launch, Space Environment)",
+            "infoCode": ["OV", "DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-51-002-SPEC-A",
+            "subject": "51-10",
+            "title": "Primary Structural Material Specification (AMPEL+)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-51-003-OV-A",
+            "subject": "51-20",
+            "title": "Structural Analysis Methodology Overview (Space Loads)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-51-004-CAL-A",
+            "subject": "51-21",
+            "title": "Structural Analysis Calculation Report (FEM, Thermal, MMOD, Fatigue)",
+            "infoCode": ["CAL", "RPT"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-51-005-SDD-A",
+            "subject": "51-70",
+            "title": "AI-SHM System Description (Spacecraft Integration)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 52",
+        "title": "Mechanisms (Hatches, Deployables)",
+        "description": "Overview, design documents, specifications, and operational procedures for spacecraft mechanisms like hatches, airlocks, solar array deployment, antenna pointing, and payload release.",
+        "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-52-001-OV-A",
+            "subject": "52-01",
+            "title": "Mechanism Systems Overview",
+            "infoCode": ["OV", "LIST"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-52-002-DD-A",
+            "subject": "52-10",
+            "title": "Hatch/Airlock Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-52-003-SPEC-A",
+            "subject": "52-11",
+            "title": "Hatch/Airlock Mechanism Specification & Operation",
+            "infoCode": ["SPEC", "PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-52-004-DD-A",
+            "subject": "52-20",
+            "title": "Solar Array Deployment Mechanism Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-52-005-SPEC-A",
+            "subject": "52-21",
+            "title": "Solar Array Deployment Mechanism Specification & Operation",
+            "infoCode": ["SPEC", "PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-52-006-DD-A",
+            "subject": "52-30",
+            "title": "Antenna Pointing/Deployment Mechanism Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-52-007-SPEC-A",
+            "subject": "52-31",
+            "title": "Antenna Pointing/Deployment Mechanism Specification & Operation",
+            "infoCode": ["SPEC", "PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-52-008-DD-A",
+            "subject": "52-40",
+            "title": "Payload Release/Separation Mechanism Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-52-009-SPEC-A",
+            "subject": "52-41",
+            "title": "Payload Release/Separation Mechanism Specification & Operation",
+            "infoCode": ["SPEC", "PROC"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 53",
+        "title": "Primary Structure / Pressure Vessel",
+        "description": "Design, specifications, and drawings for the main bus structure, crew module pressure vessel (if applicable), and MMOD shielding.",
+        "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-53-001-OV-A",
+            "subject": "53-01",
+            "title": "Primary Structure / Pressure Vessel Design Overview",
+            "infoCode": ["OV", "DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-53-002-DD-A",
+            "subject": "53-10",
+            "title": "Main Bus Structure Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-53-003-SPEC-A",
+            "subject": "53-11",
+            "title": "Main Bus Structure Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-53-004-DWG-A",
+            "subject": "53-12",
+            "title": "Main Bus Structure Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-53-005-DD-A",
+            "subject": "53-20",
+            "title": "Crew Module Pressure Vessel Design Document (If Applicable)",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-53-006-SPEC-A",
+            "subject": "53-21",
+            "title": "Crew Module Pressure Vessel Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-53-007-SPEC-A",
+            "subject": "53-30",
+            "title": "MMOD Shielding Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 54",
+        "title": "Propulsion Module Structures & Interfaces",
+        "description": "Design, specifications, drawings, and interface control for engine mounts and thrust structures.",
+         "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-54-001-OV-A",
+            "subject": "54-01",
+            "title": "Propulsion Module Structures & Interfaces Overview",
+            "infoCode": ["OV", "DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-54-002-DD-A",
+            "subject": "54-10",
+            "title": "Engine Mount & Thrust Structure Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-54-003-SPEC-A",
+            "subject": "54-11",
+            "title": "Engine Mount & Thrust Structure Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-54-004-DWG-A",
+            "subject": "54-12",
+            "title": "Propulsion Module Structural Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-54-005-ICD-A",
+            "subject": "54-20",
+            "title": "Propulsion System Interface Control Document (Structural)",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 55",
+        "title": "Aerodynamic Control Surfaces (Re-entry/Trans-Atmospheric)",
+        "description": "Design, specifications, and drawings for aerodynamic control surfaces applicable to re-entry or trans-atmospheric vehicles.",
+         "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-55-001-OV-A",
+            "subject": "55-01",
+            "title": "Aerodynamic Control Surfaces Overview (If Applicable)",
+            "infoCode": ["OV", "DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-55-002-DD-A",
+            "subject": "55-10",
+            "title": "Control Surface Structural Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-55-003-SPEC-A",
+            "subject": "55-11",
+            "title": "Control Surface Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-55-004-DWG-A",
+            "subject": "55-12",
+            "title": "Control Surface Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 56",
+        "title": "Viewports & Optical Windows",
+        "description": "Specifications and procedures for crew viewports and scientific instrument optical windows.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-56-001-OV-A",
+            "subject": "56-01",
+            "title": "Viewports & Optical Windows Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-56-002-SPEC-A",
+            "subject": "56-10",
+            "title": "Crew Viewport Specification (Pressure, Thermal, Radiation)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-56-003-SPEC-A",
+            "subject": "56-20",
+            "title": "Scientific Instrument Optical Window Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-56-004-PROC-A",
+            "subject": "56-30",
+            "title": "Viewport/Window Inspection & Maintenance Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          }
+         ]
+      },
+       {
+        "chapterCode": "AS 57",
+        "title": "Lifting Surfaces & Aerobraking Structures",
+        "description": "Design and specifications for wings, lifting bodies, or aerobraking structures, if applicable.",
+        "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-57-001-OV-A",
+            "subject": "57-01",
+            "title": "Lifting Surfaces & Aerobraking Structures Overview (If Applicable)",
+            "infoCode": ["OV", "DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-57-002-DD-A",
+            "subject": "57-10",
+            "title": "Wing/Lifting Body Structural Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-57-003-SPEC-A",
+            "subject": "57-11",
+            "title": "Wing/Lifting Body Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-57-004-DD-A",
+            "subject": "57-20",
+            "title": "Aerobraking Shield/Structure Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-57-005-SPEC-A",
+            "subject": "57-21",
+            "title": "Aerobraking Shield/Structure Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 60",
+        "title": "Standard Practices - Propulsion Systems (Space)",
+        "description": "Standard procedures for space propulsion system integration, testing, propellant handling, and thruster firing.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-60-001-OV-A",
+            "subject": "60-01",
+            "title": "Standard Propulsion Practices Overview (Space)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-60-002-PROC-A",
+            "subject": "60-10",
+            "title": "Propulsion System Integration & Test Procedure",
+            "infoCode": ["PROC", "TEST"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-60-003-PROC-A",
+            "subject": "60-20",
+            "title": "Propellant Handling Safety Procedure",
+            "infoCode": ["PROC", "REQ"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-60-004-PROC-A",
+            "subject": "60-30",
+            "title": "Thruster Firing & Test Procedure (Ground/Vacuum)",
+            "infoCode": ["PROC", "TEST"],
+            "status": "Draft"
+          }
+         ]
+      },
+      {
+        "chapterCode": "AS 61-67",
+        "title": "Rotors / Propellers / Drives / Controls",
+        "description": "Not applicable for standard orbital spacecraft; may be relevant for specific mission stages.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-61-001-OV-A",
+            "subject": "61-67",
+            "title": "Not Applicable for Orbital Spacecraft",
+            "infoCode": ["OV"],
+            "status": "NotApplicable"
+          }
+        ]
+      },
+       {
+        "chapterCode": "AS 71",
+        "title": "Propulsion Systems (Spacecraft)",
+        "description": "Detailed design documents and specifications for main propulsion (chemical/electric/quantum) and Reaction Control Systems (RCS).",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-71-001-OV-A",
+            "subject": "71-01",
+            "title": "Propulsion System Overview (Main, RCS, Quantum)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-71-002-DD-A",
+            "subject": "71-10",
+            "title": "Main Propulsion System Design Document (Chemical/Electric/Quantum)",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-71-003-SPEC-A",
+            "subject": "71-11",
+            "title": "Main Propulsion System Specification (Performance, Interfaces)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-71-004-DD-A",
+            "subject": "71-20",
+            "title": "Reaction Control System (RCS) Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-71-005-SPEC-A",
+            "subject": "71-21",
+            "title": "RCS Specification (Thruster Type, Performance, Interfaces)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "AS 72",
+        "title": "Engine Details (Chemical/Electric)",
+        "description": "Specifications for chemical engine thrust chambers, electric propulsion thrusters (Hall, Ion), and Power Processing Units (PPUs).",
+        "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-72-001-OV-A",
+            "subject": "72-01",
+            "title": "Space Engine Architecture Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-72-002-SPEC-A",
+            "subject": "72-10",
+            "title": "Chemical Engine Thrust Chamber Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-72-003-SPEC-A",
+            "subject": "72-20",
+            "title": "Electric Propulsion Thruster Specification (Hall, Ion, etc.)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-72-004-SPEC-A",
+            "subject": "72-30",
+            "title": "Power Processing Unit (PPU) Specification (Electric Propulsion)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 72-Q01",
+        "title": "Propulsion – Quantum Extension (Space)",
+        "description": "Overview, specification, integration description, and control interface for the Q-Thruster module in space applications.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-72-Q01-001-OV-A",
+            "subject": "72-Q01-01",
+            "title": "Q-Thruster Module Overview (Space Application)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-72-Q01-002-SPEC-A",
+            "subject": "72-Q01-02",
+            "title": "Q-Thruster Module Specification (Space)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-72-Q01-003-SDD-A",
+            "subject": "72-Q01-03",
+            "title": "QEE/QSM Integration & Control Description (Space)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-72-Q01-004-ICD-A",
+            "subject": "72-Q01-04",
+            "title": "QEE/QSM Control Interface Document (Space)",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 73",
+        "title": "Propellant Management",
+        "description": "Overview, specifications, and descriptions for propellant tanks (cryo/storable), feed systems, gauging, conditioning, and zero-G propellant management devices (PMD).",
+        "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-73-001-OV-A",
+            "subject": "73-01",
+            "title": "Propellant Management System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-73-002-SPEC-A",
+            "subject": "73-10",
+            "title": "Propellant Tank Specification (Cryo/Storable, Materials, Insulation)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-73-003-SDD-A",
+            "subject": "73-20",
+            "title": "Propellant Feed System Description (Lines, Valves, Pumps, Filters)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-73-004-SPEC-A",
+            "subject": "73-21",
+            "title": "Propellant Feed System Component Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-73-005-SDD-A",
+            "subject": "73-30",
+            "title": "Propellant Gauging System Description (Level Sensors, Mass Flow)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-73-006-SDD-A",
+            "subject": "73-40",
+            "title": "Propellant Conditioning System Description (Heaters, Chillers - If Applicable)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-73-007-SDD-A",
+            "subject": "73-50",
+            "title": "Zero-G Propellant Management Device (PMD) Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 74",
+        "title": "Ignition Systems (Chemical Engines)",
+        "description": "Overview, specifications, and control description for chemical engine ignition systems (spark, hypergolic, laser).",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-74-001-OV-A",
+            "subject": "74-01",
+            "title": "Ignition System Overview (Chemical Engines)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-74-002-SPEC-A",
+            "subject": "74-10",
+            "title": "Igniter Specification (Spark, Hypergolic, Laser)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-74-003-SDD-A",
+            "subject": "74-20",
+            "title": "Ignition Sequence Controller Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+         ]
+      },
+       {
+        "chapterCode": "AS 75",
+        "title": "Bleed Air / Gas Systems (Propulsion)",
+        "description": "Overview and descriptions of propulsion-related gas systems for tank pressurization and system purges.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-75-001-OV-A",
+            "subject": "75-01",
+            "title": "Propulsion Gas Systems Overview (Pressurization, Purge)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-75-002-SDD-A",
+            "subject": "75-10",
+            "title": "Tank Pressurization System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-75-003-SDD-A",
+            "subject": "75-20",
+            "title": "System Purge Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+         ]
+      },
+       {
+        "chapterCode": "AS 76",
+        "title": "Propulsion Control Systems",
+        "description": "Overview, Thruster Control Unit (TCU) description, control interfaces (GNC/C&DH), and safing/emergency shutdown procedures.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-76-001-OV-A",
+            "subject": "76-01",
+            "title": "Propulsion Control System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-76-002-SDD-A",
+            "subject": "76-10",
+            "title": "Thruster Control Unit (TCU) Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-76-003-ICD-A",
+            "subject": "76-11",
+            "title": "Propulsion Control Interface Document (GNC/C&DH)",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-76-004-PROC-A",
+            "subject": "76-20",
+            "title": "Propulsion System Safing & Emergency Shutdown Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 77",
+        "title": "Propulsion System Indicating & Monitoring",
+        "description": "Specifications and descriptions for monitoring propulsion system parameters (thrust, temperature, pressure, vibration) and AI-driven health monitoring integration.",
+        "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-77-001-OV-A",
+            "subject": "77-01",
+            "title": "Propulsion Indicating System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-77-002-SPEC-A",
+            "subject": "77-10",
+            "title": "Thrust/Performance Indication Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-77-003-SPEC-A",
+            "subject": "77-20",
+            "title": "Propulsion System Temperature Monitoring Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-77-004-SPEC-A",
+            "subject": "77-30",
+            "title": "Propulsion System Pressure Monitoring Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-77-005-SPEC-A",
+            "subject": "77-40",
+            "title": "Propulsion System Vibration Monitoring Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-77-006-OV-A",
+            "subject": "77-50",
+            "title": "AI-Driven Propulsion Health Monitoring Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-77-007-SDD-A",
+            "subject": "77-51",
+            "title": "AI-Driven Propulsion Health Monitoring System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-77-008-ICD-A",
+            "subject": "77-52",
+            "title": "i-Aher0 Interface Control Document (Propulsion Health)",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 78",
+        "title": "Exhaust Systems / Nozzles",
+        "description": "Overview, design documents, specifications, and mechanism descriptions for engine exhaust nozzles.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-78-001-OV-A",
+            "subject": "78-01",
+            "title": "Exhaust Nozzle Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-78-002-DD-A",
+            "subject": "78-10",
+            "title": "Nozzle Design Document (Bell, Aerospike, etc.)",
+            "infoCode": ["DD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-78-003-SPEC-A",
+            "subject": "78-11",
+            "title": "Nozzle Material & Performance Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-78-004-SDD-A",
+            "subject": "78-20",
+            "title": "Nozzle Extension Mechanism Description (If Applicable)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+         ]
+      },
+       {
+        "chapterCode": "AS 79",
+        "title": "Propulsion System Lubrication",
+        "description": "Overview, specifications, and descriptions for propulsion system lubrication (e.g., turbopumps, gimbals).",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-79-001-OV-A",
+            "subject": "79-01",
+            "title": "Propulsion Lubrication System Overview (Turbopumps, Gimbals)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-79-002-SPEC-A",
+            "subject": "79-10",
+            "title": "Lubricant Specification (Space Grade)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-79-003-SDD-A",
+            "subject": "79-20",
+            "title": "Lubrication Delivery System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+         ]
+      },
+       {
+        "chapterCode": "AS 80",
+        "title": "Starting Systems (Chemical Engines)",
+        "description": "Overview, sequence descriptions, and specifications for chemical engine starting systems.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-80-001-OV-A",
+            "subject": "80-01",
+            "title": "Engine Start System Overview (Chemical)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-80-002-SDD-A",
+            "subject": "80-10",
+            "title": "Start Sequence Description (Valve Timing, Ignition)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-80-003-SPEC-A",
+            "subject": "80-20",
+            "title": "Starter Cartridge/System Specification (If Applicable)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          }
+         ]
+      },
+      {
+        "chapterCode": "AS 81",
+        "title": "Turbines (Reciprocating Engines)",
+        "description": "Not applicable.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-81-001-OV-A",
+            "subject": "81-01",
+            "title": "Not Applicable",
+            "infoCode": ["OV"],
+            "status": "NotApplicable"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 82",
+        "title": "Water Injection",
+        "description": "Not applicable.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-82-001-OV-A",
+            "subject": "82-01",
+            "title": "Not Applicable",
+            "infoCode": ["OV"],
+            "status": "NotApplicable"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 83",
+        "title": "Accessory Drives / Power Take-Off",
+        "description": "Overview, specifications, and drawings for accessory drives (turbopumps, generators).",
+         "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-83-001-OV-A",
+            "subject": "83-01",
+            "title": "Accessory Drive Overview (Turbopumps, Generators)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-83-002-SPEC-A",
+            "subject": "83-10",
+            "title": "Gearbox/Drive Train Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-83-003-DD-A",
+            "subject": "83-20",
+            "title": "Accessory Drive Assembly Design Document",
+            "infoCode": ["DD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-83-004-DWG-A",
+            "subject": "83-21",
+            "title": "Accessory Drive Assembly Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "AS 84",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-84-001-OV-A",
+            "subject": "84-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+          }
+        ]
+      },
+       {
+        "chapterCode": "AS 85",
+        "title": "Fuel Cell System (Power Generation)",
+        "description": "Overview, specifications, and descriptions for fuel cell systems used for power generation, referencing EPS.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-85-001-OV-A",
+            "subject": "85-01",
+            "title": "Fuel Cell System Overview (Power Generation)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-85-002-SPEC-A",
+            "subject": "85-10",
+            "title": "Fuel Cell Stack Specification (PEMFC, SOFC)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-85-003-SDD-A",
+            "subject": "85-20",
+            "title": "Reactant Storage & Supply System Description (H2, O2)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-85-004-SDD-A",
+            "subject": "85-30",
+            "title": "Fuel Cell Power Conditioning & Control Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+         ]
+      },
+      {
+        "chapterCode": "AS 86-87",
+        "title": "Reserved/Not Applicable",
+        "description": "Reserved/Not Applicable for standard spacecraft.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-86-001-OV-A",
+            "subject": "86-01",
+            "title": "Reserved/Not Applicable",
+            "infoCode": ["OV"],
+            "status": "NotApplicable"
+          },
+          {
+            "id": "GP-SM-AMPELPLUS-0200-87-001-OV-A",
+            "subject": "87-01",
+            "title": "Reserved/Not Applicable",
+            "infoCode": ["OV"],
+            "status": "NotApplicable"
+          }
+        ]
+      },
+      {
+        "chapterCode": "AS 88",
+        "title": "Rendezvous, Proximity Operations & Docking (RPOD)",
+        "description": "Overview, sensor specifications, control algorithms (AI-assisted), docking mechanism specifications, procedures, and interface control documents for RPOD.",
+         "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-88-001-OV-A",
+            "subject": "88-01",
+            "title": "RPOD System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-88-002-SPEC-A",
+            "subject": "88-10",
+            "title": "RPOD Sensor Specification (LiDAR, Cameras, RF, Thermal)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-88-003-SDD-A",
+            "subject": "88-20",
+            "title": "RPOD Control Algorithm Description (AI-Assisted, Autonomous)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-88-004-SPEC-A",
+            "subject": "88-30",
+            "title": "Docking/Berthing Mechanism Specification (Androgynous, Probe-Drogue)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-88-005-PROC-A",
+            "subject": "88-40",
+            "title": "Docking/Undocking & Berthing/Unberthing Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-88-006-ICD-A",
+            "subject": "88-50",
+            "title": "RPOD Interface Control Document (Target Vehicle)",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 89",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-89-001-OV-A",
+            "subject": "89-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+          }
+         ]
+      },
+       {
+        "chapterCode": "AS 90",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-90-001-OV-A",
+            "subject": "90-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 91",
+        "title": "Mission Data & Charts",
+        "description": "Overview and index for mission data, performance summaries, wiring diagrams, and plumbing diagrams.",
+         "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-91-001-OV-A",
+            "subject": "91-01",
+            "title": "Mission Data & Charts Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-91-002-LIST-A",
+            "subject": "91-10",
+            "title": "Performance Data & Constraints Summary List",
+            "infoCode": ["LIST", "RPT"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-91-003-LIST-A",
+            "subject": "91-20",
+            "title": "Spacecraft Wiring Diagram Manual Index",
+            "infoCode": ["LIST", "REF"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-91-004-LIST-A",
+            "subject": "91-30",
+            "title": "Spacecraft Plumbing Diagram Manual Index",
+            "infoCode": ["LIST", "REF"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 92",
+        "title": "Harnessing Installation",
+        "description": "Overview, procedures, and specifications for wiring harness and connector installation specific to spacecraft.",
+        "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-92-001-OV-A",
+            "subject": "92-01",
+            "title": "Harnessing Installation Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-92-002-PROC-A",
+            "subject": "92-10",
+            "title": "Wiring Harness Installation Procedure (Spacecraft)",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-92-003-SPEC-A",
+            "subject": "92-11",
+            "title": "Wiring Harness Installation Specification (Routing, Securing, Shielding)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-92-004-SPEC-A",
+            "subject": "92-20",
+            "title": "Connector Specification (Space Grade - D-Sub, Circular, RF)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-92-005-PROC-A",
+            "subject": "92-21",
+            "title": "Connector Mating/Demating & Torquing Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           }
+         ]
+      },
+       {
+        "chapterCode": "AS 93",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-93-001-OV-A",
+            "subject": "93-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+          }
+         ]
+      },
+       {
+        "chapterCode": "AS 94",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-94-001-OV-A",
+            "subject": "94-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+           }
+         ]
+      },
+      {
+        "chapterCode": "AS 95",
+        "title": "Special Support Equipment (Space)",
+        "description": "Overview, lists, and specifications for ground support equipment (GSE) and on-orbit support equipment specific to space operations.",
+         "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-95-001-OV-A",
+            "subject": "95-01",
+            "title": "Special Support Equipment Overview (Space Operations)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-95-002-LIST-A",
+            "subject": "95-10",
+            "title": "Ground Support Equipment (GSE) List (Space Specific)",
+            "infoCode": ["LIST"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-95-003-SPEC-A",
+            "subject": "95-11",
+            "title": "GSE Specification (Test Sets, Handling Fixtures, Simulators)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-95-004-LIST-A",
+            "subject": "95-20",
+            "title": "On-Orbit Support Equipment List (Tools, EVA Aids)",
+            "infoCode": ["LIST"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-95-005-SPEC-A",
+            "subject": "95-21",
+            "title": "On-Orbit Support Equipment Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "AS 96",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-96-001-OV-A",
+            "subject": "96-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+           }
+         ]
+      },
+      {
+        "chapterCode": "AS 97",
+        "title": "Wiring Data Management",
+        "description": "Overview, specification, and procedures for managing spacecraft wiring data and configuration control.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-97-001-OV-A",
+            "subject": "97-01",
+            "title": "Wiring Data Management System Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-97-002-SPEC-A",
+            "subject": "97-10",
+            "title": "Wiring List Database Structure & Format Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-97-003-PROC-A",
+            "subject": "97-20",
+            "title": "Wiring Data Update & Configuration Control Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+           }
+         ]
+      },
+      {
+        "chapterCode": "AS 98",
+        "title": "Reserved for Future Use",
+        "description": "Placeholder.",
+        "modules": [
+          {
+            "id": "GP-SM-AMPELPLUS-0200-98-001-OV-A",
+            "subject": "98-01",
+            "title": "Placeholder",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+          }
+         ]
+      },
+       {
+        "chapterCode": "AS 99",
+        "title": "Spacecraft Special / Emerging Tech",
+        "description": "Overview, specifications, interfaces, and concepts for special spacecraft technologies including RAME interface, ISRU, advanced habitats, on-board HPC/QPU, and interstellar propulsion R&D.",
+         "modules": [
+           {
+            "id": "GP-SM-AMPELPLUS-0200-99-001-OV-A",
+            "subject": "99-01",
+            "title": "Spacecraft Special Technologies Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-99-002-OV-A",
+            "subject": "99-10",
+            "title": "RAME Interface & Control Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-99-003-ICD-A",
+            "subject": "99-11",
+            "title": "RAME Interface Control Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-99-004-OV-A",
+            "subject": "99-20",
+            "title": "In-Situ Resource Utilization (ISRU) Payload/System Concept Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-99-005-RPT-A",
+            "subject": "99-21",
+            "title": "ISRU Technology Assessment Report",
+            "infoCode": ["RPT"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-99-006-OV-A",
+            "subject": "99-30",
+            "title": "Advanced Space Habitats Technology Integration Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-99-007-SPEC-A",
+            "subject": "99-40",
+            "title": "On-Board HPC/QPU System Specification (Spacecraft)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-99-008-SDD-A",
+            "subject": "99-41",
+            "title": "On-Board HPC/QPU System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-99-009-ICD-A",
+            "subject": "99-42",
+            "title": "On-Board HPC/QPU Interface Control Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+           },
+           {
+            "id": "GP-SM-AMPELPLUS-0200-99-010-RPT-A",
+            "subject": "99-90",
+            "title": "Interstellar Propulsion Concepts Research Report (Long-Term R&D)",
+            "infoCode": ["RPT"],
+            "status": "Draft"
+           }
+         ]
+      }
+    ],
+    "appendix": [
+      {
+        "id": "GP-SM-AMPELPLUS-0200-APP-A-001-GLO-A",
+        "title": "A. Glossary of Spaceframe Terms & Acronyms",
+        "infoCode": ["GLO"],
+        "status": "Draft"
+      },
+      {
+        "id": "GP-SM-AMPELPLUS-0200-APP-B-001-REF-A",
+        "title": "B. Referenced COAFI Documents (Spaceframe)",
+        "infoCode": ["REF", "LIST"],
+        "status": "Draft"
+      }
+    ]
+  }
+][
+  {
+    "part": "Part III",
+    "domain": "Common Networks & Systems",
+    "code": "GP-CN",
+    "theme": "AI, QAO, Security, Blockchain, BITT, AMPEL Core",
+    "purpose": "Shared Digital Infrastructure Manuals",
+    "chapters": [
+      {
+        "chapterCode": "CN.01",
+        "title": "GAIA AI Core (i-Aher0)",
+        "description": "Architecture, specifications, procedures, ethical references, and interfaces for the core GAIA AI system, i-Aher0.",
+        "modules": [
+          {
+            "id": "GP-CN-AI-0300-01-001-OV-A",
+            "subject": "01-01",
+            "title": "i-Aher0 AI Core Architecture Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-AI-0300-01-002-SPEC-A",
+            "subject": "01-02",
+            "title": "Core AI Model Specification (Federated Learning)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-AI-0300-01-003-PROC-A",
+            "subject": "01-03",
+            "title": "AI Model Training & Validation Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-AI-0300-01-004-REF-A",
+            "subject": "01-04",
+            "title": "Reference to Ethical AI Framework (FD.04)",
+            "infoCode": ["REF"],
+            "status": "ReferenceOnly"
+          },
+          {
+            "id": "GP-CN-AI-0300-01-005-ICD-A",
+            "subject": "01-05",
+            "title": "i-Aher0 API & Integration Interface Control Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "CN.02",
+        "title": "Quantum-Augmented Orchestration (QAO)",
+        "description": "Architecture, algorithms, interfaces, and resource management for the Quantum-Augmented Orchestration system.",
+        "modules": [
+          {
+            "id": "GP-CN-QAO-0300-02-001-OV-A",
+            "subject": "02-01",
+            "title": "QAO System Architecture Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-QAO-0300-02-002-SPEC-A",
+            "subject": "02-02",
+            "title": "QAO Algorithm Specification (Optimization, Simulation)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-QAO-0300-02-003-ICD-A",
+            "subject": "02-03",
+            "title": "QAO Interface Control Document (AI, BITT, Vehicle Systems)",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-QAO-0300-02-004-SDD-A",
+            "subject": "02-04",
+            "title": "Quantum Computing Resource Access & Management Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "CN.03",
+        "title": "Cybersecurity Framework",
+        "description": "Overall cybersecurity policy, Quantum Key Distribution (QKD) network specifications, AI-driven IDPS, and incident response procedures.",
+        "modules": [
+          {
+            "id": "GP-CN-SEC-0300-03-001-OV-A",
+            "subject": "03-01",
+            "title": "Cybersecurity Framework Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-SEC-0300-03-002-PLAN-A",
+            "subject": "03-02",
+            "title": "GAIA AIR Cybersecurity Policy & Plan",
+            "infoCode": ["PLAN", "REQ"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-SEC-0300-03-003-SPEC-A",
+            "subject": "03-03",
+            "title": "Quantum Key Distribution (QKD) Network Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-SEC-0300-03-004-SDD-A",
+            "subject": "03-04",
+            "title": "AI-Driven Intrusion Detection & Prevention System (IDPS) Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-SEC-0300-03-005-PROC-A",
+            "subject": "03-05",
+            "title": "Security Incident Response Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "CN.04",
+        "title": "Blockchain Infrastructure (BITT)",
+        "description": "Overview, ledger design, consensus mechanisms, smart contracts, node management, and security for the BITT blockchain.",
+        "modules": [
+          {
+            "id": "GP-CN-BC-0300-04-001-OV-A",
+            "subject": "04-01",
+            "title": "BITT Blockchain Infrastructure Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-BC-0300-04-002-SPEC-A",
+            "subject": "04-02",
+            "title": "BITT Ledger Design & Consensus Mechanism Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-BC-0300-04-003-SPEC-A",
+            "subject": "04-03",
+            "title": "Smart Contract Specification (Data Logging, Access Control)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-BC-0300-04-004-SDD-A",
+            "subject": "04-04",
+            "title": "BITT Node Deployment & Management Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-BC-0300-04-005-SPEC-A",
+            "subject": "04-05",
+            "title": "BITT Security & Cryptography Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "CN.05",
+        "title": "BITT Application Layer",
+        "description": "Applications built on the BITT blockchain, including immutable logging, maintenance traceability, supply chain tracking, and compliance verification.",
+        "modules": [
+          {
+            "id": "GP-CN-BITT-0300-05-001-OV-A",
+            "subject": "05-01",
+            "title": "BITT Application Layer Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-BITT-0300-05-002-SDD-A",
+            "subject": "05-02",
+            "title": "Immutable Flight Data Logging System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-BITT-0300-05-003-SDD-A",
+            "subject": "05-03",
+            "title": "Maintenance Record Traceability System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-BITT-0300-05-004-SDD-A",
+            "subject": "05-04",
+            "title": "Supply Chain & Component Provenance Tracking Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-BITT-0300-05-005-SDD-A",
+            "subject": "05-05",
+            "title": "Regulatory Compliance Verification System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "CN.06",
+        "title": "AMPEL Core Systems",
+        "description": "Core systems related to the AMPEL materials philosophy, including the materials database, AI-SHM logic, DTO platform, and interfaces.",
+        "modules": [
+          {
+            "id": "GP-CN-AMPELCORE-0300-06-001-OV-A",
+            "subject": "06-01",
+            "title": "AMPEL Core Systems Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-AMPELCORE-0300-06-002-SDD-A",
+            "subject": "06-02",
+            "title": "Advanced Materials Database (AAMPEL-DB) Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-AMPELCORE-0300-06-003-SDD-A",
+            "subject": "06-03",
+            "title": "AI Structural Health Monitoring (AI-SHM) Core Logic Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-AMPELCORE-0300-06-004-SDD-A",
+            "subject": "06-04",
+            "title": "Digital Twin Orchestration (DTO) Platform Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-AMPELCORE-0300-06-005-ICD-A",
+            "subject": "06-05",
+            "title": "AMPEL Core Systems Interface Control Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "CN.07",
+        "title": "Common Network Infrastructure",
+        "description": "Overview, specifications, routing, management, and topology for the common network infrastructure across air, space, and ground segments.",
+        "modules": [
+          {
+            "id": "GP-CN-NET-0300-07-001-OV-A",
+            "subject": "07-01",
+            "title": "Common Network Infrastructure Overview (Air/Space/Ground)",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-NET-0300-07-002-SPEC-A",
+            "subject": "07-02",
+            "title": "Network Protocol & QoS Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-NET-0300-07-003-SDD-A",
+            "subject": "07-03",
+            "title": "Data Routing & Management Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-CN-NET-0300-07-004-DWG-A",
+            "subject": "07-04",
+            "title": "High-Level Network Topology Drawing",
+            "infoCode": ["DWG", "FIG"],
+            "status": "Draft"
+          }
+        ]
+      }
+    ],
+    "appendix": [
+      {
+        "id": "GP-CN-0300-APP-A-001-GLO-A",
+        "title": "A. Glossary of Network & Systems Terms & Acronyms",
+        "infoCode": ["GLO"],
+        "status": "Draft"
+      },
+      {
+        "id": "GP-CN-0300-APP-B-001-REF-A",
+        "title": "B. Referenced COAFI Documents (Common Systems)",
+        "infoCode": ["REF", "LIST"],
+        "status": "Draft"
+      }
+    ]
+  }
+][
+  {
+    "part": "Part IV",
+    "domain": "Ground Infrastructure & Automation",
+    "code": "GP-GB",
+    "theme": "Launchpads, Fuel, Data Nodes, Ground Robotics",
+    "purpose": "Ground Support & Automation Manuals",
+    "chapters": [
+      {
+        "chapterCode": "GB.01",
+        "title": "Launch & Landing Facilities",
+        "description": "Overview, design specifications, automated operations, safety procedures, and layouts for launch and landing facilities.",
+        "modules": [
+          {
+            "id": "GP-GB-LPAD-0400-01-001-OV-A",
+            "subject": "01-01",
+            "title": "Launch & Landing Facility Overview",
+            "infoCode": ["OV", "DD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-LPAD-0400-01-002-SPEC-A",
+            "subject": "01-02",
+            "title": "Launch Pad/Runway Design Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-LPAD-0400-01-003-SDD-A",
+            "subject": "01-03",
+            "title": "Automated Pad Operations System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-LPAD-0400-01-004-PROC-A",
+            "subject": "01-04",
+            "title": "Launch/Landing Safety Procedures",
+            "infoCode": ["PROC", "REQ"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-LPAD-0400-01-005-DWG-A",
+            "subject": "01-05",
+            "title": "Facility Layout Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "GB.02",
+        "title": "Fueling & Servicing Systems",
+        "description": "Overview, specifications, and procedures for ground-based fueling (LH2, SAF) and servicing systems, including automation.",
+        "modules": [
+          {
+            "id": "GP-GB-FUEL-0400-02-001-OV-A",
+            "subject": "02-01",
+            "title": "Fueling & Servicing Systems Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-FUEL-0400-02-002-SPEC-A",
+            "subject": "02-02",
+            "title": "Cryogenic Hydrogen (LH2) Storage & Transfer Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-FUEL-0400-02-003-SPEC-A",
+            "subject": "02-03",
+            "title": "Sustainable Aviation Fuel (SAF) Storage & Transfer Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-FUEL-0400-02-004-SDD-A",
+            "subject": "02-04",
+            "title": "Automated Fueling System Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-FUEL-0400-02-005-PROC-A",
+            "subject": "02-05",
+            "title": "Fluid & Consumables Servicing Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "GB.03",
+        "title": "Ground Data Network & Control Centers",
+        "description": "Architecture, specifications, functional descriptions, and interfaces for ground data networks and Mission Control Centers (MCC), including AI monitoring.",
+        "modules": [
+          {
+            "id": "GP-GB-NODE-0400-03-001-OV-A",
+            "subject": "03-01",
+            "title": "Ground Data Network & Control Centers Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-NODE-0400-03-002-SPEC-A",
+            "subject": "03-02",
+            "title": "Ground Data Network Architecture Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-NODE-0400-03-003-SDD-A",
+            "subject": "03-03",
+            "title": "Mission Control Center (MCC) Functional Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-NODE-0400-03-004-ICD-A",
+            "subject": "03-04",
+            "title": "Ground Network Interface Control Document (Vehicle Comms)",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-NODE-0400-03-005-SDD-A",
+            "subject": "03-05",
+            "title": "AI-Assisted Ground Operations Monitoring System",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "GB.04",
+        "title": "Ground Robotics & Automation",
+        "description": "Overview, specifications, descriptions, and interfaces for ground-based robotic systems (towing, maintenance, inspection).",
+        "modules": [
+          {
+            "id": "GP-GB-GROBO-0400-04-001-OV-A",
+            "subject": "04-01",
+            "title": "Ground Robotics & Automation Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-GROBO-0400-04-002-SPEC-A",
+            "subject": "04-02",
+            "title": "Autonomous Towing Vehicle Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-GROBO-0400-04-003-SPEC-A",
+            "subject": "04-03",
+            "title": "Robotic Maintenance Platform Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-GROBO-0400-04-004-SDD-A",
+            "subject": "04-04",
+            "title": "Automated Inspection System Description (Drones, Crawlers)",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-GROBO-0400-04-005-ICD-A",
+            "subject": "04-05",
+            "title": "Ground Robotics Control & Data Interface Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "GB.05",
+        "title": "Ground Support Equipment (GSE)",
+        "description": "Overview, lists, specifications, and procedures for standard ground support equipment.",
+        "modules": [
+          {
+            "id": "GP-GB-GSE-0400-05-001-OV-A",
+            "subject": "05-01",
+            "title": "GSE Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-GSE-0400-05-002-LIST-A",
+            "subject": "05-02",
+            "title": "Standard GSE List",
+            "infoCode": ["LIST"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-GSE-0400-05-003-SPEC-A",
+            "subject": "05-03",
+            "title": "GSE Specification (Power Carts, Jacks, Test Equipment)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-GB-GSE-0400-05-004-PROC-A",
+            "subject": "05-04",
+            "title": "GSE Operating & Maintenance Procedures",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          }
+        ]
+      }
+    ],
+    "appendix": [
+      {
+        "id": "GP-GB-0400-APP-A-001-GLO-A",
+        "title": "A. Glossary of Ground Infrastructure Terms & Acronyms",
+        "infoCode": ["GLO"],
+        "status": "Draft"
+      },
+      {
+        "id": "GP-GB-0400-APP-B-001-REF-A",
+        "title": "B. Referenced COAFI Documents (Ground Systems)",
+        "infoCode": ["REF", "LIST"],
+        "status": "Draft"
+      }
+    ]
+  }
+]
+  
+    ]
+  }
+][
+  {
+    "part": "Part V",
+    "domain": "Project Management & Operations",
+    "code": "GP-PM",
+    "theme": "Certification, WBS, Training, Lifecycle (EoL)",
+    "purpose": "Program Management & Operational Manuals",
+    "chapters": [
+      {
+        "chapterCode": "PM.01",
+        "title": "Certification & Compliance Management",
+        "description": "Covers the overview, master plan, liaison procedures, documentation management, and regulatory references for certification and compliance.",
+        "modules": [
+          {
+            "id": "GP-PM-CERT-0500-01-001-OV-A",
+            "subject": "01-01",
+            "title": "Certification & Compliance Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-CERT-0500-01-002-PLAN-A",
+            "subject": "01-02",
+            "title": "Master Certification Plan (Air & Space)",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-CERT-0500-01-003-PROC-A",
+            "subject": "01-03",
+            "title": "Regulatory Agency Liaison Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-CERT-0500-01-004-PROC-A",
+            "subject": "01-04",
+            "title": "Compliance Documentation Management Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-CERT-0500-01-005-REF-A",
+            "subject": "01-05",
+            "title": "Reference to FD.02 Regulatory Base",
+            "infoCode": ["REF"],
+            "status": "ReferenceOnly"
+          }
+        ]
+      },
+      {
+        "chapterCode": "PM.02",
+        "title": "Work Breakdown Structure (WBS) & Program Planning",
+        "description": "Details the program's WBS, Integrated Master Schedule (IMS), resource management plan, and AI-assisted project management tools.",
+        "modules": [
+          {
+            "id": "GP-PM-WBS-0500-02-001-OV-A",
+            "subject": "02-01",
+            "title": "WBS & Program Planning Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-WBS-0500-02-002-WBS-A",
+            "subject": "02-02",
+            "title": "Master Program Work Breakdown Structure",
+            "infoCode": ["WBS"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-WBS-0500-02-003-PLAN-A",
+            "subject": "02-03",
+            "title": "Integrated Master Schedule (IMS)",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-WBS-0500-02-004-PLAN-A",
+            "subject": "02-04",
+            "title": "Resource Management Plan",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-WBS-0500-02-005-SDD-A",
+            "subject": "02-05",
+            "title": "AI-Assisted Program Management Tools Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "PM.03",
+        "title": "Training & Qualification Programs",
+        "description": "Outlines training and qualification programs for flight crews, maintenance technicians, ground operations crews, and AI systems operators/analysts.",
+        "modules": [
+          {
+            "id": "GP-PM-TRAIN-0500-03-001-OV-A",
+            "subject": "03-01",
+            "title": "Training & Qualification Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-TRAIN-0500-03-002-PLAN-A",
+            "subject": "03-02",
+            "title": "Flight Crew Training Program Plan",
+            "infoCode": ["PLAN", "SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-TRAIN-0500-03-003-PLAN-A",
+            "subject": "03-03",
+            "title": "Maintenance Technician Training Program Plan",
+            "infoCode": ["PLAN", "SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-TRAIN-0500-03-004-PLAN-A",
+            "subject": "03-04",
+            "title": "Ground Operations Crew Training Program Plan",
+            "infoCode": ["PLAN", "SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-TRAIN-0500-03-005-PLAN-A",
+            "subject": "03-05",
+            "title": "AI Systems Operator/Analyst Training Program Plan",
+            "infoCode": ["PLAN", "SPEC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "PM.04",
+        "title": "Lifecycle Management",
+        "description": "Covers the entire product lifecycle from design and development, through production, operations/sustainment, to end-of-life (EoL), decommissioning, and recycling.",
+        "modules": [
+          {
+            "id": "GP-PM-LIFE-0500-04-001-OV-A",
+            "subject": "04-01",
+            "title": "Lifecycle Management Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-LIFE-0500-04-002-PLAN-A",
+            "subject": "04-02",
+            "title": "Design & Development Phase Plan",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-LIFE-0500-04-003-PLAN-A",
+            "subject": "04-03",
+            "title": "Production & Manufacturing Plan",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-LIFE-0500-04-004-PLAN-A",
+            "subject": "04-04",
+            "title": "Operations & Sustainment Plan",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-LIFE-0500-04-005-PLAN-A",
+            "subject": "04-05",
+            "title": "End-of-Life (EoL), Decommissioning & Recycling Plan",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "PM.05",
+        "title": "Quality Assurance & Configuration Management",
+        "description": "Details the Quality Management System (QMS), Configuration Management (CM) plan, audit/inspection procedures, and non-conformance/corrective action processes.",
+        "modules": [
+          {
+            "id": "GP-PM-QA-0500-05-001-OV-A",
+            "subject": "05-01",
+            "title": "QA & CM Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-QA-0500-05-002-PLAN-A",
+            "subject": "05-02",
+            "title": "Quality Management System (QMS) Plan",
+            "infoCode": ["PLAN", "REQ"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-QA-0500-05-003-PLAN-A",
+            "subject": "05-03",
+            "title": "Configuration Management (CM) Plan",
+            "infoCode": ["PLAN", "REQ"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-QA-0500-05-004-PROC-A",
+            "subject": "05-04",
+            "title": "Audit & Inspection Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-QA-0500-05-005-PROC-A",
+            "subject": "05-05",
+            "title": "Non-Conformance Reporting & Corrective Action Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "PM.06",
+        "title": "Risk Management",
+        "description": "Outlines the risk management plan, identification/assessment procedures, program risk register, and mitigation/contingency plans.",
+        "modules": [
+          {
+            "id": "GP-PM-RISK-0500-06-001-OV-A",
+            "subject": "06-01",
+            "title": "Risk Management Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-RISK-0500-06-002-PLAN-A",
+            "subject": "06-02",
+            "title": "Risk Management Plan",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-RISK-0500-06-003-PROC-A",
+            "subject": "06-03",
+            "title": "Risk Identification & Assessment Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-RISK-0500-06-004-LIST-A",
+            "subject": "06-04",
+            "title": "Program Risk Register",
+            "infoCode": ["LIST"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-PM-RISK-0500-06-005-PLAN-A",
+            "subject": "06-05",
+            "title": "Risk Mitigation & Contingency Plan",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          }
+        ]
+      }
+    ],
+    "appendix": [
+      {
+        "id": "GP-PM-0500-APP-A-001-GLO-A",
+        "title": "A. Glossary of Project Management Terms & Acronyms",
+        "infoCode": ["GLO"],
+        "status": "Draft"
+      },
+      {
+        "id": "GP-PM-0500-APP-B-001-REF-A",
+        "title": "B. Referenced COAFI Documents (PM & Ops)",
+        "infoCode": ["REF", "LIST"],
+        "status": "Draft"
+      }
+    ]
+  }
+][
+  {
+    "part": "Part VI",
+    "domain": "Robotic Systems (RAME Fleet)",
+    "code": "GP-RS",
+    "theme": "Advanced Space Robotics & Operations",
+    "purpose": "Robotic Systems Design & Ops Manuals",
+    "chapters": [
+      {
+        "chapterCode": "RS.01",
+        "title": "RAME Fleet Architecture & Concepts of Operations (CONOPS)",
+        "description": "Defines the overall architecture, operational concepts, and performance requirements for the RAME (Robotic Autonomous Maintenance Entity) fleet.",
+        "modules": [
+          {
+            "id": "GP-RS-RAME-0600-01-001-OV-A",
+            "subject": "01-01",
+            "title": "RAME Fleet Architecture Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-01-002-CONOPS-A",
+            "subject": "01-02",
+            "title": "RAME Fleet Concept of Operations (On-Orbit Servicing, Inspection)",
+            "infoCode": ["CONOPS"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-01-003-SPEC-A",
+            "subject": "01-03",
+            "title": "RAME Fleet Performance Requirements Specification",
+            "infoCode": ["SPEC", "REQ"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "RS.02",
+        "title": "RAME Unit Design & Specifications",
+        "description": "Details the design, specifications, and drawings for individual RAME units, including manipulators, mobility, sensors, power, and thermal systems.",
+        "modules": [
+          {
+            "id": "GP-RS-RAME-0600-02-001-OV-A",
+            "subject": "02-01",
+            "title": "RAME Unit Design Overview",
+            "infoCode": ["OV", "DD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-02-002-SPEC-A",
+            "subject": "02-02",
+            "title": "Robotic Manipulator Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-02-003-SPEC-A",
+            "subject": "02-03",
+            "title": "Mobility System Specification (Thrusters, Grapples)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-02-004-SPEC-A",
+            "subject": "02-04",
+            "title": "Sensor Suite Specification (Cameras, LiDAR, Thermal)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-02-005-SPEC-A",
+            "subject": "02-05",
+            "title": "Power & Thermal System Specification",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-02-006-DWG-A",
+            "subject": "02-06",
+            "title": "RAME Unit Assembly Drawing",
+            "infoCode": ["DWG"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "RS.03",
+        "title": "RAME Control Systems",
+        "description": "Covers the control system architecture for RAME units, including autonomous logic, teleoperation interfaces, and ground/spacecraft control interfaces.",
+        "modules": [
+          {
+            "id": "GP-RS-RAME-0600-03-001-OV-A",
+            "subject": "03-01",
+            "title": "RAME Control System Architecture Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-03-002-SDD-A",
+            "subject": "03-02",
+            "title": "Autonomous Control Logic Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-03-003-SDD-A",
+            "subject": "03-03",
+            "title": "Teleoperation Interface & Control Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-03-004-ICD-A",
+            "subject": "03-04",
+            "title": "RAME Ground/Spacecraft Control Interface Document",
+            "infoCode": ["ICD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "RS.04",
+        "title": "RAME Deployment & Retrieval Systems",
+        "description": "Details the systems and procedures for deploying and retrieving RAME units from their host spacecraft (AMPEL+).",
+        "modules": [
+          {
+            "id": "GP-RS-RAME-0600-04-001-OV-A",
+            "subject": "04-01",
+            "title": "RAME Deployment/Retrieval System Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-04-002-SPEC-A",
+            "subject": "04-02",
+            "title": "Deployment Mechanism Specification (From AMPEL+)",
+            "infoCode": ["SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-04-003-PROC-A",
+            "subject": "04-03",
+            "title": "Deployment & Retrieval Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "RS.05",
+        "title": "RAME Maintenance & Servicing Procedures",
+        "description": "Covers the maintenance plan and procedures for RAME units, including on-orbit refueling/recharging and component replacement.",
+        "modules": [
+          {
+            "id": "GP-RS-RAME-0600-05-001-OV-A",
+            "subject": "05-01",
+            "title": "RAME Maintenance & Servicing Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-05-002-PROC-A",
+            "subject": "05-02",
+            "title": "On-Orbit Refueling/Recharging Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-05-003-PROC-A",
+            "subject": "05-03",
+            "title": "Component Replacement Procedure (Ground/Orbit)",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-05-004-PLAN-A",
+            "subject": "05-04",
+            "title": "RAME Maintenance Plan",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "RS.06",
+        "title": "RAME Software & AI Modules",
+        "description": "Details the software architecture and specific AI modules for RAME units, covering perception, sensor fusion, motion planning, control, task execution, and manipulation.",
+        "modules": [
+          {
+            "id": "GP-RS-RAME-0600-06-001-OV-A",
+            "subject": "06-01",
+            "title": "RAME Software Architecture Overview",
+            "infoCode": ["OV", "SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-06-002-SDD-A",
+            "subject": "06-02",
+            "title": "Perception & Sensor Fusion Module Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-06-003-SDD-A",
+            "subject": "06-03",
+            "title": "Motion Planning & Control Module Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-06-004-SDD-A",
+            "subject": "06-04",
+            "title": "Task Execution & Manipulation AI Module Description",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-RS-RAME-0600-06-005-PROC-A",
+            "subject": "06-05",
+            "title": "RAME Software Update & Verification Procedure",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          }
+        ]
+      }
+    ],
+    "appendix": [
+      {
+        "id": "GP-RS-RAME-0600-APP-A-001-GLO-A",
+        "title": "A. Glossary of Robotic Systems Terms & Acronyms",
+        "infoCode": ["GLO"],
+        "status": "Draft"
+      },
+      {
+        "id": "GP-RS-RAME-0600-APP-B-001-REF-A",
+        "title": "B. Referenced COAFI Documents (Robotic Systems)",
+        "infoCode": ["REF", "LIST"],
+        "status": "Draft"
+      }
+    ]
+  }
+][
+  {
+    "part": "End of Defined Parts",
+    "message": "Part VI (Robotic Systems - GP-RS) was the last part defined in the COAFI structure provided in the previous inputs. There are no further parts (VII, VIII, etc.) defined in the AToC.md shared earlier."
+  }
+]]
+      }
+    ]
+  }
+]
+  {
+    "part": "Part 0",
+    "domain": "Program Foundations",
+    "code": "GP-FD",
+    "theme": "Vision, Theories, Compliance, Ethics",
+    "purpose": "Foundational Principles & Context Manuals",
+    "chapters": [
+      {
+        "chapterCode": "FD.00",
+        "title": "Introduction & Program Vision",
+        "description": "Establishes the overarching goals, vision, and roadmap for the GAIA AIR program and the COAFI framework.",
+        "modules": [
+          {
+            "id": "GP-FD-00-001-OV-A",
+            "subject": "00-01",
+            "title": "Introduction & Program Vision Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-00-002-OV-A",
+            "subject": "00-02",
+            "title": "Core Principles of GAIA AIR",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-00-003-PLAN-A",
+            "subject": "00-03",
+            "title": "Program Roadmap & Phasing",
+            "infoCode": ["PLAN"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-00-004-RPT-A",
+            "subject": "00-04",
+            "title": "Long-Term Cosmic Impetus & Goals",
+            "infoCode": ["RPT"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-00-005-SDD-A",
+            "subject": "00-05",
+            "title": "AI-Driven Vision Monitoring & Adaptation System",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "FD.01",
+        "title": "Key Theories & Proofs",
+        "description": "Details the core scientific and theoretical underpinnings of GAIA AIR technologies (Quantum Propulsion, Federated AI, Advanced Materials).",
+        "modules": [
+          {
+            "id": "GP-FD-01-001-OV-A",
+            "subject": "01-01",
+            "title": "Key Theories & Proofs Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-01-002-OV-A",
+            "subject": "01-02",
+            "title": "Quantum Propulsion Theory Principles (QEE/QSM)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-01-003-OV-A",
+            "subject": "01-03",
+            "title": "Federated AI Theory Principles (i-Aher0)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-01-004-OV-A",
+            "subject": "01-04",
+            "title": "BNNT/Carbon-Lattice Composites Theoretical Basis (AMPEL)",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-01-005-RES-A",
+            "subject": "01-05",
+            "title": "Q-Thruster Conceptual Proofs & Validation Data",
+            "infoCode": ["RES", "RPT"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-01-006-RES-A",
+            "subject": "01-06",
+            "title": "AI Model Validation Reports (Foundational)",
+            "infoCode": ["RES", "RPT"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "FD.02",
+        "title": "Regulatory & Standards Base",
+        "description": "Outlines the applicable regulatory frameworks (FAA, EASA, Space) and industry standards (ISO, ATA, S1000D) governing GAIA AIR.",
+        "modules": [
+          {
+            "id": "GP-FD-02-001-OV-A",
+            "subject": "02-01",
+            "title": "Regulatory & Standards Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-02-002-REQ-A",
+            "subject": "02-02",
+            "title": "Applicable Airworthiness Regulations (FAA/EASA)",
+            "infoCode": ["REQ", "LIST"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-02-003-REQ-A",
+            "subject": "02-03",
+            "title": "Applicable Space Standards (NASA/ESA/ECSS/Commercial)",
+            "infoCode": ["REQ", "LIST"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-02-004-REQ-A",
+            "subject": "02-04",
+            "title": "Relevant ISO Standards (9001, 14001, 27001, etc.)",
+            "infoCode": ["REQ", "REF"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-02-005-OV-A",
+            "subject": "02-05",
+            "title": "COAFI Alignment with ATA/S1000D/AS Standards",
+            "infoCode": ["OV", "REF"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-02-006-SDD-A",
+            "subject": "02-06",
+            "title": "AI-Driven Regulatory Watch & Compliance Mapping System",
+            "infoCode": ["SDD"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "FD.03",
+        "title": "Cross-Disciplinary Research",
+        "description": "Covers research spanning multiple fields, such as multi-physics simulation, quantum computing applications, and advanced materials R&D.",
+        "modules": [
+           {
+            "id": "GP-FD-03-001-OV-A",
+            "subject": "03-01",
+            "title": "Cross-Disciplinary Research Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-03-002-OV-A",
+            "subject": "03-02",
+            "title": "Multi-Physics Simulation Principles",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-03-003-RPT-A",
+            "subject": "03-03",
+            "title": "Quantum Computing Applications in Aerospace - Research Report",
+            "infoCode": ["RPT"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-03-004-RPT-A",
+            "subject": "03-04",
+            "title": "Cosmic Vacuum Energy & Propulsion Research Report",
+            "infoCode": ["RPT"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-03-005-PLAN-A",
+            "subject": "03-05",
+            "title": "Advanced Materials R&D Pipeline Plan",
+            "infoCode": ["PLAN", "RPT"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-03-006-LIST-A",
+            "subject": "03-06",
+            "title": "Academic & Industrial Research Partnerships List",
+            "infoCode": ["LIST", "REF"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "FD.04",
+        "title": "Ethical AI & Operational Framework",
+        "description": "Defines the ethical policies, bias mitigation strategies, and explainability requirements for AI systems within GAIA AIR.",
+         "modules": [
+          {
+            "id": "GP-FD-04-001-OV-A",
+            "subject": "04-01",
+            "title": "Ethical AI Framework Overview",
+            "infoCode": ["OV"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-04-002-PLAN-A",
+            "subject": "04-02",
+            "title": "GAIA AIR AI Ethics Policy & Plan",
+            "infoCode": ["PLAN", "REQ"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-04-003-PROC-A",
+            "subject": "04-03",
+            "title": "Bias Detection & Mitigation Procedures",
+            "infoCode": ["PROC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-04-004-REQ-A",
+            "subject": "04-04",
+            "title": "Explainable AI (XAI) Audit Trail Requirements",
+            "infoCode": ["REQ", "SPEC"],
+            "status": "Draft"
+          },
+          {
+            "id": "GP-FD-04-005-RPT-A",
+            "subject": "04-05",
+            "title": "Ethical Framework for Autonomous Decision Making - Research Report",
+            "infoCode": ["RPT"],
+            "status": "Draft"
+          }
+        ]
+      },
+       {
+        "chapterCode": "FD.05",
+        "title": "Reserved - Long-Term Interplanetary Vision",
+        "description": "Placeholder for future documentation regarding long-term interplanetary goals and strategies.",
+         "modules": [
+           {
+            "id": "GP-FD-05-001-OV-A",
+            "subject": "05-01",
+            "title": "Reserved - Long-Term Interplanetary Vision Overview",
+            "infoCode": ["OV"],
+            "status": "Placeholder"
+          }
+         ]
+      },
+      {
+        "chapterCode": "FD.06",
+        "title": "Foundational Security Architectures & Trust Frameworks",
+        "description": "Analysis of internal certificate usage and trust frameworks (ATA, ATAS, ATAC) informing GAIA AIR security.",
+        "modules": [
+           {
+            "id": "GP-FD-06-001-RPT-A",
+            "subject": "06-01",
+            "title": "Internal Digital Certificate Frameworks Analysis (ATA, ATAS, ATAC)",
+            "infoCode": ["RPT", "REF"],
+            "status": "Draft"
+          }
+        ]
+      },
+      {
+        "chapterCode": "FD.07-FD.99",
+        "title": "Reserved Future Sections",
+        "description": "Placeholders for future foundational topics as the GAIA AIR program evolves.",
+        "modules": []
+      }
+    ]
+  }
+][
   {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "COAFI Master Structure",
