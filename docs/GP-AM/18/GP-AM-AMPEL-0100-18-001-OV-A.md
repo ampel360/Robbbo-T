@@ -29,32 +29,34 @@ Detailed specifications, descriptions, and procedures reside in the subsequent m
 
 ## 2. Introduction
 
-Excessive vibration and noise are critical considerations in aircraft design. Vibration can lead to structural fatigue, component failure, and instrument malfunction. High noise levels negatively impact passenger comfort and crew communication/effectiveness. The AMPEL360XWLRGA employs a multi-faceted approach, combining advanced monitoring, intelligent analysis, and both active and passive mitigation techniques to address these challenges, aligned with the core design principles of safety, efficiency, and human-centricity (Ref: `GP-AM-AMPEL-0100-00-004-OV-A`).
+Excessive vibration and noise are critical considerations in aircraft design. Vibration can lead to structural fatigue, component failure, and instrument malfunction. High noise levels negatively impact passenger comfort and crew communication/effectiveness. The AMPEL360XWLRGA employs a multi-faceted approach, combining advanced monitoring, intelligent analysis, and both active and passive mitigation techniques to address these challenges, aligned with the core design principles of safety, efficiency, and human-centricity (Ref: `[GP-AM-AMPEL-0100-00-004-OV-A](github.com/robbbo-t/docs/GP-AM/00/GP-AM-AMPEL-0100-00-004-OV-A.md)`).
 
 ## 3. Key Subsystems Overview
 
 ATA Chapter 18 covers the following primary areas:
 
-*   **Vibration Monitoring System (HUMS):** Describes the sensors and data acquisition hardware used to measure structural and component vibration levels throughout the aircraft (Ref: `GP-AM-AMPEL-0100-18-002-SDD-A`).
-*   **AI-Driven Vibration Anomaly Detection:** Details the conceptual use of the i-Aher0 AI core to analyze HUMS data, detect abnormal vibration patterns, and support predictive maintenance efforts (Ref: `GP-AM-AMPEL-0100-18-003-SDD-A`).
-*   **Active Noise Cancellation (ANC):** Describes the system designed to actively reduce cabin noise levels, particularly low-frequency engine/aerodynamic noise, through destructive interference (Ref: `GP-AM-AMPEL-0100-18-004-SDD-A`).
-*   **Acoustic Liners:** Specifies the requirements for passive acoustic dampening materials used within the fuselage and nacelles to absorb noise (Ref: `GP-AM-AMPEL-0100-18-005-SPEC-A`).
+*   **Vibration Monitoring System (HUMS):** Describes the sensors and data acquisition hardware used to measure structural and component vibration levels throughout the aircraft (Ref: `[GP-AM-AMPEL-0100-18-002-SDD-A](github.com/robbbo-t/docs/GP-AM/18/GP-AM-AMPEL-0100-18-002-SDD-A.md)`).
+*   **AI-Driven Vibration Anomaly Detection:** Details the conceptual use of the i-Aher0 AI core to analyze HUMS data, detect abnormal vibration patterns, and support predictive maintenance efforts (Ref: `[GP-AM-AMPEL-0100-18-003-SDD-A](github.com/robbbo-t/docs/GP-AM/18/GP-AM-AMPEL-0100-18-003-SDD-A.md)`).
+*   **Active Noise Cancellation (ANC):** Describes the system designed to actively reduce cabin noise levels, particularly low-frequency engine/aerodynamic noise, through destructive interference (Ref: `[GP-AM-AMPEL-0100-18-004-SDD-A](github.com/robbbo-t/docs/GP-AM/18/GP-AM-AMPEL-0100-18-004-SDD-A.md)`).
+*   **Acoustic Liners:** Specifies the requirements for passive acoustic dampening materials used within the fuselage and nacelles to absorb noise (Ref: `[GP-AM-AMPEL-0100-18-005-SPEC-A](github.com/robbbo-t/docs/GP-AM/18/GP-AM-AMPEL-0100-18-005-SPEC-A.md)`).
 
 ## 4. Integration with Other Systems
 
 Vibration and noise control are inherently linked to other aircraft systems:
-*   **Structures (ATA 5X):** Vibration directly impacts structural fatigue life. Noise control often involves structural treatments.
-*   **Propulsion (ATA 7X):** Engines are primary sources of vibration and noise.
-*   **Central Maintenance System (ATA 45):** HUMS data is processed and logged via the CMS.
-*   **Indicating Systems (ATA 31):** Crew alerts related to vibration or system health may be displayed.
-*   **AI Core (GP-CN-AI):** Provides the intelligence for anomaly detection and potentially adaptive ANC control.
+*   **Structures (ATA 5X):** Vibration directly impacts structural fatigue life. Noise control often involves structural treatments. (Ref: `[GP-AM-AMPEL-0100-5X-XXX-X](github.com/robbbo-t/docs/GP-AM/5X/...)`)
+*   **Propulsion (ATA 7X):** Engines are primary sources of vibration and noise. (Ref: `[GP-AM-AMPEL-0100-7X-XXX-X](github.com/robbbo-t/docs/GP-AM/7X/...)`)
+*   **Central Maintenance System (ATA 45):** HUMS data is processed and logged via the CMS. (Ref: `[GP-AM-AMPEL-0100-45-XXX-X](github.com/robbbo-t/docs/GP-AM/45/...)`)
+*   **Indicating Systems (ATA 31):** Crew alerts related to vibration or system health may be displayed. (Ref: `[GP-AM-AMPEL-0100-31-XXX-X](github.com/robbbo-t/docs/GP-AM/31/...)`)
+*   **AI Core (GP-CN-AI):** Provides the intelligence for anomaly detection and potentially adaptive ANC control. (Ref: `[GP-CN-AI-XXX-XX-XXX-X](github.com/robbbo-t/docs/GP-CN/XX/...)`)
 
 ## 5. Document Roadmap
 
 This overview serves as an introduction to the detailed documents within ATA Chapter 18:
-*   [GP-AM-AMPEL-0100-18-002-SDD-A](./GP-AM-AMPEL-0100-18-002-SDD-A.md): Vibration Monitoring System Description (HUMS)
-*   [GP-AM-AMPEL-0100-18-003-SDD-A](./GP-AM-AMPEL-0100-18-003-SDD-A.md): AI-Driven Vibration Anomaly Detection System
-*   [GP-AM-AMPEL-0100-18-004-SDD-A](./GP-AM-AMPEL-0100-18-004-SDD-A.md): Active Noise Cancellation System Description
-*   [GP-AM-AMPEL-0100-18-005-SPEC-A](./GP-AM-AMPEL-0100-18-005-SPEC-A.md): Acoustic Liner Specification
+*   [GP-AM-AMPEL-0100-18-002-SDD-A](github.com/robbbo-t/docs/GP-AM/18/GP-AM-AMPEL-0100-18-002-SDD-A.md): Vibration Monitoring System Description (HUMS)
+*   [GP-AM-AMPEL-0100-18-003-SDD-A](github.com/robbbo-t/docs/GP-AM/18/GP-AM-AMPEL-0100-18-003-SDD-A.md): AI-Driven Vibration Anomaly Detection System
+*   [GP-AM-AMPEL-0100-18-004-SDD-A](github.com/robbbo-t/docs/GP-AM/18/GP-AM-AMPEL-0100-18-004-SDD-A.md): Active Noise Cancellation System Description
+*   [GP-AM-AMPEL-0100-18-005-SPEC-A](github.com/robbbo-t/docs/GP-AM/18/GP-AM-AMPEL-0100-18-005-SPEC-A.md): Acoustic Liner Specification
+
+---
 
 ---
