@@ -106,8 +106,9 @@ This document provides the highest-level overview of the COAFI system. To access
 *   It clarifies that while COAFI is unified, it respects and builds upon domain-specific standards, guided by these conceptual working groups/areas of focus.
 
 This revision directly addresses your request to reference these domain-specific standardization efforts within the overall COAFI introduction.
+````
 
-### 6.65 ATA 100 – Certification and Documentation {#ata-100--certification-and-documentation}
+### ATA 100 – Certification Path and Documentation {#ata-100--certification-and-documentation}
 
 #### **GP-AM-AMPEL-0100-100-001-A: Certification Plan and Basis (ATA 100)**
 - **[GP-AM-CERT-100-001-PLAN-A](#ata-100--certification-and-documentation)**: Aircraft Certification Plan
