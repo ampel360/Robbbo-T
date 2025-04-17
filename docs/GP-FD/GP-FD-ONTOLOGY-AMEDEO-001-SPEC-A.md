@@ -459,3 +459,496 @@ dot.render('/mnt/data/amedeo_ontology_diagram', format='png', cleanup=False)
 '/mnt/data/amedeo_ontology_diagram.png'
 
 ---
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://gaiaair.org/ontology/amedeo-apu#"
+     xml:base="http://gaiaair.org/ontology/amedeo-apu"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:amedeo="http://gaiaair.org/ontology/amedeo#"
+     xmlns:apu="http://gaiaair.org/ontology/amedeo-apu#">
+    
+    <owl:Ontology rdf:about="http://gaiaair.org/ontology/amedeo-apu">
+        <owl:versionIRI rdf:resource="http://gaiaair.org/ontology/amedeo-apu/1.0"/>
+        <owl:imports rdf:resource="http://gaiaair.org/ontology/amedeo"/>
+        <rdfs:label>AMEDEO APU Extension</rdfs:label>
+        <rdfs:comment>Extension of the AMEDEO core ontology for Auxiliary Power Unit (APU) maintenance, certification, and ethical safety enforcement</rdfs:comment>
+        <owl:versionInfo>1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#APU -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#APU">
+        <rdfs:subClassOf rdf:resource="http://gaiaair.org/ontology/amedeo#GAIAComponent"/>
+        <rdfs:label>APU</rdfs:label>
+        <rdfs:comment>Auxiliary Power Unit - provides electrical power and compressed air to aircraft systems when main engines are not operating</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#LRU -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#LRU">
+        <rdfs:subClassOf rdf:resource="http://gaiaair.org/ontology/amedeo#GAIAComponent"/>
+        <rdfs:label>Line Replaceable Unit</rdfs:label>
+        <rdfs:comment>A modular component designed to be replaced quickly at the operational level</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#SafetyCriticalComponent -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#SafetyCriticalComponent">
+        <rdfs:subClassOf rdf:resource="http://gaiaair.org/ontology/amedeo#GAIAComponent"/>
+        <rdfs:label>Safety Critical Component</rdfs:label>
+        <rdfs:comment>A component whose failure could lead to hazardous or catastrophic conditions</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#BleedAirControlValve -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#BleedAirControlValve">
+        <rdfs:subClassOf rdf:resource="http://gaiaair.org/ontology/amedeo-apu#LRU"/>
+        <rdfs:subClassOf rdf:resource="http://gaiaair.org/ontology/amedeo-apu#SafetyCriticalComponent"/>
+        <rdfs:label>Bleed Air Control Valve</rdfs:label>
+        <rdfs:comment>Controls the flow of compressed air from the APU to aircraft systems</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#GeneratorControlUnit -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#GeneratorControlUnit">
+        <rdfs:subClassOf rdf:resource="http://gaiaair.org/ontology/amedeo-apu#LRU"/>
+        <rdfs:label>Generator Control Unit</rdfs:label>
+        <rdfs:comment>Controls and regulates the electrical output from the APU generator</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#FuelControlUnit -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#FuelControlUnit">
+        <rdfs:subClassOf rdf:resource="http://gaiaair.org/ontology/amedeo-apu#LRU"/>
+        <rdfs:subClassOf rdf:resource="http://gaiaair.org/ontology/amedeo-apu#SafetyCriticalComponent"/>
+        <rdfs:label>Fuel Control Unit</rdfs:label>
+        <rdfs:comment>Regulates fuel flow to the APU combustion chamber</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#APUOperationalState -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#APUOperationalState">
+        <rdfs:subClassOf rdf:resource="http://gaiaair.org/ontology/amedeo#SystemState"/>
+        <rdfs:label>APU Operational State</rdfs:label>
+        <rdfs:comment>Represents the current operational state of an APU</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#Running -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#Running">
+        <rdfs:subClassOf rdf:resource="http://gaiaair.org/ontology/amedeo-apu#APUOperationalState"/>
+        <rdfs:label>Running</rdfs:label>
+        <rdfs:comment>APU is currently operating</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#Shutdown -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#Shutdown">
+        <rdfs:subClassOf rdf:resource="http://gaiaair.org/ontology/amedeo-apu#APUOperationalState"/>
+        <rdfs:label>Shutdown</rdfs:label>
+        <rdfs:comment>APU is currently not operating</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#FaultCode -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#FaultCode">
+        <rdfs:subClassOf rdf:resource="http://gaiaair.org/ontology/amedeo#InformationAsset"/>
+        <rdfs:label>Fault Code</rdfs:label>
+        <rdfs:comment>A diagnostic code indicating a specific fault condition in the APU</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#MaintenanceProcedure -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#MaintenanceProcedure">
+        <rdfs:subClassOf rdf:resource="http://gaiaair.org/ontology/amedeo#OperationalTask"/>
+        <rdfs:label>Maintenance Procedure</rdfs:label>
+        <rdfs:comment>A defined sequence of actions to maintain, repair, or inspect an APU component</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#FuelLineDisconnect -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#FuelLineDisconnect">
+        <rdfs:subClassOf rdf:resource="http://gaiaair.org/ontology/amedeo-apu#MaintenanceProcedure"/>
+        <rdfs:label>Fuel Line Disconnect</rdfs:label>
+        <rdfs:comment>Procedure to disconnect the fuel line from the APU</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#CertificationRecord -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#CertificationRecord">
+        <rdfs:subClassOf rdf:resource="http://gaiaair.org/ontology/amedeo#InformationAsset"/>
+        <rdfs:label>Certification Record</rdfs:label>
+        <rdfs:comment>Documentation of certification status for a component or procedure</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#CertifiedProcedureForSafetyCriticalComponent -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#CertifiedProcedureForSafetyCriticalComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gaiaair.org/ontology/amedeo-apu#MaintenanceProcedure"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://gaiaair.org/ontology/amedeo-apu#targetsComponent"/>
+                        <owl:someValuesFrom rdf:resource="http://gaiaair.org/ontology/amedeo-apu#SafetyCriticalComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://gaiaair.org/ontology/amedeo-apu#hasCertificationRecord"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://gaiaair.org/ontology/amedeo-apu#CertificationRecord"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://gaiaair.org/ontology/amedeo-apu#status"/>
+                                        <owl:hasValue>Approved</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label>Certified Procedure For Safety Critical Component</rdfs:label>
+        <rdfs:comment>A maintenance procedure that targets a safety-critical component and has an approved certification record</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#PermissibleAPUStateForProcedure -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#PermissibleAPUStateForProcedure">
+        <rdfs:label>Permissible APU State For Procedure</rdfs:label>
+        <rdfs:comment>Represents valid combinations of APU states and maintenance procedures</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#InvalidProcedureWhileRunning -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#InvalidProcedureWhileRunning">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://gaiaair.org/ontology/amedeo-apu#hasOperationalState"/>
+                        <owl:hasValue rdf:resource="http://gaiaair.org/ontology/amedeo-apu#Running"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://gaiaair.org/ontology/amedeo-apu#requiresProcedure"/>
+                        <owl:hasValue rdf:resource="http://gaiaair.org/ontology/amedeo-apu#FuelLineDisconnect"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://gaiaair.org/ontology/amedeo-apu#PermissibleAPUStateForProcedure"/>
+        <rdfs:label>Invalid Procedure While Running</rdfs:label>
+        <rdfs:comment>Represents the invalid state of attempting a fuel line disconnect while the APU is running</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#NonCompliantProcedure -->
+    <owl:Class rdf:about="http://gaiaair.org/ontology/amedeo-apu#NonCompliantProcedure">
+        <rdfs:subClassOf rdf:resource="http://gaiaair.org/ontology/amedeo-apu#MaintenanceProcedure"/>
+        <rdfs:label>Non-Compliant Procedure</rdfs:label>
+        <rdfs:comment>A maintenance procedure that violates safety or ethical constraints</rdfs:comment>
+    </owl:Class>
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#hasOperationalState -->
+    <owl:ObjectProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#hasOperationalState">
+        <rdfs:domain rdf:resource="http://gaiaair.org/ontology/amedeo-apu#APU"/>
+        <rdfs:range rdf:resource="http://gaiaair.org/ontology/amedeo-apu#APUOperationalState"/>
+        <rdfs:label>has operational state</rdfs:label>
+        <rdfs:comment>Relates an APU to its current operational state</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#targetsComponent -->
+    <owl:ObjectProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#targetsComponent">
+        <rdfs:domain rdf:resource="http://gaiaair.org/ontology/amedeo-apu#MaintenanceProcedure"/>
+        <rdfs:range rdf:resource="http://gaiaair.org/ontology/amedeo#GAIAComponent"/>
+        <rdfs:label>targets component</rdfs:label>
+        <rdfs:comment>Relates a maintenance procedure to the component it targets</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#hasCertificationRecord -->
+    <owl:ObjectProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#hasCertificationRecord">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gaiaair.org/ontology/amedeo-apu#MaintenanceProcedure"/>
+                    <rdf:Description rdf:about="http://gaiaair.org/ontology/amedeo#GAIAComponent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gaiaair.org/ontology/amedeo-apu#CertificationRecord"/>
+        <rdfs:label>has certification record</rdfs:label>
+        <rdfs:comment>Relates a component or procedure to its certification record</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#requiresProcedure -->
+    <owl:ObjectProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#requiresProcedure">
+        <rdfs:domain rdf:resource="http://gaiaair.org/ontology/amedeo-apu#FaultCode"/>
+        <rdfs:range rdf:resource="http://gaiaair.org/ontology/amedeo-apu#MaintenanceProcedure"/>
+        <rdfs:label>requires procedure</rdfs:label>
+        <rdfs:comment>Relates a fault code to the maintenance procedure required to address it</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#hasComponent -->
+    <owl:ObjectProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#hasComponent">
+        <rdfs:domain rdf:resource="http://gaiaair.org/ontology/amedeo-apu#APU"/>
+        <rdfs:range rdf:resource="http://gaiaair.org/ontology/amedeo#GAIAComponent"/>
+        <rdfs:label>has component</rdfs:label>
+        <rdfs:comment>Relates an APU to its components</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#hasProvenance -->
+    <owl:ObjectProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#hasProvenance">
+        <rdfs:domain rdf:resource="http://gaiaair.org/ontology/amedeo#InformationAsset"/>
+        <rdfs:range rdf:resource="http://gaiaair.org/ontology/amedeo#DataSource"/>
+        <rdfs:label>has provenance</rdfs:label>
+        <rdfs:comment>Relates an information asset to its provenance information</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#performedBy -->
+    <owl:ObjectProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#performedBy">
+        <rdfs:domain rdf:resource="http://gaiaair.org/ontology/amedeo-apu#MaintenanceProcedure"/>
+        <rdfs:range rdf:resource="http://gaiaair.org/ontology/amedeo#HumanAgent"/>
+        <rdfs:label>performed by</rdfs:label>
+        <rdfs:comment>Relates a maintenance procedure to the human agent performing it</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#hasSkillLevel -->
+    <owl:ObjectProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#hasSkillLevel">
+        <rdfs:domain rdf:resource="http://gaiaair.org/ontology/amedeo#HumanAgent"/>
+        <rdfs:range rdf:resource="http://gaiaair.org/ontology/amedeo#Skill"/>
+        <rdfs:label>has skill level</rdfs:label>
+        <rdfs:comment>Relates a human agent to their skill level</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#requiresSkillLevel -->
+    <owl:ObjectProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#requiresSkillLevel">
+        <rdfs:domain rdf:resource="http://gaiaair.org/ontology/amedeo-apu#MaintenanceProcedure"/>
+        <rdfs:range rdf:resource="http://gaiaair.org/ontology/amedeo#Skill"/>
+        <rdfs:label>requires skill level</rdfs:label>
+        <rdfs:comment>Relates a maintenance procedure to the skill level required to perform it</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#hasPartNumber -->
+    <owl:DatatypeProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#hasPartNumber">
+        <rdfs:domain rdf:resource="http://gaiaair.org/ontology/amedeo#GAIAComponent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has part number</rdfs:label>
+        <rdfs:comment>The manufacturer's part number for a component</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#generatesPower -->
+    <owl:DatatypeProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#generatesPower">
+        <rdfs:domain rdf:resource="http://gaiaair.org/ontology/amedeo-apu#GeneratorControlUnit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label>generates power</rdfs:label>
+        <rdfs:comment>Indicates whether the generator control unit is currently generating power</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#controlsAirflow -->
+    <owl:DatatypeProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#controlsAirflow">
+        <rdfs:domain rdf:resource="http://gaiaair.org/ontology/amedeo-apu#BleedAirControlValve"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label>controls airflow</rdfs:label>
+        <rdfs:comment>Indicates whether the bleed air control valve is currently controlling airflow</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#status -->
+    <owl:DatatypeProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#status">
+        <rdfs:domain rdf:resource="http://gaiaair.org/ontology/amedeo-apu#CertificationRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>status</rdfs:label>
+        <rdfs:comment>The status of a certification record (e.g., "Approved", "Pending", "Rejected")</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#tlsUtidsIdentifier -->
+    <owl:DatatypeProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#tlsUtidsIdentifier">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gaiaair.org/ontology/amedeo#GAIAComponent"/>
+                    <rdf:Description rdf:about="http://gaiaair.org/ontology/amedeo-apu#MaintenanceProcedure"/>
+                    <rdf:Description rdf:about="http://gaiaair.org/ontology/amedeo-apu#FaultCode"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>TLS-UTidS identifier</rdfs:label>
+        <rdfs:comment>The TLS-UTidS identifier for a component, procedure, or fault code</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#complianceStatus -->
+    <owl:DatatypeProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#complianceStatus">
+        <rdfs:domain rdf:resource="http://gaiaair.org/ontology/amedeo-apu#MaintenanceProcedure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>compliance status</rdfs:label>
+        <rdfs:comment>The compliance status of a maintenance procedure (e.g., "PASS", "FAIL")</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#reasoningExplanation -->
+    <owl:DatatypeProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#reasoningExplanation">
+        <rdfs:domain rdf:resource="http://gaiaair.org/ontology/amedeo-apu#MaintenanceProcedure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>reasoning explanation</rdfs:label>
+        <rdfs:comment>Human-readable explanation of the reasoning behind a compliance decision</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#suggestedFix -->
+    <owl:DatatypeProperty rdf:about="http://gaiaair.org/ontology/amedeo-apu#suggestedFix">
+        <rdfs:domain rdf:resource="http://gaiaair.org/ontology/amedeo-apu#MaintenanceProcedure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>suggested fix</rdfs:label>
+        <rdfs:comment>Suggested action to fix a non-compliant procedure</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // SWRL Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://gaiaair.org/ontology/amedeo-apu#APU"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://gaiaair.org/ontology/amedeo-apu#hasOperationalState"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                <swrl:argument2 rdf:resource="http://gaiaair.org/ontology/amedeo-apu#Running"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://gaiaair.org/ontology/amedeo-apu#MaintenanceProcedure"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://gaiaair.org/ontology/amedeo-apu#FuelLineDisconnect"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://gaiaair.org/ontology/amedeo-apu#NonCompliantProcedure"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#APU_001 -->
+    <owl:NamedIndividual rdf:about="http://gaiaair.org/ontology/amedeo-apu#APU_001">
+        <rdf:type rdf:resource="http://gaiaair.org/ontology/amedeo-apu#APU"/>
+        <apu:hasOperationalState rdf:resource="http://gaiaair.org/ontology/amedeo-apu#Running"/>
+        <apu:hasComponent rdf:resource="http://gaiaair.org/ontology/amedeo-apu#FuelControlUnit_4823AB12"/>
+        <apu:hasPartNumber>GTCP331-350</apu:hasPartNumber>
+        <apu:tlsUtidsIdentifier>[CMP:APU_001#live]</apu:tlsUtidsIdentifier>
+    </owl:NamedIndividual>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#FuelControlUnit_4823AB12 -->
+    <owl:NamedIndividual rdf:about="http://gaiaair.org/ontology/amedeo-apu#FuelControlUnit_4823AB12">
+        <rdf:type rdf:resource="http://gaiaair.org/ontology/amedeo-apu#FuelControlUnit"/>
+        <apu:hasCertificationRecord rdf:resource="http://gaiaair.org/ontology/amedeo-apu#Cert_00123"/>
+        <apu:hasPartNumber>4823-AB12</apu:hasPartNumber>
+        <apu:tlsUtidsIdentifier>[CMP:FCU_4823AB12#live]</apu:tlsUtidsIdentifier>
+    </owl:NamedIndividual>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#Cert_00123 -->
+    <owl:NamedIndividual rdf:about="http://gaiaair.org/ontology/amedeo-apu#Cert_00123">
+        <rdf:type rdf:resource="http://gaiaair.org/ontology/amedeo-apu#CertificationRecord"/>
+        <apu:hasProvenance rdf:resource="http://gaiaair.org/ontology/amedeo-apu#BITT_Hash_ABC123"/>
+        <apu:status>Approved</apu:status>
+        <apu:tlsUtidsIdentifier>[DOC:CERT_00123#auth]</apu:tlsUtidsIdentifier>
+    </owl:NamedIndividual>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#BITT_Hash_ABC123 -->
+    <owl:NamedIndividual rdf:about="http://gaiaair.org/ontology/amedeo-apu#BITT_Hash_ABC123">
+        <rdf:type rdf:resource="http://gaiaair.org/ontology/amedeo#DataSource"/>
+    </owl:NamedIndividual>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#FuelLineDisconnect_Procedure -->
+    <owl:NamedIndividual rdf:about="http://gaiaair.org/ontology/amedeo-apu#FuelLineDisconnect_Procedure">
+        <rdf:type rdf:resource="http://gaiaair.org/ontology/amedeo-apu#FuelLineDisconnect"/>
+        <apu:targetsComponent rdf:resource="http://gaiaair.org/ontology/amedeo-apu#FuelControlUnit_4823AB12"/>
+        <apu:hasCertificationRecord rdf:resource="http://gaiaair.org/ontology/amedeo-apu#Cert_00123"/>
+        <apu:requiresSkillLevel rdf:resource="http://gaiaair.org/ontology/amedeo-apu#APU_Maintenance_L2"/>
+        <apu:tlsUtidsIdentifier>[OP:FLD_PROC_001#maint]</apu:tlsUtidsIdentifier>
+    </owl:NamedIndividual>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#APU_Maintenance_L2 -->
+    <owl:NamedIndividual rdf:about="http://gaiaair.org/ontology/amedeo-apu#APU_Maintenance_L2">
+        <rdf:type rdf:resource="http://gaiaair.org/ontology/amedeo#Skill"/>
+    </owl:NamedIndividual>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#Technician_John -->
+    <owl:NamedIndividual rdf:about="http://gaiaair.org/ontology/amedeo-apu#Technician_John">
+        <rdf:type rdf:resource="http://gaiaair.org/ontology/amedeo#HumanAgent"/>
+        <apu:hasSkillLevel rdf:resource="http://gaiaair.org/ontology/amedeo-apu#APU_Maintenance_L2"/>
+        <apu:tlsUtidsIdentifier>[AGT:TECH_JOHN#resp]</apu:tlsUtidsIdentifier>
+    </owl:NamedIndividual>
+    
+    <!-- http://gaiaair.org/ontology/amedeo-apu#FaultCode_FC001 -->
+    <owl:NamedIndividual rdf:about="http://gaiaair.org/ontology/amedeo-apu#FaultCode_FC001">
+        <rdf:type rdf:resource="http://gaiaair.org/ontology/amedeo-apu#FaultCode"/>
+        <apu:requiresProcedure rdf:resource="http://gaiaair.org/ontology/amedeo-apu#FuelLineDisconnect_Procedure"/>
+        <apu:tlsUtidsIdentifier>[ERR:FC001#diag]</apu:tlsUtidsIdentifier>
+    </owl:NamedIndividual>
+</rdf:RDF>
