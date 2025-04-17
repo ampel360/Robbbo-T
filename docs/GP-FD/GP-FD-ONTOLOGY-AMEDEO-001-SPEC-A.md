@@ -296,4 +296,49 @@ AMEDEO is deeply integrated and provides the semantic glue:
 
 *   Conceptual diagrams illustrating key parts of the class hierarchy and property relationships. (Generated from ontology tools).
 
+  ```python
+from graphviz import Digraph
+
+# Crear un grafo dirigido
+dot = Digraph(comment='AMEDEO Ontology - Conceptual Diagram')
+
+# Clases principales
+classes = [
+    "Agente", "Intención", "Contexto", "Ética", "Función", "Responsabilidad"
+]
+
+# Propiedades de objeto
+object_properties = {
+    "tieneIntención": ("Agente", "Intención"),
+    "operaEnContexto": ("Función", "Contexto"),
+    "seRigePor": ("Función", "Ética"),
+    "asume": ("Agente", "Responsabilidad")
+}
+
+# Propiedades de datos (como etiquetas dentro de las clases destino)
+data_properties = {
+    "prioridadÉtica": "Intención",
+    "nivelConfianza": "Función"
+}
+
+# Añadir nodos de clase
+for cls in classes:
+    dot.node(cls, cls, shape='box', style='filled', color='lightgrey')
+
+# Añadir aristas de propiedades de objeto
+for prop, (domain, range_) in object_properties.items():
+    dot.edge(domain, range_, label=prop)
+
+# Añadir nodos de propiedades de datos
+for prop, domain in data_properties.items():
+    dp_node = f"{prop} : xsd:decimal"
+    dot.node(dp_node, dp_node, shape='note', color='lightblue')
+    dot.edge(domain, dp_node, style='dashed')
+
+# Renderizar el grafo
+dot.render('/mnt/data/amedeo_ontology_diagram', format='png', cleanup=False)
+
+# Mostrar imagen renderizada
+'/mnt/data/amedeo_ontology_diagram.png'
+
 ---
