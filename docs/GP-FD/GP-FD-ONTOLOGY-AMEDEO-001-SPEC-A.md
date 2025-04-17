@@ -166,6 +166,12 @@ This section illustrates how core GAIA AIR concepts are modeled within AMEDEO. (
 *   **Properties:** `referencesDocument` (linking `SystemState` to `COAFIDocument`), `hasProvenance` (linking `InformationAsset` to `DataSource`), `subjectToPolicy` (linking `InformationAsset` to `DataHandlingPolicy`), `appliesInContext` (linking `DataHandlingPolicy` to `GeopoliticalContext`).
 *   **Axioms/Rules:** Defining data access based on context and policy, associating COAFI metadata tags with formal ontology concepts.
 
+### 6.6. APU Maintenance Safety and Ethics (AMEDEO-APU Integration)
+
+*   **Classes:** `APUComponent`, `OperationalState`, `MaintenanceProcedure`, `SafetyCriticalComponent`, `CertificationRecord`, `Technician`.
+*   **Properties:** `requiresCertification` (linking `MaintenanceProcedure` to `CertificationRecord`), `targetsComponent` (linking `MaintenanceProcedure` to `APUComponent`), `hasOperationalState` (linking `APUComponent` to `OperationalState`), `qualifiedTechnician` (linking `MaintenanceProcedure` to `Technician`).
+*   **Axioms/Rules:** "A `MaintenanceProcedure` targeting a `SafetyCriticalComponent` must have an `Approved` `CertificationRecord`." "A `Technician` must be qualified for the `MaintenanceProcedure` they perform."
+
 ---
 
 ## 7. Relationship to Other GAIA AIR Systems
@@ -288,6 +294,117 @@ AMEDEO is deeply integrated and provides the semantic glue:
     [ a owl:Restriction ; owl:onProperty :nivelConfianza ; owl:someValuesFrom xsd:decimal ]
   ) ;
   rdfs:label "Función éticamente validable" ] 
+
+### AMEDEO-APU Ontology Extension
+
+:APUComponent a owl:Class ;
+    rdfs:label "APU Component" ;
+    rdfs:comment "Components of the Auxiliary Power Unit (APU)." .
+
+:OperationalState a owl:Class ;
+    rdfs:label "Operational State" ;
+    rdfs:comment "Operational states of the APU." .
+
+:MaintenanceProcedure a owl:Class ;
+    rdfs:label "Maintenance Procedure" ;
+    rdfs:comment "Procedures for maintaining the APU." .
+
+:SafetyCriticalComponent a owl:Class ;
+    rdfs:label "Safety Critical Component" ;
+    rdfs:comment "Components of the APU that are critical for safety." .
+
+:CertificationRecord a owl:Class ;
+    rdfs:label "Certification Record" ;
+    rdfs:comment "Records of certifications for maintenance procedures." .
+
+:Technician a owl:Class ;
+    rdfs:label "Technician" ;
+    rdfs:comment "Technicians qualified to perform maintenance procedures." .
+
+:requiresCertification a owl:ObjectProperty ;
+    rdfs:domain :MaintenanceProcedure ;
+    rdfs:range :CertificationRecord ;
+    rdfs:label "requires Certification" .
+
+:targetsComponent a owl:ObjectProperty ;
+    rdfs:domain :MaintenanceProcedure ;
+    rdfs:range :APUComponent ;
+    rdfs:label "targets Component" .
+
+:hasOperationalState a owl:ObjectProperty ;
+    rdfs:domain :APUComponent ;
+    rdfs:range :OperationalState ;
+    rdfs:label "has Operational State" .
+
+:qualifiedTechnician a owl:ObjectProperty ;
+    rdfs:domain :MaintenanceProcedure ;
+    rdfs:range :Technician ;
+    rdfs:label "qualified Technician" .
+
+### SWRL Rules for AMEDEO-APU
+
+[ a swrl:Imp ;
+  swrl:body (
+    [ a swrl:ClassAtom ;
+      swrl:classPredicate :MaintenanceProcedure ;
+      swrl:argument1 ?procedure
+    ]
+    [ a swrl:ClassAtom ;
+      swrl:classPredicate :SafetyCriticalComponent ;
+      swrl:argument1 ?component
+    ]
+    [ a swrl:PropertyAtom ;
+      swrl:propertyPredicate :targetsComponent ;
+      swrl:argument1 ?procedure ;
+      swrl:argument2 ?component
+    ]
+    [ a swrl:PropertyAtom ;
+      swrl:propertyPredicate :requiresCertification ;
+      swrl:argument1 ?procedure ;
+      swrl:argument2 ?cert
+    ]
+    [ a swrl:ClassAtom ;
+      swrl:classPredicate :CertificationRecord ;
+      swrl:argument1 ?cert
+    ]
+    [ a swrl:DataPropertyAtom ;
+      swrl:propertyPredicate :status ;
+      swrl:argument1 ?cert ;
+      swrl:argument2 "Approved"
+    ]
+  ) ;
+  swrl:head (
+    [ a swrl:ClassAtom ;
+      swrl:classPredicate :ValidProcedure ;
+      swrl:argument1 ?procedure
+    ]
+  )
+] .
+
+[ a swrl:Imp ;
+  swrl:body (
+    [ a swrl:ClassAtom ;
+      swrl:classPredicate :MaintenanceProcedure ;
+      swrl:argument1 ?procedure
+    ]
+    [ a swrl:ClassAtom ;
+      swrl:classPredicate :Technician ;
+      swrl:argument1 ?technician
+    ]
+    [ a swrl:PropertyAtom ;
+      swrl:propertyPredicate :qualifiedTechnician ;
+      swrl:argument1 ?procedure ;
+      swrl:argument2 ?technician
+    ]
+  ) ;
+  swrl:head (
+    [ a swrl:ClassAtom ;
+      swrl:classPredicate :QualifiedProcedure ;
+      swrl:argument1 ?procedure
+    ]
+  )
+] .
+
 ```
 
 *   Links to primary domain ontology files (as they are developed).
