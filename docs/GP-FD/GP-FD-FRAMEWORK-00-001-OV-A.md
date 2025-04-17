@@ -255,56 +255,92 @@ Functions fulfilled by AI components must link to corresponding entries in the X
 
 ### 5.1. Architecture Layers Overview
 
-*(Placeholder: Describe the key layers, e.g., Physical Layer (QAOA Hardware), Infrastructure Layer (Network, Compute), Orchestration Layer (QAO, AI Core), Application Layer (Specific MODs, User Interfaces), Knowledge Layer (COAFI, AMEDEO), Ethical Governance Layer (CFSI, AMPEL Core))*
+Okay, let's fill in the placeholder for Section 5.1, describing the GAIA AIR architecture layers based on the components and concepts already established:
+
+---
+
+## 5. GAIA AIR System Architecture & Adaptive Core
+
+### 5.1. Architecture Layers Overview
+
+The GAIA AIR system architecture is conceived as a series of interconnected, hierarchical layers, ensuring modularity, clear separation of concerns, and traceability from foundational principles to physical interaction. These layers work synergistically to enable the adaptive, human-centric vision:
+
+1.  **Ethical Governance Layer (Top Layer):** This layer represents the supreme authority, defining the *why* and the ethical boundaries of system operation. It embodies the foundational doctrines and ensures all actions align with core values.
+    *   **Components:** Constitutional Framework of System Intent (**CFSI** / **CEU Manifest**), **AMPEL Ethical Core** (runtime enforcement), **AMEDEO Ontology** (specifically its ethical rules and principles).
+    *   **Function:** Sets non-negotiable rules, validates intent, ensures ethical compliance, provides ultimate governance.
+
+2.  **Knowledge Layer:** This layer stores, structures, and provides access to the system's knowledge, context, and semantic understanding. It is the source of truth and meaning for the layers below.
+    *   **Components:** **AMEDEO Ontology** (defining concepts, relationships, rules), **COAFI Database/API** (providing access to all structured technical documentation, metadata, and operational data).
+    *   **Function:** Provides context, definitions, operational rules, historical data, documentation access, semantic grounding for AI/QAO.
+
+3.  **Orchestration Layer:** This layer acts as the system's cognitive core or "brain," responsible for interpreting intent, analyzing complex situations, planning actions, and coordinating resources across the system.
+    *   **Components:** **QAO Engine** (Quantum Adaptive Orchestration for hybrid problem-solving), **i-Aher0 AI Core** (classical AI, context fusion, learning, prediction).
+    *   **Function:** High-level decision-making, planning, resource allocation, adaptive response generation, fusing data from lower layers based on knowledge/ethics from upper layers.
+
+4.  **Application Layer:** This layer executes specific tasks and provides services, including the interface point for human operators and other systems. It translates high-level orchestration into specific actions.
+    *   **Components:** **AMPEL Runtime** (executing conscious code), Specific **MODs** (Modular Operational Devices/Domains implementing specific functions), **User Interfaces** (including PTIMs - Personalized Technical Information Modules).
+    *   **Function:** Perform defined functions (FFI), run applications, interact with users, execute AMPEL scripts, manage specific operational domains.
+
+5.  **Infrastructure Layer:** This layer provides the fundamental computing, networking, and data persistence capabilities required by the layers above.
+    *   **Components:** **GACMS** (hosting Quantum & Classical Compute Nodes), Secure Network Fabric (**QKD/QNS**), **BITT Ledger Nodes** (for immutable records).
+    *   **Function:** Secure communication, data storage, computational resources (classical & quantum), blockchain services.
+
+6.  **Physical Layer (Bottom Layer):** This layer comprises the tangible hardware that interacts directly with the physical world, including sensors, actuators, and platforms.
+    *   **Components:** **QAOA Hardware** (Sensors, Actuators integrated into platforms), **Robotics** (**RAME Fleet**), Physical Platforms (Aircraft, Spacecraft, Ground Facilities).
+    *   **Function:** Environmental sensing, physical action, movement, manipulation, hosting infrastructure and application components.
+
+Data and control generally flow vertically between these layers, with the Ethical Governance and Knowledge layers providing top-down guidance and context, while the lower layers provide data and execution capabilities upwards, all orchestrated dynamically based on the mission and context.
+
+---
 
 ### 5.2. Visual Architecture Diagram (Mermaid Placeholder)
 
 ```mermaid
 graph TD
-    subgraph Ethical_Governance [Ethical Governance Layer (CFSI, AMPEL Core)]
+    subgraph Ethical_Governance [Ethical Governance Layer CFSI, AMPEL Core]
         direction LR
-        A(CFSI/CEU Manifest) --> B(AMPEL Ethical Engine)
-        B --> C(AMEDEO Ontology Interface)
+        A("CFSI/CEU Manifest") --> B("AMPEL Ethical Engine")
+        B --> C("AMEDEO Ontology Interface")
     end
 
-    subgraph Knowledge_Layer [Knowledge Layer (COAFI, AMEDEO)]
+    subgraph Knowledge_Layer [Knowledge Layer COAFI, AMEDEO]
         direction LR
-        D(AMEDEO Ontology) --- E(COAFI Database/API)
+        D("AMEDEO Ontology") --- E("COAFI Database/API")
         C --- D
     end
 
-    subgraph Orchestration_Layer [Orchestration Layer (QAO, AI Core)]
+    subgraph Orchestration_Layer [Orchestration Layer QAO, AI Core]
         direction LR
-        F(QAO Engine) --- G(i-Aher0 AI Core)
+        F("QAO Engine") --- G("i-Aher0 AI Core")
         F --- D
         G --- D
         G --- E
     end
 
-    subgraph Application_Layer [Application Layer (MODs, UI, AMPEL Runtime)]
+    subgraph Application_Layer [Application Layer MODs, UI, AMPEL Runtime]
         direction LR
-        H(AMPEL Runtime) -- interacts --> I(Specific MODs / Applications)
-        I -- interacts --> J(User Interfaces / PTIMs)
+        H("AMPEL Runtime") -- interacts --> I("Specific MODs / Applications")
+        I -- interacts --> J("User Interfaces / PTIMs")
         H --- F
         H --- G
         H --- B
         I --- E
     end
 
-    subgraph Infrastructure_Layer [Infrastructure Layer (Network, Compute - GACMS)]
+    subgraph Infrastructure_Layer [Infrastructure Layer Network, Compute - GACMS]
         direction LR
-        K(Quantum Compute Nodes) --- L(Classical Compute Nodes)
-        L --- M(Secure Network Fabric - QKD/QNS)
-        M --- N(BITT Ledger Nodes)
+        K("Quantum Compute Nodes") --- L("Classical Compute Nodes")
+        L --- M("Secure Network Fabric - QKD/QNS")
+        M --- N("BITT Ledger Nodes")
         F --- K
         G --- L
         I --- M
     end
 
-    subgraph Physical_Layer [Physical Layer (QAOA Hardware, Sensors, Actuators, Robotics)]
+    subgraph Physical_Layer [Physical Layer QAOA Hardware, Sensors, Actuators, Robotics]
         direction LR
-        O(Sensors/Actuators) --- P(Robotics - RAME Fleet)
-        P --- Q(Physical Platforms - Air/Space)
+        O("Sensors/Actuators") --- P("Robotics - RAME Fleet")
+        P --- Q("Physical Platforms - Air/Space")
         O --- K
         O --- L
         I -- controls --> O
