@@ -1272,6 +1272,47 @@ It is designed to guide, empower, and federate users, ensuring every line of cod
 | TestZone Didattica|      |   Path of Mastery    |
 +-------------------+      +----------------------+
 ```
+```mermaid
+flowchart TD
+    VC[Visual Composer]
+    SI[Semantic Interpreter]
+    IA[Integrated Agent]
+    ECF[Ethical Core Filter]
+    SCE[Self-Constraint Engine]
+    TZD[TestZone Didattica]
+    PM[Path of Mastery]
+
+    VC --> SI
+    SI <---> IA
+    SI --> ECF
+    ECF --> SCE
+    SI --> TZD
+    SCE --> PM
+    IA --> PM
+    VC -.-> PM
+
+    subgraph User Experience
+      VC
+      SI
+      IA
+      TZD
+      PM
+    end
+
+    subgraph Ethical & Runtime Core
+      ECF
+      SCE
+    end
+
+    %% Improved node styles for readability
+    style VC fill:#b3e6ff,stroke:#0077b6,stroke-width:2px,color:#000
+    style SI fill:#b3ffd9,stroke:#009e60,stroke-width:2px,color:#000
+    style IA fill:#fff5b3,stroke:#bbaa00,stroke-width:2px,color:#000
+    style ECF fill:#ffd6b3,stroke:#ff7f50,stroke-width:2px,color:#000
+    style SCE fill:#ffb3b3,stroke:#d90429,stroke-width:2px,color:#000
+    style TZD fill:#e4b3ff,stroke:#7b2ff2,stroke-width:2px,color:#000
+    style PM fill:#d3b3ff,stroke:#6c3483,stroke-width:2px,color:#000
+```
 
 ---
 
