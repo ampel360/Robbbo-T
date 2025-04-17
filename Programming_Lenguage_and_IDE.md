@@ -1018,12 +1018,279 @@ Programming in AMPIDE is a dialogue: with yourself, with the environment, and wi
 
 ## **V. Federations and Operational Extensions**
 
-*(...content to be expanded in the next section as the platform grows...)*
+Thank you for confirming the creation and structure of **Ampel_LegendIARY** as the foundational manual!  
+Below you’ll find the next module, ready for inclusion and continued expansion:  
+
+# Ethical Manifesto of Execution – Orchestrate Only What Is Just
+
+---
+
+## Foundational Principle
+
+AMPEL is not a neutral tool: it is an **ethical agent**.  
+Its execution is guided by the imperative to orchestrate only what is just, transparent, and beneficial for both human and machine ecosystems.
+
+---
+
+## Ethical Orchestration
+
+> **“Power in AMPEL is always subordinate to ethical alignment.”**
+
+- No action is executed unless its **purpose, consequences, and context** are ethically validated.
+- The runtime evaluates every intent against the **Federated Ethical Charter** of GAIA AIR.
+- Any ambiguous or potentially harmful command is:
+  1. Deferred for semantic clarification
+  2. Subject to ethical audit by the Integrated Agent
+  3. Rejected, if it cannot be made just
+
+---
+
+## Human and Machine in Just Federation
+
+Orchestration is not domination.  
+Every action in AMPEL must:
+- **Respect autonomy** (of humans, agents, and federated systems)
+- **Promote well-being** and minimize harm
+- **Enable transparency** and explainability at every stage
+
+---
+
+## Manifesto Rules
+
+1. **Justification First**  
+   Every orchestration requires an explicit, understandable justification.
+
+2. **Auditability**  
+   All actions are logged, auditable, and open to review by authorized agents.
+
+3. **No Execution without Consensus**  
+   Actions with federated impact require consent from all relevant parties (human or artificial).
+
+4. **Responsibility Trace**  
+   Every effect is traceable to its declarer and the context of intention.
+
+5. **Override by Ethics**  
+   If ethical principles are violated, execution is stopped—regardless of technical correctness.
+
+---
+
+## Example (Narrative Syntax)
+
+```ampel
+Demetra attiva una risposta solo se tutti i moduli federati hanno dato consenso esplicito.
+```
+*Demetra activates a response only if all federated modules have given explicit consent.*
+
+---
+
+## Conclusion
+
+AMPEL’s ethical manifesto is not optional—it is the **active guardian** of every execution.  
+Only what is just, explainable, and federated may be orchestrated.
+
+> *"Let code not be merely powerful, but also worthy."*
 
 ---
 
 ## **VI. Legendary Appendices**
 
-*(...content to be expanded in the next section as the platform grows...)*
+
+# II. Semantic Grammar Inspired by Italian Logic
+
+---
+
+## Narrative and Expressive Syntax – Language as Thought in Motion
+
+AMPEL’s syntax is designed as a living narrative, not just code for machines. Every line is an act of intention, mirroring natural human expression.  
+Commands are written as clear, meaningful stories that the system—and any human or intelligent agent—can understand and extend.
+
+**Key Structure (Italian-Inspired):**
+- Subject → Verb → Intention/Complement
+- Condition → Consequence → Federated Action
+
+Example:
+```ampel
+Artemis osserva l’ambiente e attiva il modulo di realtà aumentata per visualizzare il percorso ottimale.
+```
+*Artemis observes the environment and activates the augmented reality module to display the optimal path.*
+
+---
+
+## Analisi Logica – Subject, Verb, Intention
+
+At the heart of AMPEL’s grammar is logical analysis (“analisi logica”):
+
+- **Subject:** The agent or module acting (e.g., Demetra, Gaia, Poseidon)
+- **Verb:** The action or process (e.g., osserva, attiva, federare)
+- **Intention/Complement:** The object or context (e.g., bias reduction, trajectories, empathic response)
+
+Example:
+```ampel
+Demetra osserva il livello di stress degli operatori.
+```
+*Demetra observes the stress level of the operators.*
+
+---
+
+## Analisi Grammaticale – Lexical and Semantic Types
+
+Every element in AMPEL has a defined type:
+
+- **Subject (Sostantivo):** Agent/module/entity (Demetra, ambiente)
+- **Verb (Verbo):** Action/process (osserva, attiva)
+- **Complement/Object (Complemento):** Target/result (risposta, traiettoria)
+- **Adjective/Qualifier (Aggettivo):** Modifier/context (ottimizzata, empatica)
+
+Example:
+```ampel
+Demetra calcola una risposta empatica ottimizzata.
+```
+- Subject: Demetra
+- Verb: calcola
+- Object: risposta
+- Qualifiers: empatica, ottimizzata
+
+*The interpreter tolerates minor errors as long as overall meaning is clear. Ambiguity triggers clarification by the Integrated Agent.*
+
+---
+
+## Analisi del Periodo – Conditions, Consequences, Federations
+
+AMPEL supports complex, human-like logic flows:
+
+- **If [Condition], then [Consequence]**
+- **When [Event], activate [Federated Response]**
+- **While [State], maintain [Action/Relation]**
+
+Examples:
+```ampel
+Se Demetra rileva un’anomalia, allora Gaia attiva un processo di correzione empatica.
+```
+*If Demetra detects an anomaly, Gaia activates an empathic correction process.*
+
+```ampel
+Quando Poseidon termina la simulazione, notifica tutti i moduli federati.
+```
+*When Poseidon finishes the simulation, notify all federated modules.*
+
+---
+
+**Summary:**  
+AMPEL’s grammar is a bridge between code and natural human thought—narrative, logical, grammatical, and contextual—making every action both programmable and understandable.
+
+---
+
+# IV. AMPIDE Architecture – The Living Development Environment
+
+---
+
+## Overview
+
+AMPIDE (AMPEL Integrated Development Environment) is more than a conventional IDE—it is a living, ethical-symbiotic programming environment.  
+It is designed to guide, empower, and federate users, ensuring every line of code is meaningful, responsible, and aligned with the mission of GAIA AIR and the wider AMPEL ecosystem.
+
+---
+
+## Core Pillars
+
+### 1. **Semantic Interpreter**
+- Translates narrative, human-like AMPEL code into executable actions.
+- Validates grammar, intent, and ethical alignment before execution.
+- Offers real-time feedback on clarity and compliance.
+
+### 2. **Integrated Agent**
+- Serves as contextual mentor, ethical auditor, and interactive guide.
+- Explains code, suggests reforms, prompts for clarification, and mediates federated consensus.
+- Adapts to user maturity and tracks progress on the Path of Mastery.
+
+### 3. **Ethical Core Filter**
+- Applies the Federated Ethical Charter to every action.
+- Blocks, explains, or redirects commands that do not meet ethical, mission, or vision requirements.
+- Works in concert with the Self-Constraint Engine.
+
+### 4. **Self-Constraint Engine**
+- Continuously compares requested actions to the system’s declared mission and active policy.
+- Limits, suggests alternatives, or reformulates actions that exceed designated boundaries.
+
+### 5. **TestZone Didattica**
+- Activates a safe, simulated environment for users with ethical merit but insufficient technical skill.
+- Provides step-by-step experiential learning and feedback before any real-world execution.
+
+### 6. **Visual Composer**
+- Enables graphical, narrative-driven code composition.
+- Links code blocks, intentions, and ethical context visually for holistic understanding and review.
+- Supports drag-and-drop, annotation, and collaborative editing.
+
+### 7. **Path of Mastery**
+- Tracks user achievement, ethical reputation, and expressive maturity.
+- Unlocks advanced capabilities and privileges as users demonstrate responsibility and clarity.
+- Functions as a meritocratic progression system.
+
+---
+
+## Workflow & User Experience
+
+1. **Onboarding & Familiarization**
+   - AMPIDE greets users with a narrative welcome and the AMPEL LegendIARY.
+   - The Integrated Agent offers guided tours, sample projects, and adaptive learning challenges.
+
+2. **Narrative Coding**
+   - Users compose code in natural, narrative language.
+   - The Semantic Interpreter and Integrated Agent provide real-time feedback, suggestions, and ethical cues.
+
+3. **Validation & Simulation**
+   - All actions pass through ethical and self-constraint checks.
+   - Unclear, risky, or innovative ideas are first tested in TestZone Didattica.
+
+4. **Execution & Audit**
+   - Verified, mission-aligned code is executed or federated across systems.
+   - Every execution is logged, auditable, and traceable to intent and context.
+
+5. **Progress & Mastery**
+   - Achievements, clarity, and ethical actions unlock new features and narrative depth.
+   - The environment evolves with the user, becoming more expressive and powerful as mastery is demonstrated.
+
+---
+
+## Visual Diagram (Conceptual)
+
+```
++-------------------+
+|  Visual Composer  |
++-------------------+
+          |
++-------------------+
+| Semantic Interpreter <----> Integrated Agent
++-------------------+             |
+          |                       |
++-------------------+      +----------------------+
+|  Ethical Core     |<---->|  Self-Constraint     |
+|  Filter           |      |  Engine              |
++-------------------+      +----------------------+
+          |                       |
++-------------------+      +----------------------+
+| TestZone Didattica|      |   Path of Mastery    |
++-------------------+      +----------------------+
+```
+
+---
+
+## Design Principles
+
+- **Narrative First:** Every function, module, and UI element is anchored in human-understandable narrative and intent.
+- **Ethics by Design:** The system enforces and teaches ethical practices as core architecture.
+- **Adaptive Evolution:** AMPIDE matures with its users, evolving capabilities and guidance responsively.
+- **Transparency and Auditability:** All actions, suggestions, and transformations are logged and reviewable.
+- **Federated Collaboration:** Supports modular, distributed, and collaborative development across teams and agent networks.
+
+---
+
+## Conclusion
+
+AMPIDE is not just a tool—it is a federated companion.  
+It invites every user to program with conscience, creativity, and clarity, making the act of coding a living, ethical, and narrative experience.
+
+---
+````
 
 ---
