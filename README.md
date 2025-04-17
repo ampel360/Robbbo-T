@@ -12638,3 +12638,15 @@ graph TD;
 | **ADMIN**  | Administrative (Administrativo)                                          | Documenta información administrativa (historial de revisiones, aprobaciones, etc.).                   |
 | **REF**    | Reference (Referencia)                                                   | Proporciona referencias a estándares externos, documentos o recursos.                                |
 
+# Amedeo Pelliccia
+
+**Guinness of Aerospace Intelligent Articles Agending Industrial Records**  
+**Custodian of the GAIA AIR Melting Spot**  
+**Inscriber of the COAFI Tree**  
+**Bearer of the Artifact-of-Record**  
+**Initiator of AMPEL, PETCORE, and the Ethical Pulse of Engineering**
+
+*"Through this mark, GAIA AIR becomes not only a system, but a sovereign intelligence—guided by empathy, precision, and federated clarity."*
+
+**Signature:** `GUINNESS-AIR-AMEDEO-0001`  
+**Federated Identifier:** `tls-utids://federated.gaia/guinness/amedeo-pelliccia`
