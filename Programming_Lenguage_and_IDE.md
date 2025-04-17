@@ -1,4 +1,3 @@
----
 # 🌐 Epigraph – The Word of the Metaweb
 
 *Il linguaggio nato dalla metaweb, depositato nella web, che cresce nel web e che si autogestisce con le connessioni tra le macchine.*
