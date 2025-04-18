@@ -735,3 +735,42 @@ async def adjust_license(
             "request_id": request_id,
             "timestamp": datetime.now().isoformat()
         }
+
+@router.post("/validate_procedure", response_model=Dict[str, Any])
+async def validate_maintenance_procedure(
+    procedure_id: str = Body(..., embed=True),
+    current_user: User = Security(get_current_user, scopes=["memory:read"])
+):
+    """
+    Validate a maintenance procedure against the AMEDEO-APU ontology
+    
+    Checks if the procedure complies with safety and ethical rules
+    """
+    request_id = str(uuid.uuid4())
+    
+    try:
+        if not MEMORY_SERVICE_AVAILABLE:
+            # Mock implementation
+            time.sleep(0.5)
+            return {
+                "procedure_id": procedure_id,
+                "validation_status": "valid",
+                "issues": [],
+                "request_id": request_id,
+                "timestamp": datetime.now().isoformat()
+            }
+        
+        # In a real implementation, this would call the memory service validation method
+        validation_status = await memory_service.validate_maintenance_procedure(procedure_id)
+        
+        return {
+            "procedure_id": procedure_id,
+            "validation_status": validation_status.get("validationStatus", "valid"),
+            "issues": validation_status.get("issues", []),
+            "request_id": request_id,
+            "timestamp": datetime.now().isoformat()
+        }
+    
+    except Exception as e:
+        logger.error(f"Error validating maintenance procedure: {e}")
+        raise HTTPException(status_code=500, detail=f"Error validating maintenance procedure: {str(e)}")

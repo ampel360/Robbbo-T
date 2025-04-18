@@ -15,6 +15,7 @@ from routers.services import semantic_bridge  # <-- asegúrate que semantic_brid
 from routers import review  # Import the new review router
 from core.memory.memory_service import memory_service  # Import the memory service
 from api_orchestration.src.OrchestrationBuilder import OrchestrationBuilder  # Import the OrchestrationBuilder
+from routers.services import digital_twin_router  # Import the digital twin router
 
 app = FastAPI(
     title="COAFI Quantum Memory API",
@@ -130,6 +131,7 @@ async def generate_document(request: dict):
 # Mount routers
 app.include_router(semantic_bridge.router, prefix="/semantic-query", tags=["Semantic Query"])
 app.include_router(review.router, prefix="/review", tags=["Year-End Review"])  # Include the new review router
+app.include_router(digital_twin_router.router, prefix="/digital-twin", tags=["Digital Twin"])  # Include the digital twin router
 
 # Health check route
 @app.get("/")
