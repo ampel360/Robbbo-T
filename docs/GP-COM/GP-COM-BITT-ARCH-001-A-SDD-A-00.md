@@ -22,7 +22,7 @@ originator: Amedeo Pelliccia & AI Collaboration # Origen
 date: 2024-12-08                             # Fecha de Creación/Revisión
 revision: 0.1                                # Número de Revisión
 ---
-# Data Module: GP-CM-BITT-ARCH-001-A-SDD-A-00 - Arquitectura del Sistema BITT
+# Data Module: GP-COM-BITT-ARCH-001-A-SDD-A-00 - Arquitectura del Sistema BITT
 
 **Título:** Documento de Descripción del Sistema - Arquitectura del BlockThread Identificated Tree (BITT)
 
