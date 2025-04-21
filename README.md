@@ -1409,2060 +1409,1846 @@ This document provides the highest-level overview. Access detailed technical inf
 *(Following this section, each Part (0 – VI) will list its respective documents along with their infocode-based links. This hierarchical listing should mirror the document parts overview above, providing direct navigation to each technical master manual.)*
 
 ---
+# GAIA AIR: COAFI Master Table of Contents (AToC.md) - Index to Technical Mastery Manuals
 
-*(Example Rendered Document Entry)*
+**(🚨 DISCLAIMER - GenAI Proposal Status 🚨)**
+**(Generated Structures and Contents require Official Authority Check for tool Compliance and Certification.)**
 
-```markdown
-# Vertical Stabilizer Structural Design Document
-
-**Document Code:** GP-AM-AMPEL-0100-55-005-DD-A  
-**Creation Date:** 2025-04-14  
-**Author(s):** GAIA AIR Team  
-**Revision/Version:** A  
-**Status:** Approved  
-**Classification:** Internal Use Only  
+**(Note:** This Master Table of Contents (AToC.md) serves as the central index for the entire **COAFI (Codes and Ontology as Aerospace Foresights Indexed)** technical documentation library, often referred to as the GAIA AIR "Mastery Manuals". It provides a fully enumerated, hierarchical structure linking to specific COAFI Data Modules (documents) identified by their unique Infocode and filename. Document Types (Info Codes) are indicated for each entry. The detailed technical content resides within the linked `.md` files. This document also includes the **INFOCODE-INDEX** defining the purpose and structure of each document type, and references key framework standards like **AGIS**, **TPSL/TPWD**, **CFSI**, **CEU**, **AGAD**, **URIF**, and **e.G.A.I.As** which are detailed in their respective foundational documents within Part 0.)*
 
 ---
 
-**🚨 DISCLAIMER: GenAI Proposal Status**  
-*Generated content requires Official Authority Check for tool Compliance and Certification.*
+## COAFI Information Code Index (INFOCODE-INDEX)
 
-## Table of Contents
-- Introduction
-- General Description
-- Technical Specifications
-- Procedures
-- Contextual Metadata / XAI
-- Relationships and Traceability
-- Keywords
-- Annexes
+*This section maps information codes (`infoCodes`) to their meaning, expected key sections, and representative documents within the GAIA AIR COAFI system. It serves as a semantic key to complement the hierarchical AToC structure below, enabling functional understanding and toolchain integration.*
 
-## Introduction
-**Objective:** Define and document the structural design of the vertical stabilizer.  
-**Scope:** Applies to all aircraft under the GP-AM platform.  
-**Definitions/Abbreviations:** (Refer to COAFI Glossary in INFO-GLO)
+*(Note: Template/Schema/Renderer paths are illustrative placeholders for a potential automated documentation system)*
 
-## General Description
-Describes the vertical stabilizer's role in providing directional control and flight stability.
+### INFO-OV — Overview Document
+- **Purpose:** High-level conceptual/functional introduction.
+- **Format:** Narrative, diagrams, summaries, links.
+- **Key Sections:** Introduction (Purpose, Scope, Audience, Refs), Context & Background, System/Process Description, Key Concepts/Components, High-Level Architecture/Flow, Major Interfaces/Relationships, Document Roadmap (Optional), Summary/Conclusion.
+- **Associated Template:** `template_ov.md.jinja` | **Schema:** `schema_ov.json` | **Renderer:** `RendererOV.tsx`
+- **Example:** [GP-AM-AMPEL-0100-55-001-OV-A.md](./GP-AM/GP-AM-AMPEL-0100-55-001-OV-A.md)
 
-## Technical Specifications
-Includes functional and non-functional requirements, material specifications, performance criteria, and reference to engineering drawings (see [INFO-DWG](./GP-AM-AMPEL-0100-55-007-DWG-A.md)).
+---
 
-## Procedures
-References operational and maintenance procedures ([INFO-PROC](./GP-PM-CERT-0500-01-003-PROC-A.md)).
+### INFO-SPEC — Specification
+- **Purpose:** Define precise, verifiable requirements or characteristics.
+- **Format:** Tabular/structured lists, standards references, measurable criteria.
+- **Key Sections:** Introduction (Scope, Applicable Docs, Definitions), General Requirements (Optional), Detailed Requirements/Specifications (ID, Text, Rationale, Verification, Traceability), Interface Requirements (Optional), Verification Matrix (Optional Appendix).
+- **Associated Template:** `template_spec.md.jinja` | **Schema:** `schema_spec.json` | **Renderer:** `RendererSPEC.tsx`
+- **Example:** [GP-AM-AMPEL-0100-55-006-SPEC-A.md](./GP-AM/GP-AM-AMPEL-0100-55-006-SPEC-A.md)
 
-## Contextual Metadata / XAI
-Includes metadata such as structural parameters, evaluation metrics, and traceability references for model-based analyses.
+---
 
-## Relationships and Traceability
-Links to related documents:
-- [Complementary Specifications INFO-SPEC](./GP-AM-AMPEL-0100-55-006-SPEC-A.md)
-- [Rudder Design Document INFO-DD](./...)
-- [Fuselage Interface Design INFO-DD](./...)
+### INFO-REQ — Requirements Document
+- **Purpose:** Capture higher-level requirements (mission/system/stakeholder).
+- **Format:** Structured lists/tables, traceability focused.
+- **Key Sections:** Introduction (Purpose, Scope, Stakeholders, Refs), Mission Objectives/Needs, System-Level Requirements, Operational Requirements, Constraints, Traceability Matrix.
+- **Associated Template:** `template_req.md.jinja` | **Schema:** `schema_req.json` | **Renderer:** `RendererREQ.tsx`
+- **Example:** [GP-FD-02-002-REQ-A.md](./GP-FD/GP-FD-02-002-REQ-A.md)
 
-## Keywords
-stabilizer, ATA 55, vertical stabilizer, design document, GAIA AIR
+---
 
-## Annexes
-Annexes include additional DWG files, simulation summaries, and FEM analysis data.
+### INFO-DD — Design Document
+- **Purpose:** Detail the *how* – implementation details meeting the requirements.
+- **Format:** Narrative, diagrams, analysis references, rationale.
+- **Key Sections:** Introduction (Objective, Scope, Reqs Addressed, References, Philosophy), Architectural Design, Detailed Design (Structural/Mechanical/Electrical/Software/Thermal), Interface Definitions (Reference ICDs), Material/Technology Rationale, Design V&V, Manufacturing Considerations, XAI Metadata (Optional).
+- **Associated Template:** `template_dd.md.jinja` | **Schema:** `schema_dd.json` | **Renderer:** `RendererDD.tsx`
+- **Example:** [GP-AM-AMPEL-0100-55-005-DD-A.md](./GP-AM/GP-AM-AMPEL-0100-55-005-DD-A.md)
 
+---
+
+### INFO-SDD — System Design Description
+- **Purpose:** Describe *what* the system is and *how* it broadly works (focus on architecture).
+- **Format:** Narrative, block/context diagrams, component lists, functional flows.
+- **Key Sections:** Introduction (Purpose, Scope, Context Diagram), System Overview, Functional Description, System Architecture, Component Descriptions, Interface Descriptions (Reference ICDs), Operational Scenarios, Performance Summary, Data Flow Diagrams (Optional).
+- **Associated Template:** `template_sdd.md.jinja` | **Schema:** `schema_sdd.json` | **Renderer:** `RendererSDD.tsx`
+- **Example:** [GP-COM-AI-0300-01-001-OV-A.md](./GP-COM/GP-COM-AI-0300-01-001-OV-A.md) *(Example updated to reflect new GP-COM code)*
+
+---
+
+### INFO-DWG — Engineering Drawing
+- **Purpose:** Provide a precise graphical representation (geometry/schematic).
+- **Format:** Link to canonical file (e.g., `.dwg`, `.catdrawing`, `.pdf`) with metadata wrapper.
+- **Key Sections (Wrapper):** Identification (Number, Revision, Title), Context (System, Applicable Standards, References), Metadata (Scale, Size, Standard, Units), Content Summary, Link to File.
+- **Associated Template:** `template_dwg.md.jinja` | **Schema:** `schema_dwg.json` | **Renderer:** `RendererDWG.tsx`
+- **Example:** [GP-AM-AMPEL-0100-55-007-DWG-A.md](./GP-AM/GP-AM-AMPEL-0100-55-007-DWG-A.md)
+
+---
+
+### INFO-CAL — Calculation / Analysis Report
+- **Purpose:** Document specific engineering analyses.
+- **Format:** Narrative, equations, data tables, results, plots.
+- **Key Sections:** Introduction (Objective, Scope, System, Verified Reqs), Methodology, Model Description, Assumptions/Limitations, Input Data, Tools Used, Results, Discussion, Analysis Verification & Validation, Conclusion, References.
+- **Associated Template:** `template_cal.md.jinja` | **Schema:** `schema_cal.json` | **Renderer:** `RendererCAL.tsx`
+- **Example:** [GP-AS-AMPELPLUS-0200-08-003-CAL-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-08-003-CAL-A.md) *(Updated path to GP-AS)*
+
+---
+
+### INFO-RPT — Report
+- **Purpose:** General communication of findings, status updates, or investigation results.
+- **Format:** Standard report structure (abstract, methodology, findings, conclusions, appendices).
+- **Key Sections:** Front Matter (Title, Abstract, TOC), Introduction, Body (Methodology, Results, Discussion), Conclusion/Recommendations, Back Matter (References, Appendices).
+- **Associated Template:** `template_rpt.md.jinja` | **Schema:** `schema_rpt.json` | **Renderer:** `RendererRPT.tsx`
+- **Example:** [GP-FD-03-003-RPT-A.md](./GP-FD/GP-FD-03-003-RPT-A.md)
+
+---
+
+### INFO-TEST — Test Plan / Procedure / Report
+- **Purpose:** Define and document verification & validation testing.
+- **Format:** Structured test plans, procedures, and reports.
+- **Key Sections:** Test Overview (ID, Title, Objective, Scope, Reqs), Setup & Configuration (Environment, Personnel, Tools), Execution (Steps, Expected Results, Data Recording), Pass/Fail Criteria, Results (Summary, Actual Outcomes, Deviations, Analysis), Conclusion.
+- **Associated Template:** `template_test.md.jinja` | **Schema:** `schema_test.json` | **Renderer:** `RendererTEST.tsx`
+- **Example:** [GP-AM-AMPEL-0100-60-005-TEST-A.md](./GP-AM/GP-AM-AMPEL-0100-60-005-TEST-A.md)
+
+---
+
+### INFO-RES — Research Document
+- **Purpose:** Document foundational research and R&D findings.
+- **Format:** Academic style, detailed methodology, experimental results.
+- **Key Sections:** Abstract, Introduction, Literature Review/Background, Methodology, Results, Discussion, Conclusion/Future Work, References, Appendices (Optional).
+- **Associated Template:** `template_res.md.jinja` | **Schema:** `schema_res.json` | **Renderer:** `RendererRES.tsx`
+- **Example:** [GP-FD-01-005-RES-A.md](./GP-FD/GP-FD-01-005-RES-A.md)
+
+---
+
+### INFO-MAN — Manual
+- **Purpose:** Provide user guides for operation, maintenance, and troubleshooting.
+- **Format:** Structured chapters, procedures, diagrams, troubleshooting guides.
+- **Key Sections:** Introduction, Safety Summary, System Description, Operating Instructions, Maintenance Procedures (Reference to PROC), Troubleshooting, Parts List References (CAT/BOM), Glossary References, Index.
+- **Associated Template:** `template_man.md.jinja` | **Schema:** `schema_man.json` | **Renderer:** `RendererMAN.tsx`
+- **Example:** *[Hypothetical: GP-AM-AMPEL-0100-OPS-MAN-A.md]*
+
+---
+
+### INFO-PROC — Procedure
+- **Purpose:** Step-by-step instructions for a specific task.
+- **Format:** Action-oriented, numbered steps, warnings, verification points.
+- **Key Sections:** Identification, Purpose/Objective, Scope/Applicability, Prerequisites, Safety Warnings, Tools/Materials Needed, Step-by-Step Instructions, Verification Points, Completion/Recording, Contingency Measures.
+- **Associated Template:** `template_proc.md.jinja` | **Schema:** `schema_proc.json` | **Renderer:** `RendererPROC.tsx`
+- **Example:** [GP-PM-CERT-0500-01-003-PROC-A.md](./GP-PM/GP-PM-CERT-0500-01-003-PROC-A.md) *(Path updated to GP-PM)*
+
+---
+
+### INFO-CAT — Catalog / Parts List
+- **Purpose:** List and detail items (parts, components, materials) used in manufacturing or inventory.
+- **Format:** Structured tables with item numbers, descriptions, quantities, and references.
+- **Key Sections:** Identification, Table of Items (Item Number, Part Number, Description, Quantity, Unit, Material/Spec Reference, Source), Revision History.
+- **Associated Template:** `template_cat.md.jinja` | **Schema:** `schema_cat.json` | **Renderer:** `RendererCAT.tsx`
+- **Example:** *[Hypothetical: GP-AM-AMPEL-0100-57-CAT-A.md]*
+
+---
+
+### INFO-GLO — Glossary
+- **Purpose:** Define and explain terms and acronyms.
+- **Format:** Alphabetically ordered list.
+- **Key Sections:** Introduction, Glossary Entries (Term, Definition, Acronym, Context).
+- **Associated Template:** `template_glo.md.jinja` | **Schema:** `schema_glo.json` | **Renderer:** `RendererGLO.tsx`
+- **Example:** [GP-AM-AMPEL-0100-APP-A-001-GLO-A.md](./GP-AM/GP-AM-AMPEL-0100-APP-A-001-GLO-A.md)
+
+---
+
+### INFO-PLAN — Plan
+- **Purpose:** Outline a strategy, schedule, and tasks for a given objective.
+- **Format:** Narrative with schedules, resource tables, and work breakdown references.
+- **Key Sections:** Introduction, Approach/Strategy, Schedule/Milestones, Organizational and Resource Plan, Work Breakdown Structure (Ref WBS), Monitoring & Control Measures, Risk Summary (Ref RISK), Assumptions/Constraints.
+- **Associated Template:** `template_plan.md.jinja` | **Schema:** `schema_plan.json` | **Renderer:** `RendererPLAN.tsx`
+- **Example:** [GP-FD-00-003-PLAN-A.md](./GP-FD/GP-FD-00-003-PLAN-A.md)
+
+---
+
+### INFO-ICD — Interface Control Document
+- **Purpose:** Define and document interfaces between systems or components.
+- **Format:** Precise definitions, tables, and interface diagrams.
+- **Key Sections:** Introduction, Interface Overview Diagram, Detailed Interface Definitions (ID, Type, Specifications - Mechanical, Electrical, Data, Thermal, etc.), Verification Matrix.
+- **Associated Template:** `template_icd.md.jinja` | **Schema:** `schema_icd.json` | **Renderer:** `RendererICD.tsx`
+- **Example:** [GP-AM-AMPEL-0100-46-011-ICD-A.md](./GP-AM/GP-AM-AMPEL-0100-46-011-ICD-A.md)
+
+---
+
+### INFO-LIST — List
+- **Purpose:** Provide a simple enumeration of items.
+- **Format:** Bulleted or numbered lists.
+- **Key Sections:** Title/Purpose, List Items with brief descriptions (if necessary).
+- **Associated Template:** `template_list.md.jinja` | **Schema:** `schema_list.json` | **Renderer:** `RendererLIST.tsx`
+- **Example:** [GP-AM-AMPEL-0100-25-010-LIST-A.md](./GP-AM/GP-AM-AMPEL-0100-25-010-LIST-A.md)
+
+---
+
+### INFO-FIG — Figure / Illustration
+- **Purpose:** Primarily a visual document (Diagram, Photo, Chart not fitting DWG/CAL).
+- **Format:** Embedded image or link with caption within a Markdown wrapper.
+- **Key Sections:** Figure Display, Caption (Number, Title, Explanation), Source (Optional).
+- **Associated Template:** `template_fig.md.jinja` | **Schema:** `schema_fig.json` | **Renderer:** `RendererFIG.tsx`
+- **Example:** [GP-AM-AMPEL-0100-42-005-FIG-A.md](./GP-AM/GP-AM-AMPEL-0100-42-005-FIG-A.md)
+
+---
+
+### INFO-CONOPS — Concept of Operations
+- **Purpose:** Describe system operation from a user or operator perspective.
+- **Format:** Scenario-driven narrative with diagrams.
+- **Key Sections:** Introduction, System Overview, Operational Environment, User Roles, Operational Scenarios (Nominal/Off-Nominal), System Interactions, Assumptions/Constraints.
+- **Associated Template:** `template_conops.md.jinja` | **Schema:** `schema_conops.json` | **Renderer:** `RendererCONOPS.tsx`
+- **Example:** [GP-RAME-RAME-0600-01-002-CONOPS-A.md](./GP-RAME/GP-RAME-RAME-0600-01-002-CONOPS-A.md) *(Example updated to reflect new GP-RAME code)*
+
+---
+
+### INFO-WBS — Work Breakdown Structure
+- **Purpose:** Provide a hierarchical breakdown of project scope.
+- **Format:** Tree diagram or hierarchical list.
+- **Key Sections:** Introduction, WBS Hierarchy, Element Descriptions (ID, Name, Work Description, Deliverables).
+- **Associated Template:** `template_wbs.md.jinja` | **Schema:** `schema_wbs.json` | **Renderer:** `RendererWBS.tsx`
+- **Example:** [GP-PM-WBS-0500-02-002-WBS-A.md](./GP-PM/GP-PM-WBS-0500-02-002-WBS-A.md) *(Path updated to GP-PM)*
+
+---
+
+### INFO-JSON — JSON Data / Schema
+- **Purpose:** Provide canonical structured data or schema.
+- **Format:** Raw JSON content within a contextual wrapper or linked `.json` file.
+- **Key Sections:** Introduction, Link to JSON File (Optional), JSON Content Block, Schema Reference (if applicable).
+- **Associated Template:** N/A (or `template_json_wrapper.md.jinja`) | **Schema:** `schema_json.json` | **Renderer:** JSON Viewer
+- **Example:** *[Hypothetical: GP-FD-06-001-SPEC-A.json]*
+
+---
+
+### INFO-BOM — Bill of Materials
+- **Purpose:** Provide a detailed list of parts/materials for manufacturing.
+- **Format:** Structured table or list.
+- **Key Sections:** Assembly Identification and Metadata, Component Table (Level, Item Number, Part Number, Description, Quantity, Unit, Material/Spec Reference, Source), Revision History.
+- **Associated Template:** `template_bom.md.jinja` | **Schema:** `schema_bom.json` | **Renderer:** `RendererBOM.tsx`
+- **Example:** *[Hypothetical: GP-AM-AMPEL-0100-57-BOM-A.md]*
+
+---
+
+### INFO-SWD — Software Documentation
+- **Purpose:** Serve as a container for various software documentation (architecture, requirements, design, testing, usage).
+- **Format:** Variable (UML diagrams, narrative, code, guides).
+- **Key Sections:** Introduction, Architecture, Requirements, Design, API Documentation, Test Plans, Usage Guides.
+- **Associated Template:** `template_swd_*.md.jinja` | **Schema:** `schema_swd_*.json` | **Renderer:** `RendererSWD_*.tsx`
+- **Example:** *[Hypothetical: GP-COM-AI-0300-FSW-SDD-A.md]* *(Example updated to reflect new GP-COM code)*
+
+---
+
+### INFO-ADMIN — Administrative Document
+- **Purpose:** Provide non-technical administrative information (meeting minutes, memos, org charts).
+- **Format:** Variable.
+- **Key Sections:** Document Type, Date, Subject, Attendees, Actions, Distribution.
+- **Associated Template:** `template_admin.md.jinja` | **Schema:** `schema_admin.json` | **Renderer:** `RendererADMIN.tsx`
+- **Example:** *[Hypothetical: GP-PM-MEETING-20241026-MIN-A.md]* *(Path updated to GP-PM)*
+
+---
+
+### INFO-REF — Reference Document / Pointer
+- **Purpose:** Serve as a pointer to another canonical document (internal or external).
+- **Format:** Short Markdown wrapper.
+- **Key Sections:** Reference Purpose, Target ID/URL, Description, Relationship Type.
+- **Associated Template:** `template_ref.md.jinja` | **Schema:** `schema_ref.json` | **Renderer:** `RendererREF.tsx`
+- **Example:** [GP-PM-CERT-0500-01-005-REF-A.md](./GP-PM/GP-PM-CERT-0500-01-005-REF-A.md) *(Path updated to GP-PM)*
+
+---
+
+### INFO-IDX — Index Document
+- **Purpose:** Provide a table of contents or index for a specific section or topic.
+- **Format:** Hierarchical list of links.
+- **Key Sections:** Title/Scope, Hierarchical Entries (Link, Title, Description/InfoCodes).
+- **Associated Template:** N/A (Dynamic) | **Schema:** N/A | **Renderer:** Navigation Component
+- **Example:** This very document (`AToC.md`) serves as the master index. *(Example: GP-AM-AMPEL-0100-00-000-IDX-A.md)*
+
+---
+
+### INFO-MPD — Maintenance Planning Document
+- **Purpose:** Detail scheduled maintenance tasks derived from reliability analysis.
+- **Format:** Tabular, linking tasks, components, intervals, and procedures.
+- **Key Sections:** Introduction, Task List (ID, Component, Description, Interval, Resources, PROC Reference), Schedule Overview.
+- **Associated Template:** `template_mpd.md.jinja` | **Schema:** `schema_mpd.json` | **Renderer:** `RendererMPD.tsx`
+- **Example:** *[Hypothetical: GP-AM-AMPEL-0100-MPD-A.md]*
+
+---
+
+### INFO-WDM — Wiring Diagram Manual
+- **Purpose:** Compile and present wiring diagrams.
+- **Format:** Compiled document (typically a PDF) linked from a Markdown wrapper.
+- **Key Sections:** Introduction, Usage Instructions, Diagram List, Schematics, Harness Diagrams, Pinouts, Component Locator.
+- **Associated Template:** `template_wdm_wrapper.md.jinja` | **Schema:** `schema_wdm.json` | **Renderer:** Link/PDF Viewer
+- **Example:** *[Hypothetical: Link to WDM for GP-AM-AMPEL-0100]*
+
+---
+
+### INFO-CERT — Certification Document
+- **Purpose:** Provide formal documentation required by regulatory authorities.
+- **Format:** Regulated formats (letters, forms) with a wrapper linking to the official document.
+- **Key Sections:** Regulatory Reference, Compliance Statement, Evidence Links, Signatures, Dates.
+- **Associated Template:** `template_cert_wrapper.md.jinja` | **Schema:** `schema_cert.json` | **Renderer:** `RendererCERT.tsx`
+- **Example:** *[Hypothetical: GP-PM-CERT-FAA-8110-A.md]* *(Path updated to GP-PM)*
+
+---
+
+### INFO-PRES — Presentation
+- **Purpose:** Deliver slides or visual content for briefings, reviews, or training.
+- **Format:** Link to file (`.pptx`/`.pdf`) or Markdown slides with a contextual wrapper.
+- **Key Sections:** Title, Presenter, Date, Event, Abstract, Link.
+- **Associated Template:** `template_pres_wrapper.md.jinja` | **Schema:** `schema_pres.json` | **Renderer:** Link/Slide Viewer
+- **Example:** *[Hypothetical: GP-PM-PDR-Slides-A.md]* *(Path updated to GP-PM)*
+
+---
+
+### INFO-BASE — Baseline Document
+- **Purpose:** Record a formally approved version representing a milestone.
+- **Format:** Based on the underlying document type plus baseline metadata.
+- **Key Sections:** Underlying Document Content + Baseline Metadata (version, approval date, change log).
+- **Associated Template:** Uses underlying template with additional baseline fields.
+- **Example:** *[Hypothetical: GP-AM-AMPEL-0100-SPEC-CDR-BASE-A.md]*
+
+---
+
+### INFO-MD — Markdown Document
+- **Purpose:** Generic Markdown document for notes, wikis, or informal documentation.
+- **Format:** Free-form Markdown.
+- **Key Sections:** Title, Author, Date, Content.
+- **Associated Template:** `template_md_generic.md.jinja` | **Schema:** `schema_md_generic.json` | **Renderer:** Standard Markdown Renderer
+- **Example:** *[Hypothetical: GP-COM-TECHNOTE-QPU-BENCHMARK-A.md]* *(Example updated to reflect new GP-COM code)*
+
+---
+
+### INFO-SCRIPT — Script / Code
+- **Purpose:** Provide executable code with context and usage information.
+- **Format:** Code wrapper with embedded code or link to an external file.
+- **Key Sections:** Purpose, Language, Version, Dependencies, Inputs, Usage, Link, Expected Output.
+- **Associated Template:** `template_script_wrapper.md.jinja` | **Schema:** `schema_script.json` | **Renderer:** Code Block Renderer
+- **Example:** *[Hypothetical: GP-GRO-AUTOCHECK-SCRIPT-A.py.md]* *(Example updated to reflect new GP-GRO code)*
+
+---
+
+### INFO-NB — Notebook
+- **Purpose:** Provide an interactive computational notebook (e.g., Jupyter).
+- **Format:** Link to `.ipynb` with a metadata wrapper.
+- **Key Sections:** Title, Purpose, Libraries/Dependencies, Link, Summary of Findings (Optional).
+- **Associated Template:** `template_notebook_wrapper.md.jinja` | **Schema:** `schema_notebook.json` | **Renderer:** Notebook Viewer
+- **Example:** *[Hypothetical: GP-CAL-TRAJECTORY-OPT-NB-A.ipynb.md]*
+
+---
+
+## GAIA-AIR-ESSENTIALS: Core Operational Domains
+
+*This section defines the primary operational domains within the GAIA AIR framework, providing a high-level conceptual layering.*
+
+**ESTRUCTURA PRIMARIA**
+
+### ON GROUND (on-ground)
+Infraestructura terrestre, soporte, operaciones base.
+**Ecosystem:** ON-GROUND-ECOSYSTEMS
+*(Primarily covered by **Part 4: GP-GRO**)*
+
+### INTRO ATMOSFERIC (intro-sphere)
+Región atmosférica inferior, vuelos por debajo de la ionosfera.
+**Ecosystem:** INTRO-SPHERE-ECOSYSTEMS
+*(Primarily covered by **Part 1: GP-AM**)*
+
+### EXO ATMOSFERIC (exo-sphere)
+Región superior y exoatmosférica, operaciones orbitales o de límite.
+**Ecosystem:** EXO-SPHERE-ECOSYSTEMS
+*(Primarily covered by **Part 2: GP-AS**)*
+
+---
+
+### Interactive Diagram
+
+```mermaid
+graph TD
+    %% Primary Structure Zones
+    ON_GROUND["ON GROUND (on-ground)<br>Infraestructura terrestre,<br>soporte, operaciones base.<br><i>(Ref: Part 4 GP-GRO)</i>"]:::zoneStyle
+    INTRO_SPHERE["INTRO ATMOSPHERIC (intro-sphere)<br>Región atmosférica inferior,<br>vuelos < ionosfera.<br><i>(Ref: Part 1 GP-AM)</i>"]:::zoneStyle
+    EXO_SPHERE["EXO ATMOSPHERIC (exo-sphere)<br>Región superior/exoatmosférica,<br>operaciones orbitales.<br><i>(Ref: Part 2 GP-AS)</i>"]:::zoneStyle
+
+    %% Ecosystems
+    ON_GROUND_ECOSYSTEMS["ON-GROUND-ECOSYSTEMS"]:::ecosystemStyle
+    INTRO_SPHERE_ECOSYSTEMS["INTRO-SPHERE-ECOSYSTEMS"]:::ecosystemStyle
+    EXO_SPHERE_ECOSYSTEMS["EXO-SPHERE-ECOSYSTEMS"]:::ecosystemStyle
+
+    %% Connections
+    ON_GROUND -- Serves --> INTRO_SPHERE
+    INTRO_SPHERE -- Gateway --> EXO_SPHERE
+    ON_GROUND --> ON_GROUND_ECOSYSTEMS
+    INTRO_SPHERE --> INTRO_SPHERE_ECOSYSTEMS
+    EXO_SPHERE --> EXO_SPHERE_ECOSYSTEMS
+
+    %% Styling
+    classDef zoneStyle fill:#f2f2f2,stroke:#333,stroke-width:2px,padding:10px;
+    classDef ecosystemStyle fill:#e6f7ff,stroke:#0077cc,stroke-width:1px,padding:8px,rx:5px,ry:5px;
 ```
----
-**COAFI Frameworks built on GAIA AIR core business model construction and intentioned portfolio (declared)**
----
-
-## Part 0: Program Foundations (GP-FD) 🌱🔬
-
-*Purpose: Foundational Principles & Context Manuals*
-
-### FD.00: Introduction & Program Vision
-*Establishes the overarching goals, vision, and roadmap for the GAIA AIR program and the COAFI framework.*
-*   [GP-FD-00-001-OV-A.md](./GP-FD-00-001-OV-A.md): 00-01: Introduction & Program Vision Overview - *(OV)*
-*   [GP-FD-00-002-OV-A.md](./GP-FD-00-002-OV-A.md): 00-02: Core Principles of GAIA AIR - *(OV)*
-*   [GP-FD-00-003-PLAN-A.md](./GP-FD-00-003-PLAN-A.md): 00-03: Program Roadmap & Phasing - *(PLAN)*
-*   [GP-FD-00-004-RPT-A.md](./GP-FD-00-004-RPT-A.md): 00-04: Long-Term Cosmic Impetus & Goals - *(RPT)*
-*   [GP-FD-00-005-SDD-A.md](./GP-FD-00-005-SDD-A.md): 00-05: AI-Driven Vision Monitoring & Adaptation System - *(SDD)*
-
-### FD.01: Key Theories & Proofs
-*Details the core scientific and theoretical underpinnings of GAIA AIR technologies (Quantum Propulsion, Federated AI, Advanced Materials).*
-*   [GP-FD-01-001-OV-A.md](./GP-FD-01-001-OV-A.md): 01-01: Key Theories & Proofs Overview - *(OV)*
-*   [GP-FD-01-002-OV-A.md](./GP-FD-01-002-OV-A.md): 01-02: Quantum Propulsion Theory Principles (QEE/QSM) - *(OV)*
-*   [GP-FD-01-003-OV-A.md](./GP-FD-01-003-OV-A.md): 01-03: Federated AI Theory Principles (i-Aher0) - *(OV)*
-*   [GP-FD-01-004-OV-A.md](./GP-FD-01-004-OV-A.md): 01-04: BNNT/Carbon-Lattice Composites Theoretical Basis (AMPEL) - *(OV)*
-*   [GP-FD-01-005-RES-A.md](./GP-FD-01-005-RES-A.md): 01-05: Q-Thruster Conceptual Proofs & Validation Data - *(RES, RPT)*
-*   [GP-FD-01-006-RES-A.md](./GP-FD-01-006-RES-A.md): 01-06: AI Model Validation Reports (Foundational) - *(RES, RPT)*
-
-### FD.02: Regulatory & Standards Base
-*Outlines the applicable regulatory frameworks (FAA, EASA, Space) and industry standards (ISO, ATA, S1000D) governing GAIA AIR.*
-*   [GP-FD-02-001-OV-A.md](./GP-FD-02-001-OV-A.md): 02-01: Regulatory & Standards Overview - *(OV)*
-*   [GP-FD-02-002-REQ-A.md](./GP-FD-02-002-REQ-A.md): 02-02: Applicable Airworthiness Regulations (FAA/EASA) - *(REQ, LIST)*
-*   [GP-FD-02-003-REQ-A.md](./GP-FD-02-003-REQ-A.md): 02-03: Applicable Space Standards (NASA/ESA/ECSS/Commercial) - *(REQ, LIST)*
-*   [GP-FD-02-004-REQ-A.md](./GP-FD-02-004-REQ-A.md): 02-04: Relevant ISO Standards (9001, 14001, 27001, etc.) - *(REQ, REF)*
-*   [GP-FD-02-005-OV-A.md](./GP-FD-02-005-OV-A.md): 02-05: COAFI Alignment with ATA/S1000D/AS Standards - *(OV, REF)*
-*   [GP-FD-02-006-SDD-A.md](./GP-FD-02-006-SDD-A.md): 02-06: AI-Driven Regulatory Watch & Compliance Mapping System - *(SDD)*
-
-### FD.03: Cross-Disciplinary Research
-*Covers research spanning multiple fields, such as multi-physics simulation, quantum computing applications, and advanced materials R&D.*
-*   [GP-FD-03-001-OV-A.md](./GP-FD-03-001-OV-A.md): 03-01: Cross-Disciplinary Research Overview - *(OV)*
-*   [GP-FD-03-002-OV-A.md](./GP-FD-03-002-OV-A.md): 03-02: Multi-Physics Simulation Principles - *(OV)*
-*   [GP-FD-03-003-RPT-A.md](./GP-FD-03-003-RPT-A.md): 03-03: Quantum Computing Applications in Aerospace - Research Report - *(RPT)*
-*   [GP-FD-03-004-RPT-A.md](./GP-FD-03-004-RPT-A.md): 03-04: Cosmic Vacuum Energy & Propulsion Research Report - *(RPT)*
-*   [GP-FD-03-005-PLAN-A.md](./GP-FD-03-005-PLAN-A.md): 03-05: Advanced Materials R&D Pipeline Plan - *(PLAN, RPT)*
-*   [GP-FD-03-006-LIST-A.md](./GP-FD-03-006-LIST-A.md): 03-06: Academic & Industrial Research Partnerships List - *(LIST, REF)*
-
-### FD.04: Ethical AI & Operational Framework
-*Defines the ethical policies, bias mitigation strategies, and explainability requirements for AI systems within GAIA AIR.*
-*   [GP-FD-04-001-OV-A.md](./GP-FD-04-001-OV-A.md): 04-01: Ethical AI Framework Overview - *(OV)*
-*   [GP-FD-04-002-PLAN-A.md](./GP-FD-04-002-PLAN-A.md): 04-02: GAIA AIR AI Ethics Policy & Plan - *(PLAN, REQ)*
-*   [GP-FD-04-003-PROC-A.md](./GP-FD-04-003-PROC-A.md): 04-03: Bias Detection & Mitigation Procedures - *(PROC)*
-*   [GP-FD-04-004-REQ-A.md](./GP-FD-04-004-REQ-A.md): 04-04: Explainable AI (XAI) Audit Trail Requirements - *(REQ, SPEC)*
-*   [GP-FD-04-005-RPT-A.md](./GP-FD-04-005-RPT-A.md): 04-05: Ethical Framework for Autonomous Decision Making - Research Report - *(RPT)*
-
-### FD.05: Reserved - Long-Term Interplanetary Vision
-*Placeholder for future documentation regarding long-term interplanetary goals and strategies.*
-*   [GP-FD-05-001-OV-A.md](./GP-FD-05-001-OV-A.md): 05-01: Reserved - Long-Term Interplanetary Vision Overview - *(OV)*
-
-### FD.06: Foundational Security Architectures & Trust Frameworks
-*Analysis of internal certificate usage and trust frameworks (ATA, ATAS, ATAC) informing GAIA AIR security.*
-*   [GP-FD-06-001-RPT-A.md](./GP-FD-06-001-RPT-A.md): 06-01: Internal Digital Certificate Frameworks Analysis (ATA, ATAS, ATAC) - *(RPT, REF)*
-
-### FD.07-FD.99: Reserved Future Sections
-*Placeholders for future foundational topics as the GAIA AIR program evolves.*
-*   *(No specific modules defined in input)*
 
 ---
 
-## Part I: Flight Systems (AMPEL360XWLRGA) (GP-AM) 🚀
-
-*Purpose: Airframe Design, System & Maintenance Manuals*
-
-### ATA 00: Intro & General
-*Introduction, general requirements, certification strategy, design principles, and documentation system for the airframe.*
-*   [GP-AM-AMPEL-0100-00-001-OV-A.md](./GP-AM-AMPEL-0100-00-001-OV-A.md): 00-01: Intro & General Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-00-002-REQ-A.md](./GP-AM-AMPEL-0100-00-002-REQ-A.md): 00-10: Regulatory Compliance Overview - *(REQ)*
-*   [GP-AM-AMPEL-0100-00-003-PLAN-A.md](./GP-AM-AMPEL-0100-00-003-PLAN-A.md): 00-11: Certification Strategy - *(PLAN)*
-*   [GP-AM-AMPEL-0100-00-004-OV-A.md](./GP-AM-AMPEL-0100-00-004-OV-A.md): 00-20: Core Design Principles - *(OV)*
-*   [GP-AM-AMPEL-0100-00-005-OV-A.md](./GP-AM-AMPEL-0100-00-005-OV-A.md): 00-21: Advanced Materials Philosophy (AMPEL) - *(OV)*
-*   [GP-AM-AMPEL-0100-00-006-SDD-A.md](./GP-AM-AMPEL-0100-00-006-SDD-A.md): 00-30: AI-Driven Document Adaptation System Description - *(SDD)*
-
-### ATA 01: Aircraft General
-*Aircraft identification, general specifications, performance characteristics, weight and balance, and operational limits.*
-*   [GP-AM-AMPEL-0100-01-001-OV-A.md](./GP-AM-AMPEL-0100-01-001-OV-A.md): 01-01: Aircraft Identification & General Specs Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-01-002-SPEC-A.md](./GP-AM-AMPEL-0100-01-002-SPEC-A.md): 01-02: Aircraft Identification and Registration Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-01-003-SPEC-A.md](./GP-AM-AMPEL-0100-01-003-SPEC-A.md): 01-03: General Specifications - *(SPEC)*
-*   [GP-AM-AMPEL-0100-01-004-RPT-A.md](./GP-AM-AMPEL-0100-01-004-RPT-A.md): 01-10: Performance Characteristics Report - *(RPT)*
-*   [GP-AM-AMPEL-0100-01-005-LIST-A.md](./GP-AM-AMPEL-0100-01-005-LIST-A.md): 01-11: Weight and Balance Data List - *(LIST, SPEC)*
-*   [GP-AM-AMPEL-0100-01-006-SPEC-A.md](./GP-AM-AMPEL-0100-01-006-SPEC-A.md): 01-20: Operational Limits and Restrictions Specification - *(SPEC, REQ)*
-*   [GP-AM-AMPEL-0100-01-007-SDD-A.md](./GP-AM-AMPEL-0100-01-007-SDD-A.md): 01-21: AI-Enhanced Operational Monitoring System Description - *(SDD)*
-
-### ATA 02: Operations Information
-*Procedures for normal, abnormal, and emergency flight operations, including AI-assisted concepts.*
-*   [GP-AM-AMPEL-0100-02-001-OV-A.md](./GP-AM-AMPEL-0100-02-001-OV-A.md): 02-01: Operations Manual Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-02-002-PROC-A.md](./GP-AM-AMPEL-0100-02-002-PROC-A.md): 02-10: Normal Operating Procedures - *(PROC)*
-*   [GP-AM-AMPEL-0100-02-003-SDD-A.md](./GP-AM-AMPEL-0100-02-003-SDD-A.md): 02-11: AI-Assisted Flight Operations Concept - *(SDD)*
-*   [GP-AM-AMPEL-0100-02-004-PROC-A.md](./GP-AM-AMPEL-0100-02-004-PROC-A.md): 02-20: Abnormal Operating Procedures - *(PROC)*
-*   [GP-AM-AMPEL-0100-02-005-PROC-A.md](./GP-AM-AMPEL-0100-02-005-PROC-A.md): 02-21: Emergency Procedures - *(PROC)*
-
-### ATA 03: Performance
-*Performance data for takeoff, cruise, and landing, including analysis of quantum propulsion impact and AI optimization.*
-*   [GP-AM-AMPEL-0100-03-001-OV-A.md](./GP-AM-AMPEL-0100-03-001-OV-A.md): 03-01: Performance Data Overview - *(OV, RPT)*
-*   [GP-AM-AMPEL-0100-03-002-RPT-A.md](./GP-AM-AMPEL-0100-03-002-RPT-A.md): 03-10: Takeoff Performance Data Report - *(RPT, CAL)*
-*   [GP-AM-AMPEL-0100-03-003-SDD-A.md](./GP-AM-AMPEL-0100-03-003-SDD-A.md): 03-11: Quantum Propulsion Impact on Takeoff Analysis - *(SDD, RPT)*
-*   [GP-AM-AMPEL-0100-03-004-RPT-A.md](./GP-AM-AMPEL-0100-03-004-RPT-A.md): 03-20: Cruise Performance Data Report - *(RPT, CAL)*
-*   [GP-AM-AMPEL-0100-03-005-SDD-A.md](./GP-AM-AMPEL-0100-03-005-SDD-A.md): 03-21: AI-Optimized Cruise Efficiency System - *(SDD)*
-*   [GP-AM-AMPEL-0100-03-006-RPT-A.md](./GP-AM-AMPEL-0100-03-006-RPT-A.md): 03-30: Landing Performance Data Report - *(RPT, CAL)*
-
-### ATA 04: Airworthiness
-*Airworthiness requirements, certification compliance, continued airworthiness program, and AI-driven monitoring.*
-*   [GP-AM-AMPEL-0100-04-001-OV-A.md](./GP-AM-AMPEL-0100-04-001-OV-A.md): 04-01: Airworthiness Requirements Overview - *(OV, REQ)*
-*   [GP-AM-AMPEL-0100-04-002-REQ-A.md](./GP-AM-AMPEL-0100-04-002-REQ-A.md): 04-10: Certification Standards Compliance Requirements - *(REQ)*
-*   [GP-AM-AMPEL-0100-04-003-RPT-A.md](./GP-AM-AMPEL-0100-04-003-RPT-A.md): 04-11: Quantum System Certification Challenges Report - *(RPT)*
-*   [GP-AM-AMPEL-0100-04-004-PLAN-A.md](./GP-AM-AMPEL-0100-04-004-PLAN-A.md): 04-20: Continued Airworthiness Maintenance Program - *(PLAN)*
-*   [GP-AM-AMPEL-0100-04-005-SDD-A.md](./GP-AM-AMPEL-0100-04-005-SDD-A.md): 04-21: AI-Driven Airworthiness Monitoring System - *(SDD)*
-
-### ATA 05: Time Limits / Maintenance Checks
-*Maintenance philosophy, program plan, AI-driven scheduling and prediction, life limits, and structural inspections.*
-*   [GP-AM-AMPEL-0100-05-001-OV-A.md](./GP-AM-AMPEL-0100-05-001-OV-A.md): 05-01: Maintenance Philosophy Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-05-002-PLAN-A.md](./GP-AM-AMPEL-0100-05-002-PLAN-A.md): 05-10: Maintenance Program Plan - *(PLAN)*
-*   [GP-AM-AMPEL-0100-05-003-SDD-A.md](./GP-AM-AMPEL-0100-05-003-SDD-A.md): 05-11: AI-Driven Adaptive Scheduling System (i-Aher0) - *(SDD)*
-*   [GP-AM-AMPEL-0100-05-004-SDD-A.md](./GP-AM-AMPEL-0100-05-004-SDD-A.md): 05-20: Predictive Maintenance System Description (i-Aher0) - *(SDD)*
-*   [GP-AM-AMPEL-0100-05-005-LIST-A.md](./GP-AM-AMPEL-0100-05-005-LIST-A.md): 05-50: Component Life Limits List - *(LIST)*
-*   [GP-AM-AMPEL-0100-05-006-REQ-A.md](./GP-AM-AMPEL-0100-05-006-REQ-A.md): 05-51: Airworthiness Limitations Section Requirements - *(REQ)*
-*   [GP-AM-AMPEL-0100-05-007-PLAN-A.md](./GP-AM-AMPEL-0100-05-007-PLAN-A.md): 05-52: Structural Inspection Program Plan - *(PLAN)*
-
-### ATA 06: Dimensions & Areas
-*Coordinate systems, overall dimensions, station definitions, maintenance zones, and key reference points.*
-*   [GP-AM-AMPEL-0100-06-001-OV-A.md](./GP-AM-AMPEL-0100-06-001-OV-A.md): 06-01: Dimensions & Areas Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-06-002-SPEC-A.md](./GP-AM-AMPEL-0100-06-002-SPEC-A.md): 06-02: Coordinate System & Datum Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-06-003-DWG-A.md](./GP-AM-AMPEL-0100-06-003-DWG-A.md): 06-10: Overall Aircraft Dimensions Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-06-004-LIST-A.md](./GP-AM-AMPEL-0100-06-004-LIST-A.md): 06-11: Key Component Dimensions List - *(LIST, SPEC)*
-*   [GP-AM-AMPEL-0100-06-005-DWG-A.md](./GP-AM-AMPEL-0100-06-005-DWG-A.md): 06-20: Fuselage Station Definition Drawing - *(DWG, SPEC)*
-*   [GP-AM-AMPEL-0100-06-006-DWG-A.md](./GP-AM-AMPEL-0100-06-006-DWG-A.md): 06-21: Wing Station Definition Drawing - *(DWG, SPEC)*
-*   [GP-AM-AMPEL-0100-06-007-DWG-A.md](./GP-AM-AMPEL-0100-06-007-DWG-A.md): 06-22: Maintenance Zone Diagram - *(DWG)*
-*   [GP-AM-AMPEL-0100-06-008-SPEC-A.md](./GP-AM-AMPEL-0100-06-008-SPEC-A.md): 06-30: Key Reference Point Specification - *(SPEC, LIST)*
-
-### ATA 07: Lifting & Shoring
-*Specifications and locations for jacking and shoring points, including automated/robotic systems.*
-*   [GP-AM-AMPEL-0100-07-001-OV-A.md](./GP-AM-AMPEL-0100-07-001-OV-A.md): 07-01: Lifting/Shoring Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-07-002-SPEC-A.md](./GP-AM-AMPEL-0100-07-002-SPEC-A.md): 07-10: Jacking Point Specification & Load Limits - *(SPEC)*
-*   [GP-AM-AMPEL-0100-07-003-DWG-A.md](./GP-AM-AMPEL-0100-07-003-DWG-A.md): 07-11: Jacking Point Location Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-07-004-SDD-A.md](./GP-AM-AMPEL-0100-07-004-SDD-A.md): 07-12: Automated/Robotic Jacking System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-07-005-SPEC-A.md](./GP-AM-AMPEL-0100-07-005-SPEC-A.md): 07-20: Shoring Point Specification & Requirements - *(SPEC)*
-*   [GP-AM-AMPEL-0100-07-006-DWG-A.md](./GP-AM-AMPEL-0100-07-006-DWG-A.md): 07-21: Shoring Point Location Drawing - *(DWG)*
-
-### ATA 08: Leveling & Weighing
-*Procedures for aircraft leveling and weighing, including CG calculation analysis.*
-*   [GP-AM-AMPEL-0100-08-001-OV-A.md](./GP-AM-AMPEL-0100-08-001-OV-A.md): 08-01: Leveling & Weighing Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-08-002-PROC-A.md](./GP-AM-AMPEL-0100-08-002-PROC-A.md): 08-10: Weighing Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-08-003-CAL-A.md](./GP-AM-AMPEL-0100-08-003-CAL-A.md): 08-11: HPC-Based CG Calculation Analysis - *(CAL)*
-*   [GP-AM-AMPEL-0100-08-004-PROC-A.md](./GP-AM-AMPEL-0100-08-004-PROC-A.md): 08-20: Leveling Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-08-005-DWG-A.md](./GP-AM-AMPEL-0100-08-005-DWG-A.md): 08-21: Leveling Point Location Drawing - *(DWG, SPEC)*
-
-### ATA 09: Towing & Taxiing
-*Procedures, limitations, and specifications for towing and taxiing, including autonomous taxiing systems.*
-*   [GP-AM-AMPEL-0100-09-001-OV-A.md](./GP-AM-AMPEL-0100-09-001-OV-A.md): 09-01: Towing & Taxiing Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-09-002-PROC-A.md](./GP-AM-AMPEL-0100-09-002-PROC-A.md): 09-10: Towing Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-09-003-SPEC-A.md](./GP-AM-AMPEL-0100-09-003-SPEC-A.md): 09-11: Towing Limitations Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-09-004-DWG-A.md](./GP-AM-AMPEL-0100-09-004-DWG-A.md): 09-12: Towing Point Specification Drawing - *(DWG, SPEC)*
-*   [GP-AM-AMPEL-0100-09-005-PROC-A.md](./GP-AM-AMPEL-0100-09-005-PROC-A.md): 09-20: Taxi Procedure & Safety Guidelines - *(PROC)*
-*   [GP-AM-AMPEL-0100-09-006-SDD-A.md](./GP-AM-AMPEL-0100-09-006-SDD-A.md): 09-21: Autonomous Taxiing System Description - *(SDD)*
-
-### ATA 10: Parking, Mooring, Storage
-*Procedures and requirements for parking, mooring, and short/long-term storage, including cryogenic fuel and quantum system considerations.*
-*   [GP-AM-AMPEL-0100-10-001-OV-A.md](./GP-AM-AMPEL-0100-10-001-OV-A.md): 10-01: Parking, Mooring, Storage Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-10-002-PROC-A.md](./GP-AM-AMPEL-0100-10-002-PROC-A.md): 10-10: Parking & Mooring Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-10-003-REQ-A.md](./GP-AM-AMPEL-0100-10-003-REQ-A.md): 10-11: Parking & Mooring Requirements - *(REQ)*
-*   [GP-AM-AMPEL-0100-10-004-PROC-A.md](./GP-AM-AMPEL-0100-10-004-PROC-A.md): 10-20: Short/Long Term Storage Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-10-005-PROC-A.md](./GP-AM-AMPEL-0100-10-005-PROC-A.md): 10-21: Cryogenic Fuel Storage Management Procedure - *(PROC, SPEC)*
-*   [GP-AM-AMPEL-0100-10-006-PROC-A.md](./GP-AM-AMPEL-0100-10-006-PROC-A.md): 10-22: Quantum System Safing Procedure (Storage) - *(PROC)*
-
-### ATA 11: Placards & Markings
-*Specifications, locations, and drawings for exterior and interior placards and markings, including hazard markings and AR enhancements.*
-*   [GP-AM-AMPEL-0100-11-001-OV-A.md](./GP-AM-AMPEL-0100-11-001-OV-A.md): 11-01: Placards & Markings Overview - *(OV, REF)*
-*   [GP-AM-AMPEL-0100-11-002-DWG-A.md](./GP-AM-AMPEL-0100-11-002-DWG-A.md): 11-10: Exterior Placard Location Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-11-003-LIST-A.md](./GP-AM-AMPEL-0100-11-003-LIST-A.md): 11-11: Exterior Placard List & Specifications - *(LIST, SPEC)*
-*   [GP-AM-AMPEL-0100-11-004-SPEC-A.md](./GP-AM-AMPEL-0100-11-004-SPEC-A.md): 11-12: Quantum/High-Voltage Hazard Marking Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-11-005-DWG-A.md](./GP-AM-AMPEL-0100-11-005-DWG-A.md): 11-20: Interior Placard Location Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-11-006-LIST-A.md](./GP-AM-AMPEL-0100-11-006-LIST-A.md): 11-21: Interior Placard List & Specifications - *(LIST, SPEC)*
-*   [GP-AM-AMPEL-0100-11-007-SDD-A.md](./GP-AM-AMPEL-0100-11-007-SDD-A.md): 11-22: AR-Enhanced Placard System Description - *(SDD)*
-
-### ATA 12: Servicing – Routine
-*Procedures for routine servicing including fueling (H2/SAF), fluids, oxygen, quantum system coolant, and cleaning.*
-*   [GP-AM-AMPEL-0100-12-001-OV-A.md](./GP-AM-AMPEL-0100-12-001-OV-A.md): 12-01: Routine Servicing Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-12-002-PROC-A.md](./GP-AM-AMPEL-0100-12-002-PROC-A.md): 12-10: Fueling Procedure (Hydrogen & SAF) - *(PROC)*
-*   [GP-AM-AMPEL-0100-12-003-PROC-A.md](./GP-AM-AMPEL-0100-12-003-PROC-A.md): 12-11: Oil/Fluid Servicing Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-12-004-PROC-A.md](./GP-AM-AMPEL-0100-12-004-PROC-A.md): 12-12: Oxygen Servicing Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-12-005-PROC-A.md](./GP-AM-AMPEL-0100-12-005-PROC-A.md): 12-13: Quantum System Coolant Servicing Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-12-006-SPEC-A.md](./GP-AM-AMPEL-0100-12-006-SPEC-A.md): 12-14: Quantum System Coolant Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-12-007-PROC-A.md](./GP-AM-AMPEL-0100-12-007-PROC-A.md): 12-20: Exterior/Interior Cleaning Procedure - *(PROC)*
-
-### ATA 13: Hydraulic Power
-*Overview of the minimal hydraulic system, focusing on Electro-Hydrostatic Actuators (EHA) and redundancy.*
-*   [GP-AM-AMPEL-0100-13-001-OV-A.md](./GP-AM-AMPEL-0100-13-001-OV-A.md): 13-01: Hydraulic System Overview (Minimal/EHA) - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-13-002-SPEC-A.md](./GP-AM-AMPEL-0100-13-002-SPEC-A.md): 13-10: Electro-Hydrostatic Actuator (EHA) Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-13-003-DWG-A.md](./GP-AM-AMPEL-0100-13-003-DWG-A.md): 13-20: Hydraulic Line Drawing (Redundancy Only) - *(DWG)*
-
-### ATA 14: Pneumatic Power
-*Overview of the minimal pneumatic system, including ducting if applicable.*
-*   [GP-AM-AMPEL-0100-14-001-OV-A.md](./GP-AM-AMPEL-0100-14-001-OV-A.md): 14-01: Pneumatic System Overview (Minimal) - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-14-002-DWG-A.md](./GP-AM-AMPEL-0100-14-002-DWG-A.md): 14-20: Pneumatic Ducting Drawing (If Applicable) - *(DWG)*
-
-### ATA 15: Air Conditioning
-*Reference to ATA Chapter 21 for Air Conditioning details.*
-*   [GP-AM-AMPEL-0100-15-001-REF-A.md](./GP-AM-AMPEL-0100-15-001-REF-A.md): 15-01: Reference to ATA 21 - *(REF)*
-
-### ATA 16: Pressurization
-*Reference to ATA Chapter 21 for Pressurization details.*
-*   [GP-AM-AMPEL-0100-16-001-REF-A.md](./GP-AM-AMPEL-0100-16-001-REF-A.md): 16-01: Reference to ATA 21 - *(REF)*
-
-### ATA 17: Environmental Control
-*Reference to ATA Chapter 21 for Environmental Control System (ECS) details.*
-*   [GP-AM-AMPEL-0100-17-001-REF-A.md](./GP-AM-AMPEL-0100-17-001-REF-A.md): 17-01: Reference to ATA 21 - *(REF)*
-
-### ATA 18: Vibration & Noise
-*Vibration and noise control overview, including monitoring systems (HUMS), AI anomaly detection, active noise cancellation, and acoustic liners.*
-*   [GP-AM-AMPEL-0100-18-001-OV-A.md](./GP-AM-AMPEL-0100-18-001-OV-A.md): 18-01: Vibration & Noise Control Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-18-002-SDD-A.md](./GP-AM-AMPEL-0100-18-002-SDD-A.md): 18-10: Vibration Monitoring System Description (HUMS) - *(SDD)*
-*   [GP-AM-AMPEL-0100-18-003-SDD-A.md](./GP-AM-AMPEL-0100-18-003-SDD-A.md): 18-11: AI-Driven Vibration Anomaly Detection System - *(SDD)*
-*   [GP-AM-AMPEL-0100-18-004-SDD-A.md](./GP-AM-AMPEL-0100-18-004-SDD-A.md): 18-20: Active Noise Cancellation System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-18-005-SPEC-A.md](./GP-AM-AMPEL-0100-18-005-SPEC-A.md): 18-21: Acoustic Liner Specification - *(SPEC)*
-
-### ATA 19: Reserved for Future Use
-*Placeholder for future ATA chapter assignments.*
-*   [GP-AM-AMPEL-0100-19-001-OV-A.md](./GP-AM-AMPEL-0100-19-001-OV-A.md): 19-01: Placeholder - *(OV)*
-
-### ATA 20: Standard Practices – Airframe
-*Standard procedures and specifications for airframe construction and maintenance, including advanced composites (BNNT), bonding, NDT, and repair.*
-*   [GP-AM-AMPEL-0100-20-001-OV-A.md](./GP-AM-AMPEL-0100-20-001-OV-A.md): 20-01: Standard Practices Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-20-002-PROC-A.md](./GP-AM-AMPEL-0100-20-002-PROC-A.md): 20-10: BNNT Composite Fastening Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-20-003-SPEC-A.md](./GP-AM-AMPEL-0100-20-003-SPEC-A.md): 20-11: BNNT Composite Fastening Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-20-004-PROC-A.md](./GP-AM-AMPEL-0100-20-004-PROC-A.md): 20-12: Advanced Adhesive Bonding Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-20-005-SPEC-A.md](./GP-AM-AMPEL-0100-20-005-SPEC-A.md): 20-13: Advanced Adhesive Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-20-006-PROC-A.md](./GP-AM-AMPEL-0100-20-006-PROC-A.md): 20-20: NDT Procedure for Advanced Composites - *(PROC)*
-*   [GP-AM-AMPEL-0100-20-007-SPEC-A.md](./GP-AM-AMPEL-0100-20-007-SPEC-A.md): 20-21: NDT Method Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-20-008-SDD-A.md](./GP-AM-AMPEL-0100-20-008-SDD-A.md): 20-22: AI-Enhanced NDT Analysis System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-20-009-PROC-A.md](./GP-AM-AMPEL-0100-20-009-PROC-A.md): 20-30: BNNT/Carbon-Lattice Repair Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-20-010-SDD-A.md](./GP-AM-AMPEL-0100-20-010-SDD-A.md): 20-31: Digital Twin Guided Repair System Description - *(SDD)*
-
-### ATA 21: Air Conditioning & Pressurization
-*Details of the Environmental Control System (ECS), including air sources, distribution, filtration, pressurization control, and AI-driven climate zones.*
-*   [GP-AM-AMPEL-0100-21-001-OV-A.md](./GP-AM-AMPEL-0100-21-001-OV-A.md): 21-01: ECS System Overview & Philosophy - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-21-002-SDD-A.md](./GP-AM-AMPEL-0100-21-002-SDD-A.md): 21-10: Air Source System Description (Bleed/Electric) - *(SDD)*
-*   [GP-AM-AMPEL-0100-21-003-FIG-A.md](./GP-AM-AMPEL-0100-21-003-FIG-A.md): 21-20: Cabin Air Distribution Diagram - *(FIG)*
-*   [GP-AM-AMPEL-0100-21-004-SPEC-A.md](./GP-AM-AMPEL-0100-21-004-SPEC-A.md): 21-21: Advanced Filtration System Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-21-005-SDD-A.md](./GP-AM-AMPEL-0100-21-005-SDD-A.md): 21-30: Pressurization Control System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-21-006-SPEC-A.md](./GP-AM-AMPEL-0100-21-006-SPEC-A.md): 21-31: Outflow Valve Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-21-007-SDD-A.md](./GP-AM-AMPEL-0100-21-007-SDD-A.md): 21-50: Air Conditioning Pack Technology ("Green ECS") - *(SDD)*
-*   [GP-AM-AMPEL-0100-21-008-SDD-A.md](./GP-AM-AMPEL-0100-21-008-SDD-A.md): 21-60: AI-Driven Personalized Climate Zones System - *(SDD)*
-
-### ATA 22: Auto Flight
-*Architecture and capabilities of the auto flight system, including AI autopilot, quantum-enhanced logic, autothrottle, and FMS/QAO integration.*
-*   [GP-AM-AMPEL-0100-22-001-OV-A.md](./GP-AM-AMPEL-0100-22-001-OV-A.md): 22-01: Auto Flight System Architecture Overview - *(OV, SDD, FIG)*
-*   [GP-AM-AMPEL-0100-22-002-SPEC-A.md](./GP-AM-AMPEL-0100-22-002-SPEC-A.md): 22-10: AI Autopilot Capabilities Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-22-003-SDD-A.md](./GP-AM-AMPEL-0100-22-003-SDD-A.md): 22-11: Quantum-Enhanced Control Logic Concept Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-22-004-SDD-A.md](./GP-AM-AMPEL-0100-22-004-SDD-A.md): 22-30: Auto Throttle System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-22-005-SDD-A.md](./GP-AM-AMPEL-0100-22-005-SDD-A.md): 22-80: FMS Integration with AI & QAO System Description - *(SDD)*
-
-### ATA 23: Communications
-*Architecture for speech and data communications (VHF/HF/SATCOM, ACARS), audio integration, AI management, and QKD security.*
-*   [GP-AM-AMPEL-0100-23-001-OV-A.md](./GP-AM-AMPEL-0100-23-001-OV-A.md): 23-01: Communications System Architecture Overview - *(OV, SDD, FIG)*
-*   [GP-AM-AMPEL-0100-23-002-SDD-A.md](./GP-AM-AMPEL-0100-23-002-SDD-A.md): 23-10: Speech Communication Systems Description (VHF/HF/SATCOM) - *(SDD)*
-*   [GP-AM-AMPEL-0100-23-003-SPEC-A.md](./GP-AM-AMPEL-0100-23-003-SPEC-A.md): 23-11: Speech Communication Systems Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-23-004-SDD-A.md](./GP-AM-AMPEL-0100-23-004-SDD-A.md): 23-20: Data Link System Description (ATC/ACARS) - *(SDD)*
-*   [GP-AM-AMPEL-0100-23-005-SPEC-A.md](./GP-AM-AMPEL-0100-23-005-SPEC-A.md): 23-21: Data Link Protocol Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-23-006-SDD-A.md](./GP-AM-AMPEL-0100-23-006-SDD-A.md): 23-50: Audio Integrating System Description (Intercom/PA) - *(SDD)*
-*   [GP-AM-AMPEL-0100-23-007-SDD-A.md](./GP-AM-AMPEL-0100-23-007-SDD-A.md): 23-70: AMPEL AI Communications Management Function Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-23-008-SDD-A.md](./GP-AM-AMPEL-0100-23-008-SDD-A.md): 23-71: AI Spectrum Optimization Concept - *(SDD)*
-*   [GP-AM-AMPEL-0100-23-009-SDD-A.md](./GP-AM-AMPEL-0100-23-009-SDD-A.md): 23-80: QKD System Integration Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-23-010-SPEC-A.md](./GP-AM-AMPEL-0100-23-010-SPEC-A.md): 23-81: QKD Secure Communication Protocol Specification - *(SPEC)*
-
-### ATA 24: Electrical Power
-*Electrical system architecture, AC/DC generation, batteries, ground power interface, load distribution, AI management, and AEHCS.*
-*   [GP-AM-AMPEL-0100-24-001-OV-A.md](./GP-AM-AMPEL-0100-24-001-OV-A.md): 24-01: Electrical System Architecture Overview - *(OV, SDD, DWG)*
-*   [GP-AM-AMPEL-0100-24-002-SDD-A.md](./GP-AM-AMPEL-0100-24-002-SDD-A.md): 24-20: AC Generation System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-24-003-SDD-A.md](./GP-AM-AMPEL-0100-24-003-SDD-A.md): 24-30: DC Generation System Description (TRU/Battery) - *(SDD)*
-*   [GP-AM-AMPEL-0100-24-004-SPEC-A.md](./GP-AM-AMPEL-0100-24-004-SPEC-A.md): 24-31: Battery System Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-24-005-ICD-A.md](./GP-AM-AMPEL-0100-24-005-ICD-A.md): 24-40: Ground Power Interface Control Document - *(ICD, SPEC)*
-*   [GP-AM-AMPEL-0100-24-006-SDD-A.md](./GP-AM-AMPEL-0100-24-006-SDD-A.md): 24-50: Electrical Load Distribution Architecture - *(SDD, DWG)*
-*   [GP-AM-AMPEL-0100-24-007-SDD-A.md](./GP-AM-AMPEL-0100-24-007-SDD-A.md): 24-51: AI-Driven Load Management System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-24-008-SDD-A.md](./GP-AM-AMPEL-0100-24-008-SDD-A.md): 24-60: AEHCS System Description & Control Logic - *(SDD)*
-
-### ATA 25: Equipment / Furnishings
-*Cabin layout options, crew/passenger seats, VR windows, bins, sustainable materials, cargo loading, galley, and emergency equipment.*
-*   [GP-AM-AMPEL-0100-25-001-OV-A.md](./GP-AM-AMPEL-0100-25-001-OV-A.md): 25-01: Cabin Layout Overview & Options - *(OV, FIG)*
-*   [GP-AM-AMPEL-0100-25-002-SPEC-A.md](./GP-AM-AMPEL-0100-25-002-SPEC-A.md): 25-10: Crew Seat Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-25-003-SPEC-A.md](./GP-AM-AMPEL-0100-25-003-SPEC-A.md): 25-20: Passenger Seat Specification (First/Business/Economy) - *(SPEC)*
-*   [GP-AM-AMPEL-0100-25-004-FIG-A.md](./GP-AM-AMPEL-0100-25-004-FIG-A.md): 25-21: Passenger Seat Layout Figure - *(FIG)*
-*   [GP-AM-AMPEL-0100-25-005-SDD-A.md](./GP-AM-AMPEL-0100-25-005-SDD-A.md): 25-22: VR Window System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-25-006-SPEC-A.md](./GP-AM-AMPEL-0100-25-006-SPEC-A.md): 25-23: Overhead Bin Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-25-007-LIST-A.md](./GP-AM-AMPEL-0100-25-007-LIST-A.md): 25-24: Sustainable Interior Materials List - *(LIST, SPEC)*
-*   [GP-AM-AMPEL-0100-25-008-SDD-A.md](./GP-AM-AMPEL-0100-25-008-SDD-A.md): 25-40: Cargo Loading System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-25-009-LIST-A.md](./GP-AM-AMPEL-0100-25-009-LIST-A.md): 25-50: Galley Equipment List - *(LIST, SPEC)*
-*   [GP-AM-AMPEL-0100-25-010-LIST-A.md](./GP-AM-AMPEL-0100-25-010-LIST-A.md): 25-60: Emergency Equipment List - *(LIST)*
-*   [GP-AM-AMPEL-0100-25-011-DWG-A.md](./GP-AM-AMPEL-0100-25-011-DWG-A.md): 25-61: Emergency Equipment Location Drawing - *(DWG)*
-
-### ATA 26: Fire Protection
-*Fire/smoke detection systems, locations, AI-enhanced algorithms, and extinguisher systems (Halon alternatives) for various zones.*
-*   [GP-AM-AMPEL-0100-26-001-OV-A.md](./GP-AM-AMPEL-0100-26-001-OV-A.md): 26-01: Fire Protection System Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-26-002-SPEC-A.md](./GP-AM-AMPEL-0100-26-002-SPEC-A.md): 26-10: Fire/Smoke Detector Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-26-003-DWG-A.md](./GP-AM-AMPEL-0100-26-003-DWG-A.md): 26-11: Fire/Smoke Detector Location Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-26-004-SDD-A.md](./GP-AM-AMPEL-0100-26-004-SDD-A.md): 26-12: AI-Enhanced Detection Algorithm Description (H2/Battery) - *(SDD)*
-*   [GP-AM-AMPEL-0100-26-005-SDD-A.md](./GP-AM-AMPEL-0100-26-005-SDD-A.md): 26-20: Extinguisher System Description (Halon Alt.) - *(SDD)*
-*   [GP-AM-AMPEL-0100-26-006-SPEC-A.md](./GP-AM-AMPEL-0100-26-006-SPEC-A.md): 26-21: Extinguisher Agent Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-26-007-SDD-A.md](./GP-AM-AMPEL-0100-26-007-SDD-A.md): 26-22: Engine/APU/Cargo Bay Extinguisher System Description - *(SDD)*
-
-### ATA 27: Flight Controls
-*Architecture and description of primary and secondary flight control systems (ailerons, rudder, elevators, trim, flaps, spoilers, slats) and GPAM integration.*
-*   [GP-AM-AMPEL-0100-27-001-OV-A.md](./GP-AM-AMPEL-0100-27-001-OV-A.md): 27-01: Flight Control System Architecture Overview - *(OV, SDD, FIG)*
-*   [GP-AM-AMPEL-0100-27-002-SDD-A.md](./GP-AM-AMPEL-0100-27-002-SDD-A.md): 27-10: Aileron System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-27-003-SPEC-A.md](./GP-AM-AMPEL-0100-27-003-SPEC-A.md): 27-11: Aileron Actuation Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-27-004-SDD-A.md](./GP-AM-AMPEL-0100-27-004-SDD-A.md): 27-20: Rudder System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-27-005-SPEC-A.md](./GP-AM-AMPEL-0100-27-005-SPEC-A.md): 27-21: Rudder Actuation Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-27-006-SDD-A.md](./GP-AM-AMPEL-0100-27-006-SDD-A.md): 27-30: Elevator System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-27-007-SPEC-A.md](./GP-AM-AMPEL-0100-27-007-SPEC-A.md): 27-31: Elevator Actuation Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-27-008-SDD-A.md](./GP-AM-AMPEL-0100-27-008-SDD-A.md): 27-40: Stabilizer Trim System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-27-009-SDD-A.md](./GP-AM-AMPEL-0100-27-009-SDD-A.md): 27-50: Flap System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-27-010-SPEC-A.md](./GP-AM-AMPEL-0100-27-010-SPEC-A.md): 27-51: Flap Actuation Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-27-011-SDD-A.md](./GP-AM-AMPEL-0100-27-011-SDD-A.md): 27-60: Spoiler System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-27-012-SPEC-A.md](./GP-AM-AMPEL-0100-27-012-SPEC-A.md): 27-61: Spoiler Actuation Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-27-013-SDD-A.md](./GP-AM-AMPEL-0100-27-013-SDD-A.md): 27-80: Slat System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-27-014-SPEC-A.md](./GP-AM-AMPEL-0100-27-014-SPEC-A.md): 27-81: Slat Actuation Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-27-015-OV-A.md](./GP-AM-AMPEL-0100-27-015-OV-A.md): 27-90: GPAM System Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-27-016-SDD-A.md](./GP-AM-AMPEL-0100-27-016-SDD-A.md): 27-91: GPAM Control Logic Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-27-017-ICD-A.md](./GP-AM-AMPEL-0100-27-017-ICD-A.md): 27-92: GPAM Interface Control Document (Flight Controls) - *(ICD)*
-
-### ATA 28: Fuel
-*Fuel system architecture for hybrid Hydrogen/SAF, including cryogenic tanks, distribution, pumps, valves, insulation, and quantity indication.*
-*   [GP-AM-AMPEL-0100-28-001-OV-A.md](./GP-AM-AMPEL-0100-28-001-OV-A.md): 28-01: Fuel System Architecture Overview (Hybrid H2/SAF) - *(OV, SDD, FIG)*
-*   [GP-AM-AMPEL-0100-28-002-SPEC-A.md](./GP-AM-AMPEL-0100-28-002-SPEC-A.md): 28-10: Cryogenic Hydrogen Tank Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-28-003-DWG-A.md](./GP-AM-AMPEL-0100-28-003-DWG-A.md): 28-11: Cryogenic Hydrogen Tank Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-28-004-SPEC-A.md](./GP-AM-AMPEL-0100-28-004-SPEC-A.md): 28-12: SAF Tank Specification (If Applicable) - *(SPEC)*
-*   [GP-AM-AMPEL-0100-28-005-SDD-A.md](./GP-AM-AMPEL-0100-28-005-SDD-A.md): 28-20: Fuel Distribution System Description (H2 & SAF) - *(SDD)*
-*   [GP-AM-AMPEL-0100-28-006-SPEC-A.md](./GP-AM-AMPEL-0100-28-006-SPEC-A.md): 28-21: Fuel Pump & Valve Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-28-007-SPEC-A.md](./GP-AM-AMPEL-0100-28-007-SPEC-A.md): 28-22: Cryo-Line Insulation & Safety Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-28-008-SPEC-A.md](./GP-AM-AMPEL-0100-28-008-SPEC-A.md): 28-40: Fuel Quantity Indicating System (FQIS) Specification - *(SPEC)*
-
-### ATA 29: Hydraulic Power
-*Details of the minimized hydraulic system, focusing on Electro-Hydrostatic Actuators (EHA).*
-*   [GP-AM-AMPEL-0100-29-001-OV-A.md](./GP-AM-AMPEL-0100-29-001-OV-A.md): 29-01: Hydraulic System Overview (Minimized/EHA Focus) - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-29-002-SPEC-A.md](./GP-AM-AMPEL-0100-29-002-SPEC-A.md): 29-10: Electro-Hydrostatic Actuator (EHA) Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-29-003-DWG-A.md](./GP-AM-AMPEL-0100-29-003-DWG-A.md): 29-20: Hydraulic Line Drawing (Redundancy Only) - *(DWG)*
-*   [GP-AM-AMPEL-0100-29-004-SDD-A.md](./GP-AM-AMPEL-0100-29-004-SDD-A.md): 29-30: Hydraulic System Indication Description (If Retained) - *(SDD)*
-
-### ATA 30: Ice & Rain Protection
-*Systems for ice and rain protection, including anti-ice/de-ice systems (electro-thermal, electro-impulse), windshield protection, and AI-driven predictive icing detection.*
-*   [GP-AM-AMPEL-0100-30-001-OV-A.md](./GP-AM-AMPEL-0100-30-001-OV-A.md): 30-01: Ice & Rain Protection Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-30-002-SDD-A.md](./GP-AM-AMPEL-0100-30-002-SDD-A.md): 30-10: Wing Anti-Ice System Description (Electro-Thermal) - *(SDD)*
-*   [GP-AM-AMPEL-0100-30-003-SPEC-A.md](./GP-AM-AMPEL-0100-30-003-SPEC-A.md): 30-11: Wing Anti-Ice System Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-30-004-SDD-A.md](./GP-AM-AMPEL-0100-30-004-SDD-A.md): 30-20: Wing De-Ice System Description (Electro-Impulse/Pneumatic) - *(SDD)*
-*   [GP-AM-AMPEL-0100-30-005-SDD-A.md](./GP-AM-AMPEL-0100-30-005-SDD-A.md): 30-30: Nacelle Anti-Ice System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-30-006-SPEC-A.md](./GP-AM-AMPEL-0100-30-006-SPEC-A.md): 30-31: Nacelle Anti-Ice System Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-30-007-SDD-A.md](./GP-AM-AMPEL-0100-30-007-SDD-A.md): 30-40: Windshield Heating & Wiper System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-30-008-SPEC-A.md](./GP-AM-AMPEL-0100-30-008-SPEC-A.md): 30-41: Windshield Heating & Wiper System Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-30-009-SPEC-A.md](./GP-AM-AMPEL-0100-30-009-SPEC-A.md): 30-80: Ice Detection System Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-30-010-SDD-A.md](./GP-AM-AMPEL-0100-30-010-SDD-A.md): 30-81: AI-Driven Predictive Icing System Description - *(SDD)*
-
-### ATA 31: Indicating / Recording
-*Cockpit displays (PFD/ND/EICAS), XAI interfaces, flight data recorders, on-board HPC, and sensor data fusion architecture.*
-*   [GP-AM-AMPEL-0100-31-001-OV-A.md](./GP-AM-AMPEL-0100-31-001-OV-A.md): 31-01: Indicating/Recording System Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-31-002-SPEC-A.md](./GP-AM-AMPEL-0100-31-002-SPEC-A.md): 31-10: Cockpit Display Specification (PFD/ND/EICAS) - *(SPEC)*
-*   [GP-AM-AMPEL-0100-31-003-SDD-A.md](./GP-AM-AMPEL-0100-31-003-SDD-A.md): 31-11: Cockpit XAI Interface Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-31-004-SPEC-A.md](./GP-AM-AMPEL-0100-31-004-SPEC-A.md): 31-30: HPC-Based Flight Data Recorder Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-31-005-SDD-A.md](./GP-AM-AMPEL-0100-31-005-SDD-A.md): 31-60: On-Board HPC System Description (Indicating/Recording Focus) - *(SDD)*
-*   [GP-AM-AMPEL-0100-31-006-SDD-A.md](./GP-AM-AMPEL-0100-31-006-SDD-A.md): 31-70: Sensor Data Acquisition & Fusion Architecture Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-31-007-ICD-A.md](./GP-AM-AMPEL-0100-31-007-ICD-A.md): 31-71: i-Aher0 Sensor Fusion Interface Control Document - *(ICD)*
-
-### ATA 32: Landing Gear
-*Main and nose gear systems, extension/retraction, wheels/tires, braking (electric/regenerative), steering, position indication, and AI health monitoring.*
-*   [GP-AM-AMPEL-0100-32-001-OV-A.md](./GP-AM-AMPEL-0100-32-001-OV-A.md): 32-01: Landing Gear System Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-32-002-SDD-A.md](./GP-AM-AMPEL-0100-32-002-SDD-A.md): 32-10: Main Gear Strut & Assembly Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-32-003-DWG-A.md](./GP-AM-AMPEL-0100-32-003-DWG-A.md): 32-11: Main Gear Assembly Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-32-004-SDD-A.md](./GP-AM-AMPEL-0100-32-004-SDD-A.md): 32-20: Nose Gear Strut & Assembly Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-32-005-DWG-A.md](./GP-AM-AMPEL-0100-32-005-DWG-A.md): 32-21: Nose Gear Assembly Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-32-006-SDD-A.md](./GP-AM-AMPEL-0100-32-006-SDD-A.md): 32-30: Extension/Retraction Actuation System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-32-007-SPEC-A.md](./GP-AM-AMPEL-0100-32-007-SPEC-A.md): 32-31: Extension/Retraction Actuation Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-32-008-SPEC-A.md](./GP-AM-AMPEL-0100-32-008-SPEC-A.md): 32-40: Wheel & Tire Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-32-009-SDD-A.md](./GP-AM-AMPEL-0100-32-009-SDD-A.md): 32-41: Braking System Description (Electric/Regenerative) - *(SDD)*
-*   [GP-AM-AMPEL-0100-32-010-SPEC-A.md](./GP-AM-AMPEL-0100-32-010-SPEC-A.md): 32-42: Braking System Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-32-011-SDD-A.md](./GP-AM-AMPEL-0100-32-011-SDD-A.md): 32-50: Nose Wheel Steering System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-32-012-SPEC-A.md](./GP-AM-AMPEL-0100-32-012-SPEC-A.md): 32-51: Nose Wheel Steering Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-32-013-SDD-A.md](./GP-AM-AMPEL-0100-32-013-SDD-A.md): 32-60: Gear Position Indicating System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-32-014-SDD-A.md](./GP-AM-AMPEL-0100-32-014-SDD-A.md): 32-70: AI-Driven Landing Gear Health Monitoring System - *(SDD)*
-
-### ATA 33: Lights
-*Cockpit, cabin (quantum-luminescent, AI-adaptive), exterior, and emergency lighting systems.*
-*   [GP-AM-AMPEL-0100-33-001-OV-A.md](./GP-AM-AMPEL-0100-33-001-OV-A.md): 33-01: Lighting System Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-33-002-SPEC-A.md](./GP-AM-AMPEL-0100-33-002-SPEC-A.md): 33-10: Cockpit Lighting Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-33-003-SDD-A.md](./GP-AM-AMPEL-0100-33-003-SDD-A.md): 33-20: Cabin Lighting System Description (Quantum-Luminescent) - *(SDD)*
-*   [GP-AM-AMPEL-0100-33-004-SPEC-A.md](./GP-AM-AMPEL-0100-33-004-SPEC-A.md): 33-21: Cabin Lighting Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-33-005-SDD-A.md](./GP-AM-AMPEL-0100-33-005-SDD-A.md): 33-22: AI-Adaptive Cabin Lighting System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-33-006-LIST-A.md](./GP-AM-AMPEL-0100-33-006-LIST-A.md): 33-40: Exterior Lighting List - *(LIST, SPEC)*
-*   [GP-AM-AMPEL-0100-33-007-DWG-A.md](./GP-AM-AMPEL-0100-33-007-DWG-A.md): 33-41: Exterior Lighting Location Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-33-008-SDD-A.md](./GP-AM-AMPEL-0100-33-008-SDD-A.md): 33-50: Emergency Lighting System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-33-009-SPEC-A.md](./GP-AM-AMPEL-0100-33-009-SPEC-A.md): 33-51: Emergency Lighting Specification - *(SPEC)*
-
-### ATA 34: Navigation
-*Navigation system architecture, including air data, inertial reference (IRS/INS), landing aids, GNSS, star trackers, quantum sensor integration, and AI route optimization.*
-*   [GP-AM-AMPEL-0100-34-001-OV-A.md](./GP-AM-AMPEL-0100-34-001-OV-A.md): 34-01: Navigation System Architecture Overview - *(OV, SDD, FIG)*
-*   [GP-AM-AMPEL-0100-34-002-SDD-A.md](./GP-AM-AMPEL-0100-34-002-SDD-A.md): 34-10: Air Data System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-34-003-SPEC-A.md](./GP-AM-AMPEL-0100-34-003-SPEC-A.md): 34-11: Air Data Sensor Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-34-004-SDD-A.md](./GP-AM-AMPEL-0100-34-004-SDD-A.md): 34-20: Inertial Reference System (IRS/INS) Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-34-005-SPEC-A.md](./GP-AM-AMPEL-0100-34-005-SPEC-A.md): 34-21: Inertial Reference System Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-34-006-SDD-A.md](./GP-AM-AMPEL-0100-34-006-SDD-A.md): 34-22: Quantum Sensor Integration Concept (INS Enhancement) - *(SDD)*
-*   [GP-AM-AMPEL-0100-34-007-SPEC-A.md](./GP-AM-AMPEL-0100-34-007-SPEC-A.md): 34-40: Landing Aid Receiver Specification (ILS/MLS/GLS) - *(SPEC)*
-*   [GP-AM-AMPEL-0100-34-008-SPEC-A.md](./GP-AM-AMPEL-0100-34-008-SPEC-A.md): 34-50: GNSS Receiver Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-34-009-SDD-A.md](./GP-AM-AMPEL-0100-34-009-SDD-A.md): 34-60: Star Tracker System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-34-010-SPEC-A.md](./GP-AM-AMPEL-0100-34-010-SPEC-A.md): 34-61: Star Tracker Specification (Near-Space Ops) - *(SPEC)*
-*   [GP-AM-AMPEL-0100-34-011-SDD-A.md](./GP-AM-AMPEL-0100-34-011-SDD-A.md): 34-70: AI Route Optimization Algorithm Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-34-012-CAL-A.md](./GP-AM-AMPEL-0100-34-012-CAL-A.md): 34-71: AI Route Optimization Performance Analysis - *(CAL)*
-*   [GP-AM-AMPEL-0100-34-013-ICD-A.md](./GP-AM-AMPEL-0100-34-013-ICD-A.md): 34-72: QAO Interface Control Document (Navigation) - *(ICD)*
-
-### ATA 35: Oxygen
-*Flight crew and passenger oxygen systems, including portable equipment specifications.*
-*   [GP-AM-AMPEL-0100-35-001-OV-A.md](./GP-AM-AMPEL-0100-35-001-OV-A.md): 35-01: Oxygen System Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-35-002-SDD-A.md](./GP-AM-AMPEL-0100-35-002-SDD-A.md): 35-10: Flight Crew Oxygen System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-35-003-SPEC-A.md](./GP-AM-AMPEL-0100-35-003-SPEC-A.md): 35-11: Flight Crew Oxygen System Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-35-004-SDD-A.md](./GP-AM-AMPEL-0100-35-004-SDD-A.md): 35-20: Passenger Oxygen System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-35-005-SPEC-A.md](./GP-AM-AMPEL-0100-35-005-SPEC-A.md): 35-21: Passenger Oxygen System Specification (Chemical/Gaseous) - *(SPEC)*
-*   [GP-AM-AMPEL-0100-35-006-LIST-A.md](./GP-AM-AMPEL-0100-35-006-LIST-A.md): 35-30: Portable Oxygen Equipment List - *(LIST, SPEC)*
-
-### ATA 36: Pneumatic
-*Overview of the minimized pneumatic system, focusing on bleed air ducting and valves if applicable.*
-*   [GP-AM-AMPEL-0100-36-001-OV-A.md](./GP-AM-AMPEL-0100-36-001-OV-A.md): 36-01: Pneumatic System Overview (Minimized Scope) - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-36-002-SDD-A.md](./GP-AM-AMPEL-0100-36-002-SDD-A.md): 36-10: Bleed Air Ducting & Valves Description (if used) - *(SDD)*
-*   [GP-AM-AMPEL-0100-36-003-DWG-A.md](./GP-AM-AMPEL-0100-36-003-DWG-A.md): 36-11: Bleed Air Ducting Drawing (if used) - *(DWG)*
-*   [GP-AM-AMPEL-0100-36-004-SDD-A.md](./GP-AM-AMPEL-0100-36-004-SDD-A.md): 36-20: Pneumatic System Indication Description (if applicable) - *(SDD)*
-
-### ATA 37: Vacuum
-*Overview of vacuum systems, if applicable, including lines, components, and indication.*
-*   [GP-AM-AMPEL-0100-37-001-OV-A.md](./GP-AM-AMPEL-0100-37-001-OV-A.md): 37-01: Vacuum System Overview (If Applicable) - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-37-002-DWG-A.md](./GP-AM-AMPEL-0100-37-002-DWG-A.md): 37-10: Vacuum Line Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-37-003-SPEC-A.md](./GP-AM-AMPEL-0100-37-003-SPEC-A.md): 37-11: Vacuum System Component Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-37-004-SDD-A.md](./GP-AM-AMPEL-0100-37-004-SDD-A.md): 37-20: Vacuum System Indication Description - *(SDD)*
-
-### ATA 38: Water / Waste
-*Potable water systems, advanced filtration/recycling, lavatory waste systems, and eco-lavatory technology.*
-*   [GP-AM-AMPEL-0100-38-001-OV-A.md](./GP-AM-AMPEL-0100-38-001-OV-A.md): 38-01: Water/Waste System Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-38-002-SDD-A.md](./GP-AM-AMPEL-0100-38-002-SDD-A.md): 38-10: Potable Water System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-38-003-SPEC-A.md](./GP-AM-AMPEL-0100-38-003-SPEC-A.md): 38-11: Potable Water System Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-38-004-SDD-A.md](./GP-AM-AMPEL-0100-38-004-SDD-A.md): 38-12: Advanced Water Filtration/Recycling System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-38-005-SDD-A.md](./GP-AM-AMPEL-0100-38-005-SDD-A.md): 38-30: Lavatory Waste System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-38-006-SPEC-A.md](./GP-AM-AMPEL-0100-38-006-SPEC-A.md): 38-31: Lavatory Waste System Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-38-007-SDD-A.md](./GP-AM-AMPEL-0100-38-007-SDD-A.md): 38-32: Eco-Lavatory Technology Description - *(SDD)*
-
-### ATA 39: Electrical/Electronic Panels
-*Layout and component specifications for instrument and control panels.*
-*   [GP-AM-AMPEL-0100-39-001-OV-A.md](./GP-AM-AMPEL-0100-39-001-OV-A.md): 39-01: Electrical/Electronic Panels Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-39-002-DWG-A.md](./GP-AM-AMPEL-0100-39-002-DWG-A.md): 39-10: Instrument Panel Layout Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-39-003-SPEC-A.md](./GP-AM-AMPEL-0100-39-003-SPEC-A.md): 39-11: Instrument Panel Component Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-39-004-DWG-A.md](./GP-AM-AMPEL-0100-39-004-DWG-A.md): 39-20: Control Panel Layout Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-39-005-SPEC-A.md](./GP-AM-AMPEL-0100-39-005-SPEC-A.md): 39-21: Control Panel Component Specification - *(SPEC)*
-
-### ATA 40: Reserved for Future Use
-*Placeholder.*
-*   [GP-AM-AMPEL-0100-40-001-OV-A.md](./GP-AM-AMPEL-0100-40-001-OV-A.md): 40-01: Placeholder - *(OV)*
-
-### ATA 41: Water Ballast
-*Overview, specifications, and distribution for water ballast systems, if applicable.*
-*   [GP-AM-AMPEL-0100-41-001-OV-A.md](./GP-AM-AMPEL-0100-41-001-OV-A.md): 41-01: Water Ballast System Overview (If Applicable) - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-41-002-SPEC-A.md](./GP-AM-AMPEL-0100-41-002-SPEC-A.md): 41-10: Water Ballast Tank Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-41-003-DWG-A.md](./GP-AM-AMPEL-0100-41-003-DWG-A.md): 41-11: Water Ballast Tank Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-41-004-SDD-A.md](./GP-AM-AMPEL-0100-41-004-SDD-A.md): 41-20: Water Ballast Distribution System Description - *(SDD)*
-
-### ATA 42: Integrated Modular Avionics (IMA)
-*Overview, core processing modules, and network architecture for IMA systems.*
-*   [GP-AM-AMPEL-0100-42-001-OV-A.md](./GP-AM-AMPEL-0100-42-001-OV-A.md): 42-01: IMA System Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-42-002-SDD-A.md](./GP-AM-AMPEL-0100-42-002-SDD-A.md): 42-10: IMA Core Processing Module Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-42-003-SPEC-A.md](./GP-AM-AMPEL-0100-42-003-SPEC-A.md): 42-11: IMA Core Processing Module Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-42-004-SDD-A.md](./GP-AM-AMPEL-0100-42-004-SDD-A.md): 42-20: IMA Network Architecture Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-42-005-FIG-A.md](./GP-AM-AMPEL-0100-42-005-FIG-A.md): 42-21: IMA Network Architecture Figure - *(FIG)*
-
-### ATA 43: Reserved for Future Use
-*Placeholder.*
-*   [GP-AM-AMPEL-0100-43-001-OV-A.md](./GP-AM-AMPEL-0100-43-001-OV-A.md): 43-01: Placeholder - *(OV)*
-
-### ATA 44: Cabin Systems
-*In-Flight Entertainment (IFE) systems with VR integration and Cabin Management Systems (CMS).*
-*   [GP-AM-AMPEL-0100-44-001-OV-A.md](./GP-AM-AMPEL-0100-44-001-OV-A.md): 44-01: Cabin Systems Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-44-002-SDD-A.md](./GP-AM-AMPEL-0100-44-002-SDD-A.md): 44-10: In-Flight Entertainment (IFE) System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-44-003-SPEC-A.md](./GP-AM-AMPEL-0100-44-003-SPEC-A.md): 44-11: IFE System Specification (VR Integration) - *(SPEC)*
-*   [GP-AM-AMPEL-0100-44-004-SDD-A.md](./GP-AM-AMPEL-0100-44-004-SDD-A.md): 44-20: Cabin Management System (CMS) Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-44-005-SPEC-A.md](./GP-AM-AMPEL-0100-44-005-SPEC-A.md): 44-21: Cabin Management System Specification - *(SPEC)*
-
-### ATA 45: Central Maintenance System (CMS)
-*Architecture and functionalities of the CMS (i-Aher0), including health reporting, predictive maintenance, AI diagnostics, and Digital Twin Orchestration (DTO).*
-*   [GP-AM-AMPEL-0100-45-001-OV-A.md](./GP-AM-AMPEL-0100-45-001-OV-A.md): 45-01: CMS Architecture Overview (i-Aher0 & DTO) - *(OV, SDD, FIG)*
-*   [GP-AM-AMPEL-0100-45-002-SPEC-A.md](./GP-AM-AMPEL-0100-45-002-SPEC-A.md): 45-10: Central Maintenance Computer (CMC) Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-45-003-PROC-A.md](./GP-AM-AMPEL-0100-45-003-PROC-A.md): 45-20: CMS Software Loading Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-45-004-SPEC-A.md](./GP-AM-AMPEL-0100-45-004-SPEC-A.md): 45-40: System Health Reporting Format Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-45-005-SDD-A.md](./GP-AM-AMPEL-0100-45-005-SDD-A.md): 45-41: Predictive Maintenance Alert Logic Description (PDM) - *(SDD)*
-*   [GP-AM-AMPEL-0100-45-006-OV-A.md](./GP-AM-AMPEL-0100-45-006-OV-A.md): 45-50: i-Aher0 Diagnostic Capabilities Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-45-007-SDD-A.md](./GP-AM-AMPEL-0100-45-007-SDD-A.md): 45-51: AI Fault Detection & Isolation Algorithm Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-45-008-CAL-A.md](./GP-AM-AMPEL-0100-45-008-CAL-A.md): 45-52: AI Fault Detection Performance Analysis - *(CAL)*
-*   [GP-AM-AMPEL-0100-45-009-OV-A.md](./GP-AM-AMPEL-0100-45-009-OV-A.md): 45-60: Digital Twin Orchestration (DTO) Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-45-010-SDD-A.md](./GP-AM-AMPEL-0100-45-010-SDD-A.md): 45-61: DTO Functionality Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-45-011-ICD-A.md](./GP-AM-AMPEL-0100-45-011-ICD-A.md): 45-62: DTO Interface Control Document (CMS Integration) - *(ICD)*
-
-### ATA 46: Information Systems
-*Architecture of on-board information systems, including GQP, EFB integration, IFE network, BITT ledger logging, QAO interface, and cybersecurity functions.*
-*   [GP-AM-AMPEL-0100-46-001-OV-A.md](./GP-AM-AMPEL-0100-46-001-OV-A.md): 46-01: Information Systems Architecture Overview - *(OV, SDD, FIG)*
-*   [GP-AM-AMPEL-0100-46-002-SDD-A.md](./GP-AM-AMPEL-0100-46-002-SDD-A.md): 46-10: GQP On-Board Interface System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-46-003-ICD-A.md](./GP-AM-AMPEL-0100-46-003-ICD-A.md): 46-11: GQP On-Board Interface Control Document - *(ICD)*
-*   [GP-AM-AMPEL-0100-46-004-SDD-A.md](./GP-AM-AMPEL-0100-46-004-SDD-A.md): 46-20: Electronic Flight Bag (EFB) Integration Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-46-005-ICD-A.md](./GP-AM-AMPEL-0100-46-005-ICD-A.md): 46-21: EFB Interface Control Document - *(ICD)*
-*   [GP-AM-AMPEL-0100-46-006-SPEC-A.md](./GP-AM-AMPEL-0100-46-006-SPEC-A.md): 46-30: IFE Network Backbone Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-46-007-OV-A.md](./GP-AM-AMPEL-0100-46-007-OV-A.md): 46-60: BITT Ledger Integration Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-46-008-SDD-A.md](./GP-AM-AMPEL-0100-46-008-SDD-A.md): 46-61: BITT On-Board Logging System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-46-009-ICD-A.md](./GP-AM-AMPEL-0100-46-009-ICD-A.md): 46-62: BITT Interface Control Document - *(ICD)*
-*   [GP-AM-AMPEL-0100-46-010-SDD-A.md](./GP-AM-AMPEL-0100-46-010-SDD-A.md): 46-63: QAO On-Board Interface Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-46-011-ICD-A.md](./GP-AM-AMPEL-0100-46-011-ICD-A.md): 46-64: QAO Interface Control Document - *(ICD)*
-*   [GP-AM-AMPEL-0100-46-012-OV-A.md](./GP-AM-AMPEL-0100-46-012-OV-A.md): 46-70: i-Aher0 Cybersecurity Functions Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-46-013-SPEC-A.md](./GP-AM-AMPEL-0100-46-013-SPEC-A.md): 46-71: Intrusion Detection Protocol Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-46-014-PROC-A.md](./GP-AM-AMPEL-0100-46-014-PROC-A.md): 46-72: Intrusion Prevention Procedure - *(PROC)*
-
-### ATA 47: Nitrogen Generation System
-*Overview, specifications, distribution, and control systems for Nitrogen Generation Systems (NGS).*
-*   [GP-AM-AMPEL-0100-47-001-OV-A.md](./GP-AM-AMPEL-0100-47-001-OV-A.md): 47-01: NGS Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-47-002-SPEC-A.md](./GP-AM-AMPEL-0100-47-002-SPEC-A.md): 47-10: Air Separation Module (ASM) Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-47-003-SDD-A.md](./GP-AM-AMPEL-0100-47-003-SDD-A.md): 47-20: Nitrogen Distribution System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-47-004-DWG-A.md](./GP-AM-AMPEL-0100-47-004-DWG-A.md): 47-21: Nitrogen Distribution System Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-47-005-SDD-A.md](./GP-AM-AMPEL-0100-47-005-SDD-A.md): 47-30: NGS Control and Monitoring System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-47-006-SPEC-A.md](./GP-AM-AMPEL-0100-47-006-SPEC-A.md): 47-31: NGS Control and Monitoring Specification - *(SPEC)*
-
-### ATA 48: Reserved for Future Use
-*Placeholder.*
-*   [GP-AM-AMPEL-0100-48-001-OV-A.md](./GP-AM-AMPEL-0100-48-001-OV-A.md): 48-01: Placeholder - *(OV)*
-
-### ATA 49: Airborne Auxiliary Power (AAP)
-*Overview, specifications, and starting system for the Auxiliary Power Unit (APU) or alternative systems.*
-*   [GP-AM-AMPEL-0100-49-001-OV-A.md](./GP-AM-AMPEL-0100-49-001-OV-A.md): 49-01: APU System Overview (or Alternative) - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-49-002-SPEC-A.md](./GP-AM-AMPEL-0100-49-002-SPEC-A.md): 49-10: APU Engine/Fuel Cell Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-49-003-SDD-A.md](./GP-AM-AMPEL-0100-49-003-SDD-A.md): 49-70: APU Starting System Description - *(SDD)*
-
-### ATA 50: Cargo and Accessory Compartments
-*Design, layout, and loading systems for cargo and accessory compartments.*
-*   [GP-AM-AMPEL-0100-50-001-OV-A.md](./GP-AM-AMPEL-0100-50-001-OV-A.md): 50-01: Cargo & Accessory Compartments Overview - *(OV, FIG)*
-*   [GP-AM-AMPEL-0100-50-002-DD-A.md](./GP-AM-AMPEL-0100-50-002-DD-A.md): 50-10: Cargo Compartment Design Document - *(DD)*
-*   [GP-AM-AMPEL-0100-50-003-DWG-A.md](./GP-AM-AMPEL-0100-50-003-DWG-A.md): 50-11: Cargo Compartment Layout Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-50-004-ICD-A.md](./GP-AM-AMPEL-0100-50-004-ICD-A.md): 50-12: Cargo Loading System Interface Control Document - *(ICD)*
-*   [GP-AM-AMPEL-0100-50-005-SDD-A.md](./GP-AM-AMPEL-0100-50-005-SDD-A.md): 50-13: Cargo Loading System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-50-006-DWG-A.md](./GP-AM-AMPEL-0100-50-006-DWG-A.md): 50-20: Accessory Compartment Location Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-50-007-LIST-A.md](./GP-AM-AMPEL-0100-50-007-LIST-A.md): 50-21: Accessory Compartment Access List - *(LIST)*
-
-### ATA 51: Structures – General
-*Overall structural design overview, material specifications (BNNT/CFRP), analysis methodology, and AI Structural Health Monitoring (AI-SHM).*
-*   [GP-AM-AMPEL-0100-51-001-OV-A.md](./GP-AM-AMPEL-0100-51-001-OV-A.md): 51-01: Structural Design Overview - *(OV, DD)*
-*   [GP-AM-AMPEL-0100-51-002-SPEC-A.md](./GP-AM-AMPEL-0100-51-002-SPEC-A.md): 51-10: Primary Structural Material Specification (BNNT/CFRP) - *(SPEC)*
-*   [GP-AM-AMPEL-0100-51-003-PROC-A.md](./GP-AM-AMPEL-0100-51-003-PROC-A.md): 51-11: AAMPEL-OPT Material Selection Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-51-004-OV-A.md](./GP-AM-AMPEL-0100-51-004-OV-A.md): 51-20: Structural Analysis Methodology Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-51-005-CAL-A.md](./GP-AM-AMPEL-0100-51-005-CAL-A.md): 51-21: FEM Analysis Calculation Report - *(CAL, RPT)*
-*   [GP-AM-AMPEL-0100-51-006-SDD-A.md](./GP-AM-AMPEL-0100-51-006-SDD-A.md): 51-70: AI-SHM System Description - *(SDD)*
-
-### ATA 52: Doors
-*Design, specifications, and operating procedures for passenger and cargo doors, including smart actuation and monitoring.*
-*   [GP-AM-AMPEL-0100-52-001-OV-A.md](./GP-AM-AMPEL-0100-52-001-OV-A.md): 52-01: Door Systems Overview - *(OV, LIST)*
-*   [GP-AM-AMPEL-0100-52-002-DD-A.md](./GP-AM-AMPEL-0100-52-002-DD-A.md): 52-10: Main Passenger Door Design Document - *(DD)*
-*   [GP-AM-AMPEL-0100-52-003-SPEC-A.md](./GP-AM-AMPEL-0100-52-003-SPEC-A.md): 52-11: Main Passenger Door Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-52-004-PROC-A.md](./GP-AM-AMPEL-0100-52-004-PROC-A.md): 52-12: Main Passenger Door Operating Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-52-005-DD-A.md](./GP-AM-AMPEL-0100-52-005-DD-A.md): 52-30: Cargo Door Design Document - *(DD)*
-*   [GP-AM-AMPEL-0100-52-006-SPEC-A.md](./GP-AM-AMPEL-0100-52-006-SPEC-A.md): 52-31: Cargo Door Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-52-007-PROC-A.md](./GP-AM-AMPEL-0100-52-007-PROC-A.md): 52-32: Cargo Door Operating Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-52-008-SDD-A.md](./GP-AM-AMPEL-0100-52-008-SDD-A.md): 52-70: Smart Door Actuation & Monitoring System Description - *(SDD)*
-
-### ATA 53: Fuselage
-*Structural design of the fuselage, including carbon-lattice frame, BNNT composite skin panels, and pressure bulkheads.*
-*   [GP-AM-AMPEL-0100-53-001-OV-A.md](./GP-AM-AMPEL-0100-53-001-OV-A.md): 53-01: Fuselage Structural Design Overview - *(OV, DD)*
-*   [GP-AM-AMPEL-0100-53-002-DD-A.md](./GP-AM-AMPEL-0100-53-002-DD-A.md): 53-10: Carbon-Lattice Frame Design Document - *(DD)*
-*   [GP-AM-AMPEL-0100-53-003-SPEC-A.md](./GP-AM-AMPEL-0100-53-003-SPEC-A.md): 53-11: Carbon-Lattice Frame Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-53-004-DWG-A.md](./GP-AM-AMPEL-0100-53-004-DWG-A.md): 53-12: Carbon-Lattice Frame Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-53-005-SPEC-A.md](./GP-AM-AMPEL-0100-53-005-SPEC-A.md): 53-30: BNNT Composite Skin Panel Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-53-006-DD-A.md](./GP-AM-AMPEL-0100-53-006-DD-A.md): 53-50: Pressure Bulkhead Design Document - *(DD)*
-*   [GP-AM-AMPEL-0100-53-007-DWG-A.md](./GP-AM-AMPEL-0100-53-007-DWG-A.md): 53-51: Pressure Bulkhead Drawing - *(DWG)*
-
-### ATA 54: Nacelles/Pylons
-*Design overview, specifications, and drawings for engine nacelles and pylons, including acoustic treatment and hybrid/quantum integration.*
-*   [GP-AM-AMPEL-0100-54-001-OV-A.md](./GP-AM-AMPEL-0100-54-001-OV-A.md): 54-01: Nacelle & Pylon Design Overview - *(OV, DD)*
-*   [GP-AM-AMPEL-0100-54-002-DD-A.md](./GP-AM-AMPEL-0100-54-002-DD-A.md): 54-10: Nacelle Design Document (Hybrid/Quantum Integration) - *(DD)*
-*   [GP-AM-AMPEL-0100-54-003-SPEC-A.md](./GP-AM-AMPEL-0100-54-003-SPEC-A.md): 54-11: Nacelle Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-54-004-DWG-A.md](./GP-AM-AMPEL-0100-54-004-DWG-A.md): 54-12: Nacelle Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-54-005-SPEC-A.md](./GP-AM-AMPEL-0100-54-005-SPEC-A.md): 54-13: Acoustic Treatment Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-54-006-DD-A.md](./GP-AM-AMPEL-0100-54-006-DD-A.md): 54-50: Pylon Design Document - *(DD)*
-*   [GP-AM-AMPEL-0100-54-007-SPEC-A.md](./GP-AM-AMPEL-0100-54-007-SPEC-A.md): 54-51: Pylon Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-54-008-DWG-A.md](./GP-AM-AMPEL-0100-54-008-DWG-A.md): 54-52: Pylon Drawing & Wing Interface - *(DWG)*
-
-### ATA 55: Stabilizers
-*Empennage design overview, including horizontal and vertical stabilizer structural design, specifications, and drawings.*
-*   [GP-AM-AMPEL-0100-55-001-OV-A.md](./GP-AM-AMPEL-0100-55-001-OV-A.md): 55-01: Empennage Design Overview - *(OV, DD)*
-*   [GP-AM-AMPEL-0100-55-002-DD-A.md](./GP-AM-AMPEL-0100-55-002-DD-A.md): 55-10: Horizontal Stabilizer Structural Design Document - *(DD)*
-*   [GP-AM-AMPEL-0100-55-003-SPEC-A.md](./GP-AM-AMPEL-0100-55-003-SPEC-A.md): 55-11: Horizontal Stabilizer Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-55-004-DWG-A.md](./GP-AM-AMPEL-0100-55-004-DWG-A.md): 55-12: Horizontal Stabilizer Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-55-005-DD-A.md](./GP-AM-AMPEL-0100-55-005-DD-A.md): 55-30: Vertical Stabilizer Structural Design Document - *(DD)*
-*   [GP-AM-AMPEL-0100-55-006-SPEC-A.md](./GP-AM-AMPEL-0100-55-006-SPEC-A.md): 55-31: Vertical Stabilizer Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-55-007-DWG-A.md](./GP-AM-AMPEL-0100-55-007-DWG-A.md): 55-32: Vertical Stabilizer Drawing - *(DWG)*
-  
-  ```markup
-## Get Specific Document by ID
-
--   **Retrieve the full structured information for the Vertical Stabilizer Structural Design Document.**
-    ```markdown
-
-/get/structuredinfocode id=GP-AM-AMPEL-0100-55-005-DD-A
-
-## Relationships and Traceability
-**Related Links:**  
-- [/docs/55-006.md](./GP-AM-AMPEL-0100-55-006-SPEC-A.md) – Complementary Specifications
-
-**External Links:**  
-- [FAA AC 25.601 - Structural Loads](https://www.faa.gov/regulations/25.601) – Technical Regulation
-
-## Keywords
-stabilizer, ATA 55, structure, fuselage, GAIA AIR
-
-## Annexes
-**Annex Content:** Includes DWG structural plan, load table, and FEM simulations in Annex A.
-```
-### ATA 56: Windows
-*Specifications for cockpit windshields and passenger windows, including the VR Window system.*
-*   [GP-AM-AMPEL-0100-56-001-OV-A.md](./GP-AM-AMPEL-0100-56-001-OV-A.md): 56-01: Window Systems Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-56-002-SPEC-A.md](./GP-AM-AMPEL-0100-56-002-SPEC-A.md): 56-10: Cockpit Windshield Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-56-003-SPEC-A.md](./GP-AM-AMPEL-0100-56-003-SPEC-A.md): 56-20: Passenger Window Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-56-004-SDD-A.md](./GP-AM-AMPEL-0100-56-004-SDD-A.md): 56-21: VR Window System Description - *(SDD)*
-
-### ATA 57: Wings
-*Wing design overview (morphing, laminar flow), center box and outer wing structures, slat/flap systems, folding systems, and GPAM integration.*
-*   [GP-AM-AMPEL-0100-57-001-OV-A.md](./GP-AM-AMPEL-0100-57-001-OV-A.md): 57-01: Wing Design Overview (Morphing, Laminar Flow) - *(OV, DD)*
-*   [GP-AM-AMPEL-0100-57-002-DD-A.md](./GP-AM-AMPEL-0100-57-002-DD-A.md): 57-10: Wing Center Box Structural Design Document - *(DD)*
-*   [GP-AM-AMPEL-0100-57-003-SPEC-A.md](./GP-AM-AMPEL-0100-57-003-SPEC-A.md): 57-11: Wing Center Box Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-57-004-DWG-A.md](./GP-AM-AMPEL-0100-57-004-DWG-A.md): 57-12: Wing Center Box Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-57-005-DD-A.md](./GP-AM-AMPEL-0100-57-005-DD-A.md): 57-20: Outer Wing Structural Design Document - *(DD)*
-*   [GP-AM-AMPEL-0100-57-006-SPEC-A.md](./GP-AM-AMPEL-0100-57-006-SPEC-A.md): 57-21: Outer Wing Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-57-007-DWG-A.md](./GP-AM-AMPEL-0100-57-007-DWG-A.md): 57-22: Outer Wing Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-57-008-SDD-A.md](./GP-AM-AMPEL-0100-57-008-SDD-A.md): 57-40: Slat & Flap System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-57-009-SDD-A.md](./GP-AM-AMPEL-0100-57-009-SDD-A.md): 57-50: Wing Folding System Description (If Applicable) - *(SDD)*
-*   [GP-AM-AMPEL-0100-57-010-OV-A.md](./GP-AM-AMPEL-0100-57-010-OV-A.md): 57-70: GPAM System Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-57-011-SDD-A.md](./GP-AM-AMPEL-0100-57-011-SDD-A.md): 57-71: GPAM Wing Integration Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-57-012-ICD-A.md](./GP-AM-AMPEL-0100-57-012-ICD-A.md): 57-72: GPAM Actuation Interface Control Document - *(ICD)*
-
-### ATA 60: Standard Practices - Engine
-*Standard engine maintenance and testing procedures.*
-*   [GP-AM-AMPEL-0100-60-001-OV-A.md](./GP-AM-AMPEL-0100-60-001-OV-A.md): 60-01: Standard Engine Practices Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-60-002-OV-A.md](./GP-AM-AMPEL-0100-60-002-OV-A.md): 60-10: Engine Maintenance Procedures Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-60-003-PROC-A.md](./GP-AM-AMPEL-0100-60-003-PROC-A.md): 60-11: Engine Maintenance Standard Procedures - *(PROC)*
-*   [GP-AM-AMPEL-0100-60-004-OV-A.md](./GP-AM-AMPEL-0100-60-004-OV-A.md): 60-20: Engine Testing Procedures Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-60-005-TEST-A.md](./GP-AM-AMPEL-0100-60-005-TEST-A.md): 60-21: Engine Standard Test Procedures - *(TEST)*
-
-### ATA 61: Propellers/Propulsors
-*Design, specification, and control systems for propellers or other propulsors, if applicable.*
-*   [GP-AM-AMPEL-0100-61-001-OV-A.md](./GP-AM-AMPEL-0100-61-001-OV-A.md): 61-01: Propulsor System Overview (If Applicable) - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-61-002-DD-A.md](./GP-AM-AMPEL-0100-61-002-DD-A.md): 61-10: Propeller Blade Design Document - *(DD)*
-*   [GP-AM-AMPEL-0100-61-003-SPEC-A.md](./GP-AM-AMPEL-0100-61-003-SPEC-A.md): 61-11: Propeller Blade Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-61-004-SDD-A.md](./GP-AM-AMPEL-0100-61-004-SDD-A.md): 61-20: Propeller Control System Description - *(SDD)*
-
-### ATA 62: Main Rotor
-*Design, specifications, and assembly for main rotor systems, primarily for VTOL configurations.*
-*   [GP-AM-AMPEL-0100-62-001-OV-A.md](./GP-AM-AMPEL-0100-62-001-OV-A.md): 62-01: Main Rotor System Overview (If Applicable - VTOL) - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-62-002-DD-A.md](./GP-AM-AMPEL-0100-62-002-DD-A.md): 62-10: Main Rotor Blade Design Document - *(DD)*
-*   [GP-AM-AMPEL-0100-62-003-SPEC-A.md](./GP-AM-AMPEL-0100-62-003-SPEC-A.md): 62-11: Main Rotor Blade Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-62-004-SDD-A.md](./GP-AM-AMPEL-0100-62-004-SDD-A.md): 62-30: Rotor Head Assembly Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-62-005-DWG-A.md](./GP-AM-AMPEL-0100-62-005-DWG-A.md): 62-31: Rotor Head Assembly Drawing - *(DWG)*
-
-### ATA 63: Main Rotor Drive
-*Overview and specifications for the main rotor drive system, including shafts, couplings, and gearbox, if applicable.*
-*   [GP-AM-AMPEL-0100-63-001-OV-A.md](./GP-AM-AMPEL-0100-63-001-OV-A.md): 63-01: Main Rotor Drive System Overview (If Applicable) - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-63-002-SPEC-A.md](./GP-AM-AMPEL-0100-63-002-SPEC-A.md): 63-10: Drive Shaft and Coupling Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-63-003-SDD-A.md](./GP-AM-AMPEL-0100-63-003-SDD-A.md): 63-20: Main Gearbox Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-63-004-SPEC-A.md](./GP-AM-AMPEL-0100-63-004-SPEC-A.md): 63-21: Main Gearbox Specification - *(SPEC)*
-
-### ATA 64: Tail Rotor
-*Design and specifications for tail rotor systems, if applicable.*
-*   [GP-AM-AMPEL-0100-64-001-OV-A.md](./GP-AM-AMPEL-0100-64-001-OV-A.md): 64-01: Tail Rotor System Overview (If Applicable) - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-64-002-DD-A.md](./GP-AM-AMPEL-0100-64-002-DD-A.md): 64-10: Tail Rotor Blade Design Document - *(DD)*
-*   [GP-AM-AMPEL-0100-64-003-SPEC-A.md](./GP-AM-AMPEL-0100-64-003-SPEC-A.md): 64-11: Tail Rotor Blade Specification - *(SPEC)*
-
-### ATA 65: Tail Rotor Drive
-*Overview and specifications for the tail rotor drive system, if applicable.*
-*   [GP-AM-AMPEL-0100-65-001-OV-A.md](./GP-AM-AMPEL-0100-65-001-OV-A.md): 65-01: Tail Rotor Drive System Overview (If Applicable) - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-65-002-SPEC-A.md](./GP-AM-AMPEL-0100-65-002-SPEC-A.md): 65-10: Tail Rotor Drive Shaft Specification - *(SPEC)*
-
-### ATA 66: Folding Blades/Pylon
-*Mechanisms and procedures for folding blades or pylons, if applicable.*
-*   [GP-AM-AMPEL-0100-66-001-OV-A.md](./GP-AM-AMPEL-0100-66-001-OV-A.md): 66-01: Folding System Overview (If Applicable) - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-66-002-SDD-A.md](./GP-AM-AMPEL-0100-66-002-SDD-A.md): 66-10: Blade Folding Mechanism Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-66-003-PROC-A.md](./GP-AM-AMPEL-0100-66-003-PROC-A.md): 66-11: Blade Folding Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-66-004-SDD-A.md](./GP-AM-AMPEL-0100-66-004-SDD-A.md): 66-20: Pylon Folding Mechanism Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-66-005-PROC-A.md](./GP-AM-AMPEL-0100-66-005-PROC-A.md): 66-21: Pylon Folding Procedure - *(PROC)*
-
-### ATA 67: Rotors Flight Control
-*Flight control systems specifically for rotorcraft, including swashplates, linkages, and stability augmentation.*
-*   [GP-AM-AMPEL-0100-67-001-OV-A.md](./GP-AM-AMPEL-0100-67-001-OV-A.md): 67-01: Rotor Flight Control System Overview (If Applicable) - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-67-002-SDD-A.md](./GP-AM-AMPEL-0100-67-002-SDD-A.md): 67-10: Rotor Control System Description (Swashplate, Linkages) - *(SDD)*
-*   [GP-AM-AMPEL-0100-67-003-DWG-A.md](./GP-AM-AMPEL-0100-67-003-DWG-A.md): 67-11: Rotor Control System Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-67-004-SDD-A.md](./GP-AM-AMPEL-0100-67-004-SDD-A.md): 67-20: Stability Augmentation System Description (Rotorcraft) - *(SDD)*
-
-### ATA 71: Power Plant (General)
-*General overview of the propulsion system, encompassing hybrid and quantum technologies.*
-*   [GP-AM-AMPEL-0100-71-001-OV-A.md](./GP-AM-AMPEL-0100-71-001-OV-A.md): 71-01: Propulsion System Overview (Hybrid & Quantum) - *(OV, SDD)*
-
-### ATA 72: Engine (Turbine/Piston)
-*Details of the hybrid engine architecture, including compressor, hydrogen combustion (LPP), and turbine specifications.*
-*   [GP-AM-AMPEL-0100-72-001-OV-A.md](./GP-AM-AMPEL-0100-72-001-OV-A.md): 72-01: Hybrid Engine Architecture Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-72-002-SPEC-A.md](./GP-AM-AMPEL-0100-72-002-SPEC-A.md): 72-30: Compressor Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-72-003-SDD-A.md](./GP-AM-AMPEL-0100-72-003-SDD-A.md): 72-40: Hydrogen Combustion Technology Description (LPP) - *(SDD)*
-*   [GP-AM-AMPEL-0100-72-004-SPEC-A.md](./GP-AM-AMPEL-0100-72-004-SPEC-A.md): 72-41: Hydrogen Combustion Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-72-005-SPEC-A.md](./GP-AM-AMPEL-0100-72-005-SPEC-A.md): 72-50: Turbine Specification - *(SPEC)*
-
-### ATA 72-Q01: Propulsion – Quantum Extension
-*Overview, specification, theory, integration, and control interface for the Q-Thruster module (QEE/QSM).*
-*   [GP-AM-AMPEL-0100-72-Q01-001-OV-A.md](./GP-AM-AMPEL-0100-72-Q01-001-OV-A.md): 72-Q01-01: Q-Thruster Module Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-72-Q01-002-SPEC-A.md](./GP-AM-AMPEL-0100-72-Q01-002-SPEC-A.md): 72-Q01-02: Q-Thruster Module Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-72-Q01-003-OV-A.md](./GP-AM-AMPEL-0100-72-Q01-003-OV-A.md): 72-Q01-03: QEE/QSM Theory Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-72-Q01-004-SDD-A.md](./GP-AM-AMPEL-0100-72-Q01-004-SDD-A.md): 72-Q01-04: QEE/QSM Integration Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-72-Q01-005-ICD-A.md](./GP-AM-AMPEL-0100-72-Q01-005-ICD-A.md): 72-Q01-05: QEE/QSM Control Interface Document - *(ICD)*
-
-### ATA 73: Engine Fuel and Control
-*Engine-side fuel delivery systems and the advanced FADEC system integrating hybrid/quantum control.*
-*   [GP-AM-AMPEL-0100-73-001-OV-A.md](./GP-AM-AMPEL-0100-73-001-OV-A.md): 73-01: Engine Fuel & Control System Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-73-002-SDD-A.md](./GP-AM-AMPEL-0100-73-002-SDD-A.md): 73-10: Fuel Delivery System Description (Engine Side) - *(SDD)*
-*   [GP-AM-AMPEL-0100-73-003-SPEC-A.md](./GP-AM-AMPEL-0100-73-003-SPEC-A.md): 73-11: Fuel Delivery System Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-73-004-SDD-A.md](./GP-AM-AMPEL-0100-73-004-SDD-A.md): 73-20: Advanced FADEC Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-73-005-SPEC-A.md](./GP-AM-AMPEL-0100-73-005-SPEC-A.md): 73-21: Advanced FADEC Specification (Hybrid/Quantum Integration) - *(SPEC)*
-
-### ATA 74: Ignition
-*Overview and specifications for engine ignition system components (exciter, leads, connectors, plugs).*
-*   [GP-AM-AMPEL-0100-74-001-OV-A.md](./GP-AM-AMPEL-0100-74-001-OV-A.md): 74-01: Ignition System Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-74-002-SPEC-A.md](./GP-AM-AMPEL-0100-74-002-SPEC-A.md): 74-10: Ignition Exciter Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-74-003-SPEC-A.md](./GP-AM-AMPEL-0100-74-003-SPEC-A.md): 74-20: Ignition Lead & Connector Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-74-004-DWG-A.md](./GP-AM-AMPEL-0100-74-004-DWG-A.md): 74-21: Ignition Lead & Connector Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-74-005-SPEC-A.md](./GP-AM-AMPEL-0100-74-005-SPEC-A.md): 74-30: Igniter Plug Specification - *(SPEC)*
-
-### ATA 75: Bleed Air
-*Overview, ducting, and valves for the bleed air system, if utilized (e.g., for anti-ice).*
-*   [GP-AM-AMPEL-0100-75-001-OV-A.md](./GP-AM-AMPEL-0100-75-001-OV-A.md): 75-01: Bleed Air System Overview (If Applicable) - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-75-002-SDD-A.md](./GP-AM-AMPEL-0100-75-002-SDD-A.md): 75-10: Bleed Air for Engine Anti-Ice Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-75-003-SDD-A.md](./GP-AM-AMPEL-0100-75-003-SDD-A.md): 75-30: Bleed Air Ducting and Valves Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-75-004-DWG-A.md](./GP-AM-AMPEL-0100-75-004-DWG-A.md): 75-31: Bleed Air Ducting and Valves Drawing - *(DWG)*
-
-### ATA 76: Engine Controls
-*Engine control system overview, including thrust/power lever interfaces and emergency shutdown procedures.*
-*   [GP-AM-AMPEL-0100-76-001-OV-A.md](./GP-AM-AMPEL-0100-76-001-OV-A.md): 76-01: Engine Control System Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-76-002-SDD-A.md](./GP-AM-AMPEL-0100-76-002-SDD-A.md): 76-10: Thrust/Power Lever Interface Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-76-003-ICD-A.md](./GP-AM-AMPEL-0100-76-003-ICD-A.md): 76-11: Thrust/Power Lever Interface Control Document - *(ICD)*
-*   [GP-AM-AMPEL-0100-76-004-PROC-A.md](./GP-AM-AMPEL-0100-76-004-PROC-A.md): 76-20: Engine Emergency Shutdown Procedure - *(PROC)*
-
-### ATA 77: Engine Indicating
-*Engine indicating systems for thrust/power, temperature, vibration, and AI-driven health monitoring.*
-*   [GP-AM-AMPEL-0100-77-001-OV-A.md](./GP-AM-AMPEL-0100-77-001-OV-A.md): 77-01: Engine Indicating System Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-77-002-SPEC-A.md](./GP-AM-AMPEL-0100-77-002-SPEC-A.md): 77-10: Thrust/Power Indication Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-77-003-SPEC-A.md](./GP-AM-AMPEL-0100-77-003-SPEC-A.md): 77-20: Engine Temperature Monitoring Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-77-004-SDD-A.md](./GP-AM-AMPEL-0100-77-004-SDD-A.md): 77-30: Engine Vibration Monitoring System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-77-005-SPEC-A.md](./GP-AM-AMPEL-0100-77-005-SPEC-A.md): 77-31: Engine Vibration Monitoring Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-77-006-OV-A.md](./GP-AM-AMPEL-0100-77-006-OV-A.md): 77-40: AI-Driven Engine Health Monitoring Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-77-007-SDD-A.md](./GP-AM-AMPEL-0100-77-007-SDD-A.md): 77-41: AI-Driven Engine Health Monitoring System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-77-008-ICD-A.md](./GP-AM-AMPEL-0100-77-008-ICD-A.md): 77-42: i-Aher0 Interface Control Document (Engine Health) - *(ICD)*
-
-### ATA 78: Engine Exhaust
-*Design and specifications for exhaust nozzles and thrust reverser systems, if applicable.*
-*   [GP-AM-AMPEL-0100-78-001-OV-A.md](./GP-AM-AMPEL-0100-78-001-OV-A.md): 78-01: Engine Exhaust System Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-78-002-DD-A.md](./GP-AM-AMPEL-0100-78-002-DD-A.md): 78-10: Exhaust Nozzle Design Document - *(DD)*
-*   [GP-AM-AMPEL-0100-78-003-SPEC-A.md](./GP-AM-AMPEL-0100-78-003-SPEC-A.md): 78-11: Exhaust Nozzle Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-78-004-SDD-A.md](./GP-AM-AMPEL-0100-78-004-SDD-A.md): 78-30: Thrust Reverser System Description (If Applicable) - *(SDD)*
-*   [GP-AM-AMPEL-0100-78-005-SPEC-A.md](./GP-AM-AMPEL-0100-78-005-SPEC-A.md): 78-31: Thrust Reverser Specification (If Applicable) - *(SPEC)*
-
-### ATA 79: Engine Oil
-*Engine oil system overview, including tank, distribution (pumps, lines, filters), and indicating systems.*
-*   [GP-AM-AMPEL-0100-79-001-OV-A.md](./GP-AM-AMPEL-0100-79-001-OV-A.md): 79-01: Engine Oil System Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-79-002-SPEC-A.md](./GP-AM-AMPEL-0100-79-002-SPEC-A.md): 79-10: Oil Tank Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-79-003-DWG-A.md](./GP-AM-AMPEL-0100-79-003-DWG-A.md): 79-11: Oil Tank Drawing - *(DWG)*
-*   [GP-AM-AMPEL-0100-79-004-SDD-A.md](./GP-AM-AMPEL-0100-79-004-SDD-A.md): 79-20: Oil Distribution System Description (Pumps, Lines, Filters) - *(SDD)*
-*   [GP-AM-AMPEL-0100-79-005-SPEC-A.md](./GP-AM-AMPEL-0100-79-005-SPEC-A.md): 79-21: Oil Distribution System Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-79-006-SDD-A.md](./GP-AM-AMPEL-0100-79-006-SDD-A.md): 79-30: Oil Indicating System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-79-007-SPEC-A.md](./GP-AM-AMPEL-0100-79-007-SPEC-A.md): 79-31: Oil Indicating System Specification - *(SPEC)*
-
-### ATA 80: Starting
-*Engine starting system overview, including starter motor specifications and ignition system reference.*
-*   [GP-AM-AMPEL-0100-80-001-OV-A.md](./GP-AM-AMPEL-0100-80-001-OV-A.md): 80-01: Engine Starting System Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-80-002-SPEC-A.md](./GP-AM-AMPEL-0100-80-002-SPEC-A.md): 80-10: Starter Motor Specification (Electric/Pneumatic) - *(SPEC)*
-*   [GP-AM-AMPEL-0100-80-003-SDD-A.md](./GP-AM-AMPEL-0100-80-003-SDD-A.md): 80-20: Ignition System Description (Reference to ATA 74) - *(SDD)*
-
-### ATA 81: Turbines (Reciprocating Engines)
-*Not applicable to the AMPEL360XWLRGA.*
-*   [GP-AM-AMPEL-0100-81-001-OV-A.md](./GP-AM-AMPEL-0100-81-001-OV-A.md): 81-01: Not Applicable - *(OV)*
-
-### ATA 82: Water Injection
-*Not applicable to the AMPEL360XWLRGA.*
-*   [GP-AM-AMPEL-0100-82-001-OV-A.md](./GP-AM-AMPEL-0100-82-001-OV-A.md): 82-01: Not Applicable - *(OV)*
-
-### ATA 83: Accessory Gear Boxes
-*Overview, drive specifications, assembly design, and drawings for accessory gearboxes.*
-*   [GP-AM-AMPEL-0100-83-001-OV-A.md](./GP-AM-AMPEL-0100-83-001-OV-A.md): 83-01: Accessory Gearbox Overview - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-83-002-SPEC-A.md](./GP-AM-AMPEL-0100-83-002-SPEC-A.md): 83-10: Gearbox Drive Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-83-003-DD-A.md](./GP-AM-AMPEL-0100-83-003-DD-A.md): 83-20: Gearbox Assembly Design Document - *(DD)*
-*   [GP-AM-AMPEL-0100-83-004-DWG-A.md](./GP-AM-AMPEL-0100-83-004-DWG-A.md): 83-21: Gearbox Assembly Drawing - *(DWG)*
-
-### ATA 84: Reserved for Future Use
-*Placeholder.*
-*   [GP-AM-AMPEL-0100-84-001-OV-A.md](./GP-AM-AMPEL-0100-84-001-OV-A.md): 84-01: Placeholder - *(OV)*
-
-### ATA 85: Fuel Cell System
-*Overview, specifications, processor, and power conditioning for fuel cell systems, if applicable.*
-*   [GP-AM-AMPEL-0100-85-001-OV-A.md](./GP-AM-AMPEL-0100-85-001-OV-A.md): 85-01: Fuel Cell System Overview (If Applicable) - *(OV, SDD)*
-*   [GP-AM-AMPEL-0100-85-002-SPEC-A.md](./GP-AM-AMPEL-0100-85-002-SPEC-A.md): 85-10: Fuel Cell Stack Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-85-003-SDD-A.md](./GP-AM-AMPEL-0100-85-003-SDD-A.md): 85-20: Hydrogen Processor Description (If Applicable) - *(SDD)*
-*   [GP-AM-AMPEL-0100-85-004-SDD-A.md](./GP-AM-AMPEL-0100-85-004-SDD-A.md): 85-30: Fuel Cell Power Conditioning Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-85-005-SPEC-A.md](./GP-AM-AMPEL-0100-85-005-SPEC-A.md): 85-31: Fuel Cell Power Conditioning Specification - *(SPEC)*
-
-### ATA 91: Charts
-*Collection of performance charts and index to wiring diagram manuals.*
-*   [GP-AM-AMPEL-0100-91-001-OV-A.md](./GP-AM-AMPEL-0100-91-001-OV-A.md): 91-01: Charts Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-91-002-FIG-A.md](./GP-AM-AMPEL-0100-91-002-FIG-A.md): 91-10: Performance Charts Collection - *(FIG, RPT)*
-*   [GP-AM-AMPEL-0100-91-003-LIST-A.md](./GP-AM-AMPEL-0100-91-003-LIST-A.md): 91-20: Wiring Diagram Manual Index - *(LIST, REF)*
-
-### ATA 92: Electrical System Installation
-*Procedures and specifications for wiring and connector installation.*
-*   [GP-AM-AMPEL-0100-92-001-OV-A.md](./GP-AM-AMPEL-0100-92-001-OV-A.md): 92-01: Electrical Installation Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-92-002-PROC-A.md](./GP-AM-AMPEL-0100-92-002-PROC-A.md): 92-10: Wiring Installation Procedure - *(PROC)*
-*   [GP-AM-AMPEL-0100-92-003-SPEC-A.md](./GP-AM-AMPEL-0100-92-003-SPEC-A.md): 92-11: Wiring Installation Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-92-004-SPEC-A.md](./GP-AM-AMPEL-0100-92-004-SPEC-A.md): 92-20: Connector Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-92-005-PROC-A.md](./GP-AM-AMPEL-0100-92-005-PROC-A.md): 92-21: Connector Installation Procedure - *(PROC)*
-
-### ATA 95: Special Equipment
-*Overview, list, and specifications for special ground support equipment (GSE).*
-*   [GP-AM-AMPEL-0100-95-001-OV-A.md](./GP-AM-AMPEL-0100-95-001-OV-A.md): 95-01: Special Equipment Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-95-002-LIST-A.md](./GP-AM-AMPEL-0100-95-002-LIST-A.md): 95-10: Special Ground Support Equipment List - *(LIST)*
-*   [GP-AM-AMPEL-0100-95-003-SPEC-A.md](./GP-AM-AMPEL-0100-95-003-SPEC-A.md): 95-11: Special Ground Support Equipment Specification - *(SPEC)*
-
-### ATA 96: Reserved for Future Use
-*Placeholder.*
-*   [GP-AM-AMPEL-0100-96-001-OV-A.md](./GP-AM-AMPEL-0100-96-001-OV-A.md): 96-01: Placeholder - *(OV)*
-
-### ATA 97: Wiring Reporting
-*Overview and specification for the wiring list database structure.*
-*   [GP-AM-AMPEL-0100-97-001-OV-A.md](./GP-AM-AMPEL-0100-97-001-OV-A.md): 97-01: Wiring Reporting System Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-97-002-SPEC-A.md](./GP-AM-AMPEL-0100-97-002-SPEC-A.md): 97-10: Wiring List Database Structure Specification - *(SPEC)*
-
-### ATA 99: Special / Emerging Tech
-*Overview, specifications, and integration details for special and emerging technologies like on-board HPC, Quantum Mission Fabric, novel sensors, and long-term R&D (e.g., warp drive).*
-*   [GP-AM-AMPEL-0100-99-001-OV-A.md](./GP-AM-AMPEL-0100-99-001-OV-A.md): 99-01: Special Technologies Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-99-002-SPEC-A.md](./GP-AM-AMPEL-0100-99-002-SPEC-A.md): 99-10: On-Board HPC System Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-99-003-SDD-A.md](./GP-AM-AMPEL-0100-99-003-SDD-A.md): 99-11: On-Board HPC System Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-99-004-ICD-A.md](./GP-AM-AMPEL-0100-99-004-ICD-A.md): 99-12: On-Board HPC Interface Control Document - *(ICD)*
-*   [GP-AM-AMPEL-0100-99-005-OV-A",
-          *   [GP-AM-AMPEL-0100-99-005-OV-A.md](./GP-AM-AMPEL-0100-99-005-OV-A.md): 99-20: Quantum Mission Fabric Integration Overview - *(OV)*
-*   [GP-AM-AMPEL-0100-99-006-SDD-A.md](./GP-AM-AMPEL-0100-99-006-SDD-A.md): 99-21: Quantum Fabric Interface Description - *(SDD)*
-*   [GP-AM-AMPEL-0100-99-007-ICD-A.md](./GP-AM-AMPEL-0100-99-007-ICD-A.md): 99-22: Quantum Fabric Interface Control Document - *(ICD)*
-*   [GP-AM-AMPEL-0100-99-008-LIST-A.md](./GP-AM-AMPEL-0100-99-008-LIST-A.md): 99-30: Novel Sensor Technologies List - *(LIST)*
-*   [GP-AM-AMPEL-0100-99-009-SPEC-A.md](./GP-AM-AMPEL-0100-99-009-SPEC-A.md): 99-31: Novel Sensor Technologies Specification - *(SPEC)*
-*   [GP-AM-AMPEL-0100-99-010-RPT-A.md](./GP-AM-AMPEL-0100-99-010-RPT-A.md): 99-90: Warp/Wormhole Drive Research Report (Long-Term R&D) - *(RPT)*
+## Document Parts Overview
 
 ---
 
-## Appendix (Part I)
+## Document Parts Overview
 
-*   [GP-AM-AMPEL-0100-APP-A-001-GLO-A.md](./GP-AM-AMPEL-0100-APP-A-001-GLO-A.md): A. Glossary of Airframe Terms & Acronyms - *(GLO)*
-*   [GP-AM-AMPEL-0100-APP-B-001-REF-A.md](./GP-AM-AMPEL-0100-APP-B-001-REF-A.md): B. Referenced COAFI Documents (Airframe) - *(REF, LIST)*
+| Part    | Domain Code | Title                              | Scope                                           | Key Interfaces                     |
+| :------ | :---------- | :--------------------------------- | :---------------------------------------------- | :--------------------------------- |
+| **0**   | `GP-FD`     | **Program Foundations**            | Vision, ethics, compliance, standards, doctrines. | All domains.                       |
+| **1**   | `GP-AM`     | **Air Systems & Airframes**        | AMPEL materials, aircraft systems (ATA chapters). | `GP-COM`, `GP-GRO`, `GP-RAME`.       |
+| **2**   | `GP-AS`     | **Space Systems & Spaceframes**    | AMPEL+ platforms, orbital logistics (AS chapters). | `GP-COM`, `GP-GRO`, `GP-RAME`.       |
+| **3**   | `GP-COM`    | **Core Operating Matrix**          | AI (`i-Aher0`), QAO, secure networks, BITT.     | All domains.                       |
+| **4**   | `GP-GRO`    | **Ground & Infrastructure**        | Robotics-augmented logistics, launch/landing.   | `GP-AM`, `GP-AS`, `GP-SUPL`.       |
+| **5**   | `GP-SUPL`   | **Supply Chain & Ethical Logistics** | Ethical sourcing, lifecycle traceability.        | `GP-GRO`, `GP-RAME`, `GP-AM`/`GP-AS`. |
+| **6**   | `GP-RAME`   | **Robotic Assembly & Maintenance** | Autonomous assembly, predictive maintenance.    | `GP-AM`, `GP-AS`, `GP-SUPL`.       |
+| **7**   | `GP-PM`     | **Program Management & Ops**       | Certification, risk management, lifecycle QA.   | All domains.                       |
+| *(Note: Further Parts reserved for future expansion)* |
+
+---
+---
+
+## Part 1: Air Systems & Airframes (AMPEL360XWLRGA) (GP-AM) 🚀✈️
+
+*Filename pattern*: `GP‑AM-[PlatformCode]-[SeqCode]-[ATAChapterCode]-[SubjectCode]-[InfoCode]-[Rev].[ext]`
+*(Asterisk `*` denotes `[PlatformCode]-[SeqCode]`)*
+
+| ATA Ch | Title                                      | Canonical IDX file              | Link to Chapter Details            |
+| :----- | :----------------------------------------- | :------------------------------ | :--------------------------------- |
+| 00     | Intro & General                            | `GP‑AM-*-00-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-00-intro--general-️) |
+| 01     | Aircraft General                           | `GP‑AM-*-01-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-01-aircraft-general) |
+| 02     | Operations Information                     | `GP‑AM-*-02-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-02-operations-information) |
+| 03     | Performance                                | `GP‑AM-*-03-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-03-performance) |
+| 04     | Airworthiness                              | `GP‑AM-*-04-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-04-airworthiness) |
+| 05     | Time Limits / Maintenance Checks           | `GP‑AM-*-05-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-05-time-limits--maintenance-checks-️) |
+| 06     | Dimensions & Areas                         | `GP‑AM-*-06-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-06-dimensions--areas) |
+| 07     | Lifting & Shoring                          | `GP‑AM-*-07-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-07-lifting--shoring) |
+| 08     | Leveling & Weighing                        | `GP‑AM-*-08-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-08-leveling--weighing) |
+| 09     | Towing & Taxiing                           | `GP‑AM-*-09-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-09-towing--taxiing) |
+| 10     | Parking, Mooring, Storage                  | `GP‑AM-*-10-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-10-parking-mooring-storage) |
+| 11     | Placards & Markings                        | `GP‑AM-*-11-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-11-placards--markings) |
+| 12     | Servicing – Routine                        | `GP‑AM-*-12-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-12-servicing--routine) |
+| 13     | Hydraulic Power (Minimal/EHA)              | `GP‑AM-*-13-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-13-hydraulic-power) |
+| 14     | Pneumatic Power (Minimal)                  | `GP‑AM-*-14-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-14-pneumatic-power) |
+| 15     | *Merged into ATA 21*                     | `GP-AM-*-15-001-REF-A.md`       | *(See ATA 21)*                     |
+| 16     | *Merged into ATA 21*                     | `GP-AM-*-16-001-REF-A.md`       | *(See ATA 21)*                     |
+| 17     | *Merged into ATA 21*                     | `GP-AM-*-17-001-REF-A.md`       | *(See ATA 21)*                     |
+| 18     | Vibration & Noise Control                  | `GP‑AM-*-18-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-18-vibration--noise) |
+| 20     | Standard Practices – Airframe              | `GP‑AM-*-20-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-20-standard-practices--airframe) |
+| 21     | Air Conditioning & Pressurization (ECS)    | `GP‑AM-*-21-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-21-air-conditioning--pressurization) |
+| 22     | Auto Flight                                | `GP‑AM-*-22-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-22-auto-flight) |
+| 23     | Communications                             | `GP‑AM-*-23-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-23-communications) |
+| 24     | Electrical Power                           | `GP‑AM-*-24-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-24-electrical-power) |
+| 25     | Equipment / Furnishings                    | `GP‑AM-*-25-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-25-equipment--furnishings) |
+| 26     | Fire Protection                            | `GP‑AM-*-26-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-26-fire-protection) |
+| 27     | Flight Controls (incl. GPAM)               | `GP‑AM-*-27-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-27-flight-controls) |
+| 28     | Fuel (Hybrid H2/SAF)                       | `GP‑AM-*-28-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-28-fuel) |
+| 29     | Hydraulic Power (Actuation Focus)          | `GP‑AM-*-29-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-29-hydraulic-power) |
+| 30     | Ice & Rain Protection                      | `GP‑AM-*-30-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-30-ice--rain-protection) |
+| 31     | Indicating / Recording Systems             | `GP‑AM-*-31-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-31-indicating--recording) |
+| 32     | Landing Gear                               | `GP‑AM-*-32-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-32-landing-gear) |
+| 33     | Lights                                     | `GP‑AM-*-33-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-33-lights) |
+| 34     | Navigation                                 | `GP‑AM-*-34-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-34-navigation) |
+| 35     | Oxygen                                     | `GP‑AM-*-35-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-35-oxygen) |
+| 36     | Pneumatic                                  | `GP‑AM-*-36-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-36-pneumatic) |
+| 37     | Vacuum                                     | `GP-AM-*-37-001-OV-A.md`        | [Details](./GP-AM/ToC-GP-AM.md#ata-37-vacuum) |
+| 38     | Water / Waste                              | `GP‑AM-*-38-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-38-water--waste) |
+| 39     | Electrical/Electronic Panels               | `GP‑AM-*-39-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-39-electricalelectronic-panels) |
+| 41     | Water Ballast                              | `GP‑AM-*-41-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-41-water-ballast) |
+| 42     | Integrated Modular Avionics (IMA)          | `GP‑AM-*-42-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-42-integrated-modular-avionics-ima) |
+| 44     | Cabin Systems                              | `GP‑AM-*-44-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-44-cabin-systems) |
+| 45     | Central Maintenance System (CMS)           | `GP‑AM-*-45-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-45-central-maintenance-system-cms) |
+| 46     | Information Systems                        | `GP‑AM-*-46-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-46-information-systems) |
+| 47     | Nitrogen Generation System (NGS)           | `GP‑AM-*-47-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-47-nitrogen-generation-system) |
+| 49     | Airborne Auxiliary Power (AAP/APU)         | `GP‑AM-*-49-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-49-airborne-auxiliary-power-aap) |
+| 50     | Cargo and Accessory Compartments           | `GP‑AM-*-50-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-50-cargo-and-accessory-compartments) |
+| 51     | Structures – General                       | `GP‑AM-*-51-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-51-structures--general) |
+| 52     | Doors                                      | `GP‑AM-*-52-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-52-doors) |
+| 53     | Fuselage                                   | `GP‑AM-*-53-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-53-fuselage) |
+| 54     | Nacelles/Pylons                            | `GP‑AM-*-54-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-54-nacellespylons) |
+| 55     | Stabilizers                                | `GP‑AM-*-55-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-55-stabilizers) |
+| 56     | Windows (incl. VR)                         | `GP‑AM-*-56-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-56-windows) |
+| 57     | Wings (incl. GPAM)                         | `GP‑AM-*-57-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-57-wings) |
+| 60     | Standard Practices - Engine                | `GP‑AM-*-60-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-60-standard-practices---engine) |
+| 61     | Propellers/Propulsors *(If Applicable)*    | `GP‑AM-*-61-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-61-propellerspropulsors) |
+| 62     | Main Rotor *(If Applicable)*               | `GP‑AM-*-62-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-62-main-rotor) |
+| 63     | Main Rotor Drive *(If Applicable)*         | `GP‑AM-*-63-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-63-main-rotor-drive) |
+| 64     | Tail Rotor *(If Applicable)*               | `GP‑AM-*-64-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-64-tail-rotor) |
+| 65     | Tail Rotor Drive *(If Applicable)*         | `GP‑AM-*-65-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-65-tail-rotor-drive) |
+| 66     | Folding Blades/Pylon *(If Applicable)*     | `GP‑AM-*-66-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-66-folding-bladespylon) |
+| 67     | Rotors Flight Control *(If Applicable)*    | `GP‑AM-*-67-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-67-rotors-flight-control) |
+| 70     | Standard Practices – Engines               | `GP‑AM-*-70-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-70-standard-practices---engines) |
+| 71     | Power Plant–General                        | `GP‑AM-*-71-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-71-power-plant-general) |
+| 72     | Engine (Turbine/Hybrid/H2)                 | `GP‑AM-*-72-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-72-engine-turbinepiston) |
+| 72-Q01 | **Quantum Propulsion Extension**           | `GP‑AM-*-72-Q01-000-IDX-A.md`   | [Details](./GP-AM/ToC-GP-AM.md#ata-72-q01-propulsion--quantum-extension) |
+| 73     | Engine Fuel & Control                      | `GP‑AM-*-73-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-73-engine-fuel-and-control) |
+| 74     | Ignition                                   | `GP‑AM-*-74-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-74-ignition) |
+| 75     | Air (Engine Bleed/ECS Input)               | `GP‑AM-*-75-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-75-air-engine-bleedecs-input) |
+| 76     | Engine Controls                            | `GP‑AM-*-76-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-76-engine-controls) |
+| 77     | Engine Indication                          | `GP‑AM-*-77-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-77-engine-indication) |
+| 78     | Exhaust                                    | `GP‑AM-*-78-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-78-exhaust) |
+| 79     | Oil                                        | `GP‑AM-*-79-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-79-oil) |
+| 80     | Starting                                   | `GP‑AM-*-80-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-80-starting) |
+| 83     | Accessory Gear Boxes                       | `GP‑AM-*-83-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-83-accessory-gear-boxes) |
+| 85     | Fuel Cell System *(If Applicable)*         | `GP‑AM-*-85-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-85-fuel-cell-system-if-applicable) |
+| 91     | Charts                                     | `GP‑AM-*-91-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-91-charts) |
+| 92     | Electrical System Installation             | `GP‑AM-*-92-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-92-electrical-system-installation) |
+| 95     | Special Equipment (GSE)                    | `GP‑AM-*-95-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-95-special-equipment-gse) |
+| 97     | Wiring Reporting                           | `GP‑AM-*-97-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-97-wiring-reporting) |
+| 99     | Special / Emerging Tech                    | `GP‑AM-*-99-000-IDX-A.md`       | [Details](./GP-AM/ToC-GP-AM.md#ata-99-special--emerging-tech) |
+
+---
+---
+
+## Filename Convention (GP-AM Domain)
+
+Files within this domain follow the pattern:
+`GP-AM-[PlatformCode]-[SeqCode]-[ATAChapterCode]-[SubjectCode]-[InfoCode]-[Rev].[ext]`
+
+*   **GP-AM:** Domain Code (Air Systems & Airframes)
+*   **[PlatformCode]:** Unique identifier for the aircraft platform (e.g., `AMPEL-0100`). Represented by `*` in this ToC where applicable to multiple platforms.
+*   **[SeqCode]:** Sequential identifier within the context (e.g., `001`, `100`).
+*   **[ATAChapterCode]:** Two-digit code corresponding to the ATA 100 Chapter (e.g., `05`, `27`, `53`). Includes extensions like `72-Q01`.
+*   **[SubjectCode]:** Code identifying the specific subject/component within the ATA chapter (e.g., `010` for General, `050` for Flaps).
+*   **[InfoCode]:** Standard COAFI Information Code defining the document type (e.g., `IDX`, `OV`, `SPEC`, `REQ`, `PROC`, `SDD`, `CAL`, `TEST`, `DWG`, `LIST`, `REF`, `PLAN`).
+*   **[Rev]:** Revision indicator (e.g., `A`, `B`, `01`).
+*   **[ext]:** File extension (e.g., `.md`, `.json`, `.yaml`, `.pdf`, `.stp`).
 
 ---
 
-## Part II: Spaceframes (AMPEL+) (GP-AS) 🛰️🌌
+## GP-AM Chapter Index (Based on AToC.md v2025-04-18 - No Placeholder View)
 
-# ToC-GP-AS.md
-
-*Table of Contents – Space Systems & Spaceframes (Part 2)*
-
-## Introduction
-
-This document serves as the central Table of Contents for **GP-AS (Part 2 – Space Systems & Spaceframes)** documentation. This section details the design, specifications, maintenance procedures, and operational aspects of the spaceframe and its associated systems, following a structure adapted from aerospace documentation standards.
-
-Use this file to navigate the extensive documentation set for the Space Systems & Spaceframes component.
-
-## Document Naming Convention
-
-The documentation follows a standardized naming convention based on the GP-AS standard:
-
-`GP-AS-[System]-[Phase#]-[Chap#]-[Seq#]-[InfoCode]-[Rev].md`
-
-Where:
-
-*   `GP-AS`: Project Identifier (General Purpose - Space Systems & Spaceframes)
-*   `[System]`: 5-letter code for the primary system/platform (e.g., `AMPELPLUS` as used here).
-*   `[Phase#]`: Project or Phase number (e.g., `0200` seems consistent here).
-*   `[Chap#]`: Chapter number corresponding to the AS chapter (e.g., `00`, `01`, `72-Q01`).
-*   `[Seq#]`: Sequential document number within the chapter (e.g., `001`, `002`).
-*   `[InfoCode]`: 2-4 letter code indicating the document type (see list below).
-*   `[Rev]`: Revision identifier (e.g., `A`, `B`).
-*   `.md`: File extension (Markdown).
-
-**Common Information Codes (Info Codes) used in this section:**
-
-*   `ADMIN`: Administrative
-*   `CAL`: Calculation / Analysis
-*   `CAT`: Catalog / List
-*   `DD`: Design Document
-*   `DWG`: Drawing
-*   `FIG`: Figure / Diagram
-*   `ICD`: Interface Control Document
-*   `LIST`: List (Specific)
-*   `MAN`: Manual
-*   `OV`: Overview
-*   `PLAN`: Plan
-*   `PROC`: Procedure
-*   `REF`: Reference
-*   `REQ`: Requirements
-*   `RPT`: Report
-*   `SDD`: System Design Description
-*   `SPEC`: Specification
-*   `TEST`: Test Plan / Procedure
+*(Note: The canonical `IDX` file is the primary entry point for each chapter. Bullet points below list **representative examples** of potential documents within that chapter to illustrate the expected structure and granularity. These example files require specific creation and ratification.)*
 
 ---
 
-## GP-AS (Part 2 – Space Systems & Spaceframes) Chapters
+### **ATA Chapter 00: Intro & General**
+*   Canonical Index: [`GP-AM-*-00-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-00-000-IDX-A.md)
+    *   `GP-AM-*-00-001-OV-A.md`: Part 1 Scope and Applicability Overview
+    *   `GP-AM-*-00-005-REF-A.md`: Cross-Reference to Part 0 Foundations (Standards, Ethics)
+    *   `GP-AM-*-00-010-SPEC-A.md`: Platform General Specification (Top Level)
+    *   `GP-AM-*-00-020-LIST-A.md`: Master Acronyms & Abbreviations List (GP-AM Specific)
 
-This documentation is organized into chapters based on an adapted space systems standard. All chapter documentation resides within the main **[AMPELPLUS_0200/](./AMPELPLUS_0200/)** Sequence & Platform Directory.
+### **ATA Chapter 01: Aircraft General**
+*   Canonical Index: [`GP-AM-*-01-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-01-000-IDX-A.md)
+    *   `GP-AM-*-01-001-OV-A.md`: Aircraft Identification and Characteristics Overview
+    *   `GP-AM-*-01-010-SPEC-A.md`: Aircraft Type Designation Specification
+    *   `GP-AM-*-01-020-LIST-A.md`: Principal Characteristics List (Dimensions, Weights, Capacities)
+    *   `GP-AM-*-01-030-DWG-A.md`: General Arrangement Drawing
+
+### **ATA Chapter 02: Operations Information**
+*   Canonical Index: [`GP-AM-*-02-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-02-000-IDX-A.md)
+    *   `GP-AM-*-02-001-OV-A.md`: Flight Operations Documentation Overview
+    *   `GP-AM-*-02-010-REF-A.md`: Link to Aircraft Flight Manual (AFM) / Pilot Operating Handbook (POH) Index (May be external or separate COAFI Part)
+    *   `GP-AM-*-02-020-PROC-A.md`: Standard Operating Procedures (SOP) Index/Reference
+    *   `GP-AM-*-02-030-SDD-A.md`: AI-Assisted Flight Planning System Description
+
+### **ATA Chapter 03: Performance**
+*   Canonical Index: [`GP-AM-*-03-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-03-000-IDX-A.md)
+    *   `GP-AM-*-03-001-OV-A.md`: Performance Data Overview
+    *   `GP-AM-*-03-010-CAL-A.md`: Takeoff & Landing Performance Calculations
+    *   `GP-AM-*-03-020-CAL-A.md`: Cruise Performance Calculations (Range, Endurance, Ceiling)
+    *   `GP-AM-*-03-030-RPT-A.md`: Performance Data Report (Compiled Charts & Tables)
+    *   `GP-AM-*-03-040-SDD-A.md`: Performance Monitoring System (Onboard/Ground) Description
+
+### **ATA Chapter 04: Airworthiness**
+*   Canonical Index: [`GP-AM-*-04-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-04-000-IDX-A.md)
+    *   `GP-AM-*-04-001-OV-A.md`: Airworthiness Framework Overview
+    *   `GP-AM-*-04-010-PLAN-A.md`: Certification Plan (Type Certification Basis)
+    *   `GP-AM-*-04-020-LIST-A.md`: Airworthiness Limitations List (Critical Items)
+    *   `GP-AM-*-04-030-REF-A.md`: Master Minimum Equipment List (MMEL) Reference
+    *   `GP-AM-*-04-040-PROC-A.md`: Continued Airworthiness Management Procedure
+
+### **ATA Chapter 05: Time Limits / Maintenance Checks**
+*   Canonical Index: [`GP-AM-*-05-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-05-000-IDX-A.md)
+    *   `GP-AM-*-05-001-OV-A.md`: Maintenance Program Overview
+    *   `GP-AM-*-05-010-SPEC-A.md`: Life Limited Parts Specification
+    *   `GP-AM-*-05-020-PLAN-A.md`: Scheduled Maintenance Check Program Plan (A/B/C/D Checks or equivalent)
+    *   `GP-AM-*-05-030-LIST-A.md`: Maintenance Task List (Intervals & References)
+    *   `GP-AM-*-05-040-SDD-A.md`: AI-Optimized Maintenance Scheduling Logic Description (i-Aher0 Air)
+
+### **ATA Chapter 06: Dimensions & Areas**
+*   Canonical Index: [`GP-AM-*-06-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-06-000-IDX-A.md)
+    *   `GP-AM-*-06-001-OV-A.md`: Aircraft Dimensions & Areas Overview
+    *   `GP-AM-*-06-010-LIST-A.md`: Principal Dimensions List (Span, Length, Height)
+    *   `GP-AM-*-06-020-DWG-A.md`: Station Diagram / Coordinate System Definition Drawing
+    *   `GP-AM-*-06-030-LIST-A.md`: Key Surface Areas List (Wing, Tail, Control Surfaces)
+
+### **ATA Chapter 07: Lifting & Shoring**
+*   Canonical Index: [`GP-AM-*-07-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-07-000-IDX-A.md)
+    *   `GP-AM-*-07-001-OV-A.md`: Lifting & Shoring Procedures Overview
+    *   `GP-AM-*-07-010-DWG-A.md`: Jacking Point Locations & Load Limits Drawing
+    *   `GP-AM-*-07-020-PROC-A.md`: Aircraft Jacking Procedure
+    *   `GP-AM-*-07-030-DWG-A.md`: Slinging / Hoisting Point Locations Drawing
+    *   `GP-AM-*-07-040-PROC-A.md`: Aircraft Hoisting Procedure
+    *   `GP-AM-*-07-050-DWG-A.md`: Shoring Diagram & Requirements Drawing
+
+### **ATA Chapter 08: Leveling & Weighing**
+*   Canonical Index: [`GP-AM-*-08-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-08-000-IDX-A.md)
+    *   `GP-AM-*-08-001-OV-A.md`: Leveling & Weighing Overview
+    *   `GP-AM-*-08-010-PROC-A.md`: Aircraft Leveling Procedure
+    *   `GP-AM-*-08-020-DWG-A.md`: Leveling Point Locations Drawing
+    *   `GP-AM-*-08-030-PROC-A.md`: Aircraft Weighing Procedure
+    *   `GP-AM-*-08-040-LIST-A.md`: Weight & Balance Data List (Basic Empty Weight, CG)
+    *   `GP-AM-*-08-050-CAL-A.md`: Weight & Balance Calculation Methodology
+
+### **ATA Chapter 09: Towing & Taxiing**
+*   Canonical Index: [`GP-AM-*-09-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-09-000-IDX-A.md)
+    *   `GP-AM-*-09-001-OV-A.md`: Towing & Taxiing Operations Overview
+    *   `GP-AM-*-09-010-PROC-A.md`: Aircraft Towing Procedure & Limitations
+    *   `GP-AM-*-09-020-DWG-A.md`: Towing Point Locations & Attachments Drawing
+    *   `GP-AM-*-09-030-PROC-A.md`: Taxiing Procedure & Guidelines
+    *   `GP-AM-*-09-040-SPEC-A.md`: Turning Radius & Clearance Specification
+
+### **ATA Chapter 10: Parking, Mooring, Storage**
+*   Canonical Index: [`GP-AM-*-10-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-10-000-IDX-A.md)
+    *   `GP-AM-*-10-001-OV-A.md`: Parking, Mooring & Storage Overview
+    *   `GP-AM-*-10-010-PROC-A.md`: Aircraft Parking Procedure (Brakes, Chocks)
+    *   `GP-AM-*-10-020-PROC-A.md`: Aircraft Mooring Procedure
+    *   `GP-AM-*-10-030-DWG-A.md`: Mooring Point Locations & Load Limits Drawing
+    *   `GP-AM-*-10-040-PROC-A.md`: Short/Long Term Storage Procedure
+    *   `GP-AM-*-10-050-SPEC-A.md`: Storage Environmental Requirements Specification
+
+### **ATA Chapter 11: Placards & Markings**
+*   Canonical Index: [`GP-AM-*-11-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-11-000-IDX-A.md)
+    *   `GP-AM-*-11-001-OV-A.md`: Placards & Markings Overview
+    *   `GP-AM-*-11-010-DWG-A.md`: Exterior Markings Location Drawing (Livery, Registration, Warnings)
+    *   `GP-AM-*-11-020-LIST-A.md`: Exterior Markings List & Specifications
+    *   `GP-AM-*-11-030-DWG-A.md`: Interior Placards Location Drawing (Cockpit, Cabin, Cargo)
+    *   `GP-AM-*-11-040-LIST-A.md`: Interior Placards List & Specifications
+
+### **ATA Chapter 12: Servicing – Routine**
+*   Canonical Index: [`GP-AM-*-12-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-12-000-IDX-A.md)
+    *   `GP-AM-*-12-001-OV-A.md`: Routine Servicing Overview
+    *   `GP-AM-*-12-010-PROC-A.md`: Refueling/Defueling Procedure (incl. H2/SAF specifics)
+    *   `GP-AM-*-12-020-PROC-A.md`: Oil System Servicing Procedure
+    *   `GP-AM-*-12-030-PROC-A.md`: Hydraulic Fluid Servicing Procedure
+    *   `GP-AM-*-12-040-PROC-A.md`: Pneumatic/Oxygen System Servicing Procedure
+    *   `GP-AM-*-12-050-LIST-A.md`: Consumable Fluids & Materials List
+    *   `GP-AM-*-12-060-DWG-A.md`: Servicing Access Points Drawing
+
+### **ATA Chapter 13: Hydraulic Power (Minimal/EHA)**
+*   Canonical Index: [`GP-AM-*-13-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-13-000-IDX-A.md)
+    *   `GP-AM-*-13-001-OV-A.md`: Electro-Hydrostatic Actuation (EHA) System Overview
+    *   `GP-AM-*-13-010-SDD-A.md`: EHA Unit Design Description
+    *   `GP-AM-*-13-020-SPEC-A.md`: EHA Performance Specification
+    *   `GP-AM-*-13-030-DWG-A.md`: EHA Installation & Interface Drawing
+    *   `GP-AM-*-13-040-PROC-A.md`: EHA System Testing Procedure
+
+### **ATA Chapter 14: Pneumatic Power (Minimal)**
+*   Canonical Index: [`GP-AM-*-14-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-14-000-IDX-A.md)
+    *   `GP-AM-*-14-001-OV-A.md`: Auxiliary Pneumatic System Overview (if applicable)
+    *   `GP-AM-*-14-010-SDD-A.md`: Pneumatic Power Source Description (e.g., Electric Compressor)
+    *   `GP-AM-*-14-020-DWG-A.md`: Auxiliary Pneumatic Distribution Diagram
+
+### **ATA Chapter 15: *Merged into ATA 21 (Air Cond.)***
+*   Canonical Reference: [`GP-AM-*-15-001-REF-A.md`](./GP-AM/GP-AM-AMPEL-0100-15-001-REF-A.md)
+
+### **ATA Chapter 16: *Merged into ATA 21 (Air Cond.)***
+*   Canonical Reference: [`GP-AM-*-16-001-REF-A.md`](./GP-AM/GP-AM-AMPEL-0100-16-001-REF-A.md)
+
+### **ATA Chapter 17: *Merged into ATA 21 (Air Cond.)***
+*   Canonical Reference: [`GP-AM-*-17-001-REF-A.md`](./GP-AM/GP-AM-AMPEL-0100-17-001-REF-A.md)
+
+### **ATA Chapter 18: Vibration & Noise Control**
+*   Canonical Index: [`GP-AM-*-18-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-18-000-IDX-A.md)
+    *   `GP-AM-*-18-001-OV-A.md`: Vibration & Noise Control Strategy Overview
+    *   `GP-AM-*-18-010-SPEC-A.md`: Vibration Limits Specification (Airframe, Equipment)
+    *   `GP-AM-*-18-020-SDD-A.md`: Vibration Monitoring System Description
+    *   `GP-AM-*-18-030-CAL-A.md`: Noise Level Prediction & Analysis Report
+    *   `GP-AM-*-18-040-SDD-A.md`: Acoustic Treatment Design Description
+
+### **ATA Chapter 20: Standard Practices – Airframe**
+*   Canonical Index: [`GP-AM-*-20-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-20-000-IDX-A.md)
+    *   `GP-AM-*-20-001-OV-A.md`: Airframe Standard Practices Overview
+    *   `GP-AM-*-20-010-PROC-A.md`: Standard Fastener Installation Procedure
+    *   `GP-AM-*-20-020-SPEC-A.md`: Standard Fastener Torque Values Specification
+    *   `GP-AM-*-20-030-PROC-A.md`: Electrical Bonding & Grounding Procedure
+    *   `GP-AM-*-20-040-PROC-A.md`: Corrosion Prevention & Control Procedure
+    *   `GP-AM-*-20-050-PROC-A.md`: AMPEL Material Handling & Repair Procedure (Ref Part V/VI)
+
+### **ATA Chapter 21: Air Conditioning & Pressurization (ECS)**
+*   Canonical Index: [`GP-AM-*-21-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-21-000-IDX-A.md)
+    *   `GP-AM-*-21-001-OV-A.md`: Environmental Control System (ECS) Overview
+    *   `GP-AM-*-21-010-SDD-A.md`: Air Supply System Description (Bleed Air / Electric)
+    *   `GP-AM-*-21-020-SDD-A.md`: Cooling System Description (Air Cycle Machine / Vapor Cycle)
+    *   `GP-AM-*-21-030-SDD-A.md`: Heating System Description
+    *   `GP-AM-*-21-040-SDD-A.md`: Distribution System Description (Ducting, Outlets)
+    *   `GP-AM-*-21-050-SDD-A.md`: Pressurization Control System Description
+    *   `GP-AM-*-21-060-SPEC-A.md`: ECS Performance Specification
+    *   `GP-AM-*-21-070-DWG-A.md`: ECS Schematic Diagram
+
+### **ATA Chapter 22: Auto Flight**
+*   Canonical Index: [`GP-AM-*-22-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-22-000-IDX-A.md)
+    *   `GP-AM-*-22-001-OV-A.md`: Auto Flight System Architecture Overview
+    *   `GP-AM-*-22-010-SDD-A.md`: Autopilot System Description (Modes, Functions)
+    *   `GP-AM-*-22-020-SDD-A.md`: Flight Director System Description
+    *   `GP-AM-*-22-030-SDD-A.md`: Auto Throttle / Thrust Control System Description
+    *   `GP-AM-*-22-040-SDD-A.md`: Yaw Damper System Description
+    *   `GP-AM-*-22-050-SPEC-A.md`: Auto Flight Performance & Safety Specification
+    *   `GP-AM-*-22-060-ICD-A.md`: Auto Flight System Interface Control Document (Sensors, Actuators, FMS)
+    *   `GP-AM-*-22-070-SDD-A.md`: AI-Enhanced Flight Path Optimization Logic
+
+### **ATA Chapter 23: Communications**
+*   Canonical Index: [`GP-AM-*-23-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-23-000-IDX-A.md)
+    *   `GP-AM-*-23-001-OV-A.md`: Communications System Overview
+    *   `GP-AM-*-23-010-SDD-A.md`: VHF/HF Communication System Description
+    *   `GP-AM-*-23-020-SDD-A.md`: SATCOM System Description
+    *   `GP-AM-*-23-030-SDD-A.md`: Datalink Communication System Description (ACARS, CPDLC)
+    *   `GP-AM-*-23-040-SDD-A.md`: Interphone / Audio Integration System Description
+    *   `GP-AM-*-23-050-SPEC-A.md`: Communication System Performance Specification
+    *   `GP-AM-*-23-060-DWG-A.md`: Antenna Locations Drawing
+    *   `GP-AM-*-23-070-SDD-A.md`: QKD Integration for Secure Datalink Description (Ref Part III)
+
+### **ATA Chapter 24: Electrical Power**
+*   Canonical Index: [`GP-AM-*-24-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-24-000-IDX-A.md)
+    *   `GP-AM-*-24-001-OV-A.md`: Electrical Power System Architecture Overview (AC/DC)
+    *   `GP-AM-*-24-010-SDD-A.md`: Power Generation Description (Generators, TRUs, Inverters)
+    *   `GP-AM-*-24-020-SDD-A.md`: Power Distribution Description (Buses, Contactors, Circuit Breakers)
+    *   `GP-AM-*-24-030-SDD-A.md`: Battery System Description (Main, APU, Emergency)
+    *   `GP-AM-*-24-040-SPEC-A.md`: Electrical Load Analysis Specification
+    *   `GP-AM-*-24-050-DWG-A.md`: Electrical System Schematic Diagram
+    *   `GP-AM-*-24-060-SDD-A.md`: External Power System Description
+    *   `GP-AM-*-24-070-SDD-A.md`: AI Power Management & Load Shedding Description
+
+### **ATA Chapter 25: Equipment / Furnishings**
+*   Canonical Index: [`GP-AM-*-25-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-25-000-IDX-A.md)
+    *   `GP-AM-*-25-001-OV-A.md`: Cockpit & Cabin Equipment/Furnishings Overview
+    *   `GP-AM-*-25-010-SPEC-A.md`: Flight Crew Seat Specification
+    *   `GP-AM-*-25-020-SPEC-A.md`: Passenger Seat Specification
+    *   `GP-AM-*-25-030-DWG-A.md`: Cabin Layout of Passenger Accommodations (LOPA) Drawing
+    *   `GP-AM-*-25-040-SPEC-A.md`: Galley Equipment Specification
+    *   `GP-AM-*-25-050-SPEC-A.md`: Lavatory Equipment Specification
+    *   `GP-AM-*-25-060-LIST-A.md`: Emergency Equipment List (Life Vests, Rafts, First Aid, Fire Extinguishers)
+    *   `GP-AM-*-25-070-DWG-A.md`: Emergency Equipment Location Drawing
+
+### **ATA Chapter 26: Fire Protection**
+*   Canonical Index: [`GP-AM-*-26-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-26-000-IDX-A.md)
+    *   `GP-AM-*-26-001-OV-A.md`: Fire Protection System Overview
+    *   `GP-AM-*-26-010-SDD-A.md`: Engine/APU Fire Detection & Extinguishing System Description
+    *   `GP-AM-*-26-020-SDD-A.md`: Cargo Compartment Fire Detection & Suppression System Description
+    *   `GP-AM-*-26-030-SDD-A.md`: Cabin/Lavatory Smoke Detection System Description
+    *   `GP-AM-*-26-040-SPEC-A.md`: Fire Protection System Performance Specification
+    *   `GP-AM-*-26-050-DWG-A.md`: Detector & Extinguisher Locations Drawing
+
+### **ATA Chapter 27: Flight Controls**
+*   Canonical Index: [`GP-AM-*-27-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-27-000-IDX-A.md)
+    *   `GP-AM-*-27-001-OV-A.md`: Flight Control System Overview (Primary/Secondary)
+    *   `GP-AM-*-27-010-SDD-A.md`: Aileron Control System Description
+    *   `GP-AM-*-27-020-SDD-A.md`: Rudder Control System Description
+    *   `GP-AM-*-27-030-SDD-A.md`: Elevator Control System Description
+    *   `GP-AM-*-27-040-SDD-A.md`: Stabilizer Trim Control System Description
+    *   `GP-AM-*-27-050-SDD-A.md`: Flap Control System Description
+    *   `GP-AM-*-27-060-SDD-A.md`: Slat/Leading Edge Device Control System Description
+    *   `GP-AM-*-27-070-SDD-A.md`: Spoiler/Speedbrake Control System Description
+    *   `GP-AM-*-27-080-SPEC-A.md`: Flight Control Actuation Specification (Hydraulic/EHA/EMA)
+    *   `GP-AM-*-27-090-DWG-A.md`: Flight Control System Schematic/Layout Drawing
+    *   `GP-AM-*-27-100-SDD-A.md`: Fly-By-Wire (FBW) / Fly-By-Light (FBL) Architecture Description
+    *   `GP-AM-*-27-110-SDD-A.md`: GPAM (GAIA Polymorphic Aero-Morphing) Control Logic Description
+
+### **ATA Chapter 28: Fuel**
+*   Canonical Index: [`GP-AM-*-28-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-28-000-IDX-A.md)
+    *   `GP-AM-*-28-001-OV-A.md`: Fuel System Overview (incl. H2/SAF specifics)
+    *   `GP-AM-*-28-010-SDD-A.md`: Fuel Storage System Description (Tanks, Structure)
+    *   `GP-AM-*-28-020-SDD-A.md`: Fuel Distribution System Description (Pumps, Valves, Lines)
+    *   `GP-AM-*-28-030-SDD-A.md`: Fuel Quantity Indicating System Description
+    *   `GP-AM-*-28-040-SDD-A.md`: Fuel Management/Transfer System Description
+    *   `GP-AM-*-28-050-SPEC-A.md`: Fuel System Performance & Safety Specification
+    *   `GP-AM-*-28-060-DWG-A.md`: Fuel System Schematic Diagram
+    *   `GP-AM-*-28-070-SPEC-A.md`: Hydrogen (H2) Fuel System Specific Requirements (Cryo Storage, Boil-off)
+    *   `GP-AM-*-28-080-SPEC-A.md`: Sustainable Aviation Fuel (SAF) Compatibility Specification
+
+### **ATA Chapter 29: Hydraulic Power (Actuation Focus)**
+*   Canonical Index: [`GP-AM-*-29-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-29-000-IDX-A.md)
+    *   `GP-AM-*-29-001-OV-A.md`: Main Hydraulic Power System Overview (If Applicable)
+    *   `GP-AM-*-29-010-SDD-A.md`: Hydraulic Power Generation Description (Pumps - EDP, EMP, ADP)
+    *   `GP-AM-*-29-020-SDD-A.md`: Hydraulic Fluid Storage & Conditioning Description (Reservoirs, Filters, Coolers)
+    *   `GP-AM-*-29-030-SDD-A.md`: Hydraulic Distribution Description (Lines, Valves, Accumulators)
+    *   `GP-AM-*-29-040-SPEC-A.md`: Hydraulic System Performance Specification (Pressure, Flow)
+    *   `GP-AM-*-29-050-DWG-A.md`: Hydraulic System Schematic Diagram
+
+### **ATA Chapter 30: Ice & Rain Protection**
+*   Canonical Index: [`GP-AM-*-30-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-30-000-IDX-A.md)
+    *   `GP-AM-*-30-001-OV-A.md`: Ice & Rain Protection System Overview
+    *   `GP-AM-*-30-010-SDD-A.md`: Wing & Empennage Ice Protection Description (Thermal/Pneumatic/Electro-Impulse)
+    *   `GP-AM-*-30-020-SDD-A.md`: Engine Intake Ice Protection Description
+    *   `GP-AM-*-30-030-SDD-A.md`: Pitot/Static & Sensor Ice Protection Description
+    *   `GP-AM-*-30-040-SDD-A.md`: Windshield Ice & Rain Protection Description (Heating, Wipers, Repellent)
+    *   `GP-AM-*-30-050-SDD-A.md`: Ice Detection System Description
+    *   `GP-AM-*-30-060-SPEC-A.md`: Ice Protection Performance Specification
+
+### **ATA Chapter 31: Indicating / Recording Systems**
+*   Canonical Index: [`GP-AM-*-31-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-31-000-IDX-A.md)
+    *   `GP-AM-*-31-001-OV-A.md`: Indicating & Recording Systems Overview
+    *   `GP-AM-*-31-010-SDD-A.md`: Instrument & Display System Description (Cockpit Displays, Standby Instruments)
+    *   `GP-AM-*-31-020-SPEC-A.md`: Display Unit Specification (Size, Resolution, Brightness)
+    *   `GP-AM-*-31-030-SDD-A.md`: Flight Data Recorder (FDR) System Description
+    *   `GP-AM-*-31-040-SPEC-A.md`: FDR Parameter List & Recording Specification
+    *   `GP-AM-*-31-050-SDD-A.md`: Cockpit Voice Recorder (CVR) System Description
+    *   `GP-AM-*-31-060-SDD-A.md`: Central Annunciator / Warning System Description (EICAS/ECAM)
+    *   `GP-AM-*-31-070-ICD-A.md`: Indicating System Data Bus Interface Document
+
+### **ATA Chapter 32: Landing Gear**
+*   Canonical Index: [`GP-AM-*-32-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-32-000-IDX-A.md)
+    *   `GP-AM-*-32-001-OV-A.md`: Landing Gear System Overview
+    *   `GP-AM-*-32-010-SDD-A.md`: Main & Nose Gear Structure Description
+    *   `GP-AM-*-32-020-SDD-A.md`: Extension & Retraction System Description (Actuation, Locking)
+    *   `GP-AM-*-32-030-SDD-A.md`: Wheels & Brakes System Description
+    *   `GP-AM-*-32-040-SPEC-A.md`: Brake Performance Specification
+    *   `GP-AM-*-32-050-SDD-A.md`: Steering System Description (Nose/Main Gear)
+    *   `GP-AM-*-32-060-SDD-A.md`: Position & Warning System Description
+    *   `GP-AM-*-32-070-DWG-A.md`: Landing Gear Assembly Drawing
+
+### **ATA Chapter 33: Lights**
+*   Canonical Index: [`GP-AM-*-33-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-33-000-IDX-A.md)
+    *   `GP-AM-*-33-001-OV-A.md`: Lighting System Overview
+    *   `GP-AM-*-33-010-SDD-A.md`: Cockpit Lighting System Description
+    *   `GP-AM-*-33-020-SDD-A.md`: Cabin Lighting System Description
+    *   `GP-AM-*-33-030-SDD-A.md`: Emergency Lighting System Description
+    *   `GP-AM-*-33-040-SDD-A.md`: Exterior Lighting System Description (Navigation, Anti-Collision, Landing, Taxi, Logo)
+    *   `GP-AM-*-33-050-SPEC-A.md`: Lighting System Performance & Specification (Intensity, Color, Coverage)
+    *   `GP-AM-*-33-060-DWG-A.md`: Exterior Light Locations Drawing
+
+### **ATA Chapter 34: Navigation**
+*   Canonical Index: [`GP-AM-*-34-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-34-000-IDX-A.md)
+    *   `GP-AM-*-34-001-OV-A.md`: Navigation System Architecture Overview
+    *   `GP-AM-*-34-010-SDD-A.md`: Flight Management System (FMS) Description
+    *   `GP-AM-*-34-020-SPEC-A.md`: FMS Navigation Database Specification
+    *   `GP-AM-*-34-030-SDD-A.md`: Inertial Reference System (IRS) / Attitude Heading Reference System (AHRS) Description
+    *   `GP-AM-*-34-040-SDD-A.md`: Global Navigation Satellite System (GNSS/GPS) Receiver Description
+    *   `GP-AM-*-34-050-SDD-A.md`: Radio Navigation System Description (VOR/ILS/DME/ADF)
+    *   `GP-AM-*-34-060-SDD-A.md`: Air Data System Description (ADC, Probes)
+    *   `GP-AM-*-34-070-SDD-A.md`: Weather Radar System Description
+    *   `GP-AM-*-34-080-SDD-A.md`: Traffic Alert & Collision Avoidance System (TCAS) Description
+    *   `GP-AM-*-34-090-SDD-A.md`: Terrain Awareness & Warning System (TAWS/GPWS) Description
+    *   `GP-AM-*-34-100-SDD-A.md`: Quantum Navigation Sensor Integration Concept Description
+
+### **ATA Chapter 35: Oxygen**
+*   Canonical Index: [`GP-AM-*-35-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-35-000-IDX-A.md)
+    *   `GP-AM-*-35-001-OV-A.md`: Oxygen System Overview
+    *   `GP-AM-*-35-010-SDD-A.md`: Crew Oxygen System Description (Storage, Regulators, Masks)
+    *   `GP-AM-*-35-020-SDD-A.md`: Passenger Oxygen System Description (Generators/Gaseous, Masks)
+    *   `GP-AM-*-35-030-SPEC-A.md`: Oxygen System Performance & Duration Specification
+    *   `GP-AM-*-35-040-DWG-A.md`: Oxygen System Schematic & Component Location Drawing
+
+### **ATA Chapter 36: Pneumatic**
+*   Canonical Index: [`GP-AM-*-36-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-36-000-IDX-A.md)
+    *   `GP-AM-*-36-001-OV-A.md`: Main Pneumatic System Overview (Bleed Air)
+    *   `GP-AM-*-36-010-SDD-A.md`: Bleed Air Source Description (Engine, APU, Ground)
+    *   `GP-AM-*-36-020-SDD-A.md`: Pneumatic Distribution System Description (Ducting, Valves)
+    *   `GP-AM-*-36-030-SPEC-A.md`: Pneumatic System Performance Specification (Pressure, Temperature, Flow)
+    *   `GP-AM-*-36-040-DWG-A.md`: Pneumatic System Schematic Diagram
+
+### **ATA Chapter 37: Vacuum**
+*   Canonical Overview: [`GP-AM-*-37-001-OV-A.md`](./GP-AM/GP-AM-AMPEL-0100-37-001-OV-A.md)
+    *   *(Generally Not Applicable for modern aircraft using AHRS/ADC, may contain legacy system info if present or references)*
+
+### **ATA Chapter 38: Water / Waste**
+*   Canonical Index: [`GP-AM-*-38-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-38-000-IDX-A.md)
+    *   `GP-AM-*-38-001-OV-A.md`: Water & Waste System Overview
+    *   `GP-AM-*-38-010-SDD-A.md`: Potable Water System Description (Storage, Distribution, Heating)
+    *   `GP-AM-*-38-020-SDD-A.md`: Waste System Description (Toilet, Vacuum Generator, Storage Tank)
+    *   `GP-AM-*-38-030-SPEC-A.md`: Water & Waste System Capacity Specification
+    *   `GP-AM-*-38-040-DWG-A.md`: Water & Waste System Schematic & Layout Drawing
+
+### **ATA Chapter 39: Electrical/Electronic Panels**
+*   Canonical Index: [`GP-AM-*-39-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-39-000-IDX-A.md)
+    *   `GP-AM-*-39-001-OV-A.md`: Panel & Rack Integration Overview
+    *   `GP-AM-*-39-010-DWG-A.md`: Cockpit Panel Layout Drawing
+    *   `GP-AM-*-39-020-DWG-A.md`: Avionics Bay Rack Layout Drawing
+    *   `GP-AM-*-39-030-SPEC-A.md`: Standard Panel & Rack Specification (Dimensions, Cooling, Mounting)
+
+### **ATA Chapter 41: Water Ballast**
+*   Canonical Index: [`GP-AM-*-41-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-41-000-IDX-A.md)
+    *   `GP-AM-*-41-001-OV-A.md`: Water Ballast System Overview (If Applicable, e.g., for CG control in specialized aircraft)
+    *   `GP-AM-*-41-010-SDD-A.md`: Ballast Tank & Transfer System Description
+    *   `GP-AM-*-41-020-PROC-A.md`: Ballast System Operation Procedure
+
+### **ATA Chapter 42: Integrated Modular Avionics (IMA)**
+*   Canonical Index: [`GP-AM-*-42-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-42-000-IDX-A.md)
+    *   `GP-AM-*-42-001-OV-A.md`: IMA Architecture Overview (ARINC 653)
+    *   `GP-AM-*-42-010-SDD-A.md`: Core Processing Module (CPM) Description
+    *   `GP-AM-*-42-020-SDD-A.md`: Input/Output Module (IOM) Description
+    *   `GP-AM-*-42-030-SPEC-A.md`: Avionics Network Specification (e.g., AFDX - ARINC 664)
+    *   `GP-AM-*-42-040-PLAN-A.md`: Software Partitioning & Integration Plan
+    *   `GP-AM-*-42-050-ICD-A.md`: IMA Module Interface Control Document
+
+### **ATA Chapter 44: Cabin Systems**
+*   Canonical Index: [`GP-AM-*-44-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-44-000-IDX-A.md)
+    *   `GP-AM-*-44-001-OV-A.md`: Cabin Systems Integration Overview
+    *   `GP-AM-*-44-010-SDD-A.md`: Cabin Intercommunication Data System (CIDS) / Cabin Management System (CMS) Description
+    *   `GP-AM-*-44-020-SDD-A.md`: In-Flight Entertainment (IFE) System Description
+    *   `GP-AM-*-44-030-SDD-A.md`: Passenger Service Unit (PSU) Description
+    *   `GP-AM-*-44-040-SDD-A.md`: Cabin Network System Description (Wired/Wireless)
+    *   `GP-AM-*-44-050-ICD-A.md`: Cabin System Interface Control Document
+
+### **ATA Chapter 45: Central Maintenance System (CMS)**
+*   Canonical Index: [`GP-AM-*-45-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-45-000-IDX-A.md)
+    *   `GP-AM-*-45-001-OV-A.md`: Central Maintenance System Overview (Onboard/Ground Link)
+    *   `GP-AM-*-45-010-SDD-A.md`: On-Board Maintenance Function (OMF) Description
+    *   `GP-AM-*-45-020-SDD-A.md`: Fault Reporting & Diagnostics Logic Description
+    *   `GP-AM-*-45-030-SPEC-A.md`: Maintenance Message Format Specification
+    *   `GP-AM-*-45-040-ICD-A.md`: CMS Interface Control Document (System Integration)
+    *   `GP-AM-*-45-050-SDD-A.md`: i-Aher0 Predictive Maintenance Algorithm Integration Description (Ref Part III)
+
+### **ATA Chapter 46: Information Systems**
+*   Canonical Index: [`GP-AM-*-46-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-46-000-IDX-A.md)
+    *   `GP-AM-*-46-001-OV-A.md`: Aircraft Information Systems Architecture Overview
+    *   `GP-AM-*-46-010-SDD-A.md`: Electronic Flight Bag (EFB) System Description & Integration
+    *   `GP-AM-*-46-020-SDD-A.md`: Aircraft Network Security System Description (Firewalls, IDS) (Ref Part III)
+    *   `GP-AM-*-46-030-SPEC-A.md`: Data Loading Specification (Software, Databases)
+    *   `GP-AM-*-46-040-SDD-A.md`: Wireless Connectivity System Description (On-Ground/In-Flight)
+    *   `GP-AM-*-46-050-SDD-A.md`: BITT Ledger Onboard Node Description (Ref Part III)
+
+### **ATA Chapter 47: Nitrogen Generation System (NGS)**
+*   Canonical Index: [`GP-AM-*-47-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-47-000-IDX-A.md)
+    *   `GP-AM-*-47-001-OV-A.md`: Nitrogen Generation System / Fuel Tank Inerting System Overview
+    *   `GP-AM-*-47-010-SDD-A.md`: Air Separation Module (ASM) Description
+    *   `GP-AM-*-47-020-SDD-A.md`: NGS Control & Distribution System Description
+    *   `GP-AM-*-47-030-SPEC-A.md`: Inerting Performance Specification (Oxygen Concentration)
+
+### **ATA Chapter 49: Airborne Auxiliary Power (AAP/APU)**
+*   Canonical Index: [`GP-AM-*-49-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-49-000-IDX-A.md)
+    *   `GP-AM-*-49-001-OV-A.md`: Auxiliary Power Unit (APU) System Overview
+    *   `GP-AM-*-49-010-SPEC-A.md`: APU Engine Specification (Type, Power Output)
+    *   `GP-AM-*-49-020-SDD-A.md`: APU Control System Description (Start, Run, Shutdown)
+    *   `GP-AM-*-49-030-SDD-A.md`: APU Fuel & Oil System Description
+    *   `GP-AM-*-49-040-DWG-A.md`: APU Installation Drawing
+
+### **ATA Chapter 50: Cargo and Accessory Compartments**
+*   Canonical Index: [`GP-AM-*-50-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-50-000-IDX-A.md)
+    *   `GP-AM-*-50-001-OV-A.md`: Cargo & Accessory Compartments Overview
+    *   `GP-AM-*-50-010-DWG-A.md`: Cargo Compartment Layout & Dimensions Drawing
+    *   `GP-AM-*-50-020-SPEC-A.md`: Cargo Loading System Specification (Rollers, Locks, Nets)
+    *   `GP-AM-*-50-030-SDD-A.md`: Cargo Compartment Lining & Insulation Description
+    *   `GP-AM-*-50-040-DWG-A.md`: Accessory Compartment Locations Drawing (e.g., Avionics Bay, Wheel Wells)
+
+### **ATA Chapter 51: Structures – General**
+*   Canonical Index: [`GP-AM-*-51-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-51-000-IDX-A.md)
+    *   `GP-AM-*-51-001-OV-A.md`: Airframe Structural Design Philosophy Overview
+    *   `GP-AM-*-51-010-SPEC-A.md`: Structural Design Criteria Specification (Loads, Factors of Safety)
+    *   `GP-AM-*-51-020-SPEC-A.md`: Primary Structural Materials Specification (AMPEL, Alloys, Composites)
+    *   `GP-AM-*-51-030-PLAN-A.md`: Structural Integrity Program Plan (Fatigue, Damage Tolerance)
+    *   `GP-AM-*-51-040-SDD-A.md`: Structural Health Monitoring (SHM) System Integration Description
+
+### **ATA Chapter 52: Doors**
+*   Canonical Index: [`GP-AM-*-52-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-52-000-IDX-A.md)
+    *   `GP-AM-*-52-001-OV-A.md`: Door Systems Overview
+    *   `GP-AM-*-52-010-SDD-A.md`: Passenger/Crew Door Description (Structure, Mechanism, Sealing)
+    *   `GP-AM-*-52-020-SDD-A.md`: Emergency Exit Door Description
+    *   `GP-AM-*-52-030-SDD-A.md`: Cargo Door Description
+    *   `GP-AM-*-52-040-SDD-A.md`: Access/Service Door Description
+    *   `GP-AM-*-52-050-SDD-A.md`: Door Warning System Description
+
+### **ATA Chapter 53: Fuselage**
+*   Canonical Index: [`GP-AM-*-53-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-53-000-IDX-A.md)
+    *   `GP-AM-*-53-001-OV-A.md`: Fuselage Structure Overview
+    *   `GP-AM-*-53-010-DD-A.md`: Fuselage Section Design Document (Nose, Center, Aft)
+    *   `GP-AM-*-53-020-SPEC-A.md`: Fuselage Skin, Stringer, Frame Specification
+    *   `GP-AM-*-53-030-CAL-A.md`: Fuselage Stress Analysis Report
+    *   `GP-AM-*-53-040-DWG-A.md`: Fuselage Assembly Drawing
+
+### **ATA Chapter 54: Nacelles/Pylons**
+*   Canonical Index: [`GP-AM-*-54-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-54-000-IDX-A.md)
+    *   `GP-AM-*-54-001-OV-A.md`: Nacelle & Pylon Structure Overview
+    *   `GP-AM-*-54-010-DD-A.md`: Pylon Structural Design Document
+    *   `GP-AM-*-54-020-DD-A.md`: Nacelle Structure Design Document (Inlets, Cowlings, Thrust Reverser)
+    *   `GP-AM-*-54-030-CAL-A.md`: Nacelle/Pylon Stress & Loads Analysis Report
+    *   `GP-AM-*-54-040-DWG-A.md`: Nacelle/Pylon Assembly Drawing
+
+### **ATA Chapter 55: Stabilizers**
+*   Canonical Index: [`GP-AM-*-55-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-55-000-IDX-A.md)
+    *   `GP-AM-*-55-001-OV-A.md`: Empennage Structure Overview
+    *   `GP-AM-*-55-010-DD-A.md`: Horizontal Stabilizer Design Document
+    *   `GP-AM-*-55-020-DD-A.md`: Vertical Stabilizer Design Document
+    *   `GP-AM-*-55-030-CAL-A.md`: Stabilizer Stress & Loads Analysis Report
+    *   `GP-AM-*-55-040-DWG-A.md`: Stabilizer Assembly Drawing
+
+### **ATA Chapter 56: Windows**
+*   Canonical Index: [`GP-AM-*-56-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-56-000-IDX-A.md)
+    *   `GP-AM-*-56-001-OV-A.md`: Window Systems Overview
+    *   `GP-AM-*-56-010-SPEC-A.md`: Cockpit Windshield Specification (Structure, Heating, Materials)
+    *   `GP-AM-*-56-020-SPEC-A.md`: Cabin Window Specification (Structure, Materials)
+    *   `GP-AM-*-56-030-SDD-A.md`: VR/AR Enhanced Window System Description (If Applicable)
+    *   `GP-AM-*-56-040-PROC-A.md`: Window Inspection & Repair Procedure
+
+### **ATA Chapter 57: Wings**
+*   Canonical Index: [`GP-AM-*-57-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-57-000-IDX-A.md)
+    *   `GP-AM-*-57-001-OV-A.md`: Wing Structure Overview
+    *   `GP-AM-*-57-010-DD-A.md`: Wing Box Design Document
+    *   `GP-AM-*-57-020-SPEC-A.md`: Wing Spar, Rib, Skin Specification
+    *   `GP-AM-*-57-030-DD-A.md`: Leading/Trailing Edge Structure Design Document
+    *   `GP-AM-*-57-040-CAL-A.md`: Wing Stress, Loads & Aeroelasticity Analysis Report
+    *   `GP-AM-*-57-050-DWG-A.md`: Wing Assembly Drawing
+    *   `GP-AM-*-57-060-SDD-A.md`: GPAM Wing Morphing Mechanism Design Description
+
+### **ATA Chapter 60: Standard Practices - Engine**
+*   Canonical Index: [`GP-AM-*-60-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-60-000-IDX-A.md)
+    *   `GP-AM-*-60-001-OV-A.md`: Engine Standard Practices Overview (Installation, Handling)
+    *   `GP-AM-*-60-010-PROC-A.md`: Engine Installation/Removal Procedure
+    *   `GP-AM-*-60-020-PROC-A.md`: Standard Engine Interface Connection Procedure (Fluid, Electrical, Mechanical)
+    *   `GP-AM-*-60-030-SPEC-A.md`: Standard Engine Hardware Specification (Mounts, Bolts)
+
+### **ATA Chapter 61: Propellers/Propulsors** *(If Applicable)*
+*   Canonical Index: [`GP-AM-*-61-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-61-000-IDX-A.md)
+    *   `GP-AM-*-61-001-OV-A.md`: Propeller/Propulsor System Overview
+    *   `GP-AM-*-61-010-SPEC-A.md`: Propeller Blade Specification
+    *   `GP-AM-*-61-020-SDD-A.md`: Propeller Control System Description (Pitch Change, Feathering)
+    *   `GP-AM-*-61-030-SDD-A.md`: Propeller Synchronization System Description
+    *   `GP-AM-*-61-040-DWG-A.md`: Propeller Assembly Drawing
+
+### **ATA Chapter 62: Main Rotor** *(If Applicable - Rotorcraft)*
+*   Canonical Index: [`GP-AM-*-62-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-62-000-IDX-A.md)
+    *   `GP-AM-*-62-001-OV-A.md`: Main Rotor System Overview
+    *   `GP-AM-*-62-010-SPEC-A.md`: Rotor Blade Specification
+    *   `GP-AM-*-62-020-SDD-A.md`: Rotor Hub & Mast Description
+    *   `GP-AM-*-62-030-DWG-A.md`: Main Rotor Assembly Drawing
+
+### **ATA Chapter 63: Main Rotor Drive** *(If Applicable - Rotorcraft)*
+*   Canonical Index: [`GP-AM-*-63-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-63-000-IDX-A.md)
+    *   `GP-AM-*-63-001-OV-A.md`: Main Rotor Drive System Overview
+    *   `GP-AM-*-63-010-SDD-A.md`: Main Gearbox Description
+    *   `GP-AM-*-63-020-SPEC-A.md`: Drive Shaft & Coupling Specification
+    *   `GP-AM-*-63-030-DWG-A.md`: Main Rotor Drive Schematic
+
+### **ATA Chapter 64: Tail Rotor** *(If Applicable - Rotorcraft)*
+*   Canonical Index: [`GP-AM-*-64-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-64-000-IDX-A.md)
+    *   `GP-AM-*-64-001-OV-A.md`: Tail Rotor System Overview
+    *   `GP-AM-*-64-010-SPEC-A.md`: Tail Rotor Blade Specification
+    *   `GP-AM-*-64-020-SDD-A.md`: Tail Rotor Hub Description
+    *   `GP-AM-*-64-030-DWG-A.md`: Tail Rotor Assembly Drawing
+
+### **ATA Chapter 65: Tail Rotor Drive** *(If Applicable - Rotorcraft)*
+*   Canonical Index: [`GP-AM-*-65-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-65-000-IDX-A.md)
+    *   `GP-AM-*-65-001-OV-A.md`: Tail Rotor Drive System Overview
+    *   `GP-AM-*-65-010-SDD-A.md`: Intermediate/Tail Gearbox Description
+    *   `GP-AM-*-65-020-SPEC-A.md`: Tail Rotor Drive Shaft Specification
+    *   `GP-AM-*-65-030-DWG-A.md`: Tail Rotor Drive Schematic
+
+### **ATA Chapter 66: Folding Blades/Pylon** *(If Applicable)*
+*   Canonical Index: [`GP-AM-*-66-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-66-000-IDX-A.md)
+    *   `GP-AM-*-66-001-OV-A.md`: Folding Mechanism Overview
+    *   `GP-AM-*-66-010-SDD-A.md`: Blade/Pylon Folding Mechanism Description
+    *   `GP-AM-*-66-020-PROC-A.md`: Folding/Unfolding Procedure
+
+### **ATA Chapter 67: Rotors Flight Control** *(If Applicable - Rotorcraft)*
+*   Canonical Index: [`GP-AM-*-67-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-67-000-IDX-A.md)
+    *   `GP-AM-*-67-001-OV-A.md`: Rotorcraft Flight Control System Overview
+    *   `GP-AM-*-67-010-SDD-A.md`: Main Rotor Control Description (Swashplate, Collective, Cyclic)
+    *   `GP-AM-*-67-020-SDD-A.md`: Tail Rotor Control Description (Pitch Control)
+    *   `GP-AM-*-67-030-DWG-A.md`: Rotor Control Linkage Drawing
+
+### **ATA Chapter 70: Standard Practices – Engines**
+*   Canonical Index: [`GP-AM-*-70-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-70-000-IDX-A.md)
+    *   `GP-AM-*-70-001-OV-A.md`: Engine Standard Maintenance Practices Overview
+    *   `GP-AM-*-70-010-PROC-A.md`: Standard Engine Inspection Procedure (Borescope, Visual)
+    *   `GP-AM-*-70-020-PROC-A.md`: Engine Preservation & Storage Procedure
+    *   `GP-AM-*-70-030-LIST-A.md`: Standard Engine Tooling List
+
+### **ATA Chapter 71: Power Plant–General**
+*   Canonical Index: [`GP-AM-*-71-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-71-000-IDX-A.md)
+    *   `GP-AM-*-71-001-OV-A.md`: Power Plant System Overview
+    *   `GP-AM-*-71-010-DD-A.md`: Engine Build Specification (Module Definition)
+    *   `GP-AM-*-71-020-DWG-A.md`: Power Plant General Arrangement Drawing
+    *   `GP-AM-*-71-030-SDD-A.md`: Cowling & Access Panel Description
+
+### **ATA Chapter 72: Engine (Turbine/Hybrid/H2)**
+*   Canonical Index: [`GP-AM-*-72-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-72-000-IDX-A.md)
+    *   `GP-AM-*-72-001-OV-A.md`: Engine Core Architecture Overview
+    *   `GP-AM-*-72-010-DD-A.md`: Compressor Section Design Document
+    *   `GP-AM-*-72-020-DD-A.md`: Combustion Section Design Document (incl. H2 specifics)
+    *   `GP-AM-*-72-030-DD-A.md`: Turbine Section Design Document
+    *   `GP-AM-*-72-040-SPEC-A.md`: Engine Performance Specification (Thrust, SFC)
+    *   `GP-AM-*-72-050-SDD-A.md`: Hybrid Electric System Integration Description (If Applicable)
+    *   `GP-AM-*-72-060-DWG-A.md`: Engine Cross-Section Drawing
+
+### **ATA Chapter 72-Q01: Quantum Propulsion Extension**
+*   Canonical Index: [`GP-AM-*-72-Q01-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-72-Q01-000-IDX-A.md)
+    *   `GP-AM-*-72-Q01-001-OV-A.md`: Quantum Propulsion Module (QPM) Overview (Atmospheric)
+    *   `GP-AM-*-72-Q01-010-SPEC-A.md`: QPM Performance Specification (Atmospheric Thrust Augmentation)
+    *   `GP-AM-*-72-Q01-020-SDD-A.md`: Quantum Entanglement Emitter (QEE) Integration Description (Atmospheric)
+    *   `GP-AM-*-72-Q01-030-SDD-A.md`: Quantum State Modulator (QSM) Integration Description (Atmospheric)
+    *   `GP-AM-*-72-Q01-040-ICD-A.md`: QPM Control Interface Document (Engine Integration)
+    *   `GP-AM-*-72-Q01-050-PROC-A.md`: QPM Safing & Maintenance Procedure
+
+### **ATA Chapter 73: Engine Fuel & Control**
+*   Canonical Index: [`GP-AM-*-73-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-73-000-IDX-A.md)
+    *   `GP-AM-*-73-001-OV-A.md`: Engine Fuel & Control System Overview
+    *   `GP-AM-*-73-010-SDD-A.md`: Fuel Pumping & Metering Unit Description
+    *   `GP-AM-*-73-020-SDD-A.md`: Engine Control Unit (ECU/FADEC) Description
+    *   `GP-AM-*-73-030-SPEC-A.md`: FADEC Software Specification & Control Laws
+    *   `GP-AM-*-73-040-DWG-A.md`: Engine Fuel System Schematic
+
+### **ATA Chapter 74: Ignition**
+*   Canonical Index: [`GP-AM-*-74-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-74-000-IDX-A.md)
+    *   `GP-AM-*-74-001-OV-A.md`: Engine Ignition System Overview
+    *   `GP-AM-*-74-010-SDD-A.md`: Ignition Exciter & Lead Description
+    *   `GP-AM-*-74-020-SPEC-A.md`: Igniter Plug Specification
+    *   `GP-AM-*-74-030-DWG-A.md`: Ignition System Wiring Diagram
+
+### **ATA Chapter 75: Air (Engine Bleed/ECS Input)**
+*   Canonical Index: [`GP-AM-*-75-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-75-000-IDX-A.md)
+    *   `GP-AM-*-75-001-OV-A.md`: Engine Air Systems Overview
+    *   `GP-AM-*-75-010-SDD-A.md`: Engine Bleed Air System Description (Valves, Regulation)
+    *   `GP-AM-*-75-020-SDD-A.md`: Engine Anti-Ice Air System Description
+    *   `GP-AM-*-75-030-SDD-A.md`: Engine Cooling & Sealing Air System Description
+    *   `GP-AM-*-75-040-DWG-A.md`: Engine Air System Schematic
+
+### **ATA Chapter 76: Engine Controls**
+*   Canonical Index: [`GP-AM-*-76-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-76-000-IDX-A.md)
+    *   `GP-AM-*-76-001-OV-A.md`: Engine Control Interface Overview
+    *   `GP-AM-*-76-010-SDD-A.md`: Thrust Lever / Power Control Description
+    *   `GP-AM-*-76-020-ICD-A.md`: Engine Control Interface Document (Cockpit to FADEC)
+    *   `GP-AM-*-76-030-PROC-A.md`: Engine Emergency Shutdown Procedure
+
+### **ATA Chapter 77: Engine Indication**
+*   Canonical Index: [`GP-AM-*-77-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-77-000-IDX-A.md)
+    *   `GP-AM-*-77-001-OV-A.md`: Engine Indicating System Overview
+    *   `GP-AM-*-77-010-SPEC-A.md`: Key Engine Parameter Specification (N1, N2, EGT, Fuel Flow, Oil Pressure/Temp)
+    *   `GP-AM-*-77-020-SDD-A.md`: Engine Sensor Description & Locations
+    *   `GP-AM-*-77-030-ICD-A.md`: Engine Indication Interface Document (Sensors to Display System)
+    *   `GP-AM-*-77-040-SDD-A.md`: Engine Vibration Monitoring System Description
+
+### **ATA Chapter 78: Exhaust**
+*   Canonical Index: [`GP-AM-*-78-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-78-000-IDX-A.md)
+    *   `GP-AM-*-78-001-OV-A.md`: Engine Exhaust System Overview
+    *   `GP-AM-*-78-010-DD-A.md`: Exhaust Nozzle/Plug Design Document
+    *   `GP-AM-*-78-020-DD-A.md`: Thrust Reverser System Design Document
+    *   `GP-AM-*-78-030-DWG-A.md`: Exhaust System Assembly Drawing
+
+### **ATA Chapter 79: Oil**
+*   Canonical Index: [`GP-AM-*-79-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-79-000-IDX-A.md)
+    *   `GP-AM-*-79-001-OV-A.md`: Engine Oil System Overview
+    *   `GP-AM-*-79-010-SDD-A.md`: Oil Storage & Distribution Description (Tank, Pumps, Lines)
+    *   `GP-AM-*-79-020-SDD-A.md`: Oil Filtering & Cooling Description
+    *   `GP-AM-*-79-030-SDD-A.md`: Oil Indicating System Description (Pressure, Temp, Quantity)
+    *   `GP-AM-*-79-040-DWG-A.md`: Engine Oil System Schematic
+
+### **ATA Chapter 80: Starting**
+*   Canonical Index: [`GP-AM-*-80-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-80-000-IDX-A.md)
+    *   `GP-AM-*-80-001-OV-A.md`: Engine Starting System Overview
+    *   `GP-AM-*-80-010-SDD-A.md`: Starter Description (Air Turbine / Electric)
+    *   `GP-AM-*-80-020-SDD-A.md`: Starting Control System Description (Sequencing)
+    *   `GP-AM-*-80-030-DWG-A.md`: Starting System Schematic
+
+### **ATA Chapter 83: Accessory Gear Boxes**
+*   Canonical Index: [`GP-AM-*-83-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-83-000-IDX-A.md)
+    *   `GP-AM-*-83-001-OV-A.md`: Accessory Gearbox (AGB) Overview
+    *   `GP-AM-*-83-010-DD-A.md`: AGB Design Document (Gear Train, Housing)
+    *   `GP-AM-*-83-020-SPEC-A.md`: AGB Interface Specification (Engine Drive, Accessory Mounting)
+    *   `GP-AM-*-83-030-DWG-A.md`: AGB Assembly Drawing
+
+### **ATA Chapter 85: Fuel Cell System** *(If Applicable - e.g., for APU replacement or hybrid power)*
+*   Canonical Index: [`GP-AM-*-85-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-85-000-IDX-A.md)
+    *   `GP-AM-*-85-001-OV-A.md`: Fuel Cell System Overview (Aircraft Application)
+    *   `GP-AM-*-85-010-SPEC-A.md`: Fuel Cell Stack Specification (Power Density, Durability)
+    *   `GP-AM-*-85-020-SDD-A.md`: Reactant Storage & Supply Description (H2/O2 or H2/Air)
+    *   `GP-AM-*-85-030-SDD-A.md`: Power Conditioning & Integration Description (Interface to Electrical Bus)
+    *   `GP-AM-*-85-040-DWG-A.md`: Fuel Cell System Installation Drawing
+
+### **ATA Chapter 91: Charts**
+*   Canonical Index: [`GP-AM-*-91-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-91-000-IDX-A.md)
+    *   `GP-AM-*-91-001-OV-A.md`: Documentation Charts & Diagrams Overview
+    *   `GP-AM-*-91-010-LIST-A.md`: Master Wiring Diagram Index List
+    *   `GP-AM-*-91-020-LIST-A.md`: Master Hydraulic/Pneumatic Schematic Index List
+    *   `GP-AM-*-91-030-REF-A.md`: Reference to Digital Twin Visualization Interface (If Available)
+
+### **ATA Chapter 92: Electrical System Installation**
+*   Canonical Index: [`GP-AM-*-92-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-92-000-IDX-A.md)
+    *   `GP-AM-*-92-001-OV-A.md`: Wiring Installation Practices Overview
+    *   `GP-AM-*-92-010-PROC-A.md`: Wire Harness Fabrication & Installation Procedure
+    *   `GP-AM-*-92-020-SPEC-A.md`: Wire & Cable Specification (Type, Gauge, Rating)
+    *   `GP-AM-*-92-030-SPEC-A.md`: Connector & Terminal Specification
+    *   `GP-AM-*-92-040-PROC-A.md`: Wire Marking & Identification Procedure
+    *   `GP-AM-*-92-050-DWG-A.md`: Typical Wiring Installation Standard Drawings
+
+### **ATA Chapter 95: Special Equipment (GSE)**
+*   Canonical Index: [`GP-AM-*-95-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-95-000-IDX-A.md)
+    *   `GP-AM-*-95-001-OV-A.md`: Ground Support Equipment (GSE) & Special Tooling Overview
+    *   `GP-AM-*-95-010-LIST-A.md`: Required GSE List (Towing, Power, Air Start, Test Equipment)
+    *   `GP-AM-*-95-020-SPEC-A.md`: GSE Interface Specification
+    *   `GP-AM-*-95-030-LIST-A.md`: Special Maintenance Tooling List
+
+### **ATA Chapter 97: Wiring Reporting**
+*   Canonical Index: [`GP-AM-*-97-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-97-000-IDX-A.md)
+    *   `GP-AM-*-97-001-OV-A.md`: Wiring Data Management Overview
+    *   `GP-AM-*-97-010-SPEC-A.md`: Wiring List Database Format Specification
+    *   `GP-AM-*-97-020-PROC-A.md`: Wiring Data Configuration Control Procedure
+    *   `GP-AM-*-97-030-REF-A.md`: Link to Wiring Data Management Tool/System
+
+### **ATA Chapter 99: Special / Emerging Tech**
+*   Canonical Index: [`GP-AM-*-99-000-IDX-A.md`](./GP-AM/GP-AM-AMPEL-0100-99-000-IDX-A.md)
+    *   `GP-AM-*-99-001-OV-A.md`: Emerging Technologies Integration Overview (Air Systems)
+    *   `GP-AM-*-99-010-SDD-A.md`: Advanced Sensor Systems Description (e.g., LIDAR for Autonomous Ops)
+    *   `GP-AM-*-99-020-RPT-A.md`: Novel Materials (AMPEL) Application Report (Airframe Specific)
+    *   `GP-AM-*-99-030-OV-A.md`: Integration with RAME Systems Overview (Ground Ops) (Ref Part VI)
+    *   `GP-AM-*-99-040-ICD-A.md`: RAME System Interface Document (Ground Maintenance)
 
 ---
 
-### Chapter 00: Introduction & General - `AS00_Intro_General`
+## Appendix (Part 1)
 
-*   **Directory:** **[AS00_Intro_General/](./AMPELPLUS_0200/AS00_Intro_General/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS00_Intro_General/GP-AS-AMPELPLUS-0200-00-001-OV-A.md)</li>
-        <li>[REQ - Requirements](AMPELPLUS_0200/AS00_Intro_General/GP-AS-AMPELPLUS-0200-00-002-REQ-A.md)</li>
-        <li>[PLAN - Plan (Certification)](AMPELPLUS_0200/AS00_Intro_General/GP-AS-AMPELPLUS-0200-00-003-PLAN-A.md)</li>
-        <li>[DD - Design Document (Philosophy)](AMPELPLUS_0200/AS00_Intro_General/GP-AS-AMPELPLUS-0200-00-004-DD-A.md)</li>
-        <li>[SDD - System Description (AI Doc Adaptation)](AMPELPLUS_0200/AS00_Intro_General/GP-AS-AMPELPLUS-0200-00-005-SDD-A.md)</li>
-        <li>[ADMIN - Administrative](AMPELPLUS_0200/AS00_Intro_General/GP-AS-AMPELPLUS-0200-00-006-ADMIN-A.md)</li>
-        <li>[REF - Reference](AMPELPLUS_0200/AS00_Intro_General/GP-AS-AMPELPLUS-0200-00-007-REF-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 01: Spacecraft General - `AS01_Spacecraft_General`
-
-*   **Directory:** **[AS01_Spacecraft_General/](./AMPELPLUS_0200/AS01_Spacecraft_General/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS01_Spacecraft_General/GP-AS-AMPELPLUS-0200-01-001-OV-A.md)</li>
-        <li>[SPEC - Specification](AMPELPLUS_0200/AS01_Spacecraft_General/GP-AS-AMPELPLUS-0200-01-002-SPEC-A.md)</li>
-        <li>[DD - Design Document](AMPELPLUS_0200/AS01_Spacecraft_General/GP-AS-AMPELPLUS-0200-01-003-DD-A.md)</li>
-        <li>[FIG - Diagram (Configuration)](AMPELPLUS_0200/AS01_Spacecraft_General/GP-AS-AMPELPLUS-0200-01-004-FIG-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 02: Mission Operations - `AS02_Mission_Operations`
-
-*   **Directory:** **[AS02_Mission_Operations/](./AMPELPLUS_0200/AS02_Mission_Operations/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS02_Mission_Operations/GP-AS-AMPELPLUS-0200-02-001-OV-A.md)</li>
-        <li>[MAN - Manual (Flight Ops)](AMPELPLUS_0200/AS02_Mission_Operations/GP-AS-AMPELPLUS-0200-02-002-MAN-A.md)</li>
-        <li>[PLAN - Plan (Mission)](AMPELPLUS_0200/AS02_Mission_Operations/GP-AS-AMPELPLUS-0200-02-003-PLAN-A.md)</li>
-        <li>[PROC - Procedure (Flight Rules)](AMPELPLUS_0200/AS02_Mission_Operations/GP-AS-AMPELPLUS-0200-02-004-PROC-A.md)</li>
-        <li>[SDD - System Description (Mission Planning AI)](AMPELPLUS_0200/AS02_Mission_Operations/GP-AS-AMPELPLUS-0200-02-005-SDD-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 03: Performance - `AS03_Performance`
-
-*   **Directory:** **[AS03_Performance/](./AMPELPLUS_0200/AS03_Performance/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS03_Performance/GP-AS-AMPELPLUS-0200-03-001-OV-A.md)</li>
-        <li>[SPEC - Specification (Performance)](AMPELPLUS_0200/AS03_Performance/GP-AS-AMPELPLUS-0200-03-002-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis](AMPELPLUS_0200/AS03_Performance/GP-AS-AMPELPLUS-0200-03-003-CAL-A.md)</li>
-        <li>[RPT - Report (Flight Test)](AMPELPLUS_0200/AS03_Performance/GP-AS-AMPELPLUS-0200-03-004-RPT-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 04: Certification - `AS04_Certification`
-
-*   **Directory:** **[AS04_Certification/](./AMPELPLUS_0200/AS04_Certification/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS04_Certification/GP-AS-AMPELPLUS-0200-04-001-OV-A.md)</li>
-        <li>[REQ - Requirements (Certification)](AMPELPLUS_0200/AS04_Certification/GP-AS-AMPELPLUS-0200-04-002-REQ-A.md)</li>
-        <li>[PLAN - Plan (Certification)](AMPELPLUS_0200/AS04_Certification/GP-AS-AMPELPLUS-0200-04-003-PLAN-A.md)</li>
-        <li>[RPT - Report (Compliance)](AMPELPLUS_0200/AS04_Certification/GP-AS-AMPELPLUS-0200-04-004-RPT-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 05: Maintenance Schedule - `AS05_Maintenance_Schedule`
-
-*   **Directory:** **[AS05_Maintenance_Schedule/](./AMPELPLUS_0200/AS05_Maintenance_Schedule/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS05_Maintenance_Schedule/GP-AS-AMPELPLUS-0200-05-001-OV-A.md)</li>
-        <li>[PROC - Procedure (Scheduled Maint.)](AMPELPLUS_0200/AS05_Maintenance_Schedule/GP-AS-AMPELPLUS-0200-05-002-PROC-A.md)</li>
-        <li>[CAT - Catalog/List (Life Limits)](AMPELPLUS_0200/AS05_Maintenance_Schedule/GP-AS-AMPELPLUS-0200-05-003-CAT-A.md)</li>
-        <li>[PLAN - Plan (Maintenance)](AMPELPLUS_0200/AS05_Maintenance_Schedule/GP-AS-AMPELPLUS-0200-05-004-PLAN-A.md)</li>
-        <li>[SDD - System Description (Predictive Maint. AI)](AMPELPLUS_0200/AS05_Maintenance_Schedule/GP-AS-AMPELPLUS-0200-05-005-SDD-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 06: Dimensions & Areas - `AS06_Dimensions_Areas`
-
-*   **Directory:** **[AS06_Dimensions_Areas/](./AMPELPLUS_0200/AS06_Dimensions_Areas/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS06_Dimensions_Areas/GP-AS-AMPELPLUS-0200-06-001-OV-A.md)</li>
-        <li>[SPEC - Specification (Geometry)](AMPELPLUS_0200/AS06_Dimensions_Areas/GP-AS-AMPELPLUS-0200-06-002-SPEC-A.md)</li>
-        <li>[DWG - Drawing (Overall, Stations, Zones)](AMPELPLUS_0200/AS06_Dimensions_Areas/GP-AS-AMPELPLUS-0200-06-003-DWG-A.md)</li>
-        <li>[LIST - List (Reference Points)](AMPELPLUS_0200/AS06_Dimensions_Areas/GP-AS-AMPELPLUS-0200-06-004-LIST-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 07: Lifting & Handling - `AS07_Lifting_Handling`
-
-*   **Directory:** **[AS07_Lifting_Handling/](./AMPELPLUS_0200/AS07_Lifting_Handling/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS07_Lifting_Handling/GP-AS-AMPELPLUS-0200-07-001-OV-A.md)</li>
-        <li>[SPEC - Specification (Points, Limits)](AMPELPLUS_0200/AS07_Lifting_Handling/GP-AS-AMPELPLUS-0200-07-002-SPEC-A.md)</li>
-        <li>[DWG - Drawing (Point Locations)](AMPELPLUS_0200/AS07_Lifting_Handling/GP-AS-AMPELPLUS-0200-07-003-DWG-A.md)</li>
-        <li>[PROC - Procedure (Handling, Hoisting)](AMPELPLUS_0200/AS07_Lifting_Handling/GP-AS-AMPELPLUS-0200-07-004-PROC-A.md)</li>
-        <li>[SDD - System Description (Robotic Handling)](AMPELPLUS_0200/AS07_Lifting_Handling/GP-AS-AMPELPLUS-0200-07-005-SDD-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 08: Mass Properties - `AS08_Mass_Properties`
-
-*   **Directory:** **[AS08_Mass_Properties/](./AMPELPLUS_0200/AS08_Mass_Properties/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS08_Mass_Properties/GP-AS-AMPELPLUS-0200-08-001-OV-A.md)</li>
-        <li>[SPEC - Specification (Mass Budget)](AMPELPLUS_0200/AS08_Mass_Properties/GP-AS-AMPELPLUS-0200-08-002-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (CG, MOI)](AMPELPLUS_0200/AS08_Mass_Properties/GP-AS-AMPELPLUS-0200-08-003-CAL-A.md)</li>
-        <li>[RPT - Report (Mass Properties)](AMPELPLUS_0200/AS08_Mass_Properties/GP-AS-AMPELPLUS-0200-08-004-RPT-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 09: Transport - `AS09_Transport`
-
-*   **Directory:** **[AS09_Transport/](./AMPELPLUS_0200/AS09_Transport/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS09_Transport/GP-AS-AMPELPLUS-0200-09-001-OV-A.md)</li>
-        <li>[PROC - Procedure (Transport)](AMPELPLUS_0200/AS09_Transport/GP-AS-AMPELPLUS-0200-09-002-PROC-A.md)</li>
-        <li>[SPEC - Specification (Transport Constraints)](AMPELPLUS_0200/AS09_Transport/GP-AS-AMPELPLUS-0200-09-003-SPEC-A.md)</li>
-        <li>[DWG - Drawing (Transport Configuration)](AMPELPLUS_0200/AS09_Transport/GP-AS-AMPELPLUS-0200-09-004-DWG-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 10: Parking & Securing - `AS10_Parking_Securing`
-
-*   **Directory:** **[AS10_Parking_Securing/](./AMPELPLUS_0200/AS10_Parking_Securing/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS10_Parking_Securing/GP-AS-AMPELPLUS-0200-10-001-OV-A.md)</li>
-        <li>[PROC - Procedure (Securing, Storage)](AMPELPLUS_0200/AS10_Parking_Securing/GP-AS-AMPELPLUS-0200-10-002-PROC-A.md)</li>
-        <li>[SPEC - Specification (Storage Environment)](AMPELPLUS_0200/AS10_Parking_Securing/GP-AS-AMPELPLUS-0200-10-003-SPEC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 11: Placards & Markings - `AS11_Placards_Markings`
-
-*   **Directory:** **[AS11_Placards_Markings/](./AMPELPLUS_0200/AS11_Placards_Markings/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS11_Placards_Markings/GP-AS-AMPELPLUS-0200-11-001-OV-A.md)</li>
-        <li>[SPEC - Specification (Markings, Hazard Labels)](AMPELPLUS_0200/AS11_Placards_Markings/GP-AS-AMPELPLUS-0200-11-002-SPEC-A.md)</li>
-        <li>[DWG - Drawing (Location Diagrams)](AMPELPLUS_0200/AS11_Placards_Markings/GP-AS-AMPELPLUS-0200-11-003-DWG-A.md)</li>
-        <li>[LIST - List (Placard Inventory)](AMPELPLUS_0200/AS11_Placards_Markings/GP-AS-AMPELPLUS-0200-11-004-LIST-A.md)</li>
-        <li>[SDD - System Description (AR Placards)](AMPELPLUS_0200/AS11_Placards_Markings/GP-AS-AMPELPLUS-0200-11-005-SDD-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 12: Servicing - `AS12_Servicing`
-
-*   **Directory:** **[AS12_Servicing/](./AMPELPLUS_0200/AS12_Servicing/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS12_Servicing/GP-AS-AMPELPLUS-0200-12-001-OV-A.md)</li>
-        <li>[PROC - Procedure (Propellant Loading, Fluids)](AMPELPLUS_0200/AS12_Servicing/GP-AS-AMPELPLUS-0200-12-002-PROC-A.md)</li>
-        <li>[SPEC - Specification (Servicing Equipment)](AMPELPLUS_0200/AS12_Servicing/GP-AS-AMPELPLUS-0200-12-003-SPEC-A.md)</li>
-        <li>[SDD - System Description (Autonomous Servicing)](AMPELPLUS_0200/AS12_Servicing/GP-AS-AMPELPLUS-0200-12-004-SDD-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 20: Standard Practices – Spaceframe - `AS20_Standard_Practices_Spaceframe`
-
-*   **Directory:** **[AS20_Standard_Practices_Spaceframe/](./AMPELPLUS_0200/AS20_Standard_Practices_Spaceframe/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS20_Standard_Practices_Spaceframe/GP-AS-AMPELPLUS-0200-20-001-OV-A.md)</li>
-        <li>[PROC - Procedure (Fastening, Bonding, Repair)](AMPELPLUS_0200/AS20_Standard_Practices_Spaceframe/GP-AS-AMPELPLUS-0200-20-002-PROC-A.md)</li>
-        <li>[SPEC - Specification (AMPEL+ Materials)](AMPELPLUS_0200/AS20_Standard_Practices_Spaceframe/GP-AS-AMPELPLUS-0200-20-003-SPEC-A.md)</li>
-        <li>[TEST - Test Plan/Procedure (Space Environment Testing)](AMPELPLUS_0200/AS20_Standard_Practices_Spaceframe/GP-AS-AMPELPLUS-0200-20-004-TEST-A.md)</li>
-        <li>[SDD - System Description (In-Space Repair)](AMPELPLUS_0200/AS20_Standard_Practices_Spaceframe/GP-AS-AMPELPLUS-0200-20-005-SDD-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 21: Environmental Control - `AS21_Environmental_Control`
-
-*   **Directory:** **[AS21_Environmental_Control/](./AMPELPLUS_0200/AS21_Environmental_Control/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS21_Environmental_Control/GP-AS-AMPELPLUS-0200-21-001-OV-A.md)</li>
-        <li>[SDD - System Description (ECLSS)](AMPELPLUS_0200/AS21_Environmental_Control/GP-AS-AMPELPLUS-0200-21-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Air Revitalization, Temp Control)](AMPELPLUS_0200/AS21_Environmental_Control/GP-AS-AMPELPLUS-0200-21-003-SPEC-A.md)</li>
-        <li>[FIG - Diagram (ECLSS Architecture)](AMPELPLUS_0200/AS21_Environmental_Control/GP-AS-AMPELPLUS-0200-21-004-FIG-A.md)</li>
-        <li>[CAL - Calculation/Analysis (ECLSS Performance)](AMPELPLUS_0200/AS21_Environmental_Control/GP-AS-AMPELPLUS-0200-21-005-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 22: Autonomous Systems - `AS22_Autonomous_Systems`
-
-*   **Directory:** **[AS22_Autonomous_Systems/](./AMPELPLUS_0200/AS22_Autonomous_Systems/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS22_Autonomous_Systems/GP-AS-AMPELPLUS-0200-22-001-OV-A.md)</li>
-        <li>[SDD - System Description (i-Aher0 Space Integration)](AMPELPLUS_0200/AS22_Autonomous_Systems/GP-AS-AMPELPLUS-0200-22-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Autonomous Operations)](AMPELPLUS_0200/AS22_Autonomous_Systems/GP-AS-AMPELPLUS-0200-22-003-SPEC-A.md)</li>
-        <li>[ICD - Interface Control Document (i-Aher0 Interface)](AMPELPLUS_0200/AS22_Autonomous_Systems/GP-AS-AMPELPLUS-0200-22-004-ICD-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Decision Algorithms)](AMPELPLUS_0200/AS22_Autonomous_Systems/GP-AS-AMPELPLUS-0200-22-005-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 23: Communications - `AS23_Communications`
-
-*   **Directory:** **[AS23_Communications/](./AMPELPLUS_0200/AS23_Communications/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS23_Communications/GP-AS-AMPELPLUS-0200-23-001-OV-A.md)</li>
-        <li>[SDD - System Description (RF, Optical, Quantum Comms)](AMPELPLUS_0200/AS23_Communications/GP-AS-AMPELPLUS-0200-23-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Antennas, Transceivers)](AMPELPLUS_0200/AS23_Communications/GP-AS-AMPELPLUS-0200-23-003-SPEC-A.md)</li>
-        <li>[FIG - Diagram (Comms Architecture)](AMPELPLUS_0200/AS23_Communications/GP-AS-AMPELPLUS-0200-23-004-FIG-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Link Budget)](AMPELPLUS_0200/AS23_Communications/GP-AS-AMPELPLUS-0200-23-005-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 24: Electrical Power - `AS24_Electrical_Power`
-
-*   **Directory:** **[AS24_Electrical_Power/](./AMPELPLUS_0200/AS24_Electrical_Power/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS24_Electrical_Power/GP-AS-AMPELPLUS-0200-24-001-OV-A.md)</li>
-        <li>[SDD - System Description (Generation, Storage, Distribution)](AMPELPLUS_0200/AS24_Electrical_Power/GP-AS-AMPELPLUS-0200-24-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Solar Arrays, Batteries, RTGs)](AMPELPLUS_0200/AS24_Electrical_Power/GP-AS-AMPELPLUS-0200-24-003-SPEC-A.md)</li>
-        <li>[FIG - Diagram (Power Architecture)](AMPELPLUS_0200/AS24_Electrical_Power/GP-AS-AMPELPLUS-0200-24-004-FIG-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Power Budget)](AMPELPLUS_0200/AS24_Electrical_Power/GP-AS-AMPELPLUS-0200-24-005-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 25: Equipment & Furnishings - `AS25_Equipment_Furnishings`
-
-*   **Directory:** **[AS25_Equipment_Furnishings/](./AMPELPLUS_0200/AS25_Equipment_Furnishings/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS25_Equipment_Furnishings/GP-AS-AMPELPLUS-0200-25-001-OV-A.md)</li>
-        <li>[SPEC - Specification (Crew Accommodations)](AMPELPLUS_0200/AS25_Equipment_Furnishings/GP-AS-AMPELPLUS-0200-25-002-SPEC-A.md)</li>
-        <li>[DWG - Drawing (Layout)](AMPELPLUS_0200/AS25_Equipment_Furnishings/GP-AS-AMPELPLUS-0200-25-003-DWG-A.md)</li>
-        <li>[LIST - List (Equipment Inventory)](AMPELPLUS_0200/AS25_Equipment_Furnishings/GP-AS-AMPELPLUS-0200-25-004-LIST-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 26: Fire Protection - `AS26_Fire_Protection`
-
-*   **Directory:** **[AS26_Fire_Protection/](./AMPELPLUS_0200/AS26_Fire_Protection/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS26_Fire_Protection/GP-AS-AMPELPLUS-0200-26-001-OV-A.md)</li>
-        <li>[SDD - System Description (Detection, Suppression)](AMPELPLUS_0200/AS26_Fire_Protection/GP-AS-AMPELPLUS-0200-26-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Sensors, Extinguishers)](AMPELPLUS_0200/AS26_Fire_Protection/GP-AS-AMPELPLUS-0200-26-003-SPEC-A.md)</li>
-        <li>[PROC - Procedure (Emergency Response)](AMPELPLUS_0200/AS26_Fire_Protection/GP-AS-AMPELPLUS-0200-26-004-PROC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 27: Flight Control - `AS27_Flight_Control`
-
-*   **Directory:** **[AS27_Flight_Control/](./AMPELPLUS_0200/AS27_Flight_Control/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS27_Flight_Control/GP-AS-AMPELPLUS-0200-27-001-OV-A.md)</li>
-        <li>[SDD - System Description (ADCS, GNC)](AMPELPLUS_0200/AS27_Flight_Control/GP-AS-AMPELPLUS-0200-27-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Sensors, Actuators)](AMPELPLUS_0200/AS27_Flight_Control/GP-AS-AMPELPLUS-0200-27-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Control Algorithms)](AMPELPLUS_0200/AS27_Flight_Control/GP-AS-AMPELPLUS-0200-27-004-CAL-A.md)</li>
-        <li>[FIG - Diagram (Control Architecture)](AMPELPLUS_0200/AS27_Flight_Control/GP-AS-AMPELPLUS-0200-27-005-FIG-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 28: Propellant - `AS28_Propellant`
-
-*   **Directory:** **[AS28_Propellant/](./AMPELPLUS_0200/AS28_Propellant/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS28_Propellant/GP-AS-AMPELPLUS-0200-28-001-OV-A.md)</li>
-        <li>[SDD - System Description (Storage, Distribution)](AMPELPLUS_0200/AS28_Propellant/GP-AS-AMPELPLUS-0200-28-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Tanks, Lines, Valves)](AMPELPLUS_0200/AS28_Propellant/GP-AS-AMPELPLUS-0200-28-003-SPEC-A.md)</li>
-        <li>[FIG - Diagram (Propellant System)](AMPELPLUS_0200/AS28_Propellant/GP-AS-AMPELPLUS-0200-28-004-FIG-A.md)</li>
-        <li>[PROC - Procedure (Loading, Venting)](AMPELPLUS_0200/AS28_Propellant/GP-AS-AMPELPLUS-0200-28-005-PROC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 29: Hydraulic Power - `AS29_Hydraulic_Power`
-
-*   **Directory:** **[AS29_Hydraulic_Power/](./AMPELPLUS_0200/AS29_Hydraulic_Power/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS29_Hydraulic_Power/GP-AS-AMPELPLUS-0200-29-001-OV-A.md)</li>
-        <li>[SDD - System Description (If Applicable)](AMPELPLUS_0200/AS29_Hydraulic_Power/GP-AS-AMPELPLUS-0200-29-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (If Applicable)](AMPELPLUS_0200/AS29_Hydraulic_Power/GP-AS-AMPELPLUS-0200-29-003-SPEC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 30: Thermal Protection - `AS30_Thermal_Protection`
-
-*   **Directory:** **[AS30_Thermal_Protection/](./AMPELPLUS_0200/AS30_Thermal_Protection/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS30_Thermal_Protection/GP-AS-AMPELPLUS-0200-30-001-OV-A.md)</li>
-        <li>[SDD - System Description (TPS, Radiators, Heaters)](AMPELPLUS_0200/AS30_Thermal_Protection/GP-AS-AMPELPLUS-0200-30-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Materials, Performance)](AMPELPLUS_0200/AS30_Thermal_Protection/GP-AS-AMPELPLUS-0200-30-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Thermal Analysis)](AMPELPLUS_0200/AS30_Thermal_Protection/GP-AS-AMPELPLUS-0200-30-004-CAL-A.md)</li>
-        <li>[FIG - Diagram (Thermal Control Architecture)](AMPELPLUS_0200/AS30_Thermal_Protection/GP-AS-AMPELPLUS-0200-30-005-FIG-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 31: Avionics - `AS31_Avionics`
-
-*   **Directory:** **[AS31_Avionics/](./AMPELPLUS_0200/AS31_Avionics/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS31_Avionics/GP-AS-AMPELPLUS-0200-31-001-OV-A.md)</li>
-        <li>[SDD - System Description (Integrated Avionics)](AMPELPLUS_0200/AS31_Avionics/GP-AS-AMPELPLUS-0200-31-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Hardware, Interfaces)](AMPELPLUS_0200/AS31_Avionics/GP-AS-AMPELPLUS-0200-31-003-SPEC-A.md)</li>
-        <li>[ICD - Interface Control Document (Subsystem Integration)](AMPELPLUS_0200/AS31_Avionics/GP-AS-AMPELPLUS-0200-31-004-ICD-A.md)</li>
-        <li>[FIG - Diagram (Architecture)](AMPELPLUS_0200/AS31_Avionics/GP-AS-AMPELPLUS-0200-31-005-FIG-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 32: Landing Systems - `AS32_Landing_Systems`
-
-*   **Directory:** **[AS32_Landing_Systems/](./AMPELPLUS_0200/AS32_Landing_Systems/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS32_Landing_Systems/GP-AS-AMPELPLUS-0200-32-001-OV-A.md)</li>
-        <li>[SDD - System Description (Landing Gear, Legs, Airbags)](AMPELPLUS_0200/AS32_Landing_Systems/GP-AS-AMPELPLUS-0200-32-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Components, Performance)](AMPELPLUS_0200/AS32_Landing_Systems/GP-AS-AMPELPLUS-0200-32-003-SPEC-A.md)</li>
-        <li>[DWG - Drawing (Assembly)](AMPELPLUS_0200/AS32_Landing_Systems/GP-AS-AMPELPLUS-0200-32-004-DWG-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Landing Loads)](AMPELPLUS_0200/AS32_Landing_Systems/GP-AS-AMPELPLUS-0200-32-005-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 33: Lighting - `AS33_Lighting`
-
-*   **Directory:** **[AS33_Lighting/](./AMPELPLUS_0200/AS33_Lighting/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS33_Lighting/GP-AS-AMPELPLUS-0200-33-001-OV-A.md)</li>
-        <li>[SDD - System Description (Interior, Exterior)](AMPELPLUS_0200/AS33_Lighting/GP-AS-AMPELPLUS-0200-33-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Fixtures, Controls)](AMPELPLUS_0200/AS33_Lighting/GP-AS-AMPELPLUS-0200-33-003-SPEC-A.md)</li>
-        <li>[LIST - List (Light Inventory)](AMPELPLUS_0200/AS33_Lighting/GP-AS-AMPELPLUS-0200-33-004-LIST-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 34: Navigation - `AS34_Navigation`
-
-*   **Directory:** **[AS34_Navigation/](./AMPELPLUS_0200/AS34_Navigation/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS34_Navigation/GP-AS-AMPELPLUS-0200-34-001-OV-A.md)</li>
-        <li>[SDD - System Description (Star Trackers, IMU, GPS)](AMPELPLUS_0200/AS34_Navigation/GP-AS-AMPELPLUS-0200-34-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Sensors, Accuracy)](AMPELPLUS_0200/AS34_Navigation/GP-AS-AMPELPLUS-0200-34-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Navigation Algorithms)](AMPELPLUS_0200/AS34_Navigation/GP-AS-AMPELPLUS-0200-34-004-CAL-A.md)</li>
-        <li>[ICD - Interface Control Document (QAO Integration)](AMPELPLUS_0200/AS34_Navigation/GP-AS-AMPELPLUS-0200-34-005-ICD-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 35: Life Support - `AS35_Life_Support`
-
-*   **Directory:** **[AS35_Life_Support/](./AMPELPLUS_0200/AS35_Life_Support/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS35_Life_Support/GP-AS-AMPELPLUS-0200-35-001-OV-A.md)</li>
-        <li>[SDD - System Description (LSS Architecture)](AMPELPLUS_0200/AS35_Life_Support/GP-AS-AMPELPLUS-0200-35-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (O2 Generation, CO2 Removal)](AMPELPLUS_0200/AS35_Life_Support/GP-AS-AMPELPLUS-0200-35-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Consumables Budget)](AMPELPLUS_0200/AS35_Life_Support/GP-AS-AMPELPLUS-0200-35-004-CAL-A.md)</li>
-        <li>[FIG - Diagram (LSS Architecture)](AMPELPLUS_0200/AS35_Life_Support/GP-AS-AMPELPLUS-0200-35-005-FIG-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 36: Pneumatic - `AS36_Pneumatic`
-
-*   **Directory:** **[AS36_Pneumatic/](./AMPELPLUS_0200/AS36_Pneumatic/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS36_Pneumatic/GP-AS-AMPELPLUS-0200-36-001-OV-A.md)</li>
-        <li>[SDD - System Description (If Applicable)](AMPELPLUS_0200/AS36_Pneumatic/GP-AS-AMPELPLUS-0200-36-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (If Applicable)](AMPELPLUS_0200/AS36_Pneumatic/GP-AS-AMPELPLUS-0200-36-003-SPEC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 37: Vacuum Systems - `AS37_Vacuum_Systems`
-
-*   **Directory:** **[AS37_Vacuum_Systems/](./AMPELPLUS_0200/AS37_Vacuum_Systems/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS37_Vacuum_Systems/GP-AS-AMPELPLUS-0200-37-001-OV-A.md)</li>
-        <li>[SDD - System Description (Vacuum Generation)](AMPELPLUS_0200/AS37_Vacuum_Systems/GP-AS-AMPELPLUS-0200-37-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Pumps, Controls)](AMPELPLUS_0200/AS37_Vacuum_Systems/GP-AS-AMPELPLUS-0200-37-003-SPEC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 38: Water & Waste - `AS38_Water_Waste`
-
-*   **Directory:** **[AS38_Water_Waste/](./AMPELPLUS_0200/AS38_Water_Waste/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS38_Water_Waste/GP-AS-AMPELPLUS-0200-38-001-OV-A.md)</li>
-        <li>[SDD - System Description (Water Recovery, Waste Management)](AMPELPLUS_0200/AS38_Water_Waste/GP-AS-AMPELPLUS-0200-38-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Components, Performance)](AMPELPLUS_0200/AS38_Water_Waste/GP-AS-AMPELPLUS-0200-38-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Water Budget)](AMPELPLUS_0200/AS38_Water_Waste/GP-AS-AMPELPLUS-0200-38-004-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 39: Command & Data Handling - `AS39_Command_Data_Handling`
-
-*   **Directory:** **[AS39_Command_Data_Handling/](./AMPELPLUS_0200/AS39_Command_Data_Handling/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS39_Command_Data_Handling/GP-AS-AMPELPLUS-0200-39-001-OV-A.md)</li>
-        <li>[SDD - System Description (C&DH Architecture)](AMPELPLUS_0200/AS39_Command_Data_Handling/GP-AS-AMPELPLUS-0200-39-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Hardware, Protocols)](AMPELPLUS_0200/AS39_Command_Data_Handling/GP-AS-AMPELPLUS-0200-39-003-SPEC-A.md)</li>
-        <li>[ICD - Interface Control Document (Subsystem Integration)](AMPELPLUS_0200/AS39_Command_Data_Handling/GP-AS-AMPELPLUS-0200-39-004-ICD-A.md)</li>
-        <li>[FIG - Diagram (Architecture)](AMPELPLUS_0200/AS39_Command_Data_Handling/GP-AS-AMPELPLUS-0200-39-005-FIG-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 40: Remote Sensing - `AS40_Remote_Sensing`
-
-*   **Directory:** **[AS40_Remote_Sensing/](./AMPELPLUS_0200/AS40_Remote_Sensing/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS40_Remote_Sensing/GP-AS-AMPELPLUS-0200-40-001-OV-A.md)</li>
-        <li>[SDD - System Description (Sensors, Instruments)](AMPELPLUS_0200/AS40_Remote_Sensing/GP-AS-AMPELPLUS-0200-40-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Performance, Calibration)](AMPELPLUS_0200/AS40_Remote_Sensing/GP-AS-AMPELPLUS-0200-40-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Data Processing)](AMPELPLUS_0200/AS40_Remote_Sensing/GP-AS-AMPELPLUS-0200-40-004-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 41: Docking & Berthing - `AS41_Docking_Berthing`
-
-*   **Directory:** **[AS41_Docking_Berthing/](./AMPELPLUS_0200/AS41_Docking_Berthing/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS41_Docking_Berthing/GP-AS-AMPELPLUS-0200-41-001-OV-A.md)</li>
-        <li>[SDD - System Description (Mechanisms, Sensors)](AMPELPLUS_0200/AS41_Docking_Berthing/GP-AS-AMPELPLUS-0200-41-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Interface, Performance)](AMPELPLUS_0200/AS41_Docking_Berthing/GP-AS-AMPELPLUS-0200-41-003-SPEC-A.md)</li>
-        <li>[PROC - Procedure (Operations)](AMPELPLUS_0200/AS41_Docking_Berthing/GP-AS-AMPELPLUS-0200-41-004-PROC-A.md)</li>
-        <li>[ICD - Interface Control Document (Standard Interface)](AMPELPLUS_0200/AS41_Docking_Berthing/GP-AS-AMPELPLUS-0200-41-005-ICD-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 42: Payload Integration - `AS42_Payload_Integration`
-
-*   **Directory:** **[AS42_Payload_Integration/](./AMPELPLUS_0200/AS42_Payload_Integration/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS42_Payload_Integration/GP-AS-AMPELPLUS-0200-42-001-OV-A.md)</li>
-        <li>[SDD - System Description (Accommodation, Interfaces)](AMPELPLUS_0200/AS42_Payload_Integration/GP-AS-AMPELPLUS-0200-42-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Requirements, Constraints)](AMPELPLUS_0200/AS42_Payload_Integration/GP-AS-AMPELPLUS-0200-42-003-SPEC-A.md)</li>
-        <li>[ICD - Interface Control Document (Standard Interface)](AMPELPLUS_0200/AS42_Payload_Integration/GP-AS-AMPELPLUS-0200-42-004-ICD-A.md)</li>
-        <li>[PROC - Procedure (Integration Process)](AMPELPLUS_0200/AS42_Payload_Integration/GP-AS-AMPELPLUS-0200-42-005-PROC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 43: Crew Systems - `AS43_Crew_Systems`
-
-*   **Directory:** **[AS43_Crew_Systems/](./AMPELPLUS_0200/AS43_Crew_Systems/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS43_Crew_Systems/GP-AS-AMPELPLUS-0200-43-001-OV-A.md)</li>
-        <li>[SDD - System Description (Crew Interfaces, Workstations)](AMPELPLUS_0200/AS43_Crew_Systems/GP-AS-AMPELPLUS-0200-43-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Human Factors, Ergonomics)](AMPELPLUS_0200/AS43_Crew_Systems/GP-AS-AMPELPLUS-0200-43-003-SPEC-A.md)</li>
-        <li>[MAN - Manual (Crew Operations)](AMPELPLUS_0200/AS43_Crew_Systems/GP-AS-AMPELPLUS-0200-43-004-MAN-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 44: In-Space Manufacturing - `AS44_In-Space_Manufacturing`
-
-*   **Directory:** **[AS44_In-Space_Manufacturing/](./AMPELPLUS_0200/AS44_In-Space_Manufacturing/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS44_In-Space_Manufacturing/GP-AS-AMPELPLUS-0200-44-001-OV-A.md)</li>
-        <li>[SDD - System Description (3D Printing, Assembly)](AMPELPLUS_0200/AS44_In-Space_Manufacturing/GP-AS-AMPELPLUS-0200-44-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Equipment, Materials)](AMPELPLUS_0200/AS44_In-Space_Manufacturing/GP-AS-AMPELPLUS-0200-44-003-SPEC-A.md)</li>
-        <li>[PROC - Procedure (Manufacturing Operations)](AMPELPLUS_0200/AS44_In-Space_Manufacturing/GP-AS-AMPELPLUS-0200-44-004-PROC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 45: Health Monitoring - `AS45_Health_Monitoring`
-
-*   **Directory:** **[AS45_Health_Monitoring/](./AMPELPLUS_0200/AS45_Health_Monitoring/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS45_Health_Monitoring/GP-AS-AMPELPLUS-0200-45-001-OV-A.md)</li>
-        <li>[SDD - System Description (i-Aher0 Integration, Digital Twin)](AMPELPLUS_0200/AS45_Health_Monitoring/GP-AS-AMPELPLUS-0200-45-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Sensors, Algorithms)](AMPELPLUS_0200/AS45_Health_Monitoring/GP-AS-AMPELPLUS-0200-45-003-SPEC-A.md)</li>
-        <li>[ICD - Interface Control Document (i-Aher0 Interface)](AMPELPLUS_0200/AS45_Health_Monitoring/GP-AS-AMPELPLUS-0200-45-004-ICD-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Predictive Algorithms)](AMPELPLUS_0200/AS45_Health_Monitoring/GP-AS-AMPELPLUS-0200-45-005-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 46: Information Systems - `AS46_Information_Systems`
-
-*   **Directory:** **[AS46_Information_Systems/](./AMPELPLUS_0200/AS46_Information_Systems/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS46_Information_Systems/GP-AS-AMPELPLUS-0200-46-001-OV-A.md)</li>
-        <li>[SDD - System Description (Onboard Computing, Networks)](AMPELPLUS_0200/AS46_Information_Systems/GP-AS-AMPELPLUS-0200-46-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Hardware, Software)](AMPELPLUS_0200/AS46_Information_Systems/GP-AS-AMPELPLUS-0200-46-003-SPEC-A.md)</li>
-        <li>[ICD - Interface Control Document (BITT Integration)](AMPELPLUS_0200/AS46_Information_Systems/GP-AS-AMPELPLUS-0200-46-004-ICD-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 47: Radiation Protection - `AS47_Radiation_Protection`
-
-*   **Directory:** **[AS47_Radiation_Protection/](./AMPELPLUS_0200/AS47_Radiation_Protection/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS47_Radiation_Protection/GP-AS-AMPELPLUS-0200-47-001-OV-A.md)</li>
-        <li>[SDD - System Description (Shielding, Monitoring)](AMPELPLUS_0200/AS47_Radiation_Protection/GP-AS-AMPELPLUS-0200-47-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Materials, Performance)](AMPELPLUS_0200/AS47_Radiation_Protection/GP-AS-AMPELPLUS-0200-47-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Radiation Models)](AMPELPLUS_0200/AS47_Radiation_Protection/GP-AS-AMPELPLUS-0200-47-004-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 48: Debris Protection - `AS48_Debris_Protection`
-
-*   **Directory:** **[AS48_Debris_Protection/](./AMPELPLUS_0200/AS48_Debris_Protection/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS48_Debris_Protection/GP-AS-AMPELPLUS-0200-48-001-OV-A.md)</li>
-        <li>[SDD - System Description (Shields, Bumpers)](AMPELPLUS_0200/AS48_Debris_Protection/GP-AS-AMPELPLUS-0200-48-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Materials, Performance)](AMPELPLUS_0200/AS48_Debris_Protection/GP-AS-AMPELPLUS-0200-48-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Impact Models)](AMPELPLUS_0200/AS48_Debris_Protection/GP-AS-AMPELPLUS-0200-48-004-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 49: Auxiliary Power - `AS49_Auxiliary_Power`
-
-*   **Directory:** **[AS49_Auxiliary_Power/](./AMPELPLUS_0200/AS49_Auxiliary_Power/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS49_Auxiliary_Power/GP-AS-AMPELPLUS-0200-49-001-OV-A.md)</li>
-        <li>[SDD - System Description (Backup Power)](AMPELPLUS_0200/AS49_Auxiliary_Power/GP-AS-AMPELPLUS-0200-49-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Components, Performance)](AMPELPLUS_0200/AS49_Auxiliary_Power/GP-AS-AMPELPLUS-0200-49-003-SPEC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 50: Cargo Systems - `AS50_Cargo_Systems`
-
-*   **Directory:** **[AS50_Cargo_Systems/](./AMPELPLUS_0200/AS50_Cargo_Systems/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS50_Cargo_Systems/GP-AS-AMPELPLUS-0200-50-001-OV-A.md)</li>
-        <li>[SDD - System Description (Storage, Transfer)](AMPELPLUS_0200/AS50_Cargo_Systems/GP-AS-AMPELPLUS-0200-50-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Racks, Restraints)](AMPELPLUS_0200/AS50_Cargo_Systems/GP-AS-AMPELPLUS-0200-50-003-SPEC-A.md)</li>
-        <li>[PROC - Procedure (Loading, Unloading)](AMPELPLUS_0200/AS50_Cargo_Systems/GP-AS-AMPELPLUS-0200-50-004-PROC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 51: Structures – General - `AS51_Structures_General`
-
-*   **Directory:** **[AS51_Structures_General/](./AMPELPLUS_0200/AS51_Structures_General/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS51_Structures_General/GP-AS-AMPELPLUS-0200-51-001-OV-A.md)</li>
-        <li>[DD - Design Document (Philosophy)](AMPELPLUS_0200/AS51_Structures_General/GP-AS-AMPELPLUS-0200-51-002-DD-A.md)</li>
-        <li>[SPEC - Specification (AMPEL+ Materials)](AMPELPLUS_0200/AS51_Structures_General/GP-AS-AMPELPLUS-0200-51-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Structural Analysis)](AMPELPLUS_0200/AS51_Structures_General/GP-AS-AMPELPLUS-0200-51-004-CAL-A.md)</li>
-        <li>[SDD - System Description (AI-SHM for Space)](AMPELPLUS_0200/AS51_Structures_General/GP-AS-AMPELPLUS-0200-51-005-SDD-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 52: Hatches & Doors - `AS52_Hatches_Doors`
-
-*   **Directory:** **[AS52_Hatches_Doors/](./AMPELPLUS_0200/AS52_Hatches_Doors/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS52_Hatches_Doors/GP-AS-AMPELPLUS-0200-52-001-OV-A.md)</li>
-        <li>[DD - Design Document (Hatches, Doors)](AMPELPLUS_0200/AS52_Hatches_Doors/GP-AS-AMPELPLUS-0200-52-002-DD-A.md)</li>
-        <li>[SPEC - Specification (Seals, Mechanisms)](AMPELPLUS_0200/AS52_Hatches_Doors/GP-AS-AMPELPLUS-0200-52-003-SPEC-A.md)</li>
-        <li>[DWG - Drawing (Assembly)](AMPELPLUS_0200/AS52_Hatches_Doors/GP-AS-AMPELPLUS-0200-52-004-DWG-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 53: Primary Structure - `AS53_Primary_Structure`
-
-*   **Directory:** **[AS53_Primary_Structure/](./AMPELPLUS_0200/AS53_Primary_Structure/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS53_Primary_Structure/GP-AS-AMPELPLUS-0200-53-001-OV-A.md)</li>
-        <li>[DD - Design Document (Pressure Vessel, Frame)](AMPELPLUS_0200/AS53_Primary_Structure/GP-AS-AMPELPLUS-0200-53-002-DD-A.md)</li>
-        <li>[SPEC - Specification (Materials, Joints)](AMPELPLUS_0200/AS53_Primary_Structure/GP-AS-AMPELPLUS-0200-53-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Structural Analysis)](AMPELPLUS_0200/AS53_Primary_Structure/GP-AS-AMPELPLUS-0200-53-004-CAL-A.md)</li>
-        <li>[DWG - Drawing (Assembly)](AMPELPLUS_0200/AS53_Primary_Structure/GP-AS-AMPELPLUS-0200-53-005-DWG-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 54: Fairings & Shrouds - `AS54_Fairings_Shrouds`
-
-*   **Directory:** **[AS54_Fairings_Shrouds/](./AMPELPLUS_0200/AS54_Fairings_Shrouds/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS54_Fairings_Shrouds/GP-AS-AMPELPLUS-0200-54-001-OV-A.md)</li>
-        <li>[DD - Design Document (Fairings, Shrouds)](AMPELPLUS_0200/AS54_Fairings_Shrouds/GP-AS-AMPELPLUS-0200-54-002-DD-A.md)</li>
-        <li>[SPEC - Specification (Materials, Mechanisms)](AMPELPLUS_0200/AS54_Fairings_Shrouds/GP-AS-AMPELPLUS-0200-54-003-SPEC-A.md)</li>
-        <li>[DWG - Drawing (Assembly)](AMPELPLUS_0200/AS54_Fairings_Shrouds/GP-AS-AMPELPLUS-0200-54-004-DWG-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 55: Stabilizers - `AS55_Stabilizers`
-
-*   **Directory:** **[AS55_Stabilizers/](./AMPELPLUS_0200/AS55_Stabilizers/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS55_Stabilizers/GP-AS-AMPELPLUS-0200-55-001-OV-A.md)</li>
-        <li>[DD - Design Document (Fins, Stabilizers)](AMPELPLUS_0200/AS55_Stabilizers/GP-AS-AMPELPLUS-0200-55-002-DD-A.md)</li>
-        <li>[SPEC - Specification (Materials, Performance)](AMPELPLUS_0200/AS55_Stabilizers/GP-AS-AMPELPLUS-0200-55-003-SPEC-A.md)</li>
-        <li>[DWG - Drawing (Assembly)](AMPELPLUS_0200/AS55_Stabilizers/GP-AS-AMPELPLUS-0200-55-004-DWG-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 56: Windows & Viewports - `AS56_Windows_Viewports`
-
-*   **Directory:** **[AS56_Windows_Viewports/](./AMPELPLUS_0200/AS56_Windows_Viewports/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS56_Windows_Viewports/GP-AS-AMPELPLUS-0200-56-001-OV-A.md)</li>
-        <li>[DD - Design Document (Windows, Viewports)](AMPELPLUS_0200/AS56_Windows_Viewports/GP-AS-AMPELPLUS-0200-56-002-DD-A.md)</li>
-        <li>[SPEC - Specification (Materials, Optical Properties)](AMPELPLUS_0200/AS56_Windows_Viewports/GP-AS-AMPELPLUS-0200-56-003-SPEC-A.md)</li>
-        <li>[SDD - System Description (VR Window System)](AMPELPLUS_0200/AS56_Windows_Viewports/GP-AS-AMPELPLUS-0200-56-004-SDD-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 57: Aerodynamic Surfaces - `AS57_Aerodynamic_Surfaces`
-
-*   **Directory:** **[AS57_Aerodynamic_Surfaces/](./AMPELPLUS_0200/AS57_Aerodynamic_Surfaces/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS57_Aerodynamic_Surfaces/GP-AS-AMPELPLUS-0200-57-001-OV-A.md)</li>
-        <li>[DD - Design Document (Wings, Control Surfaces)](AMPELPLUS_0200/AS57_Aerodynamic_Surfaces/GP-AS-AMPELPLUS-0200-57-002-DD-A.md)</li>
-        <li>[SPEC - Specification (Materials, Performance)](AMPELPLUS_0200/AS57_Aerodynamic_Surfaces/GP-AS-AMPELPLUS-0200-57-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Aerodynamic Analysis)](AMPELPLUS_0200/AS57_Aerodynamic_Surfaces/GP-AS-AMPELPLUS-0200-57-004-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 58: Deployable Structures - `AS58_Deployable_Structures`
-
-*   **Directory:** **[AS58_Deployable_Structures/](./AMPELPLUS_0200/AS58_Deployable_Structures/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS58_Deployable_Structures/GP-AS-AMPELPLUS-0200-58-001-OV-A.md)</li>
-        <li>[SDD - System Description (Solar Arrays, Antennas)](AMPELPLUS_0200/AS58_Deployable_Structures/GP-AS-AMPELPLUS-0200-58-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Mechanisms, Performance)](AMPELPLUS_0200/AS58_Deployable_Structures/GP-AS-AMPELPLUS-0200-58-003-SPEC-A.md)</li>
-        <li>[PROC - Procedure (Deployment Sequence)](AMPELPLUS_0200/AS58_Deployable_Structures/GP-AS-AMPELPLUS-0200-58-004-PROC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 59: Inflatable Structures - `AS59_Inflatable_Structures`
-
-*   **Directory:** **[AS59_Inflatable_Structures/](./AMPELPLUS_0200/AS59_Inflatable_Structures/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS59_Inflatable_Structures/GP-AS-AMPELPLUS-0200-59-001-OV-A.md)</li>
-        <li>[SDD - System Description (Habitats, Airlocks)](AMPELPLUS_0200/AS59_Inflatable_Structures/GP-AS-AMPELPLUS-0200-59-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Materials, Inflation System)](AMPELPLUS_0200/AS59_Inflatable_Structures/GP-AS-AMPELPLUS-0200-59-003-SPEC-A.md)</li>
-        <li>[PROC - Procedure (Deployment, Inflation)](AMPELPLUS_0200/AS59_Inflatable_Structures/GP-AS-AMPELPLUS-0200-59-004-PROC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 60: Standard Practices – Propulsion - `AS60_Standard_Practices_Propulsion`
-
-*   **Directory:** **[AS60_Standard_Practices_Propulsion/](./AMPELPLUS_0200/AS60_Standard_Practices_Propulsion/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS60_Standard_Practices_Propulsion/GP-AS-AMPELPLUS-0200-60-001-OV-A.md)</li>
-        <li>[PROC - Procedure (Maintenance Practices)](AMPELPLUS_0200/AS60_Standard_Practices_Propulsion/GP-AS-AMPELPLUS-0200-60-002-PROC-A.md)</li>
-        <li>[SPEC - Specification (Tools, Materials)](AMPELPLUS_0200/AS60_Standard_Practices_Propulsion/GP-AS-AMPELPLUS-0200-60-003-SPEC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 70: Propulsion – General - `AS70_Propulsion_General`
-
-*   **Directory:** **[AS70_Propulsion_General/](./AMPELPLUS_0200/AS70_Propulsion_General/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS70_Propulsion_General/GP-AS-AMPELPLUS-0200-70-001-OV-A.md)</li>
-        <li>[SDD - System Description (Architecture)](AMPELPLUS_0200/AS70_Propulsion_General/GP-AS-AMPELPLUS-0200-70-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Performance)](AMPELPLUS_0200/AS70_Propulsion_General/GP-AS-AMPELPLUS-0200-70-003-SPEC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 71: Main Propulsion - `AS71_Main_Propulsion`
-
-*   **Directory:** **[AS71_Main_Propulsion/](./AMPELPLUS_0200/AS71_Main_Propulsion/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS71_Main_Propulsion/GP-AS-AMPELPLUS-0200-71-001-OV-A.md)</li>
-        <li>[SDD - System Description (Main Engines)](AMPELPLUS_0200/AS71_Main_Propulsion/GP-AS-AMPELPLUS-0200-71-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Performance, Interface)](AMPELPLUS_0200/AS71_Main_Propulsion/GP-AS-AMPELPLUS-0200-71-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Performance)](AMPELPLUS_0200/AS71_Main_Propulsion/GP-AS-AMPELPLUS-0200-71-004-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 72: Engine Systems - `AS72_Engine_Systems`
-
-*   **Directory:** **[AS72_Engine_Systems/](./AMPELPLUS_0200/AS72_Engine_Systems/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS72_Engine_Systems/GP-AS-AMPELPLUS-0200-72-001-OV-A.md)</li>
-        <li>[SDD - System Description (Engine Components)](AMPELPLUS_0200/AS72_Engine_Systems/GP-AS-AMPELPLUS-0200-72-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Components, Performance)](AMPELPLUS_0200/AS72_Engine_Systems/GP-AS-AMPELPLUS-0200-72-003-SPEC-A.md)</li>
-        <li>[DWG - Drawing (Assembly)](AMPELPLUS_0200/AS72_Engine_Systems/GP-AS-AMPELPLUS-0200-72-004-DWG-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 72-Q01: Quantum Propulsion - `AS72-Q01_Quantum_Propulsion`
-
-*   **Directory:** **[AS72-Q01_Quantum_Propulsion/](./AMPELPLUS_0200/AS72-Q01_Quantum_Propulsion/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS72-Q01_Quantum_Propulsion/GP-AS-AMPELPLUS-0200-72-Q01-001-OV-A.md)</li>
-        <li>[SDD - System Description (Q-Thruster Module, QEE/QSM)](AMPELPLUS_0200/AS72-Q01_Quantum_Propulsion/GP-AS-AMPELPLUS-0200-72-Q01-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Q-Thruster Performance)](AMPELPLUS_0200/AS72-Q01_Quantum_Propulsion/GP-AS-AMPELPLUS-0200-72-Q01-003-SPEC-A.md)</li>
-        <li>[ICD - Interface Control Document (Integration)](AMPELPLUS_0200/AS72-Q01_Quantum_Propulsion/GP-AS-AMPELPLUS-0200-72-Q01-004-ICD-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Performance)](AMPELPLUS_0200/AS72-Q01_Quantum_Propulsion/GP-AS-AMPELPLUS-0200-72-Q01-005-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 73: Engine Control - `AS73_Engine_Control`
-
-*   **Directory:** **[AS73_Engine_Control/](./AMPELPLUS_0200/AS73_Engine_Control/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS73_Engine_Control/GP-AS-AMPELPLUS-0200-73-001-OV-A.md)</li>
-        <li>[SDD - System Description (Control System)](AMPELPLUS_0200/AS73_Engine_Control/GP-AS-AMPELPLUS-0200-73-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Controllers, Sensors)](AMPELPLUS_0200/AS73_Engine_Control/GP-AS-AMPELPLUS-0200-73-003-SPEC-A.md)</li>
-        <li>[ICD - Interface Control Document (Integration)](AMPELPLUS_0200/AS73_Engine_Control/GP-AS-AMPELPLUS-0200-73-004-ICD-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 74: Ignition - `AS74_Ignition`
-
-*   **Directory:** **[AS74_Ignition/](./AMPELPLUS_0200/AS74_Ignition/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS74_Ignition/GP-AS-AMPELPLUS-0200-74-001-OV-A.md)</li>
-        <li>[SDD - System Description (Ignition System)](AMPELPLUS_0200/AS74_Ignition/GP-AS-AMPELPLUS-0200-74-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Components, Performance)](AMPELPLUS_0200/AS74_Ignition/GP-AS-AMPELPLUS-0200-74-003-SPEC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 75: Propellant Management - `AS75_Propellant_Management`
-
-*   **Directory:** **[AS75_Propellant_Management/](./AMPELPLUS_0200/AS75_Propellant_Management/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS75_Propellant_Management/GP-AS-AMPELPLUS-0200-75-001-OV-A.md)</li>
-        <li>[SDD - System Description (Feed System, Valves)](AMPELPLUS_0200/AS75_Propellant_Management/GP-AS-AMPELPLUS-0200-75-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Components, Performance)](AMPELPLUS_0200/AS75_Propellant_Management/GP-AS-AMPELPLUS-0200-75-003-SPEC-A.md)</li>
-        <li>[FIG - Diagram (System Layout)](AMPELPLUS_0200/AS75_Propellant_Management/GP-AS-AMPELPLUS-0200-75-004-FIG-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 76: Thrust Control - `AS76_Thrust_Control`
-
-*   **Directory:** **[AS76_Thrust_Control/](./AMPELPLUS_0200/AS76_Thrust_Control/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS76_Thrust_Control/GP-AS-AMPELPLUS-0200-76-001-OV-A.md)</li>
-        <li>[SDD - System Description (Thrust Vector Control)](AMPELPLUS_0200/AS76_Thrust_Control/GP-AS-AMPELPLUS-0200-76-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Actuators, Controllers)](AMPELPLUS_0200/AS76_Thrust_Control/GP-AS-AMPELPLUS-0200-76-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Control Algorithms)](AMPELPLUS_0200/AS76_Thrust_Control/GP-AS-AMPELPLUS-0200-76-004-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 77: Engine Monitoring - `AS77_Engine_Monitoring`
-
-*   **Directory:** **[AS77_Engine_Monitoring/](./AMPELPLUS_0200/AS77_Engine_Monitoring/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS77_Engine_Monitoring/GP-AS-AMPELPLUS-0200-77-001-OV-A.md)</li>
-        <li>[SDD - System Description (Sensors, Telemetry)](AMPELPLUS_0200/AS77_Engine_Monitoring/GP-AS-AMPELPLUS-0200-77-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Sensors, Data Processing)](AMPELPLUS_0200/AS77_Engine_Monitoring/GP-AS-AMPELPLUS-0200-77-003-SPEC-A.md)</li>
-        <li>[ICD - Interface Control Document (i-Aher0 Integration)](AMPELPLUS_0200/AS77_Engine_Monitoring/GP-AS-AMPELPLUS-0200-77-004-ICD-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 78: Exhaust & Nozzle - `AS78_Exhaust_Nozzle`
-
-*   **Directory:** **[AS78_Exhaust_Nozzle/](./AMPELPLUS_0200/AS78_Exhaust_Nozzle/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS78_Exhaust_Nozzle/GP-AS-AMPELPLUS-0200-78-001-OV-A.md)</li>
-        <li>[SDD - System Description (Exhaust & Nozzle)](AMPELPLUS_0200/AS78_Exhaust_Nozzle/GP-AS-AMPELPLUS-0200-78-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Nozzle Design)](AMPELPLUS_0200/AS78_Exhaust_Nozzle/GP-AS-AMPELPLUS-0200-78-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Thrust & Plume)](AMPELPLUS_0200/AS78_Exhaust_Nozzle/GP-AS-AMPELPLUS-0200-78-004-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 79: Lubrication - `AS79_Lubrication`
-
-*   **Directory:** **[AS79_Lubrication/](./AMPELPLUS_0200/AS79_Lubrication/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS79_Lubrication/GP-AS-AMPELPLUS-0200-79-001-OV-A.md)</li>
-        <li>[SDD - System Description (Lubrication System)](AMPELPLUS_0200/AS79_Lubrication/GP-AS-AMPELPLUS-0200-79-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Oil Types, Filters)](AMPELPLUS_0200/AS79_Lubrication/GP-AS-AMPELPLUS-0200-79-003-SPEC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 80: Starting - `AS80_Starting`
-
-*   **Directory:** **[AS80_Starting/](./AMPELPLUS_0200/AS80_Starting/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS80_Starting/GP-AS-AMPELPLUS-0200-80-001-OV-A.md)</li>
-        <li>[SDD - System Description (Starting System)](AMPELPLUS_0200/AS80_Starting/GP-AS-AMPELPLUS-0200-80-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Starters, Valves)](AMPELPLUS_0200/AS80_Starting/GP-AS-AMPELPLUS-0200-80-003-SPEC-A.md)</li>
-        <li>[PROC - Procedure (Starting Sequence)](AMPELPLUS_0200/AS80_Starting/GP-AS-AMPELPLUS-0200-80-004-PROC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 81: Electric Propulsion - `AS81_Electric_Propulsion`
-
-*   **Directory:** **[AS81_Electric_Propulsion/](./AMPELPLUS_0200/AS81_Electric_Propulsion/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS81_Electric_Propulsion/GP-AS-AMPELPLUS-0200-81-001-OV-A.md)</li>
-        <li>[SDD - System Description (Electric Thrusters)](AMPELPLUS_0200/AS81_Electric_Propulsion/GP-AS-AMPELPLUS-0200-81-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Thruster Performance)](AMPELPLUS_0200/AS81_Electric_Propulsion/GP-AS-AMPELPLUS-0200-81-003-SPEC-A.md)</li>
-        <li>[FIG - Diagram (Power & Cooling Architecture)](AMPELPLUS_0200/AS81_Electric_Propulsion/GP-AS-AMPELPLUS-0200-81-004-FIG-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 82: Reaction Control - `AS82_Reaction_Control`
-
-*   **Directory:** **[AS82_Reaction_Control/](./AMPELPLUS_0200/AS82_Reaction_Control/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS82_Reaction_Control/GP-AS-AMPELPLUS-0200-82-001-OV-A.md)</li>
-        <li>[SDD - System Description (RCS Thrusters)](AMPELPLUS_0200/AS82_Reaction_Control/GP-AS-AMPELPLUS-0200-82-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Propellants, Nozzles)](AMPELPLUS_0200/AS82_Reaction_Control/GP-AS-AMPELPLUS-0200-82-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Control Authority)](AMPELPLUS_0200/AS82_Reaction_Control/GP-AS-AMPELPLUS-0200-82-004-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 83: Pressurization - `AS83_Pressurization`
-
-*   **Directory:** **[AS83_Pressurization/](./AMPELPLUS_0200/AS83_Pressurization/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS83_Pressurization/GP-AS-AMPELPLUS-0200-83-001-OV-A.md)</li>
-        <li>[SDD - System Description (Pressure Control)](AMPELPLUS_0200/AS83_Pressurization/GP-AS-AMPELPLUS-0200-83-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Valves, Regulators)](AMPELPLUS_0200/AS83_Pressurization/GP-AS-AMPELPLUS-0200-83-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Pressure Budgets)](AMPELPLUS_0200/AS83_Pressurization/GP-AS-AMPELPLUS-0200-83-004-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 84: Cryogenic Systems - `AS84_Cryogenic_Systems`
-
-*   **Directory:** **[AS84_Cryogenic_Systems/](./AMPELPLUS_0200/AS84_Cryogenic_Systems/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS84_Cryogenic_Systems/GP-AS-AMPELPLUS-0200-84-001-OV-A.md)</li>
-        <li>[SDD - System Description (Cryo Storage & Transfer)](AMPELPLUS_0200/AS84_Cryogenic_Systems/GP-AS-AMPELPLUS-0200-84-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Insulation, Pumps)](AMPELPLUS_0200/AS84_Cryogenic_Systems/GP-AS-AMPELPLUS-0200-84-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Thermal Loss)](AMPELPLUS_0200/AS84_Cryogenic_Systems/GP-AS-AMPELPLUS-0200-84-004-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 85: Fuel Cell Systems - `AS85_Fuel_Cell_Systems`
-
-*   **Directory:** **[AS85_Fuel_Cell_Systems/](./AMPELPLUS_0200/AS85_Fuel_Cell_Systems/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS85_Fuel_Cell_Systems/GP-AS-AMPELPLUS-0200-85-001-OV-A.md)</li>
-        <li>[SDD - System Description (Fuel Cell Stack, BOP)](AMPELPLUS_0200/AS85_Fuel_Cell_Systems/GP-AS-AMPELPLUS-0200-85-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Power Output, Efficiency)](AMPELPLUS_0200/AS85_Fuel_Cell_Systems/GP-AS-AMPELPLUS-0200-85-003-SPEC-A.md)</li>
-        <li>[ICD - Interface Control Document (Bus Integration)](AMPELPLUS_0200/AS85_Fuel_Cell_Systems/GP-AS-AMPELPLUS-0200-85-004-ICD-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 90: Recovery Systems - `AS90_Recovery_Systems`
-
-*   **Directory:** **[AS90_Recovery_Systems/](./AMPELPLUS_0200/AS90_Recovery_Systems/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS90_Recovery_Systems/GP-AS-AMPELPLUS-0200-90-001-OV-A.md)</li>
-        <li>[SDD - System Description (Recovery Mechanisms)](AMPELPLUS_0200/AS90_Recovery_Systems/GP-AS-AMPELPLUS-0200-90-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Parachutes, Airbags)](AMPELPLUS_0200/AS90_Recovery_Systems/GP-AS-AMPELPLUS-0200-90-003-SPEC-A.md)</li>
-        <li>[PROC - Procedure (Recovery Operations)](AMPELPLUS_0200/AS90_Recovery_Systems/GP-AS-AMPELPLUS-0200-90-004-PROC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 91: Charts & Diagrams - `AS91_Charts_Diagrams`
-
-*   **Directory:** **[AS91_Charts_Diagrams/](./AMPELPLUS_0200/AS91_Charts_Diagrams/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS91_Charts_Diagrams/GP-AS-AMPELPLUS-0200-91-001-OV-A.md)</li>
-        <li>[CAT - Catalog/List (Applicable Charts)](AMPELPLUS_0200/AS91_Charts_Diagrams/GP-AS-AMPELPLUS-0200-91-002-CAT-A.md)</li>
-        <li>[FIG - Diagram (Example Charts & Graphs)](AMPELPLUS_0200/AS91_Charts_Diagrams/GP-AS-AMPELPLUS-0200-91-003-FIG-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 92: Electrical Wiring - `AS92_Electrical_Wiring`
-
-*   **Directory:** **[AS92_Electrical_Wiring/](./AMPELPLUS_0200/AS92_Electrical_Wiring/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS92_Electrical_Wiring/GP-AS-AMPELPLUS-0200-92-001-OV-A.md)</li>
-        <li>[DWG - Drawing (Wiring Diagrams)](AMPELPLUS_0200/AS92_Electrical_Wiring/GP-AS-AMPELPLUS-0200-92-002-DWG-A.md)</li>
-        <li>[SPEC - Specification (Wire Types, Connectors)](AMPELPLUS_0200/AS92_Electrical_Wiring/GP-AS-AMPELPLUS-0200-92-003-SPEC-A.md)</li>
-        <li>[PROC - Procedure (Installation & Repair)](AMPELPLUS_0200/AS92_Electrical_Wiring/GP-AS-AMPELPLUS-0200-92-004-PROC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 93: Monitoring & Telemetry - `AS93_Monitoring_Telemetry`
-
-*   **Directory:** **[AS93_Monitoring_Telemetry/](./AMPELPLUS_0200/AS93_Monitoring_Telemetry/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS93_Monitoring_Telemetry/GP-AS-AMPELPLUS-0200-93-001-OV-A.md)</li>
-        <li>[SDD - System Description (Telemetry Systems)](AMPELPLUS_0200/AS93_Monitoring_Telemetry/GP-AS-AMPELPLUS-0200-93-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Sensors, Data Links)](AMPELPLUS_0200/AS93_Monitoring_Telemetry/GP-AS-AMPELPLUS-0200-93-003-SPEC-A.md)</li>
-        <li>[ICD - Interface Control Document (Ground Stations)](AMPELPLUS_0200/AS93_Monitoring_Telemetry/GP-AS-AMPELPLUS-0200-93-004-ICD-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 94: Orbital Mechanics - `AS94_Orbital_Mechanics`
-
-*   **Directory:** **[AS94_Orbital_Mechanics/](./AMPELPLUS_0200/AS94_Orbital_Mechanics/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS94_Orbital_Mechanics/GP-AS-AMPELPLUS-0200-94-001-OV-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Trajectory, Maneuvers)](AMPELPLUS_0200/AS94_Orbital_Mechanics/GP-AS-AMPELPLUS-0200-94-002-CAL-A.md)</li>
-        <li>[SPEC - Specification (Propulsion & Guidance)](AMPELPLUS_0200/AS94_Orbital_Mechanics/GP-AS-AMPELPLUS-0200-94-003-SPEC-A.md)</li>
-        <li>[FIG - Diagram (Orbit Plots)](AMPELPLUS_0200/AS94_Orbital_Mechanics/GP-AS-AMPELPLUS-0200-94-004-FIG-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 95: Special Equipment - `AS95_Special_Equipment`
-
-*   **Directory:** **[AS95_Special_Equipment/](./AMPELPLUS_0200/AS95_Special_Equipment/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS95_Special_Equipment/GP-AS-AMPELPLUS-0200-95-001-OV-A.md)</li>
-        <li>[LIST - List (Special Tools & Equipment)](AMPELPLUS_0200/AS95_Special_Equipment/GP-AS-AMPELPLUS-0200-95-002-LIST-A.md)</li>
-        <li>[SPEC - Specification (Equipment Specs)](AMPELPLUS_0200/AS95_Special_Equipment/GP-AS-AMPELPLUS-0200-95-003-SPEC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 96: Emergency Systems - `AS96_Emergency_Systems`
-
-*   **Directory:** **[AS96_Emergency_Systems/](./AMPELPLUS_0200/AS96_Emergency_Systems/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS96_Emergency_Systems/GP-AS-AMPELPLUS-0200-96-001-OV-A.md)</li>
-        <li>[SDD - System Description (Emergency Equipment)](AMPELPLUS_0200/AS96_Emergency_Systems/GP-AS-AMPELPLUS-0200-96-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Suitpacks, Beacons)](AMPELPLUS_0200/AS96_Emergency_Systems/GP-AS-AMPELPLUS-0200-96-003-SPEC-A.md)</li>
-        <li>[PROC - Procedure (Emergency Response)](AMPELPLUS_0200/AS96_Emergency_Systems/GP-AS-AMPELPLUS-0200-96-004-PROC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 97: Software Systems - `AS97_Software_Systems`
-
-*   **Directory:** **[AS97_Software_Systems/](./AMPELPLUS_0200/AS97_Software_Systems/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS97_Software_Systems/GP-AS-AMPELPLUS-0200-97-001-OV-A.md)</li>
-        <li>[SDD - System Description (Onboard Software)](AMPELPLUS_0200/AS97_Software_Systems/GP-AS-AMPELPLUS-0200-97-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Interfaces & APIs)](AMPELPLUS_0200/AS97_Software_Systems/GP-AS-AMPELPLUS-0200-97-003-SPEC-A.md)</li>
-        <li>[ICD - Interface Control Document (Software-Hardware)](AMPELPLUS_0200/AS97_Software_Systems/GP-AS-AMPELPLUS-0200-97-004-ICD-A.md)</li>
-        <li>[PROC - Procedure (Deployment & Updates)](AMPELPLUS_0200/AS97_Software_Systems/GP-AS-AMPELPLUS-0200-97-005-PROC-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 98: Interplanetary Systems - `AS98_Interplanetary_Systems`
-
-*   **Directory:** **[AS98_Interplanetary_Systems/](./AMPELPLUS_0200/AS98_Interplanetary_Systems/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS98_Interplanetary_Systems/GP-AS-AMPELPLUS-0200-98-001-OV-A.md)</li>
-        <li>[SDD - System Description (Deep Space Adaptations)](AMPELPLUS_0200/AS98_Interplanetary_Systems/GP-AS-AMPELPLUS-0200-98-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Radiation, Thermal)](AMPELPLUS_0200/AS98_Interplanetary_Systems/GP-AS-AMPELPLUS-0200-98-003-SPEC-A.md)</li>
-        <li>[CAL - Calculation/Analysis (Cruise Trajectories)](AMPELPLUS_0200/AS98_Interplanetary_Systems/GP-AS-AMPELPLUS-0200-98-004-CAL-A.md)</li>
-      </ul>
-    </details>
-
-### Chapter 99: Special Technology - `AS99_Special_Technology`
-
-*   **Directory:** **[AS99_Special_Technology/](./AMPELPLUS_0200/AS99_Special_Technology/)**
-    <details>
-      <summary>Document Types (Info Codes)</summary>
-      <ul>
-        <li>[OV - Overview](AMPELPLUS_0200/AS99_Special_Technology/GP-AS-AMPELPLUS-0200-99-001-OV-A.md)</li>
-        <li>[SDD - System Description (Advanced & Experimental)](AMPELPLUS_0200/AS99_Special_Technology/GP-AS-AMPELPLUS-0200-99-002-SDD-A.md)</li>
-        <li>[SPEC - Specification (Novel Materials & Sensors)](AMPELPLUS_0200/AS99_Special_Technology/GP-AS-AMPELPLUS-0200-99-003-SPEC-A.md)</li>
-        <li>[LIST - List (Emerging Technologies)](AMPELPLUS_0200/AS99_Special_Technology/GP-AS-AMPELPLUS-0200-99-004-LIST-A.md)</li>
-        <li>[RPT - Report (R&D Findings)](AMPELPLUS_0200/AS99_Special_Technology/GP-AS-AMPELPLUS-0200-99-005-RPT-A.md)</li>
-        <li>[ICD - Interface Control Document (Integration Interfaces)](AMPELPLUS_0200/AS99_Special_Technology/GP-AS-AMPELPLUS-0200-99-006-ICD-A.md)</li>
-      </ul>
-    </details>
+*   **(Placeholder: `GP-AM-*-APP-A-001-GLO-A.md`)**: Glossary of Air Systems Terms & Acronyms *(GLO)*
+*   **(Placeholder: `GP-AM-*-APP-B-001-REF-A.md`)**: Referenced COAFI Documents (Air Systems) *(REF, LIST)*
 
 ---
 
-## How to Use This Documentation
+**Document Status:** Draft (Generated based on AToC v2025-04-18)
+**Last Updated:** 2025-04-18
+**Requires:** Review, Ratification, and Population with actual document links.
 
-1.  Start from this `ToC-GP-AS.md` file.
-2.  Identify the relevant AS chapter by number or title.
-3.  Click the directory link (e.g., **[AS00_Intro_General/](./AMPELPLUS_0200/AS00_Intro_General/)**) to view all documents within that chapter's folder.
-4.  Or, expand the "Document Types (Info Codes)" section below the chapter to see a list of specific document types and click a direct link to the `.md` file.
-5.  Refer to the [Document Naming Convention](#document-naming-convention) section to understand the file identifiers and available Info Codes.
+
+
+This detailed `ToC-GP-AM.md` provides the structure and illustrative examples for navigating Part 1 of your COAFI documentation. Remember to replace the example bullet points with links to actual, ratified documents as they become available.
 
 ---
+
+**[Link to Part II Detailed ToC](./GP-AS/ToC-GP-AS.md)**
+
+---
+
+## Part II: Space Systems & Spaceframes (GP-AS / antiguamente GP-SM) 🛰️🌌
+
+*Purpose: Spaceframe Design, System & Ops Manuals for AMPEL+ platforms.*
+*Filename pattern*: `GP-AS-[PlatformCode]-[SeqCode]-[ASChapterCode]-[SubjectCode]-[InfoCode]-[Rev].[ext]`
+*(Asterisk `*` denotes `AMPELPLUS-0200` for this example)*
+
+### AS Chapter 00: Intro & General (Spacecraft)
+*Introduction, mission profiles, standards alignment, certification, design philosophy, and advanced materials for spacecraft.*
+*   [GP-AS-*-00-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-00-001-OV-A.md): 00-01: AS-00 General Document - Intro & Vision - *(OV)*
+*   [GP-AS-*-00-002-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-00-002-OV-A.md): 00-02: Mission Profiles Overview (Suborbital, Orbital, Cislunar) - *(OV)*
+*   [GP-AS-*-00-003-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-00-003-OV-A.md): 00-03: COAFI Part II Scope & AS/ECSS Standard Alignment - *(OV, REF)*
+*   [GP-AS-*-00-004-REQ-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-00-004-REQ-A.md): 00-10: Space Compliance & Certification Overview (Launch, Ops) - *(REQ, OV)*
+*   [GP-AS-*-00-005-PLAN-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-00-005-PLAN-A.md): 00-11: Spacecraft Certification Strategy - *(PLAN)*
+*   [GP-AS-*-00-006-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-00-006-OV-A.md): 00-20: Spacecraft Design Philosophy (Reusability, Safety, Modularity) - *(OV)*
+*   [GP-AS-*-00-007-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-00-007-OV-A.md): 00-21: Advanced Materials for Space (AMPEL+) Overview - *(OV)*
+*   [GP-AS-*-00-008-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-00-008-SDD-A.md): 00-30: AI-Driven Document Adaptation System (Spacecraft) - *(SDD)*
+
+### AS Chapter 01: Spacecraft General
+*Spacecraft identification, general specifications (mass, power, volume), performance characteristics (Delta-V, payload), mass properties, CG, and mission constraints.*
+*   [GP-AS-*-01-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-01-001-OV-A.md): 01-01: Spacecraft Identification & General Specs Overview - *(OV)*
+*   [GP-AS-*-01-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-01-002-SPEC-A.md): 01-02: Spacecraft Identification and Designation Specification - *(SPEC)*
+*   [GP-AS-*-01-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-01-003-SPEC-A.md): 01-03: General Specifications (Mass, Power, Volume Budgets) - *(SPEC)*
+*   [GP-AS-*-01-004-RPT-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-01-004-RPT-A.md): 01-10: Mission Performance Characteristics Report (Delta-V, Payload Capacity) - *(RPT, SPEC)*
+*   [GP-AS-*-01-005-LIST-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-01-005-LIST-A.md): 01-11: Mass Properties and Center of Gravity (CG) Data List - *(LIST, SPEC)*
+*   [GP-AS-*-01-006-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-01-006-SPEC-A.md): 01-20: Mission Constraints and Operational Limits Specification - *(SPEC, REQ)*
+*   [GP-AS-*-01-007-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-01-007-SDD-A.md): 01-21: AI-Enhanced Mission Constraint Monitoring System Description - *(SDD)*
+
+### AS Chapter 02: Mission Operations Information
+*Procedures for pre-launch checkout, launch/ascent, nominal orbital operations (station keeping, attitude control), AI-assisted operations, de-orbit/re-entry/landing, and contingency procedures.*
+*   [GP-AS-*-02-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-02-001-OV-A.md): 02-01: Mission Operations Handbook Overview - *(OV)*
+*   [GP-AS-*-02-002-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-02-002-PROC-A.md): 02-10: Pre-Launch Checkout Procedure - *(PROC)*
+*   [GP-AS-*-02-003-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-02-003-PROC-A.md): 02-11: Launch & Ascent Sequence Procedure - *(PROC)*
+*   [GP-AS-*-02-004-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-02-004-PROC-A.md): 02-20: Nominal Orbital Procedures (Station Keeping, Attitude Control, Maneuvering) - *(PROC)*
+*   [GP-AS-*-02-005-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-02-005-SDD-A.md): 02-21: AI-Assisted Orbital Operations System Description - *(SDD)*
+*   [GP-AS-*-02-006-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-02-006-PROC-A.md): 02-30: De-orbit, Re-entry, and Landing/Recovery Procedure - *(PROC)*
+*   [GP-AS-*-02-007-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-02-007-PROC-A.md): 02-40: Contingency Procedures (System Failures, Aborts, Safe Modes) - *(PROC)*
+
+### AS Chapter 03: Mission Performance
+*Performance data for ascent trajectory, Delta-V budget, maneuvers, re-entry, and landing, including AI optimization and quantum propulsion impact.*
+*   [GP-AS-*-03-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-03-001-OV-A.md): 03-01: Mission Performance Data Overview - *(OV, RPT)*
+*   [GP-AS-*-03-002-RPT-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-03-002-RPT-A.md): 03-10: Ascent Trajectory Performance Data Report - *(RPT, CAL)*
+*   [GP-AS-*-03-003-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-03-003-SDD-A.md): 03-11: Quantum Propulsion Impact on Ascent Profile Analysis - *(SDD, RPT)*
+*   [GP-AS-*-03-004-RPT-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-03-004-RPT-A.md): 03-20: Delta-V Budget and Maneuver Performance Report - *(RPT, CAL)*
+*   [GP-AS-*-03-005-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-03-005-SDD-A.md): 03-21: AI-Optimized Orbital Maneuvering System Description - *(SDD)*
+*   [GP-AS-*-03-006-RPT-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-03-006-RPT-A.md): 03-30: Re-entry Corridor & Landing Performance Report - *(RPT, CAL)*
+
+### AS Chapter 04: Spacecraft Safety & Reliability
+*Safety and reliability requirements, compliance standards, FMEA/FMECA analysis, reliability program plan, and AI-driven health management.*
+*   [GP-AS-*-04-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-04-001-OV-A.md): 04-01: Safety & Reliability Requirements Overview - *(OV, REQ)*
+*   [GP-AS-*-04-002-REQ-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-04-002-REQ-A.md): 04-10: Spacecraft Safety Standards Compliance Requirements - *(REQ)*
+*   [GP-AS-*-04-003-RPT-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-04-003-RPT-A.md): 04-11: FMEA/FMECA Analysis Report - *(RPT, CAL)*
+*   [GP-AS-*-04-004-PLAN-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-04-004-PLAN-A.md): 04-20: Reliability Program Plan - *(PLAN)*
+*   [GP-AS-*-04-005-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-04-005-SDD-A.md): 04-21: AI-Driven Fault Prediction & Health Management System (i-Aher0 Space) - *(SDD)*
+
+### AS Chapter 05: Maintenance & Servicing (Space)
+*Spacecraft maintenance philosophy (on-orbit/ground), program plan, AI scheduling, on-orbit servicing concept (RAME), life-limited items, and critical limitations.*
+*   [GP-AS-*-05-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-05-001-OV-A.md): 05-01: Spacecraft Maintenance Philosophy Overview (On-Orbit/Ground) - *(OV)*
+*   [GP-AS-*-05-002-PLAN-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-05-002-PLAN-A.md): 05-10: Spacecraft Maintenance Program Plan - *(PLAN)*
+*   [GP-AS-*-05-003-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-05-003-SDD-A.md): 05-11: AI-Driven Adaptive Maintenance Scheduling (i-Aher0 Space) - *(SDD)*
+*   [GP-AS-*-05-004-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-05-004-OV-A.md): 05-20: On-Orbit Servicing Concept Overview (RAME Integration) - *(OV, SDD)*
+*   [GP-AS-*-05-005-LIST-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-05-005-LIST-A.md): 05-50: Life-Limited Items List (Spacecraft) - *(LIST)*
+*   [GP-AS-*-05-006-REQ-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-05-006-REQ-A.md): 05-51: Critical Item Limitations Requirements - *(REQ)*
+
+### AS Chapter 06: Dimensions & Coordinate Systems
+*Spacecraft coordinate system definition, overall dimensions, key component locations, and station/zone definitions.*
+*   [GP-AS-*-06-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-06-001-OV-A.md): 06-01: Dimensions & Coordinate Systems Overview - *(OV)*
+*   [GP-AS-*-06-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-06-002-SPEC-A.md): 06-02: Spacecraft Coordinate System & Datum Specification - *(SPEC)*
+*   [GP-AS-*-06-003-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-06-003-DWG-A.md): 06-10: Overall Spacecraft Dimensions Drawing - *(DWG)*
+*   [GP-AS-*-06-004-LIST-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-06-004-LIST-A.md): 06-11: Key Component Dimensions & Locations List - *(LIST, SPEC)*
+*   [GP-AS-*-06-005-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-06-005-DWG-A.md): 06-20: Station & Zone Definition Drawing - *(DWG, SPEC)*
+
+### AS Chapter 07: Handling & Transportation
+*Specifications and procedures for spacecraft handling and ground transportation, including lifting points.*
+*   [GP-AS-*-07-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-07-001-OV-A.md): 07-01: Handling & Transportation Overview - *(OV)*
+*   [GP-AS-*-07-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-07-002-SPEC-A.md): 07-10: Lifting Point Specification & Load Limits - *(SPEC)*
+*   [GP-AS-*-07-003-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-07-003-DWG-A.md): 07-11: Lifting Point Location Drawing - *(DWG)*
+*   [GP-AS-*-07-004-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-07-004-PROC-A.md): 07-20: Ground Transportation Procedure & Requirements - *(PROC, REQ)*
+
+### AS Chapter 08: Mass Properties & Balancing
+*Procedures for mass properties measurement, CG/Moment of Inertia calculation, and balancing.*
+*   [GP-AS-*-08-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-08-001-OV-A.md): 08-01: Mass Properties & Balancing Overview - *(OV)*
+*   [GP-AS-*-08-002-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-08-002-PROC-A.md): 08-10: Mass Properties Measurement Procedure - *(PROC)*
+*   [GP-AS-*-08-003-CAL-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-08-003-CAL-A.md): 08-11: CG & Moment of Inertia Calculation Analysis - *(CAL, RPT)*
+*   [GP-AS-*-08-004-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-08-004-PROC-A.md): 08-20: Balancing Procedure - *(PROC)*
+
+### AS Chapter 09: Launch Vehicle Interface
+*Mechanical and electrical interface control documents (ICDs) with the launch vehicle, launch environment specifications, and separation procedures.*
+*   [GP-AS-*-09-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-09-001-OV-A.md): 09-01: Launch Vehicle Interface Overview - *(OV)*
+*   [GP-AS-*-09-002-ICD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-09-002-ICD-A.md): 09-10: Mechanical Interface Control Document - *(ICD, SPEC)*
+*   [GP-AS-*-09-003-ICD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-09-003-ICD-A.md): 09-20: Electrical Interface Control Document - *(ICD, SPEC)*
+*   [GP-AS-*-09-004-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-09-004-SPEC-A.md): 09-30: Launch Environment Specification (Loads, Vibration, Acoustics) - *(SPEC, REQ)*
+*   [GP-AS-*-09-005-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-09-005-PROC-A.md): 09-40: Separation System Procedure & Verification - *(PROC, TEST)*
+
+### AS Chapter 10: Storage & Preservation
+*Procedures and environmental requirements for short/long-term spacecraft storage and quantum system safing.*
+*   [GP-AS-*-10-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-10-001-OV-A.md): 10-01: Storage & Preservation Overview - *(OV)*
+*   [GP-AS-*-10-002-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-10-002-PROC-A.md): 10-10: Short/Long Term Storage Procedure - *(PROC)*
+*   [GP-AS-*-10-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-10-003-SPEC-A.md): 10-11: Storage Environmental Requirements Specification - *(SPEC, REQ)*
+*   [GP-AS-*-10-004-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-10-004-PROC-A.md): 10-20: Quantum System Safing Procedure (Storage) - *(PROC)*
+
+### AS Chapter 11: Placards & Markings (Spacecraft)
+*Specifications, locations, and drawings for exterior and interior spacecraft markings and placards, including hazard markings.*
+*   [GP-AS-*-11-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-11-001-OV-A.md): 11-01: Placards & Markings Overview - *(OV, REF)*
+*   [GP-AS-*-11-002-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-11-002-DWG-A.md): 11-10: Exterior Marking Location Drawing - *(DWG)*
+*   [GP-AS-*-11-003-LIST-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-11-003-LIST-A.md): 11-11: Exterior Marking List & Specifications - *(LIST, SPEC)*
+*   [GP-AS-*-11-004-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-11-004-SPEC-A.md): 11-12: Quantum/High-Voltage Hazard Marking Specification - *(SPEC)*
+*   [GP-AS-*-11-005-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-11-005-DWG-A.md): 11-20: Interior Placard Location Drawing (Crewed Modules) - *(DWG)*
+*   [GP-AS-*-11-006-LIST-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-11-006-LIST-A.md): 11-21: Interior Placard List & Specifications - *(LIST, SPEC)*
+
+### AS Chapter 12: Servicing – Routine (Space)
+*Procedures for routine ground and on-orbit servicing, including propellant loading, fluid/gas servicing, quantum system coolant, and consumables.*
+*   [GP-AS-*-12-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-12-001-OV-A.md): 12-01: Routine Servicing Overview (Ground & On-Orbit) - *(OV)*
+*   [GP-AS-*-12-002-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-12-002-PROC-A.md): 12-10: Propellant Loading Procedure (Ground) - *(PROC)*
+*   [GP-AS-*-12-003-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-12-003-PROC-A.md): 12-11: Fluid/Gas Servicing Procedure (Ground/Orbit) - *(PROC)*
+*   [GP-AS-*-12-004-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-12-004-PROC-A.md): 12-12: Quantum System Coolant Servicing Procedure - *(PROC)*
+*   [GP-AS-*-12-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-12-005-SPEC-A.md): 12-13: Consumables Specification (Propellant, Gas, Coolant) - *(SPEC)*
+
+### AS Chapter 13: Fluid Power (Specialized Mechanisms)
+*Overview and specifications for specialized fluid power systems (EHA, specific mechanisms).*
+*   [GP-AS-*-13-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-13-001-OV-A.md): 13-01: Fluid Power System Overview (Minimal/EHA/Specific Use) - *(OV, SDD)*
+*   [GP-AS-*-13-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-13-002-SPEC-A.md): 13-10: Mechanism Actuation Fluid Specification (If Applicable) - *(SPEC)*
+*   [GP-AS-*-13-003-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-13-003-DWG-A.md): 13-20: Fluid Line Drawing (Specific Mechanisms Only) - *(DWG)*
+
+### AS Chapter 14: Pressurized Gas Systems
+*Overview, specifications, and drawings for pressurized gas systems used for propellant pressurization, actuation, etc.*
+*   [GP-AS-*-14-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-14-001-OV-A.md): 14-01: Pressurized Gas System Overview (Propellant Pressurization, Actuation) - *(OV, SDD)*
+*   [GP-AS-*-14-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-14-002-SPEC-A.md): 14-10: High-Pressure Gas Tank Specification - *(SPEC)*
+*   [GP-AS-*-14-003-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-14-003-DWG-A.md): 14-20: Gas Distribution Plumbing Drawing - *(DWG)*
+*   [GP-AS-*-14-004-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-14-004-SPEC-A.md): 14-21: Regulator and Valve Specification - *(SPEC)*
+
+### AS Chapter 15: Air Conditioning (Crew Modules)
+*   [GP-AS-*-15-001-REF-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-15-001-REF-A.md): 15-01: Reference to AS 21 (ECLSS - Atmosphere Management) - *(REF)*
+
+### AS Chapter 16: Pressurization (Crew Modules)
+*   [GP-AS-*-16-001-REF-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-16-001-REF-A.md): 16-01: Reference to AS 21 (ECLSS - Atmosphere Management) - *(REF)*
+
+### AS Chapter 17: Environmental Control
+*   [GP-AS-*-17-001-REF-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-17-001-REF-A.md): 17-01: Reference to AS 21 (ECLSS & Thermal Control) - *(REF)*
+
+### AS Chapter 18: Vibration & Acoustic Environment
+*   [GP-AS-*-18-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-18-001-OV-A.md): 18-01: Vibration & Acoustic Control Overview (Launch & On-Orbit) - *(OV)*
+*   [GP-AS-*-18-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-18-002-SPEC-A.md): 18-10: Vibration Environment Specification (Launch, Operations) - *(SPEC, REQ)*
+*   [GP-AS-*-18-003-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-18-003-SDD-A.md): 18-11: Vibration Isolation System Description (Payloads, QPU) - *(SDD)*
+*   [GP-AS-*-18-004-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-18-004-SPEC-A.md): 18-20: Acoustic Environment Specification (Launch) - *(SPEC, REQ)*
+*   [GP-AS-*-18-005-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-18-005-SDD-A.md): 18-21: Acoustic Dampening Description (Fairing, Interstages) - *(SDD)*
+
+### AS Chapter 19: Reserved for Future Use
+*   [GP-AS-*-19-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-19-001-OV-A.md): 19-01: Placeholder - *(OV)*
+
+### AS Chapter 20: Standard Practices – Spacecraft Structure
+*   [GP-AS-*-20-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-20-001-OV-A.md): 20-01: Standard Structural Practices Overview (Space) - *(OV)*
+*   [GP-AS-*-20-002-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-20-002-PROC-A.md): 20-10: AMPEL+ Composite Fastening & Bonding Procedure - *(PROC)*
+*   [GP-AS-*-20-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-20-003-SPEC-A.md): 20-11: AMPEL+ Fastening & Bonding Specification - *(SPEC)*
+*   [GP-AS-*-20-004-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-20-004-PROC-A.md): 20-20: NDT Procedure for Space Structures - *(PROC)*
+*   [GP-AS-*-20-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-20-005-SPEC-A.md): 20-21: NDT Method Specification (Space Application) - *(SPEC)*
+*   [GP-AS-*-20-006-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-20-006-SDD-A.md): 20-22: AI-Enhanced NDT Analysis System Description - *(SDD)*
+*   [GP-AS-*-20-007-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-20-007-PROC-A.md): 20-30: Structural Repair Procedure (Ground/On-Orbit Concept) - *(PROC, OV)*
+
+### AS Chapter 21: Environmental Control & Life Support (ECLSS)
+*   [GP-AS-*-21-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-21-001-OV-A.md): 21-01: ECLSS System Overview & Philosophy - *(OV, SDD)*
+*   [GP-AS-*-21-002-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-21-002-SDD-A.md): 21-10: Atmosphere Management System Description (Pressure, Composition, Revitalization) - *(SDD)*
+*   [GP-AS-*-21-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-21-003-SPEC-A.md): 21-11: Atmosphere Management System Specification - *(SPEC)*
+*   [GP-AS-*-21-004-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-21-004-SDD-A.md): 21-20: Water Management System Description (Potable, Waste, Recycling) - *(SDD)*
+*   [GP-AS-*-21-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-21-005-SPEC-A.md): 21-21: Water Management System Specification - *(SPEC)*
+*   [GP-AS-*-21-006-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-21-006-SDD-A.md): 21-30: Waste Management System Description - *(SDD)*
+*   [GP-AS-*-21-007-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-21-007-SPEC-A.md): 21-31: Waste Management System Specification - *(SPEC)*
+*   [GP-AS-*-21-008-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-21-008-SDD-A.md): 21-50: Spacecraft Thermal Control System (STCS) Description (Active & Passive) - *(SDD)*
+*   [GP-AS-*-21-009-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-21-009-SPEC-A.md): 21-51: STCS Specification (Radiators, Heat Pipes, MLI, Louvers) - *(SPEC)*
+*   [GP-AS-*-21-010-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-21-010-SDD-A.md): 21-60: AI-Driven ECLSS Optimization System - *(SDD)*
+
+### AS Chapter 22: Guidance, Navigation & Control (GNC)
+*   [GP-AS-*-22-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-22-001-OV-A.md): 22-01: GNC System Architecture Overview - *(OV, SDD, FIG)*
+*   [GP-AS-*-22-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-22-002-SPEC-A.md): 22-10: AI Autopilot & Mission Sequence Capabilities Specification - *(SPEC)*
+*   [GP-AS-*-22-003-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-22-003-SDD-A.md): 22-11: Quantum-Enhanced GNC Algorithms Concept Description - *(SDD)*
+*   [GP-AS-*-22-004-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-22-004-SDD-A.md): 22-20: Attitude Determination & Control System (ADCS) Description - *(SDD)*
+*   [GP-AS-*-22-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-22-005-SPEC-A.md): 22-21: ADCS Sensor Specification (Star Trackers, Sun Sensors, IMU, Gyros, Magnetometers) - *(SPEC)*
+*   [GP-AS-*-22-006-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-22-006-SPEC-A.md): 22-22: ADCS Actuator Specification (Reaction Wheels, Thrusters, Mag. Torquers, CMGs) - *(SPEC)*
+*   [GP-AS-*-22-007-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-22-007-SDD-A.md): 22-30: Orbit Determination & Propagation System Description - *(SDD)*
+*   [GP-AS-*-22-008-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-22-008-SDD-A.md): 22-80: Flight Management System (FMS) Integration with AI & QAO - *(SDD)*
+
+### AS Chapter 23: Communications (Spacecraft)
+*   [GP-AS-*-23-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-23-001-OV-A.md): 23-01: Communications System Architecture Overview (TT&C, Data, Inter-Satellite) - *(OV, SDD, FIG)*
+*   [GP-AS-*-23-002-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-23-002-SDD-A.md): 23-10: Telemetry, Tracking & Command (TT&C) Subsystem Description - *(SDD)*
+*   [GP-AS-*-23-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-23-003-SPEC-A.md): 23-11: TT&C Transponder & Antenna Specification (S-Band, X-Band, etc.) - *(SPEC)*
+*   [GP-AS-*-23-004-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-23-004-SDD-A.md): 23-20: High-Rate Data Transmission Subsystem Description (Payload/Science Data, Ka-Band, Laser) - *(SDD)*
+*   [GP-AS-*-23-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-23-005-SPEC-A.md): 23-21: High-Rate Data Transmitter & Antenna Specification - *(SPEC)*
+*   [GP-AS-*-23-006-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-23-006-SDD-A.md): 23-50: Audio/Video Integrating System Description (Crewed Modules/EVA) - *(SDD)*
+*   [GP-AS-*-23-007-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-23-007-SDD-A.md): 23-70: AI Communications Management Function Description (Link Selection, Scheduling) - *(SDD)*
+*   [GP-AS-*-23-008-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-23-008-SDD-A.md): 23-80: QKD System Integration Description (Space Links) - *(SDD)*
+*   [GP-AS-*-23-009-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-23-009-SPEC-A.md): 23-81: QKD Secure Communication Protocol Specification - *(SPEC)*
+
+### AS Chapter 24: Electrical Power Subsystem (EPS)
+*   [GP-AS-*-24-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-24-001-OV-A.md): 24-01: EPS Architecture Overview - *(OV, SDD, DWG)*
+*   [GP-AS-*-24-002-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-24-002-SDD-A.md): 24-10: Power Generation System Description (Solar Arrays, RTG, Fuel Cell) - *(SDD)*
+*   [GP-AS-*-24-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-24-003-SPEC-A.md): 24-11: Power Generation System Specification - *(SPEC)*
+*   [GP-AS-*-24-004-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-24-004-SDD-A.md): 24-30: Power Storage System Description (Batteries, Supercapacitors) - *(SDD)*
+*   [GP-AS-*-24-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-24-005-SPEC-A.md): 24-31: Battery System Specification (Space Grade - Li-Ion, etc.) - *(SPEC)*
+*   [GP-AS-*-24-006-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-24-006-SDD-A.md): 24-50: Power Distribution Unit (PDU) & Control Architecture (BCR, SADE) - *(SDD, DWG)*
+*   [GP-AS-*-24-007-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-24-007-SDD-A.md): 24-51: AI-Driven Power Management & Load Shedding System Description - *(SDD)*
+
+### AS Chapter 25: Crew Systems & Habitability (If Crewed)
+*   [GP-AS-*-25-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-25-001-OV-A.md): 25-01: Crew Module Layout Overview & Options - *(OV, FIG)*
+*   [GP-AS-*-25-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-25-002-SPEC-A.md): 25-10: Crew Seat Specification (Launch/Entry/On-Orbit) - *(SPEC)*
+*   [GP-AS-*-25-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-25-003-SPEC-A.md): 25-20: Crew Quarters & Furnishings Specification - *(SPEC)*
+*   [GP-AS-*-25-004-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-25-004-SDD-A.md): 25-40: Stowage & Logistics Management System Description - *(SDD)*
+*   [GP-AS-*-25-005-LIST-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-25-005-LIST-A.md): 25-50: Galley & Food System Equipment List - *(LIST, SPEC)*
+*   [GP-AS-*-25-006-LIST-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-25-006-LIST-A.md): 25-60: Emergency Equipment List (Space Suits, Escape Systems, First Aid) - *(LIST)*
+*   [GP-AS-*-25-007-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-25-007-DWG-A.md): 25-61: Emergency Equipment Location Drawing - *(DWG)*
+
+### AS Chapter 26: Hazard Detection & Safety
+*   [GP-AS-*-26-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-26-001-OV-A.md): 26-01: Hazard Detection & Safety System Overview - *(OV, SDD)*
+*   [GP-AS-*-26-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-26-002-SPEC-A.md): 26-10: Fire/Smoke Detector Specification (Space Environment) - *(SPEC)*
+*   [GP-AS-*-26-003-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-26-003-DWG-A.md): 26-11: Fire/Smoke Detector Location Drawing - *(DWG)*
+*   [GP-AS-*-26-004-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-26-004-SPEC-A.md): 26-12: Micrometeoroid & Orbital Debris (MMOD) Detection Sensor Specification - *(SPEC)*
+*   [GP-AS-*-26-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-26-005-SPEC-A.md): 26-13: Radiation Environment Monitor Specification - *(SPEC)*
+*   [GP-AS-*-26-006-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-26-006-SPEC-A.md): 26-14: Toxic Atmosphere Sensor Specification - *(SPEC)*
+*   [GP-AS-*-26-007-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-26-007-SDD-A.md): 26-20: Fire Suppression System Description (Space Rated - CO2, Water Mist, Novec) - *(SDD)*
+*   [GP-AS-*-26-008-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-26-008-SPEC-A.md): 26-21: Fire Suppression Agent & System Specification - *(SPEC)*
+*   [GP-AS-*-26-009-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-26-009-SDD-A.md): 26-30: Caution & Warning System Description (Alarms, Annunciators) - *(SDD)*
+
+### AS Chapter 27: Flight Control Actuation (GNC Actuators)
+*   [GP-AS-*-27-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-27-001-OV-A.md): 27-01: GNC Actuator Systems Overview - *(OV)*
+*   [GP-AS-*-27-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-27-002-SPEC-A.md): 27-10: Reaction Control System (RCS) Thruster Specification - *(SPEC)* (Ref AS 71)
+*   [GP-AS-*-27-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-27-003-SPEC-A.md): 27-20: Main Engine Gimbal Actuator Specification (If Applicable) - *(SPEC)*
+*   [GP-AS-*-27-004-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-27-004-SPEC-A.md): 27-30: Reaction Wheel Assembly (RWA) Specification - *(SPEC)* (Ref AS 22)
+*   [GP-AS-*-27-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-27-005-SPEC-A.md): 27-40: Control Moment Gyroscope (CMG) Specification (If Applicable) - *(SPEC)* (Ref AS 22)
+*   [GP-AS-*-27-006-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-27-006-SPEC-A.md): 27-50: Magnetic Torquer Specification (If Applicable) - *(SPEC)* (Ref AS 22)
+*   [GP-AS-*-27-007-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-27-007-SPEC-A.md): 27-60: Aerodynamic Control Surface Actuator Specification (Re-entry Vehicles) - *(SPEC)*
+
+### AS Chapter 28: Propellant Systems
+*   [GP-AS-*-28-001-REF-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-28-001-REF-A.md): 28-01: Reference to AS 73 (Propellant Management) - *(REF)*
+
+### AS Chapter 29: Fluid Power (Specific Use)
+*   [GP-AS-*-29-001-REF-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-29-001-REF-A.md): 29-01: Reference to AS 13 (Fluid Power) & AS 52 (Mechanisms) - *(REF)*
+
+### AS Chapter 30: Thermal Protection System (TPS) & Temperature Control
+*   [GP-AS-*-30-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-30-001-OV-A.md): 30-01: TPS & Temperature Control Overview (Re-entry & Space Environment) - *(OV, SDD)*
+*   [GP-AS-*-30-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-30-002-SPEC-A.md): 30-10: Re-entry TPS Material Specification (Tiles, Ablatives, Composites) - *(SPEC)*
+*   [GP-AS-*-30-003-DD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-30-003-DD-A.md): 30-11: Re-entry TPS Design Document - *(DD)*
+*   [GP-AS-*-30-004-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-30-004-SPEC-A.md): 30-20: Multi-Layer Insulation (MLI) Specification - *(SPEC)* (Ref AS 21)
+*   [GP-AS-*-30-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-30-005-SPEC-A.md): 30-30: Radiator & Heat Pipe Specification - *(SPEC)* (Ref AS 21)
+*   [GP-AS-*-30-006-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-30-006-SPEC-A.md): 30-80: Temperature Sensor Specification - *(SPEC)*
+*   [GP-AS-*-30-007-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-30-007-SDD-A.md): 30-81: AI-Driven Thermal Modeling & Control System - *(SDD)*
+
+### AS Chapter 31: Command & Data Handling (C&DH)
+*   [GP-AS-*-31-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-31-001-OV-A.md): 31-01: C&DH System Overview - *(OV, SDD)*
+*   [GP-AS-*-31-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-31-002-SPEC-A.md): 31-10: On-Board Computer (OBC) Specification (Main & Redundant) - *(SPEC)*
+*   [GP-AS-*-31-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-31-003-SPEC-A.md): 31-20: Data Bus Architecture Specification (SpaceWire, MIL-STD-1553, CAN, Ethernet) - *(SPEC)*
+*   [GP-AS-*-31-004-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-31-004-SPEC-A.md): 31-30: Mass Memory Unit (MMU) Specification - *(SPEC)*
+*   [GP-AS-*-31-005-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-31-005-SDD-A.md): 31-40: Flight Software Architecture Description - *(SDD)*
+*   [GP-AS-*-31-006-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-31-006-PROC-A.md): 31-41: Flight Software Upload & Verification Procedure - *(PROC)*
+*   [GP-AS-*-31-007-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-31-007-SDD-A.md): 31-50: Telemetry Packet Format & Command Structure Description - *(SDD, SPEC)*
+*   [GP-AS-*-31-008-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-31-008-SDD-A.md): 31-60: HPC/QPU Integration within C&DH Description - *(SDD)* (Ref AS 99)
+*   [GP-AS-*-31-009-ICD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-31-009-ICD-A.md): 31-70: Subsystem Interface Control Document (C&DH Focus) - *(ICD)*
+
+### AS Chapter 32: Landing & Recovery Systems
+*   [GP-AS-*-32-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-32-001-OV-A.md): 32-01: Landing & Recovery System Overview - *(OV, SDD)*
+*   [GP-AS-*-32-002-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-32-002-SDD-A.md): 32-10: Parachute System Description (Drogue, Main - If Applicable) - *(SDD)*
+*   [GP-AS-*-32-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-32-003-SPEC-A.md): 32-11: Parachute System Specification - *(SPEC)*
+*   [GP-AS-*-32-004-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-32-004-SDD-A.md): 32-20: Landing Leg/Gear System Description (Fixed, Deployable) - *(SDD)*
+*   [GP-AS-*-32-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-32-005-SPEC-A.md): 32-21: Landing Leg/Gear System Specification - *(SPEC)*
+*   [GP-AS-*-32-006-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-32-006-SDD-A.md): 32-30: Touchdown Attenuation System Description (Crushable Core, Active Suspension) - *(SDD)*
+*   [GP-AS-*-32-007-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-32-007-SDD-A.md): 32-40: Post-Landing Recovery Aids Description (Beacons, Flotation, Uprighting) - *(SDD)*
+*   [GP-AS-*-32-008-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-32-008-SDD-A.md): 32-50: Propulsive Landing System Description (If Applicable) - *(SDD)*
+
+### AS Chapter 33: Lighting (Spacecraft)
+*   [GP-AS-*-33-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-33-001-OV-A.md): 33-01: Lighting System Overview - *(OV, SDD)*
+*   [GP-AS-*-33-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-33-002-SPEC-A.md): 33-10: Crew Module Lighting Specification (Task, General, Sleep) - *(SPEC)*
+*   [GP-AS-*-33-003-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-33-003-SDD-A.md): 33-20: AI-Adaptive Circadian Lighting System Description - *(SDD)*
+*   [GP-AS-*-33-004-LIST-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-33-004-LIST-A.md): 33-40: Exterior Lighting List (Docking, Navigation, Inspection, Landing) - *(LIST, SPEC)*
+*   [GP-AS-*-33-005-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-33-005-DWG-A.md): 33-41: Exterior Lighting Location Drawing - *(DWG)*
+*   [GP-AS-*-33-006-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-33-006-SDD-A.md): 33-50: Emergency Lighting System Description - *(SDD)*
+
+### AS Chapter 34: Navigation Sensors & Systems
+*   [GP-AS-*-34-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-34-001-OV-A.md): 34-01: Navigation Sensor Suite Overview - *(OV)* (Primarily covered by AS 22 GNC)
+*   [GP-AS-*-34-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-34-002-SPEC-A.md): 34-10: Inertial Measurement Unit (IMU) Specification - *(SPEC)* (Ref AS 22)
+*   [GP-AS-*-34-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-34-003-SPEC-A.md): 34-20: Star Tracker Specification - *(SPEC)* (Ref AS 22)
+*   [GP-AS-*-34-004-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-34-004-SPEC-A.md): 34-30: Sun Sensor Specification - *(SPEC)* (Ref AS 22)
+*   [GP-AS-*-34-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-34-005-SPEC-A.md): 34-40: GNSS Receiver Specification (Space Grade) - *(SPEC)* (Ref AS 22)
+*   [GP-AS-*-34-006-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-34-006-SPEC-A.md): 34-50: Rendezvous & Docking Sensor Specification (LiDAR, Camera, RF) - *(SPEC)* (Ref AS 88)
+*   [GP-AS-*-34-007-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-34-007-SPEC-A.md): 34-60: Landing Sensor Specification (Radar/Laser Altimeter, Velocimeter) - *(SPEC)*
+*   [GP-AS-*-34-008-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-34-008-SDD-A.md): 34-70: Quantum Sensor Integration Concept (Navigation Enhancement) - *(SDD)*
+
+### AS Chapter 35: Life Support Systems
+*   [GP-AS-*-35-001-REF-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-35-001-REF-A.md): 35-01: Reference to AS 21 (ECLSS) - *(REF)*
+
+### AS Chapter 36: Pneumatic Systems (Specific Use)
+*   [GP-AS-*-36-001-REF-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-36-001-REF-A.md): 36-01: Reference to AS 14 (Pressurized Gas Systems) - *(REF)*
+
+### AS Chapter 37: Vacuum Systems
+*   [GP-AS-*-37-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-37-001-OV-A.md): 37-01: Not Applicable (Space Environment is Vacuum) - *(OV)*
+
+### AS Chapter 38: Water & Waste Management
+*   [GP-AS-*-38-001-REF-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-38-001-REF-A.md): 38-01: Reference to AS 21 (ECLSS - Water & Waste Management) - *(REF)*
+
+### AS Chapter 39: Crew Interface Panels & Displays
+*   [GP-AS-*-39-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-39-001-OV-A.md): 39-01: Crew Interface Panels & Displays Overview - *(OV, SDD)*
+*   [GP-AS-*-39-002-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-39-002-DWG-A.md): 39-10: Cockpit/Control Station Layout Drawing - *(DWG)*
+*   [GP-AS-*-39-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-39-003-SPEC-A.md): 39-11: Display Unit Specification (Space Rated) - *(SPEC)*
+*   [GP-AS-*-39-004-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-39-004-SPEC-A.md): 39-20: Control Input Device Specification (Joysticks, Keyboards, Switches) - *(SPEC)*
+*   [GP-AS-*-39-005-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-39-005-SDD-A.md): 39-21: Human-Machine Interface (HMI) Software Description - *(SDD)*
+*   [GP-AS-*-39-006-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-39-006-SDD-A.md): 39-22: AI/XAI Crew Interface Description - *(SDD)*
+
+### AS Chapter 40: Reserved for Future Use
+*   [GP-AS-*-40-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-40-001-OV-A.md): 40-01: Placeholder - *(OV)*
+
+### AS Chapter 41: Ballast Systems
+*   [GP-AS-*-41-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-41-001-OV-A.md): 41-01: Ballast System Overview (If Applicable for CG Control) - *(OV, SDD)*
+*   [GP-AS-*-41-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-41-002-SPEC-A.md): 41-10: Ballast Mass Specification - *(SPEC)*
+*   [GP-AS-*-41-003-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-41-003-SDD-A.md): 41-20: Ballast Movement Mechanism Description - *(SDD)*
+
+### AS Chapter 42: Integrated Avionics Architecture
+*   [GP-AS-*-42-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-42-001-OV-A.md): 42-01: Integrated Avionics Architecture Overview - *(OV, SDD)*
+*   [GP-AS-*-42-002-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-42-002-SDD-A.md): 42-10: Core Processing Module Description (Ref AS 31 OBC) - *(SDD)*
+*   [GP-AS-*-42-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-42-003-SPEC-A.md): 42-11: Core Processing Module Specification - *(SPEC)*
+*   [GP-AS-*-42-004-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-42-004-SDD-A.md): 42-20: Avionics Network Architecture Description (Ref AS 31 Data Bus) - *(SDD)*
+*   [GP-AS-*-42-005-FIG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-42-005-FIG-A.md): 42-21: Avionics Network Architecture Figure - *(FIG)*
+*   [GP-AS-*-42-006-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-42-006-SDD-A.md): 42-30: Time Distribution System Description - *(SDD)*
+
+### AS Chapter 43: Reserved for Future Use
+*   [GP-AS-*-43-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-43-001-OV-A.md): 43-01: Placeholder - *(OV)*
+
+### AS Chapter 44: Payload & Experiment Systems
+*   [GP-AS-*-44-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-44-001-OV-A.md): 44-01: Payload & Experiment Systems Overview - *(OV, SDD)*
+*   [GP-AS-*-44-002-ICD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-44-002-ICD-A.md): 44-10: Standard Payload Interface Control Document (Mechanical, Electrical, Data, Thermal) - *(ICD, SPEC)*
+*   [GP-AS-*-44-003-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-44-003-SDD-A.md): 44-20: Payload Data Handling & Storage Description - *(SDD)*
+*   [GP-AS-*-44-004-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-44-004-SDD-A.md): 44-30: Crew Science Facilities Description (Glovebox, Racks - If Applicable) - *(SDD)*
+
+### AS Chapter 45: Spacecraft Health Management System (SHMS)
+*   [GP-AS-*-45-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-45-001-OV-A.md): 45-01: SHMS Architecture Overview (i-Aher0 Space & DTO) - *(OV, SDD, FIG)*
+*   [GP-AS-*-45-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-45-002-SPEC-A.md): 45-10: Central Health Monitoring Unit Specification - *(SPEC)*
+*   [GP-AS-*-45-003-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-45-003-SDD-A.md): 45-20: Sensor Data Acquisition & Fusion Description - *(SDD)*
+*   [GP-AS-*-45-004-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-45-004-SPEC-A.md): 45-40: Health & Status Reporting Format Specification - *(SPEC)*
+*   [GP-AS-*-45-005-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-45-005-SDD-A.md): 45-41: AI Predictive Diagnostics & Prognostics Logic Description - *(SDD)*
+*   [GP-AS-*-45-006-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-45-006-OV-A.md): 45-50: i-Aher0 Space Diagnostic Capabilities Overview - *(OV, SDD)*
+*   [GP-AS-*-45-007-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-45-007-SDD-A.md): 45-51: AI Fault Detection, Isolation & Recovery (FDIR) Algorithm Description - *(SDD)*
+*   [GP-AS-*-45-008-CAL-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-45-008-CAL-A.md): 45-52: AI FDIR Performance Analysis - *(CAL)*
+*   [GP-AS-*-45-009-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-45-009-OV-A.md): 45-60: Digital Twin Orchestration (DTO) Integration Overview - *(OV)*
+*   [GP-AS-*-45-010-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-45-010-SDD-A.md): 45-61: DTO Functionality Description (Spacecraft) - *(SDD)*
+*   [GP-AS-*-45-011-ICD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-45-011-ICD-A.md): 45-62: DTO Interface Control Document (SHMS Integration) - *(ICD)*
+
+### AS Chapter 46: On-Board Information Systems & Networks
+*   [GP-AS-*-46-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-46-001-OV-A.md): 46-01: On-Board Information Systems Architecture Overview - *(OV, SDD, FIG)*
+*   [GP-AS-*-46-002-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-46-002-SDD-A.md): 46-10: GQP On-Board Interface System Description - *(SDD)* (Ref Part III)
+*   [GP-AS-*-46-003-ICD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-46-003-ICD-A.md): 46-11: GQP On-Board Interface Control Document - *(ICD)*
+*   [GP-AS-*-46-004-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-46-004-SDD-A.md): 46-20: Crew Support Information System Description (Procedures, Timelines) - *(SDD)*
+*   [GP-AS-*-46-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-46-005-SPEC-A.md): 46-30: Payload Data Network Specification - *(SPEC)*
+*   [GP-AS-*-46-006-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-46-006-OV-A.md): 46-60: BITT Ledger Integration Overview (Spacecraft Data) - *(OV)* (Ref Part III)
+*   [GP-AS-*-46-007-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-46-007-SDD-A.md): 46-61: BITT On-Board Logging System Description - *(SDD)*
+*   [GP-AS-*-46-008-ICD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-46-008-ICD-A.md): 46-62: BITT Interface Control Document (On-Board) - *(ICD)*
+*   [GP-AS-*-46-009-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-46-009-SDD-A.md): 46-63: QAO On-Board Interface Description - *(SDD)* (Ref Part III)
+*   [GP-AS-*-46-010-ICD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-46-010-ICD-A.md): 46-64: QAO Interface Control Document (On-Board) - *(ICD)*
+*   [GP-AS-*-46-011-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-46-011-OV-A.md): 46-70: i-Aher0 Cybersecurity Functions Overview (Spacecraft) - *(OV, SDD)* (Ref Part III)
+*   [GP-AS-*-46-012-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-46-012-SPEC-A.md): 46-71: On-Board Intrusion Detection Protocol Specification - *(SPEC)*
+*   [GP-AS-*-46-013-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-46-013-PROC-A.md): 46-72: On-Board Intrusion Prevention/Response Procedure - *(PROC)*
+
+### AS Chapter 47: Inert Gas Systems
+*   [GP-AS-*-47-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-47-001-OV-A.md): 47-01: Not Applicable (Covered by AS 14 / AS 21) - *(OV)*
+
+### AS Chapter 48: Reserved for Future Use
+*   [GP-AS-*-48-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-48-001-OV-A.md): 48-01: Placeholder - *(OV)*
+
+### AS Chapter 49: Auxiliary Power Systems
+*   [GP-AS-*-49-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-49-001-OV-A.md): 49-01: Auxiliary & Emergency Power Overview - *(OV, SDD)* (Ref AS 24 EPS)
+*   [GP-AS-*-49-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-49-002-SPEC-A.md): 49-10: Emergency Battery Specification - *(SPEC)*
+*   [GP-AS-*-49-003-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-49-003-SDD-A.md): 49-20: Auxiliary Power Unit Description (Fuel Cell / Chemical - If Applicable) - *(SDD)*
+
+### AS Chapter 50: Payload Accommodation & Cargo Transfer
+*   [GP-AS-*-50-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-50-001-OV-A.md): 50-01: Payload Accommodation & Cargo Transfer Overview - *(OV, FIG)*
+*   [GP-AS-*-50-002-DD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-50-002-DD-A.md): 50-10: Payload Bay / Cargo Module Design Document - *(DD)*
+*   [GP-AS-*-50-003-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-50-003-DWG-A.md): 50-11: Payload Envelope & Interface Drawing - *(DWG)*
+*   [GP-AS-*-50-004-ICD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-50-004-ICD-A.md): 50-12: Payload Deployment/Release System Interface Control Document - *(ICD)*
+*   [GP-AS-*-50-005-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-50-005-SDD-A.md): 50-13: Robotic Cargo Transfer System Description (If Applicable) - *(SDD)* (Ref AS 88, Part VI)
+*   [GP-AS-*-50-006-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-50-006-DWG-A.md): 50-20: Equipment Bay & Rack Location Drawing - *(DWG)*
+*   [GP-AS-*-50-007-LIST-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-50-007-LIST-A.md): 50-21: Equipment Bay Access & Constraints List - *(LIST)*
+
+### AS Chapter 51: Structures (Spacecraft)
+*   [GP-AS-*-51-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-51-001-OV-A.md): 51-01: Structural Design Overview (Launch, Space Environment) - *(OV, DD)*
+*   [GP-AS-*-51-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-51-002-SPEC-A.md): 51-10: Primary Structural Material Specification (AMPEL+) - *(SPEC)*
+*   [GP-AS-*-51-003-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-51-003-OV-A.md): 51-20: Structural Analysis Methodology Overview (Space Loads) - *(OV)*
+*   [GP-AS-*-51-004-CAL-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-51-004-CAL-A.md): 51-21: Structural Analysis Calculation Report (FEM, Thermal, MMOD, Fatigue) - *(CAL, RPT)*
+*   [GP-AS-*-51-005-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-51-005-SDD-A.md): 51-70: AI-SHM System Description (Spacecraft Integration) - *(SDD)*
+
+### AS Chapter 52: Mechanisms (Hatches, Deployables)
+*   [GP-AS-*-52-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-52-001-OV-A.md): 52-01: Mechanism Systems Overview - *(OV, LIST)*
+*   [GP-AS-*-52-002-DD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-52-002-DD-A.md): 52-10: Hatch/Airlock Design Document - *(DD)*
+*   [GP-AS-*-52-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-52-003-SPEC-A.md): 52-11: Hatch/Airlock Mechanism Specification & Operation - *(SPEC, PROC)*
+*   [GP-AS-*-52-004-DD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-52-004-DD-A.md): 52-20: Solar Array Deployment Mechanism Design Document - *(DD)*
+*   [GP-AS-*-52-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-52-005-SPEC-A.md): 52-21: Solar Array Deployment Mechanism Specification & Operation - *(SPEC, PROC)*
+*   [GP-AS-*-52-006-DD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-52-006-DD-A.md): 52-30: Antenna Pointing/Deployment Mechanism Design Document - *(DD)*
+*   [GP-AS-*-52-007-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-52-007-SPEC-A.md): 52-31: Antenna Pointing/Deployment Mechanism Specification & Operation - *(SPEC, PROC)*
+*   [GP-AS-*-52-008-DD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-52-008-DD-A.md): 52-40: Payload Release/Separation Mechanism Design Document - *(DD)*
+*   [GP-AS-*-52-009-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-52-009-SPEC-A.md): 52-41: Payload Release/Separation Mechanism Specification & Operation - *(SPEC, PROC)*
+
+### AS Chapter 53: Primary Structure / Pressure Vessel
+*   [GP-AS-*-53-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-53-001-OV-A.md): 53-01: Primary Structure / Pressure Vessel Design Overview - *(OV, DD)*
+*   [GP-AS-*-53-002-DD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-53-002-DD-A.md): 53-10: Main Bus Structure Design Document - *(DD)*
+*   [GP-AS-*-53-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-53-003-SPEC-A.md): 53-11: Main Bus Structure Specification - *(SPEC)*
+*   [GP-AS-*-53-004-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-53-004-DWG-A.md): 53-12: Main Bus Structure Drawing - *(DWG)*
+*   [GP-AS-*-53-005-DD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-53-005-DD-A.md): 53-20: Crew Module Pressure Vessel Design Document (If Applicable) - *(DD)*
+*   [GP-AS-*-53-006-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-53-006-SPEC-A.md): 53-21: Crew Module Pressure Vessel Specification - *(SPEC)*
+*   [GP-AS-*-53-007-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-53-007-SPEC-A.md): 53-30: MMOD Shielding Specification - *(SPEC)*
+
+### AS Chapter 54: Propulsion Module Structures & Interfaces
+*   [GP-AS-*-54-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-54-001-OV-A.md): 54-01: Propulsion Module Structures & Interfaces Overview - *(OV, DD)*
+*   [GP-AS-*-54-002-DD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-54-002-DD-A.md): 54-10: Engine Mount & Thrust Structure Design Document - *(DD)*
+*   [GP-AS-*-54-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-54-003-SPEC-A.md): 54-11: Engine Mount & Thrust Structure Specification - *(SPEC)*
+*   [GP-AS-*-54-004-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-54-004-DWG-A.md): 54-12: Propulsion Module Structural Drawing - *(DWG)*
+*   [GP-AS-*-54-005-ICD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-54-005-ICD-A.md): 54-20: Propulsion System Interface Control Document (Structural) - *(ICD)*
+
+### AS Chapter 55: Aerodynamic Control Surfaces (Re-entry/Trans-Atmospheric)
+*   [GP-AS-*-55-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-55-001-OV-A.md): 55-01: Aerodynamic Control Surfaces Overview (If Applicable) - *(OV, DD)*
+*   [GP-AS-*-55-002-DD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-55-002-DD-A.md): 55-10: Control Surface Structural Design Document - *(DD)*
+*   [GP-AS-*-55-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-55-003-SPEC-A.md): 55-11: Control Surface Specification - *(SPEC)*
+*   [GP-AS-*-55-004-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-55-004-DWG-A.md): 55-12: Control Surface Drawing - *(DWG)*
+
+### AS Chapter 56: Viewports & Optical Windows
+*   [GP-AS-*-56-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-56-001-OV-A.md): 56-01: Viewports & Optical Windows Overview - *(OV)*
+*   [GP-AS-*-56-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-56-002-SPEC-A.md): 56-10: Crew Viewport Specification (Pressure, Thermal, Radiation) - *(SPEC)*
+*   [GP-AS-*-56-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-56-003-SPEC-A.md): 56-20: Scientific Instrument Optical Window Specification - *(SPEC)*
+*   [GP-AS-*-56-004-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-56-004-PROC-A.md): 56-30: Viewport/Window Inspection & Maintenance Procedure - *(PROC)*
+
+### AS Chapter 57: Lifting Surfaces & Aerobraking Structures
+*   [GP-AS-*-57-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-57-001-OV-A.md): 57-01: Lifting Surfaces & Aerobraking Structures Overview (If Applicable) - *(OV, DD)*
+*   [GP-AS-*-57-002-DD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-57-002-DD-A.md): 57-10: Wing/Lifting Body Structural Design Document - *(DD)*
+*   [GP-AS-*-57-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-57-003-SPEC-A.md): 57-11: Wing/Lifting Body Specification - *(SPEC)*
+*   [GP-AS-*-57-004-DD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-57-004-DD-A.md): 57-20: Aerobraking Shield/Structure Design Document - *(DD)*
+*   [GP-AS-*-57-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-57-005-SPEC-A.md): 57-21: Aerobraking Shield/Structure Specification - *(SPEC)*
+
+### AS Chapter 60: Standard Practices - Propulsion Systems (Space)
+*   [GP-AS-*-60-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-60-001-OV-A.md): 60-01: Standard Propulsion Practices Overview (Space) - *(OV)*
+*   [GP-AS-*-60-002-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-60-002-PROC-A.md): 60-10: Propulsion System Integration & Test Procedure - *(PROC, TEST)*
+*   [GP-AS-*-60-003-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-60-003-PROC-A.md): 60-20: Propellant Handling Safety Procedure - *(PROC, REQ)*
+*   [GP-AS-*-60-004-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-60-004-PROC-A.md): 60-30: Thruster Firing & Test Procedure (Ground/Vacuum) - *(PROC, TEST)*
+
+### AS Chapter 61-67: Rotors / Propellers / Drives / Controls
+*   [GP-AS-*-61-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-61-001-OV-A.md): 61-67: Not Applicable for Orbital Spacecraft - *(OV)* (May be relevant for atmospheric stages or planetary flyers)
+
+### AS Chapter 71: Propulsion Systems (Spacecraft)
+*   [GP-AS-*-71-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-71-001-OV-A.md): 71-01: Propulsion System Overview (Main, RCS, Quantum) - *(OV, SDD)*
+*   [GP-AS-*-71-002-DD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-71-002-DD-A.md): 71-10: Main Propulsion System Design Document (Chemical/Electric/Quantum) - *(DD)*
+*   [GP-AS-*-71-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-71-003-SPEC-A.md): 71-11: Main Propulsion System Specification (Performance, Interfaces) - *(SPEC)*
+*   [GP-AS-*-71-004-DD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-71-004-DD-A.md): 71-20: Reaction Control System (RCS) Design Document - *(DD)*
+*   [GP-AS-*-71-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-71-005-SPEC-A.md): 71-21: RCS Specification (Thruster Type, Performance, Interfaces) - *(SPEC)*
+
+### AS Chapter 72: Engine Details (Chemical/Electric)
+*   [GP-AS-*-72-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-72-001-OV-A.md): 72-01: Space Engine Architecture Overview - *(OV, SDD)*
+*   [GP-AS-*-72-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-72-002-SPEC-A.md): 72-10: Chemical Engine Thrust Chamber Specification - *(SPEC)*
+*   [GP-AS-*-72-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-72-003-SPEC-A.md): 72-20: Electric Propulsion Thruster Specification (Hall, Ion, etc.) - *(SPEC)*
+*   [GP-AS-*-72-004-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-72-004-SPEC-A.md): 72-30: Power Processing Unit (PPU) Specification (Electric Propulsion) - *(SPEC)*
+
+### AS Chapter 72-Q01: Propulsion – Quantum Extension (Space)
+*   [GP-AS-*-72-Q01-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-72-Q01-001-OV-A.md): 72-Q01-01: Q-Thruster Module Overview (Space Application) - *(OV, SDD)*
+*   [GP-AS-*-72-Q01-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-72-Q01-002-SPEC-A.md): 72-Q01-02: Q-Thruster Module Specification (Space) - *(SPEC)*
+*   [GP-AS-*-72-Q01-003-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-72-Q01-003-SDD-A.md): 72-Q01-03: QEE/QSM Integration & Control Description (Space) - *(SDD)*
+*   [GP-AS-*-72-Q01-004-ICD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-72-Q01-004-ICD-A.md): 72-Q01-04: QEE/QSM Control Interface Document (Space) - *(ICD)*
+
+### AS Chapter 73: Propellant Management
+*   [GP-AS-*-73-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-73-001-OV-A.md): 73-01: Propellant Management System Overview - *(OV, SDD)*
+*   [GP-AS-*-73-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-73-002-SPEC-A.md): 73-10: Propellant Tank Specification (Cryo/Storable, Materials, Insulation) - *(SPEC)*
+*   [GP-AS-*-73-003-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-73-003-SDD-A.md): 73-20: Propellant Feed System Description (Lines, Valves, Pumps, Filters) - *(SDD)*
+*   [GP-AS-*-73-004-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-73-004-SPEC-A.md): 73-21: Propellant Feed System Component Specification - *(SPEC)*
+*   [GP-AS-*-73-005-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-73-005-SDD-A.md): 73-30: Propellant Gauging System Description (Level Sensors, Mass Flow) - *(SDD)*
+*   [GP-AS-*-73-006-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-73-006-SDD-A.md): 73-40: Propellant Conditioning System Description (Heaters, Chillers - If Applicable) - *(SDD)*
+*   [GP-AS-*-73-007-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-73-007-SDD-A.md): 73-50: Zero-G Propellant Management Device (PMD) Description - *(SDD)*
+
+### AS Chapter 74: Ignition Systems (Chemical Engines)
+*   [GP-AS-*-74-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-74-001-OV-A.md): 74-01: Ignition System Overview (Chemical Engines) - *(OV, SDD)*
+*   [GP-AS-*-74-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-74-002-SPEC-A.md): 74-10: Igniter Specification (Spark, Hypergolic, Laser) - *(SPEC)*
+*   [GP-AS-*-74-003-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-74-003-SDD-A.md): 74-20: Ignition Sequence Controller Description - *(SDD)* (Ref AS 76)
+
+### AS Chapter 75: Bleed Air / Gas Systems (Propulsion)
+*   [GP-AS-*-75-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-75-001-OV-A.md): 75-01: Propulsion Gas Systems Overview (Pressurization, Purge) - *(OV, SDD)* (Ref AS 14)
+*   [GP-AS-*-75-002-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-75-002-SDD-A.md): 75-10: Tank Pressurization System Description - *(SDD)*
+*   [GP-AS-*-75-003-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-75-003-SDD-A.md): 75-20: System Purge Description - *(SDD)*
+
+### AS Chapter 76: Propulsion Control Systems
+*   [GP-AS-*-76-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-76-001-OV-A.md): 76-01: Propulsion Control System Overview - *(OV, SDD)*
+*   [GP-AS-*-76-002-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-76-002-SDD-A.md): 76-10: Thruster Control Unit (TCU) Description - *(SDD)*
+*   [GP-AS-*-76-003-ICD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-76-003-ICD-A.md): 76-11: Propulsion Control Interface Document (GNC/C&DH) - *(ICD)*
+*   [GP-AS-*-76-004-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-76-004-PROC-A.md): 76-20: Propulsion System Safing & Emergency Shutdown Procedure - *(PROC)*
+
+### AS Chapter 77: Propulsion System Indicating & Monitoring
+*   [GP-AS-*-77-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-77-001-OV-A.md): 77-01: Propulsion Indicating System Overview - *(OV, SDD)*
+*   [GP-AS-*-77-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-77-002-SPEC-A.md): 77-10: Thrust/Performance Indication Specification - *(SPEC)*
+*   [GP-AS-*-77-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-77-003-SPEC-A.md): 77-20: Propulsion System Temperature Monitoring Specification - *(SPEC)*
+*   [GP-AS-*-77-004-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-77-004-SPEC-A.md): 77-30: Propulsion System Pressure Monitoring Specification - *(SPEC)*
+*   [GP-AS-*-77-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-77-005-SPEC-A.md): 77-40: Propulsion System Vibration Monitoring Specification - *(SPEC)*
+*   [GP-AS-*-77-006-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-77-006-OV-A.md): 77-50: AI-Driven Propulsion Health Monitoring Overview - *(OV)* (Ref AS 45)
+*   [GP-AS-*-77-007-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-77-007-SDD-A.md): 77-51: AI-Driven Propulsion Health Monitoring System Description - *(SDD)*
+*   [GP-AS-*-77-008-ICD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-77-008-ICD-A.md): 77-52: i-Aher0 Interface Control Document (Propulsion Health) - *(ICD)*
+
+### AS Chapter 78: Exhaust Systems / Nozzles
+*   [GP-AS-*-78-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-78-001-OV-A.md): 78-01: Exhaust Nozzle Overview - *(OV, SDD)*
+*   [GP-AS-*-78-002-DD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-78-002-DD-A.md): 78-10: Nozzle Design Document (Bell, Aerospike, etc.) - *(DD)*
+*   [GP-AS-*-78-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-78-003-SPEC-A.md): 78-11: Nozzle Material & Performance Specification - *(SPEC)*
+*   [GP-AS-*-78-004-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-78-004-SDD-A.md): 78-20: Nozzle Extension Mechanism Description (If Applicable) - *(SDD)*
+
+### AS Chapter 79: Propulsion System Lubrication
+*   [GP-AS-*-79-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-79-001-OV-A.md): 79-01: Propulsion Lubrication System Overview (Turbopumps, Gimbals) - *(OV, SDD)*
+*   [GP-AS-*-79-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-79-002-SPEC-A.md): 79-10: Lubricant Specification (Space Grade) - *(SPEC)*
+*   [GP-AS-*-79-003-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-79-003-SDD-A.md): 79-20: Lubrication Delivery System Description - *(SDD)*
+
+### AS Chapter 80: Starting Systems (Chemical Engines)
+*   [GP-AS-*-80-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-80-001-OV-A.md): 80-01: Engine Start System Overview (Chemical) - *(OV, SDD)*
+*   [GP-AS-*-80-002-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-80-002-SDD-A.md): 80-10: Start Sequence Description (Valve Timing, Ignition) - *(SDD)* (Ref AS 74, AS 76)
+*   [GP-AS-*-80-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-80-003-SPEC-A.md): 80-20: Starter Cartridge/System Specification (If Applicable) - *(SPEC)*
+
+### AS Chapter 81: Turbines (Reciprocating Engines)
+*   [GP-AS-*-81-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-81-001-OV-A.md): 81-01: Not Applicable - *(OV)*
+
+### AS Chapter 82: Water Injection
+*   [GP-AS-*-82-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-82-001-OV-A.md): 82-01: Not Applicable - *(OV)*
+
+### AS Chapter 83: Accessory Drives / Power Take-Off
+*   [GP-AS-*-83-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-83-001-OV-A.md): 83-01: Accessory Drive Overview (Turbopumps, Generators) - *(OV, SDD)*
+*   [GP-AS-*-83-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-83-002-SPEC-A.md): 83-10: Gearbox/Drive Train Specification - *(SPEC)*
+*   [GP-AS-*-83-003-DWG-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-83-003-DWG-A.md): 83-20: Accessory Drive Assembly Drawing - *(DWG)*
+
+### AS Chapter 84: Reserved for Future Use
+*   [GP-AS-*-84-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-84-001-OV-A.md): 84-01: Placeholder - *(OV)*
+
+### AS Chapter 85: Fuel Cell System (Power Generation)
+*   [GP-AS-*-85-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-85-001-OV-A.md): 85-01: Fuel Cell System Overview (Power Generation) - *(OV, SDD)* (Ref AS 24)
+*   [GP-AS-*-85-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-85-002-SPEC-A.md): 85-10: Fuel Cell Stack Specification (PEMFC, SOFC) - *(SPEC)*
+*   [GP-AS-*-85-003-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-85-003-SDD-A.md): 85-20: Reactant Storage & Supply System Description (H2, O2) - *(SDD)*
+*   [GP-AS-*-85-004-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-85-004-SDD-A.md): 85-30: Fuel Cell Power Conditioning & Control Description - *(SDD)*
+
+### AS Chapter 86-87: Reserved/Not Applicable
+*   [GP-AS-*-86-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-86-001-OV-A.md): 86-01: Reserved/Not Applicable - *(OV)*
+*   [GP-AS-*-87-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-87-001-OV-A.md): 87-01: Reserved/Not Applicable - *(OV)*
+
+### AS Chapter 88: Rendezvous, Proximity Operations & Docking (RPOD)
+*   [GP-AS-*-88-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-88-001-OV-A.md): 88-01: RPOD System Overview - *(OV, SDD)*
+*   [GP-AS-*-88-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-88-002-SPEC-A.md): 88-10: RPOD Sensor Specification (LiDAR, Cameras, RF, Thermal) - *(SPEC)*
+*   [GP-AS-*-88-003-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-88-003-SDD-A.md): 88-20: RPOD Control Algorithm Description (AI-Assisted, Autonomous) - *(SDD)*
+*   [GP-AS-*-88-004-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-88-004-SPEC-A.md): 88-30: Docking/Berthing Mechanism Specification (Androgynous, Probe-Drogue) - *(SPEC)*
+*   [GP-AS-*-88-005-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-88-005-PROC-A.md): 88-40: Docking/Undocking & Berthing/Unberthing Procedure - *(PROC)*
+*   [GP-AS-*-88-006-ICD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-88-006-ICD-A.md): 88-50: RPOD Interface Control Document (Target Vehicle) - *(ICD)*
+
+### AS Chapter 89: Reserved for Future Use
+*   [GP-AS-*-89-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-89-001-OV-A.md): 89-01: Placeholder - *(OV)*
+
+### AS Chapter 90: Reserved for Future Use
+*   [GP-AS-*-90-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-90-001-OV-A.md): 90-01: Placeholder - *(OV)*
+
+### AS Chapter 91: Mission Data & Charts
+*   [GP-AS-*-91-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-91-001-OV-A.md): 91-01: Mission Data & Charts Overview - *(OV)*
+*   [GP-AS-*-91-002-LIST-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-91-002-LIST-A.md): 91-10: Performance Data & Constraints Summary List - *(LIST, RPT)* (Ref AS 03)
+*   [GP-AS-*-91-003-LIST-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-91-003-LIST-A.md): 91-20: Spacecraft Wiring Diagram Manual Index - *(LIST, REF)*
+*   [GP-AS-*-91-004-LIST-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-91-004-LIST-A.md): 91-30: Spacecraft Plumbing Diagram Manual Index - *(LIST, REF)*
+
+### AS Chapter 92: Harnessing Installation
+*   [GP-AS-*-92-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-92-001-OV-A.md): 92-01: Harnessing Installation Overview - *(OV)*
+*   [GP-AS-*-92-002-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-92-002-PROC-A.md): 92-10: Wiring Harness Installation Procedure (Spacecraft) - *(PROC)*
+*   [GP-AS-*-92-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-92-003-SPEC-A.md): 92-11: Wiring Harness Installation Specification (Routing, Securing, Shielding) - *(SPEC)*
+*   [GP-AS-*-92-004-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-92-004-SPEC-A.md): 92-20: Connector Specification (Space Grade - D-Sub, Circular, RF) - *(SPEC)*
+*   [GP-AS-*-92-005-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-92-005-PROC-A.md): 92-21: Connector Mating/Demating & Torquing Procedure - *(PROC)*
+
+### AS Chapter 93: Reserved for Future Use
+*   [GP-AS-*-93-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-93-001-OV-A.md): 93-01: Placeholder - *(OV)*
+
+### AS Chapter 94: Reserved for Future Use
+*   [GP-AS-*-94-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-94-001-OV-A.md): 94-01: Placeholder - *(OV)*
+
+### AS Chapter 95: Special Support Equipment (Space)
+*   [GP-AS-*-95-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-95-001-OV-A.md): 95-01: Special Support Equipment Overview (Space Operations) - *(OV)*
+*   [GP-AS-*-95-002-LIST-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-95-002-LIST-A.md): 95-10: Ground Support Equipment (GSE) List (Space Specific) - *(LIST)*
+*   [GP-AS-*-95-003-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-95-003-SPEC-A.md): 95-11: GSE Specification (Test Sets, Handling Fixtures, Simulators) - *(SPEC)*
+*   [GP-AS-*-95-004-LIST-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-95-004-LIST-A.md): 95-20: On-Orbit Support Equipment List (Tools, EVA Aids) - *(LIST)*
+*   [GP-AS-*-95-005-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-95-005-SPEC-A.md): 95-21: On-Orbit Support Equipment Specification - *(SPEC)*
+
+### AS Chapter 96: Reserved for Future Use
+*   [GP-AS-*-96-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-96-001-OV-A.md): 96-01: Placeholder - *(OV)*
+
+### AS Chapter 97: Wiring Data Management
+*   [GP-AS-*-97-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-97-001-OV-A.md): 97-01: Wiring Data Management System Overview - *(OV)*
+*   [GP-AS-*-97-002-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-97-002-SPEC-A.md): 97-10: Wiring List Database Structure & Format Specification - *(SPEC)*
+*   [GP-AS-*-97-003-PROC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-97-003-PROC-A.md): 97-20: Wiring Data Update & Configuration Control Procedure - *(PROC)*
+
+### AS Chapter 98: Reserved for Future Use
+*   [GP-AS-*-98-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-98-001-OV-A.md): 98-01: Placeholder - *(OV)*
+
+### AS Chapter 99: Spacecraft Special / Emerging Tech
+*   [GP-AS-*-99-001-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-99-001-OV-A.md): 99-01: Spacecraft Special Technologies Overview - *(OV)*
+*   [GP-AS-*-99-002-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-99-002-OV-A.md): 99-10: RAME Interface & Control Overview - *(OV)* (Ref Part VI)
+*   [GP-AS-*-99-003-ICD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-99-003-ICD-A.md): 99-11: RAME Interface Control Document - *(ICD)*
+*   [GP-AS-*-99-004-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-99-004-OV-A.md): 99-20: In-Situ Resource Utilization (ISRU) Payload/System Concept Overview - *(OV)*
+*   [GP-AS-*-99-005-RPT-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-99-005-RPT-A.md): 99-21: ISRU Technology Assessment Report - *(RPT)*
+*   [GP-AS-*-99-006-OV-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-99-006-OV-A.md): 99-30: Advanced Space Habitats Technology Integration Overview - *(OV)*
+*   [GP-AS-*-99-007-SPEC-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-99-007-SPEC-A.md): 99-40: On-Board HPC/QPU System Specification (Spacecraft) - *(SPEC)* (Ref AS 31)
+*   [GP-AS-*-99-008-SDD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-99-008-SDD-A.md): 99-41: On-Board HPC/QPU System Description - *(SDD)*
+*   [GP-AS-*-99-009-ICD-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-99-009-ICD-A.md): 99-42: On-Board HPC/QPU Interface Control Document - *(ICD)*
+*   [GP-AS-*-99-010-RPT-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-99-010-RPT-A.md): 99-90: Interstellar Propulsion Concepts Research Report (Long-Term R&D) - *(RPT)*
+
+---
+
+### Appendix (Part II)
+
+*   [GP-AS-AMPELPLUS-0200-APP-A-001-GLO-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-APP-A-001-GLO-A.md): A. Glossary of Spaceframe Terms & Acronyms - *(GLO)*
+*   [GP-AS-AMPELPLUS-0200-APP-B-001-REF-A.md](./GP-AS/GP-AS-AMPELPLUS-0200-APP-B-001-REF-A.md): B. Referenced COAFI Documents (Spaceframe) - *(REF, LIST)*
+
+---
+
+**[Link to Part III Detailed ToC](./GP-COM/ToC-GP-COM.md)**
+
+---
+
+## Part III: GP-COMMON · Core Operating Matrix 💻🔗🔒
+
+*Scope:* **Shared Digital Infrastructure** — AI Core (*i‑Aher0*), Quantum Orchestration (*QAO*), Cyber‑security, Blockchain (*BITT*), AMPEL Core Systems and Networks.
+*Filename pattern*: `GP‑COM-[SubDomainCode]-[SeqCode]-[ChapterCode]-[SubjectCode]-[InfoCode]-[Rev].[ext]`
+
+### 1 · Sub‑Domain Legend
+| Code | Icon | Badge Color | Element Title                    | Short Description                              |
+| :--- | :--: | :----------: | :------------------------------- | :--------------------------------------------- |
+| **AI** | 🧠 | fuchsia    | GAIA AI Core (*i‑Aher0*)         | Federated learning engine, core models, public APIs |
+| **QAO**| ⚛️ | cyan       | Quantum-Augmented Orchestration  | Optimisation algorithms, QPU gateways, interfaces |
+| **SEC**| 🔒 | red        | Cyber-security Framework         | Policy set, QKD mesh, AI-IDPS, playbooks       |
+| **BC** | 🔗 | amber      | Blockchain Infrastructure (BITT) | Permissioned ledger, consensus, smart-contracts |
+| **BITT**| 📊 | yellow     | BITT Application Layer           | Immutable logging, traceability micro-services |
+| **AMPELCORE**| 🧪 | lime       | AMPEL Core Systems               | Materials DB, AI-SHM logic, DTO backbone       |
+| **NET**| 🌐 | sky        | Common Network Infrastructure    | Physical/logical stack, QoS & routing policies   |
+
+### 2 · Sub‑Domain ➜ InfoCode Matrix
+*(quick cheat‑sheet on which document types you’ll usually find under each sub‑domain)*
+
+| Code        | IDX root               | Arch/OV      | Req/Policy   | Interfaces/Data   | Ops/Procedures |
+| :---------- | :--------------------- | :----------- | :----------- | :---------------- | :------------- |
+| **AI**      | `AI‑01‑000‑IDX`        | `OV`, `SDD`  | `SPEC`, `PLAN` | `ICD`, `LIST`, `REF` | `PROC`, `TEST` |
+| **QAO**     | `QAO‑02‑000‑IDX`       | `OV`, `SDD`  | `SPEC`, `REQ`  | `ICD`, `REF`       | `PROC`, `CAL`  |
+| **SEC**     | `SEC‑03‑000‑IDX`       | `OV`, `SDD`  | `PLAN`, `REQ`  | `ICD`, `SPEC`      | `PROC`, `TEST` |
+| **BC**      | `BC‑04‑000‑IDX`        | `OV`, `SDD`  | `SPEC`, `PLAN` | `ICD`, `RPT`       | `PROC`, `TEST` |
+| **BITT**    | `BITT‑05‑000‑IDX`      | `OV`, `SDD`  | `SPEC`, `REQ`  | `ICD`, `LIST`      | `PROC`, `RPT`  |
+| **AMPELCORE**| `AMPELCORE‑06‑000‑IDX` | `OV`, `SDD`  | `SPEC`, `PLAN` | `ICD`, `JSON`      | `PROC`, `CAL`  |
+| **NET**     | `NET‑07‑000‑IDX`       | `OV`, `SDD`  | `SPEC`, `REQ`  | `ICD`, `FIG`       | `PROC`, `TEST` |
+
+### 3 · One‑Glance Chapter Index
+| Section    | Sub‑Domain | Icon | Element Title                    | Scope / Key Technologies                         | Color   | Link to Details                      |
+| :--------- | :--------- | :--: | :------------------------------- | :----------------------------------------------- | :-----: | :--------------------------------------- |
+| **COM.01** | AI         | 🧠   | GAIA AI Core (*i‑Aher0*)         | Federated learning, core models, APIs            | fuchsia | [Details](./GP-COM/ToC-GP-COM.md#com01-gaia-ai-core-i-aher0) |
+| **COM.02** | QAO        | ⚛️   | Quantum-Augmented Orchestration  | Optimisation algos, QPU access, interfaces     | cyan    | [Details](./GP-COM/ToC-GP-COM.md#com02-quantum-augmented-orchestration-qao) |
+| **COM.03** | SEC        | 🔒   | Cyber-security Framework         | Policy, QKD network, AI-IDPS, incident response  | red     | [Details](./GP-COM/ToC-GP-COM.md#com03-cybersecurity-framework) |
+| **COM.04** | BC         | 🔗   | Blockchain Infrastructure (BITT) | Ledger design, consensus, smart contracts, nodes | amber   | [Details](./GP-COM/ToC-GP-COM.md#com04-blockchain-infrastructure-bitt) |
+| **COM.05** | BITT       | 📊   | BITT Application Layer           | Immutable logging, traceability, provenance      | yellow  | [Details](./GP-COM/ToC-GP-COM.md#com05-bitt-application-layer) |
+| **COM.06** | AMPELCORE  | 🧪   | AMPEL Core Systems               | Materials DB, AI-SHM logic, DTO platform         | lime    | [Details](./GP-COM/ToC-GP-COM.md#com06-ampel-core-systems) |
+| **COM.07** | NET        | 🌐   | Common Network Infrastructure    | Architecture, protocols, QoS, routing            | sky     | [Details](./GP-COM/ToC-GP-COM.md#com07-common-network-infrastructure) |
+
 
 ## Introduction
 
@@ -4129,54 +3915,573 @@ GP-RAME-[Chapter]-[Specialization]-[Subject]-[InfoCode]-[Revision].[ext]
     *   [GP-RAME-91-MOD-002-SIM-A.md](./91-RBT/MODELS/GP-RAME-91-MOD-002-SIM-A.md): 91-102: Simulation frameworks - *(SIM)*
 </details>
 
----
-
-*(Appendices for Part 6 follow the standard structure)*
-
----
 
 *(End of ToC-GP-RAME.md)*
----
-
-#### **Justification for separate ROR ID**
-Capgemini Spain:
-- Operates as a legal and fiscal entity distinct from the parent company
-- Leads engineering and scientific research initiatives with Spanish and EU institutions
-- Has identifiable staff contributing to ORCID-registered publications and replicable projects
-- Requires clear attribution in systems like GAIA AIR, Zenodo, ORCID, DataCite, and national R&D repositories
-
-A separate ROR ID would ensure proper affiliation tracking, reproducibility auditing, and funding traceability.
 
 ---
 
-#### **Additional supporting links**
-- ORCID: Amedeo Pelliccia – Capgemini Spain
-- Capgemini Spain – Engineering & Innovation
-- GAIA AIR Engineering Contributor Node
-- Capgemini España S.L. – Legal Info
+# GP‑ADR · **Aerial Drones** — Part VII Master Table of Contents  
+*(Draft generated 2025‑04‑21 — pending authority review & certification)*
+
+## Filename convention
+`GP‑ADR-[PlatformCode]-[SeqCode]-[ADRChapterCode]-[SubjectCode]-[InfoCode]-[Rev].[ext]`
+
+| Field | Meaning | Example |
+|-------|---------|---------|
+| **GP‑ADR** | Domain code (Aerial Drones) | GP‑ADR |
+| **[PlatformCode]** | Vehicle family (e.g. *ADR‑VTOL‑025*) | ADR‑VTOL‑025 |
+| **[SeqCode]** | Sequential identifier in context | 001 |
+| **[ADRChapterCode]** | Two‑digit chapter (see index below) | 24 |
+| **[SubjectCode]** | Sub‑topic / component ID | 015 |
+| **[InfoCode]** | COAFI document type (OV, SDD, ICD …) | SDD |
+| **[Rev]** | Revision (A, B, 01…) | A |
+| **[ext]** | File extension (.md, .json, .pdf …) | md |
 
 ---
-            `;
 
-            const { data: issue } = await github.issues.create({
-              owner: 'ROR',
-              repo: 'ROR',
-              title: issueTitle,
-              body: issueBody,
-            });
+## Sub‑Domain Legend
+| Code | Icon | Badge | Element Title | Short description |
+|------|:---:|:-----:|---------------|-------------------|
+| **PLT** | 🚁 | indigo | Drone Platforms | VTOL, fixed‑wing, tilt‑rotor, hybrid airframes |
+| **AUT** | 🤖 | purple | Autonomy & Control | Autopilot, guidance, path‑planning, AI stack |
+| **LINK**| 📡 | sky | Communications & Datalink | RF, 4G/5G, SAT‑COM, mesh networks |
+| **PAY** | 📷 | orange | Payload Systems | EO/IR cameras, LiDAR, sprayers, delivery pods |
+| **GCS** | 🖥️ | teal | Ground Control Stations | Operator UI, antennas, datacentres |
+| **SWM** | 🐝 | yellow | Swarm Coordination | Multi‑UAV co‑op, dynamic tasking |
+| **SEC** | 🔒 | red | Security & Compliance | Cyber‑security, regulatory, C2 encryption |
+| **LOGI**| 📦 | brown | Logistics & Support | Battery swapping, field tooling, spares |
 
-            core.info(`Created issue: ${issue.html_url}`);
+### Sub‑Domain ➜ InfoCode Matrix (cheat‑sheet)
+| Code | IDX root | Arch / OV | Req/Policy | Interfaces/Data | Ops/Procedures |
+|------|----------|-----------|------------|-----------------|---------------|
+| **PLT** | `PLT‑01‑000‑IDX` | OV, DD | SPEC | ICD, DWG | PROC, TEST |
+| **AUT** | `AUT‑02‑000‑IDX` | OV, SDD | SPEC, REQ | ICD, CAL | PROC, TEST |
+| **LINK**| `LINK‑03‑000‑IDX`| OV, SDD | SPEC | ICD, FIG | PROC, TEST |
+| **PAY** | `PAY‑04‑000‑IDX` | OV | SPEC | ICD | PROC |
+| **GCS** | `GCS‑05‑000‑IDX` | OV, SDD | PLAN, SPEC | ICD, FIG | PROC, TEST |
+| **SWM** | `SWM‑06‑000‑IDX` | OV, SDD | SPEC, CAL | ICD | PROC |
+| **SEC** | `SEC‑07‑000‑IDX` | OV, SDD | PLAN, REQ | ICD, SPEC | PROC, TEST |
+| **LOGI**| `LOGI‑08‑000‑IDX`| OV | PLAN, LIST | REF | PROC |
+
+---
+
+## One‑Glance Chapter Index (ADR)
+| AD Ch | Title | Canonical IDX file | Scope / Highlight |
+|:----:|-------------------------------|-------------------------------------|-----------------------------------------------|
+| **00** | Intro & General | `GP‑ADR‑*‑00‑000‑IDX‑A.md` | Vision, scope, naming, compliance, references |
+| **01** | Platform General | `GP‑ADR‑*‑01‑000‑IDX‑A.md` | Vehicle specs, configurations, weights |
+| **02** | Operations Information | `GP‑ADR‑*‑02‑000‑IDX‑A.md` | Flight ops, mission roles, SOP index |
+| **03** | Performance | `GP‑ADR‑*‑03‑000‑IDX‑A.md` | Endurance, range, ceiling, payload curves |
+| **04** | Airworthiness / Certification | `GP‑ADR‑*‑04‑000‑IDX‑A.md` | EASA SC‑UAS, FAA Part 107 / 135, SORA |
+| **05** | Maintenance & Inspection | `GP‑ADR‑*‑05‑000‑IDX‑A.md` | Scheduled tasks, battery health, overhauls |
+| **06** | Dimensions & Areas | `GP‑ADR‑*‑06‑000‑IDX‑A.md` | Span, rotors, envelope, folded geometry |
+| **07** | Launch / Recovery & Ground Ops | `GP‑ADR‑*‑07‑000‑IDX‑A.md` | VTOL pads, catapults, nets, arresting gear |
+| **08** | Weight & Balance | `GP‑ADR‑*‑08‑000‑IDX‑A.md` | CG limits, payload mounting matrices |
+| **09** | Packaging & Transport | `GP‑ADR‑*‑09‑000‑IDX‑A.md` | Cases, UN3480 battery regs, shipping SOP |
+| **10** | Storage & Preservation | `GP‑ADR‑*‑10‑000‑IDX‑A.md` | Hangar, field kit, temp/humidity limits |
+| **11** | Markings & Lighting | `GP‑ADR‑*‑11‑000‑IDX‑A.md` | Registration, conspicuity, anti‑collision LEDs |
+| **12** | Servicing – Routine | `GP‑ADR‑*‑12‑000‑IDX‑A.md` | Battery swap, firmware update, cleaning |
+| **20** | Electrical & Power | `GP‑ADR‑*‑20‑000‑IDX‑A.md` | HV systems, power buses, EMC practices |
+| **21** | Propulsion (Motor / ESC) | `GP‑ADR‑*‑21‑000‑IDX‑A.md` | Motor specs, ESC tuning, cooling |
+| **22** | Autopilot & Flight Control | `GP‑ADR‑*‑22‑000‑IDX‑A.md` | PX‑based stack, FBW, PID/MPC, redundancy |
+| **23** | Communications / Datalink | `GP‑ADR‑*‑23‑000‑IDX‑A.md` | C2 bands, LTE/5G, sat‑back‑haul, QKD hooks |
+| **24** | Battery / Energy Storage | `GP‑ADR‑*‑24‑000‑IDX‑A.md` | Li‑ion/NiMH, fuel‑cell hybrid, SOC modelling |
+| **25** | Payload Systems | `GP‑ADR‑*‑25‑000‑IDX‑A.md` | EO/IR gimbals, sprayers, delivery winches |
+| **26** | Detect‑&‑Avoid Sensors | `GP‑ADR‑*‑26‑000‑IDX‑A.md` | ADS‑B In, radar, optical flow, AI vision |
+| **27** | Swarm Coordination | `GP‑ADR‑*‑27‑000‑IDX‑A.md` | Multi‑UAV mesh, consensus, slot‑based FMS |
+| **30** | AI & Autonomy Core | `GP‑ADR‑*‑30‑000‑IDX‑A.md` | Reinforcement learning agents, XAI tags |
+| **40** | Cyber‑security & OTA | `GP‑ADR‑*‑40‑000‑IDX‑A.md` | Firmware signing, zero‑trust PKI, IDS/IPS |
+| **50** | Ground Control Systems | `GP‑ADR‑*‑50‑000‑IDX‑A.md` | Operator UI, cloud relay, BVLOS approvals |
+| **60** | Standard Practices – UAS | `GP‑ADR‑*‑60‑000‑IDX‑A.md` | Wiring, conformal coating, vibration tests |
+| **91** | Charts & Schematics | `GP‑ADR‑*‑91‑000‑IDX‑A.md` | Master wiring & hydraulic (if any) lists |
+| **99** | Special / Emerging Tech | `GP‑ADR‑*‑99‑000‑IDX‑A.md` | Hydrogen VTOL, quantum nav, bio‑inspired wings |
+
+> *Canon*: each “IDX” is the root for its chapter; bullets beneath (to be added as the library grows) link to OV, SDD, SPEC, ICD, PROC, etc.
+
+---
+
+### Immediate gaps / to‑dos
+* Populate **IDX** stubs (`00‑000`, `01‑000`, …) so writers can hang documents under each chapter.
+* Decide whether to reuse **ATA‑100** numbering fully or keep this trimmed ADR set (above).  
+  *If you prefer full ATA, swap AD20‑25 with ATA‑24/28/33, etc.*
+* Add a **COMPLIANCE MAP** tying Chapter 04 to specific authority regs (EASA, FAA, ICAO Remote ID).
+* Kick‑off a **schematic list generator** for AD91 once first DWG/FIG wrappers exist.
+
+---
+
+*End of draft v0.1 – ready for edits, expansions, or style tweaks.*
+
+
+# GP‑FF‑CITY · **Flying City Cars** — Part VIII Master Table of Contents  
+*(Draft generated 2025‑04‑21 — pending authority review & certification)*
+
+---
+
+## Filename convention
+`GP‑FF‑CITY-[PlatformCode]-[SeqCode]-[FFCChapterCode]-[SubjectCode]-[InfoCode]-[Rev].[ext]`
+
+| Field | Meaning | Example |
+|-------|---------|---------|
+| **GP‑FF‑CITY** | Domain code (Flying City Cars) | GP‑FF‑CITY |
+| **[PlatformCode]** | Vehicle family (e.g. *FFC‑eVTOL‑040*) | FFC‑eVTOL‑040 |
+| **[SeqCode]** | Sequential identifier in context | 001 |
+| **[FFCChapterCode]** | Two‑digit chapter (see index below) | 24 |
+| **[SubjectCode]** | Sub‑topic / component ID | 015 |
+| **[InfoCode]** | COAFI document type (OV, SDD, ICD …) | SDD |
+| **[Rev]** | Revision (A, B, 01…) | A |
+| **[ext]** | File extension (.md, .json, .pdf …) | md |
+
+---
+
+## Sub‑Domain Legend
+| Code | Icon | Badge | Element Title | Short description |
+|------|:---:|:-----:|---------------|-------------------|
+| **PLT** | 🚖 | magenta | UAM Platforms | eVTOL, lift‑plus‑cruise, tilt‑rotor cars |
+| **AUT** | 🤖 | purple | Autonomy & Flight Control | Autopilot, sense‑&‑avoid, AI stack |
+| **PROP**| ⚡ | yellow | Propulsion & Power | Electric rotors, hybrid gensets, batteries |
+| **CAB** | 🛋️ | green | Passenger Cabin Systems | Seating, HMI, ECS, infotainment |
+| **LINK**| 📡 | sky | Comms & Datalink | 5G/6G, C‑Band, sat relay, mesh |
+| **UTM** | 🗺️ | teal | Urban Traffic Mgmt | U‑space corridors, digital twin, ADS‑B In |
+| **SEC** | 🔒 | red | Safety & Security | Certification, cybersecurity, remote ID |
+| **INFRA**| 🏢 | orange | Vertiport Infrastructure | Pads, chargers, passenger flow |
+| **LOGI**| 📦 | brown | Logistics & MRO | Battery swap, spares, field support |
+
+### Sub‑Domain ➜ InfoCode Matrix (cheat‑sheet)
+| Code | IDX root | Arch / OV | Req / Policy | Interfaces / Data | Ops / Procedures |
+|------|----------|-----------|--------------|-------------------|-----------------|
+| **PLT** | `PLT‑01‑000‑IDX` | OV, DD | SPEC | ICD, DWG | PROC, TEST |
+| **AUT** | `AUT‑02‑000‑IDX` | OV, SDD | SPEC, REQ | ICD, CAL | PROC, TEST |
+| **PROP**| `PROP‑03‑000‑IDX`| OV, SDD | SPEC | ICD, FIG | PROC, TEST |
+| **CAB** | `CAB‑04‑000‑IDX` | OV, SDD | SPEC | ICD | PROC |
+| **LINK**| `LINK‑05‑000‑IDX`| OV, SDD | SPEC | ICD, FIG | PROC, TEST |
+| **UTM** | `UTM‑06‑000‑IDX` | OV, SDD | SPEC, PLAN | ICD, LIST | PROC |
+| **SEC** | `SEC‑07‑000‑IDX` | OV, SDD | PLAN, REQ | ICD, SPEC | PROC, TEST |
+| **INFRA**| `INFRA‑08‑000‑IDX`| OV | PLAN, SPEC | FIG, REF | PROC |
+| **LOGI**| `LOGI‑09‑000‑IDX` | OV | PLAN, LIST | REF | PROC |
+
+---
+
+## One‑Glance Chapter Index (FFC)
+| FFC Ch | Title | Canonical IDX file | Scope / Highlight |
+|:----:|------------------------------|--------------------------------------|-----------------------------------------------|
+| **00** | Intro & General | `GP‑FF‑CITY‑*‑00‑000‑IDX‑A.md` | Vision, market, naming, compliance refs |
+| **01** | Platform General | `GP‑FF‑CITY‑*‑01‑000‑IDX‑A.md` | Configs, weights, loading diagrams |
+| **02** | Operations Information | `GP‑FF‑CITY‑*‑02‑000‑IDX‑A.md` | Flight ops, BVLOS, passenger ops guides |
+| **03** | Performance | `GP‑FF‑CITY‑*‑03‑000‑IDX‑A.md` | Range, endurance, cruise speed, noise |
+| **04** | Airworthiness / Certification | `GP‑FF‑CITY‑*‑04‑000‑IDX‑A.md` | EASA SC‑VTOL, FAA ARAM, ASTM F38 |
+| **05** | Maintenance & Inspection | `GP‑FF‑CITY‑*‑05‑000‑IDX‑A.md` | Battery health, rotor overhaul, schedules |
+| **06** | Dimensions & Areas | `GP‑FF‑CITY‑*‑06‑000‑IDX‑A.md` | Span, folded footprint, cabin envelope |
+| **07** | Ground Handling & Vertiport Ops | `GP‑FF‑CITY‑*‑07‑000‑IDX‑A.md` | Tug, dolly, lift & dock, turn‑around |
+| **08** | Weight & Balance | `GP‑FF‑CITY‑*‑08‑000‑IDX‑A.md` | CG limits, passenger luggage matrices |
+| **09** | Passenger Cabin | `GP‑FF‑CITY‑*‑09‑000‑IDX‑A.md` | Seats, restraints, infotainment |
+| **10** | Storage & Charging | `GP‑FF‑CITY‑*‑10‑000‑IDX‑A.md` | HV battery charging, cold soak limits |
+| **11** | Markings & Lighting | `GP‑FF‑CITY‑*‑11‑000‑IDX‑A.md` | Registration, conspicuity, cabin LEDs |
+| **12** | Servicing – Routine | `GP‑FF‑CITY‑*‑12‑000‑IDX‑A.md` | Battery swap, software update, cleaning |
+| **20** | Electrical & HV Power | `GP‑FF‑CITY‑*‑20‑000‑IDX‑A.md` | 800 V buses, isolation monitoring |
+| **21** | Propulsion (Motors / ESC) | `GP‑FF‑CITY‑*‑21‑000‑IDX‑A.md` | Motor specs, ESC cooling, redundancy |
+| **22** | Flight Control / Autopilot | `GP‑FF‑CITY‑*‑22‑000‑IDX‑A.md` | FBW, envelope protection, AI co‑pilot |
+| **23** | Communications / Datalink | `GP‑FF‑CITY‑*‑23‑000‑IDX‑A.md` | 5G SA, Sat‑IO, QKD hooks |
+| **24** | Battery / Energy Storage | `GP‑FF‑CITY‑*‑24‑000‑IDX‑A.md` | Li‑ion, solid‑state, hydrogen FC hybrid |
+| **25** | Cabin Systems | `GP‑FF‑CITY‑*‑25‑000‑IDX‑A.md` | Climate, noise cancel, UI displays |
+| **26** | Detect‑&‑Avoid Sensors | `GP‑FF‑CITY‑*‑26‑000‑IDX‑A.md` | Radar, optical, LiDAR fusion |
+| **27** | Urban Traffic Mgmt Integration | `GP‑FF‑CITY‑*‑27‑000‑IDX‑A.md` | U‑space, NASA UTM, slot mgmt |
+| **30** | AI & Autonomy Core | `GP‑FF‑CITY‑*‑30‑000‑IDX‑A.md` | RL agents, XAI, contingency handling |
+| **40** | Cyber‑security & OTA | `GP‑FF‑CITY‑*‑40‑000‑IDX‑A.md` | Firmware signing, SBOM, zero‑trust |
+| **50** | Vertiport & GCS Systems | `GP‑FF‑CITY‑*‑50‑000‑IDX‑A.md` | Passenger flow, booking, charging control |
+| **60** | Standard Practices – UAM | `GP‑FF‑CITY‑*‑60‑000‑IDX‑A.md` | Wiring, vibration, e‑drive tests |
+| **91** | Charts & Schematics | `GP‑FF‑CITY‑*‑91‑000‑IDX‑A.md` | Master wiring, HV harness lists |
+| **99** | Special / Emerging Tech | `GP‑FF‑CITY‑*‑99‑000‑IDX‑A.md` | eVTOL hydrogen, quantum nav, EVTDR |
+
+> *Canon*: each “IDX” is the root for its chapter; bullets beneath (to be added) point to OV, SDD, SPEC, ICD, PROC, etc.
+
+---
+
+### Immediate gaps / to‑dos
+* Spin up **IDX** stubs (`00‑000`, `01‑000`, …) to anchor incoming docs.
+* Build a **NOISE MAP** linking Chapter 03 performance to urban noise regulations (EASA SC‑VTOL Chapter E, FAA Part 36).
+* Draft a **VERTIPORT INTERFACE MAP** (Chapter 07 ↔ Part IV GP‑GRO) for power, data, passenger handling.
+* Set up **charts‑list generator** for FFC‑91 after first DWG/FIG wrappers commit.
+
+---
+
+*End of draft v0.1 – ready for edits, expansions, or stylistic tweaks.*
+
+
+
+# GP‑SPACE‑SAPR · **Space Satellites & Probes** — Part IX Master Table of Contents  
+*(Draft generated 2025‑04‑21 — pending authority review & certification)*
+
+---
+
+## Filename convention
+`GP‑SPACE‑SAPR-[PlatformCode]-[SeqCode]-[SAPRChapterCode]-[SubjectCode]-[InfoCode]-[Rev].[ext]`
+
+| Field | Meaning | Example |
+|-------|---------|---------|
+| **GP‑SPACE‑SAPR** | Domain code (Satellites & Probes) | GP‑SPACE‑SAPR |
+| **[PlatformCode]** | Vehicle family / constellation (e.g. *SAPR‑LEO‑COMMS‑050*) | SAPR‑LEO‑COMMS‑050 |
+| **[SeqCode]** | Sequential identifier within platform context | 002 |
+| **[SAPRChapterCode]** | Two‑digit chapter (see index below) | 24 |
+| **[SubjectCode]** | Sub‑topic / component ID | 110 |
+| **[InfoCode]** | COAFI document type (OV, SDD, ICD …) | SDD |
+| **[Rev]** | Revision (A, B, 01 …) | A |
+| **[ext]** | File extension (.md, .json, .pdf …) | md |
+
+---
+
+## Sub‑Domain Legend
+| Code | Icon | Badge | Element Title | Short description |
+|------|:---:|:-----:|---------------|-------------------|
+| **BUS** | 🛰️ | gray | Spacecraft Bus | Structure, thermal, harness, ADCS base |
+| **PAY** | 🔬 | violet | Payload Instruments | Optics, radar, science sensors |
+| **COMM**| 📡 | sky | Communications & TT&C | X‑/Ka‑band, optical, ranging |
+| **PROP**| 🚀 | yellow | Propulsion & ΔV | Chemical, electric, cold‑gas, quantum |
+| **GNC** | 🎯 | teal | Guidance & Control | ADCS, nav sensors, autonomy algos |
+| **POWER**| ⚡ | orange | Electrical Power Subsystem | Solar array, battery, PCDU |
+| **THERM**| 🌡️ | brown | Thermal Control | Radiators, MLI, heaters, cryo |
+| **STRUC**| 🏗️ | silver | Structures & Mechanisms | Panels, booms, deployables |
+| **GDS** | 🖥️ | green | Ground Data System | MOC, flight software tools |
+| **MISSION**| 📅 | lime | Mission Ops & Planning | ConOps, timelines, procedures |
+| **SEC** | 🔒 | red | Security & Reliability | Cyber, FDIR, radiation hardening |
+| **INFRA**| 🚚 | indigo | Launch & Ops Infrastructure | Integration, transport, launch pad |
+| **LOGI**| 📦 | amber | Logistics & MRO | Spares, return, refurbishment |
+
+### Sub‑Domain ➜ InfoCode Matrix (cheat‑sheet)
+| Code | IDX root | Arch / OV | Req / Policy | Interfaces / Data | Ops / Procedures |
+|------|----------|----------|--------------|-------------------|-----------------|
+| **BUS** | `BUS‑01‑000‑IDX` | OV, DD | SPEC | ICD, DWG | PROC, TEST |
+| **PAY** | `PAY‑02‑000‑IDX` | OV, SDD | SPEC, REQ | ICD, CAL | PROC, TEST |
+| **COMM**| `COMM‑03‑000‑IDX`| OV, SDD | SPEC | ICD, FIG | PROC, TEST |
+| **PROP**| `PROP‑04‑000‑IDX`| OV, SDD | SPEC | ICD, CAL | PROC, TEST |
+| **GNC** | `GNC‑05‑000‑IDX` | OV, SDD | SPEC, REQ | ICD, CAL | PROC, TEST |
+| **POWER**| `POWER‑06‑000‑IDX`| OV, SDD | SPEC | ICD, FIG | PROC |
+| **THERM**| `THERM‑07‑000‑IDX`| OV, SDD | SPEC | FIG | PROC |
+| **STRUC**| `STRUC‑08‑000‑IDX`| OV, DD | SPEC | DWG | PROC |
+| **GDS** | `GDS‑09‑000‑IDX` | OV, SDD | PLAN, REQ | JSON, ICD | PROC |
+| **MISSION**| `MISSION‑10‑000‑IDX`| OV, PLAN | REQ | REF | PROC |
+| **SEC** | `SEC‑11‑000‑IDX` | OV, SDD | PLAN, REQ | ICD, SPEC | PROC, TEST |
+| **INFRA**| `INFRA‑12‑000‑IDX`| OV | PLAN, SPEC | REF, FIG | PROC |
+| **LOGI**| `LOGI‑13‑000‑IDX` | OV | PLAN, LIST | REF | PROC |
+
+---
+
+## One‑Glance Chapter Index (SAPR)
+| SAPR Ch | Title | Canonical IDX file | Scope / Highlight |
+|:----:|--------------------------------|------------------------------------------|---------------------------------------------------------|
+| **00** | Intro & General | `GP‑SPACE‑SAPR‑*‑00‑000‑IDX‑A.md` | Vision, mission classes, standards map (ECSS ‑ NASA) |
+| **01** | Spacecraft Bus General | `GP‑SPACE‑SAPR‑*‑01‑000‑IDX‑A.md` | Mass, power, data budgets, configuration |
+| **02** | Mission Ops Information | `GP‑SPACE‑SAPR‑*‑02‑000‑IDX‑A.md` | Pre‑launch, in‑orbit, cruise, EOM procedures |
+| **03** | Mission Performance | `GP‑SPACE‑SAPR‑*‑03‑000‑IDX‑A.md` | ΔV budget, pointing accuracy, data rates |
+| **04** | Safety & Reliability | `GP‑SPACE‑SAPR‑*‑04‑000‑IDX‑A.md` | FMEA/FMECA, radiation, MMOD, AI‑FDIR |
+| **05** | Maintenance & Servicing | `GP‑SPACE‑SAPR‑*‑05‑000‑IDX‑A.md` | On‑orbit servicing, refuel, RPO concepts |
+| **06** | Dimensions & Coord Systems | `GP‑SPACE‑SAPR‑*‑06‑000‑IDX‑A.md` | Envelope, coordinate frames, deck numbering |
+| **07** | Handling & Transportation | `GP‑SPACE‑SAPR‑*‑07‑000‑IDX‑A.md` | Container, vibration limits, crane points |
+| **08** | Mass Properties & Balance | `GP‑SPACE‑SAPR‑*‑08‑000‑IDX‑A.md` | CoG evolution, inertia tensors, spin balance |
+| **09** | Payload Instruments | `GP‑SPACE‑SAPR‑*‑09‑000‑IDX‑A.md` | Cameras, spectrometers, SAR, deployables |
+| **10** | Storage & Preservation | `GP‑SPACE‑SAPR‑*‑10‑000‑IDX‑A.md` | Clean‑room, bake‑out, prop‑safe modes |
+| **11** | Markings & Identification | `GP‑SPACE‑SAPR‑*‑11‑000‑IDX‑A.md` | GN ID, laser retro‑reflector, QR plates |
+| **12** | Servicing – Routine | `GP‑SPACE‑SAPR‑*‑12‑000‑IDX‑A.md` | Ground recharge, SW patch, desaturation |
+| **13** | Propellant Systems | `GP‑SPACE‑SAPR‑*‑13‑000‑IDX‑A.md` | Tanks, lines, pressurization, PMDs |
+| **14** | Pressurized Gas Systems | `GP‑SPACE‑SAPR‑*‑14‑000‑IDX‑A.md` | Helium, xenon, purge & vent |
+| **18** | Vib & Acoustic Environment | `GP‑SPACE‑SAPR‑*‑18‑000‑IDX‑A.md` | Launch & on‑orbit environment spec |
+| **20** | Standard Practices – Structure | `GP‑SPACE‑SAPR‑*‑20‑000‑IDX‑A.md` | Fasteners, bonding, NDI, CFRP repair |
+| **21** | Thermal Control | `GP‑SPACE‑SAPR‑*‑21‑000‑IDX‑A.md` | Passive & active, cryo loops, heaters |
+| **22** | Guidance & Control | `GP‑SPACE‑SAPR‑*‑22‑000‑IDX‑A.md` | Star tracker, RWA, gyro, autonomy laws |
+| **23** | Comms & TT&C | `GP‑SPACE‑SAPR‑*‑23‑000‑IDX‑A.md` | X/Ka/Laser, ranging, cross‑link |
+| **24** | Electrical Power | `GP‑SPACE‑SAPR‑*‑24‑000‑IDX‑A.md` | Solar array, PCDU, battery EOL models |
+| **25** | Command & Data Handling | `GP‑SPACE‑SAPR‑*‑25‑000‑IDX‑A.md` | OBC, mass memory, FSW, packet TM/TC |
+| **26** | Hazard Detection & Safety | `GP‑SPACE‑SAPR‑*‑26‑000‑IDX‑A.md` | Radiation, debris, thermal runaway |
+| **27** | Autonomous Ops & AI | `GP‑SPACE‑SAPR‑*‑27‑000‑IDX‑A.md` | RL planners, XAI dashboards, DTO links |
+| **30** | Science Data Pipeline | `GP‑SPACE‑SAPR‑*‑30‑000‑IDX‑A.md` | Compression, calibration, L1→L4 chain |
+| **40** | Cyber‑security & QKD | `GP‑SPACE‑SAPR‑*‑40‑000‑IDX‑A.md` | Post‑quantum crypto, QKD space‑ground |
+| **50** | Ground Data System | `GP‑SPACE‑SAPR‑*‑50‑000‑IDX‑A.md` | MOC, DSN, scheduler, dashboards |
+| **60** | Standard Practices – Propulsion | `GP‑SPACE‑SAPR‑*‑60‑000‑IDX‑A.md` | Acceptance, hot‑fire, leak check |
+| **91** | Charts & Schematics | `GP‑SPACE‑SAPR‑*‑91‑000‑IDX‑A.md` | Harness, thermal maps, control‑law flow |
+| **99** | Special / Emerging Tech | `GP‑SPACE‑SAPR‑*‑99‑000‑IDX‑A.md` | ISRU, quantum sensors, swarm federation |
+
+> *Canon*: every “IDX” anchors its chapter; bullet examples (to add) will link to OV, SDD, SPEC, ICD, PROC, etc.
+
+---
+
+### Immediate gaps / to‑dos
+1. Generate **IDX** stubs (`00‑000`…`99‑000`) for first commits.
+2. Draft **LAUNCH ENVIRONMENT SPEC** (Ch 18) aligned with latest ESA ECSS‑Q‑ST‑20‑07C Rev.2.
+3. Outline **SCIENCE DATA CYCLE** diagram (Ch 30 ↔ Part III GP‑COM) mapping level products.
+4. Create **ON‑ORBIT SERVICING INTERFACE MAP** (Ch 05 ↔ Part VI GP‑RAME) for refuel & upgrade.
+
+---
+
+*End of draft v0.1 — ready for edits, expansions, or mission‑specific tailoring.*
+
+
+
+# GP‑SPACE‑SAPR · **Space Satellites & Probes** — Part IX Master Table of Contents  
+*(Draft generated 2025‑04‑21 — pending authority review & certification)*
+
+---
+
+## Filename convention
+`GP‑SPACE‑SAPR-[PlatformCode]-[SeqCode]-[SAPRChapterCode]-[SubjectCode]-[InfoCode]-[Rev].[ext]`
+
+| Field | Meaning | Example |
+|-------|---------|---------|
+| **GP‑SPACE‑SAPR** | Domain code (Satellites & Probes) | GP‑SPACE‑SAPR |
+| **[PlatformCode]** | Vehicle family / constellation (e.g. *SAPR‑LEO‑COMMS‑050*) | SAPR‑LEO‑COMMS‑050 |
+| **[SeqCode]** | Sequential identifier within platform context | 002 |
+| **[SAPRChapterCode]** | Two‑digit chapter (see index below) | 24 |
+| **[SubjectCode]** | Sub‑topic / component ID | 110 |
+| **[InfoCode]** | COAFI document type (OV, SDD, ICD …) | SDD |
+| **[Rev]** | Revision (A, B, 01 …) | A |
+| **[ext]** | File extension (.md, .json, .pdf …) | md |
+
+---
+
+## Sub‑Domain Legend
+| Code | Icon | Badge | Element Title | Short description |
+|------|:---:|:-----:|---------------|-------------------|
+| **BUS** | 🛰️ | gray | Spacecraft Bus | Structure, thermal, harness, ADCS base |
+| **PAY** | 🔬 | violet | Payload Instruments | Optics, radar, science sensors |
+| **COMM**| 📡 | sky | Communications & TT&C | X‑/Ka‑band, optical, ranging |
+| **PROP**| 🚀 | yellow | Propulsion & ΔV | Chemical, electric, cold‑gas, quantum |
+| **GNC** | 🎯 | teal | Guidance & Control | ADCS, nav sensors, autonomy algos |
+| **POWER**| ⚡ | orange | Electrical Power Subsystem | Solar array, battery, PCDU |
+| **THERM**| 🌡️ | brown | Thermal Control | Radiators, MLI, heaters, cryo |
+| **STRUC**| 🏗️ | silver | Structures & Mechanisms | Panels, booms, deployables |
+| **GDS** | 🖥️ | green | Ground Data System | MOC, flight software tools |
+| **MISSION**| 📅 | lime | Mission Ops & Planning | ConOps, timelines, procedures |
+| **SEC** | 🔒 | red | Security & Reliability | Cyber, FDIR, radiation hardening |
+| **INFRA**| 🚚 | indigo | Launch & Ops Infrastructure | Integration, transport, launch pad |
+| **LOGI**| 📦 | amber | Logistics & MRO | Spares, return, refurbishment |
+
+### Sub‑Domain ➜ InfoCode Matrix (cheat‑sheet)
+| Code | IDX root | Arch / OV | Req / Policy | Interfaces / Data | Ops / Procedures |
+|------|----------|----------|--------------|-------------------|-----------------|
+| **BUS** | `BUS‑01‑000‑IDX` | OV, DD | SPEC | ICD, DWG | PROC, TEST |
+| **PAY** | `PAY‑02‑000‑IDX` | OV, SDD | SPEC, REQ | ICD, CAL | PROC, TEST |
+| **COMM**| `COMM‑03‑000‑IDX`| OV, SDD | SPEC | ICD, FIG | PROC, TEST |
+| **PROP**| `PROP‑04‑000‑IDX`| OV, SDD | SPEC | ICD, CAL | PROC, TEST |
+| **GNC** | `GNC‑05‑000‑IDX` | OV, SDD | SPEC, REQ | ICD, CAL | PROC, TEST |
+| **POWER**| `POWER‑06‑000‑IDX`| OV, SDD | SPEC | ICD, FIG | PROC |
+| **THERM**| `THERM‑07‑000‑IDX`| OV, SDD | SPEC | FIG | PROC |
+| **STRUC**| `STRUC‑08‑000‑IDX`| OV, DD | SPEC | DWG | PROC |
+| **GDS** | `GDS‑09‑000‑IDX` | OV, SDD | PLAN, REQ | JSON, ICD | PROC |
+| **MISSION**| `MISSION‑10‑000‑IDX`| OV, PLAN | REQ | REF | PROC |
+| **SEC** | `SEC‑11‑000‑IDX` | OV, SDD | PLAN, REQ | ICD, SPEC | PROC, TEST |
+| **INFRA**| `INFRA‑12‑000‑IDX`| OV | PLAN, SPEC | REF, FIG | PROC |
+| **LOGI**| `LOGI‑13‑000‑IDX` | OV | PLAN, LIST | REF | PROC |
+
+---
+
+## One‑Glance Chapter Index (SAPR)
+| SAPR Ch | Title | Canonical IDX file | Scope / Highlight |
+|:----:|--------------------------------|------------------------------------------|---------------------------------------------------------|
+| **00** | Intro & General | `GP‑SPACE‑SAPR‑*‑00‑000‑IDX‑A.md` | Vision, mission classes, standards map (ECSS ‑ NASA) |
+| **01** | Spacecraft Bus General | `GP‑SPACE‑SAPR‑*‑01‑000‑IDX‑A.md` | Mass, power, data budgets, configuration |
+| **02** | Mission Ops Information | `GP‑SPACE‑SAPR‑*‑02‑000‑IDX‑A.md` | Pre‑launch, in‑orbit, cruise, EOM procedures |
+| **03** | Mission Performance | `GP‑SPACE‑SAPR‑*‑03‑000‑IDX‑A.md` | ΔV budget, pointing accuracy, data rates |
+| **04** | Safety & Reliability | `GP‑SPACE‑SAPR‑*‑04‑000‑IDX‑A.md` | FMEA/FMECA, radiation, MMOD, AI‑FDIR |
+| **05** | Maintenance & Servicing | `GP‑SPACE‑SAPR‑*‑05‑000‑IDX‑A.md` | On‑orbit servicing, refuel, RPO concepts |
+| **06** | Dimensions & Coord Systems | `GP‑SPACE‑SAPR‑*‑06‑000‑IDX‑A.md` | Envelope, coordinate frames, deck numbering |
+| **07** | Handling & Transportation | `GP‑SPACE‑SAPR‑*‑07‑000‑IDX‑A.md` | Container, vibration limits, crane points |
+| **08** | Mass Properties & Balance | `GP‑SPACE‑SAPR‑*‑08‑000‑IDX‑A.md` | CoG evolution, inertia tensors, spin balance |
+| **09** | Payload Instruments | `GP‑SPACE‑SAPR‑*‑09‑000‑IDX‑A.md` | Cameras, spectrometers, SAR, deployables |
+| **10** | Storage & Preservation | `GP‑SPACE‑SAPR‑*‑10‑000‑IDX‑A.md` | Clean‑room, bake‑out, prop‑safe modes |
+| **11** | Markings & Identification | `GP‑SPACE‑SAPR‑*‑11‑000‑IDX‑A.md` | GN ID, laser retro‑reflector, QR plates |
+| **12** | Servicing – Routine | `GP‑SPACE‑SAPR‑*‑12‑000‑IDX‑A.md` | Ground recharge, SW patch, desaturation |
+| **13** | Propellant Systems | `GP‑SPACE‑SAPR‑*‑13‑000‑IDX‑A.md` | Tanks, lines, pressurization, PMDs |
+| **14** | Pressurized Gas Systems | `GP‑SPACE‑SAPR‑*‑14‑000‑IDX‑A.md` | Helium, xenon, purge & vent |
+| **18** | Vib & Acoustic Environment | `GP‑SPACE‑SAPR‑*‑18‑000‑IDX‑A.md` | Launch & on‑orbit environment spec |
+| **20** | Standard Practices – Structure | `GP‑SPACE‑SAPR‑*‑20‑000‑IDX‑A.md` | Fasteners, bonding, NDI, CFRP repair |
+| **21** | Thermal Control | `GP‑SPACE‑SAPR‑*‑21‑000‑IDX‑A.md` | Passive & active, cryo loops, heaters |
+| **22** | Guidance & Control | `GP‑SPACE‑SAPR‑*‑22‑000‑IDX‑A.md` | Star tracker, RWA, gyro, autonomy laws |
+| **23** | Comms & TT&C | `GP‑SPACE‑SAPR‑*‑23‑000‑IDX‑A.md` | X/Ka/Laser, ranging, cross‑link |
+| **24** | Electrical Power | `GP‑SPACE‑SAPR‑*‑24‑000‑IDX‑A.md` | Solar array, PCDU, battery EOL models |
+| **25** | Command & Data Handling | `GP‑SPACE‑SAPR‑*‑25‑000‑IDX‑A.md` | OBC, mass memory, FSW, packet TM/TC |
+| **26** | Hazard Detection & Safety | `GP‑SPACE‑SAPR‑*‑26‑000‑IDX‑A.md` | Radiation, debris, thermal runaway |
+| **27** | Autonomous Ops & AI | `GP‑SPACE‑SAPR‑*‑27‑000‑IDX‑A.md` | RL planners, XAI dashboards, DTO links |
+| **30** | Science Data Pipeline | `GP‑SPACE‑SAPR‑*‑30‑000‑IDX‑A.md` | Compression, calibration, L1→L4 chain |
+| **40** | Cyber‑security & QKD | `GP‑SPACE‑SAPR‑*‑40‑000‑IDX‑A.md` | Post‑quantum crypto, QKD space‑ground |
+| **50** | Ground Data System | `GP‑SPACE‑SAPR‑*‑50‑000‑IDX‑A.md` | MOC, DSN, scheduler, dashboards |
+| **60** | Standard Practices – Propulsion | `GP‑SPACE‑SAPR‑*‑60‑000‑IDX‑A.md` | Acceptance, hot‑fire, leak check |
+| **91** | Charts & Schematics | `GP‑SPACE‑SAPR‑*‑91‑000‑IDX‑A.md` | Harness, thermal maps, control‑law flow |
+| **99** | Special / Emerging Tech | `GP‑SPACE‑SAPR‑*‑99‑000‑IDX‑A.md` | ISRU, quantum sensors, swarm federation |
+
+> *Canon*: every “IDX” anchors its chapter; bullet examples (to add) will link to OV, SDD, SPEC, ICD, PROC, etc.
+
+---
+
+### Immediate gaps / to‑dos
+1. Generate **IDX** stubs (`00‑000`…`99‑000`) for first commits.
+2. Draft **LAUNCH ENVIRONMENT SPEC** (Ch 18) aligned with latest ESA ECSS‑Q‑ST‑20‑07C Rev.2.
+3. Outline **SCIENCE DATA CYCLE** diagram (Ch 30 ↔ Part III GP‑COM) mapping level products.
+4. Create **ON‑ORBIT SERVICING INTERFACE MAP** (Ch 05 ↔ Part VI GP‑RAME) for refuel & upgrade.
+
+---
+
+*End of Part IX draft v0.1 — ready for edits, expansions, or mission‑specific tailoring.*
+
+---
+
+# GP‑PMO · **Program Management & Operations** — Part X Master Table of Contents
+*(Draft generated 2025‑04‑21 — pending authority review & certification)*
+
+---
+
+## Filename convention
+`GP‑PMO-[SubDomainCode]-[SeqCode]-[PMOChapterCode]-[SubjectCode]-[InfoCode]-[Rev].[ext]`
+
+| Field | Meaning | Example |
+|-------|---------|---------|
+| **GP‑PMO** | Domain code (Program Mgmt & Ops) | GP‑PMO |
+| **[SubDomainCode]** | Functional area (e.g. *RISK*, *CERT*) | RISK |
+| **[SeqCode]** | Sequential identifier within sub‑domain | 007 |
+| **[PMOChapterCode]** | Two‑digit chapter (see index below) | 03 |
+| **[SubjectCode]** | Sub‑topic / component ID | 120 |
+| **[InfoCode]** | COAFI document type (PLAN, REQ, PROC …) | PLAN |
+| **[Rev]** | Revision (A, B, 01 …) | A |
+| **[ext]** | File extension (.md, .xlsx, .pdf …) | md |
+
+---
+
+## Sub‑Domain Legend
+| Code | Icon | Badge | Element Title | Short description |
+|------|:---:|:-----:|---------------|-------------------|
+| **GOV** | 🏛️ | blue | Governance & Strategy | Charters, org structures, policy sets |
+| **PLAN** | 🗓️ | teal | Planning & Scheduling | IMS, milestones, WBS integration |
+| **RISK** | ⚠️ | red | Risk Management | Hazard registers, mitigations, bow‑ties |
+| **QA** | 🔍 | green | Quality Assurance | Audits, process control, KPIs |
+| **CERT** | 📜 | purple | Certification & Compliance | Authorities, standards, air/space‑worthiness |
+| **CONFIG** | 🗂️ | gray | Configuration Management | Baselines, change boards, CI/CD |
+| **COST** | 💰 | amber | Cost & Resource Mgmt | Budgets, EVM, staffing forecasts |
+| **OPS** | 📋 | lime | Operations & SOPs | Day‑to‑day ops manuals, playbooks |
+| **COMM** | 🗣️ | sky | Reviews & Communication | Design reviews, gate boards, comms plan |
+| **DATA** | 🗄️ | indigo | Documentation & Records | DMS, traceability, archives |
+
+### Sub‑Domain ➜ InfoCode Matrix
+| Code | IDX root | Arch / OV | Req / Policy | Interfaces / Data | Ops / Procedures |
+|------|----------|----------|--------------|-------------------|-----------------|
+| **GOV** | `GOV‑01‑000‑IDX` | OV | PLAN | REF | PROC |
+| **PLAN** | `PLAN‑02‑000‑IDX` | OV | PLAN | LIST, WBS | PROC |
+| **RISK** | `RISK‑03‑000‑IDX` | OV | PLAN, REQ | JSON | PROC, CAL |
+| **QA** | `QA‑04‑000‑IDX` | OV | PLAN, SPEC | LIST | PROC, TEST |
+| **CERT** | `CERT‑05‑000‑IDX` | OV | PLAN, REQ | ICD, SPEC | PROC |
+| **CONFIG** | `CONFIG‑06‑000‑IDX` | OV | PLAN | ICD, LIST | PROC |
+| **COST** | `COST‑07‑000‑IDX` | OV | PLAN, REQ | FIG, RPT | PROC |
+| **OPS** | `OPS‑08‑000‑IDX` | OV | REQ | REF, LIST | PROC |
+| **COMM** | `COMM‑09‑000‑IDX` | OV | PLAN | REF | PROC |
+| **DATA** | `DATA‑10‑000‑IDX` | OV | PLAN | JSON | PROC |
+
+---
+
+## One‑Glance Chapter Index (PMO)
+| PMO Ch | Title | Canonical IDX file | Scope / Highlight |
+|:----:|--------------------------------|------------------------------------------|----------------------------------------------|
+| **00** | Intro & General | `GP‑PMO‑*‑00‑000‑IDX‑A.md` | Vision, governance framework, stakeholder map |
+| **01** | Governance & Organization | `GP‑PMO‑*‑01‑000‑IDX‑A.md` | Org chart, RACI, decision rights |
+| **02** | Planning & Scheduling | `GP‑PMO‑*‑02‑000‑IDX‑A.md` | IMS, WBS, baseline management |
+| **03** | Risk Management | `GP‑PMO‑*‑03‑000‑IDX‑A.md` | Hazard log, risk matrix, bow‑tie analysis |
+| **04** | Quality Assurance | `GP‑PMO‑*‑04‑000‑IDX‑A.md` | Process audits, KPIs, continuous improvement |
+| **05** | Certification & Compliance | `GP‑PMO‑*‑05‑000‑IDX‑A.md` | Regulatory basis, certification plans, evidence |
+| **06** | Configuration Management | `GP‑PMO‑*‑06‑000‑IDX‑A.md` | Baselines, change boards, digital thread |
+| **07** | Cost & Resource Mgmt | `GP‑PMO‑*‑07‑000‑IDX‑A.md` | Budgets, EVM, staffing forecasts, supply plan |
+| **08** | Operations & SOPs | `GP‑PMO‑*‑08‑000‑IDX‑A.md` | Daily ops manuals, playbooks, hand‑over plans |
+| **09** | Reviews & Gates | `GP‑PMO‑*‑09‑000‑IDX‑A.md` | SRR, PDR, CDR, ORR, FRR, post‑flight review |
+| **10** | Documentation & Records | `GP‑PMO‑*‑10‑000‑IDX‑A.md` | DMS structure, trace matrices, retention |
+| **11** | Safety & Environmental Mgmt | `GP‑PMO‑*‑11‑000‑IDX‑A.md` | SMS, ESG metrics, environmental permits |
+| **12** | Training & Competency | `GP‑PMO‑*‑12‑000‑IDX‑A.md` | Training matrices, cert records, LMS |
+| **90** | Metrics & Dashboards | `GP‑PMO‑*‑90‑000‑IDX‑A.md` | KPI dashboards, BI integration, AI insights |
+| **99** | Special / Emerging Ops Tech | `GP‑PMO‑*‑99‑000‑IDX‑A.md` | Digital twins for PM, quantum scheduling |
+
+---
+
+### Immediate gaps / to‑dos
+1. Stand‑up **GOV charter** (Ch 01) with RACI table.
+2. Draft **Integrated Master Schedule (IMS)** outline (Ch 02) linked to WBS IDs.
+3. Create **Enterprise Risk Register JSON schema** (Ch 03) for cross‑part ingestion.
+4. Outline **Certification Basis Matrix** (Ch 05) mapping regs to evidence docs.
+5. Define **Digital Thread CM process** (Ch 06) interfacing BITT ledger.
+6. Sketch **Program KPI dashboard wireframe** (Ch 90) referencing GP‑COM data services.
+
+---
+
+*End of Part X draft v0.1 — skeleton ready for expansion.*
+
+
+**(Example Rendered Document - Illustrative Only)**
+
+# Vertical Stabilizer Structural Design Document
+
+**Document Code:** GP-AM-AMPEL-0100-55-005-DD-A  
+**Creation Date:** 2025-04-14  
+**Author(s):** GAIA AIR Team  
+**Revision/Version:** A  
+**Status:** Approved  
+**Classification:** Internal Use Only  
+
+---
+**🚨 DISCLAIMER: GenAI Proposal Status**  
+*Generated Content requires Official Authority Check for tool Compliance and Certification.*
+---
+
+## Table of Contents
+- Introduction
+- General Description
+- Specifications / Requirements
+- Procedures
+- Contextual Metadata / XAI
+- Relationships and Traceability
+- Keywords
+- Annexes
+
+## Introduction
+**Document Objective:** Define and document the structural design of the vertical stabilizer.  
+**Scope:** Applicable to all aircraft under the GP-AM platform.  
+**Definitions and Abbreviations:** See Appendix Glossary or COAFI Part.
+
+## General Description
+**System/Component Description:** The vertical stabilizer provides directional control and flight stability.  
+**Operating Principles:** Functions as a passive aerodynamic surface and rudder mounting base.
+
+## Technical Specifications
+**Functional Requirements:** Provide directional control and stability.  
+**Non-Functional Requirements:** Durability, structural resistance, maintenance compatibility.  
+**Performance Specifications:** Maximum load 20kN, operating range -55°C to 70°C.  
+**Material/Structural Specifications:** Aluminum alloy 7075-T6 with CFRP composite reinforcements.  
+**Diagrams and Schematics:** [Link to DWG drawing of main assembly](./GP-AM-AMPEL-0100-55-007-DWG-A.md)
+
+## Procedures
+**Operational Procedures:** Not directly applicable. See ATA 27 for flight control.  
+**Maintenance Procedures:** Inspección visual cada 100h; análisis por ultrasonido cada 500h. (Ref: *[Link to relevant PROC document]*)
+**Safety Procedures:** Avoid exposure to structural impact sources. See failure modes table (Ref: *[Link to FMEA/CAL document]*).
+
+## Contextual Metadata / XAI
+**Structure Description:** This document refers to a subset of the aircraft's load-bearing structure.  
+**Structure Identifier:** GP-AM-STAB-VERT  
+**Primary Function:** Directional stability of aircraft.  
+**Parameters:** Surface area, moment of inertia, lateral load resistance.  
+**Algorithms Used:** FEM (Análisis por Elementos Finitos)
+**Evaluation Metrics:** Elastic modulus, safety factor  
+**Failure Modes:** Desprendimiento por fatiga, deformación permanente  
+**Maintenance Priority:** High  
+**Semantic Gravity:** High
+
+## Relationships and Traceability
+**Related COAFI Links:**  
+- [GP-AM-AMPEL-0100-55-006-SPEC-A](./GP-AM-AMPEL-0100-55-006-SPEC-A.md): Complementary Specifications
+- [GP-AM-AMPEL-0100-27-...-DD-A](./...): Rudder Design Document (placeholder link)
+- [GP-AM-AMPEL-0100-53-...-DD-A](./...): Fuselage Interface Design (placeholder link)
+
+**External Links:**  
+- [FAA AC 25.601 - Structural Loads](https://www.faa.gov/regulations/25.601): Technical Regulation
+
+## Keywords
+stabilizer, ATA 55, structure, fuselage, GAIA AIR, vertical stabilizer, design document
+
+## Annexes
+**Annex Content:** Includes DWG structural plan link, load table reference, and FEM simulation summary link in Annex A. (See [./GP-AM-AMPEL-0100-55-005-ANNEX-A.md])
 ```
 
-[![Repo Structure](https://github.com/Robbbo-T/Robbbo-T/actions/workflows/create-repo-structure.yml/badge.svg?event=branch_protection_rule)](https://github.com/Robbbo-T/Robbbo-T/actions/workflows/create-repo-structure.yml)
-
-Repositorio único en **MetaNube** que centraliza configuraciones personales, rutas de propiedad y derechos individuales. Parte de la arquitectura integral **GAIA AIR**.
-
-Perfect. Let's anchor the **TPSL/TPWD** (Technical Project System Specification and Work Description) system within the **GAIA AIR** astronautics framework.
-
-Here's a proposed structure for formal documentation and publication readiness:
-
----
+```
 
 ## 🚀 GAIA AIR – TPSL/TPWD System Specification
 
