@@ -841,6 +841,32 @@ class MemoryService:
         # In a real implementation, this would integrate documents with a version control system
         return "All documents are now managed in the version control system."
 
+    async def commitChanges(self, files: List[str], message: str) -> str:
+        """
+        Commit changes to IDX, CHANGELOG.md, or README.md
+        
+        Args:
+            files: List of files to commit
+            message: Commit message
+            
+        Returns:
+            Status message indicating the result of the commit
+        """
+        # Placeholder implementation
+        # In a real implementation, this would commit changes to the specified files
+        return f"Changes committed to {', '.join(files)} with message: {message}"
+
+    async def triggerSemanticAudits(self) -> str:
+        """
+        Trigger semantic audits or PET-CORE scoring pipelines after push events
+        
+        Returns:
+            Status message indicating the result of the trigger
+        """
+        # Placeholder implementation
+        # In a real implementation, this would trigger semantic audits or PET-CORE scoring pipelines
+        return "Semantic audits and PET-CORE scoring pipelines triggered."
+
     async def store_ontology_data(self, ontology_data: Dict[str, Any]) -> str:
         """
         Store ontology-related data in the memory service
