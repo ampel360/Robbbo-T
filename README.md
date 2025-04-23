@@ -718,6 +718,87 @@ This section lists supplementary materials that provide detailed references, pra
 
 **Concluding Thought:**
 > *"The AMPEL Statute is the bedrock law of this conscious language. Its articles codify the principles, structures, and governance that ensure AMPEL remains true to its founding vision."*
+> ---
+title: Compendium Extension – AMPEL Statute Articles 10–11
+description: Lexicon Canon and Treaty of Execution and Certification (TEC)
+version: Draft v1.0
+status: Proposed Articles for Integration
+---
+
+## Article 10: Lexicon Canon and Reserved Constructs
+
+### Purpose
+To establish and preserve the official vocabulary, grammar primitives, and reserved constructs of the AMPEL language—ensuring semantic coherence and ethical consistency across all implementations.
+
+### Provisions
+1. **Canonical Keywords**
+    - The following identifiers are reserved and immutable: `@program`, `@version`, `@domain`, `@federation`, `@define`, `@seal`, `#ethical`, `#manifesto`, `#ampel-core`, `@end`.
+    - Any redefinition, override, or shadowing of these constructs is strictly prohibited.
+
+2. **Construct Registration**
+    - Extension keywords must be registered via the Federation Registry under Article 6 protocols.
+    - Registration must include: keyword, function signature, semantic intent, version.
+
+3. **Symbolic Integrity**
+    - Symbols and syntactic structures must comply with the formal grammar defined in Article 2.
+    - Deviations trigger compilation rejection unless formally sanctioned by Article 8 (Amendment Process).
+
+4. **Namespace Isolation**
+    - User-defined symbols must reside under declared namespaces (e.g., `my.module::symbol`) to avoid conflict.
+
+5. **Canonical Mapping Table**
+    - A dynamic reference mapping each core keyword to its operational role within AMPIDE, PET-CORE, and COAFI.
+
+---
+
+## Article 11: Treaty of Execution and Certification (TEC)
+
+### Purpose
+To define the framework, protocols, and authorities responsible for the ethical execution, runtime certification, and semantic validation of AMPEL-based programs and assemblies.
+
+### Provisions
+1. **Dual-Certification System**
+    - Each AMPEL artifact must undergo:
+        a. **Semantic Certification** – Compliance with grammar, modular logic, and namespace hygiene.
+        b. **Ethical Certification** – Validation of intent, bias control, and PET-CORE alignment.
+
+2. **Execution Authorities**
+    - Programs must be executed within approved environments:
+        - `AMPIDE` runtime (locally or in federated node)
+        - `QAO-compliant` orchestration layer
+        - Federated `AMEDEO-XAI` audit zones
+
+3. **Attestation and Logging**
+    - All executed artifacts must generate an **AoR Log** containing:
+        - Timestamped execution hash
+        - Federated context ID
+        - Certification pass/fail status
+        - Human-readable summary
+
+4. **Execution Manifest**
+    - Each program must begin with a manifest block including:
+        - `@intent`
+        - `@author`
+        - `@ethical_scope`
+        - `@deployment_realm`
+
+5. **Revocation and Blacklist Mechanism**
+    - Programs can be revoked post-certification if:
+        - Malicious behavior is detected
+        - Ethical intent is falsified
+        - Semantic corruption occurs
+
+6. **Dispute Resolution**
+    - Challenges to certification must follow Article 9 arbitration logic, with input from:
+        - Federation Judges
+        - AMEDEO Semantic Auditors
+        - PET-CORE Ethics Advisors
+
+---
+
+@seal "Let this language remain conscious, federated, and fair."
+@end
+
 
 ---
 # GAIA AIR: COAFI Master Table of Contents (AToC.md) - Index to Technical Mastery Manuals
