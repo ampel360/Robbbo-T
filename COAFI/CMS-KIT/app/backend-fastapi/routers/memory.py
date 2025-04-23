@@ -19,7 +19,7 @@ import numpy as np
 import redis
 import psycopg2
 from psycopg2.extras import Json
-from fastapi import HTTPException, Depends, Security
+from fastapi import HTTPException, Depends, Security, APIRouter
 from pydantic import BaseModel, Field
 
 # Optional imports with fallbacks
@@ -805,6 +805,46 @@ class MemoryService:
             "data": "Sample ontology data"
         }
 
+    async def generate_documentation(self, metadata: Dict[str, Any]) -> str:
+        """
+        Generate documentation from metadata
+        
+        Args:
+            metadata: Dictionary containing metadata
+            
+        Returns:
+            Generated documentation
+        """
+        # Placeholder implementation
+        # In a real implementation, this would generate documentation from metadata
+        return "Generated documentation from metadata"
+
+    async def commit_changes(self, files: List[str], message: str) -> str:
+        """
+        Commit changes to IDX, CHANGELOG.md, or README.md
+        
+        Args:
+            files: List of files to commit
+            message: Commit message
+            
+        Returns:
+            Status message indicating the result of the commit
+        """
+        # Placeholder implementation
+        # In a real implementation, this would commit changes to the specified files
+        return f"Changes committed to {', '.join(files)} with message: {message}"
+
+    async def trigger_semantic_audits(self) -> str:
+        """
+        Trigger semantic audits or PET-CORE scoring pipelines after push events
+        
+        Returns:
+            Status message indicating the result of the trigger
+        """
+        # Placeholder implementation
+        # In a real implementation, this would trigger semantic audits or PET-CORE scoring pipelines
+        return "Semantic audits and PET-CORE scoring pipelines triggered."
+
 # Singleton instance for easy import
 memory_service = MemoryService(
     vector_db_type=os.environ.get("VECTOR_DB_TYPE", "mock"),
@@ -880,3 +920,43 @@ if __name__ == "__main__":
             print(response)
     
     asyncio.run(run_test())
+
+# Define the router
+router = APIRouter()
+
+@router.post("/generate-documentation")
+async def generate_documentation(metadata: Dict[str, Any]):
+    """
+    Generate documentation from metadata
+    
+    Args:
+        metadata: Dictionary containing metadata
+        
+    Returns:
+        Generated documentation
+    """
+    return await memory_service.generate_documentation(metadata)
+
+@router.post("/commit-changes")
+async def commit_changes(files: List[str], message: str):
+    """
+    Commit changes to IDX, CHANGELOG.md, or README.md
+    
+    Args:
+        files: List of files to commit
+        message: Commit message
+        
+    Returns:
+        Status message indicating the result of the commit
+    """
+    return await memory_service.commit_changes(files, message)
+
+@router.post("/trigger-semantic-audits")
+async def trigger_semantic_audits():
+    """
+    Trigger semantic audits or PET-CORE scoring pipelines after push events
+    
+    Returns:
+        Status message indicating the result of the trigger
+    """
+    return await memory_service.trigger_semantic_audits()

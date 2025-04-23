@@ -1009,6 +1009,46 @@ class MemoryAdapter:
         except Exception as e:
             logger.error(f"Error logging query: {e}")
 
+    async def generate_documentation(self, metadata: Dict[str, Any]) -> str:
+        """
+        Genera documentación a partir de metadatos (e.g., @program, @version)
+        
+        Args:
+            metadata: Diccionario de metadatos
+            
+        Returns:
+            str: Documentación generada
+        """
+        # Placeholder implementation
+        # In a real implementation, this would generate documentation based on metadata
+        return "Generated documentation based on metadata."
+
+    async def commit_changes(self, files: List[str], message: str) -> str:
+        """
+        Commit changes to IDX, CHANGELOG.md, or README.md
+        
+        Args:
+            files: List of files to commit
+            message: Commit message
+            
+        Returns:
+            Status message indicating the result of the commit
+        """
+        # Placeholder implementation
+        # In a real implementation, this would commit changes to the specified files
+        return f"Changes committed to {', '.join(files)} with message: {message}"
+
+    async def trigger_semantic_audits(self) -> str:
+        """
+        Trigger semantic audits or PET-CORE scoring pipelines after push events
+        
+        Returns:
+            Status message indicating the result of the trigger
+        """
+        # Placeholder implementation
+        # In a real implementation, this would trigger semantic audits or PET-CORE scoring pipelines
+        return "Semantic audits and PET-CORE scoring pipelines triggered."
+
 # Middleware para generar trace_id
 async def add_trace_id(request: Request, call_next):
     """Middleware para añadir trace_id a cada solicitud"""
