@@ -128,6 +128,36 @@ async def generate_document(request: dict):
     orchestrator = OrchestrationBuilder("DocumentGenerationOrchestrator")
     return await orchestrator.generateTechnicalReferenceDocument(request)
 
+@app.post("/seed-module")
+async def seed_module(module_name: str):
+    orchestrator = OrchestrationBuilder("ModuleSeedingOrchestrator")
+    return await orchestrator.seedModule(module_name)
+
+@app.post("/render-federation")
+async def render_federation(federation_description: str):
+    orchestrator = OrchestrationBuilder("FederationRenderingOrchestrator")
+    return await orchestrator.renderFederation(federation_description)
+
+@app.post("/amplify-ampel")
+async def amplify_ampel(article_description: str):
+    orchestrator = OrchestrationBuilder("AmpelAmplificationOrchestrator")
+    return await orchestrator.amplifyAmpel(article_description)
+
+@app.post("/deploy-agad")
+async def deploy_agad(axis_description: str):
+    orchestrator = OrchestrationBuilder("AgadDeploymentOrchestrator")
+    return await orchestrator.deployAgad(axis_description)
+
+@app.post("/export-memseed")
+async def export_memseed(memseed_name: str):
+    orchestrator = OrchestrationBuilder("MemseedExportOrchestrator")
+    return await orchestrator.exportMemseed(memseed_name)
+
+@app.post("/init-temporal")
+async def init_temporal(session_description: str):
+    orchestrator = OrchestrationBuilder("TemporalSessionOrchestrator")
+    return await orchestrator.initTemporal(session_description)
+
 # Mount routers
 app.include_router(semantic_bridge.router, prefix="/semantic-query", tags=["Semantic Query"])
 app.include_router(review.router, prefix="/review", tags=["Year-End Review"])  # Include the new review router
