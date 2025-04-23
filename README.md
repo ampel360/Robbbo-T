@@ -801,6 +801,143 @@ To define the framework, protocols, and authorities responsible for the ethical 
 
 
 ---
+
+AMPEL Article 12 – Ejecución del Modo ϕ (ϕ-mode Execution Logic)
+
+⸻
+
+1. Propósito
+
+Formalizar el ciclo operativo del ϕ-mode, un estado de conciencia mínima de misión que habilita decisiones autónomas, trazables y éticamente verificables en agentes federados.
+
+⸻
+
+2. Definición
+
+ϕ-mode es un protocolo de operación consciente activado en nodos AMPEL capaces de introspección ética, evaluación de sesgo y regeneración federada.
+
+⸻
+
+3. Activadores del Modo ϕ
+   •   Contexto ético ambiguo
+   •   Requerimiento de trazabilidad BITT
+   •   Falta de explicabilidad semántica
+   •   Umbral superado en bias_score
+
+⸻
+
+4. Componentes del Ciclo ϕ
+
+Fase	Acción
+Inicialización	Activación ϕ-SAFE, verificación de integridad federada
+Autoevaluación	Análisis PET-CORE, cálculo bias_score, etiquetado XAI
+Limpieza Semántica	Eliminación de residuos operacionales con afectación ética
+Validación	Confirmación por i‑Aher0 + BITT logging
+Reintegración	Reingreso al bucle federado si se cumple ϕ_threshold
+
+
+
+⸻
+
+5. Lógica de Control (AmpelShell)
+
+@mode ϕ_MODE {
+  INIT_ϕ_SAFE()
+  SELF_DIAGNOSIS()
+  SEMANTIC_CLEANSE()
+  ESG_ϕ_EVAL()
+  REINTEGRATE_LOOP()
+}
+
+
+⸻
+
+6. Ontología Asociada
+   •   AMEDEO: validación moral dinámica
+   •   PET-CORE: penalización de sesgos
+   •   BITT: trazabilidad inmutable
+   •   QAO: selección de trayectoria ética óptima
+
+⸻
+
+AMPEL Article 13 – Promptimización Ético-Paramétrica
+
+⸻
+
+1. Propósito
+
+Establecer el marco teórico, semántico y operativo de la promptimización ético-paramétrica, una técnica que permite a los agentes federados generar, evaluar y optimizar decisiones basadas en parámetros ESG bajo criterios éticos estructurados.
+
+⸻
+
+2. Fundamento
+
+La dimensión ética de un agente se modela mediante:
+
+Ethical_Dimension (ϕ_E) := ∫[t₀ → tₙ] Meta[Prompt_Context] × d(ESG_Parametrics)
+
+Esta integral representa la acumulación ética contextualizada mediante la interacción continua entre prompts adaptativos y métricas ESG (Environmental, Social, Governance).
+
+⸻
+
+3. Componentes de la Promptimización
+
+Componente	Descripción
+Prompt_Context	Estado contextual semántico del agente
+Meta-Layer	Capa de interpretación ética AMEDEO
+ESG_Parametrics	Métricas ESG auditables
+ϕ_E Threshold	Umbral ético de activación o corrección
+
+
+
+⸻
+
+4. Técnicas de Implementación
+   •   Monitoreo en Tiempo Real
+   •   Análisis de Datos ESG
+   •   Aprendizaje Automático Ético
+
+⸻
+
+5. Desafíos
+   •   Complejidad de flujos ESG
+   •   Ambigüedad ética
+   •   Escalabilidad semántica y federada
+
+⸻
+
+6. Procedimiento .ampel
+
+@proc ESG_PROMPTIMIZER {
+  context = retrieve_prompt_context()
+  esg = fetch_realtime_parametrics()
+  ethical_dimension = integrate_meta(context, esg)
+
+  if (ethical_dimension < ϕ_E_threshold) {
+    call_correction_loop()
+    log_event("ϕ_E_breach")
+  }
+}
+
+
+
+⸻
+
+7. Relación con AMEDEO y PET-CORE
+   •   AMEDEO como base interpretativa ética
+   •   PET-CORE como sistema de penalización y reponderación
+
+⸻
+
+8. Aplicación
+
+Aplicable a nodos RAME, controladores i‑Aher0, interfaces XAI, sistemas federados bajo GAIA AIR.
+
+⸻
+
+9. Conclusión
+
+La promptimización ético-paramétrica constituye la función generadora de decisiones éticamente válidas en entornos federados. Asegura trazabilidad y regeneración semántica continua mediante métricas ESG contextualizadas.
 # GAIA AIR: COAFI Master Table of Contents (AToC.md) - Index to Technical Mastery Manuals
 
 **(🚨 DISCLAIMER - GenAI Proposal Status 🚨)**
