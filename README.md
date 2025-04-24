@@ -1362,21 +1362,24 @@ Infraestructura Comun y Segura
 
 ---
 
-## Document Parts Overview
+## Document Parts Overview – GAIA PLATFORMS (GP)
+### Submódulos COAFI / GP Subsystems
 
-| Part    | Domain Code | Title                              | Scope                                           | Key Interfaces                     |
-| :------ | :---------- | :--------------------------------- | :---------------------------------------------- | :--------------------------------- |
-| **0**   | `GP-FD`     | **Program Foundations**            | Vision, ethics, compliance, standards, doctrines. | All domains.                       |
-| **1**   | `GP-AM`     | **Air Systems & Airframes**        | AMPEL materials, aircraft systems (ATA chapters). | `GP-COM`, `GP-GRO`, `GP-RAME`.       |
-| **2**   | `GP-AS`     | **Space Systems & Spaceframes**    | AMPEL+ platforms, orbital logistics (AS chapters). | `GP-COM`, `GP-GRO`, `GP-RAME`.       |
-| **3**   | `GP-COM`    | **Core Operating Matrix**          | AI (`i-Aher0`), QAO, secure networks, BITT.     | All domains.                       |
-| **4**   | `GP-GRO`    | **Ground & Infrastructure**        | Robotics-augmented logistics, launch/landing.   | `GP-AM`, `GP-AS`, `GP-SUPL`.       |
-| **5**   | `GP-SUPL`   | **Supply Chain & Ethical Logistics** | Ethical sourcing, lifecycle traceability.        | `GP-GRO`, `GP-RAME`, `GP-AM`/`GP-AS`. |
-| **6**   | `GP-RAME`   | **Robotic Assembly & Maintenance** | Autonomous assembly, predictive maintenance.    | `GP-AM`, `GP-AS`, `GP-SUPL`.       |
-| **7**   | `GP-PM`     | **Program Management & Ops**       | Certification, risk management, lifecycle QA.   | All domains.                       |
-| *(Note: Further Parts reserved for future expansion)* |
-
----
+| Part | Domain Code       | Title                                         | Scope                                              | Key Interfaces                     |
+|------|-------------------|-----------------------------------------------|---------------------------------------------------|-------------------------------------|
+| 0    | [GP-FD](#)        | Program Foundations                           | Vision, ethics, compliance, standards, doctrines. | All domains.                       |
+| 1    | [GP-AM](#)        | General: Air Systems & Airframes              | AMPEL materials, aircraft systems (ATA chapters). Sustainable Aircrafts | GP-COM, GP-GRO, GP-RAME.           |
+| 2    | [GP-AS](#)        | General: Space Systems & Spaceframes          | AMPEL+ platforms, orbital logistics (AS chapters). NextGen Space Tourism Vehicles | GP-COM, GP-GRO, GP-RAME.           |
+| 3    | [GP-COM](#)       | Digital Services: Core Operating Matrix       | AI (i-Aher0), QAO, secure networks, BITT.         | All domains.                       |
+| 4    | [GP-GRO](#)       | Industry 5.0: Ground & Infrastructure         | Robotics-augmented logistics, launch/landing.     | GP-AM, GP-AS, GP-SUPL.             |
+| 5    | [GP-SUPL](#)      | Industry 5.0: Supply Chain & Ethical Logistics| Ethical sourcing, lifecycle traceability.         | GP-GRO, GP-RAME, GP-AM/GP-AS.      |
+| 6    | [GP-RAME](#)      | Industry 5.0: Robotic Assembly & Maintenance  | Autonomous assembly, predictive maintenance.      | GP-AM, GP-AS, GP-SUPL.             |
+| 7    | [GP-PM](#)        | Digital Services: Program Management & Ops    | Certification, risk management, lifecycle QA.     | All domains.                       |
+| 8    | [GP-ADR](#)       | Products: Atmospheric Drones                  | Design, certification, manufacture of AI-piloted sustainable drones | GP-AM, GP-GRO                      |
+| 9    | [GP‑FF‑CITY](#)   | Products: Flying Family City Cars             | Sustainable urban mobility vehicles               | GP-AM, GP-GRO, GP-SUPL             |
+| 10   | [GP‑SPACE‑SAPR](#)| Products: Space Satellites, Probes, Telescopes and AstroRobotics | Advanced orbital and planetary exploration platforms | GP-AS, GP-GRO                      |
+| 11   | [GP-DS](#)        | Digital Design Intelligence and AGI           | Design systems, cognitive UI/UX, integration with AGI components | GP-COM, GP-AM, GP-AS               |
+| 12   | [GP-DIMENSIONS](#)| Research and Theoretical Speculation          | Transdisciplinary futures, speculative architectures | All domains.                       |
 ---
 
 ## Part 1: Air Systems & Airframes (AMPEL360XWLRGA) (GP-AM) 🚀✈️
