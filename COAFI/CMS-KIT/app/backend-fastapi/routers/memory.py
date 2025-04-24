@@ -191,7 +191,7 @@ class MemoryService:
         """Initialize the embedding cache"""
         # Try to connect to Redis if available
         redis_url = os.environ.get("REDIS_URL")
-        if redis_url and self.cache_config.strategy != "none":
+        if (redis_url and self.cache_config.strategy != "none"):
             try:
                 self.redis_client = redis.from_url(redis_url)
                 self.redis_client.ping()  # Test connection
@@ -845,6 +845,38 @@ class MemoryService:
         # In a real implementation, this would trigger semantic audits or PET-CORE scoring pipelines
         return "Semantic audits and PET-CORE scoring pipelines triggered."
 
+    async def execute_phi_mode(self, request: dict) -> dict:
+        """
+        Execute ϕ-mode logic
+        
+        Args:
+            request: Request data for ϕ-mode execution
+            
+        Returns:
+            Response data indicating the result of the ϕ-mode execution
+        """
+        # Placeholder implementation for ϕ-mode execution logic
+        return {
+            "request": request,
+            "status": "ϕ-mode executed"
+        }
+
+    async def execute_ethical_promptimization(self, request: dict) -> dict:
+        """
+        Execute promptimización ético-paramétrica logic
+        
+        Args:
+            request: Request data for promptimización ético-paramétrica
+            
+        Returns:
+            Response data indicating the result of the promptimización ético-paramétrica
+        """
+        # Placeholder implementation for promptimización ético-paramétrica
+        return {
+            "request": request,
+            "status": "promptimización ético-paramétrica executed"
+        }
+
 # Singleton instance for easy import
 memory_service = MemoryService(
     vector_db_type=os.environ.get("VECTOR_DB_TYPE", "mock"),
@@ -1041,3 +1073,29 @@ async def init_temporal(session_details: str):
         Status message indicating the result of the initiation
     """
     return await memory_service.initTemporal(session_details)
+
+@router.post("/execute-phi-mode")
+async def execute_phi_mode(request: dict):
+    """
+    Execute ϕ-mode logic
+    
+    Args:
+        request: Request data for ϕ-mode execution
+        
+    Returns:
+        Response data indicating the result of the ϕ-mode execution
+    """
+    return await memory_service.execute_phi_mode(request)
+
+@router.post("/execute-ethical-promptimization")
+async def execute_ethical_promptimization(request: dict):
+    """
+    Execute promptimización ético-paramétrica logic
+    
+    Args:
+        request: Request data for promptimización ético-paramétrica
+        
+    Returns:
+        Response data indicating the result of the promptimización ético-paramétrica
+    """
+    return await memory_service.execute_ethical_promptimization(request)

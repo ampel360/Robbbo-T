@@ -103,15 +103,15 @@ class MemoryCleanupResponse(BaseModel):
     stats: Optional[Dict[str, Any]] = None
     error: Optional[str] = None
     request_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    timestamp: str = Field(default_factory=lambda: datetime.now().isoformat())
+    timestamp: str = Field(default_factory(lambda: datetime.now().isoformat()))
 
 class SystemStatsResponse(BaseModel):
     """Response model for system statistics"""
     vector_db: Dict[str, Any] = Field(default_factory=dict)
     cache: Dict[str, Any] = Field(default_factory=dict)
-    metrics: Dict[str, Any] = Field(default_factory=dict)
-    request_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    timestamp: str = Field(default_factory=lambda: datetime.now().isoformat())
+    metrics: Dict[str, Any] = Field(default_factory(dict))
+    request_id: str = Field(default_factory(lambda: str(uuid.uuid4())))
+    timestamp: str = Field(default_factory(lambda: datetime.now().isoformat()))
 
 class QueryLogEntry(BaseModel):
     """Model for query log entries"""
@@ -123,20 +123,20 @@ class QueryLogEntry(BaseModel):
     result_count: int = 0
     cache_hit: bool = False
     user_id: Optional[str] = None
-    request_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    request_id: str = Field(default_factory(lambda: str(uuid.uuid4())))
 
 class QueryLogsResponse(BaseModel):
     """Response model for query logs"""
     logs: List[Dict[str, Any]]
     total: int
-    request_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    timestamp: str = Field(default_factory=lambda: datetime.now().isoformat())
+    request_id: str = Field(default_factory(lambda: str(uuid.uuid4())))
+    timestamp: str = Field(default_factory(lambda: datetime.now().isoformat()))
 
 class TrendDataResponse(BaseModel):
     """Response model for trend data"""
     dates: List[str]
     values: List[float]
-    request_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    request_id: str = Field(default_factory(lambda: str(uuid.uuid4())))
     timestamp: str = Field(default_factory(lambda: datetime.now().isoformat()))
 
 class User(BaseModel):
@@ -855,3 +855,29 @@ async def init_temporal(session_details: str):
         Status message indicating the result of the initiation
     """
     return await memory_service.initTemporal(session_details)
+
+@router.post("/execute-phi-mode")
+async def execute_phi_mode(request: dict):
+    """
+    Execute ϕ-mode logic
+    
+    Args:
+        request: Request data for ϕ-mode execution
+        
+    Returns:
+        Response data indicating the result of the ϕ-mode execution
+    """
+    return await memory_service.execute_phi_mode(request)
+
+@router.post("/execute-ethical-promptimization")
+async def execute_ethical_promptimization(request: dict):
+    """
+    Execute promptimización ético-paramétrica logic
+    
+    Args:
+        request: Request data for promptimización ético-paramétrica
+        
+    Returns:
+        Response data indicating the result of the promptimización ético-paramétrica
+    """
+    return await memory_service.execute_ethical_promptimization(request)

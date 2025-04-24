@@ -158,6 +158,16 @@ async def init_temporal(session_description: str):
     orchestrator = OrchestrationBuilder("TemporalSessionOrchestrator")
     return await orchestrator.initTemporal(session_description)
 
+@app.post("/execute-phi-mode")
+async def execute_phi_mode(request: dict):
+    orchestrator = OrchestrationBuilder("PhiModeExecutionOrchestrator")
+    return await orchestrator.executePhiMode(request)
+
+@app.post("/execute-ethical-promptimization")
+async def execute_ethical_promptimization(request: dict):
+    orchestrator = OrchestrationBuilder("EthicalPromptimizationOrchestrator")
+    return await orchestrator.executeEthicalPromptimization(request)
+
 # Mount routers
 app.include_router(semantic_bridge.router, prefix="/semantic-query", tags=["Semantic Query"])
 app.include_router(review.router, prefix="/review", tags=["Year-End Review"])  # Include the new review router
