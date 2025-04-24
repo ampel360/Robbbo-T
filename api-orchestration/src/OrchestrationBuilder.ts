@@ -295,4 +295,22 @@ export class OrchestrationBuilder {
       status: 'initiated'
     };
   }
+
+  // ϕ-mode execution logic
+  public async executePhiMode(request: any): Promise<any> {
+    // Placeholder implementation for ϕ-mode execution logic
+    return {
+      request,
+      status: 'ϕ-mode executed'
+    };
+  }
+
+  // Promptimización ético-paramétrica logic
+  public async executeEthicalPromptimization(request: any): Promise<any> {
+    // Placeholder implementation for promptimización ético-paramétrica
+    return {
+      request,
+      status: 'promptimización ético-paramétrica executed'
+    };
+  }
 }

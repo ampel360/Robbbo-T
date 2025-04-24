@@ -1049,6 +1049,38 @@ class MemoryAdapter:
         # In a real implementation, this would trigger semantic audits or PET-CORE scoring pipelines
         return "Semantic audits and PET-CORE scoring pipelines triggered."
 
+    async def execute_phi_mode(self, request: dict) -> dict:
+        """
+        Execute ϕ-mode logic
+        
+        Args:
+            request: Request data for ϕ-mode execution
+            
+        Returns:
+            Response data indicating the result of the ϕ-mode execution
+        """
+        # Placeholder implementation for ϕ-mode execution logic
+        return {
+            "request": request,
+            "status": "ϕ-mode executed"
+        }
+
+    async def execute_ethical_promptimization(self, request: dict) -> dict:
+        """
+        Execute promptimización ético-paramétrica logic
+        
+        Args:
+            request: Request data for promptimización ético-paramétrica
+            
+        Returns:
+            Response data indicating the result of the promptimización ético-paramétrica
+        """
+        # Placeholder implementation for promptimización ético-paramétrica
+        return {
+            "request": request,
+            "status": "promptimización ético-paramétrica executed"
+        }
+
 # Middleware para generar trace_id
 async def add_trace_id(request: Request, call_next):
     """Middleware para añadir trace_id a cada solicitud"""
@@ -1198,7 +1230,7 @@ if __name__ == "__main__":
             print(f"Tipo: {result.source_type}")
             print(f"Contenido: {result.content[:200]}...")
         
-        if args.rag and response.results:
+        if args.rag && response.results:
             print("\n=== Generando respuesta RAG ===")
             rag_request = RAGRequest(
                 query=args.query,
