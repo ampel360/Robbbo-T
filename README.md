@@ -278,7 +278,8 @@ This document provides a proposed structural framework for the GP-AM (Air System
 ## Integrated Framework for Modern Aircraft Development  
 ### Regulatory Compliance & Digital Enablement  
 
----
+![469c3260-fadd-45e2-b258-24858e083998](https://github.com/user-attachments/assets/9686d5d6-12b2-42c2-8fae-4fff7620f8e9)
+
 
 ### I. Introduction – A Modern, Integrated Aerospace-Development Framework  
 
