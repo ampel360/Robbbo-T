@@ -4,27 +4,12 @@
 
 *This document is a GenAI-generated proposal for the Artificial Technical Order Collection (AToC) structure. It represents a conceptual framework and has not been officially reviewed, approved, or implemented. All content should be considered preliminary and subject to revision.*
 
-## Note on Purpose
-
-This document serves as the master index for the Artificial Technical Order Collection (AToC), organizing technical documentation across multiple domains according to standardized information codes and file naming conventions.
-
-## Document Parts Overview
-
-| Part | Title | Description |
-|------|-------|-------------|
-| Part 0 | Introduction and General Information | Framework overview, navigation guides, and foundational concepts |
-| Part I | ATA Chapters (00-99) | Aircraft Technical Architecture documentation |
-| Part II | AS Chapters (00-99) | Artificial Systems documentation |
-| Part III | CN Chapters | Connectivity documentation |
-| Part IV | GB Chapters | Governance & Boundaries documentation |
-| Part V | PM Chapters | Platform Management documentation |
-| Part VI | RS Chapters | Resource Systems documentation |
-
 ## COAFI Information Code Index (INFOCODE-INDEX)
 
 This section maps information codes (infoCodes) to their meaning, expected key sections, and representative documents within the GAIA AIR COAFI system. It serves as a semantic key to complement the hierarchical AToC structure below, enabling functional understanding and toolchain integration.
 *(Note: Template/Schema/Renderer paths are illustrative placeholders for a potential automated documentation system)*
-*(Specific usage guidelines for InfoCodes per domain and chapter are defined in domain-specific documents, e.g., [GP-AI-PREFERRED-INFOCODES.yaml](./GP-FD/GP-AI-PREFERRED-INFOCODES.yaml) for AI-related chapters documented in GP-FD.05.)*
+*(Specific usage guidelines for InfoCodes per domain and chapter are defined in domain-specific documents, e.g.,
+
 
 **INFO-OV — Overview Document** ([GP-AM](./GP-AM/ToC-GP-AM.md))
 * **Purpose:** High-level conceptual/functional introduction.
