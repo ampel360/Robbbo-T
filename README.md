@@ -15,7 +15,10 @@ The documentation system employs a standardized filename convention that incorpo
 
 The detailed structure of the COAFI library and the focus on advanced technologies and digital integration strongly suggest that Amedeo Pelliccia's work is centered around creating a robust digital framework for the design, development, operation, and maintenance of complex aerospace systems within the GAIA AIR initiative. The emphasis on AI, quantum technologies, advanced materials, and robotic automation indicates a forward-thinking approach towards the future of aerospace engineering and operations. The mention of BITT Ledger also points towards the integration of secure and distributed ledger technologies within the system.
 
----
+<video width="640" height="360" controls>
+    <source src="20250426_0336_Majestic%20Green%20Jet_remix_01jsqvt2y2f63rjbsrv1fy09wf.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de videos.
+</video>
 
 ## COAFI Information Code Index (INFOCODE-INDEX)
 
