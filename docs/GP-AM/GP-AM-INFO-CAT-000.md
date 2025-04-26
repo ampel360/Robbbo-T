@@ -1,6 +1,4 @@
-
-### GAIA PLATFORMS - Aircraft Design Solution IDs (DES-IDs) Reference. MODEL AMPEL360 VERSION XWLRGA
-
+### GP-AM-INFO-CAT-000: GAIA PLATFORMS Aircraft AMPEL360XWLRGA Design Solution IDs (DES-IDs)
 
 *GenAI Proposal Status: This document is an AI-generated comprehensive reference of Design Solution IDs for the GAIA PLATFORMS aircraft development program, following the established naming convention.*
 
