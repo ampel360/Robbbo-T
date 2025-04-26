@@ -15,10 +15,8 @@ The documentation system employs a standardized filename convention that incorpo
 
 The detailed structure of the COAFI library and the focus on advanced technologies and digital integration strongly suggest that Amedeo Pelliccia's work is centered around creating a robust digital framework for the design, development, operation, and maintenance of complex aerospace systems within the GAIA AIR initiative. The emphasis on AI, quantum technologies, advanced materials, and robotic automation indicates a forward-thinking approach towards the future of aerospace engineering and operations. The mention of BITT Ledger also points towards the integration of secure and distributed ledger technologies within the system.
 
-<video width="640" height="360" controls>
-    <source src="20250426_0336_Majestic%20Green%20Jet_remix_01jsqvt2y2f63rjbsrv1fy09wf.mp4" type="video/mp4">
-    Tu navegador no soporta la reproducción de videos.
-</video>
+![image](https://github.com/user-attachments/assets/bfb2a382-40ce-4e63-a631-f0bca322e84d)
+
 
 ## COAFI Information Code Index (INFOCODE-INDEX)
 
@@ -2050,9 +2048,6 @@ All sections are fully rendered in Markdown without placeholders or editorial no
 | APP-A        | Glossary of GP-AM Terms & Acronyms                         | `System Instruction: Link relevant Design Solution (DES-ID) & BOM Part Numbers (PN-ID).`                                                                                                                                                                                         | .md             |
 | APP-B        | Referenced COAFI Documents (GP-AM Focus)                   | `System Instruction: Link relevant Design Solution (DES-ID) & BOM Part Numbers (PN-ID).`                                                                                                                                                                                         | .md             |
 
-![3988a98f-fcde-4722-8322-256b80c7b6d2](https://github.com/user-attachments/assets/647cc279-c2df-4361-8e6c-f65e4139664d)
-
-![09274c50-8a2b-41aa-aff8-76907787686b](https://github.com/user-attachments/assets/1978b305-6ec8-48e0-af66-75836661afe3)
 
 
 
