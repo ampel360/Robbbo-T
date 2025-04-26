@@ -1,4 +1,5 @@
-[come back to file](https://github.com/Robbbo-T/GAIA-Platforms/blob/main/GAIA-Platforms/GAIA-AIR/CD-COATFI-AERODCP.md.md)## GenAI Proposal Status Disclaimer
+[come back to main](https://github.com/Robbbo-T/GAIA-Platforms/blob/main/GAIA-Platforms/GAIA-AIR/CD-COATFI-AERODCP.md.md)
+## GenAI Proposal Status Disclaimer
 
 *This document is a GenAI-generated proposal for the Artificial Technical Order Collection (AToC) structure. It represents a conceptual framework and has not been officially reviewed, approved, or implemented. All content should be considered preliminary and subject to revision.*
 
