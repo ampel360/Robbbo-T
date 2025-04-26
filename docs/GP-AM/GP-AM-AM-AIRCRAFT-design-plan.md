@@ -3,7 +3,8 @@
 ## Integrated Framework for Modern Aircraft Development  
 ### Regulatory Compliance & Digital Enablement  
 
----
+![Uploading image.png…]()
+
 
 ### I. Introduction – A Modern, Integrated Aerospace-Development Framework  
 
