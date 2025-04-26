@@ -11,13 +11,13 @@ This section maps information codes (infoCodes) to their meaning, expected key s
 *(Specific usage guidelines for InfoCodes per domain and chapter are defined in domain-specific documents, e.g.,
 
 
-**INFO-OV — Overview Document** ([GP-AM](./GP-AM/ToC-GP-AM.md))
+**INFO-OV — Overview Document** ([FD-FD](./GP-FD/ToC-GP-FD.md), [GP-AM](./GP-AM/ToC-GP-AM.md))
 * **Purpose:** High-level conceptual/functional introduction.
 
-**INFO-SPEC — Specification** ([GP-AM](./GP-AM/ToC-GP-AM.md), [GP-FD](./GP-FD/ToC-GP-FD.md))
+**INFO-SPEC — Specification** ([FD-FD](./GP-FD/ToC-GP-FD.md), [GP-AM](./GP-AM/ToC-GP-AM.md))
 * **Purpose:** Define precise, verifiable requirements or characteristics.
 
-**INFO-REQ — Requirements Document** ([GP-FD](./GP-FD/ToC-GP-FD.md))
+**INFO-REQ — Requirements Document** ([FD-FD](./GP-FD/ToC-GP-FD.md))
 * **Purpose:** Capture higher-level requirements (mission/system/stakeholder).
 
 **INFO-DD — Design Document** ([GP-AM](./GP-AM/ToC-GP-AM.md))
@@ -32,38 +32,38 @@ This section maps information codes (infoCodes) to their meaning, expected key s
 **INFO-CAL — Calculation / Analysis Report** ([GP-AS](./GP-AS/ToC-GP-AS.md), [GP-AM](./GP-AM/ToC-GP-AM.md))
 * **Purpose:** Document specific engineering analyses.
 
-**INFO-RPT — Report** ([GP-FD](./GP-FD/ToC-GP-FD.md), [GP-PM](./GP-PM/ToC-GP-PM.md))
+**INFO-RPT — Report** ([FD-FD](./GP-FD/ToC-GP-FD.md), [GP-PM](./GP-PM/ToC-GP-PM.md))
 * **Purpose:** General communication of findings, status updates, or investigation results.
 
-**INFO-TEST — Test Plan / Procedure / Report** ([GP-AM](./GP-AM/ToC-GP-AM.md), [GP-FD](./GP-FD/ToC-GP-FD.md))
+**INFO-TEST — Test Plan / Procedure / Report** ([GP-AM](./GP-AM/ToC-GP-AM.md), [FD-FD](./GP-FD/ToC-GP-FD.md))
 * **Purpose:** Define and document verification & validation testing.
 
-**INFO-RES — Research Document** ([GP-FD](./GP-FD/ToC-GP-FD.md), [GP-DIMENSIONS](./GP-DIMENSIONS/ToC-GP-DIMENSIONS.md))
+**INFO-RES — Research Document** ([FD-FD](./GP-FD/ToC-GP-FD.md), [GP-DIMENSIONS](./GP-DIMENSIONS/ToC-GP-DIMENSIONS.md))
 * **Purpose:** Document foundational research and R&D findings.
 
 **INFO-MAN — Manual** ([GP-AM](./GP-AM/ToC-GP-AM.md))
 * **Purpose:** Provide user guides for operation, maintenance, and troubleshooting.
 
-**INFO-PROC — Procedure** ([GP-PM](./GP-PM/ToC-GP-PM.md), [GP-RAME](./GP-RAME/ToC-GP-RAME.md))
+**INFO-PROC — Procedure** ([GP-RAME](./GP-RAME/ToC-GP-RAME.md), [GP-PM](./GP-PM/ToC-GP-PM.md))
 * **Purpose:** Step-by-step instructions for a specific task.
 
 **INFO-CAT — Catalog / Parts List** ([GP-AM](./GP-AM/ToC-GP-AM.md), [GP-SUPL](./GP-SUPL/ToC-GP-SUPL.md))
 * **Purpose:** List and detail items (parts, components, materials) used in manufacturing or inventory.
 
-**INFO-GLO — Glossary** ([GP-AM](./GP-AM/ToC-GP-AM.md), [GP-FD](./GP-FD/ToC-GP-FD.md))
+**INFO-GLO — Glossary** ([FD-FD](./GP-FD/ToC-GP-FD.md), [GP-AM](./GP-AM/ToC-GP-AM.md))
 * **Purpose:** Define and explain terms and acronyms.
 
-**INFO-PLAN — Plan** ([GP-FD](./GP-FD/ToC-GP-FD.md), [GP-PM](./GP-PM/ToC-GP-PM.md))
+**INFO-PLAN — Plan** ([FD-FD](./GP-FD/ToC-GP-FD.md), [GP-PM](./GP-PM/ToC-GP-PM.md))
 * **Purpose:** Outline a strategy, schedule, and tasks for a given objective.
 
-**INFO-ICD — Interface Control Document** ([GP-AM](./GP-AM/ToC-GP-AM.md), [GP-COM](./GP-COM/ToC-GP-COM.md))
+**INFO-ICD — Interface Control Document** ([GP-COM](./GP-COM/ToC-GP-COM.md), [GP-AM](./GP-AM/ToC-GP-AM.md))
 * **Purpose:** Define and document interfaces between systems or components.
 
 **INFO-LIST — List** ([GP-AM](./GP-AM/ToC-GP-AM.md))
 * **Purpose:** Provide a simple enumeration of items.
 
 **INFO-FIG — Figure / Illustration** ([GP-AM](./GP-AM/ToC-GP-AM.md))
-* **Purpose:** Primarily a visual document (Diagram, Photo, Chart not fitting DWG/CAL).
+* **Purpose:** Primarily a visual document (diagram, photo, chart not fitting DWG/CAL).
 
 **INFO-CONOPS — Concept of Operations** ([GP-RAME](./GP-RAME/ToC-GP-RAME.md), [GP-AM](./GP-AM/ToC-GP-AM.md))
 * **Purpose:** Describe system operation from a user or operator perspective.
@@ -71,7 +71,7 @@ This section maps information codes (infoCodes) to their meaning, expected key s
 **INFO-WBS — Work Breakdown Structure** ([GP-PM](./GP-PM/ToC-GP-PM.md))
 * **Purpose:** Provide a hierarchical breakdown of project scope.
 
-**INFO-JSON — JSON Data / Schema** ([GP-FD](./GP-FD/ToC-GP-FD.md), [GP-COM](./GP-COM/ToC-GP-COM.md))
+**INFO-JSON — JSON Data / Schema** ([FD-FD](./GP-FD/ToC-GP-FD.md), [GP-COM](./GP-COM/ToC-GP-COM.md))
 * **Purpose:** Provide canonical structured data or schema.
 
 **INFO-BOM — Bill of Materials** ([GP-AM](./GP-AM/ToC-GP-AM.md), [GP-SUPL](./GP-SUPL/ToC-GP-SUPL.md))
@@ -95,7 +95,7 @@ This section maps information codes (infoCodes) to their meaning, expected key s
 **INFO-WDM — Wiring Diagram Manual** ([GP-AM](./GP-AM/ToC-GP-AM.md))
 * **Purpose:** Compile and present wiring diagrams.
 
-**INFO-CERT — Certification Document** ([GP-PM](./GP-PM/ToC-GP-PM.md), [GP-FD](./GP-FD/ToC-GP-FD.md))
+**INFO-CERT — Certification Document** ([FD-FD](./GP-FD/ToC-GP-FD.md), [GP-PM](./GP-PM/ToC-GP-PM.md))
 * **Purpose:** Provide formal documentation required by regulatory authorities.
 
 **INFO-PRES — Presentation** ([GP-PM](./GP-PM/ToC-GP-PM.md))
@@ -112,6 +112,7 @@ This section maps information codes (infoCodes) to their meaning, expected key s
 
 **INFO-NB — Notebook** ([GP-AS](./GP-AS/ToC-GP-AS.md), [GP-DS](./GP-DS/ToC-GP-DS.md))
 * **Purpose:** Provide an interactive computational notebook (e.g., Jupyter).
+
 
 ---
 
@@ -328,6 +329,7 @@ This block covers **ATA 51 – 57** (primary and secondary structure).
 
 ### GAIA PLATFORMS - Aircraft Design Solution IDs (DES-IDs) Reference. MODEL AMPEL360 VERSION XWLRGA
 
+[GP-AM-INFO-CAT-000]:
 
 *GenAI Proposal Status: This document is an AI-generated comprehensive reference of Design Solution IDs for the GAIA PLATFORMS aircraft development program, following the established naming convention.*
 
