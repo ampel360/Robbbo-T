@@ -1,4 +1,10 @@
-### GP-AM-INFO-CAT-000: GAIA PLATFORMS Aircraft AMPEL360XWLRGA Design Solution IDs (DES-IDs)
+# GP-AM-INFO-CAT-000: AMPEL360XWLRGA Design Solution Catalog (DES-IDs)
+
+*Status: GenAI-generated preliminary reference document. Subject to review and formal approval.*
+
+**Model Applicability:** AMPEL360XWLRGA  
+**System Applicability:** Aircraft Systems (ATA 21–99)  
+**InfoCode:** INFO-CAT
 
 *GenAI Proposal Status: This document is an AI-generated comprehensive reference of Design Solution IDs for the GAIA PLATFORMS aircraft development program, following the established naming convention.*
 
@@ -418,4 +424,11 @@ Example: `DES-2110-01` - First design solution for ATA 21-10 (Air Distribution)
 | DES-7190-01 | Engine interface control | PN-7190-INTF-01, PN-7190-CONN-01
 
 
-*GenAI Proposal Status: This document is an AI-generated comprehensive reference of Design Solution IDs for the GAIA PLATFORMS aircraft development program, following the established naming convention.*
+---
+
+## Notes
+
+- DES-IDs are traceable to detailed specifications, drawings, and system architectures managed under the GP-AM domain.
+- Part numbers (PN-IDs) listed are IPPN (Initial provisioning project numbers) and subject to refinement during the detailed design phase.
+- For a full cross-reference of DES-IDs to certification compliance (CS-25 / AS9100), see [GP-AM-INFO-REQ-000] and [GP-AM-INFO-SPEC-000].
+
