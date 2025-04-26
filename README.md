@@ -9,7 +9,7 @@ Amedeo Pelliccia is leading the development of a comprehensive and highly struct
 
 The work is organized into several parts (GP - GAIA Platforms), each focusing on a specific operational domain, such as Air Systems & Airframes (GP-AM), Space Systems & Spaceframes (GP-AS), Digital Services (GP-COM, GP-PM), and Industry 5.0 aspects (GP-GRO, GP-SUPL, GP-RAME). The documentation leverages established standards like ATA 100 for organizing information related to aircraft systems.
 
-Within the GP-AM domain, the documentation covers the fundamental aspects of air systems and airframes, following the ATA 100 chapter breakdown. This includes detailed information on aircraft general characteristics, operations, performance, airworthiness, maintenance, structures, flight controls, fuel systems (including hybrid H2/SAF), avionics, and more. Part 2 delves into advanced technologies, software, and integration aspects, encompassing areas like Artificial Intelligence (i-Aher0 for maintenance and flight optimization), Quantum Systems (QKD for secure communication, QPM for propulsion), Polymorphic Systems (GPAM for wing morphing), advanced materials (AMPEL), and integration with ground systems (RAME for robotic maintenance).
+Within the GP-AM domain, the documentation covers the fundamental aspects of air systems and airframes, following the ATA 100 chapter breakdown. This includes detailed information on aircraft general characteristics, operations, performance, airworthiness, maintenance, structures, flight controls, fuel systems (including hybrid H2/SAF), avionics, and more. The integration delves into advanced technologies, software, and integration aspects, encompassing areas like Artificial Intelligence (i-Aher0 for maintenance and flight optimization), Quantum Systems (QKD for secure communication, QPM for propulsion), Polymorphic Systems (GPAM for wing morphing), advanced materials (AMPEL), and integration with ground systems (RAME for robotic maintenance).
 
 The documentation system employs a standardized filename convention that incorporates the domain, platform code, sequence code, ATA chapter, subject code, Infocode (document type), and revision. A comprehensive INFOCODE-INDEX defines the purpose, format, and key sections for each document type, ensuring consistency and facilitating toolchain integration.
 
@@ -190,7 +190,7 @@ This section maps information codes (infoCodes) to their meaning, expected key s
     * [`GP-PM-*-00-000-IDX-A.md`](./GP-PM/ToC-GP-PM.md) *(Placeholder Link)*
 * **Part 8: Products: Atmospheric Drones/No Cargo or Passenger Missions (GP-ADR)**
     * [`GP-ADR-*-00-000-IDX-A.md`](./GP-ADR/ToC-GP-ADR.md) *(Placeholder Link)*
-* **Part 9: Products: Flying Taxy and City Cars / Cargo and passenger green helicopters (GP‑FF‑CITY)**
+* **Part 9: Products: Flying Taxy and City Cars / Cargo and passenger loads and green helicopters (GP‑FF‑CITY)**
     * [`GP-FF-CITY-*-00-000-IDX-A.md`](./GP-FF-CITY/ToC-GP-FF-CITY.md) *(Placeholder Link)*
 * **Part 10: Products: Space Satellites, Probes, Telescopes and AstroRobotics (GP‑SPACE‑SAPR)**
     * [`GP-SPACE-SAPR-*-00-000-IDX-A.md`](./GP-SPACE-SAPR/ToC-GP-SPACE-SAPR.md) *(Placeholder Link)*
@@ -274,7 +274,7 @@ This document provides a proposed structural framework for the GP-AM (Air System
 
 ---
 
-# DESIGN PLAN  
+# DESIGN PLAN  GP-AM use case: AMPEL360XWLRGA
 
 ## Integrated Framework for Modern Aircraft Development  
 ### Regulatory Compliance & Digital Enablement  
