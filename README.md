@@ -346,6 +346,176 @@ This block covers **ATA 51 – 57** (primary and secondary structure).
 - Safety assessment per **CS 25.1309**
 - **Output:** `.dwg`
 
+## ATA 21 – ECS Integration Summary for AMPEL-3 ELDB
+
+### 1. Design Solutions & BOM Part Numbers
+
+| ATA | Sub-chapter                        | DES-ID        | Brief Description                                  | Key BOM PN-IDs                     |
+|-----|------------------------------------|---------------|----------------------------------------------------|------------------------------------|
+| 21  | **Air Distribution**               | DES-2111-01   | CFD-optimised composite plenums                   | PN-2111-DUCT-01, PN-2111-DUCT-02   |
+|     |                                    | DES-2111-02   | Boundary-layer ingestion vortex generators        | PN-2111-VGEN-01                    |
+|     | **Zonal Control**                  | DES-2112-01   | Smart proportional airflow valve                  | PN-2112-VALV-01, PN-2112-DRV-01    |
+|     |                                    | DES-2112-02   | Electrostatic particulate precipitator module     | PN-2112-PREC-01, PN-2112-PREC-02   |
+|     | **Smart Ventilation**              | DES-2113-01   | ML-based cabin-air quality controller             | PN-2113-CTRL-01, PN-2113-SENS-01   |
+| 21  | **Temperature Control**            | DES-2120-01   | Dual-loop mixing manifold                         | PN-2120-MAN-01                     |
+|     |                                    | DES-2121-01   | Exhaust-air heat-pipe HX                          | PN-2121-HX-01                      |
+|     |                                    | DES-2122-01   | Paraffin micro-capsule panel                      | PN-2122-PCM-01                     |
+|     |                                    | DES-2123-01   | Aerogel blanket with vapour barrier               | PN-2123-BLK-01                     |
+| 21  | **Pressurisation Control**         | DES-2130-01   | Twin-channel digital pressure controller          | PN-2130-CTRL-01, PN-2130-CTRL-02   |
+|     |                                    | DES-2131-01   | Real-time fatigue life optimiser                  | PN-2131-SW-01                      |
+|     |                                    | DES-2132-01   | CFRP lightweight outflow valve                    | PN-2132-VALV-01                    |
+|     |                                    | DES-2133-01   | Turbo-expander energy harvester                   | PN-2133-TEX-01                     |
+| 21  | **Heating Systems**                | DES-2140-01   | Electrically assisted trim-air injector           | PN-2140-INJ-01                     |
+|     |                                    | DES-2141-01   | Graphene-film duct heater                         | PN-2141-HTR-01                     |
+|     |                                    | DES-2142-01   | Thermoelectric generator array                    | PN-2142-TEG-01                     |
+|     |                                    | DES-2143-01   | Wireless seat-row heater hub                      | PN-2143-HUB-01                     |
+| 21  | **Cooling Systems**                | DES-2150-01   | Modular evaporator core                           | PN-2150-EVAP-01                    |
+|     |                                    | DES-2151-01   | Trans-critical CO₂ pack                           | PN-2151-COMP-01                    |
+|     |                                    | DES-2152-01   | R-1234yf retro-fit kit                            | PN-2152-KIT-01                     |
+|     |                                    | DES-2153-01   | Passive PCM heat-sink under avionics              | PN-2153-PCM-02                     |
+| 21  | **Sustainable Architectures**      | DES-2160-01   | Closed-loop ECS mass-balance model                | PN-2160-SYS-01                     |
+|     |                                    | DES-2161-01   | Hydrocarbon refrigerant (R-290) micro-chiller     | PN-2161-CHIL-01                    |
+|     |                                    | DES-2162-01   | 3-stage ACM with ceramic bearings                 | PN-2162-ACM-01                     |
+|     |                                    | DES-2163-01   | Vapor + air-cycle hybrid pack                     | PN-2163-HYB-01                     |
+|     |                                    | DES-2164-01   | ISO T18 GPU/PCA quick-dock                        | PN-2164-PCA-01                     |
+| 21  | **Electric-ECS (E-ECS)**           | DES-2170-01   | Fully electric bleed-less ECS pack                | PN-2170-ECP-01                     |
+|     |                                    | DES-2171-01   | Zonal 540V DC bus & PDU                           | PN-2171-PDU-01                     |
+|     |                                    | DES-2172-01   | Active rectifier/inverter                         | PN-2172-INV-01                     |
+|     |                                    | DES-2173-01   | Model-predictive ECS controller                   | PN-2173-SW-01                      |
+|     |                                    | DES-2174-01   | Liquid-cooled electronics cold-plate              | PN-2174-CP-01                      |
+|     |                                    | DES-2175-01   | AI-assisted fault detection kernel                | PN-2175-AI-01                      |
+
+### 2. BREX Validation Rules
+
+```xml
+<businessRules>
+  <rule id="BR-DES-ID">
+    <context>desId</context>
+    <assert test="matches(., 'DES-21[0-7][0-9]-[0-9]{2}$')">
+      DES-ID format: DES-21xx-nn
+    </assert>
+  </rule>
+  <rule id="BR-PN-ID">
+    <context>pnId</context>
+    <assert test="matches(., 'PN-21[0-7][0-9]-[A-Z]{3}-[0-9]{2}$')">
+      PN-ID format: PN-21xx-ABC-nn
+    </assert>
+  </rule>
+</businessRules>
+```
+
+Here's a structured integration plan for the **AMPEL360XWLRGA (GP-AM) Airframes** program, focusing on ATA 21 (ECS) and its interfaces with other systems:
+
+### **1. ATA 21 ECS Integration Master Plan**
+#### **1.1 Digital Thread Implementation**
+```mermaid
+graph TD
+    A[PLM Core] --> B[DES-21xx Design Solutions]
+    B --> C[PN-21xx BOM Items]
+    C --> D[CAD/CAE Models]
+    D --> E[CSDB Modules]
+    E --> F[Certification Docs]
+    F --> G[Maintenance Data]
+    G --> H[Digital Twin]
+```
+
+#### **1.2 Key Deliverables Timeline**
+| Phase | Deliverable | Owner | Tools |
+|-------|------------|-------|-------|
+| Requirements | BREX Rules | SE | Oxygen XML |
+| Preliminary Design | DES-21xx Models | ME | NX/Siemens |
+| Detailed Design | PN-21xx BOM | PLM | Teamcenter |
+| Certification | CS-25 Compliance Pkg | CVE | DOORS |
+| Operations | S1000D IETPs | Tech Pubs | Arbortext |
+
+### **2. Cross-ATA Interface Management**
+#### **2.1 Critical Interfaces**
+| ATA | Interface Point | ECS DES-ID | Control Method |
+|-----|----------------|------------|----------------|
+| 24 | 540V Power Distribution | DES-2171-01 | Interface Control Document (ICD-2171) |
+| 28 | Fuel for APU Bleed | DES-2164-01 | Fuel System ICD |
+| 36 | Pneumatic System | DES-2133-01 | Pressure Boundary Diagram |
+| 71 | Engine Bleed Air | DES-2162-01 | ACM Performance Envelope |
+
+#### **2.2 Shared Components**
+```python
+# Example: Component Reuse Check
+def check_reuse(des_id):
+    if des_id in ['DES-2121-01', 'DES-2142-01']:
+        return "Cross-ATA: Shares HX with ATA 30 (Ice Protection)"
+    elif des_id == 'DES-2174-01':
+        return "Cross-ATA: Cold Plate used in ATA 23/31"
+```
+
+### **3. Sustainability Compliance Matrix**
+| ISO 14001 Clause | ECS Solution | Evidence Location |
+|------------------|--------------|-------------------|
+| 6.1.2 (Environmental Aspects) | R-1234yf Refrigerant | PN-2152-KIT-01 MSDS |
+| 7.2 (Competence) | PCM Training | DES-2122-01 TR |
+| 8.1 (Operational Control) | Waste Heat Recovery | DES-2142-01 Test Logs |
+
+### **4. Certification Package Structure**
+```
+ATA_21_Cert/
+├── 21-10_AirDist/
+│   ├── DES-2111-01_FTA.xml
+│   └── PN-2111-DUCT-01_STR.pdf
+├── 21-30_Press/
+│   ├── DES-2130-01_EMC.rtf
+│   └── PN-2130-CTRL-01_HIRF.zip
+└── 21-70_E-ECS/
+    ├── DES-2175-01_AI_XAI.pdf
+    └── PN-2172-INV-01_DO160.zip
+```
+
+### **5. Automated Validation Workflow**
+```bash
+#!/bin/bash
+# Sample CI/CD Pipeline for ECS
+validate_brex() {
+  java -jar csdb-validator.jar --brex AMPEL_BREX.xml \
+       --dm 21-*/21-*_SysTrace.md
+}
+
+generate_docs() {
+  pandoc 21-50_TradeStudy.md -o 21-50_TradeStudy.pdf
+  svn commit -m "ECS PDR Package Update"
+}
+
+validate_brex && generate_docs
+```
+
+### **6. Digital Twin Integration Points**
+| DES-ID | DT Parameter | Update Frequency | Data Source |
+|--------|--------------|------------------|-------------|
+| DES-2130-01 | Cabin ΔP | 1 Hz | ACMS |
+| DES-2151-01 | CO₂ Pressure | 5 sec | Refrigerant Sensor |
+| DES-2175-01 | Fault Codes | Event-based | FDIR System |
+
+### **Implementation Checklist**
+1. [ ] Populate all DES-IDs in Windchill with MBD links
+2. [ ] Run BREX validation on 21-xx_SysTrace.md files
+3. [ ] Establish ICDs for cross-ATA interfaces
+4. [ ] Load certification evidence into DOORS
+5. [ ] Connect ECS sensors to DT data pipeline
+
+### **Exception Handling Protocol**
+```xml
+<ExceptionHandling>
+  <Rule ID="EXH-21-01">
+    <Condition>PN-21xx not matching BREX</Condition>
+    <Action>Quarantine in PLM</Action>
+    <Escalation>CMB</Escalation>
+  </Rule>
+  <Rule ID="EXH-21-02">
+    <Condition>CS 25.1309 analysis missing</Condition>
+    <Action>Flag in FTA tool</Action>
+    <Escalation>Lead Safety</Escalation>
+  </Rule>
+</ExceptionHandling>
+```
+
+This plan ensures full traceability from design to certification while addressing all GP-AM requirements. Would you like me to elaborate on any specific integration aspect?
 #### ATA 22 — Auto-Flight
 - **CS 25.1329** (autopilot) · **CS 25.1309** (system safety)
 - Redundant actuators & sensors; software per DO-178C
@@ -387,8 +557,12 @@ This block covers **ATA 51 – 57** (primary and secondary structure).
 - **Output:** `.dwg`
 
 *(Other ATA chapters follow the same pattern—full list appears in Table 2.)*
-
----
+### 3. Actionable Next Steps
+- Integrate **DES-ID** and **PN-ID** into PLM & CAD environment, maintaining digital-thread traceability.
+- Update and run **BREX validator** with new ECS rules.
+- Execute trade studies (e.g., R-290 vs CO₂) prior to Preliminary Design Review (PDR).
+- Populate ATA 21 modules in S1000D Data Modules, ensuring full compliance and traceability.
+- Finalise detailed certification documentation and testing procedures (CS 25.1309 analyses, FTA reports, and thermal management tests).
 
 ### V. Operations, Maintenance & Ground-Support (ATA 05 – 12)
 
@@ -498,44 +672,54 @@ A rigorously standard-driven, digitally integrated approach positions an organis
 
 ### AMPEL 3 ELDB — Generative Instructions & Deliverables (English)
 
-| **ATA No.** | **Generative instruction  (applicable regulations)** | **Final ELPACK file** |
-|:--:|---|:---:|
-| 00 | Establish comprehensive requirements management and design traceability in accordance with **AS9100**, integrating environmental considerations from project launch per **ISO 14001**. Ensure global compliance with the applicable **EASA CS-25** certification basis. Generate the programme **BREX** (Business Rules Exchange) file to govern S1000D technical-data production. | `.xml` |
-| 05 | Define service-life limits and maintenance programmes based on damage-tolerance analysis (**CS 25.571**) and **MSG-3** methodology, ensuring inspection intervals meet regulatory requirements. Include long-life considerations for critical parts and end-of-service provisions aligned with **ISO 14001**. Document the maintenance plan and intervals in a quality-controlled report under **AS9100**. | `.pdf` |
-| 06 | Provide aircraft dimensions, areas, and weight-and-balance data per certification requirements (e.g., CG ranges in **CS 25.23**). Verify that estimated weight and mass distribution satisfy design limits. Prepare the general-arrangement drawing (three-view) with all principal dimensions, following technical-drawing conventions and **AS9100** configuration control. | `.dwg` |
-| 07 | Design lifting and shoring points capable of supporting aircraft loads with adequate margins, using standard engineering practice. Substantiate strength with static- and emergency-load criteria (**CS 25.561**) and material properties from **MIL-HDBK-5 / MMPDS**. Document location and use of lifting points in the maintenance manual per BREX rules. | `.dwg` |
-| 08 | Perform weight-and-balance analysis (empty weight, centre-of-gravity) ensuring the resulting CG remains within certification limits (**CS 25.23**). Verify weighing equipment is calibrated per **AS9100** procedures. Record results in a weight-and-balance report, including fuel balance and payload cases, to demonstrate compliance. | `.pdf` |
-| 09 | Size the towing device (e.g., tow-bar or tug lugs) to withstand specified towing loads without permanent deformation, complying with **CS 25.509**. Use high-strength structural materials with certified properties (**MIL-HDBK-5**). Document towing procedures and limitations in the technical data, formatted to BREX. | `.dwg` |
-| 10 | Incorporate mooring points and safe-parking procedures so the aircraft can be secured against maximum ground winds per **CS 25.415**. Substantiate anchor strength by validated structural-analysis methods. Provide tie-down instructions in the parking manual, formatted to BREX. | `.pdf` |
-| 11 | Ensure all operating limitations and cautions are shown on aircraft placards and markings in compliance with **CS 25.1541**. Add extra warnings where new materials or components demand. Verify design, placement and content under **AS9100** document control. | `.pdf` |
-| 12 | Develop ground-servicing procedures (fuel, fluids, cleaning) tailored to new materials and systems to prevent damage. Ensure instructions comply with **CS 25.1529** and minimise environmental impact (**ISO 14001**). Publish procedures per BREX conventions. | `.pdf` |
-| 21 | Design the air-conditioning & pressurisation system to **CS 25.831** (ventilation) and **CS 25.841** (pressurisation). Select lightweight components (e.g., composite ducts) that withstand required temperatures/pressures while using eco-friendly refrigerants (**ISO 14001**, no CFCs). Perform a system-safety analysis per **CS 25.1309** and document design schematics per BREX. | `.dwg` |
-| 22 | Implement the automatic flight-control system (autopilot) to meet **CS 25.1329** and overall system-safety requirements **CS 25.1309**. Provide suitable redundancy of actuators and sensors, using qualified electronics free of restricted substances (e.g., RoHS, **ISO 14001**). Verify software/firmware under **AS9100**; document architecture and logic to BREX. | `.pdf` |
-| 23 | Design communication systems (radios, transmitters, interphones) ensuring installation complies with **CS 25.1351** and causes no harmful interference (EMC). Use lightweight, halogen-free wiring (**ISO 14001**) without compromising integrity. Validate integration under the **AS9100** QMS and deliver updated comms schematics in BREX format. | `.pdf` |
-| 24 | Develop the electrical-power system per **CS 25.1351** (general) and **CS 25.1353** (battery protection). Use weight-optimised cables/components with fire-resistant insulation (**CS 25.869**) and eliminate hazardous substances (RoHS, **ISO 14001**). Demonstrate redundancy & segregation via failure analysis (**CS 25.1309**) under **AS9100**. Provide single-line diagrams and wiring lists per BREX. | `.dwg` |
-| 25 | Design cabin interiors, furnishings and equipment with low-mass materials meeting **CS 25.853(a/d)** (flammability, smoke/toxicity). Ensure seat and monument attachments meet emergency-load requirements (**CS 25.561**), and baggage restraint complies with **CS 25.787**. Prioritise recyclable/low-impact materials (**ISO 14001**) and document cabin layouts (LOPA) and equipment lists to BREX. | `.dwg` |
-| 26 | Implement fire-detection and extinguishing systems per **CS 25.851** (cabin) and **CS 25.1195** (engine/APU zones). Select Halon-free agents and eco-friendly piping materials (**ISO 14001**). Integrate detectors & extinguishers under **AS9100** and document specifications & maintenance instructions per BREX. | `.pdf` |
-| 27 | Design primary and secondary flight controls to **CS 25.671** and ensure structural integrity. Use lightweight high-strength materials (composites, alloys) validated against **MIL-HDBK-5**. Verify redundancy and absence of catastrophic failure modes through analysis (**CS 25.1309**). Document control-system architecture per BREX. | `.dwg` |
-| 28 | Design the fuel system to meet **CS 25.952 / 25.953** (contamination & lines) and **CS 25.981** (tank ignition prevention). Choose lightweight, chemically compatible tank and line materials with proven properties (**MIL-HDBK-5**). Show system safety compliance **CS 25.1309** and control design changes under **AS9100**. Provide fuel diagrams and interfaces per BREX. | `.dwg` |
-| 29 | Develop the hydraulic system to comply with **CS 25.1435** and system-safety rule **CS 25.1309**. Use high-reliability, corrosion-resistant lightweight components; consider biodegradable fluids (**ISO 14001**). Validate segregation and redundancy, and document hydraulic schematics & parts lists per BREX. | `.dwg` |
-| 30 | Implement ice & rain protection per **CS 25.1419**. Select efficient, lightweight methods (bleed-air, electrothermal, etc.) minimising added weight and energy per **ISO 14001**. Confirm the system introduces no hazards to other critical systems (**CS 25.1309**) and document configuration & operating modes per BREX. | `.pdf` |
-| 31 | Integrate indicating & recording systems per **CS 25.1303** (basic instruments) and **CS 25.1333** (redundancy). Emphasise lightweight electronic displays with reliable performance (qualified per **DO-160**) eliminating toxic materials (**ISO 14001**). Control configuration under **AS9100** and document system descriptions per BREX. | `.pdf` |
-| 32 | Design landing gear to **CS 25.729** (retraction/locking) and **CS 25.735** (braking energy). Use titanium or forged-aluminium alloys with properties justified by **MIL-HDBK-5**. Ensure ground-clearance geometry and validate brake energy dissipation via **CS 25.735** tests. Provide drawings & specs per BREX. | `.dwg` |
-| 33 | Select and install aircraft-lighting systems meeting **CS 25.1381 / 1383**. Use high-efficiency LEDs to cut electrical load and support **ISO 14001** goals. Confirm electrical installations comply with **CS 25.1351** and document lighting specs & wiring diagrams per BREX. | `.pdf` |
-| 34 | Integrate navigation systems (GPS, IRS, radio aids) in accordance with **CS 25.1301 / 1331**. Optimise antenna placement, minimise interference, and use lead-free electronics (**ISO 14001**). Document architecture, calibrations and databases per BREX. | `.pdf` |
-| 35 | Design the emergency-oxygen system (crew & passengers) to **CS 25.1441 / 1443 / 1445**. Use lightweight bottle design (aluminium), material properties per **MIL-HDBK-5**, and EASA-approved valves. Ensure safe handling & storage and integrate **ISO 14001** gas-management practices. Document usage & refill instructions per BREX. | `.pdf` |
-| 36 | Develop the pneumatic (bleed-air) system satisfying **CS 25.841** for air supply & cabin altitude. Size pipes, tanks & valves for worst-case pressures/temperatures using **MIL-HDBK-5** data. Use corrosion-resistant materials and minimise leaks for energy efficiency (**ISO 14001**). Verify system interactions (**CS 25.1309**) and document pneumatic diagrams per BREX. | `.dwg` |
-| 38 | Design potable-water & waste systems ensuring segregation from critical systems and preventing leaks. Use corrosion-resistant, lightweight tanks & lines; meet potability standards and analyse risks per **CS 25.1309**. Apply **ISO 14001** to reduce chemicals and enable safe waste discharge. Document installations & maintenance procedures per BREX. | `.dwg` |
-| 49 | Integrate the **APU** in compliance with **CS 25.1191** (firewall) and **CS 25.901** (installation). Design high-temperature mounts using **MIL-HDBK-5** data; verify vibration & dynamic loads. Check emissions & noise against environmental rules (**ISO 14001**). Document electrical & fuel interfaces per BREX. | `.dwg` |
-| 50 | Design cargo compartments to **CS 25.855** (fire resistance) and **CS 25.787** (cargo restraint). Use lightweight, fire-resistant panels; prove performance for fire & smoke. Ensure tie-down systems withstand emergency decelerations (**CS 25.561**) with **MIL-HDBK-5** anchor materials. Document design & loading instructions per BREX. | `.dwg` |
-| 51 | Apply standard structural-design practices (ATA 51) ensuring compliance with **CS 25.305** (limit strength) and **CS 25.571** (fatigue/damage-tolerance). Use approved material properties from **MMPDS**. Maintain material traceability and configuration control under **AS9100**. Document stress analyses, fatigue lives and test results per BREX. | `.pdf` |
-| 52 | Design fuselage doors (passenger, service, cargo) to **CS 25.783 / 365**, prevent inadvertent opening (**CS 25.789**) and sustain emergency loads (**CS 25.561**). Use lightweight high-strength materials with **MIL-HDBK-5** properties and provide rapid-decompression venting. Document drawings & specs per BREX. | `.dwg` |
-| 53 | Design the fuselage structure to **CS 25.365 / 571 / 307** for pressurisation loads, fatigue & full-scale tests. Perform stress & fatigue simulations using **MIL-HDBK-5** data; apply chrome-free corrosion protection (**ISO 14001**). Manage changes under **AS9100** and document design in detail per BREX. | `.dwg` |
-| 54 | Design engine nacelles & pylons to **CS 25.361(b)** (sudden-engine-failure loads) and **CS 25.1193** (fire resistance). Use composite or Ti/Al alloys with **MIL-HDBK-5** properties; include vibration absorption and controlled break-away features. Control configuration via **AS9100** and document structural & thermal analyses per BREX. | `.dwg` |
-| 55 | Design horizontal & vertical stabilisers to **CS 25.301-303 / 351-355 / 571**. Optimise composite/alloy structures for stiffness & strength, validated by **MIL-HDBK-5**. Provide impact & lightning protection. Document drawings, analyses & inspection criteria per BREX. | `.dwg` |
-| 56 | Select and integrate windows & windscreens meeting **CS 25.773 / 775** (field-of-view, bird-strike). Use lightweight multi-layer transparencies with anti-scratch/anti-fog coatings. Ensure frames & seals resist pressurisation; meet flammability **CS 25.853** as required. Control quality under **AS9100** and document specs per BREX. | `.pdf` |
-| 57 | Design wings to **CS 25.331 / 341 / 571 / 303** for manoeuvre, gust and DT loads. Use advanced materials (CFRP, Al-Li) with **MIL-HDBK-5** joint properties. Perform FEA & static/fatigue tests; provide lightning protection & twist control. Document wing drawings, test results & preliminary repair manuals per BREX. | `.dwg` |
-| 71 | Integrate engines (powerplants) in compliance with **CS 25.901 / 903**. Design high-strength steel/Ti mounts (data from **MIL-HDBK-5**) to resist thrust, vibration & manoeuvre loads. Provide firewalls & fuel-shut-off per **CS 25.1191 / 1195**. Coordinate with fuel & control systems under **AS9100** and document mechanical, electrical & control interfaces per BREX. | `.dwg` |
+Okay, I have integrated the `ATA Track ID` and `ELPACK` columns into the summary table in Section IX of the Design Plan, following the structure requested and using the information already present in the table.
+
+Here is the updated **Section IX** of the Design Plan:
+
+---
+
+### IX. Global List of Generative Instructions & Deliverables (ELPACK)
+
+| ATA No. | Generative Instruction (key regulations)                                                                                                                                                                                                                                                                  | ATA Track ID | ELPACK |
+| :------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------- | :----- |
+| 00      | Establish comprehensive requirements management and design traceability in accordance with **AS9100**, integrating environmental considerations from project launch per **ISO 14001**. Ensure global compliance with the applicable **EASA CS-25** certification basis. Generate the programme **BREX** (Business Rules Exchange) file to govern S1000D technical-data production. | 00           | `.xml` |
+| 05      | Define service-life limits and maintenance programmes based on damage-tolerance analysis (**CS 25.571**) and **MSG-3** methodology, ensuring inspection intervals meet regulatory requirements. Include long-life considerations for critical parts and end-of-service provisions aligned with **ISO 14001**. Document the maintenance plan and intervals in a quality-controlled report under **AS9100**. | 05           | `.pdf` |
+| 06      | Provide aircraft dimensions, areas, and weight-and-balance data per certification requirements (e.g., CG ranges in **CS 25.23**). Verify that estimated weight and mass distribution satisfy design limits. Prepare the general-arrangement drawing (three-view) with all principal dimensions, following technical-drawing conventions and **AS9100** configuration control. | 06           | `.dwg` |
+| 07      | Design lifting and shoring points capable of supporting aircraft loads with adequate margins, using standard engineering practice. Substantiate strength with static- and emergency-load criteria (**CS 25.561**) and material properties from **MIL-HDBK-5 / MMPDS**. Document location and use of lifting points in the maintenance manual per BREX rules. | 07           | `.dwg` |
+| 08      | Perform weight-and-balance analysis (empty weight, centre-of-gravity) ensuring that the resulting CG remains within certification limits (**CS 25.23**). Verify weighing equipment is calibrated per **AS9100** procedures. Record results in a weight-and-balance report, including fuel balance and payload cases, to demonstrate compliance. | 08           | `.pdf` |
+| 09      | Size the towing device (e.g., tow-bar or tug lugs) to withstand specified towing loads without permanent deformation, complying with **CS 25.509**. Use high-strength structural materials with certified properties (**MIL-HDBK-5**). Document towing procedures and limitations in the technical data, formatted to BREX. | 09           | `.dwg` |
+| 10      | Incorporate mooring points and safe-parking procedures so the aircraft can be secured against maximum ground winds per **CS 25.415**. Substantiate anchor strength by validated structural-analysis methods. Provide tie-down instructions in the parking manual, formatted to BREX. | 10           | `.pdf` |
+| 11      | Ensure all operating limitations and cautions are shown on aircraft placards and markings in compliance with **CS 25.1541**. Add extra warnings where new materials or components demand. Verify design, placement and content under **AS9100** document control. | 11           | `.pdf` |
+| 12      | Develop ground-servicing procedures (fuel, fluids, cleaning) tailored to the new materials and systems to prevent damage. Ensure that these instructions comply with **CS 25.1529** and minimize environmental impacts (**ISO 14001**). Document the servicing procedures in the aircraft's technical publications following BREX conventions. | 12           | `.pdf` |
+| 21      | Design the air-conditioning & pressurisation system to **CS 25.831** (ventilation) and **CS 25.841** (pressurisation). Select lightweight components (e.g., composite ducts) that withstand required temperatures/pressures while using eco-friendly refrigerants (**ISO 14001**, no CFCs). Perform a system-safety analysis per **CS 25.1309** and document design schematics per BREX. | 21           | `.dwg` |
+| 22      | Implement the automatic flight-control system (autopilot) ensuring compliance with **CS 25.1329** and overall system-safety requirements **CS 25.1309**. Provide suitable redundancy of actuators and sensors, using qualified electronics free of restricted substances. Verify software/firmware under **AS9100** and document architecture and logic to BREX. | 22           | `.pdf` |
+| 23      | Design communication systems (radios, transmitters, interphones) ensuring installation complies with **CS 25.1351** and causes no harmful interference (EMC). Use lightweight, halogen-free wiring (**ISO 14001**) without compromising integrity. Validate integration under the **AS9100** QMS and deliver updated comms schematics in BREX format. | 23           | `.pdf` |
+| 24      | Develop the electrical-power system per **CS 25.1351** (general) and **CS 25.1353** (battery protection). Use weight-optimised cables/components with fire-resistant insulation (**CS 25.869**) and eliminate hazardous substances (RoHS, **ISO 14001**). Demonstrate redundancy & segregation via failure analysis (**CS 25.1309**) under **AS9100**. Provide single-line diagrams and wiring lists per BREX. | 24           | `.dwg` |
+| 25      | Design cabin interiors, furnishings and equipment with low-mass materials meeting **CS 25.853(a/d)** (flammability, smoke/toxicity). Ensure seat and monument attachments meet emergency-load requirements (**CS 25.561**), and baggage restraint complies with **CS 25.787**. Prioritise recyclable/low-impact materials (**ISO 14001**) and document cabin layouts (LOPA) and equipment lists to BREX. | 25           | `.dwg` |
+| 26      | Implement fire-detection and extinguishing systems per **CS 25.851** (cabin) and **CS 25.1195** (engine/APU zones). Select Halon-free agents and eco-friendly piping materials (**ISO 14001**). Integrate detectors & extinguishers under **AS9100** and document specifications & maintenance instructions per BREX. | 26           | `.pdf` |
+| 27      | Design primary and secondary flight controls to **CS 25.671** and ensure structural integrity. Use lightweight high-strength materials (composites, alloys) validated against **MIL-HDBK-5**. Verify redundancy and absence of catastrophic failure modes through analysis (**CS 25.1309**). Document control-system architecture per BREX. | 27           | `.dwg` |
+| 28      | Design the fuel system to meet **CS 25.952 / 25.953** (contamination & lines) and **CS 25.981** (tank ignition prevention). Choose lightweight, chemically compatible tank and line materials with proven properties (**MIL-HDBK-5**). Show system safety compliance **CS 25.1309** and control design changes under **AS9100**. Provide fuel diagrams and interfaces per BREX. | 28           | `.dwg` |
+| 29      | Develop the hydraulic system to comply with **CS 25.1435** and system-safety rule **CS 25.1309**. Use high-reliability, corrosion-resistant lightweight components; consider biodegradable fluids (**ISO 14001**). Validate segregation and redundancy, and document hydraulic schematics & parts lists per BREX. | 29           | `.dwg` |
+| 30      | Implement ice & rain protection per **CS 25.1419**. Select efficient, lightweight methods (bleed-air, electrothermal, etc.) minimising added weight and energy per **ISO 14001**. Confirm the system introduces no hazards to other critical systems (**CS 25.1309**) and document configuration & operating modes per BREX. | 30           | `.pdf` |
+| 31      | Integrate indicating & recording systems per **CS 25.1303** (basic instruments) and **CS 25.1333** (redundancy). Emphasise lightweight electronic displays with reliable performance (qualified per **DO-160**). Control configuration under **AS9100** and document system descriptions per BREX. | 31           | `.pdf` |
+| 32      | Design landing gear to **CS 25.729** (retraction/locking) and **CS 25.735** (braking energy). Use titanium or forged-aluminium alloys with properties justified by **MIL-HDBK-5**. Ensure ground-clearance geometry and validate brake energy dissipation via **CS 25.735** tests. Provide drawings & specs per BREX. | 32           | `.dwg` |
+| 33      | Select and install aircraft-lighting systems meeting **CS 25.1381 / 1383**. Use long-life, low-power LEDs to cut electrical load and support **ISO 14001** goals. Confirm electrical installations comply with **CS 25.1351** and document lighting specs & wiring diagrams per BREX. | 33           | `.pdf` |
+| 34      | Integrate navigation systems (GPS, IRS, radio aids) in accordance with **CS 25.1301 / 1331**. Optimise antenna placement, minimise interference, and use lead-free electronics (**ISO 14001**). Document architecture, calibrations and databases per BREX. | 34           | `.pdf` |
+| 35      | Design the emergency-oxygen system (crew & passengers) to **CS 25.1441 / 1443 / 1445**. Use lightweight high-pressure bottles (aluminium), material properties per **MIL-HDBK-5**, and EASA-approved valves. Ensure safe handling & storage and integrate **ISO 14001** gas-management practices. Document usage & refill instructions per BREX. | 35           | `.pdf` |
+| 36      | Develop the pneumatic (bleed-air) system satisfying **CS 25.841** for air supply & cabin altitude. Size pipes, tanks & valves for worst-case pressures/temperatures using **MIL-HDBK-5** data. Use corrosion-resistant materials and minimise leaks for energy efficiency (**ISO 14001**). Verify system interactions (**CS 25.1309**) and document pneumatic diagrams per BREX. | 36           | `.dwg` |
+| 38      | Design potable-water & waste systems ensuring segregation from critical systems and preventing leaks. Use corrosion-resistant, lightweight tanks & lines; meet potability standards and analyse risks per **CS 25.1309**. Apply **ISO 14001** to reduce chemicals and enable safe waste discharge. Document installations & maintenance procedures per BREX. | 38           | `.dwg` |
+| 49      | Integrate the **APU** in compliance with **CS 25.1191** (firewall) and **CS 25.901** (installation). Design high-temperature mounts using **MIL-HDBK-5** data; verify vibration & dynamic loads. Check emissions & noise against environmental rules (**ISO 14001**). Document electrical & fuel interfaces per BREX. | 49           | `.dwg` |
+| 50      | Design cargo compartments to **CS 25.855** (fire resistance) and **CS 25.787** (cargo restraint). Use lightweight, fire-resistant panels; prove performance for fire & smoke. Ensure tie-down systems withstand emergency decelerations (**CS 25.561**) with **MIL-HDBK-5** anchor materials. Document design & loading instructions per BREX. | 50           | `.dwg` |
+| 51      | Apply standard structural-design practices (ATA 51) ensuring compliance with **CS 25.305** (limit strength) and **CS 25.571** (fatigue/damage-tolerance). Use approved material properties from **MMPDS**. Maintain material traceability and configuration control under **AS9100**. Document stress analyses, fatigue lives and test results per BREX. | 51           | `.pdf` |
+| 52      | Design fuselage doors (passenger, service, cargo) to **CS 25.783 / 365**, prevent inadvertent opening (**CS 25.789**) and sustain emergency loads (**CS 25.561**). Use lightweight high-strength materials with **MIL-HDBK-5** properties and provide rapid-decompression venting. Document drawings & specs per BREX. | 52           | `.dwg` |
+| 53      | Design the fuselage structure to **CS 25.365 / 571 / 307** for pressurisation loads, fatigue & full-scale tests. Perform stress & fatigue simulations using **MIL-HDBK-5** data; apply chrome-free corrosion protection (**ISO 14001**). Manage changes under **AS9100** and document design in detail per BREX. | 53           | `.dwg` |
+| 54      | Design engine nacelles & pylons to **CS 25.361(b)** (sudden-engine-failure loads) and **CS 25.1193** (fire resistance). Use composite or Ti/Al alloys with **MIL-HDBK-5** properties; include vibration absorption and controlled break-away features. Control configuration via **AS9100** and document structural & thermal analyses per BREX. | 54           | `.dwg` |
+| 55      | Design horizontal & vertical stabilisers to **CS 25.301-303 / 351-355 / 571**. Optimise composite/alloy structures for stiffness & strength, validated by **MIL-HDBK-5**. Provide impact & lightning protection. Document drawings, analyses & inspection criteria per BREX. | 55           | `.dwg` |
+| 56      | Select and integrate windows & windscreens meeting **CS 25.773 / 775** (field-of-view, bird-strike). Use lightweight multi-layer transparencies with anti-scratch/anti-fog coatings. Ensure frames & seals resist pressurisation; meet flammability **CS 25.853** as required. Control quality under **AS9100** and document specs per BREX. | 56           | `.pdf` |
+| 57      | Design wings to **CS 25.331 / 341 / 571 / 303** for manoeuvre, gust and DT loads. Use advanced materials (CFRP, Al-Li) with **MIL-HDBK-5** joint properties. Perform FEA & static/fatigue tests; provide lightning protection & twist control. Document wing drawings, test results & preliminary repair manuals per BREX. | 57           | `.dwg` |
+| 71      | Integrate engines (powerplants) in compliance with **CS 25.901 / 903**. Design high-strength steel/Ti mounts (data from **MIL-HDBK-5**) to resist thrust, vibration & manoeuvre loads. Provide firewalls & fuel-shut-off per **CS 25.1191 / 1195**. Coordinate with fuel & control systems under **AS9100** and document mechanical, electrical & control interfaces per BREX. | 71           | `.dwg` |
+
+*(Note: The rest of the Design Plan document (Sections I-VIII) remains as originally provided, as the request only involved modifying the table in Section IX.)*
 
 ### AMPEL 3 ELDB — Generative Instructions & Deliverables (English)
 
