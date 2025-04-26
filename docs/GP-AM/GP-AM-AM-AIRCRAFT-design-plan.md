@@ -1771,9 +1771,8 @@ All sections are fully rendered in Markdown without placeholders or editorial no
 | **Appendix** |                                                              |                                                                                                                                                                                                                                                                                  |                 |
 | APP-A        | Glossary of GP-AM Terms & Acronyms                         | `System Instruction: Link relevant Design Solution (DES-ID) & BOM Part Numbers (PN-ID).`                                                                                                                                                                                         | .md             |
 | APP-B        | Referenced COAFI Documents (GP-AM Focus)                   | `System Instruction: Link relevant Design Solution (DES-ID) & BOM Part Numbers (PN-ID).`                                                                                                                                                                                         | .md             |
-```
+
 ![3988a98f-fcde-4722-8322-256b80c7b6d2](https://github.com/user-attachments/assets/647cc279-c2df-4361-8e6c-f65e4139664d)
 
 ![09274c50-8a2b-41aa-aff8-76907787686b](https://github.com/user-attachments/assets/1978b305-6ec8-48e0-af66-75836661afe3)
-
 
