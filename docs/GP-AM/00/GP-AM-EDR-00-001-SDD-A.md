@@ -130,3 +130,4 @@ The following documents form an integral part of this specification:
 - GP-PM-AMPEL-MAINT-PLAN-GOLD-001-A: AMPEL360XWLRGA - Gold Maintenance Service Plan
 - GP-CM-QCOPT-SCHED-ALGO-001-A: QCOPT - QAOA Algorithm Design for HPC Resource Scheduling
 - GP-PM-EOL-SENSOR-TEMP-001-A: Dignified Component Functional End of Life Protocol - Temperature Sensors (XYZ-T1)
+- GP-AM-AMPEL-0100-00-001-A: GP-AM-00 General Document - Intro & General
