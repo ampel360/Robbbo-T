@@ -25,18 +25,15 @@ This document provides detailed examples of encoding aerospace optimization prob
 The general process for encoding aerospace problems for AMEDEO QAO follows these steps:
 
 ```mermaid
-Problem Encoding Process.download-icon {
-            cursor: pointer;
-            transform-origin: center;
-        }
-        .download-icon .arrow-part {
-            transition: transform 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95);
-             transform-origin: center;
-        }
-        button:has(.download-icon):hover .download-icon .arrow-part, button:has(.download-icon):focus-visible .download-icon .arrow-part {
-          transform: translateY(-1.5px);
-        }
-        #mermaid-diagram-rh00d{font-family:var(--font-geist-sans);font-size:12px;fill:#000000;}#mermaid-diagram-rh00d .error-icon{fill:#552222;}#mermaid-diagram-rh00d .error-text{fill:#552222;stroke:#552222;}#mermaid-diagram-rh00d .edge-thickness-normal{stroke-width:1px;}#mermaid-diagram-rh00d .edge-thickness-thick{stroke-width:3.5px;}#mermaid-diagram-rh00d .edge-pattern-solid{stroke-dasharray:0;}#mermaid-diagram-rh00d .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-diagram-rh00d .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-diagram-rh00d .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-diagram-rh00d .marker{fill:#666;stroke:#666;}#mermaid-diagram-rh00d .marker.cross{stroke:#666;}#mermaid-diagram-rh00d svg{font-family:var(--font-geist-sans);font-size:12px;}#mermaid-diagram-rh00d p{margin:0;}#mermaid-diagram-rh00d .label{font-family:var(--font-geist-sans);color:#000000;}#mermaid-diagram-rh00d .cluster-label text{fill:#333;}#mermaid-diagram-rh00d .cluster-label span{color:#333;}#mermaid-diagram-rh00d .cluster-label span p{background-color:transparent;}#mermaid-diagram-rh00d .label text,#mermaid-diagram-rh00d span{fill:#000000;color:#000000;}#mermaid-diagram-rh00d .node rect,#mermaid-diagram-rh00d .node circle,#mermaid-diagram-rh00d .node ellipse,#mermaid-diagram-rh00d .node polygon,#mermaid-diagram-rh00d .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-diagram-rh00d .rough-node .label text,#mermaid-diagram-rh00d .node .label text{text-anchor:middle;}#mermaid-diagram-rh00d .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-diagram-rh00d .node .label{text-align:center;}#mermaid-diagram-rh00d .node.clickable{cursor:pointer;}#mermaid-diagram-rh00d .arrowheadPath{fill:#333333;}#mermaid-diagram-rh00d .edgePath .path{stroke:#666;stroke-width:2.0px;}#mermaid-diagram-rh00d .flowchart-link{stroke:#666;fill:none;}#mermaid-diagram-rh00d .edgeLabel{background-color:white;text-align:center;}#mermaid-diagram-rh00d .edgeLabel p{background-color:white;}#mermaid-diagram-rh00d .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-diagram-rh00d .labelBkg{background-color:rgba(255, 255, 255, 0.5);}#mermaid-diagram-rh00d .cluster rect{fill:hsl(0, 0%, 98.9215686275%);stroke:#707070;stroke-width:1px;}#mermaid-diagram-rh00d .cluster text{fill:#333;}#mermaid-diagram-rh00d .cluster span{color:#333;}#mermaid-diagram-rh00d div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:var(--font-geist-sans);font-size:12px;background:hsl(-160, 0%, 93.3333333333%);border:1px solid #707070;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-diagram-rh00d .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#000000;}#mermaid-diagram-rh00d .flowchart-link{stroke:hsl(var(--gray-400));stroke-width:1px;}#mermaid-diagram-rh00d .marker,#mermaid-diagram-rh00d marker,#mermaid-diagram-rh00d marker *{fill:hsl(var(--gray-400))!important;stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-rh00d .label,#mermaid-diagram-rh00d text,#mermaid-diagram-rh00d text>tspan{fill:hsl(var(--black))!important;color:hsl(var(--black))!important;}#mermaid-diagram-rh00d .background,#mermaid-diagram-rh00d rect.relationshipLabelBox{fill:hsl(var(--white))!important;}#mermaid-diagram-rh00d .entityBox,#mermaid-diagram-rh00d .attributeBoxEven{fill:hsl(var(--gray-150))!important;}#mermaid-diagram-rh00d .attributeBoxOdd{fill:hsl(var(--white))!important;}#mermaid-diagram-rh00d .label-container,#mermaid-diagram-rh00d rect.actor{fill:hsl(var(--white))!important;stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-rh00d line{stroke:hsl(var(--gray-400))!important;}#mermaid-diagram-rh00d :root{--mermaid-font-family:var(--font-geist-sans);}Problem DefinitionMathematical FormulationVariable EncodingObjective Function EncodingConstraint EncodingDTO Interface DefinitionHamiltonian ConstructionCircuit ImplementationClassical Post-Processing
+graph TD;
+    A["Problem Definition"] --> B["Mathematical Formulation"]
+    B --> C["Variable Encoding"]
+    C --> D["Objective Function Encoding"]
+    D --> E["Constraint Encoding"]
+    E --> F["DTO Interface Definition"]
+    F --> G["Hamiltonian Construction"]
+    G --> H["Circuit Implementation"]
+    H --> I["Classical Post-Processing"]
 ```
 
 ### 1.2 Key Encoding Techniques
