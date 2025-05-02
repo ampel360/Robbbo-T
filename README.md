@@ -2836,6 +2836,48 @@ Where:
 
 **DISCLAIMER**: This document is a GenAI-generated proposal and has not been officially reviewed or approved. The content represents a case study of flight path optimization using AMEDEO QAO and should be validated by subject matter experts before implementation. This proposal is based on current quantum computing practices but may require customization to meet specific organizational requirements.
 
+```mermaid
+%% AQAOE top-down hierarchy
+graph TD
+  EB["Executive Board"]
+
+  %% Divisions
+  EB --> SGD["Standards & Governance Division"]
+  EB --> RDD["Research & Development Division"]
+  EB --> IID["Implementation & Integration Division"]
+  EB --> ETD["Education & Training Division"]
+  EB --> ECD["Ethics & Compliance Division"]
+
+  %% Standards & Governance children
+  SGD --> TSC["Technical Standards Committee"]
+  SGD --> SCC["Safety Certification Committee"]
+  SGD --> IWG["Interoperability Working Group"]
+
+  %% R&D children
+  RDD --> QAR["Quantum Algorithms Research"]
+  RDD --> AAR["Aerospace Applications Research"]
+  RDD --> HIR["Hardware Integration Research"]
+  RDD --> DTR["DTO Systems Research"]
+
+  %% Implementation & Integration children
+  IID --> IST["Implementation Support Team"]
+  IID --> IIT["Industry Integration Team"]
+  IID --> VVT["Verification & Validation Team"]
+  IID --> DOT["Deployment Operations Team"]
+
+  %% Education & Training children
+  ETD --> CD["Curriculum Development"]
+  ETD --> TD["Training Delivery"]
+  ETD --> CP["Certification Program"]
+  ETD --> KR["Knowledge Repository"]
+
+  %% Ethics & Compliance children
+  ECD --> ERB["Ethics Review Board"]
+  ECD --> CM["Compliance Monitoring"]
+  ECD --> RA["Regulatory Affairs"]
+  ECD --> SI["Sustainability Initiatives"]
+```
+
 `<Actions>
   <Action name="Create AMEDEO QAO safety verification framework" description="Develop a detailed framework for verifying safety constraints in AMEDEO QAO" />
   <Action name="Develop DTO integration specification" description="Create technical specifications for integrating AMEDEO QAO with Digital Twin Objects" />
