@@ -2481,103 +2481,95 @@ graph LR;
     style W7 fill:#bbf,stroke:#333,stroke-width:2px
 ```
 
-#### 5.1.3 Altitude and Speed Profile
+
+# 5.1.3 Altitude and Speed Profile
 
 The optimized altitude and speed profile shows effective use of jet streams and optimal cruise levels:
 
-| Waypoint | Distance (km) | Altitude (ft) | Speed (Mach) | Fuel Flow (kg/h)
-|-----|-----|-----|-----
-| JFK | 0 | 0 | 0 | -
-| WP1 | 250 | 33,000 | 0.82 | 2,450
-| WP2 | 680 | 35,000 | 0.83 | 2,380
-| WP3 | 1,120 | 37,000 | 0.84 | 2,320
-| WP4 | 1,560 | 39,000 | 0.85 | 2,290
-| WP5 | 2,000 | 41,000 | 0.85 | 2,250
-| WP6 | 2,440 | 43,000 | 0.84 | 2,180
-| WP7 | 2,880 | 43,000 | 0.85 | 2,170
-| WP8 | 3,320 | 43,000 | 0.85 | 2,160
-| WP9 | 3,760 | 41,000 | 0.84 | 2,210
-| WP10 | 4,200 | 39,000 | 0.83 | 2,270
-| WP11 | 4,640 | 37,000 | 0.83 | 2,310
-| WP12 | 5,080 | 35,000 | 0.82 | 2,360
-| WP13 | 5,520 | 33,000 | 0.82 | 2,420
-| LHR | 5,760 | 0 | 0 | -
+| Waypoint | Distance (km) | Altitude (ft) | Speed (Mach) | Fuel Flow (kg/h) |
+|----------|---------------|---------------|--------------|------------------|
+| JFK      | 0             | 0             | 0            | -                |
+| WP1      | 250           | 33,000        | 0.82         | 2,450            |
+| WP2      | 680           | 35,000        | 0.83         | 2,380            |
+| WP3      | 1,120         | 37,000        | 0.84         | 2,320            |
+| WP4      | 1,560         | 39,000        | 0.85         | 2,290            |
+| WP5      | 2,000         | 41,000        | 0.85         | 2,250            |
+| WP6      | 2,440         | 43,000        | 0.84         | 2,180            |
+| WP7      | 2,880         | 43,000        | 0.85         | 2,170            |
+| WP8      | 3,320         | 43,000        | 0.85         | 2,160            |
+| WP9      | 3,760         | 41,000        | 0.84         | 2,210            |
+| WP10     | 4,200         | 39,000        | 0.83         | 2,270            |
+| WP11     | 4,640         | 37,000        | 0.83         | 2,310            |
+| WP12     | 5,080         | 35,000        | 0.82         | 2,360            |
+| WP13     | 5,520         | 33,000        | 0.82         | 2,420            |
+| LHR      | 5,760         | 0             | 0            | -                |
 
-
-### 5.2 DTO Integration Analysis
+# 5.2 DTO Integration Analysis
 
 The integration with Digital Twin Objects provided significant benefits:
 
-#### 5.2.1 Weather DTO Impact
+## 5.2.1 Weather DTO Impact
 
 The Weather DTO enabled dynamic rerouting around adverse weather conditions:
-
 - 3 major storm systems avoided
 - Jet stream utilized for 42% of the flight path
 - Turbulence exposure reduced by 68% compared to traditional routing
 
-
-#### 5.2.2 Aircraft Performance DTO Impact
+## 5.2.2 Aircraft Performance DTO Impact
 
 The Aircraft Performance DTO enabled optimization based on actual aircraft state:
-
 - Engine efficiency variations incorporated into fuel consumption calculations
 - Actual weight and balance data used for performance constraints
 - Real-time fuel consumption tracking enabled dynamic reoptimization
 
-
-#### 5.2.3 Traffic DTO Impact
+## 5.2.3 Traffic DTO Impact
 
 The Traffic DTO enabled optimization considering other aircraft:
-
 - Congested airspace regions avoided when beneficial
 - Optimal flight levels selected considering traffic density
 - Reduced ATC intervention requirements by 35%
 
-
-### 5.3 Computational Performance
+# 5.3 Computational Performance
 
 The computational performance of the AMEDEO QAO implementation was analyzed:
 
-| Metric | Value
-|-----|-----|-----|-----
-| Circuit Depth | 1,248 gates
-| Simulation Time | 18.3 minutes
-| Classical Post-Processing Time | 2.7 minutes
-| Total Optimization Time | 21.0 minutes
-| Solution Quality (vs. Theoretical Optimum) | 96.8%
+| Metric                                | Value         |
+|---------------------------------------|---------------|
+| Circuit Depth                         | 1,248 gates   |
+| Simulation Time                       | 18.3 minutes  |
+| Classical Post-Processing Time        | 2.7 minutes   |
+| Total Optimization Time               | 21.0 minutes  |
+| Solution Quality (vs. Theoretical Optimum) | 96.8%   |
 
-
-### 5.4 Sensitivity Analysis
+# 5.4 Sensitivity Analysis
 
 A sensitivity analysis was performed to evaluate the impact of different parameters on the optimization results:
 
-#### 5.4.1 Number of Waypoints
+## 5.4.1 Number of Waypoints
 
-| Number of Waypoints | Fuel Savings | Computation Time
-|-----|-----|-----|-----
-| 5 | 7.2% | 4.3 minutes
-| 9 | 10.1% | 11.8 minutes
-| 13 | 12.3% | 21.0 minutes
-| 17 | 12.8% | 35.6 minutes
+| Number of Waypoints | Fuel Savings | Computation Time |
+|----------------------|--------------|------------------|
+| 5                    | 7.2%         | 4.3 minutes      |
+| 9                    | 10.1%        | 11.8 minutes     |
+| 13                   | 12.3%        | 21.0 minutes     |
+| 17                   | 12.8%        | 35.6 minutes     |
 
+## 5.4.2 Objective Weights
 
-#### 5.4.2 Objective Weights
+| Scenario        | Fuel Weight | Time Weight | Weather Weight | Comfort Weight | Fuel Savings | Time Savings |
+|------------------|-------------|-------------|----------------|----------------|--------------|--------------|
+| Fuel Priority    | 0.7         | 0.1         | 0.1            | 0.1            | 14.2%        | 5.3%         |
+| Time Priority    | 0.1         | 0.7         | 0.1            | 0.1            | 8.1%         | 11.6%        |
+| Balanced         | 0.4         | 0.3         | 0.2            | 0.1            | 12.3%        | 8.7%         |
 
-| Scenario | Fuel Weight | Time Weight | Weather Weight | Comfort Weight | Fuel Savings | Time Savings
-|-----|-----|-----|-----
-| Fuel Priority | 0.7 | 0.1 | 0.1 | 0.1 | 14.2% | 5.3%
-| Time Priority | 0.1 | 0.7 | 0.1 | 0.1 | 8.1% | 11.6%
-| Balanced | 0.4 | 0.3 | 0.2 | 0.1 | 12.3% | 8.7%
+## 5.4.3 DTO Update Frequency
 
+| DTO Update Frequency | Fuel Savings | Computation Time |
+|-----------------------|--------------|------------------|
+| Once (pre-flight)     | 9.1%         | 18.7 minutes     |
+| Hourly                | 12.3%        | 21.0 minutes     |
+| Every 15 minutes      | 13.1%        | 28.4 minutes     |
 
-#### 5.4.3 DTO Update Frequency
-
-| DTO Update Frequency | Fuel Savings | Computation Time
-|-----|-----|-----|-----
-| Once (pre-flight) | 9.1% | 18.7 minutes
-| Hourly | 12.3% | 21.0 minutes
-| Every 15 minutes | 13.1% | 28.4 minutes
 
 
 ## 6. Lessons Learned
@@ -2815,31 +2807,29 @@ Where:
 
 #### 8.3.1 Fuel Consumption Breakdown
 
-| Flight Segment | Traditional Method (kg) | AMEDEO QAO (kg) | Savings (kg) | Savings (%)
-|-----|-----|-----|-----
-| Climb | 5,820 | 5,640 | 180 | 3.1%
-| Cruise | 52,430 | 44,980 | 7,450 | 14.2%
-| Descent | 5,200 | 5,025 | 175 | 3.4%
-| Total | 63,450 | 55,645 | 7,805 | 12.3%
-
+| Flight Segment | Traditional Method (kg) | AMEDEO QAO (kg) | Savings (kg) | Savings (%) |
+|----------------|--------------------------|-----------------|--------------|-------------|
+| Climb          | 5,820                    | 5,640           | 180          | 3.1%        |
+| Cruise         | 52,430                   | 44,980          | 7,450        | 14.2%       |
+| Descent        | 5,200                    | 5,025           | 175          | 3.4%        |
+| **Total**      | **63,450**               | **55,645**      | **7,805**    | **12.3%**   |
 
 #### 8.3.2 Flight Time Breakdown
 
-| Flight Segment | Traditional Method | AMEDEO QAO | Savings (min) | Savings (%)
-|-----|-----|-----|-----
-| Climb | 22 min | 20 min | 2 min | 9.1%
-| Cruise | 5h 42 min | 5h 12 min | 30 min | 8.8%
-| Descent | 28 min | 26 min | 2 min | 7.1%
-| Total | 6h 32 min | 5h 58 min | 34 min | 8.7%
-
+| Flight Segment | Traditional Method | AMEDEO QAO | Savings (min) | Savings (%) |
+|----------------|---------------------|------------|---------------|-------------|
+| Climb          | 22 min             | 20 min     | 2 min         | 9.1%        |
+| Cruise         | 5h 42 min          | 5h 12 min  | 30 min        | 8.8%        |
+| Descent        | 28 min             | 26 min     | 2 min         | 7.1%        |
+| **Total**      | **6h 32 min**      | **5h 58 min** | **34 min**   | **8.7%**    |
 
 #### 8.3.3 Environmental Impact
 
-| Metric | Traditional Method | AMEDEO QAO | Reduction | Reduction (%)
-|-----|-----|-----|-----
-| CO2 Emissions | 199,868 kg | 175,282 kg | 24,586 kg | 12.3%
-| NOx Emissions | 872 kg | 764 kg | 108 kg | 12.4%
-| Contrail Formation Potential | 0.68 | 0.42 | 0.26 | 38.2%
+| Metric                     | Traditional Method | AMEDEO QAO    | Reduction    | Reduction (%) |
+|----------------------------|--------------------|---------------|--------------|----------------|
+| CO2 Emissions              | 199,868 kg        | 175,282 kg    | 24,586 kg    | 12.3%          |
+| NOx Emissions              | 872 kg            | 764 kg        | 108 kg       | 12.4%          |
+| Contrail Formation Potential | 0.68             | 0.42          | 0.26         | 38.2%          |
 
 
 ## GenAI Proposal Status Disclaimer
