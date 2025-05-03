@@ -22,5 +22,10 @@
   "postCreateCommand": "npm install",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "tasks": {
+    "build": "npm install",
+    "test": "npm test",
+    "launch": "npm run start"
   }
 }
