@@ -393,7 +393,7 @@ revision_history:
 
 ---
 
-**GAIA PLATFORMS.**
+**GAIA PLATFORM-IA. AI Agency Team Platform**
 
 # GAIA AI Agent Hierarchy — Quick Reference (v1.0)
 
