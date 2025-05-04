@@ -1810,7 +1810,7 @@ revision_history:
             *   [GAIA-COMMON-SUPL-50-03-DesignDisassembly-SPEC-A.yaml](docs/common/supl/50/GAIA-COMMON-SUPL-50-03-DesignDisassembly-SPEC-A.yaml)
             *   [GAIA-COMMON-SUPL-50-04-CircularEconomyMetrics-RPT-A.md](docs/common/supl/50/GAIA-COMMON-SUPL-50-04-CircularEconomyMetrics-RPT-A.md)
 
-       </details>
+          </details>
 *   **Part: Robotic Systems (GP-RAME)** *(Formerly Part VI in AToC)*
     *   *Master Index:* [`ToC-GP-RAME.md`](docs/common/rame/ToC-GP-RAME.md) *(Placeholder Link)*
     <details><summary>Expand GP-RAME Outline</summary>
@@ -2026,9 +2026,8 @@ revision_history:
 | OBSOLETE | Document has been superseded or is no longer applicable |
 
 ## 10. Cross-Reference Index
-*(A unified cross-reference index covering key interactions between Air, Space, and Common systems will be maintained separately)*
+*(A unified cross-reference index covering key interactions between Air, Space, and Common systems will be maintained separately, potentially as a dedicated document or integrated into a knowledge graph.)*
 
 ---
 
 *End of Unified Overview & Master Index (v1.3 - Fully Expanded)*
-
