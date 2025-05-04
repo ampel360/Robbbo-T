@@ -1,4 +1,7 @@
-# GAIA AERToC (Aerospace Eletronic Reference Table of Content) Documentation Ecosystem - Unified Overview & Master Index (v1.5 - Reworked)
+# GAIA AERO.SPACE
+## Aerospace Electronic Reference Overview – Systems Programmed as Agentic Component Experts
+
+### Documentation Ecosystem – Unified Overview & Master Index (v1.5 – Reworked)
 
 > **Disclaimer - GenAI Proposal Status**: Esta documentación representa una propuesta generada mediante tecnologías de Inteligencia Artificial Generativa y está sujeta a revisión y validación por expertos del dominio antes de su implementación.
 
@@ -11,76 +14,77 @@
 | Date            | 2025-05-05                                   |
 | Status          | DRAFT                                        |
 | Applicability   | GAIA AIR & SPACE PROGRAMS (All Platforms)    |
+| Context         | Master Index for Agentic Component Experts Ecosystem |
 
 ## 1. Purpose & Scope
 
-This document provides the master overview and unified index for the entire GAIA Documentation Ecosystem, encompassing both GAIA AIR and GAIA SPACE programs. It establishes a clear, non-redundant structure separating **Common** foundational/supporting documentation from **Domain-Specific** documentation for Air and Space platforms.
+This document provides the master overview and unified index for the entire **GAIA Documentation Ecosystem**, which supports the **GAIA AERO.SPACE** initiative, conceptualizing systems as **Agentic Component Experts**. It encompasses both GAIA AIR and GAIA SPACE programs, integrating their structural organization (AToC and SToC) with the semantic definitions from GASTOP-CO2.
 
-The purpose is to establish a single entry point for navigating all technical documentation, standards, and project artifacts, ensuring consistency, traceability, and support for advanced knowledge management across all GAIA platforms.
+The purpose is to establish a single entry point for navigating all technical documentation, standards, and project artifacts necessary for the development, operation, interaction, and maintenance of these intelligent, agentic systems across all GAIA platforms. This unified structure ensures consistency, traceability, and support for advanced knowledge management and AI agent integration.
 
 ## 2. Foundational Framework Components
 
 The GAIA Documentation Ecosystem is built upon:
 
-*   **Common Documentation Parts (GP-FD, CN, GB, SUPL, RAME, PM, DS, DIMENSIONS, RS):** Foundational principles, shared digital services, Industry 5.0 aspects, project management, and standards applicable across domains. *(See Section 5)*
-*   **GAIA AIR Specific Documentation (AToC Structure - Part I: ATA 00-99):** Documentation specific to Air platforms, organized by ATA chapters. *(See Section 6)*
-*   **GAIA SPACE Specific Documentation (SToC Structure - Parts: SS, MO, SE, LS, SR):** Documentation specific to Space platforms, organized by SNS chapters. *(See Section 7)*
-*   **GAIA Aerospace Table of Program Content Ontology (GASTOP-CO2):** The semantic layer defining content meaning and relationships. *(Refer to `GASToP-CO2` document)*
-*   **GAIA-CO-ASD-LIB Standard:** Common standards for file formats, naming, and metadata. *(See Section 4)*
+*   **Air Table of Contents (AToC):** Organizes **GAIA AIR** documentation (Hardware & Software Agentics) based on ATA chapters. *(See Section 5)*
+*   **Space Table of Contents (SToC):** Organizes **GAIA SPACE** documentation (Hardware & Software Agentics) based on a Space Numbering System (SNS). *(See Section 6)*
+*   **Common Parts (GP-FD, CN, GB, SUPL, RAME, PM, DS, DIMENSIONS, RS):** Contain foundational principles, shared digital services, Industry 5.0 aspects, project management, and standards applicable across domains. *(See Section 7)*
+*   **GAIA Aerospace Table of Program Content Ontology (GASTOP-CO2):** Provides the semantic layer defining the *meaning* and *relationships* between content types. *(Refer to `GASToP-CO2` document)*
+*   **GAIA-CO-ASD-LIB Standard:** Defines common standards for file formats, naming, and metadata. *(See Section 4)*
 *   **Unified INFOCODE Index:** Common codes classifying document purpose. *(See Section 3)*
 
 ## 3. Unified INFOCODE-INDEX
 
 *(This index defines the standard document types used across the ecosystem)*
 
-| Code   | Description                        | File Format       |
-| :----- | :--------------------------------- | :---------------- |
-| OV     | Overview                           | Markdown (.md)    |
-| SPEC   | Specification                      | YAML (.yaml)      |
-| SDD    | System Design Description          | YAML (.yaml)      |
-| ICD    | Interface Control Document         | YAML (.yaml)      |
-| PROC   | Procedure                          | Markdown (.md)    |
-| DWG    | Drawing                            | SVG (.svg)        |
-| LIST   | List                               | CSV (.csv)        |
-| REQ    | Requirements                       | YAML (.yaml)      |
-| GLO    | Glossary                           | Markdown (.md)    |
-| PLAN   | Plan                               | Markdown (.md)    |
-| ARCH   | Architecture                       | YAML (.yaml) + SVG (.svg) |
-| SEC    | Security                           | YAML (.yaml)      |
-| TEST   | Test Documentation                 | YAML (.yaml)      |
-| TRN    | Training Material                  | Markdown (.md)    |
-| UG     | User Guide                         | Markdown (.md)    |
-| CAL    | Calculation / Analysis Report      | Markdown (.md)    |
-| RPT    | Report                             | Markdown (.md)    |
-| RES    | Research Document                  | Markdown (.md)    |
-| MAN    | Manual                             | Markdown (.md)    |
-| CAT    | Catalog / Parts List               | CSV (.csv)        |
-| FIG    | Figure / Illustration              | SVG (.svg)        |
-| CONOPS | Concept of Operations              | Markdown (.md)    |
-| WBS    | Work Breakdown Structure           | Markdown (.md)    |
-| JSON   | JSON Data / Schema                 | JSON (.json)      |
-| BOM    | Bill of Materials                  | CSV (.csv)        |
-| SWD    | Software Documentation (Container) | Markdown (.md)    |
-| ADMIN  | Administrative Document            | Markdown (.md)    |
-| REF    | Reference Document / Pointer       | Markdown (.md)    |
-| IDX    | Index Document                     | Markdown (.md)    |
-| MPD    | Maintenance Planning Document      | YAML (.yaml)      |
-| WDM    | Wiring Diagram Manual              | Markdown (.md)    |
-| CERT   | Certification Document             | Markdown (.md)    |
-| PRES   | Presentation                       | Markdown (.md)    |
-| BASE   | Baseline Document                  | Markdown (.md)    |
-| MD     | Markdown Document (Generic)        | Markdown (.md)    |
-| SCRIPT | Script / Code                      | (Various)         |
-| NB     | Notebook (e.g., Jupyter)           | (Various)         |
-| ORB    | Orbital Analysis                   | YAML (.yaml)      |
-| RAD    | Radiation Analysis                 | YAML (.yaml)      |
-| THERM  | Thermal Analysis                   | YAML (.yaml)      |
-| SIM    | Simulation                         | YAML (.yaml)      |
-| AERO   | Aerodynamic Analysis               | YAML (.yaml)      |
-| PROP   | Propulsion Analysis                | YAML (.yaml)      |
-| STRUCT | Structural Analysis                | YAML (.yaml)      |
-| AVION  | Avionics Analysis                  | YAML (.yaml)      |
-| XDOM   | Cross-Domain Reference             | Markdown (.md)    |
+| Code   | Description                        | File Format       | AToC | SToC |
+| :----- | :--------------------------------- | :---------------- | :--: | :--: |
+| OV     | Overview                           | Markdown (.md)    | ✓    | ✓    |
+| SPEC   | Specification                      | YAML (.yaml)      | ✓    | ✓    |
+| SDD    | System Design Description          | YAML (.yaml)      | ✓    | ✓    |
+| ICD    | Interface Control Document         | YAML (.yaml)      | ✓    | ✓    |
+| PROC   | Procedure                          | Markdown (.md)    | ✓    | ✓    |
+| DWG    | Drawing                            | SVG (.svg)        | ✓    | ✓    |
+| LIST   | List                               | CSV (.csv)        | ✓    | ✓    |
+| REQ    | Requirements                       | YAML (.yaml)      | ✓    | ✓    |
+| GLO    | Glossary                           | Markdown (.md)    | ✓    | ✓    |
+| PLAN   | Plan                               | Markdown (.md)    | ✓    | ✓    |
+| ARCH   | Architecture                       | YAML (.yaml) + SVG (.svg) | ✓    | ✓    |
+| SEC    | Security                           | YAML (.yaml)      | ✓    | ✓    |
+| TEST   | Test Documentation                 | YAML (.yaml)      | ✓    | ✓    |
+| TRN    | Training Material                  | Markdown (.md)    | ✓    | ✓    |
+| UG     | User Guide                         | Markdown (.md)    | ✓    | ✓    |
+| CAL    | Calculation / Analysis Report      | Markdown (.md)    | ✓    | ✓    |
+| RPT    | Report                             | Markdown (.md)    | ✓    | ✓    |
+| RES    | Research Document                  | Markdown (.md)    | ✓    | ✓    |
+| MAN    | Manual                             | Markdown (.md)    | ✓    | ✓    |
+| CAT    | Catalog / Parts List               | CSV (.csv)        | ✓    | ✓    |
+| FIG    | Figure / Illustration              | SVG (.svg)        | ✓    | ✓    |
+| CONOPS | Concept of Operations              | Markdown (.md)    | ✓    | ✓    |
+| WBS    | Work Breakdown Structure           | Markdown (.md)    | ✓    | ✓    |
+| JSON   | JSON Data / Schema                 | JSON (.json)      | ✓    | ✓    |
+| BOM    | Bill of Materials                  | CSV (.csv)        | ✓    | ✓    |
+| SWD    | Software Documentation (Container) | Markdown (.md)    | ✓    | ✓    |
+| ADMIN  | Administrative Document            | Markdown (.md)    | ✓    | ✓    |
+| REF    | Reference Document / Pointer       | Markdown (.md)    | ✓    | ✓    |
+| IDX    | Index Document                     | Markdown (.md)    | ✓    | ✓    |
+| MPD    | Maintenance Planning Document      | YAML (.yaml)      | ✓    | ✓    |
+| WDM    | Wiring Diagram Manual              | Markdown (.md)    | ✓    | ✗    |
+| CERT   | Certification Document             | Markdown (.md)    | ✓    | ✓    |
+| PRES   | Presentation                       | Markdown (.md)    | ✓    | ✓    |
+| BASE   | Baseline Document                  | Markdown (.md)    | ✓    | ✓    |
+| MD     | Markdown Document (Generic)        | Markdown (.md)    | ✓    | ✓    |
+| SCRIPT | Script / Code                      | (Various)         | ✓    | ✓    |
+| NB     | Notebook (e.g., Jupyter)           | (Various)         | ✓    | ✓    |
+| ORB    | Orbital Analysis                   | YAML (.yaml)      | ✗    | ✓    |
+| RAD    | Radiation Analysis                 | YAML (.yaml)      | ✗    | ✓    |
+| THERM  | Thermal Analysis                   | YAML (.yaml)      | ✓    | ✓    |
+| SIM    | Simulation                         | YAML (.yaml)      | ✓    | ✓    |
+| AERO   | Aerodynamic Analysis               | YAML (.yaml)      | ✓    | ✗    |
+| PROP   | Propulsion Analysis                | YAML (.yaml)      | ✓    | ✓    |
+| STRUCT | Structural Analysis                | YAML (.yaml)      | ✓    | ✓    |
+| AVION  | Avionics Analysis                  | YAML (.yaml)      | ✓    | ✓    |
+| XDOM   | Cross-Domain Reference             | Markdown (.md)    | ✓    | ✓    |
 
 ## 4. GAIA-CO-ASD-LIB Standard (Unified)
 
@@ -115,20 +119,62 @@ The GAIA Documentation Ecosystem is built upon:
 
 ### Metadata (Unified Standard Example)
 
-*(The standard YAML metadata block example as defined in v1.4 remains here)*
+Each document must include the following standardized metadata header (example shown for YAML, adapt for Markdown):
+
 ```yaml
 ---
 # GAIA-CO-ASD-LIB Metadata Block v1.0
 title: Document Title
-# ... (rest of metadata fields) ...
+documentID: GAIA-[Domain]-[Chapter]-[Section]-[Subject]-[InfoCode]-[Variant]
+revision: X.X
+date: YYYY-MM-DD # Effective date of this revision
+status: [DRAFT|REVIEW|APPROVED|RELEASED|OBSOLETE] # Current status
+applicability: # Structured Applicability
+  platforms: [Platform1, Platform2] # e.g., [AMPEL360, AMPEL360+] or [AMPEL-SPACE]
+  serial_numbers: [ALL | Range | List]
+  modifications: [ModID1, ModID2 | ALL | NONE]
+authors: # List of contributors to this revision
+  - Author Name <email@example.com>
+  - AI Agent Name (Model Version)
+securityClass: [UNCLASSIFIED|RESTRICTED|CONFIDENTIAL|SECRET]
+distribution: Distribution Statement (e.g., Distribution A)
+export_control: Export Control Rating (e.g., EAR99, ITAR)
+keywords: # Relevant search keywords
+  - Keyword1
+  - Keyword2
+references: # Links to external standards or internal foundational docs
+  - documentID: Referenced_Standard_ID
+    title: Title of Referenced Standard
+  - documentID: Foundational_Doc_ID
+    title: Title of Foundational Document
+related_documents: # Links to other GAIA documents within the ecosystem
+  - documentID: Related_Doc_ID_1
+    title: Title of Related Document 1
+    relationship: [PARENT|CHILD|REFERENCES|IMPLEMENTS|VERIFIES|CONSTRAINS|...]
+  - documentID: Related_Doc_ID_2
+    title: Title of Related Document 2
+    relationship: ...
+revision_history:
+  - revision: X.X
+    date: YYYY-MM-DD
+    author: Author Name
+    summary: Description of changes in this revision
+  - revision: X.Y
+    date: YYYY-MM-DD
+    author: Author Name
+    summary: Description of changes in previous revision
 ---
+
+# Document Title (for Markdown)
+
+(... Document Content Starts Here ...)
 ```
 
 ---
 
 ## 5. Master Index Part I: GAIA AIR (AToC Structure - Top Level)
 
-*This part covers **AIR Domain Specific** documentation, organized by ATA chapters. Documents listed here are specific to Air platforms or are Air-specific implementations referencing Common standards/components.*
+*This part covers **AIR Domain Specific** documentation (Hardware & Software), organized by ATA chapters.*
 
 <details>
 <summary><strong>Expand Part I: ATA Chapters (00-99) Top-Level Outline</strong></summary>
@@ -347,14 +393,7 @@ title: Document Title
 
 ---
 
+**GAIA PLATFORMS.**
+
 *End of Unified Overview & Master Index (v1.5 - Reworked)*
 ```
-
-This **v1.5** structure provides:
-
-1.  A clear separation between Common, Air-Specific (AToC), and Space-Specific (SToC) documentation parts.
-2.  Unified handling of Project Management and other cross-cutting concerns within the Common Parts.
-3.  A top-level outline for each Part and Chapter/SNS Code, indicating where detailed document lists (like those generated previously for specific ATA/SNS chapters) should reside (linked via placeholder `index.md` files for now).
-4.  Consistent application of the foundational standards (InfoCodes, Naming, Metadata).
-
-This structure should be much cleaner and serve as a better foundation. Please let me know your next request based on this reworked index.
