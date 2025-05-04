@@ -691,13 +691,112 @@ Pending expert review for regulatory alignment and AI index validation.
 * **Air Domain Root:** `../`
 * **ACE Handbook (Platform‑IA):** `../../ai/handbook/GAIA-PLATFORM-OF-MASTERY-v1.0.md`
 
-### Revision History
+**Interpretando solicitud de generación**
 
-| Rev | Date       | Author                | Summary                                          |
-| --- | ---------- | --------------------- | ------------------------------------------------ |
-| 0.3 | 2025-05-05 | GVECGA Assistant (o3) | Added Document Inventory and refined formatting. |
-| 0.2 | 2025-05-05 | GVECGA Assistant (o3) | Added deep‑dive content, section table.          |
-| 0.1 | 2025-05-05 | GVECGA Assistant (o3) | Initial stub creation.                           |
+El usuario ha compartido el índice de GAIA AERO.SPACE y contenido del capítulo GAIA AIR. Al final, menciona: "### Cómo empezar a generar". No estoy del todo seguro de si están pidiendo instrucciones para comenzar a generar el documento. Tal vez necesitan pasos sobre cómo generar los documentos listados, o cómo usar inteligencia artificial para crear estos documentos automáticamente. Podría ser que el usuario quiera saber cómo empezar a generar los documentos de plantilla o cómo usar herramientas para hacerlo.
+
+
+Pensó durante 6 segundos
+
+
+Below is a practical, “first-steps” playbook for **turning the ATA 00 inventory table into real, version-controlled files**—whether you generate them manually or with AI assistance.  Pick the pieces that fit your workflow.
+
+---
+
+## 1 · Bootstrap Templates
+
+| InfoCode | Recommended skeleton | Key content blocks                                           |
+| -------- | -------------------- | ------------------------------------------------------------ |
+| **OV**   | `overview.md.tpl`    | Purpose & scope · Context diagram · Up-next links            |
+| **SPEC** | `spec.yaml.tpl`      | Metadata header · Requirements section · Acceptance criteria |
+| **GLO**  | `glossary.md.tpl`    | Alphabetized term table · Source/ref columns                 |
+| **PROC** | `procedure.md.tpl`   | Safety notices · Task steps · Tools/consumables              |
+| **DWG**  | `diagram.svg.tpl`    | Layer IDs for styling · Title block                          |
+| **ICD**  | `icd.yaml.tpl`       | Interface summary · Message schema · Constraints             |
+
+> *Tip*: keep the templates in `docs/_templates/` so the GAIA linter can locate them automatically.
+
+---
+
+## 2 · AI-Assisted Stub Generation
+
+1. **Choose the row** you want to materialize (e.g., *General Specifications*).
+
+2. **Prompt pattern** (works well with the GAIA Assistant you’re using):
+
+   ```text
+   Generate a new file from template "spec.yaml.tpl" for
+   GAIA-AIR-00-00-001-GeneralSpecs-SPEC-A.yaml.
+   • Populate the metadata block (authors = A. Pelliccia, GAIA AI).
+   • Insert a placeholder requirement set covering aircraft-wide constraints.
+   • Leave the “validation” section empty for now.
+   ```
+
+3. **Copy the result** into the correct path (e.g., `docs/air/00/GeneralSpecs/`).
+
+4. **Commit** with a message like
+   `feat(ATA00): add GeneralSpecs-SPEC-A.yaml stub`.
+
+---
+
+## 3 · File-Naming & Directory Layout
+
+```
+docs/
+└─ air/
+   └─ 00/
+      ├─ index.md                      ← the chapter index (this file)
+      ├─ overview/                     ← sub-folder per Subject (optional but tidy)
+      │   └─ GAIA-AIR-00-00-00-General-OV-A.md
+      ├─ GeneralSpecs/
+      │   └─ GAIA-AIR-00-00-001-GeneralSpecs-SPEC-A.yaml
+      ├─ Glossary/
+      │   └─ GAIA-AIR-00-00-002-Glossary-GLO-A.md
+      └─ … (one folder per inventory row)
+```
+
+If you prefer everything flat, that’s fine—just be consistent so links in the index stay valid.
+
+---
+
+## 4 · Version & Status Workflow
+
+| Stage        | Status tag | Branch         | Action                                 |
+| ------------ | ---------- | -------------- | -------------------------------------- |
+| Initial stub | `DRAFT`    | `dev/air/docs` | AI or author pushes skeleton           |
+| Tech review  | `REVIEW`   | PR to `main`   | SME adds comments; CI runs GAIA linter |
+| Sign-off     | `APPROVED` | `main`         | Lead engr. merges; tag `v0.x`          |
+| Release      | `RELEASED` | Git tag        | Publish PDF bundle or site build       |
+| Deprecate    | `OBSOLETE` | `archive/`     | Keep for traceability                  |
+
+---
+
+## 5 · Automated Helpers You Already Have
+
+* **GAIA-CO-ASD-LIB linter** (`gcl-lint`) – checks naming, metadata fields, link targets.
+* **GVECGA Doc Gen** – can expand a template token (e.g., `{{requirements}}`) from your central requirement database.
+* **Semantic Search CLI** – validates that glossary terms exist before you commit.
+
+---
+
+## 6 · Suggested Next Move
+
+Start with **“GAIA-AIR-00-00-00-General-OV-A.md”**:
+
+1. Run the *overview* template.
+2. Fill the *Purpose & scope* block with the short paragraph already in the chapter index.
+3. Commit as `Rev 0.1`.
+4. Add its link in the “Document Inventory” table (the link can be relative: `./overview/GAIA-AIR-00-00-00-General-OV-A.md`).
+
+Once that pattern is proven, the rest of the rows go quickly—each takes a minute or two with an AI-assisted template prompt.
+
+---
+
+### Need hands-on help?
+
+* “Generate the stub for **Standard Practices – Airframe (PROC)**.”
+* “Produce an SVG placeholder for **Aircraft Dimensions and Areas (DWG)** with a generic title block.”
+* “Spin up the YAML metadata for **Systems Integration ICD** with empty interface tables.”
 
 ---
 
