@@ -395,5 +395,206 @@ revision_history:
 
 **GAIA PLATFORMS.**
 
+# GAIA AI Agent Hierarchy — Quick Reference (v1.0)
+
+> This excerpt provides a **human‑readable view** of the GAIA Agentic Component Experts (ACEs) across the COMMON, AIR, and SPACE domains. For machine‑readable details see the full catalog: `GAIA-COMMON-AI-05-AgentHierarchy-CAT-A.yaml`.
+
+---
+
+## COMMON Domain
+
+### FUNDAMENTOR `COMMON‑FD‑ACE` — *Program Foundations*
+
+* **REQLOGIC** (S1) – Requirements & Traceability
+* **ETHICORE** (S2) – Ethics, Legal & Safety Assurance
+* **ONTOFORGE** (S3) – Ontology Curation & Alignment
+
+### NETWORX `COMMON‑CN‑ACE` — *Computing Networks*
+
+* **CLOUDMAPPER** (S1) – Cloud/Edge Topology Optimizer
+* **CRYPTOSHIELD** (S2) – Zero‑Trust & Cyber‑Threat Analytics
+* **DATAPIPE** (S3) – High‑Throughput Data‑Path Planner
+
+### GROUNDOR `COMMON‑GB‑ACE` — *Ground‑Based Systems*
+
+* **CONTROLHUB** (S1) – Ground‑Control Software Suite
+* **LOGISTIX** (S2) – Transport & Warehousing Simulator
+* **FACILICAD** (S3) – Facility Layout & Capacity Planner
+
+### SUPPLYON `COMMON‑SUPL‑ACE` — *Supply Chain & Logistics*
+
+* **SRISK** (S1) – Supplier‑Risk Profiler
+* **TTRACE** (S2) – Traceability & Provenance Tracker
+* **ECOLENS** (S3) – Circular‑Economy Impact Estimator
+
+### ROBOTICA `COMMON‑RAME‑ACE` — *Robotic Systems*
+
+* **PATHWISE** (S1) – Motion Planning & Collision Avoidance
+* **HRCSAFE** (S2) – Human‑Robot Co‑Safety Monitor
+* **PDMENGINE** (S3) – Predictive‑Maintenance Reasoner
+
+### PROJECTUS `COMMON‑PM‑ACE` — *Project Management*
+
+* **SCHEDULON** (S1) – WBS & Timeline Generator
+* **RISKQUANT** (S2) – Monte‑Carlo Cost/Risk Analyst
+* **CONFIGWARD** (S3) – Configuration‑Management Checker
+
+### DESIGNETIC `COMMON‑DS‑ACE` — *Digital Design & AI*
+
+* **MODELCRAFT** (S1) – MBSE Model Synthesizer
+* **UXGENIE** (S2) – Generative UI/UX Companion
+* **KNOWLEDGER** (S3) – Knowledge‑Graph Enricher
+
+### FUTUROLOG `COMMON‑DIM‑ACE` — *Research & Speculation*
+
+* **SCENARION** (S1) – Futures Scenario Builder
+* **TECHSCOPE** (S2) – Emerging‑Tech Radar
+* **SYNAPLEX** (S3) – Cross‑Domain Concept Weaver
+
+### STANDARDEX `COMMON‑RS‑ACE` — *Reference Standards*
+
+* **STDALIGN** (S1) – Standards‑Compliance Mapper
+* **DOCVALID** (S2) – Document Format Validator
+* **REFGRAPH** (S3) – Cross‑Reference Graph Linker
+
+---
+
+## AIR Domain
+
+### STRUCTURA `AIR‑STR‑ACE` — *Airframe & Structural Systems*
+
+* **FEMNIC** (S1) – Finite‑Element Mesh Synthesizer
+* **MATERIUM** (S2) – Materials & Composites Advisor
+* **FATIGUARD** (S3) – Fatigue & Damage‑Tolerance Analyst
+
+### PROPULSIA `AIR‑PROP‑ACE` — *Propulsion & Power‑Plant*
+
+* **CYCLEMAX** (S1) – Thermodynamic‑Cycle Optimizer
+* **ECTUNE** (S2) – Engine‑Control Parameter Tuner
+* **NOXWATCH** (S3) – Emission & Noise Evaluator
+
+### AVIONIX `AIR‑AVIO‑ACE` — *Avionics & Flight Control*
+
+* **CTLLOGIC** (S1) – Control‑Law Synthesizer
+* **SENSORA** (S2) – Sensor & Data‑Bus Validator
+* **CERTIFYX** (S3) – DO‑178/DO‑254 Compliance Checker
+
+### ATMOS `AIR‑ECS‑ACE` — *Environmental Control Systems*
+
+* **FLOWBAL** (S1) – Airflow & Cabin‑Pressure Balancer
+* **AIRQUAL** (S2) – CO₂ & Air‑Quality Monitor
+* **THERMBAL** (S3) – Thermal‑Load Forecaster
+
+### VOLTARA `AIR‑ELEC‑ACE` — *Electrical Power*
+
+* **LOADMAP** (S1) – Electrical‑Load Analyzer
+* **DISTRIBOT** (S2) – Power‑Distribution Optimizer
+* **HEALTHGRID** (S3) – Battery & Generator SOH Tracker
+
+### HYDRON `AIR‑FUEL‑ACE` — *Fuel & Energy Storage*
+
+* **H2MODEL** (S1) – Hydrogen System Simulator
+* **SAFMIX** (S2) – SAF Blend Performance Evaluator
+* **FUELCELLX** (S3) – Fuel‑Cell Integration Advisor
+
+### GEARBOX `AIR‑LNDG‑ACE` — *Landing Gear & Brakes*
+
+* **STRESSCALC** (S1) – Gear‑Load Calculator
+* **BRAKETHERM** (S2) – Brake Thermal Analyst
+* **RETRACTSIM** (S3) – Retraction Kinematics Simulator
+
+### SAFEGUARD `AIR‑SAFE‑ACE` — *Safety & Fire Protection*
+
+* **FIREMAP** (S1) – Fire‑Suppression Designer
+* **HAZID** (S2) – Hazard Identification Engine
+* **SAFETYCASE** (S3) – Safety‑Case Evidence Builder
+
+### CABINOR `AIR‑CAB‑ACE` — *Cabin Systems & Furnishings*
+
+* **LAYOUTGEN** (S1) – Cabin‑Layout Optimizer
+* **COMFORTLAB** (S2) – Passenger Comfort Analyst
+* **IFEPLAN** (S3) – In‑Flight Entertainment Planner
+
+### MAINTEL `AIR‑MAINT‑ACE` — *Maintenance & Supportability*
+
+* **PREDICTIX** (S1) – Predictive‑Maintenance Predictor
+* **CMSLINK** (S2) – Central‑Maintenance‑System Integrator
+* **SPARTRACK** (S3) – Spare‑Parts Inventory Tracker
+
+---
+
+## SPACE Domain
+
+### ORBITSTRUCT `SPACE‑STR‑ACE` — *Structural Systems*
+
+* **LOADZERO** (S1) – Micro‑g Load Path Analyzer
+* **COMPOLUX** (S2) – Composite Panel Optimizer
+* **VIBROSCOPE** (S3) – Launch Vibro‑Acoustic Assessor
+
+### THERMION `SPACE‑THERM‑ACE` — *Thermal Control*
+
+* **RADIOMESH** (S1) – Radiator Sizing Tool
+* **MLISHIELD** (S2) – MLI Blanket Designer
+* **CRYOLOOP** (S3) – Cryogenic Loop Simulator
+
+### VECTRUST `SPACE‑PROP‑ACE` — *Propulsion Systems*
+
+* **CHEMPULSE** (S1) – Chemical Propellant Analyzer
+* **IONOPT** (S2) – Electric Thruster Optimizer
+* **TVCCALC** (S3) – Thrust‑Vector Control Calculator
+
+### STELLARIS `SPACE‑GNC‑ACE` — *Guidance, Navigation & Control*
+
+* **AODFUSION** (S1) – Attitude/Orbit Determination Fuser
+* **FAILSAFE** (S2) – Fault‑Tolerant Control Checker
+* **GNCSIM** (S3) – High‑Fidelity 6‑DOF Simulator
+
+### COSMOCOMM `SPACE‑COMM‑ACE` — *Communications Systems*
+
+* **LINKBUD** (S1) – Link‑Budget Calculator
+* **SDRFORM** (S2) – SDR Waveform Synthesizer
+* **RELAYPLAN** (S3) – Inter‑Satellite Relay Planner
+
+### SOLARA `SPACE‑EPS‑ACE` — *Electrical Power Systems*
+
+* **ARRAYGEN** (S1) – Solar‑Array Sizer
+* **BATTGUARD** (S2) – Battery SOH & Degradation Modeler
+* **POWDIST** (S3) – Power Distribution Optimizer
+
+### BIOSPHERE `SPACE‑ECLSS‑ACE` — *Life Support*
+
+* **ATMREV** (S1) – Atmosphere Revitalization Model
+* **WATREC** (S2) – Water Recovery Loop Analyzer
+* **CREWMET** (S3) – Crew Metabolic Load Forecaster
+
+### PAYLOADOR `SPACE‑PAY‑ACE` — *Payload Systems*
+
+* **INSTRUBAL** (S1) – Instrument Resource Budgeter
+* **THERMPAY** (S2) – Payload Thermal Interface Checker
+* **DATAPLAN** (S3) – Payload Data‑Flow Planner
+
+### DATANOVA `SPACE‑CDH‑ACE` — *Command & Data Handling*
+
+* **NETSYNC** (S1) – On‑Board Network Synchronizer
+* **FAULTREC** (S2) – Fault Detection & Recovery Designer
+* **LATCALC** (S3) – Data‑Pipeline Latency Calculator
+
+### MECHNEX `SPACE‑MECH‑ACE` — *Mechanisms*
+
+* **DEPLOYSIM** (S1) – Deployable Dynamics Simulator
+* **ACTULOAD** (S2) – Actuator Load‑Case Evaluator
+* **LUBEPLAN** (S3) – Space‑Grade Lubrication Advisor
+
+---
+
+### How to Use This Reference
+
+* **Quick look‑ups**: Identify the Team Leader ACE responsible for a domain, then locate the relevant specialist Sub‑Agent.
+* **Deep dives**: Each bullet corresponds to a YAML‑based System Design Description (SDD) or Interface Control Document (ICD). Follow the agent ID in the catalog to access full specs.
+* **Inter‑domain collaboration**: Cross‑domain requests should be routed through the Team Leader ACE, which orchestrates the required Sub‑Agents via the GVECGA framework.
+
+> *Last updated:* `2025‑05‑05` — For changes see the YAML catalog revision history.
+
+
 *End of Unified Overview & Master Index (v1.5 - Reworked)*
 ```
