@@ -1,6 +1,9 @@
 # GAIA AERO.SPACE
 ## Aerospace Electronic Reference Overview – Systems Programmed as Agentic Component Experts
 
+![image](https://github.com/user-attachments/assets/3a7ea2a8-a49c-45e1-ac98-5a5d76fdfe8c)
+
+
 ### Documentation Ecosystem – Unified Overview & Master Index (v1.5 – Reworked)
 
 > **Disclaimer - GenAI Proposal Status**: Esta documentación representa una propuesta generada mediante tecnologías de Inteligencia Artificial Generativa y está sujeta a revisión y validación por expertos del dominio antes de su implementación.
