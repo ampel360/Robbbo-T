@@ -1,9 +1,12 @@
-# GAIA QUANTUM AEROSPACE ORGANIZATION
-## Aerospace Electronic Reference Overview – Systems Programmed as Agentic Component Experts
+# GAIA QUANTUM AEROSPACE ORGANIZATION<p align="center">
+  <a href="https://github.com/Robbbo-T/"> <!-- Optional: Link logo to the user/org profile -->
+    <img src="https://github.com/Robbbo-T/assets/raw/main/QAO-LOGO.png" alt="GAIA-QAO Logo" width="150"/>
+  </a>
+</p>
 
 ![image](https://github.com/user-attachments/assets/3a7ea2a8-a49c-45e1-ac98-5a5d76fdfe8c)
 
-
+## Aerospace Electronic Reference Overview – Systems Programmed as Agentic Component Experts
 ### Documentation Ecosystem – Unified Overview & Master Index (v1.5 – Reworked)
 
 > **Disclaimer - GenAI Proposal Status**: Esta documentación representa una propuesta generada mediante tecnologías de Inteligencia Artificial Generativa y está sujeta a revisión y validación por expertos del dominio antes de su implementación.
