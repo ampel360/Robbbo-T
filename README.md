@@ -1,4 +1,4 @@
-
+# GAIA-QAO Aerospace General Index (AGI)
 © Amedeo Pelliccia · GAIA-QAO – *Federated Quantum Aerospace Intelligence*
 
 # Part 0: Framework Overview
