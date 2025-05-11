@@ -1452,6 +1452,413 @@ INSERT INTO models (model_code, subtype_id, name, description, introduction_date
 -- Additional model entries would follow the same pattern
 ```
 
+# GAIA-QAO Expanded Model Registry and Configuration Codes
+
+> **DISCLAIMER: GenAI Proposal Status**
+> This document represents a machine-generated proposal for the expanded Model (MDL) codes and Configuration (CC) codes within the GAIA-QAO object identification system. It has not been validated through implementation in aerospace systems. The proposed codes are based on aerospace industry classifications and the specific needs of the GAIA-QAO ecosystem.
+
+## Part I: Expanded Model Registry
+
+The expanded model registry includes representative models for all functional classes and key sub-types in the GAIA-QAO system. Each model follows the established 3-character MDL code structure:
+
+```plaintext
+[G][N][V]
+```
+
+Where:
+
+-   **G** (Generation/Series): Q (Quantum), A (Advanced), P (Prototype), S (Standard)
+-   **N** (Number/Size): 1-4 (Small to Extra Large)
+-   **V** (Variant): A-Z (Sequential or specialized variants)
+
+### Air Systems (AS) Models
+
+#### 1. Passenger Transport (PAX)
+
+| **Sub-Type** | **MDL Code** | **Model Name**          | **Description**                             | **Key Specifications**                  |
+| :----------- | :----------- | :---------------------- | :------------------------------------------ | :-------------------------------------- |
+| NB           | Q2A          | QuantumNarrow QN-200    | Medium quantum-enhanced narrow-body         | Capacity: 180 pax, Range: 5,500 km      |
+| NB           | A2B          | AeroSingle AS-220       | Medium conventional narrow-body             | Capacity: 220 pax, Range: 5,000 km      |
+| WB           | Q3L          | QuantumWide QW-350L     | Large long-range quantum wide-body          | Capacity: 350 pax, Range: 15,000 km     |
+| WB           | A3B          | AeroTwin AT-330         | Large conventional wide-body                | Capacity: 330 pax, Range: 12,000 km     |
+| RJ           | Q1H          | QuantumRegional QR-90H  | Small high-performance quantum regional jet | Capacity: 90 pax, Range: 3,200 km       |
+| RJ           | S1A          | RegionalJet RJ-75       | Small standard regional jet                 | Capacity: 75 pax, Range: 2,800 km       |
+| BJ           | Q1S          | QuantumExec QE-12S      | Special purpose quantum business jet        | Capacity: 12 pax, Range: 7,500 km       |
+| BJ           | A1L          | AeroExec AE-15L         | Long-range conventional business jet        | Capacity: 15 pax, Range: 7,000 km       |
+| VT           | Q1A          | QuantumLift QL-6A       | Small quantum-enhanced eVTOL air taxi       | Capacity: 6 pax, Range: 300 km          |
+| VT           | A1B          | AeroVert AV-4B          | Small conventional eVTOL air taxi           | Capacity: 4 pax, Range: 150 km          |
+| BW           | Q2A          | AMPEL360 BWB-Q250       | Medium quantum-enhanced BWB                 | Capacity: 250 pax, Range: 8,000 km      |
+| BW           | P1B          | BWB-X Demonstrator      | Small BWB technology demonstrator           | Capacity: 40 pax (equiv), Range: 3,000 km |
+| SS           | Q2B          | QuantumSonic QS-150     | Medium quantum-enhanced supersonic airliner | Capacity: 150 pax, Speed: Mach 2.2      |
+| HS           | P2A          | HyperTransport HT-100   | Medium hypersonic transport demonstrator    | Capacity: 100 pax, Speed: Mach 5+       |
+| QP           | Q3L          | QuantumJet Q-350L       | Large long-range quantum-powered airliner   | Capacity: 350 pax, Range: 14,000 km     |
+
+#### 2. Cargo Transport (CGO)
+
+| **Sub-Type** | **MDL Code** | **Model Name**          | **Description**                        | **Key Specifications**                 |
+| :----------- | :----------- | :---------------------- | :------------------------------------- | :------------------------------------- |
+| LC           | Q1A          | QuantumFreight QF-5     | Small quantum-enhanced light cargo     | Payload: 5 tonnes, Range: 2,000 km     |
+| MC           | Q2B          | QuantumFreight QF-20    | Medium quantum-enhanced cargo          | Payload: 20 tonnes, Range: 5,000 km    |
+| HC           | Q3L          | QuantumFreight QF-80L   | Large long-range quantum cargo         | Payload: 80 tonnes, Range: 10,000 km   |
+| FC           | A2A          | AeroConvert AC-30       | Medium passenger-to-cargo conversion   | Payload: 30 tonnes, Range: 6,000 km    |
+| QD           | Q1H          | QuantumExpress QE-8H    | Small high-speed quantum delivery      | Payload: 8 tonnes, Range: 3,500 km     |
+| VC           | Q1A          | QuantumLift QL-3C       | Small quantum VTOL cargo               | Payload: 3 tonnes, Range: 500 km       |
+| UC           | Q2S          | QuantumDrone QD-15S     | Medium special purpose unmanned cargo  | Payload: 15 tonnes, Range: 4,000 km    |
+| QC           | Q3H          | QuantumCargo QC-100H    | Large high-capacity quantum cargo      | Payload: 100 tonnes, Range: 9,000 km   |
+
+#### 3. Intelligence, Surveillance, Reconnaissance (ISR)
+
+| **Sub-Type** | **MDL Code** | **Model Name**          | **Description**                           | **Key Specifications**                   |
+| :----------- | :----------- | :---------------------- | :---------------------------------------- | :--------------------------------------- |
+| UA           | Q2L          | QuantumHawk QH-20L      | Medium long-endurance quantum UAS         | Endurance: 48 hrs, Ceiling: 15,000 m     |
+| MA           | Q3H          | QuantumMaritime QM-300  | Large high-performance maritime patrol    | Endurance: 24 hrs, Range: 9,000 km       |
+| SR           | Q2S          | QuantumRecon QR-200S    | Medium special purpose strategic recon    | Ceiling: 25,000 m, Speed: Mach 3         |
+| TR           | Q1A          | QuantumTactical QT-100  | Small quantum tactical recon              | Endurance: 12 hrs, Ceiling: 12,000 m     |
+| EW           | Q2H          | QuantumSpectrum QS-200  | Medium high-capability electronic warfare | Range: 6,000 km, Advanced EW suite       |
+| SI           | Q2B          | QuantumSignal QS-250    | Medium SIGINT platform                    | Endurance: 18 hrs, Comprehensive SIGINT  |
+| IM           | Q2A          | QuantumImage QI-200     | Medium imaging platform                   | Resolution: 5 cm from 15,000 m           |
+| MS           | Q3S          | QuantumSensor QS-350    | Large multi-sensor platform               | 12+ integrated quantum sensor systems    |
+| QI           | Q3H          | QuantumEye QE-350H      | Large high-altitude quantum ISR           | Endurance: 48+ hrs, Ceiling: 22,000 m    |
+
+#### 4. Scientific Research (SCI)
+
+| **Sub-Type** | **MDL Code** | **Model Name**          | **Description**                              | **Key Specifications**                         |
+| :----------- | :----------- | :---------------------- | :------------------------------------------- | :--------------------------------------------- |
+| AT           | Q2A          | QuantumAtmos QA-200     | Medium atmospheric research aircraft         | Ceiling: 20,000 m, 30+ atmospheric sensors     |
+| OC           | Q2B          | QuantumOcean QO-200     | Medium oceanographic research aircraft       | Endurance: 18 hrs, Advanced ocean sensors      |
+| ER           | Q2H          | QuantumEarth QE-250     | Medium high-performance Earth sensing        | Resolution: 10 cm, 15+ spectral bands        |
+| WX           | Q2S          | QuantumStorm QS-200     | Medium special purpose weather research      | Ceiling: 18,000 m, Storm penetration capability |
+| CR           | Q3L          | QuantumClimate QC-300   | Large long-range climate research            | Range: 12,000 km, Comprehensive climate sensors |
+| GS           | Q2A          | QuantumGeo QG-200       | Medium geophysical survey aircraft           | Endurance: 14 hrs, Advanced geophysical sensors |
+| MP           | Q3S          | QuantumScience QS-300   | Large special purpose multi-research         | Modular sensor bay, 50+ possible configurations |
+| QS           | Q2H          | QuantumSense QS-250H    | Medium high-performance quantum sensing      | 20+ quantum sensors, Unprecedented sensitivity |
+
+#### 5. Utility (UTL)
+
+| **Sub-Type** | **MDL Code** | **Model Name**           | **Description**                            | **Key Specifications**                        |
+| :----------- | :----------- | :----------------------- | :----------------------------------------- | :-------------------------------------------- |
+| FF           | Q2A          | QuantumFire QF-200       | Medium quantum-enhanced firefighting       | Water capacity: 12,000 L, Precision delivery  |
+| AG           | Q1B          | QuantumCrop QC-100       | Small quantum agricultural aircraft        | Spray width: 25 m, Capacity: 2,000 L          |
+| SR           | Q2H          | QuantumRescue QR-200H    | Medium high-performance SAR                | Range: 2,000 km, Advanced sensing suite       |
+| ME           | Q2S          | QuantumMedic QM-200S     | Medium special purpose medical             | Patient capacity: 12, Advanced life support   |
+| PL           | Q1A          | QuantumInspect QI-100    | Small infrastructure inspection            | Endurance: 10 hrs, Precision sensors          |
+| SU           | Q2B          | QuantumSurvey QS-200     | Medium survey aircraft                     | Mapping rate: 500 km²/hr, 0.5 cm resolution   |
+| CP           | Q2L          | QuantumProtect QP-200L   | Medium long-range civil protection         | Range: 5,000 km, Multi-mission capability     |
+| QU           | Q3H          | QuantumUtility QU-300H   | Large high-capability quantum utility      | Modular mission systems, 20+ configurations   |
+
+#### 6. Recreational & Sport (REC)
+
+| **Sub-Type** | **MDL Code** | **Model Name**            | **Description**                               | **Key Specifications**                     |
+| :----------- | :----------- | :------------------------ | :-------------------------------------------- | :----------------------------------------- |
+| GL           | Q1A          | QuantumGlide QG-100       | Small quantum-enhanced glider                 | Glide ratio: 70:1, Span: 18 m              |
+| MG           | Q1B          | QuantumSoar QS-100        | Small quantum motor glider                    | Range: 1,500 km, Glide ratio: 40:1         |
+| UL           | Q1A          | QuantumLight QL-100       | Small quantum ultralight                      | MTOW: 450 kg, Range: 800 km                |
+| AC           | Q1H          | QuantumAero QA-100H       | Small high-performance aerobatic              | Roll rate: 420°/sec, G-limits: +/-12G      |
+| LS           | Q1B          | QuantumSport QS-100       | Small quantum light sport aircraft            | MTOW: 600 kg, Range: 1,200 km              |
+| HB           | A1A          | AeroBuilder AB-100        | Small conventional homebuilt                  | MTOW: 750 kg, Range: 1,000 km              |
+| JW           | Q1S          | QuantumJetpack QJ-100S    | Special purpose quantum jetpack               | Flight time: 45 min, Range: 80 km          |
+| QR           | Q1H          | QuantumLeisure QL-100H    | Small high-performance quantum recreational   | MTOW: 650 kg, Range: 1,500 km              |
+
+#### 7. Experimental (XPR)
+
+| **Sub-Type** | **MDL Code** | **Model Name**         | **Description**                           | **Key Specifications**                       |
+| :----------- | :----------- | :--------------------- | :---------------------------------------- | :------------------------------------------- |
+| TD           | P2A          | TechDemo TD-200        | Medium technology demonstrator            | MTOW: 12,000 kg, Modular test systems        |
+| HP           | P2H          | PerformX PX-200H       | Medium high-performance experimental      | Speed: Mach 3.5, Ceiling: 30,000 m           |
+| NP           | P2S          | PropulsionX PX-200S    | Medium special purpose propulsion testbed | 5 swappable propulsion systems               |
+| NS           | P2B          | StructureX SX-200      | Medium novel structure testbed            | Morphing wing, Active aeroelastics           |
+| VT           | P1A          | VTOLX VX-100           | Small VTOL experimental                   | 8 different lift system configurations       |
+| HY           | P2B          | HybridX HX-200         | Medium hybrid concept demonstrator        | Electric-hydrogen-quantum hybrid             |
+| AT           | P2A          | AutonomyX AX-200       | Medium autonomous testbed                 | Full autonomous capability, AI testbed       |
+| QT           | P3S          | QuantumX QX-300S       | Large special purpose quantum testbed     | Comprehensive quantum technology suite       |
+| HH           | P2A          | HyperX HX-200          | Medium hypersonic demonstrator            | Speed: Mach 6+, Scramjet propulsion          |
+
+#### 8. Lighter Than Air (LTA)
+
+| **Sub-Type** | **MDL Code** | **Model Name**            | **Description**                                | **Key Specifications**                         |
+| :----------- | :----------- | :------------------------ | :--------------------------------------------- | :--------------------------------------------- |
+| AB           | Q2A          | QuantumBlimp QB-200       | Medium quantum-enhanced blimp                  | Volume: 150,000 m³, Payload: 20,000 kg         |
+| AR           | Q3B          | QuantumZeppelin QZ-300    | Large rigid airship                            | Volume: 300,000 m³, Payload: 50,000 kg         |
+| HA           | Q2L          | QuantumStrato QS-200L     | Medium long-endurance stratospheric platform   | Altitude: 20,000 m, Endurance: 180 days        |
+| SB           | Q2S          | QuantumBalloon QB-200S    | Medium special purpose scientific balloon      | Altitude: 35,000 m, Payload: 2,000 kg          |
+| HB           | Q2A          | QuantumHybrid QH-200      | Medium hybrid lift airship                     | Volume: 200,000 m³, Payload: 30,000 kg         |
+| CB           | Q3H          | QuantumAirCargo QA-300H   | Large high-capacity cargo airship              | Payload: 100,000 kg, Range: 10,000 km          |
+| QB           | Q2H          | QuantumLift QL-250H       | Medium high-performance quantum buoyancy       | Volume: 250,000 m³, Quantum buoyancy control   |
+
+#### 9. Military Aircraft (MIL)
+
+| **Sub-Type** | **MDL Code** | **Model Name**           | **Description**                             | **Key Specifications**                        |
+| :----------- | :----------- | :----------------------- | :------------------------------------------ | :-------------------------------------------- |
+| FJ           | Q2S          | QuantumFighter QF-200S   | Medium special purpose quantum fighter      | Speed: Mach 2.5, Supercruise, Quantum sensors |
+| BM           | Q3S          | QuantumStrike QS-300S    | Large special purpose quantum bomber        | Range: 12,000 km, Payload: 30,000 kg          |
+| AT           | Q2A          | QuantumAttack QA-200     | Medium quantum attack aircraft              | Loiter: 6 hrs, Payload: 8,000 kg              |
+| TR           | Q1B          | QuantumTrainer QT-100    | Small quantum trainer                       | Advanced quantum simulation, HOTAS            |
+| TP           | Q3L          | QuantumTransport QT-300L | Large long-range quantum transport          | Payload: 70,000 kg, Range: 10,000 km          |
+| TK           | Q3L          | QuantumTanker QT-300L    | Large long-range quantum tanker             | Fuel capacity: 150,000 kg, Range: 11,000 km   |
+| MH           | Q2A          | QuantumHelicopter QH-200 | Medium quantum military helicopter          | Payload: 5,000 kg, Range: 800 km              |
+| UC           | Q2S          | QuantumCombat QC-200S    | Medium special purpose unmanned combat      | Endurance: 24 hrs, Payload: 2,500 kg          |
+| QW           | Q3H          | QuantumWarfare QW-300H   | Large high-capability quantum warfare       | Comprehensive quantum military systems        |
+
+### Space Systems (SP) Models
+
+#### 10. Satellite (SAT)
+
+| **Sub-Type** | **MDL Code** | **Model Name**          | **Description**                               | **Key Specifications**                     |
+| :----------- | :----------- | :---------------------- | :-------------------------------------------- | :----------------------------------------- |
+| CO           | Q2A          | QuantumComSat QC-200    | Medium quantum communications satellite       | Mass: 350 kg, Global QKD coverage          |
+| NV           | Q2B          | QuantumNav QN-200       | Medium quantum navigation satellite           | Mass: 400 kg, 1 cm positioning accuracy    |
+| EO           | Q2H          | QuantumEarth QE-200H    | Medium high-performance Earth observation     | Mass: 600 kg, Resolution: 0.15 m           |
+| SC           | Q2S          | QuantumScience QS-200S  | Medium special purpose scientific satellite   | Mass: 500 kg, 15+ scientific instruments   |
+| CU           | Q1A          | QuantumCube QC-100      | Small quantum CubeSat                         | Mass: 12 kg (12U), Quantum payload         |
+| WX           | Q2B          | QuantumWeather QW-200   | Medium weather satellite                      | Mass: 3,200 kg, Advanced weather sensors   |
+| RS           | Q2A          | QuantumRelay QR-200     | Medium quantum relay satellite                | Mass: 350 kg, Quantum repeater network     |
+| QS           | Q3H          | QuantumSat QS-300H      | Large high-performance quantum satellite      | Mass: 800 kg, Orbital quantum computer     |
+
+#### 11. Orbital Platform/Vehicle (ORB)
+
+| **Sub-Type** | **MDL Code** | **Model Name**          | **Description**                                  | **Key Specifications**                        |
+| :----------- | :----------- | :---------------------- | :----------------------------------------------- | :-------------------------------------------- |
+| SS           | Q3A          | QuantumStation QS-300   | Large quantum space station                      | Mass: 80,000 kg, Crew: 6-12, Volume: 800 m³   |
+| SL           | Q2S          | QuantumLab QL-200S      | Medium special purpose space laboratory          | Mass: 20,000 kg, 20+ research facilities      |
+| CT           | Q2A          | QuantumCrew QC-200      | Medium crew transport vehicle                    | Mass: 16,000 kg, Crew: 4-6                    |
+| SM           | Q2B          | QuantumService QS-200   | Medium service module                            | Mass: 12,000 kg, 1-year autonomous operation  |
+| RM           | Q2S          | QuantumResearch QR-200S | Medium special purpose research module           | Mass: 15,000 kg, Quantum research suite       |
+| HM           | Q2A          | QuantumHabitat QH-200   | Medium habitation module                         | Mass: 22,000 kg, Crew: 4, Volume: 200 m³      |
+| SV           | Q2A          | QuantumServicing QS-200 | Medium servicing vehicle                         | Mass: 8,000 kg, 5-year service life           |
+| QO           | Q3S          | QuantumOrbit QO-300S    | Large special purpose quantum orbital platform   | Mass: 30,000 kg, Comprehensive quantum facility |
+
+#### 12. Launch System (LCH)
+
+| **Sub-Type** | **MDL Code** | **Model Name**          | **Description**                              | **Key Specifications**                       |
+| :----------- | :----------- | :---------------------- | :------------------------------------------- | :------------------------------------------- |
+| SL           | Q1A          | QuantumLaunch QL-100    | Small quantum-enhanced launch vehicle        | Payload to LEO: 2,000 kg, Height: 30 m       |
+| ML           | Q2B          | QuantumLaunch QL-200    | Medium quantum-enhanced launch vehicle       | Payload to LEO: 8,000 kg, Height: 50 m       |
+| HL           | Q3H          | QuantumLaunch QL-300H   | Heavy quantum-enhanced launch vehicle        | Payload to LEO: 25,000 kg, Height: 70 m      |
+| SH           | Q4A          | QuantumLaunch QL-400    | Super heavy quantum launch vehicle           | Payload to LEO: 100,000 kg, Height: 120 m    |
+| RU           | Q2B          | QuantumReuse QR-200     | Medium reusable launch vehicle               | Payload to LEO: 7,000 kg, Reuses: 30+        |
+| AL           | Q1S          | QuantumAirLaunch QA-100S| Small special purpose air-launched system    | Payload to LEO: 500 kg, Aircraft-launched    |
+| QL           | Q3S          | QuantumLaunch QL-300S   | Large special purpose quantum launch vehicle | Payload to LEO: 20,000 kg, Quantum propulsion |
+
+#### 13. Probe (PRB)
+
+| **Sub-Type** | **MDL Code** | **Model Name**          | **Description**                             | **Key Specifications**                       |
+| :----------- | :----------- | :---------------------- | :------------------------------------------ | :------------------------------------------- |
+| LP           | Q2A          | QuantumLunar QL-200     | Medium quantum lunar probe                  | Mass: 1,200 kg, Lunar orbit + lander         |
+| MP           | Q2L          | QuantumMars QM-200L     | Medium long-duration Mars probe             | Mass: 1,500 kg, Surface mission              |
+| VP           | Q2B          | QuantumVenus QV-200     | Medium Venus probe                          | Mass: 1,300 kg, Atmospheric + surface        |
+| IP           | Q2A          | QuantumMercury QM-200   | Medium inner planet probe                   | Mass: 1,100 kg, Mercury orbiter              |
+| GP           | Q3S          | QuantumJupiter QJ-300S  | Large special purpose gas giant probe       | Mass: 2,800 kg, Orbiter + atmospheric        |
+| OP           | Q3L          | QuantumNeptune QN-300L  | Large long-range outer planet probe         | Mass: 2,500 kg, Neptune system explorer      |
+| AP           | Q2A          | QuantumAsteroid QA-200  | Medium asteroid probe                       | Mass: 1,000 kg, Sample return capability     |
+| SP           | Q2H          | QuantumSolar QS-200H    | Medium high-performance solar probe         | Mass: 1,400 kg, Close solar approach         |
+| QP           | Q3S          | QuantumProbe QP-300S    | Large special purpose quantum probe         | Mass: 2,500 kg, Deep space quantum comms     |
+
+#### 14. Experimental (Space) (XPS)
+
+| **Sub-Type** | **MDL Code** | **Model Name**          | **Description**                             | **Key Specifications**                      |
+| :----------- | :----------- | :---------------------- | :------------------------------------------ | :------------------------------------------ |
+| TP           | P2A          | SpaceTech ST-200        | Medium technology platform                  | Mass: 1,500 kg, 10+ technology demonstrations |
+| NP           | P2S          | PropulsionX PX-200S     | Medium special purpose propulsion testbed   | Mass: 2,000 kg, 5 experimental drives       |
+| QT           | P2H          | QuantumX QX-200H        | Medium high-performance quantum testbed     | Mass: 1,800 kg, Quantum technology suite    |
+| SM           | P2A          | SpaceManufacturing SM-200| Medium in-space manufacturing               | Mass: 2,200 kg, 3D printing, assembly       |
+| SR           | P1B          | SpaceRobotics SR-100    | Small robotic testbed                       | Mass: 800 kg, Advanced manipulators         |
+| SS           | P2A          | SpaceStructures SS-200  | Medium deployable structures                | Mass: 1,600 kg, 50m deployable antenna      |
+| QT           | P3S          | QuantumX QX-300S        | Large special purpose quantum testbed       | Mass: 3,000 kg, Advanced quantum experiments |
+
+#### 15. Space Defense (DEF)
+
+| **Sub-Type** | **MDL Code** | **Model Name**            | **Description**                               | **Key Specifications**                      |
+| :----------- | :----------- | :------------------------ | :-------------------------------------------- | :------------------------------------------ |
+| SS           | Q2A          | QuantumSurveillance QS-200| Medium space surveillance system              | Mass: 1,200 kg, Space domain awareness      |
+| SM           | Q2S          | QuantumDefense QD-200S    | Medium special purpose missile defense        | Mass: 1,800 kg, Tracking and intercept      |
+| SC           | Q2H          | QuantumCommand QC-200H    | Medium high-performance command & control     | Mass: 2,000 kg, Secure quantum comms        |
+| SI           | Q2B          | QuantumIntelligence QI-200| Medium space intelligence system              | Mass: 1,500 kg, Multi-spectral intelligence |
+| QD           | Q3S          | QuantumDefense QD-300S    | Large special purpose quantum defense         | Mass: 3,000 kg, Comprehensive quantum suite |
+
+## Part II: Configuration Codes
+
+Configuration Codes (CC) are 2-character codes that identify specific configurations or modifications of an object throughout its lifecycle. They are optional in the ID string but maintained in the registry.
+
+### Configuration Code Structure
+
+Each Configuration Code follows a standardized format:
+
+```plaintext
+[T][N]
+```
+
+Where:
+
+-   **T** (Type): A letter indicating the type of configuration
+-   **N** (Number): A number or letter indicating the specific version or variant
+
+### Standard Configuration Types
+
+| **Type Code** | **Configuration Type** | **Description**                               | **Examples** |
+| :------------ | :--------------------- | :-------------------------------------------- | :----------- |
+| A             | Initial/Baseline       | The initial production configuration          | A1, A2, A3   |
+| B             | Block Upgrade          | Major planned upgrade or block improvement    | B1, B2, B3   |
+| M             | Minor Modification     | Minor modifications or improvements           | M1, M2, M3   |
+| S             | Special Mission        | Configuration for special missions or purposes| S1, S2, S3   |
+| E             | Experimental           | Experimental or test configuration            | E1, E2, E3   |
+| R             | Retrofit               | Retrofit of existing systems                  | R1, R2, R3   |
+| P             | Propulsion             | Propulsion system modification                | P1, P2, P3   |
+| C             | Communications         | Communications system modification            | C1, C2, C3   |
+| N             | Navigation             | Navigation system modification                | N1, N2, N3   |
+| Q             | Quantum                | Quantum systems modification                  | Q1, Q2, Q3   |
+| L             | Life Extension         | Modifications for life extension              | L1, L2, L3   |
+| O             | Operator-Specific      | Configuration specific to an operator         | O1, O2, O3   |
+
+### Domain-Specific Configuration Types
+
+#### Air Systems Specific
+
+| **Type Code** | **Configuration Type** | **Description**                   | **Examples** |
+| :------------ | :--------------------- | :-------------------------------- | :----------- |
+| I             | Interior               | Interior configuration modification | I1, I2, I3   |
+| F             | Fuel System            | Fuel system modification          | F1, F2, F3   |
+| W             | Wing                   | Wing modification                 | W1, W2, W3   |
+| G             | Landing Gear           | Landing gear modification         | G1, G2, G3   |
+| V             | Avionics               | Avionics system upgrade           | V1, V2, V3   |
+
+#### Space Systems Specific
+
+| **Type Code** | **Configuration Type** | **Description**                       | **Examples** |
+| :------------ | :--------------------- | :------------------------------------ | :----------- |
+| T             | Thermal                | Thermal system modification           | T1, T2, T3   |
+| D             | Deployment             | Deployment system modification        | D1, D2, D3   |
+| H             | Habitat                | Habitat module configuration          | H1, H2, H3   |
+| X             | Extended Mission       | Configuration for extended mission    | X1, X2, X3   |
+| Z             | Zero-G                 | Zero-gravity specific modification    | Z1, Z2, Z3   |
+
+### Configuration Code Examples
+
+#### Example 1: Passenger Aircraft Configuration Evolution
+
+For a QuantumNarrow QN-200 (AS-M-PAX-NB-Q2A):
+
+| **Full ID**             | **Configuration** | **Description**                   |
+| :---------------------- | :---------------- | :-------------------------------- |
+| AS-M-PAX-NB-Q2A-00001-A1| Initial Production| Initial production configuration    |
+| AS-M-PAX-NB-Q2A-00001-B1| Block 1 Upgrade   | First major upgrade package       |
+| AS-M-PAX-NB-Q2A-00001-I2| Interior Mod 2    | Second interior configuration change|
+| AS-M-PAX-NB-Q2A-00001-Q1| Quantum Upgrade 1 | First quantum systems upgrade     |
+| AS-M-PAX-NB-Q2A-00001-L1| Life Extension 1  | First life extension program      |
+
+#### Example 2: Satellite Configuration Evolution
+
+For a QuantumEarth QE-200H (SP-U-SAT-EO-Q2H):
+
+| **Full ID**             | **Configuration** | **Description**                                 |
+| :---------------------- | :---------------- | :---------------------------------------------- |
+| SP-U-SAT-EO-Q2H-00005-A1| Initial Deployment| Initial orbital configuration                   |
+| SP-U-SAT-EO-Q2H-00005-S1| Special Mission 1 | Reconfigured for special observation mission    |
+| SP-U-SAT-EO-Q2H-00005-P1| Propulsion Mod 1  | Propulsion system modification for orbit change |
+| SP-U-SAT-EO-Q2H-00005-Q2| Quantum Upgrade 2 | Second quantum sensors upgrade                  |
+| SP-U-SAT-EO-Q2H-00005-X1| Extended Mission 1| Configuration for extended mission operations   |
+
+### Configuration Management in the Registry
+
+Configuration codes are managed in the `object_configurations` table:
+
+```sql
+CREATE TABLE object_configurations (
+  configuration_id SERIAL PRIMARY KEY,
+  instance_id UUID NOT NULL REFERENCES object_instances(instance_id),
+  configuration_code CHAR(2) NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  description TEXT,
+  effective_from DATE NOT NULL,
+  effective_to DATE,
+  configuration_details JSONB,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  is_active BOOLEAN DEFAULT TRUE,
+  UNIQUE(instance_id, configuration_code, effective_from)
+);
+```
+
+Example configuration entries:
+
+```sql
+-- Initial configuration for AMPEL360 BWB-Q100
+INSERT INTO object_configurations (
+  instance_id,
+  configuration_code,
+  name,
+  description,
+  effective_from,
+  configuration_details
+) VALUES (
+  (SELECT instance_id FROM object_instances WHERE full_object_id = 'AS-M-PAX-BW-Q1H-00001'),
+  'A1',
+  'Initial Production Configuration',
+  'Baseline production configuration as delivered from factory',
+  '2025-06-15',
+  '{"cabin_layout": "standard", "avionics_version": "1.0", "quantum_systems_version": "1.0"}'
+);
+
+-- First quantum systems upgrade
+INSERT INTO object_configurations (
+  instance_id,
+  configuration_code,
+  name,
+  description,
+  effective_from,
+  configuration_details
+) VALUES (
+  (SELECT instance_id FROM object_instances WHERE full_object_id = 'AS-M-PAX-BW-Q1H-00001'),
+  'Q1',
+  'Quantum Systems Upgrade 1',
+  'First major upgrade to quantum navigation and optimization systems',
+  '2026-03-10',
+  '{"cabin_layout": "standard", "avionics_version": "1.2", "quantum_systems_version": "2.0",
+    "upgrades": ["enhanced_quantum_navigation", "improved_optimization_algorithms"]}'
+);
+```
+
+### Configuration Code Allocation Guidelines
+
+When allocating configuration codes, the following guidelines should be followed:
+
+1.  **Chronological Order**: Configuration codes should generally follow chronological order of implementation
+2.  **Significance**: Use block upgrades (B-series) for significant changes affecting multiple systems
+3.  **Specificity**: Use specific type codes (P, C, N, etc.) when modifications are limited to specific systems
+4.  **Documentation**: Each configuration should be thoroughly documented with effective dates and details
+5.  **Traceability**: Maintain traceability between configurations to track the evolution of an object
+6.  **Quantum Focus**: Use Q-series configurations to track quantum technology upgrades specifically
+
+## Implementation Recommendations
+
+### Database Implementation
+
+1.  **Model Registry**: Implement the expanded model registry in the `models` table
+2.  **Configuration Tracking**: Implement configuration tracking in the `object_configurations` table
+3.  **Validation Rules**: Create validation rules to ensure proper model and configuration code usage
+4.  **Relationship Management**: Maintain proper relationships between models, instances, and configurations
+
+### User Interface
+
+1.  **Model Browser**: Create a browsable interface for the model registry
+2.  **Configuration Timeline**: Implement a timeline view for configuration evolution
+3.  **Search Functionality**: Enable searching by model code, name, or specifications
+4.  **Comparison Tool**: Create a tool to compare different models and configurations
+
+### Documentation
+
+1.  **Model Catalog**: Generate a comprehensive catalog of all models
+2.  **Configuration Guide**: Create a guide for configuration code allocation
+3.  **Technical Specifications**: Maintain detailed technical specifications for each model
+4.  **Change History**: Document the history and rationale for each configuration change
+
+## Next Steps
+
+1.  **ID Validation Tool**: Develop a tool to validate IDs against the registry
+2.  **Checksum Algorithm**: Implement a checksum mechanism for ID verification
+3.  **Registry Management Interface**: Create a web interface for registry management
+4.  **Integration with Documentation**: Integrate the model and configuration registry with technical documentation
+5.  **Visualization Tools**: Develop visualization tools for the model hierarchy and configuration evolution
+
 
 ### GAIA-QAO Database Schema Diagram
 
