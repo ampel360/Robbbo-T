@@ -1,4 +1,4 @@
-+## ✨ *I HAVE A DREAM:*
+## ✨ *I HAVE A DREAM:*
 
 # GAIA-Q & AMPEL  
 ### Open Source Quantum Aerospace Framework  
