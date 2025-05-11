@@ -1204,3 +1204,270 @@ erDiagram
     MODELS ||--o{ OBJECT_INSTANCES : "has"
     OBJECT_INSTANCES ||--o{ OBJECT_CONFIGURATIONS : "has"
 ```
+### GAIA-QAO Model Code Registry
+
+> **DISCLAIMER: GenAI Proposal Status**This document represents a machine-generated proposal for the Model (MDL) codes within the GAIA-QAO object identification system. It has not been validated through implementation in aerospace systems. The proposed codes are based on aerospace industry classifications and the specific needs of the GAIA-QAO ecosystem.
+
+
+
+## Model Code Structure and Naming Convention
+
+Each Model (MDL) code in the GAIA-QAO system follows a standardized 3-character format:
+
+```plaintext
+[G][N][V]
+```
+
+Where:
+
+- **G** (Generation/Series): A letter indicating the generation or technology series
+
+- Q: Quantum-enhanced systems (primary GAIA-QAO focus)
+- A: Advanced conventional systems
+- P: Prototype/Experimental systems
+- S: Standard production systems
+
+
+
+- **N** (Number/Size): A number indicating the relative size, capacity, or capability
+
+- 1: Small/Light
+- 2: Medium
+- 3: Large/Heavy
+- 4: Extra Large/Super Heavy
+
+
+
+- **V** (Variant): A letter indicating the specific variant or version
+
+- A, B, C, etc.: Sequential variants
+- H: High-performance variant
+- L: Long-range variant
+- S: Special purpose variant
+
+
+
+## Air Systems (AS) Model Codes
+
+### 1. Passenger Transport (PAX) Models
+
+#### PAX-BW: Blended Wing Body
+
+| MDL Code | Model Name          | Description                                         | Technical Specifications                                                                                                       |
+|----------|---------------------|-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| Q1H      | AMPEL360 BWB-Q100   | Small quantum-enhanced BWB passenger aircraft       | Capacity: 100 passengers<br>Range: 5,500 km<br>Cruise Speed: 850 km/h<br>MTOW: 85,000 kg<br>Quantum Systems: Navigation, Optimization, Communications |
+| Q2A      | AMPEL360 BWB-Q250   | Medium quantum-enhanced BWB passenger aircraft      | Capacity: 250 passengers<br>Range: 8,000 km<br>Cruise Speed: 900 km/h<br>MTOW: 180,000 kg<br>Quantum Systems: Navigation, Optimization, Communications, Control Systems |
+| Q3L      | AMPEL360 BWB-Q400   | Large long-range quantum-enhanced BWB passenger aircraft | Capacity: 400 passengers<br>Range: 15,000 km<br>Cruise Speed: 950 km/h<br>MTOW: 250,000 kg<br>Quantum Systems: Full Quantum Integration Suite |
+| A2B      | AeroWing 220        | Medium conventional BWB passenger aircraft          | Capacity: 220 passengers<br>Range: 7,000 km<br>Cruise Speed: 870 km/h<br>MTOW: 170,000 kg                                      |
+| P1A      | BWB-X Demonstrator  | Small BWB technology demonstrator                  | Capacity: 40 passengers (equivalent)<br>Range: 3,000 km<br>Cruise Speed: 800 km/h<br>MTOW: 45,000 kg                           |
+
+#### PAX-QP: Quantum-Powered
+
+| MDL Code | Model Name          | Description                                     | Technical Specifications                                                                                                       |
+|----------|---------------------|-------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| Q1A      | QuantumJet Q-110    | Small quantum-powered regional airliner         | Capacity: 110 passengers<br>Range: 2,500 km<br>Cruise Speed: 830 km/h<br>MTOW: 65,000 kg<br>Quantum Systems: Propulsion, Navigation, Optimization |
+| Q2H      | QuantumJet Q-220H   | Medium high-performance quantum-powered airliner | Capacity: 220 passengers<br>Range: 6,000 km<br>Cruise Speed: 950 km/h<br>MTOW: 140,000 kg<br>Quantum Systems: Advanced Propulsion, Full Suite |
+| Q3L      | QuantumJet Q-350L   | Large long-range quantum-powered airliner       | Capacity: 350 passengers<br>Range: 14,000 km<br>Cruise Speed: 980 km/h<br>MTOW: 230,000 kg<br>Quantum Systems: Full Quantum Integration Suite |
+| P1S      | Q-Drive Testbed     | Special purpose quantum propulsion testbed      | Capacity: N/A (test platform)<br>Range: 1,500 km<br>Cruise Speed: 700 km/h<br>MTOW: 30,000 kg<br>Quantum Systems: Experimental Propulsion |
+
+#### PAX-SS: Supersonic Transport
+
+| MDL Code | Model Name          | Description                                     | Technical Specifications                                                                                                       |
+|----------|---------------------|-------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| Q1A      | QuantumSonic QS-75  | Small quantum-enhanced supersonic business jet  | Capacity: 12 passengers<br>Range: 7,000 km<br>Cruise Speed: Mach 1.8<br>MTOW: 55,000 kg<br>Quantum Systems: Sonic Boom Mitigation, Navigation |
+| Q2B      | QuantumSonic QS-150 | Medium quantum-enhanced supersonic airliner     | Capacity: 150 passengers<br>Range: 9,000 km<br>Cruise Speed: Mach 2.2<br>MTOW: 140,000 kg<br>Quantum Systems: Full Quantum Integration Suite |
+| A1H      | AeroSonic AS-20     | Small conventional supersonic business jet      | Capacity: 20 passengers<br>Range: 6,500 km<br>Cruise Speed: Mach 1.6<br>MTOW: 60,000 kg                                       |
+| P2S      | Mach-Q Demonstrator | Medium special purpose supersonic demonstrator  | Capacity: 40 passengers (equivalent)<br>Range: 5,000 km<br>Cruise Speed: Mach 2.0<br>MTOW: 90,000 kg<br>Quantum Systems: Experimental Suite |
+
+
+### 2. Intelligence, Surveillance, Reconnaissance (ISR) Models
+
+#### ISR-QI: Quantum ISR
+
+| MDL Code | Model Name              | Description                              | Technical Specifications                                                                 |
+|----------|-------------------------|------------------------------------------|-----------------------------------------------------------------------------------------|
+| Q1A      | QuantumEye QE-100       | Small quantum-enhanced ISR platform      | Endurance: 24 hours<br>Ceiling: 15,000 m<br>Sensors: Quantum Imaging, Quantum Radar<br>MTOW: 12,000 kg |
+| Q2S      | QuantumEye QE-250S      | Medium special purpose quantum ISR platform | Endurance: 36 hours<br>Ceiling: 18,000 m<br>Sensors: Advanced Quantum Sensor Suite<br>MTOW: 25,000 kg |
+| Q3H      | QuantumEye QE-350H      | Large high-altitude quantum ISR platform | Endurance: 48+ hours<br>Ceiling: 22,000 m<br>Sensors: Comprehensive Quantum Sensing Suite<br>MTOW: 40,000 kg |
+| P1B      | Quantum Sensor Testbed  | Experimental quantum sensing platform    | Endurance: 12 hours<br>Ceiling: 12,000 m<br>Sensors: Experimental Quantum Sensors<br>MTOW: 8,000 kg |
+
+#### ISR-UA: Unmanned Aerial System
+
+| MDL Code | Model Name              | Description                              | Technical Specifications                                                                 |
+|----------|-------------------------|------------------------------------------|-----------------------------------------------------------------------------------------|
+| Q1A      | QuantumHawk QH-10       | Small quantum-enhanced UAS               | Endurance: 30 hours<br>Ceiling: 12,000 m<br>Sensors: Quantum-Enhanced Imaging<br>MTOW: 1,200 kg |
+| Q2L      | QuantumHawk QH-20L      | Medium long-endurance quantum UAS        | Endurance: 48 hours<br>Ceiling: 15,000 m<br>Sensors: Multi-Spectral Quantum Imaging<br>MTOW: 5,500 kg |
+| A2H      | SkyGuardian SG-200      | Medium high-altitude conventional UAS    | Endurance: 40 hours<br>Ceiling: 13,500 m<br>Sensors: Advanced EO/IR, SAR<br>MTOW: 5,000 kg |
+| S1B      | TacticalEye TE-50       | Small tactical UAS                       | Endurance: 18 hours<br>Ceiling: 8,000 m<br>Sensors: Standard EO/IR<br>MTOW: 800 kg |
+
+---
+
+### 3. Experimental (XPR) Models
+
+#### XPR-QT: Quantum Testbed
+
+| MDL Code | Model Name              | Description                              | Technical Specifications                                                                 |
+|----------|-------------------------|------------------------------------------|-----------------------------------------------------------------------------------------|
+| P1A      | QuantumX QX-10          | Small quantum technology demonstrator    | Configuration: Fixed-wing<br>MTOW: 3,500 kg<br>Quantum Systems: First-gen Experimental Suite |
+| P2B      | QuantumX QX-20          | Medium quantum technology demonstrator   | Configuration: BWB<br>MTOW: 12,000 kg<br>Quantum Systems: Second-gen Experimental Suite |
+| P3S      | QuantumX QX-30S         | Large special purpose quantum demonstrator | Configuration: Hybrid VTOL<br>MTOW: 22,000 kg<br>Quantum Systems: Advanced Experimental Suite |
+| P1H      | Q-VTOL Demonstrator     | Small high-performance VTOL quantum testbed | Configuration: Tilt-rotor<br>MTOW: 4,000 kg<br>Quantum Systems: VTOL-specific Quantum Technologies |
+
+#### XPR-HH: Hypersonic/High-Speed
+
+| MDL Code | Model Name              | Description                              | Technical Specifications                                                                 |
+|----------|-------------------------|------------------------------------------|-----------------------------------------------------------------------------------------|
+| Q1A      | QuantumHyper QH-X1      | Small quantum-enhanced hypersonic demonstrator | Speed: Mach 5+<br>Ceiling: 30,000 m<br>Propulsion: Quantum-enhanced scramjet<br>MTOW: 15,000 kg |
+| P2S      | HyperX HX-20            | Medium special purpose hypersonic testbed | Speed: Mach 6+<br>Ceiling: 35,000 m<br>Propulsion: Experimental scramjet<br>MTOW: 25,000 kg |
+| P1B      | ScramX SX-10            | Small hypersonic propulsion testbed      | Speed: Mach 4+<br>Ceiling: 25,000 m<br>Propulsion: Conventional scramjet<br>MTOW: 12,000 kg |
+
+
+### 4. Lighter Than Air (LTA) Models
+
+#### LTA-QB: Quantum Buoyancy
+
+| MDL Code | Model Name              | Description                              | Technical Specifications                                                                 |
+|----------|-------------------------|------------------------------------------|-----------------------------------------------------------------------------------------|
+| Q1A      | QuantumLift QL-100      | Small quantum-enhanced airship           | Volume: 100,000 m³<br>Payload: 15,000 kg<br>Endurance: 7 days<br>Ceiling: 10,000 m<br>Quantum Systems: Buoyancy Control, Navigation |
+| Q2L      | QuantumLift QL-250L     | Medium long-endurance quantum airship    | Volume: 250,000 m³<br>Payload: 40,000 kg<br>Endurance: 30 days<br>Ceiling: 15,000 m<br>Quantum Systems: Advanced Suite |
+| P1S      | Q-Buoyancy Testbed      | Experimental quantum buoyancy demonstrator | Volume: 50,000 m³<br>Payload: 5,000 kg<br>Endurance: 5 days<br>Ceiling: 12,000 m<br>Quantum Systems: Experimental Buoyancy Technologies |
+
+#### LTA-HA: High-Altitude Platform
+
+| MDL Code | Model Name              | Description                              | Technical Specifications                                                                 |
+|----------|-------------------------|------------------------------------------|-----------------------------------------------------------------------------------------|
+| Q1A      | QuantumStrato QS-10     | Small quantum-enhanced stratospheric platform | Volume: 120,000 m³<br>Payload: 1,000 kg<br>Endurance: 180 days<br>Altitude: 20,000 m<br>Quantum Systems: Station-keeping, Energy Management |
+| Q2S      | QuantumStrato QS-20S    | Medium special purpose quantum stratospheric platform | Volume: 200,000 m³<br>Payload: 2,500 kg<br>Endurance: 365 days<br>Altitude: 22,000 m<br>Quantum Systems: Full Quantum Suite |
+| A1B      | StratoSail SS-100       | Small conventional stratospheric platform | Volume: 100,000 m³<br>Payload: 800 kg<br>Endurance: 120 days<br>Altitude: 18,000 m |
+
+---
+
+## Space Systems (SP) Model Codes
+
+### 1. Satellite (SAT) Models
+
+#### SAT-QS: Quantum Satellite
+
+| MDL Code | Model Name              | Description                              | Technical Specifications                                                                 |
+|----------|-------------------------|------------------------------------------|-----------------------------------------------------------------------------------------|
+| Q1A      | QuantumSat QS-100       | Small quantum communications satellite   | Mass: 150 kg<br>Orbit: LEO (500 km)<br>Power: 1.2 kW<br>Quantum Systems: QKD, Entanglement Distribution |
+| Q2B      | QuantumSat QS-200       | Medium quantum sensing satellite         | Mass: 350 kg<br>Orbit: LEO (600 km)<br>Power: 2.5 kW<br>Quantum Systems: Quantum Sensors, QKD |
+| Q3H      | QuantumSat QS-300H      | Large high-performance quantum computing satellite | Mass: 800 kg<br>Orbit: LEO (700 km)<br>Power: 5 kW<br>Quantum Systems: Orbital Quantum Computer, Full Suite |
+| P1S      | Q-Space Testbed         | Experimental quantum space technologies demonstrator | Mass: 180 kg<br>Orbit: LEO (550 km)<br>Power: 1.5 kW<br>Quantum Systems: Experimental Technologies |
+
+#### SAT-EO: Earth Observation
+
+| MDL Code | Model Name              | Description                              | Technical Specifications                                                                 |
+|----------|-------------------------|------------------------------------------|-----------------------------------------------------------------------------------------|
+| Q1A      | QuantumEarth QE-100     | Small quantum-enhanced Earth observation satellite | Mass: 250 kg<br>Orbit: SSO (600 km)<br>Power: 1.8 kW<br>Sensors: Quantum-Enhanced Imaging<br>Resolution: 0.3 m |
+| Q2H      | QuantumEarth QE-200H    | Medium high-performance quantum Earth observation satellite | Mass: 600 kg<br>Orbit: SSO (500 km)<br>Power: 3.5 kW<br>Sensors: Advanced Quantum Imaging Suite<br>Resolution: 0.15 m |
+| A2B      | TerraScan TS-200        | Medium conventional Earth observation satellite | Mass: 550 kg<br>Orbit: SSO (550 km)<br>Power: 2.8 kW<br>Sensors: Multi-spectral, SAR<br>Resolution: 0.5 m |
+| S1C      | EarthView EV-100        | Small standard Earth observation satellite | Mass: 200 kg<br>Orbit: SSO (650 km)<br>Power: 1.2 kW<br>Sensors: Standard Imaging<br>Resolution: 1 m |
+
+---
+
+### 2. Orbital Platform/Vehicle (ORB) Models
+
+#### ORB-QO: Quantum Orbital
+
+| MDL Code | Model Name              | Description                              | Technical Specifications                                                                 |
+|----------|-------------------------|------------------------------------------|-----------------------------------------------------------------------------------------|
+| Q1A      | QuantumOrbit QO-100     | Small quantum orbital research platform  | Mass: 5,000 kg<br>Orbit: LEO (450 km)<br>Crew: 0-2<br>Volume: 50 m³<br>Quantum Systems: Research Suite |
+| Q2B      | QuantumOrbit QO-200     | Medium quantum orbital laboratory        | Mass: 15,000 kg<br>Orbit: LEO (400 km)<br>Crew: 2-4<br>Volume: 150 m³<br>Quantum Systems: Advanced Research Suite |
+| Q3S      | QuantumOrbit QO-300S    | Large special purpose quantum orbital platform | Mass: 30,000 kg<br>Orbit: LEO (500 km)<br>Crew: 4-8<br>Volume: 350 m³<br>Quantum Systems: Comprehensive Research Facility |
+| P1H      | Q-Hab Demonstrator      | Experimental quantum habitation module   | Mass: 8,000 kg<br>Orbit: LEO (420 km)<br>Crew: 2<br>Volume: 80 m³<br>Quantum Systems: Life Support, Radiation Protection |
+
+#### ORB-CT: Crew Transport
+
+| MDL Code | Model Name              | Description                              | Technical Specifications                                                                 |
+|----------|-------------------------|------------------------------------------|-----------------------------------------------------------------------------------------|
+| Q1A      | QuantumCrew QC-100      | Small quantum-enhanced crew transport vehicle | Mass: 9,000 kg<br>Crew: 2-4<br>Endurance: 14 days<br>Quantum Systems: Navigation, Life Support |
+| Q2L      | QuantumCrew QC-200L     | Medium long-duration quantum crew transport | Mass: 16,000 kg<br>Crew: 4-6<br>Endurance: 30 days<br>Quantum Systems: Full Quantum Suite |
+| A2B      | StarLiner SL-200        | Medium conventional crew transport vehicle | Mass: 15,000 kg<br>Crew: 4-7<br>Endurance: 21 days                                      |
+| S1C      | OrbitalFerry OF-100     | Small standard crew transport capsule    | Mass: 8,000 kg<br>Crew: 2-3<br>Endurance: 7 days                                        |
+
+
+### 3. Launch System (LCH) Models
+
+#### LCH-QL: Quantum Launch
+
+| MDL Code | Model Name              | Description                              | Technical Specifications                                                                 |
+|----------|-------------------------|------------------------------------------|-----------------------------------------------------------------------------------------|
+| Q1A      | QuantumLaunch QL-100    | Small quantum-enhanced launch vehicle    | Payload to LEO: 2,000 kg<br>Stages: 2<br>Height: 30 m<br>Quantum Systems: Guidance, Optimization |
+| Q2B      | QuantumLaunch QL-200    | Medium quantum-enhanced launch vehicle   | Payload to LEO: 8,000 kg<br>Stages: 2<br>Height: 50 m<br>Quantum Systems: Advanced Suite |
+| Q3H      | QuantumLaunch QL-300H   | Heavy quantum-enhanced launch vehicle    | Payload to LEO: 25,000 kg<br>Stages: 3<br>Height: 70 m<br>Quantum Systems: Comprehensive Suite |
+| P1S      | Q-Propulsion Testbed    | Experimental quantum propulsion demonstrator | Payload to LEO: 500 kg<br>Stages: 2<br>Height: 20 m<br>Quantum Systems: Experimental Propulsion |
+
+#### LCH-RU: Reusable
+
+| MDL Code | Model Name              | Description                              | Technical Specifications                                                                 |
+|----------|-------------------------|------------------------------------------|-----------------------------------------------------------------------------------------|
+| Q1A      | QuantumReuse QR-100     | Small quantum-enhanced reusable launch vehicle | Payload to LEO: 1,500 kg<br>Reuses: 20+<br>Stages: 2 (both reusable)<br>Quantum Systems: Landing, Optimization |
+| Q2B      | QuantumReuse QR-200     | Medium quantum-enhanced reusable launch vehicle | Payload to LEO: 7,000 kg<br>Reuses: 30+<br>Stages: 2 (both reusable)<br>Quantum Systems: Advanced Suite |
+| A2C      | ReuseFalcon RF-200      | Medium conventional reusable launch vehicle | Payload to LEO: 6,500 kg<br>Reuses: 15+<br>Stages: 2 (first reusable)                   |
+| S1B      | EcoLaunch EL-100        | Small standard reusable launch vehicle   | Payload to LEO: 1,200 kg<br>Reuses: 10+<br>Stages: 2 (first reusable)                  |
+
+---
+
+### 4. Probe (PRB) Models
+
+#### PRB-QP: Quantum Probe
+
+| MDL Code | Model Name              | Description                              | Technical Specifications                                                                 |
+|----------|-------------------------|------------------------------------------|-----------------------------------------------------------------------------------------|
+| Q1A      | QuantumProbe QP-100     | Small quantum-enhanced solar system probe | Mass: 500 kg<br>Power: 1 kW (RTG)<br>Comms: Quantum-secured<br>Sensors: Quantum-enhanced |
+| Q2B      | QuantumProbe QP-200     | Medium quantum-enhanced planetary probe  | Mass: 1,200 kg<br>Power: 2.5 kW (RTG)<br>Comms: Quantum entanglement<br>Sensors: Advanced quantum suite |
+| Q3S      | QuantumProbe QP-300S    | Large special purpose deep space quantum probe | Mass: 2,500 kg<br>Power: 5 kW (RTG)<br>Comms: Advanced quantum comms<br>Sensors: Comprehensive quantum suite |
+| P1H      | Q-Explorer Testbed      | Experimental quantum space exploration testbed | Mass: 700 kg<br>Power: 1.5 kW (RTG)<br>Comms: Experimental quantum<br>Sensors: Experimental suite |
+
+#### PRB-MP: Mars Probe
+
+| MDL Code | Model Name              | Description                              | Technical Specifications                                                                 |
+|----------|-------------------------|------------------------------------------|-----------------------------------------------------------------------------------------|
+| Q1A      | QuantumMars QM-100      | Small quantum-enhanced Mars orbiter      | Mass: 800 kg<br>Orbit: Mars (300 km)<br>Power: 2 kW (Solar)<br>Quantum Systems: Communications, Sensing |
+| Q2L      | QuantumMars QM-200L     | Medium long-duration Mars lander         | Mass: 1,500 kg<br>Mission: Surface<br>Power: 1 kW (RTG)<br>Quantum Systems: Advanced Suite |
+| Q3R      | QuantumMars QM-300R     | Large Mars rover with quantum systems    | Mass: 1,200 kg<br>Mission: Surface Mobility<br>Power: 1.2 kW (RTG)<br>Quantum Systems: Navigation, Analysis |
+| A2S      | MarsSample MS-200       | Medium special purpose Mars sample return | Mass: 2,800 kg<br>Mission: Sample Return<br>Power: 2.5 kW (Solar/RTG)                   |
+
+---
+
+## Model Code Registry Implementation
+
+The Model Code Registry will be implemented in the GAIA-QAO database with the following structure:
+
+```sql
+-- Add models to the models table
+INSERT INTO models (model_code, subtype_id, name, description, introduction_date, technical_specifications) VALUES
+('Q1H', (SELECT subtype_id FROM subtypes WHERE subtype_code = 'BW' AND class_code = 'PAX'), 
+'AMPEL360 BWB-Q100', 'Small quantum-enhanced BWB passenger aircraft', 
+'2025-01-01', 
+'{"capacity": 100, "range_km": 5500, "cruise_speed_kmh": 850, "mtow_kg": 85000, "quantum_systems": ["navigation", "optimization", "communications"]}'),
+
+('Q2A', (SELECT subtype_id FROM subtypes WHERE subtype_code = 'BW' AND class_code = 'PAX'), 
+'AMPEL360 BWB-Q250', 'Medium quantum-enhanced BWB passenger aircraft', 
+'2026-03-01', 
+'{"capacity": 250, "range_km": 8000, "cruise_speed_kmh": 900, "mtow_kg": 180000, "quantum_systems": ["navigation", "optimization", "communications", "control_systems"]}'),
+
+-- Additional model entries would follow the same pattern
+```
+
+
+## Model Code Allocation Guidelines
+
+When allocating new model codes, the following guidelines should be followed:
+
+1. **Consistency**: Maintain consistent naming patterns within sub-types
+2. **Uniqueness**: Ensure model codes are unique within each sub-type
+3. **Descriptiveness**: Model names should clearly indicate their purpose and capabilities
+4. **Technical Specifications**: Include comprehensive technical specifications in JSON format
+5. **Quantum Designation**: Use the "Q" prefix for all quantum-enhanced systems
+6. **Version Control**: Use the variant letter to indicate incremental improvements
+
+
+## Next Steps
+
+1. **Complete Model Registry**: Expand the registry to include models for all sub-types
+2. **Configuration Codes**: Define standard Configuration (CC) codes for each model
+3. **Validation Rules**: Implement validation rules for model code allocation
+4. **Integration**: Integrate the model code registry with the GAIA-QAO documentation system
+5. **Visualization**: Create visualization tools for the model hierarchy
