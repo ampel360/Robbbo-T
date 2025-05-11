@@ -809,21 +809,23 @@ This identifies:
 
 Domains represent the primary operational environment of the aerospace object.
 
-| Domain Code | Name | Description | Boundary
-|-----|-----|-----|-----
-| AS | Air System | Systems operating primarily in Earth's atmosphere | Below 30,000 meters
-| SP | Space System | Systems operating primarily in space | Above 30,000 meters
+### Domain Codes
 
+| Domain Code | Name         | Description                                   | Boundary                     |
+|-------------|--------------|-----------------------------------------------|------------------------------|
+| AS          | Air System   | Systems operating primarily in Earth's atmosphere | Below 30,000 meters          |
+| SP          | Space System | Systems operating primarily in space          | Above 30,000 meters          |
 
 ### 3.2 Autonomy Levels (A)
 
 Autonomy levels indicate the degree of human involvement in the system's operation.
 
-| Autonomy Code | Name | Description
-|-----|-----|-----|-----
-| M | Manned/Semi-Autonomous | Systems designed for human operation or with human oversight
-| U | Unmanned/Fully Autonomous | Systems designed for fully autonomous operation without human presence
+| Autonomy Code | Name                     | Description                                                                    |
+|---------------|--------------------------|--------------------------------------------------------------------------------|
+| M             | Manned/Semi-Autonomous  | Systems designed for human operation or with human oversight                   |
+| U             | Unmanned/Fully Autonomous | Systems designed for fully autonomous operation without human presence         |
 
+---
 
 ### 3.3 Functional Classes (CCC)
 
@@ -831,29 +833,28 @@ Functional classes categorize objects by their primary purpose or function. The 
 
 #### Air Systems (AS) Functional Classes
 
-| Class Code | Name | Description
-|-----|-----|-----|-----
-| PAX | Passenger Transport | Aircraft designed primarily for passenger transportation
-| CGO | Cargo Transport | Aircraft designed primarily for cargo transportation
-| ISR | Intelligence, Surveillance, Reconnaissance | Aircraft for intelligence gathering, surveillance, and reconnaissance
-| SCI | Scientific Research | Aircraft designed for scientific research and data collection
-| UTL | Utility | Aircraft for utility purposes (agriculture, firefighting, etc.)
-| REC | Recreational & Sport | Aircraft designed for recreational and sporting activities
-| XPR | Experimental | Experimental aircraft and technology demonstrators
-| LTA | Lighter Than Air | Lighter-than-air vehicles including dirigibles and platforms
-| MIL | Military Aircraft | Aircraft designed for military applications and combat
-
+| Class Code | Name                       | Description                                                                    |
+|------------|----------------------------|--------------------------------------------------------------------------------|
+| PAX        | Passenger Transport        | Aircraft designed primarily for passenger transportation                       |
+| CGO        | Cargo Transport            | Aircraft designed primarily for cargo transportation                           |
+| ISR        | Intelligence, Surveillance, Reconnaissance | Aircraft for intelligence gathering, surveillance, and reconnaissance          |
+| SCI        | Scientific Research        | Aircraft designed for scientific research and data collection                  |
+| UTL        | Utility                    | Aircraft for utility purposes (agriculture, firefighting, etc.)                |
+| REC        | Recreational & Sport       | Aircraft designed for recreational and sporting activities                     |
+| XPR        | Experimental               | Experimental aircraft and technology demonstrators                             |
+| LTA        | Lighter Than Air           | Lighter-than-air vehicles including dirigibles and platforms                   |
+| MIL        | Military Aircraft          | Aircraft designed for military applications and combat                         |
 
 #### Space Systems (SP) Functional Classes
 
-| Class Code | Name | Description
-|-----|-----|-----|-----
-| LCH | Launch System | Systems designed to launch payloads into space
-| SAT | Satellite | Orbital systems for various missions without human presence
-| ORB | Orbital Platform/Vehicle | Crewed orbital systems including stations and transport
-| PRB | Probe | Systems designed for exploration beyond Earth orbit
-| XPS | Experimental | Experimental space systems and technology demonstrators
-| DEF | Space Defense | Systems designed for space defense and security applications
+| Class Code | Name                       | Description                                                                    |
+|------------|----------------------------|--------------------------------------------------------------------------------|
+| LCH        | Launch System              | Systems designed to launch payloads into space                                |
+| SAT        | Satellite                  | Orbital systems for various missions without human presence                   |
+| ORB        | Orbital Platform/Vehicle   | Crewed orbital systems including stations and transport                       |
+| PRB        | Probe                      | Systems designed for exploration beyond Earth orbit                           |
+| XPS        | Experimental               | Experimental space systems and technology demonstrators                       |
+| DEF        | Space Defense              | Systems designed for space defense and security applications                  |
 
 
 ### 3.4 Sub-Types (ST)
@@ -1452,22 +1453,377 @@ INSERT INTO models (model_code, subtype_id, name, description, introduction_date
 ```
 
 
-## Model Code Allocation Guidelines
+### GAIA-QAO Database Schema Diagram
 
-When allocating new model codes, the following guidelines should be followed:
+I'll create a comprehensive entity-relationship diagram (ERD) of the complete GAIA-QAO database schema. Due to the complexity of the schema, I'll break it down into logical sections for better readability.
 
-1. **Consistency**: Maintain consistent naming patterns within sub-types
-2. **Uniqueness**: Ensure model codes are unique within each sub-type
-3. **Descriptiveness**: Model names should clearly indicate their purpose and capabilities
-4. **Technical Specifications**: Include comprehensive technical specifications in JSON format
-5. **Quantum Designation**: Use the "Q" prefix for all quantum-enhanced systems
-6. **Version Control**: Use the variant letter to indicate incremental improvements
+## Core ID Component Tables and Relationships
+
+```mermaid
+erDiagram
+    domains {
+        char2 domain_code PK
+        varchar100 name
+        text description
+        int altitude_boundary_meters
+        timestamp created_at
+        timestamp updated_at
+        boolean is_active
+    }
+    
+    autonomy_levels {
+        char1 autonomy_code PK
+        varchar100 name
+        text description
+        timestamp created_at
+        timestamp updated_at
+        boolean is_active
+    }
+    
+    functional_classes {
+        char3 class_code PK
+        char2 domain_code FK
+        varchar100 name
+        text description
+        timestamp created_at
+        timestamp updated_at
+        boolean is_active
+    }
+    
+    subtypes {
+        int subtype_id PK
+        char2 subtype_code
+        char3 class_code FK
+        varchar100 name
+        text description
+        timestamp created_at
+        timestamp updated_at
+        boolean is_active
+    }
+    
+    model_series {
+        char1 series_code PK
+        varchar50 name
+        text description
+        timestamp created_at
+        timestamp updated_at
+        boolean is_active
+    }
+    
+    model_size_categories {
+        char1 size_code PK
+        varchar50 name
+        text description
+        timestamp created_at
+        timestamp updated_at
+        boolean is_active
+    }
+    
+    model_variant_types {
+        char1 variant_code PK
+        varchar50 name
+        text description
+        timestamp created_at
+        timestamp updated_at
+        boolean is_active
+    }
+    
+    models {
+        int model_id PK
+        char3 model_code
+        int subtype_id FK
+        char1 series_code FK
+        char1 size_code FK
+        char1 variant_code FK
+        varchar100 name
+        varchar100 full_name
+        varchar50 short_name
+        text description
+        date introduction_date
+        date end_of_production_date
+        varchar50 model_status
+        varchar50 certification_status
+        date certification_date
+        varchar100 manufacturer
+        jsonb technical_specifications
+        jsonb technical_specifications_schema
+        varchar255 documentation_url
+        varchar255 model_image_url
+        int predecessor_model_id FK
+        int successor_model_id FK
+        boolean is_quantum_enhanced
+        jsonb quantum_technologies
+        timestamp created_at
+        timestamp updated_at
+        boolean is_active
+    }
+    
+    model_specification_templates {
+        int template_id PK
+        int subtype_id FK
+        varchar100 template_name
+        jsonb template_schema
+        text template_description
+        timestamp created_at
+        timestamp updated_at
+        boolean is_active
+    }
+    
+    domains ||--o{ functional_classes : "has"
+    functional_classes ||--o{ subtypes : "has"
+    subtypes ||--o{ models : "has"
+    model_series ||--o{ models : "has"
+    model_size_categories ||--o{ models : "has"
+    model_variant_types ||--o{ models : "has"
+    models ||--o{ models : "predecessor_successor"
+    subtypes ||--o{ model_specification_templates : "has"
+```
+
+## Object Instances and Configurations
+
+```mermaid
+erDiagram
+    models {
+        int model_id PK
+        char3 model_code
+    }
+    
+    configuration_types {
+        char1 type_code PK
+        varchar50 name
+        text description
+        boolean domain_specific
+        char2 domain_code FK
+        timestamp created_at
+        timestamp updated_at
+        boolean is_active
+    }
+    
+    object_instances {
+        uuid instance_id PK
+        int model_id FK
+        char5 serial_number
+        varchar30 full_object_id
+        date manufacture_date
+        varchar50 status
+        varchar100 owner_organization
+        varchar100 location_current
+        date commissioning_date
+        date decommissioning_date
+        text notes
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    object_configurations {
+        int configuration_id PK
+        uuid instance_id FK
+        char2 configuration_code
+        char1 type_code FK
+        varchar10 version_number
+        varchar100 name
+        text description
+        date effective_from
+        date effective_to
+        int supersedes_configuration_id FK
+        int superseded_by_configuration_id FK
+        varchar100 certification_reference
+        date certification_date
+        text change_reason
+        varchar100 change_authority
+        varchar255 documentation_url
+        boolean is_temporary
+        date reversion_date
+        jsonb configuration_details
+        timestamp created_at
+        timestamp updated_at
+        boolean is_active
+    }
+    
+    configuration_compatibility {
+        int compatibility_id PK
+        int configuration_id FK
+        int compatible_with_configuration_id FK
+        text compatibility_notes
+        timestamp created_at
+        timestamp updated_at
+        boolean is_active
+    }
+    
+    configuration_change_history {
+        int change_id PK
+        int configuration_id FK
+        int user_id FK
+        timestamp change_timestamp
+        varchar50 change_type
+        jsonb previous_values
+        jsonb new_values
+        text change_notes
+        varchar100 change_reference
+        varchar45 ip_address
+        text user_agent
+    }
+    
+    models ||--o{ object_instances : "has"
+    object_instances ||--o{ object_configurations : "has"
+    configuration_types ||--o{ object_configurations : "has"
+    object_configurations ||--o{ object_configurations : "supersedes"
+    object_configurations ||--o{ configuration_compatibility : "has"
+    object_configurations ||--o{ configuration_change_history : "logs"
+    domains ||--o{ configuration_types : "has_domain_specific"
+```
+
+## Registry Management and Integration Tables
+
+```mermaid
+erDiagram
+    registry_users {
+        int user_id PK
+        varchar50 username
+        varchar100 email
+        varchar100 full_name
+        varchar100 organization
+        varchar50 role
+        timestamp created_at
+        timestamp updated_at
+        boolean is_active
+    }
+    
+    registry_audit_log {
+        int log_id PK
+        int user_id FK
+        varchar50 action_type
+        varchar50 table_affected
+        varchar50 record_id
+        jsonb old_values
+        jsonb new_values
+        timestamp action_timestamp
+        varchar45 ip_address
+        text user_agent
+    }
+    
+    id_allocation_requests {
+        int request_id PK
+        int requester_id FK
+        char2 domain_code FK
+        char1 autonomy_code FK
+        char3 class_code FK
+        char2 subtype_code
+        char3 model_code
+        int quantity
+        text purpose
+        varchar50 status
+        int reviewer_id FK
+        text review_notes
+        jsonb allocated_ids
+        timestamp requested_at
+        timestamp reviewed_at
+    }
+    
+    ata_chapter_mapping {
+        int mapping_id PK
+        char3 class_code FK
+        char2 subtype_code
+        varchar10 ata_chapter
+        varchar100 ata_chapter_name
+        text mapping_notes
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    ccsds_mapping {
+        int mapping_id PK
+        char3 class_code FK
+        char2 subtype_code
+        varchar50 ccsds_object_type
+        text ccsds_description
+        text mapping_notes
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    federation_nodes {
+        int node_id PK
+        varchar20 node_code
+        varchar100 node_name
+        varchar255 node_url
+        varchar255 api_endpoint
+        varchar50 sync_protocol
+        int sync_interval_seconds
+        timestamp last_sync_timestamp
+        varchar50 sync_status
+        timestamp created_at
+        timestamp updated_at
+        boolean is_active
+    }
+    
+    registry_users ||--o{ registry_audit_log : "performs"
+    registry_users ||--o{ id_allocation_requests : "requests"
+    registry_users ||--o{ id_allocation_requests : "reviews"
+    domains ||--o{ id_allocation_requests : "references"
+    autonomy_levels ||--o{ id_allocation_requests : "references"
+    functional_classes ||--o{ id_allocation_requests : "references"
+    functional_classes ||--o{ ata_chapter_mapping : "has"
+    functional_classes ||--o{ ccsds_mapping : "has"
+```
+
+## Database Views
+
+The schema also includes two important views that provide consolidated information:
+
+1. **view_complete_model_details** - Provides a comprehensive view of all model details including references from related tables
+2. **view_configuration_history** - Shows the complete history of configurations for each object
 
 
-## Next Steps
+## Key Database Functions
 
-1. **Complete Model Registry**: Expand the registry to include models for all sub-types
-2. **Configuration Codes**: Define standard Configuration (CC) codes for each model
-3. **Validation Rules**: Implement validation rules for model code allocation
-4. **Integration**: Integrate the model code registry with the GAIA-QAO documentation system
-5. **Visualization**: Create visualization tools for the model hierarchy
+The schema includes several important functions:
+
+1. **generate_model_id** - Generates a valid model ID based on series, size, and variant codes
+2. **validate_configuration_code** - Validates a configuration code against defined standards
+3. **generate_next_serial_number** - Generates the next sequential serial number for a model
+4. **update_timestamp** - Automatically updates timestamps on record changes
+5. **log_configuration_change** - Automatically logs all changes to configurations
+
+
+## Complete Database Schema Overview
+
+```mermaid
+erDiagram
+    %% Core ID Components
+    domains ||--o{ functional_classes : "has"
+    functional_classes ||--o{ subtypes : "has"
+    subtypes ||--o{ models : "has"
+    
+    %% Model Metadata
+    model_series ||--o{ models : "has"
+    model_size_categories ||--o{ models : "has"
+    model_variant_types ||--o{ models : "has"
+    models ||--o{ models : "predecessor_successor"
+    subtypes ||--o{ model_specification_templates : "has"
+    
+    %% Object Instances and Configurations
+    models ||--o{ object_instances : "has"
+    object_instances ||--o{ object_configurations : "has"
+    configuration_types ||--o{ object_configurations : "has"
+    object_configurations ||--o{ object_configurations : "supersedes"
+    object_configurations ||--o{ configuration_compatibility : "has"
+    object_configurations ||--o{ configuration_change_history : "logs"
+    domains ||--o{ configuration_types : "has_domain_specific"
+    
+    %% Registry Management
+    registry_users ||--o{ registry_audit_log : "performs"
+    registry_users ||--o{ id_allocation_requests : "requests"
+    registry_users ||--o{ id_allocation_requests : "reviews"
+    domains ||--o{ id_allocation_requests : "references"
+    autonomy_levels ||--o{ id_allocation_requests : "references"
+    functional_classes ||--o{ id_allocation_requests : "references"
+    
+    %% Integration and Reference
+    functional_classes ||--o{ ata_chapter_mapping : "has"
+    functional_classes ||--o{ ccsds_mapping : "has"
+```
+
+This diagram provides a comprehensive overview of the GAIA-QAO database schema, showing the relationships between all tables. The schema is designed to support the complete lifecycle of aerospace object identification, from model definition to configuration management and registry administration.
+
+The database is highly normalized and includes extensive metadata, validation mechanisms, and audit capabilities to ensure data integrity and traceability throughout the system.
