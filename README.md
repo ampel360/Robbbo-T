@@ -1096,52 +1096,53 @@ The system's hierarchical structure, database implementation, and federation mod
 
 ## Appendix A: Complete Sub-Type Code Tables
 
-### A.1 Air Systems (AS) Sub-Types
+# A.1 Air Systems (AS) Sub-Types
 
-#### A.1.1 Passenger Transport (PAX) Sub-Types
+## A.1.1 Passenger Transport (PAX) Sub-Types
 
-| ST Code | Name | Description
-|-----|-----|-----|-----
-| NB | Narrow-Body Airliner | Single-aisle passenger aircraft for short to medium range routes
-| WB | Wide-Body Airliner | Multi-aisle passenger aircraft for medium to long range routes
-| RJ | Regional Jet | Smaller jet aircraft designed for regional routes
-| BJ | Business Jet | Aircraft designed for business and executive transportation
-| GA | General Aviation | Smaller piston or turboprop aircraft for private transportation
-| VT | eVTOL Air Taxi | Electric vertical takeoff and landing aircraft for urban air mobility
-| BW | Blended Wing Body | Aircraft with blended wing body configuration for passenger transport
-| SS | Supersonic Transport | Passenger aircraft designed for supersonic flight
-| HS | Hypersonic Transport | Passenger aircraft designed for hypersonic flight
-| AM | Air Mobility | Aircraft designed for urban/regional air mobility
-| HY | Hybrid-Electric | Passenger aircraft with hybrid-electric propulsion
-| QP | Quantum-Powered | Passenger aircraft with quantum-enhanced systems
-| SP | Suborbital Passenger | Aircraft designed for suborbital passenger flights
+| ST Code | Name                   | Description                                                                 |
+|---------|------------------------|-----------------------------------------------------------------------------|
+| NB      | Narrow-Body Airliner   | Single-aisle passenger aircraft for short to medium range routes            |
+| WB      | Wide-Body Airliner     | Multi-aisle passenger aircraft for medium to long range routes              |
+| RJ      | Regional Jet           | Smaller jet aircraft designed for regional routes                          |
+| BJ      | Business Jet           | Aircraft designed for business and executive transportation                 |
+| GA      | General Aviation       | Smaller piston or turboprop aircraft for private transportation             |
+| VT      | eVTOL Air Taxi         | Electric vertical takeoff and landing aircraft for urban air mobility       |
+| BW      | Blended Wing Body      | Aircraft with blended wing body configuration for passenger transport       |
+| SS      | Supersonic Transport   | Passenger aircraft designed for supersonic flight                          |
+| HS      | Hypersonic Transport   | Passenger aircraft designed for hypersonic flight                          |
+| AM      | Air Mobility           | Aircraft designed for urban/regional air mobility                          |
+| HY      | Hybrid-Electric        | Passenger aircraft with hybrid-electric propulsion                         |
+| QP      | Quantum-Powered        | Passenger aircraft with quantum-enhanced systems                           |
+| SP      | Suborbital Passenger   | Aircraft designed for suborbital passenger flights                         |
 
+## A.1.2 Cargo Transport (CGO) Sub-Types
 
-#### A.1.2 Cargo Transport (CGO) Sub-Types
-
-| ST Code | Name | Description
-|-----|-----|-----|-----
-| LC | Light Cargo | Small cargo aircraft for light freight
-| MC | Medium Cargo | Medium-sized cargo aircraft for regional freight
-| HC | Heavy Cargo | Large cargo aircraft for intercontinental freight
-| FC | Freighter Conversion | Passenger aircraft converted to cargo use
-| QD | Quick Delivery | Aircraft optimized for rapid delivery services
-| VC | VTOL Cargo | Vertical takeoff and landing cargo aircraft
-| UC | Unmanned Cargo | Unmanned cargo delivery aircraft
-| QC | Quantum Cargo | Cargo aircraft with quantum-enhanced systems
-
+| ST Code | Name                   | Description                                                                 |
+|---------|------------------------|-----------------------------------------------------------------------------|
+| LC      | Light Cargo            | Small cargo aircraft for light freight                                     |
+| MC      | Medium Cargo           | Medium-sized cargo aircraft for regional freight                           |
+| HC      | Heavy Cargo            | Large cargo aircraft for intercontinental freight                          |
+| FC      | Freighter Conversion   | Passenger aircraft converted to cargo use                                  |
+| QD      | Quick Delivery         | Aircraft optimized for rapid delivery services                             |
+| VC      | VTOL Cargo             | Vertical takeoff and landing cargo aircraft                                |
+| UC      | Unmanned Cargo         | Unmanned cargo delivery aircraft                                           |
+| QC      | Quantum Cargo          | Cargo aircraft with quantum-enhanced systems                               |
 
 *[Tables for remaining sub-types would continue in the same format]*
 
-## Appendix B: ID Examples
+---
 
-| Complete ID | Description
-|-----|-----|-----|-----
-| AS-M-PAX-BW-Q1H-00001 | AMPEL360 BWB-Q100 Blended Wing Body passenger aircraft, manned, serial #00001
-| AS-U-ISR-QI-R2D-00015 | Quantum-enhanced ISR platform, unmanned, model R2D, serial #00015
-| SP-M-ORB-SS-I4S-00003 | Space station module, manned, model I4S, serial #00003
-| SP-U-SAT-QS-K7P-00022 | Quantum satellite, unmanned, model K7P, serial #00022
-| AS-M-XPR-QT-X15-00007 | Quantum testbed experimental aircraft, manned, model X15, serial #00007
+# Appendix B: ID Examples
+
+| Complete ID              | Description                                                                                   |
+|---------------------------|-----------------------------------------------------------------------------------------------|
+| AS-M-PAX-BW-Q1H-00001    | AMPEL360 BWB-Q100 Blended Wing Body passenger aircraft, manned, serial #00001                 |
+| AS-U-ISR-QI-R2D-00015    | Quantum-enhanced ISR platform, unmanned, model R2D, serial #00015                             |
+| SP-M-ORB-SS-I4S-00003    | Space station module, manned, model I4S, serial #00003                                        |
+| SP-U-SAT-QS-K7P-00022    | Quantum satellite, unmanned, model K7P, serial #00022                                         |
+| AS-M-XPR-QT-X15-00007    | Quantum testbed experimental aircraft, manned, model X15, serial #00007                       |
+
 
 
 ## Appendix C: Database Schema Diagram
