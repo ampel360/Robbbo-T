@@ -1,6 +1,14 @@
 # GAIA-QAO Aerospace Documentation
 ## Aerospace General Index (AGI) 
 
+# GAIA-QAO Aerospace Documentation
+
+> **GENERAL DISCLAIMER:**
+> This master document and all its parts represent an AI-generated proposal for the GAIA-Q & AMPEL framework and the GAIA-QAO object identification system. It has not been validated through implementation in aerospace systems nor by aerospace certification bodies. The concepts are based on current industry trends, open source, quantum computing, and federated aerospace engineering, as well as on the information provided.
+
+---
+## Aerospace General Index (AGI)
+
 ## Part 0: Framework Overview
     0.1 Vision Statement
     0.2 Guiding Principles & Philosophy
@@ -11,54 +19,34 @@
     0.7 Envisioned Potential Impact
 
 ## Part 1: Software Technology Landscape in Aerospace and Military Systems
-    1.1 Legacy and Traditional Programming Languages
-        1.1.1 Ada and Its Derivatives
-        1.1.2 C and Safety-Critical Subsets
-        1.1.3 Legacy Systems: FORTRAN and Assembly Language
-    1.2 Modern Languages and Development Approaches
-        1.2.1 C++ in Aerospace Applications
-        1.2.2 Python for Testing, Simulation, and Data Analysis
-        1.2.3 Model-Based Development and Code Generation
-    1.3 Certification Standards and Their Impact
-        1.3.1 DO-178C Levels and Software Assurance
-        1.3.2 Military Standards and Security Requirements
-        1.3.3 International and Domain-Specific Standards
-    1.4 Development Environments and Tools
-        1.4.1 Specialized IDEs for Aerospace
-        1.4.2 Verification and Validation Tools
-        1.4.3 Simulation Environments
-    1.5 Specialized Libraries and Frameworks
-        1.5.1 Real-Time Operating Systems
-        1.5.2 Communication Protocols and Middleware
-        1.5.3 Domain-Specific Application Frameworks
-    1.6 Domain-Specific Applications
-        1.6.1 Flight Control Systems
-        1.6.2 Navigation and Guidance Systems
-        1.6.3 Military-Specific Systems
-    1.7 Conclusion (on Software Technology Landscape)
+    1.1 Overview
+    1.2 Programming Languages
+        1.2.1 Safety-Critical Embedded Software
+        1.2.2 Support and Simulation
+    1.3 Development Environments and Toolchains
+    1.4 Real-Time Operating Systems and Middleware
+    1.5 Libraries and Frameworks for Simulation, Control, and AI
+    1.6 Certification Standards and Impact
+    1.7 Domain-Specific Application Patterns
+    1.8 Civil vs. Military Distinctions
+    1.9 Historical and Emerging Trends
+    1.10 Conclusion (Software Landscape)
 
-## Part 2: Object Identification System (Formerly Part I)
+## Part 2: Object Identification System
     2.1 System Overview
-    2.2 ID Structure
-    2.3 Component Descriptions
-        2.3.1 Domain (DO)
-        2.3.2 Autonomy Level (A)
-        2.3.3 Functional Classes (CCC)
-        2.3.4 Sub-Types (ST)
-        2.3.5 Models/Variants (MDL)
-        2.3.6 Serial Numbers (SSSSS)
-        2.3.7 Configuration Codes (CC) - Optional
-    2.4 Database Implementation (General Overview)
-    2.5 ID Formation Process
-    2.6 Registry Management
-        2.6.1 ID Allocation Process
-        2.6.2 Federation Model
-        2.6.3 Standards Integration
-        2.6.4 Support for Quantum-Enhanced Systems
+    2.2 Tier 1: Top-Level Object Identification
+        2.2.1 Top-Level Object ID Structure (`DO-A-CCC-ST-MDL-SSSSS-CC`)
+        2.2.2 Component Descriptions (DO, A, CCC, ST-ObjectCategory, MDL-ObjectModel)
+    2.3 Tier 2: Subsystem Identification
+        2.3.1 Subsystem ID Structure Concept (`Parent_ID :: SSS-MDLs-SERs`)
+        2.3.2 Component Descriptions (SSS-SubsystemType, MDLs-SubsystemModel, SERs)
+    2.4 Database Implementation (General Overview for both Tiers)
+    2.5 ID Formation Process (Examples for both Tiers)
+    2.6 Registry Management (Considerations for both Tiers)
 
-## Part 3: Model Code Registry (Formerly Part II)
-    3.1 Model Code Structure and Naming Convention
-    3.2 Air Systems (AS) Models
+## Part 3: Top-Level Object Model Registry
+    3.1 Model Code Structure for Top-Level Objects (`[G][N][V]`)
+    3.2 Air Systems (AS) Top-Level Object Models (Expanded Catalog)
         3.2.1 Passenger Transport (PAX) Models
         3.2.2 Cargo Transport (CGO) Models
         3.2.3 Intelligence, Surveillance, Reconnaissance (ISR) Models
@@ -68,124 +56,67 @@
         3.2.7 Experimental (XPR) Models
         3.2.8 Lighter Than Air (LTA) Models
         3.2.9 Military Aircraft (MIL) Models
-    3.3 Space Systems (SP) Models
+    3.3 Space Systems (SP) Top-Level Object Models (Illustrative - awaiting full data)
         3.3.1 Satellite (SAT) Models
-        3.3.2 Orbital Platform/Vehicle (ORB) Models
-        3.3.3 Launch System (LCH) Models
-        3.3.4 Probe (PRB) Models
-        3.3.5 Experimental (Space) (XPS) Models
-        3.3.6 Space Defense (DEF) Models
-    3.4 Implementation Guidelines (Models)
+        (etc. for SP functional classes)
+    3.4 Implementation Guidelines (Top-Level Object Models)
 
-## Part 4: Configuration Management (Formerly Part III)
-    4.1 Configuration Code Structure
-    4.2 Standard Configuration Types
-    4.3 Domain-Specific Configuration Types
-        4.3.1 Air Systems (AS) Specific Configuration Types
-        4.3.2 Space Systems (SP) Specific Configuration Types
-    4.4 Configuration Management in Registry
-        4.4.1 Configuration Evolution Examples
-        4.4.2 Configuration Code Allocation Guidelines
+## Part 4: Subsystem Identification & Registry
+    4.1 Defining Subsystem Type Codes (SSS)
+    4.2 Subsystem Model Coding (`MDLs`)
+    4.3 Subsystem Serialization (`SERs`)
+    4.4 Example Subsystem Catalog Entries
+        4.4.1 Avionics Subsystems (e.g., Flight Control Computers, Navigation Units)
+        4.4.2 Propulsion Subsystems (e.g., Engine Models, Thruster Models)
+        4.4.3 Structural Subsystems (e.g., Wing Assembly Models)
+    4.5 Database Considerations for Subsystems
 
-## Part 5: Database Schema (Formerly Part IV)
-    5.1 Core ID Component Tables
-        5.1.1 domains
-        5.1.2 autonomy_levels
-        5.1.3 functional_classes
-        5.1.4 subtypes
-        5.1.5 models
-    5.2 Object Instances and Configurations Tables
-        5.2.1 object_instances
-        5.2.2 object_configurations
-    5.3 Registry Management Tables
-        5.3.1 registry_users
-        5.3.2 registry_audit_log
-        5.3.3 id_allocation_requests
-    5.4 Integration and Reference Tables
-        5.4.1 ata_chapter_mapping
-        5.4.2 ccsds_mapping
-        5.4.3 federation_nodes
-    5.5 Views and Functions
-        5.5.1 view_model_full_details
-        5.5.2 view_object_instance_details
-        5.5.3 generate_next_serial_number()
-        5.5.4 construct_full_object_id()
-        5.5.5 trigger_set_timestamp()
-        5.5.6 trigger_set_full_object_id()
+## Part 5: Configuration Management
+    5.1 Configuration Code Structure (`[T][N]`)
+    5.2 Standard Configuration Types
+    5.3 Domain-Specific Configurations
+    5.4 Configuration Management in Registry (for Top-Level Objects and Subsystems)
 
-## Part 6: GAIA-Q-UI System Specification
-    6.0 Introduction and Purpose (GAIA-Q-UI)
-        6.0.1 Goals (GAIA-Q-UI)
-        6.0.2 Guiding Principle: Leveraging AI in Development (GAIA-Q-UI)
-    6.1 UI Architecture Overview (GAIA-Q-UI)
-        6.1.1 Design Philosophy
-        6.1.2 Key UI Components (with Mermaid diagram)
-        6.1.3 Technology Stack Considerations
-        6.1.4 Performance, Scalability, and Reliability Considerations
-    6.2 AI Model Routing Engine Logic (GAIA-Q-UI)
-        6.2.1 Input Analysis for Routing
-        6.2.2 Routing Logic Approach
-        6.2.3 Model Selection Criteria (Examples)
-        6.2.4 Fallback and Error Handling
-        6.2.5 Aerospace Task-Specific Model Prioritization (Examples)
-        6.2.6 Handling Quantum-Specific Data and Models
-    6.3 MCP Event Schemas (GAIA-Q-UI)
-        6.3.1 General Event Structure
-        6.3.2 Example Event Types and Payloads
-    6.4 AGAD–InfoCode Trace Integration (GAIA-Q-UI)
-        6.4.1 Session Management & InfoCoding
-        6.4.2 Log Structure and Content
-        6.4.3 Audit Trail Generation
-        6.4.4 Data Lineage
-    6.5 Initial Development Roadmap & Next Steps (GAIA-Q-UI)
-    6.6 Security and Data Privacy Framework (GAIA-Q-UI)
-        6.6.1 Data Security
-        6.6.2 Access Control
-        6.6.3 Data Privacy
-        6.6.4 Secure Development Lifecycle (SDL)
+## Part 6: Database Schema
+    6.1 Core ID Component Tables (for Top-Level Objects)
+    6.2 Subsystem-Related Tables (NEW)
+    6.3 Object Instances and Configurations Tables
+    6.4 Registry Management Tables
+    6.5 Integration and Reference Tables
+    6.6 Views and Functions (Updated for two-tier system)
 
-## Part 7: Implementation Guidelines (General GAIA-QAO System - Formerly Part V)
-    7.1 Database Implementation (for GAIA-QAO Registry)
-    7.2 User Interface (Recommendations for GAIA-QAO Registry - distinct from GAIA-Q-UI)
-    7.3 Documentation (Meta-Documentation for GAIA-QAO System itself)
-    7.4 Next Steps (for GAIA-QAO System Implementation)
+## Part 7: GAIA-Q-UI System Specification
+    (Content as per v0.4.0, with section numbers updated)
+    7.0 Introduction and Purpose (GAIA-Q-UI)
+    7.1 UI Architecture Overview (GAIA-Q-UI)
+    7.2 AI Model Routing Engine Logic (GAIA-Q-UI)
+    7.3 MCP Event Schemas (GAIA-Q-UI)
+    7.4 AGAD–InfoCode Trace Integration (GAIA-Q-UI)
+    7.5 Initial Development Roadmap & Next Steps (GAIA-Q-UI)
+    7.6 Security and Data Privacy Framework (GAIA-Q-UI)
+
+## Part 8: Implementation Guidelines (Overall System)
+    8.1 Database Implementation
+    8.2 User Interface Recommendations (Registry UI & GAIA-Q-UI)
+    8.3 Documentation (Meta-Documentation)
+    8.4 Next Steps (Overall Project)
 
 ## Appendices
-    Appendix A: Complete Sub-Type Code Tables
-        A.1 Air Systems (AS) Sub-Types
-            A.1.1 Passenger Transport (PAX) Sub-Types
-            (etc. for all AS functional classes)
-        A.2 Space Systems (SP) Sub-Types
-            A.2.1 Satellite (SAT) Sub-Types
-            (etc. for all SP functional classes)
+    Appendix A: Top-Level Object Category Sub-Type (ST) Codes
+        A.1 Air Systems (AS) Object Category ST Codes
+        A.2 Space Systems (SP) Object Category ST Codes
     Appendix B: ID Examples
-    Appendix C: Database Schema Diagrams (GAIA-QAO Registry)
-        C.1 Core ID Component Tables and Relationships
-        C.2 Object Instances and Configurations
-        C.3 Registry Management and Integration Tables (Simplified)
+        B.1 Top-Level Object ID Examples
+        B.2 Subsystem ID Examples
+    Appendix C: Database Schema Diagrams (Illustrative)
     Appendix D: Illustrative Aerospace Use Cases for GAIA-Q-UI
-        D.1 Use Case: In-Flight Anomaly Diagnosis and Resolution Support
-        D.2 Use Case: Preliminary Design Review Support for a Quantum Sensor
-        D.3 Use Case: AI-Assisted Illustrated Parts Catalog (IPC) Page Generation
-    Appendix E: Detailed Survey of Aerospace Software Technologies (Optional: The full prose report)
+    Appendix E: Detailed Survey of Aerospace Software Technologies (Prose Report)
+    Appendix F: Subsystem Type (SSS) Codes List (Initial Proposal)
 
 ---
-**Document Metadata Footer (Conceptual for Master Document)**
-
-**Status**: Iterative Draft
-**Master Document InfoCode**: QAO-DOC-MASTER-001
-**Version**: 0.5.1 (Reflects corrected AGI and integrated content)
-**Compliance Scope**: GAIA-QAO v1.2, AGAD (principles), COAFI (alignment), MCP Sync (planned)
-**Keywords**: `[GAIA-QAO][Object ID][Software Landscape][Quantum Aerospace][Open Source][Documentation Framework][AGI][Registry][Database Schema][Configuration Management][GAIA-Q-UI][AI Orchestration]`
+*(The document content will now follow, starting with Part 0. Note that Part 3.2 will be very extensive. Part 3.3 will be illustrative. Part 4 and Appendix F will contain new proposed content for subsystems.)*
 
 ---
-# GAIA-QAO Aerospace Documentation
-
-> **GENERAL DISCLAIMER:**
-> This master document and all its parts represent an AI-generated proposal for the GAIA-Q & AMPEL framework and the GAIA-QAO object identification system. It has not been validated through implementation in aerospace systems nor by aerospace certification bodies. The concepts are based on current industry trends, open source, quantum computing, and federated aerospace engineering, as well as on the information provided.
-
----
-
 ## Part 0: Framework Overview
 
 This part describes the overall vision, principles, documentation architecture, and governance of the GAIA-Q & AMPEL project.
@@ -206,7 +137,6 @@ The GAIA-Q & AMPEL project is founded on the following principles:
 
 *   **🇪🇸 Producimos documentación técnica open source para inspirar los diseños de hoy y de mañana.**
     **Ingeniería con propósito. Conocimiento compartido. Innovación federada.**
-
 *   **🇬🇧 We produce open-source technical documentation to inspire the designs of today and tomorrow.**
     **Engineering with purpose. Shared knowledge. Federated innovation.**
 
@@ -214,596 +144,501 @@ The GAIA-Q & AMPEL project is founded on the following principles:
 
 ### 0.3 Documentation Architecture
 
-The architecture of the technical documentation within the GAIA-Q & AMPEL framework is conceived as an interconnected network of knowledge modules:
-
 ```mermaid
 graph TD
-    Core[Core Knowledge Base]
-    QCM[Quantum Computing Modules]
-    AEROSPEC[Aerospace Engineering Specifications]
-    ETHAI[Ethical AI Frameworks]
-    SUSTAIN[Sustainable Engineering Practices]
-    IMPL[Implementation Examples]
-    COMMUNITY[Community Extensions]
-    FEDNET[Federated Innovation Network]
-
-    Core --> QCM
-    Core --> AEROSPEC
-    Core --> ETHAI
-    Core --> SUSTAIN
-    Core --> IMPL
-    IMPL --> COMMUNITY
-    COMMUNITY --> FEDNET
+    Core[Core Knowledge Base] --> QCM[Quantum Computing Modules]
+    Core --> AEROSPEC[Aerospace Engineering Specifications]
+    Core --> ETHAI[Ethical AI Frameworks]
+    Core --> SUSTAIN[Sustainable Engineering Practices]
+    Core --> IMPL[Implementation Examples]
+    IMPL --> COMMUNITY[Community Extensions]
+    COMMUNITY --> FEDNET[Federated Innovation Network]
 ```
 
 ### 0.4 Key Components of the Documentation Framework
 
-The key components underpinning this documentation architecture are:
-
-1.  **Multilingual Knowledge Base:**
-    *   Documentation in English and Spanish (initially), with a roadmap to include other languages.
-    *   Standardization of aerospace terminology with mapping to ISO/COAFI.
-    *   Cultural context integration for broader usability.
-
-2.  **Federated Documentation Structure:**
-    *   Distributed contributions with centralized quality assurance (QA) oversight.
-    *   Git-based version control, aligned with InfoCode and COAFI.
-    *   Contributor recognition: badges, credits, citation-level metadata.
-
-3.  **Implementation Repository:**
-    *   Open reference designs (aircraft systems, quantum circuits).
-    *   Simulated environments for digital twin validation.
-    *   Demonstrator kits with hardware, software, and material integration.
+1.  **Multilingual Knowledge Base:** English/Spanish initially; ISO/COAFI terminology mapping.
+2.  **Federated Documentation Structure:** Distributed contributions, Git-based, InfoCode/COAFI alignment.
+3.  **Implementation Repository:** Open reference designs, simulated environments, demonstrator kits.
 
 ### 0.5 Governance Model for the Open Source Project
 
-The project's governance model is established to ensure transparency, quality, and participation:
-
-1.  **Technical Oversight Committee:**
-    *   Diverse expertise: quantum, aerospace, ethics, sustainability.
-    *   Transparent Request for Comments (RFC) lifecycle.
-    *   Publicly tracked roadmap and release cycles.
-
-2.  **Contribution Pathways:**
-    *   Contributor onboarding process with defined roles (document writer, subject matter expert (SME), reviewer, translator).
-    *   Mentorship for young engineers and students.
-    *   Recognition through COAFI-traceable InfoCode authorship.
-
-3.  **Quality Assurance Framework:**
-    *   Peer-review validation loops.
-    *   Compliance with standards (ATA, S1000D, ISO/IEEE, QAO).
-    *   Security audits for sensitive subsystems.
+1.  **Technical Oversight Committee:** Diverse expertise, transparent RFC, public roadmap.
+2.  **Contribution Pathways:** Onboarding, mentorship, InfoCode authorship recognition.
+3.  **Quality Assurance Framework:** Peer review, standards compliance, security audits.
 
 ### 0.6 High-Level Implementation Strategy
 
-The implementation strategy is divided into progressive phases:
-
-#### Phase 1: *Foundation*
-*   Define a COAFI-compatible file naming and metadata structure.
-*   Publish initial GAIA-QAO templates in Markdown/DocBook/S1000D.
-*   Launch the documentation portal with a Git-based backend.
-
-#### Phase 2: *Community Development*
-*   Recruit contributors from academia and the open hardware community.
-*   Establish mentorship circles and working groups.
-*   Release alpha documentation sets (AMP●EL, ATA 29, QAOA modules).
-
-#### Phase 3: *Federation Implementation*
-*   Formalize federated teams (Q-Air, Q-Space, Q-GreenTech, etc.).
-*   Launch collaboration protocols (AMP●EL Interop, MCP Sync).
-*   Create mirror repositories for resilience and inter-agency continuity.
-
-#### Phase 4: *Acceleration*
-*   Publish industrial application guides (MEAs, digital twins, Q-routing).
-*   Enable certification-friendly formats (BREX-lite, MCDB export).
-*   Organize open competitions on sustainability and autonomy challenges.
+*   **Phase 1 (Foundation):** COAFI file/metadata, initial templates, Git-based portal.
+*   **Phase 2 (Community Dev):** Recruit contributors, mentorship, alpha doc sets.
+*   **Phase 3 (Federation Impl):** Formalize teams, collaboration protocols, mirror repos.
+*   **Phase 4 (Acceleration):** Industrial guides, cert-friendly formats, open competitions.
 
 ### 0.7 Envisioned Potential Impact
 
-The GAIA-Q & AMPEL project aims to generate significant impact in the following areas:
-
-1.  **Democratized Aerospace Innovation:**
-    *   Lower entry barriers for engineers worldwide.
-    *   Facilitate modular learning through Documentation as a Platform (DaaP).
-    *   Bridge research and industry gaps through quantum-ready documentation.
-
-2.  **Standardized Ethical Frameworks:**
-    *   Establish transparent audit trails and AI behavior explainability.
-    *   Encourage the fair deployment of autonomy in aviation and space.
-    *   Enable cross-cultural and interdisciplinary trust frameworks.
-
-3.  **Sustainable Engineering Practices:**
-    *   Provide shared tools for life-cycle impact modeling.
-    *   Establish open benchmarks for propulsion, material, and energy impact.
-    *   Foster cooperative co-design of low-emission aerospace solutions.
+1.  **Democratized Aerospace Innovation:** Lower entry barriers, DaaP learning, research-industry bridge.
+2.  **Standardized Ethical Frameworks:** Transparent AI audit trails, fair autonomy deployment.
+3.  **Sustainable Engineering Practices:** Shared lifecycle modeling tools, open benchmarks.
 
 ---
-## Part I: Object Identification System
+## Part 1: Software Technology Landscape in Aerospace and Military Systems
 
-This part details the GAIA-QAO Object Identification System (GQOIS), a comprehensive and hierarchical framework for identifying, categorizing, and tracking aerospace objects.
+### 1.1 Overview
+Aerospace and defense software prioritize reliability, safety, and compliance with standards like DO-178C (civil) and MIL-STD-498 (military), influencing language, environment, and library choices for embedded, simulation, mission planning, and ground control applications.
 
-### 1.1 System Overview
+### 1.2 Programming Languages
 
-The GAIA-QAO Object Identification System (GQOIS) is a comprehensive, hierarchical identification framework designed for aerospace objects operating in both atmospheric and space domains. It provides a standardized method for uniquely identifying, categorizing, and tracking aerospace objects throughout their entire lifecycle.
+#### 1.2.1 Safety-Critical Embedded Software
 
-The system addresses several critical needs in the aerospace industry:
+| Language  | Usage Domain           | Certification/Notes                                      | Examples                                          |
+|-----------|-----------------------|----------------------------------------------------------|---------------------------------------------------|
+| **Ada**   | Flight controls, critical avionics, legacy military | Strong typing; Designed for verifiability; Still used in Airbus, F-22 | Boeing 777, Airbus A350, F-22 Raptor              |
+| **C**     | RTOS, drivers, mission SW, legacy | Requires MISRA etc. subsets; Ubiquitous low-level; Verified carefully | VxWorks kernel, cFS, B-2 rehost                   |
+| **C++**   | High-level avionics, mission, simulation, new platforms | Restricted subsets (JSF++), DAL B/C; OOP for complex systems | F-35, Orion MPCV, SpaceX Falcon 9/Dragon          |
+| **SPARK Ada** | Ultra-critical, formal methods | Enables formal proofs; Max assurance needed | Some ESA projects, security kernels               |
+| **Assembly** | Bootloaders, legacy, performance | Minimal use; Found in legacy platforms | Space Shuttle, early F-16/F-15                    |
 
--   **Unified Identification**: Creates a single, coherent identification system spanning traditional aviation, emerging air mobility concepts, and space systems.
--   **Quantum Integration**: Specifically accommodates quantum-enhanced aerospace technologies.
--   **Standards Compatibility**: Aligns with existing aerospace standards (ATA, CCSDS, etc.) while extending beyond their limitations.
--   **Lifecycle Management**: Supports object identification from design through decommissioning.
--   **Configuration Tracking**: Enables tracking of different configurations and modifications.
--   **Registry Management**: Provides a framework for a centralized registry with federated nodes.
+#### 1.2.2 Support and Simulation
 
-### 1.2 ID Structure
+| Language  | Usage Domain           | Notes                                                        | Examples                               |
+|-----------|-----------------------|--------------------------------------------------------------|----------------------------------------|
+| **Python**| Ground SW, test automation, AI dev, scripting | Not for flight code; Simulation, data analysis, AI prototyping | NASA test frameworks, SpaceX analysis  |
+| **MATLAB/Simulink** | Model-based design, sim, codegen | Control law modeling, autocoding to C/Ada | Airbus A380, many rockets              |
+| **Rust**  | Experimental, safety/security R&D | Growing interest; Not yet flight certified | ESA trial satellites, research drones  |
 
-The GQOIS uses a hierarchical structure that encodes multiple levels of information about an aerospace object. The complete ID format is:
+### 1.3 Development Environments and Toolchains
 
-```plaintext
-DO-A-CCC-ST-MDL-SSSSS[-CC]
-```
+| Tool/Environment          | Type                  | Aerospace Applications                              | Certification/Tuning                   |
+|--------------------------|-----------------------|-----------------------------------------------------|----------------------------------------|
+| **GHS MULTI/INTEGRITY-178B** | IDE + RTOS           | Partitioned RTOS, safety-critical avionics, F-35    | DO-178B Level A Certified           |
+| **Wind River VxWorks (653)** | RTOS + IDE           | Widespread in space, civil, military      | VxWorks 653 certified, ARINC 653       |
+| **AdaCore GNAT Pro Studio**| Compiler/IDE         | Ada/DO-178C projects, civil/defense             | Qualifiable compiler/toolchain         |
+| **MathWorks Simulink**   | Model-based design   | Control law modeling, sim, code-gen   | DO-178C qualified codegen available   |
+| **ANSYS SCADE Suite**      | Model-based design   | Formal, graphical, certified code for avionics      | DO-178C Level A qualified codegen      |
+| **LDRA/VectorCAST etc.**| Static/dynamic analysis | Verification, code quality, coverage   | Used for DAL A/B/C, tool qual      |
+| **NASA cFS/F Prime**       | Frameworks           | Modular, reusable spacecraft SW, cubesats     | Open source, platform-agnostic         |
 
-Where:
+### 1.4 Real-Time Operating Systems and Middleware
+*   **ARINC 653 RTOS:** VxWorks 653, INTEGRITY-178B, LynxOS-178, DDC-I Deos for partitioned IMA.
+*   **Other RTOS:** VxWorks (non-653 for space), RTEMS (ESA/NASA space), real-time Linux (SpaceX), seL4 (research).
+*   **Buses/Interfaces:** ARINC 429, MIL-STD-1553B, CAN, SpaceWire. ARINC 661 for displays.
+*   **Frameworks:** NASA cFS, JPL F´ (F Prime), ArduPilot/PX4 (UAVs).
 
-| **Component**        | **Length** | **Description**                 | **Example**                |
-| :------------------- | :--------- | :------------------------------ | :------------------------- |
-| DO                   | 2 chars    | Domain                          | AS (Air System)            |
-| A                    | 1 char     | Autonomy Level                  | M (Manned/Semi-Autonomous) |
-| CCC                  | 3 chars    | Functional Class                | PAX (Passenger Transport)  |
-| ST                   | 2 chars    | Sub-Type                        | BW (Blended Wing Body)     |
-| MDL                  | 3 chars    | Model/Variant                   | Q1H (AMPEL360 BWB-Q100)    |
-| SSSSS                | 5 chars    | Serial Number                   | 00001                      |
-| CC                   | 2 chars    | Configuration Code (optional)   | A1 (Initial Configuration) |
+### 1.5 Libraries and Frameworks for Simulation, Control, and AI
+*   **MISRA/JSF++:** Safe C/C++ subsets.
+*   **SCADE, Embedded Coder:** Model-based codegen.
+*   **Trick Simulation, Simulink:** High-fidelity simulation.
+*   **Eigen (C++):** Static linear algebra.
+*   **OpenCV/TensorFlow:** AI/Vision (prototype/ground).
 
-#### Example Complete ID
+### 1.6 Certification Standards and Impact
+*   **DO-178C/B:** Civil/Military software safety (DAL A-E). Drives language/tool choice, V&V rigor.
+*   **DO-254:** Hardware assurance (FPGAs, ASICs).
+*   **MIL-STD-498/882:** Military software process, system safety.
+*   **ECSS-E-ST-40C / NASA NPR 7150.2:** Space agency software engineering standards.
 
-```plaintext
-AS-M-PAX-BW-Q1H-00001
-```
+### 1.7 Domain-Specific Application Patterns
+*   **Embedded:** Ada, C, restricted C++ on certified RTOS.
+*   **Simulation:** C++/Python/Simulink/Trick, HIL.
+*   **Mission Planning/Ground Control:** Python, Java, C#.
+*   **AI/ML:** Python (dev), C++/TF Lite (embedded prototype), non-critical roles.
 
-This identifies:
+### 1.8 Civil vs. Military Distinctions
+Civil emphasizes stricter external certification (FAA/EASA), while military balances safety with mission needs, security, and sometimes faster tech adoption. Convergence is occurring.
 
--   An Air System (AS)
--   That is Manned/Semi-Autonomous (M)
--   In the Passenger Transport class (PAX)
--   Of the Blended Wing Body sub-type (BW)
--   Model AMPEL360 BWB-Q100 (Q1H)
--   Serial number 00001
+### 1.9 Historical and Emerging Trends
+Legacy (Assembly/JOVIAL) -> Ada -> C/C++ subsets. Growth of MBD, qualified tools. AI/ML for analysis. Rust emerging for safety/security. Open source increasing (cFS, F').
 
-### 1.3 Component Descriptions
-
-#### 1.3.1 Domain (DO)
-
-Domains represent the primary operational environment of the aerospace object.
-
-| **Domain Code** | **Name**       | **Description**                                         | **Boundary**                 |
-| :-------------- | :------------- | :------------------------------------------------------ | :--------------------------- |
-| AS              | Air System     | Systems operating primarily in Earth's atmosphere       | Below 30,000 meters          |
-| SP              | Space System   | Systems operating primarily in space                    | Above 30,000 meters          |
-*Note: This boundary is a general guideline representing the typical primary operational envelope. Specific models designated as 'AS' may have operational ceilings exceeding this altitude (e.g., high-altitude research aircraft or stratospheric platforms) but are still considered air systems due to their atmospheric operational nature and certification paths.*
-
-#### 1.3.2 Autonomy Level (A)
-
-Autonomy levels indicate the degree of human involvement in the system's operation. The autonomy level is inherently associated with the `Model (MDL)`.
-
-| **Autonomy Code** | **Name**                      | **Description**                                                                      |
-| :---------------- | :---------------------------- | :----------------------------------------------------------------------------------- |
-| M                 | Manned/Semi-Autonomous        | Systems designed for human operation or with human oversight (require crew if transporting humans). |
-| U                 | Unmanned/Fully Autonomous     | Systems designed for fully autonomous operation without human presence.              |
-
-#### 1.3.3 Functional Classes (CCC)
-
-Functional classes categorize objects by their primary purpose or function. The system defines functional classes across the two domains:
-
-**Air Systems (AS) Functional Classes:**
-
-| **Class Code** | **Name**                                   | **Description**                                                                      |
-| :------------- | :----------------------------------------- | :----------------------------------------------------------------------------------- |
-| PAX            | Passenger Transport                        | Aircraft designed primarily for passenger transportation.                            |
-| CGO            | Cargo Transport                            | Aircraft designed primarily for cargo transportation.                                |
-| ISR            | Intelligence, Surveillance, Reconnaissance | Aircraft for intelligence gathering, surveillance, and reconnaissance.               |
-| SCI            | Scientific Research                        | Aircraft designed for scientific research and data collection.                       |
-| UTL            | Utility                                    | Aircraft for utility purposes (agriculture, firefighting, etc.).                   |
-| REC            | Recreational & Sport                       | Aircraft designed for recreational and sporting activities.                          |
-| XPR            | Experimental                               | Experimental aircraft and technology demonstrators.                                  |
-| LTA            | Lighter Than Air                           | Lighter-than-air vehicles, including dirigibles and platforms.                     |
-| MIL            | Military Aircraft                          | Aircraft designed for military applications and combat operations.                 |
-
-**Space Systems (SP) Functional Classes:**
-
-| **Class Code** | **Name**                       | **Description**                                                                      |
-| :------------- | :----------------------------- | :----------------------------------------------------------------------------------- |
-| LCH            | Launch System                  | Systems designed to launch payloads into space.                                    |
-| SAT            | Satellite                      | Orbital systems for various missions without human presence.                         |
-| ORB            | Orbital Platform/Vehicle       | Crewed orbital systems, including stations and transport vehicles.                   |
-| PRB            | Probe                          | Systems designed for exploration beyond Earth orbit.                               |
-| XPS            | Experimental (Space)           | Experimental space systems and technology demonstrators.                             |
-| DEF            | Space Defense                  | Systems designed for space defense and security applications.                        |
-
-#### 1.3.4 Sub-Types (ST)
-
-Sub-types further refine the classification within each functional class. Each sub-type has a unique two-character code within its functional class. The complete sub-type registry is found in Appendix A. Examples include:
-
--   **AS-PAX-NB**: Narrow-Body Airliner
--   **AS-PAX-BW**: Blended Wing Body Airliner
--   **SP-SAT-CO**: Communications Satellite
--   **SP-PRB-MP**: Mars Probe
-
-#### 1.3.5 Models/Variants (MDL)
-
-Models represent specific designs or variants within a sub-type. Each model has a three-character code and is associated with a specific Autonomy Level (A). Details and examples of models are found in Part II: Model Code Registry.
-
-#### 1.3.6 Serial Numbers (SSSSS)
-
-Five-character serial numbers uniquely identify individual instances of a specific model. Serial numbers are assigned sequentially within each model series.
-
-#### 1.3.7 Configuration Codes (CC) - Optional
-
-Two-character configuration codes track different configurations or modifications of an object throughout its lifecycle. They are optional in the object's full ID string but are maintained in the registry. Details are found in Part III: Configuration Management.
-
-### 1.4 Database Implementation (General Overview)
-
-The GQOIS is implemented as a relational database. Key database components include:
-
--   Tables for each ID component (Domains, Autonomy Levels, Functional Classes, Sub-Types, Models).
--   Tables for object instances and their configurations.
--   Tables for registry management, auditing, and ID requests.
--   Tables for integration with external standards (ATA, CCSDS).
--   Views and functions to facilitate queries and data integrity.
-
-A detailed description of the database schema is provided in Part IV: Database Schema.
-
-### 1.5 ID Formation Process
-
-The formation of a GQOIS ID follows these steps:
-
-1.  **Model (MDL) Selection**: A specific model is identified or created. This model already has an associated Autonomy Level (A), a Sub-Type (ST), which in turn belongs to a Functional Class (CCC), which is within a Domain (DO).
-    *   Example: Model `Q1H` (AMPEL360 BWB-Q100) is selected.
-        *   This `Q1H` model is defined with `autonomy_code = 'M'`.
-        *   It belongs to sub-type `BW` (Blended Wing Body).
-        *   Sub-type `BW` is in functional class `PAX` (Passenger Transport).
-        *   Class `PAX` belongs to domain `AS` (Air System).
-
-2.  **Serial Number (SSSSS) Assignment**: A unique serial number is assigned for the specific instance of that model.
-    *   Example: First instance → `00001`.
-
-3.  **Base ID Construction**: The components are assembled:
-    *   `DO` (from model) → `AS`
-    *   `A` (from model) → `M`
-    *   `CCC` (from model) → `PAX`
-    *   `ST` (from model) → `BW`
-    *   `MDL` → `Q1H`
-    *   `SSSSS` → `00001`
-    *   Resulting ID: `AS-M-PAX-BW-Q1H-00001`
-
-4.  **Configuration Tracking (CC) - Optional**: If applicable, a configuration code is added.
-    *   Example: Initial configuration → `A1`.
-    *   ID with configuration: `AS-M-PAX-BW-Q1H-00001-A1` (this full ID with CC would be used for specific configuration references, while the base ID identifies the physical instance).
-
-### 1.6 Registry Management
-
-The GQOIS registry is managed through a centralized system with potential for distributed nodes:
-
-#### 1.6.1 ID Allocation Process
-1.  **Request for New Model/Instances**: Organizations submit requests for the allocation of new model codes (if they do not exist) or for the assignment of serial number blocks for existing models.
-2.  **Validation**: Registry administrators validate the request against standards and availability.
-3.  **Approval and Assignment**: Approved requests result in the assignment of model codes and/or serial numbers.
-4.  **Registration**: New models and instances are registered in the central database.
-5.  **Synchronization**: Information is synchronized across federated nodes, if implemented.
-
-#### 1.6.2 Federation Model
-The registry operates on a federation model with:
--   **Primary Node**: Central authority for ID allocation and standards maintenance.
--   **Federated Nodes**: Distributed nodes for specific domains or organizations (future potential).
--   **Synchronization Protocol**: Envisioned to be Git-based for version control and distribution.
--   **Conflict Resolution**: Mechanisms to resolve conflicts in distributed updates.
-
-#### 1.6.3 Standards Integration
-The GQOIS integrates or maps with existing aerospace standards:
--   **Air Systems Standards**: Mapping with ATA chapters (see `ata_chapter_mapping` table). Compatibility with S1000D and alignment with ARINC.
--   **Space Systems Standards**: Mapping with CCSDS object types (see `ccsds_mapping` table). Alignment with ISO 24113 (space debris mitigation) and COSPAR (planetary protection).
-
-#### 1.6.4 Support for Quantum-Enhanced Systems
-A key feature of the GQOIS is its explicit support for quantum-enhanced aerospace systems:
--   **Quantum Sub-Types and Models**: Definition of specific sub-types and models for quantum technologies (e.g., `PAX-QP`, `SAT-QS`). See Part II.
--   **Quantum Technology Tracking**: The system allows tracking (via `models.technical_specifications` and `object_configurations.configuration_details`) of specific quantum technologies implemented.
+### 1.10 Conclusion (Software Landscape)
+Aerospace/defense software balances reliability with modern tech. Ada/C dominate critical systems. C++/Python grow in specific roles. MBD, formal methods, and new languages like Rust are shaping the future.
 
 ---
+## Part 2: Object Identification System
 
-## Part II: Model Code Registry
+This part details the GAIA-QAO Object Identification System (GQOIS), focusing on its two-tiered approach for identifying top-level aerospace objects and their constituent subsystems.
 
-This part details the structure and registry of Model Codes (MDL) within the GAIA-QAO system, providing a standardized naming convention and example models for air and space systems.
+### 2.1 System Overview
+The GQOIS provides a hierarchical framework for uniquely identifying, categorizing, and tracking:
+1.  **Top-Level Aerospace Objects:** Entire aircraft, spacecraft, launch vehicles, etc.
+2.  **Subsystems:** Major components within these top-level objects (e.g., engines, avionics units, flight control systems).
 
-### 2.1 Model Code Structure and Naming Convention
+This dual focus supports unified identification, quantum technology integration, standards compatibility, lifecycle management, configuration tracking, and comprehensive registry management.
 
-Each Model (MDL) code in the GAIA-QAO system follows a standardized 3-character format:
+### 2.2 Tier 1: Top-Level Object Identification
 
-```plaintext
-[G][N][V]
-```
+This tier identifies complete aerospace platforms or vehicles.
+
+#### 2.2.1 Top-Level Object ID Structure
+The structure for top-level objects is:
+`DO-A-CCC-ST(obj_cat)-MDL(obj_model)-SSSSS[-CC(obj_config)]`
+
+| **Component** | **Length** | **Description**                 | **Example**                |
+| :------------ | :--------- | :------------------------------ | :------------------------- |
+| DO            | 2 chars    | Domain                          | AS (Air System)            |
+| A             | 1 char     | Autonomy Level (of object)      | M (Manned/Semi-Autonomous) |
+| CCC           | 3 chars    | Functional Class (of object)    | PAX (Passenger Transport)  |
+| ST            | 2 chars    | Object Category Sub-Type        | NB (Narrow-Body Airliner)  |
+| MDL           | 3 chars    | Object Model/Variant            | Q2A (QuantumNarrow QN-200) |
+| SSSSS         | 5 chars    | Serial Number (of object)       | 00101                      |
+| CC            | 2 chars    | Configuration Code (of object, optional) | B1 (Block 1 Upgrade)     |
+
+#### 2.2.2 Component Descriptions (Top-Level Object ID)
+*   **DO (Domain):** `AS` (Air System), `SP` (Space System). Boundary at 30,000m (guideline).
+*   **A (Autonomy Level):** `M` (Manned/Semi-Autonomous), `U` (Unmanned/Fully Autonomous). An inherent attribute of the `MDL(object_model)`.
+*   **CCC (Functional Class):** Primary purpose of the top-level object (e.g., PAX, CGO, SAT).
+*   **ST (Object Category Sub-Type):** Further refines the `CCC` for the top-level object (e.g., NB, WB for PAX; CO, EO for SAT). See Appendix A for the list of these ST codes.
+*   **MDL (Object Model/Variant):** Specific design/product line of the top-level object (e.g., QN-200). See Part 3 for the catalog.
+*   **SSSSS (Serial Number):** Uniquely identifies a physical instance of the `MDL(object_model)`.
+*   **CC (Configuration Code):** Tracks configurations of the top-level object. See Part 5.
+
+### 2.3 Tier 2: Subsystem Identification
+
+This tier identifies major subsystems integrated within a top-level object.
+
+#### 2.3.1 Subsystem ID Structure Concept
+A subsystem ID is linked to its parent and has its own characteristics:
+`Parent_Reference :: SSS-MDLs-SERs[-CCs]`
 
 Where:
+*   **`Parent_Reference`**: This can be the `Full_Object_ID` of the parent instance (`DO-A-CCC-ST-MDL-SSSSS`) if the subsystem instance is tied to a specific parent instance. Alternatively, for type-level identification of a subsystem compatible with a parent model, it could be the `Parent_Model_Prefix` (`DO-A-CCC-ST-MDL`).
+*   **`::`**: Separator (exact symbol TBD, e.g., `/`, `+SUB+`).
+*   **`SSS` (Subsystem Type Code):** A 3-character code defining the type of subsystem (e.g., `FCS` - Flight Control System, `NAV` - Navigation System). See Appendix F for the list of SSS codes.
+*   **`MDLs` (Subsystem Model Code):** A 3-character code for the specific model of that subsystem (e.g., `A7X` for a specific Flight Control Computer model). See Part 4 for details.
+*   **`SERs` (Subsystem Serial Number - Optional):** A 5-character serial number if the subsystem itself is a serialized Line Replaceable Unit (LRU). Can be `XXXXX` if not individually serialized at this level.
+*   **`-CCs` (Subsystem Configuration Code - Optional):** Configuration of the subsystem itself.
 
--   **G** (Generation/Series): A letter indicating the generation or technology series.
-    -   `Q`: Quantum-enhanced systems (GAIA-QAO primary focus).
-    -   `A`: Advanced conventional systems.
-    -   `P`: Prototype/Experimental systems.
-    -   `S`: Standard production systems.
+#### 2.3.2 Component Descriptions (Subsystem ID)
+*   **`Parent_Reference`**: Links to the Tier 1 object or object model.
+*   **`SSS` (Subsystem Type Code):** The primary classification of the subsystem (e.g., Propulsion, Avionics).
+*   **`MDLs` (Subsystem Model Code):** The specific make/model of the subsystem component.
+*   **`SERs` (Subsystem Serial Number):** Unique identifier for an instance of a subsystem model.
+*   **`CCs` (Subsystem Configuration Code):** Specific configuration of the subsystem model instance.
 
--   **N** (Number/Size): A number indicating the relative size, capacity, or capability.
-    -   `1`: Small/Light.
-    -   `2`: Medium.
-    -   `3`: Large/Heavy.
-    -   `4`: Extra Large/Super Heavy.
+### 2.4 Database Implementation (General Overview for both Tiers)
+The database (detailed in Part 6) will need to store:
+*   Tier 1 object definitions (domains, autonomy levels, functional classes, object category sub-types, object models).
+*   Tier 1 object instances and their configurations.
+*   Definitions for Subsystem Types (`SSS` codes).
+*   A registry for Subsystem Models (`MDLs` codes), including their type (`SSS`), manufacturer, specifications, etc.
+*   A way to link subsystem instances (with their optional serial numbers and configurations) to parent top-level object instances (e.g., a bill of materials or installed-on relationship).
 
--   **V** (Variant): A letter indicating the specific variant or version.
-    -   `A, B, C, etc.`: Sequential variants.
-    -   `H`: High-performance variant.
-    -   `L`: Long-range variant.
-    -   `S`: Special purpose variant.
-    *(Note: If more than 26 variants are needed for a G/N combination, the V-code may be extended to alphanumeric sequences like A0-A9, B0-B9, or two-letter codes like AA, AB, etc., as defined by registry governance.)*
+### 2.5 ID Formation Process Examples
 
-Each Model (MDL) is also inherently associated with an **Autonomy Level (A)**, which is defined in the `models` table of the database (see Part IV) and forms part of the object's full ID.
+**Tier 1: Top-Level Object (QuantumNarrow QN-200, S/N 00101)**
+*   DO: `AS`
+*   A (from Model Q2A): `M`
+*   CCC (for Model Q2A): `PAX`
+*   ST (Object Category for Model Q2A): `NB`
+*   MDL (Object Model): `Q2A`
+*   SSSSS: `00101`
+*   **Result:** `AS-M-PAX-NB-Q2A-00101`
 
-### 2.2 Air Systems (AS) Models
+**Tier 2: Subsystem (Primary Flight Control Computer, Model `PFCA1`, S/N `P7789` on the above aircraft)**
+*   Parent_Reference: `AS-M-PAX-NB-Q2A-00101`
+*   SSS (Subsystem Type): `FCS` (Flight Control System)
+*   MDLs (Subsystem Model): `PFA` (Hypothetical code for PFCC-Alpha model)
+*   SERs (Subsystem Serial): `P7789`
+*   **Result:** `AS-M-PAX-NB-Q2A-00101::FCS-PFA-P7789`
 
-The following tables provide representative examples of models for various functional classes and sub-types within Air Systems (AS). Each model includes its MDL code, name, description, and key specifications. The Autonomy Level (M/U) is specified when defining the model in the database.
+### 2.6 Registry Management (Considerations for both Tiers)
+*   **ID Allocation:** Processes for both top-level objects and for new subsystem types/models.
+*   **Relationships:** The registry must manage the "installed-on" or "part-of" relationships between subsystems and top-level objects.
+*   **Lifecycle Tracking:** Both top-level objects and critical serialized subsystems will have their lifecycles tracked.
 
-#### 2.2.1 Passenger Transport (PAX) Models
+---
+## Part 3: Top-Level Object Model Registry
 
-| **Sub-Type (ST)** | **MDL Code** | **Model Name**          | **Description**                             | **Key Specifications**                  |
-| :---------------- | :----------- | :---------------------- | :------------------------------------------ | :-------------------------------------- |
-| NB                | Q2A          | QuantumNarrow QN-200    | Medium quantum-enhanced narrow-body         | Capacity: 180 pax, Range: 5,500 km      |
-| NB                | A2B          | AeroSingle AS-220       | Medium conventional narrow-body             | Capacity: 220 pax, Range: 5,000 km      |
-| WB                | Q3L          | QuantumWide QW-350L     | Large long-range quantum wide-body          | Capacity: 350 pax, Range: 15,000 km     |
-| WB                | A3B          | AeroTwin AT-330         | Large conventional wide-body                | Capacity: 330 pax, Range: 12,000 km     |
-| RJ                | Q1H          | QuantumRegional QR-90H  | Small high-performance quantum regional jet | Capacity: 90 pax, Range: 3,200 km       |
-| RJ                | S1A          | RegionalJet RJ-75       | Small standard regional jet                 | Capacity: 75 pax, Range: 2,800 km       |
-| BJ                | Q1S          | QuantumExec QE-12S      | Special purpose quantum business jet        | Capacity: 12 pax, Range: 7,500 km       |
-| BJ                | A1L          | AeroExec AE-15L         | Long-range conventional business jet        | Capacity: 15 pax, Range: 7,000 km       |
-| VT                | Q1A          | QuantumLift QL-6A       | Small quantum-enhanced eVTOL air taxi       | Capacity: 6 pax, Range: 300 km          |
-| VT                | A1B          | AeroVert AV-4B          | Small conventional eVTOL air taxi           | Capacity: 4 pax, Range: 150 km          |
-| BW                | Q1H          | AMPEL360 BWB-Q100       | Small quantum-enhanced BWB passenger aircraft | Cap: 100 pax, Range: 5,500 km, Quantum: Nav, Opt, Comms |
-| BW                | Q2A          | AMPEL360 BWB-Q250       | Medium quantum-enhanced BWB passenger aircraft| Cap: 250 pax, Range: 8,000 km, Quantum: Nav, Opt, Comms, Ctrl |
-| BW                | P1B          | BWB-X Demonstrator      | Small BWB technology demonstrator           | Cap: 40 pax (equiv), Range: 3,000 km    |
-| SS                | Q2B          | QuantumSonic QS-150     | Medium quantum-enhanced supersonic airliner | Capacity: 150 pax, Speed: Mach 2.2      |
-| HS                | P2A          | HyperTransport HT-100   | Medium hypersonic transport demonstrator    | Capacity: 100 pax, Speed: Mach 5+       |
-| QP                | Q3L          | QuantumJet Q-350L       | Large long-range quantum-powered airliner   | Capacity: 350 pax, Range: 14,000 km     |
+This part details the structure and registry of Model Codes (MDL) for **Top-Level Objects** (e.g., entire aircraft, spacecraft) within the GAIA-QAO system. Each model entry includes an example GAIA-QAO ID and brief catalog notes.
 
-#### 2.2.2 Cargo Transport (CGO) Models
+### 3.1 Model Code Structure for Top-Level Objects (`[G][N][V]`)
+Format: `[G][N][V]`
+-   **G** (Generation/Series): Q (Quantum), A (Advanced), P (Prototype), S (Standard).
+-   **N** (Number/Size): 1-4 (Small to Extra Large).
+-   **V** (Variant): A-Z (Sequential), H (High-performance), L (Long-range), S (Special purpose).
+    *(Note: If V-code A-Z is exhausted, alphanumeric sequences (A0-A9, etc.) or two-letter codes (AA, AB, etc.) may be used, per registry governance.)*
 
-| **Sub-Type (ST)** | **MDL Code** | **Model Name**          | **Description**                             | **Key Specifications**                 |
-| :---------------- | :----------- | :---------------------- | :------------------------------------------ | :------------------------------------- |
-| LC                | Q1A          | QuantumFreight QF-5     | Small quantum-enhanced light cargo          | Payload: 5 tonnes, Range: 2,000 km     |
-| MC                | Q2B          | QuantumFreight QF-20    | Medium quantum-enhanced cargo               | Payload: 20 tonnes, Range: 5,000 km    |
-| HC                | Q3L          | QuantumFreight QF-80L   | Large long-range quantum cargo              | Payload: 80 tonnes, Range: 10,000 km   |
-| FC                | A2A          | AeroConvert AC-30       | Medium passenger-to-cargo conversion        | Payload: 30 tonnes, Range: 6,000 km    |
-| QD                | Q1H          | QuantumExpress QE-8H    | Small high-speed quantum delivery           | Payload: 8 tonnes, Range: 3,500 km     |
-| VC                | Q1A          | QuantumLift QL-3C       | Small quantum VTOL cargo                    | Payload: 3 tonnes, Range: 500 km       |
-| UC                | Q2S          | QuantumDrone QD-15S     | Medium special purpose unmanned quantum cargo | Payload: 15 tonnes, Range: 4,000 km    |
-| QC                | Q3H          | QuantumCargo QC-100H    | Large high-capacity quantum cargo           | Payload: 100 tonnes, Range: 9,000 km   |
+Each Top-Level Object Model (MDL) is inherently associated with an Autonomy Level (A).
 
-#### 2.2.3 Intelligence, Surveillance, Reconnaissance (ISR) Models
+### 3.2 Air Systems (AS) Top-Level Object Models
 
-| **Sub-Type (ST)** | **MDL Code** | **Model Name**           | **Description**                               | **Key Specifications**                   |
-| :---------------- | :----------- | :----------------------- | :-------------------------------------------- | :--------------------------------------- |
-| UA                | Q2L          | QuantumHawk QH-20L       | Medium long-endurance quantum UAS             | Endurance: 48 hrs, Ceiling: 15,000 m     |
-| MA                | Q3H          | QuantumMaritime QM-300   | Large high-performance quantum maritime patrol| Endurance: 24 hrs, Range: 9,000 km       |
-| SR                | Q2S          | QuantumRecon QR-200S     | Medium special purpose strategic recon        | Ceiling: 25,000 m, Speed: Mach 3         |
-| TR                | Q1A          | QuantumTactical QT-100   | Small quantum tactical recon                  | Endurance: 12 hrs, Ceiling: 12,000 m     |
-| EW                | Q2H          | QuantumSpectrum QS-200   | Medium high-capability electronic warfare     | Range: 6,000 km, Advanced EW suite       |
-| SI                | Q2B          | QuantumSignal QS-250     | Medium SIGINT platform                        | Endurance: 18 hrs, Comprehensive SIGINT  |
-| IM                | Q2A          | QuantumImage QI-200      | Medium imaging platform                       | Resolution: 5 cm from 15,000 m           |
-| MS                | Q3S          | QuantumSensor QS-350     | Large multi-sensor platform                   | 12+ integrated quantum sensor systems    |
-| QI                | Q3H          | QuantumEye QE-350H       | Large high-altitude, high-performance quantum ISR | Endurance: 48+ hrs, Ceiling: 22,000 m    |
+#### 3.2.1 Passenger Transport (PAX) Models
 
-#### 2.2.4 Scientific Research (SCI) Models
+| Sub-Type (ST) | MDL Code | Model Name          | Description                             | Key Specifications                  | **GAIA-QAO ID Example & Catalog Notes**                                                                                                                                  |
+| :------------ | :------- | :------------------ | :-------------------------------------- | :---------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| NB            | Q2A      | QuantumNarrow QN-200| Medium quantum-enhanced narrow-body     | Capacity: 180 pax, Range: 5,500 km  | **ID:** `AS-M-PAX-NB-Q2A-00101` <br> **Autonomy:** M. **Notes:** Medium-haul passenger transport with quantum-augmented systems. Full specs in registry.                 |
+| NB            | A2B      | AeroSingle AS-220   | Medium conventional narrow-body         | Capacity: 220 pax, Range: 5,000 km  | **ID:** `AS-M-PAX-NB-A2B-00102` <br> **Autonomy:** M. **Notes:** Conventional medium-haul passenger transport. Full specs in registry.                                 |
+| WB            | Q3L      | QuantumWide QW-350L | Large long-range quantum wide-body      | Capacity: 350 pax, Range: 15,000 km | **ID:** `AS-M-PAX-WB-Q3L-00103` <br> **Autonomy:** M. **Notes:** Long-haul wide-body with quantum efficiencies. Full specs in registry.                               |
+| WB            | A3B      | AeroTwin AT-330     | Large conventional wide-body            | Capacity: 330 pax, Range: 12,000 km | **ID:** `AS-M-PAX-WB-A3B-00104` <br> **Autonomy:** M. **Notes:** Conventional long-haul wide-body transport. Full specs in registry.                                |
+| RJ            | Q1H      | QuantumRegional QR-90H| Small high-performance quantum regional jet | Capacity: 90 pax, Range: 3,200 km   | **ID:** `AS-M-PAX-RJ-Q1H-00105` <br> **Autonomy:** M. **Notes:** High-performance regional jet with quantum systems. Full specs in registry.                         |
+| RJ            | S1A      | RegionalJet RJ-75   | Small standard regional jet             | Capacity: 75 pax, Range: 2,800 km   | **ID:** `AS-M-PAX-RJ-S1A-00106` <br> **Autonomy:** M. **Notes:** Standard regional passenger jet. Full specs in registry.                                             |
+| BJ            | Q1S      | QuantumExec QE-12S  | Special purpose quantum business jet    | Capacity: 12 pax, Range: 7,500 km   | **ID:** `AS-M-PAX-BJ-Q1S-00107` <br> **Autonomy:** M. **Notes:** Quantum-enhanced executive transport. Full specs in registry.                                         |
+| BJ            | A1L      | AeroExec AE-15L     | Long-range conventional business jet    | Capacity: 15 pax, Range: 7,000 km   | **ID:** `AS-M-PAX-BJ-A1L-00108` <br> **Autonomy:** M. **Notes:** Conventional long-range business aviation. Full specs in registry.                                    |
+| VT            | Q1A      | QuantumLift QL-6A   | Small quantum-enhanced eVTOL air taxi   | Capacity: 6 pax, Range: 300 km      | **ID:** `AS-M-PAX-VT-Q1A-00109` <br> **Autonomy:** M. **Notes:** Urban Air Mobility eVTOL with quantum systems. Full specs in registry.                                 |
+| VT            | A1B      | AeroVert AV-4B      | Small conventional eVTOL air taxi       | Capacity: 4 pax, Range: 150 km      | **ID:** `AS-M-PAX-VT-A1B-00110` <br> **Autonomy:** M. **Notes:** Conventional Urban Air Mobility eVTOL. Full specs in registry.                                       |
+| BW            | Q1H      | AMPEL360 BWB-Q100   | Small quantum-enhanced BWB passenger aircraft | Cap: 100 pax, Range: 5,500 km, Quantum: Nav, Opt, Comms | **ID:** `AS-M-PAX-BW-Q1H-00001` <br> **Autonomy:** M. **Notes:** Efficient BWB design with quantum navigation/optimization. Full specs in registry.                       |
+| BW            | Q2A      | AMPEL360 BWB-Q250   | Medium quantum-enhanced BWB passenger aircraft| Cap: 250 pax, Range: 8,000 km, Quantum: Nav, Opt, Comms, Ctrl | **ID:** `AS-M-PAX-BW-Q2A-00111` <br> **Autonomy:** M. **Notes:** Medium capacity BWB with enhanced quantum systems. Full specs in registry.                        |
+| BW            | P1B      | BWB-X Demonstrator  | Small BWB technology demonstrator       | Cap: 40 pax (equiv), Range: 3,000 km    | **ID:** `AS-M-PAX-BW-P1B-00112` <br> **Autonomy:** M. **Notes:** Experimental BWB technology flight demonstrator. Full specs in registry.                              |
+| SS            | Q2B      | QuantumSonic QS-150 | Medium quantum-enhanced supersonic airliner | Capacity: 150 pax, Speed: Mach 2.2  | **ID:** `AS-M-PAX-SS-Q2B-00113` <br> **Autonomy:** M. **Notes:** Supersonic passenger transport with quantum-enhanced performance. Full specs in registry.          |
+| HS            | P2A      | HyperTransport HT-100| Medium hypersonic transport demonstrator| Capacity: 100 pax, Speed: Mach 5+   | **ID:** `AS-M-PAX-HS-P2A-00114` <br> **Autonomy:** M. **Notes:** Experimental hypersonic passenger transport demonstrator. Full specs in registry.                       |
+| QP            | Q3L      | QuantumJet Q-350L   | Large long-range quantum-powered airliner| Capacity: 350 pax, Range: 14,000 km | **ID:** `AS-M-PAX-QP-Q3L-00115` <br> **Autonomy:** M. **Notes:** Long-range airliner with quantum-derived propulsion systems. Full specs in registry.                    |
 
-| **Sub-Type (ST)** | **MDL Code** | **Model Name**           | **Description**                                  | **Key Specifications**                         |
-| :---------------- | :----------- | :----------------------- | :----------------------------------------------- | :--------------------------------------------- |
-| AT                | Q2A          | QuantumAtmos QA-200      | Medium quantum atmospheric research aircraft     | Ceiling: 20,000 m, 30+ atm. sensors          |
-| OC                | Q2B          | QuantumOcean QO-200      | Medium quantum oceanographic research aircraft   | Endurance: 18 hrs, Advanced ocean sensors      |
-| ER                | Q2H          | QuantumEarth QE-250      | Medium high-performance quantum Earth sensing    | Resolution: 10 cm, 15+ spectral bands        |
-| WX                | Q2S          | QuantumStorm QS-200      | Medium special purpose quantum weather research  | Ceiling: 18,000 m, Storm penetration capability|
-| CR                | Q3L          | QuantumClimate QC-300    | Large long-range quantum climate research        | Range: 12,000 km, Comprehensive climate sensors|
-| GS                | Q2A          | QuantumGeo QG-200        | Medium quantum geophysical survey aircraft       | Endurance: 14 hrs, Advanced geophysical sensors|
-| MP                | Q3S          | QuantumScience QS-300    | Large special purpose quantum multi-research     | Modular sensor bay, 50+ possible configurations|
-| QS                | Q2H          | QuantumSense QS-250H     | Medium high-performance quantum sensing platform | 20+ quantum sensors, Unprecedented sensitivity |
+#### 3.2.2 Cargo Transport (CGO) Models
 
-#### 2.2.5 Utility (UTL) Models
+| Sub-Type (ST) | MDL Code | Model Name          | Description                             | Key Specifications                 | **GAIA-QAO ID Example & Catalog Notes**                                                                                                                              |
+| :------------ | :------- | :------------------ | :-------------------------------------- | :--------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LC            | Q1A      | QuantumFreight QF-5 | Small quantum-enhanced light cargo      | Payload: 5 tonnes, Range: 2,000 km | **ID:** `AS-U-CGO-LC-Q1A-00201` <br> **Autonomy:** U. **Notes:** Small quantum-enhanced light cargo for regional delivery. Full specs in registry.                             |
+| MC            | Q2B      | QuantumFreight QF-20| Medium quantum-enhanced cargo           | Payload: 20 tonnes, Range: 5,000 km| **ID:** `AS-U-CGO-MC-Q2B-00202` <br> **Autonomy:** U. **Notes:** Medium-lift quantum cargo for inter-city transport. Full specs in registry.                                |
+| HC            | Q3L      | QuantumFreight QF-80L| Large long-range quantum cargo          | Payload: 80 tonnes, Range: 10,000 km| **ID:** `AS-U-CGO-HC-Q3L-00203` <br> **Autonomy:** U. **Notes:** Heavy-lift, long-range quantum cargo aircraft. Full specs in registry.                                      |
+| FC            | A2A      | AeroConvert AC-30   | Medium passenger-to-cargo conversion    | Payload: 30 tonnes, Range: 6,000 km| **ID:** `AS-M-CGO-FC-A2A-00204` <br> **Autonomy:** M. **Notes:** Converted freighter for general cargo operations. Full specs in registry.                                   |
+| QD            | Q1H      | QuantumExpress QE-8H| Small high-speed quantum delivery       | Payload: 8 tonnes, Range: 3,500 km | **ID:** `AS-U-CGO-QD-Q1H-00205` <br> **Autonomy:** U. **Notes:** High-speed delivery drone with quantum optimization. Full specs in registry.                               |
+| VC            | Q1A      | QuantumLift QL-3C   | Small quantum VTOL cargo                | Payload: 3 tonnes, Range: 500 km   | **ID:** `AS-U-CGO-VC-Q1A-00206` <br> **Autonomy:** U. **Notes:** VTOL cargo drone for point-to-point delivery. Full specs in registry.                                     |
+| UC            | Q2S      | QuantumDrone QD-15S | Medium special purpose unmanned quantum cargo| Payload: 15 tonnes, Range: 4,000 km| **ID:** `AS-U-CGO-UC-Q2S-00012` <br> **Autonomy:** U. **Notes:** Special purpose cargo drone with quantum systems. Full specs in registry.                                 |
+| QC            | Q3H      | QuantumCargo QC-100H| Large high-capacity quantum cargo       | Payload: 100 tonnes, Range: 9,000 km| **ID:** `AS-U-CGO-QC-Q3H-00207` <br> **Autonomy:** U. **Notes:** Very large capacity quantum-enhanced cargo transport. Full specs in registry.                               |
 
-| **Sub-Type (ST)** | **MDL Code** | **Model Name**            | **Description**                                | **Key Specifications**                        |
-| :---------------- | :----------- | :------------------------ | :--------------------------------------------- | :-------------------------------------------- |
-| FF                | Q2A          | QuantumFire QF-200        | Medium quantum-enhanced firefighting aircraft  | Water capacity: 12,000 L, Precision delivery  |
-| AG                | Q1B          | QuantumCrop QC-100        | Small quantum agricultural aircraft            | Spray width: 25 m, Capacity: 2,000 L          |
-| SR                | Q2H          | QuantumRescue QR-200H     | Medium high-performance quantum SAR aircraft   | Range: 2,000 km, Advanced sensing suite       |
-| ME                | Q2S          | QuantumMedic QM-200S      | Medium special purpose quantum medical aircraft| Patient capacity: 12, Advanced life support   |
-| PL                | Q1A          | QuantumInspect QI-100     | Small quantum infrastructure inspection UAS    | Endurance: 10 hrs, Precision sensors          |
-| SU                | Q2B          | QuantumSurvey QS-200      | Medium quantum survey aircraft                 | Mapping rate: 500 km²/hr, 0.5 cm resolution   |
-| CP                | Q2L          | QuantumProtect QP-200L    | Medium long-range quantum civil protection     | Range: 5,000 km, Multi-mission capability     |
-| QU                | Q3H          | QuantumUtility QU-300H    | Large high-capability quantum utility aircraft | Modular systems, 20+ configurations         |
+#### 3.2.3 Intelligence, Surveillance, Reconnaissance (ISR) Models
 
-#### 2.2.6 Recreational & Sport (REC) Models
+| Sub-Type (ST) | MDL Code | Model Name            | Description                               | Key Specifications                   | **GAIA-QAO ID Example & Catalog Notes**                                                                                                                               |
+| :------------ | :------- | :-------------------- | :---------------------------------------- | :----------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| UA            | Q2L      | QuantumHawk QH-20L    | Medium long-endurance quantum UAS         | Endurance: 48 hrs, Ceiling: 15,000 m | **ID:** `AS-U-ISR-UA-Q2L-00301` <br> **Autonomy:** U. **Notes:** Long-endurance ISR UAS with quantum-enhanced sensors. Full specs in registry.                             |
+| MA            | Q3H      | QuantumMaritime QM-300| Large high-performance quantum maritime patrol| Endurance: 24 hrs, Range: 9,000 km   | **ID:** `AS-M-ISR-MA-Q3H-00302` <br> **Autonomy:** M. **Notes:** High-performance maritime patrol with quantum sensors. Full specs in registry.                         |
+| SR            | Q2S      | QuantumRecon QR-200S  | Medium special purpose strategic recon    | Ceiling: 25,000 m, Speed: Mach 3     | **ID:** `AS-U-ISR-SR-Q2S-00303` <br> **Autonomy:** U. **Notes:** High-altitude, high-speed strategic reconnaissance with quantum systems. Full specs in registry.        |
+| TR            | Q1A      | QuantumTactical QT-100| Small quantum tactical recon              | Endurance: 12 hrs, Ceiling: 12,000 m | **ID:** `AS-U-ISR-TR-Q1A-00304` <br> **Autonomy:** U. **Notes:** Tactical reconnaissance UAS with quantum-enhanced payload. Full specs in registry.                           |
+| EW            | Q2H      | QuantumSpectrum QS-200| Medium high-capability electronic warfare | Range: 6,000 km, Advanced EW suite   | **ID:** `AS-M-ISR-EW-Q2H-00305` <br> **Autonomy:** M. **Notes:** Electronic warfare platform with quantum spectrum analysis. Full specs in registry.                     |
+| SI            | Q2B      | QuantumSignal QS-250  | Medium SIGINT platform                    | Endurance: 18 hrs, Comprehensive SIGINT| **ID:** `AS-M-ISR-SI-Q2B-00306` <br> **Autonomy:** M. **Notes:** SIGINT collection platform with quantum processing. Full specs in registry.                             |
+| IM            | Q2A      | QuantumImage QI-200   | Medium imaging platform                   | Resolution: 5 cm from 15,000 m     | **ID:** `AS-U-ISR-IM-Q2A-00307` <br> **Autonomy:** U. **Notes:** High-resolution imaging platform with quantum-enhanced sensors. Full specs in registry.                      |
+| MS            | Q3S      | QuantumSensor QS-350  | Large multi-sensor platform               | 12+ integrated quantum sensor systems| **ID:** `AS-M-ISR-MS-Q3S-00308` <br> **Autonomy:** M. **Notes:** Large platform with diverse quantum sensor integration. Full specs in registry.                          |
+| QI            | Q3H      | QuantumEye QE-350H    | Large high-altitude, high-performance quantum ISR | Endurance: 48+ hrs, Ceiling: 22,000 m| **ID:** `AS-U-ISR-QI-Q3H-00005` <br> **Autonomy:** U. **Notes:** Flagship quantum ISR platform for persistent surveillance. Full specs in registry.                         |
 
-| **Sub-Type (ST)** | **MDL Code** | **Model Name**             | **Description**                               | **Key Specifications**                     |
-| :---------------- | :----------- | :------------------------- | :-------------------------------------------- | :----------------------------------------- |
-| GL                | Q1A          | QuantumGlide QG-100        | Small quantum-enhanced glider                 | Glide ratio: 70:1, Span: 18 m              |
-| MG                | Q1B          | QuantumSoar QS-100         | Small quantum motor glider                    | Range: 1,500 km, Glide ratio: 40:1         |
-| UL                | Q1A          | QuantumLight QL-100        | Small quantum ultralight                      | MTOW: 450 kg, Range: 800 km                |
-| AC                | Q1H          | QuantumAero QA-100H        | Small high-performance quantum aerobatic      | Roll rate: 420°/sec, G-limits: +/-12G      |
-| LS                | Q1B          | QuantumSport QS-100        | Small quantum light sport aircraft            | MTOW: 600 kg, Range: 1,200 km              |
-| HB                | A1A          | AeroBuilder AB-100         | Small conventional homebuilt                  | MTOW: 750 kg, Range: 1,000 km              |
-| JW                | Q1S          | QuantumJetpack QJ-100S     | Special purpose quantum jetpack               | Flight time: 45 min, Range: 80 km          |
-| QR                | Q1H          | QuantumLeisure QL-100H     | Small high-performance quantum recreational   | MTOW: 650 kg, Range: 1,500 km              |
+#### 3.2.4 Scientific Research (SCI) Models
 
-#### 2.2.7 Experimental (XPR) Models
+| Sub-Type (ST) | MDL Code | Model Name           | Description                                  | Key Specifications                         | **GAIA-QAO ID Example & Catalog Notes**                                                                                                                                  |
+| :------------ | :------- | :--------------------- | :----------------------------------------------- | :----------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AT            | Q2A      | QuantumAtmos QA-200    | Medium quantum atmospheric research aircraft     | Ceiling: 20,000 m, 30+ atm. sensors          | **ID:** `AS-M-SCI-AT-Q2A-00003` <br> **Autonomy:** M. **Notes:** Atmospheric research platform with quantum sensors. Full specs in registry.                                   |
+| OC            | Q2B      | QuantumOcean QO-200    | Medium quantum oceanographic research aircraft   | Endurance: 18 hrs, Advanced ocean sensors      | **ID:** `AS-M-SCI-OC-Q2B-00401` <br> **Autonomy:** M. **Notes:** Oceanographic research with quantum-enhanced sensing capabilities. Full specs in registry.                       |
+| ER            | Q2H      | QuantumEarth QE-250    | Medium high-performance quantum Earth sensing    | Resolution: 10 cm, 15+ spectral bands        | **ID:** `AS-M-SCI-ER-Q2H-00402` <br> **Autonomy:** M. **Notes:** High-performance Earth observation for scientific use, quantum sensors. Full specs in registry.                 |
+| WX            | Q2S      | QuantumStorm QS-200    | Medium special purpose quantum weather research  | Ceiling: 18,000 m, Storm penetration capability| **ID:** `AS-M-SCI-WX-Q2S-00403` <br> **Autonomy:** M. **Notes:** Weather research, storm penetration, quantum atmospheric sensors. Full specs in registry.                       |
+| CR            | Q3L      | QuantumClimate QC-300  | Large long-range quantum climate research        | Range: 12,000 km, Comprehensive climate sensors| **ID:** `AS-M-SCI-CR-Q3L-00404` <br> **Autonomy:** M. **Notes:** Long-range climate research platform with extensive quantum sensor suite. Full specs in registry.                |
+| GS            | Q2A      | QuantumGeo QG-200      | Medium quantum geophysical survey aircraft       | Endurance: 14 hrs, Advanced geophysical sensors| **ID:** `AS-M-SCI-GS-Q2A-00405` <br> **Autonomy:** M. **Notes:** Geophysical survey aircraft with quantum gravimeters/magnetometers. Full specs in registry.                     |
+| MP            | Q3S      | QuantumScience QS-300  | Large special purpose quantum multi-research     | Modular sensor bay, 50+ possible configurations| **ID:** `AS-M-SCI-MP-Q3S-00406` <br> **Autonomy:** M. **Notes:** Multi-purpose large scientific platform with quantum sensor options. Full specs in registry.                     |
+| QS            | Q2H      | QuantumSense QS-250H   | Medium high-performance quantum sensing platform | 20+ quantum sensors, Unprecedented sensitivity | **ID:** `AS-M-SCI-QS-Q2H-00407` <br> **Autonomy:** M. **Notes:** Dedicated quantum sensing research aircraft for fundamental physics/materials. Full specs in registry.      |
 
-| **Sub-Type (ST)** | **MDL Code** | **Model Name**          | **Description**                             | **Key Specifications**                       |
-| :---------------- | :----------- | :---------------------- | :------------------------------------------ | :------------------------------------------- |
-| TD                | P2A          | TechDemo TD-200         | Medium technology demonstrator              | MTOW: 12,000 kg, Modular test systems        |
-| HP                | P2H          | PerformX PX-200H        | Medium high-performance experimental        | Speed: Mach 3.5, Ceiling: 30,000 m           |
-| NP                | P2S          | PropulsionX PX-200S     | Medium special purpose propulsion testbed   | 5 swappable propulsion systems               |
-| NS                | P2B          | StructureX SX-200       | Medium novel structure testbed              | Morphing wing, Active aeroelastics           |
-| VT                | P1A          | VTOLX VX-100            | Small VTOL experimental                     | 8 different lift system configurations       |
-| HY                | P2B          | HybridX HX-200          | Medium hybrid concept demonstrator          | Electric-hydrogen-quantum hybrid             |
-| AT                | P2A          | AutonomyX AX-200        | Medium autonomous testbed                   | Full autonomous capability, AI testbed       |
-| QT                | P3S          | QuantumX QX-300S        | Large special purpose quantum testbed       | Comprehensive quantum technology suite       |
-| HH                | P2A          | HyperX HX-200           | Medium hypersonic demonstrator              | Speed: Mach 6+, Scramjet propulsion          |
+#### 3.2.5 Utility (UTL) Models
 
-#### 2.2.8 Lighter Than Air (LTA) Models
+| Sub-Type (ST) | MDL Code | Model Name            | Description                                | Key Specifications                        | **GAIA-QAO ID Example & Catalog Notes**                                                                                                                                  |
+| :------------ | :------- | :---------------------- | :--------------------------------------------- | :---------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FF            | Q2A      | QuantumFire QF-200      | Medium quantum-enhanced firefighting aircraft  | Water capacity: 12,000 L, Precision delivery| **ID:** `AS-M-UTL-FF-Q2A-00021` <br> **Autonomy:** M. **Notes:** Aerial firefighting with quantum-optimized water delivery. Full specs in registry.                              |
+| AG            | Q1B      | QuantumCrop QC-100      | Small quantum agricultural aircraft            | Spray width: 25 m, Capacity: 2,000 L      | **ID:** `AS-M-UTL-AG-Q1B-00501` <br> **Autonomy:** M. **Notes:** Agricultural aircraft with quantum precision spraying. Full specs in registry.                             |
+| SR            | Q2H      | QuantumRescue QR-200H   | Medium high-performance quantum SAR aircraft   | Range: 2,000 km, Advanced sensing suite   | **ID:** `AS-M-UTL-SR-Q2H-00502` <br> **Autonomy:** M. **Notes:** Search and Rescue with quantum-enhanced sensors for detection. Full specs in registry.                             |
+| ME            | Q2S      | QuantumMedic QM-200S    | Medium special purpose quantum medical aircraft| Patient capacity: 12, Advanced life support| **ID:** `AS-M-UTL-ME-Q2S-00503` <br> **Autonomy:** M. **Notes:** Air ambulance with quantum diagnostic/monitoring support. Full specs in registry.                               |
+| PL            | Q1A      | QuantumInspect QI-100   | Small quantum infrastructure inspection UAS    | Endurance: 10 hrs, Precision sensors      | **ID:** `AS-U-UTL-PL-Q1A-00504` <br> **Autonomy:** U. **Notes:** Infrastructure inspection UAS with quantum NDT sensors. Full specs in registry.                               |
+| SU            | Q2B      | QuantumSurvey QS-200    | Medium quantum survey aircraft                 | Mapping rate: 500 km²/hr, 0.5 cm resolution| **ID:** `AS-M-UTL-SU-Q2B-00505` <br> **Autonomy:** M. **Notes:** Aerial surveying with quantum-enhanced lidar/imaging. Full specs in registry.                                |
+| CP            | Q2L      | QuantumProtect QP-200L  | Medium long-range quantum civil protection     | Range: 5,000 km, Multi-mission capability | **ID:** `AS-M-UTL-CP-Q2L-00506` <br> **Autonomy:** M. **Notes:** Civil protection multi-mission aircraft with quantum comms/sensing. Full specs in registry.                   |
+| QU            | Q3H      | QuantumUtility QU-300H  | Large high-capability quantum utility aircraft | Modular systems, 20+ configurations     | **ID:** `AS-M-UTL-QU-Q3H-00507` <br> **Autonomy:** M. **Notes:** Large modular utility platform with quantum system options. Full specs in registry.                               |
 
-| **Sub-Type (ST)** | **MDL Code** | **Model Name**            | **Description**                                  | **Key Specifications**                         |
-| :---------------- | :----------- | :------------------------ | :----------------------------------------------- | :--------------------------------------------- |
-| AB                | Q2A          | QuantumBlimp QB-200       | Medium quantum-enhanced blimp                    | Volume: 150,000 m³, Payload: 20,000 kg         |
-| AR                | Q3B          | QuantumZeppelin QZ-300    | Large rigid airship                              | Volume: 300,000 m³, Payload: 50,000 kg         |
-| HA                | Q2L          | QuantumStrato QS-200L     | Medium long-endurance stratospheric platform     | Altitude: 20,000 m, Endurance: 180 days        |
-| SB                | Q2S          | QuantumBalloon QB-200S    | Medium special purpose scientific balloon        | Altitude: 35,000 m, Payload: 2,000 kg          |
-| HB                | Q2A          | QuantumHybrid QH-200      | Medium hybrid lift airship                       | Volume: 200,000 m³, Payload: 30,000 kg         |
-| CB                | Q3H          | QuantumAirCargo QA-300H   | Large high-capacity cargo airship                | Payload: 100,000 kg, Range: 10,000 km          |
-| QB                | Q2H          | QuantumLift QL-250H       | Medium high-performance quantum buoyancy craft   | Volume: 250,000 m³, Quantum buoyancy control   |
+#### 3.2.6 Recreational & Sport (REC) Models
 
-#### 2.2.9 Military Aircraft (MIL) Models
+| Sub-Type (ST) | MDL Code | Model Name             | Description                               | Key Specifications                     | **GAIA-QAO ID Example & Catalog Notes**                                                                                                                                |
+| :------------ | :------- | :----------------------- | :-------------------------------------------- | :------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GL            | Q1A      | QuantumGlide QG-100      | Small quantum-enhanced glider                 | Glide ratio: 70:1, Span: 18 m          | **ID:** `AS-M-REC-GL-Q1A-00050` <br> **Autonomy:** M. **Notes:** High-performance glider with quantum aerodynamic optimization. Full specs in registry.                         |
+| MG            | Q1B      | QuantumSoar QS-100       | Small quantum motor glider                    | Range: 1,500 km, Glide ratio: 40:1     | **ID:** `AS-M-REC-MG-Q1B-00601` <br> **Autonomy:** M. **Notes:** Motor glider with efficient quantum-assisted soaring. Full specs in registry.                               |
+| UL            | Q1A      | QuantumLight QL-100      | Small quantum ultralight                      | MTOW: 450 kg, Range: 800 km            | **ID:** `AS-M-REC-UL-Q1A-00602` <br> **Autonomy:** M. **Notes:** Ultralight aircraft with quantum material construction. Full specs in registry.                                |
+| AC            | Q1H      | QuantumAero QA-100H      | Small high-performance quantum aerobatic      | Roll rate: 420°/sec, G-limits: +/-12G  | **ID:** `AS-M-REC-AC-Q1H-00603` <br> **Autonomy:** M. **Notes:** Aerobatic aircraft with quantum structural enhancements. Full specs in registry.                              |
+| LS            | Q1B      | QuantumSport QS-100      | Small quantum light sport aircraft            | MTOW: 600 kg, Range: 1,200 km          | **ID:** `AS-M-REC-LS-Q1B-00604` <br> **Autonomy:** M. **Notes:** Light sport aircraft with quantum efficiency systems. Full specs in registry.                                 |
+| HB            | A1A      | AeroBuilder AB-100       | Small conventional homebuilt                  | MTOW: 750 kg, Range: 1,000 km          | **ID:** `AS-M-REC-HB-A1A-00605` <br> **Autonomy:** M. **Notes:** Conventional amateur-built aircraft kit. Full specs in registry.                                           |
+| JW            | Q1S      | QuantumJetpack QJ-100S   | Special purpose quantum jetpack               | Flight time: 45 min, Range: 80 km      | **ID:** `AS-M-REC-JW-Q1S-00606` <br> **Autonomy:** M. **Notes:** Personal flight jetpack with quantum stabilization. Full specs in registry.                                    |
+| QR            | Q1H      | QuantumLeisure QL-100H   | Small high-performance quantum recreational   | MTOW: 650 kg, Range: 1,500 km          | **ID:** `AS-M-REC-QR-Q1H-00607` <br> **Autonomy:** M. **Notes:** High-performance recreational aircraft with quantum tech integration. Full specs in registry.                   |
 
-| **Sub-Type (ST)** | **MDL Code** | **Model Name**            | **Description**                               | **Key Specifications**                        |
-| :---------------- | :----------- | :------------------------ | :-------------------------------------------- | :-------------------------------------------- |
-| FJ                | Q2S          | QuantumFighter QF-200S    | Medium special purpose quantum fighter        | Speed: Mach 2.5, Supercruise, Quantum sensors |
-| BM                | Q3S          | QuantumStrike QS-300S     | Large special purpose quantum bomber          | Range: 12,000 km, Payload: 30,000 kg          |
-| AT                | Q2A          | QuantumAttack QA-200      | Medium quantum attack aircraft                | Loiter: 6 hrs, Payload: 8,000 kg              |
-| TR                | Q1B          | QuantumTrainer QT-100     | Small quantum trainer                         | Advanced quantum simulation, HOTAS            |
-| TP                | Q3L          | QuantumTransport QT-300L  | Large long-range quantum transport            | Payload: 70,000 kg, Range: 10,000 km          |
-| TK                | Q3L          | QuantumTanker QT-300L     | Large long-range quantum tanker               | Fuel capacity: 150,000 kg, Range: 11,000 km   |
-| MH                | Q2A          | QuantumHelicopter QH-200  | Medium quantum military helicopter            | Payload: 5,000 kg, Range: 800 km              |
-| UC                | Q2S          | QuantumCombat QC-200S     | Medium special purpose unmanned combat UCAV   | Endurance: 24 hrs, Payload: 2,500 kg          |
-| QW                | Q3H          | QuantumWarfare QW-300H    | Large high-capability quantum warfare platform| Comprehensive quantum military systems        |
+#### 3.2.7 Experimental (XPR) Models
 
-### 2.3 Space Systems (SP) Models
+| Sub-Type (ST) | MDL Code | Model Name          | Description                             | Key Specifications                       | **GAIA-QAO ID Example & Catalog Notes**                                                                                                                                   |
+| :------------ | :------- | :-------------------- | :---------------------------------------- | :--------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| TD            | P2A      | TechDemo TD-200       | Medium technology demonstrator            | MTOW: 12,000 kg, Modular test systems    | **ID:** `AS-M-XPR-TD-P2A-00701` <br> **Autonomy:** M. **Notes:** Platform for demonstrating new aerospace technologies. Full specs in registry.                                |
+| HP            | P2H      | PerformX PX-200H      | Medium high-performance experimental      | Speed: Mach 3.5, Ceiling: 30,000 m       | **ID:** `AS-M-XPR-HP-P2H-00702` <br> **Autonomy:** M. **Notes:** Experimental aircraft for high-speed/altitude research. Full specs in registry.                             |
+| NP            | P2S      | PropulsionX PX-200S   | Medium special purpose propulsion testbed | 5 swappable propulsion systems           | **ID:** `AS-M-XPR-NP-P2S-00703` <br> **Autonomy:** M. **Notes:** Testbed for novel aircraft propulsion systems. Full specs in registry.                                       |
+| NS            | P2B      | StructureX SX-200     | Medium novel structure testbed            | Morphing wing, Active aeroelastics       | **ID:** `AS-M-XPR-NS-P2B-00704` <br> **Autonomy:** M. **Notes:** Testbed for advanced aerospace structures and materials. Full specs in registry.                               |
+| VT            | P1A      | VTOLX VX-100          | Small VTOL experimental                   | 8 different lift system configurations   | **ID:** `AS-M-XPR-VT-P1A-00705` <br> **Autonomy:** M. **Notes:** Experimental platform for various VTOL lift concepts. Full specs in registry.                                 |
+| HY            | P2B      | HybridX HX-200        | Medium hybrid concept demonstrator        | Electric-hydrogen-quantum hybrid         | **ID:** `AS-M-XPR-HY-P2B-00706` <br> **Autonomy:** M. **Notes:** Demonstrator for hybrid propulsion/energy systems. Full specs in registry.                                   |
+| AT            | P2A      | AutonomyX AX-200      | Medium autonomous testbed                 | Full autonomous capability, AI testbed   | **ID:** `AS-U-XPR-AT-P2A-00707` <br> **Autonomy:** U. **Notes:** Testbed for advanced autonomous flight and AI algorithms. Full specs in registry.                                   |
+| QT            | P3S      | QuantumX QX-300S      | Large special purpose quantum testbed     | Comprehensive quantum technology suite   | **ID:** `AS-M-XPR-QT-P3S-00002` <br> **Autonomy:** M. **Notes:** Large airborne platform for quantum technology experimentation. Full specs in registry.                         |
+| HH            | P2A      | HyperX HX-200         | Medium hypersonic demonstrator            | Speed: Mach 6+, Scramjet propulsion      | **ID:** `AS-U-XPR-HH-P2A-00708` <br> **Autonomy:** U. **Notes:** Hypersonic flight and propulsion technology demonstrator. Full specs in registry.                                   |
 
-The following tables provide representative examples of models for various functional classes and sub-types within Space Systems (SP).
+#### 3.2.8 Lighter Than Air (LTA) Models
 
-#### 2.3.1 Satellite (SAT) Models
+| Sub-Type (ST) | MDL Code | Model Name            | Description                                  | Key Specifications                         | **GAIA-QAO ID Example & Catalog Notes**                                                                                                                                 |
+| :------------ | :------- | :---------------------- | :----------------------------------------------- | :----------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AB            | Q2A      | QuantumBlimp QB-200     | Medium quantum-enhanced blimp                    | Volume: 150,000 m³, Payload: 20,000 kg     | **ID:** `AS-M-LTA-AB-Q2A-00001` <br> **Autonomy:** M. **Notes:** Blimp with quantum-enhanced buoyancy/navigation. Full specs in registry.                                 |
+| AR            | Q3B      | QuantumZeppelin QZ-300  | Large rigid airship                              | Volume: 300,000 m³, Payload: 50,000 kg     | **ID:** `AS-M-LTA-AR-Q3B-00801` <br> **Autonomy:** M. **Notes:** Large rigid airship with quantum systems integration. Full specs in registry.                             |
+| HA            | Q2L      | QuantumStrato QS-200L   | Medium long-endurance stratospheric platform     | Altitude: 20,000 m, Endurance: 180 days    | **ID:** `AS-U-LTA-HA-Q2L-00802` <br> **Autonomy:** U. **Notes:** Stratospheric platform with quantum comms/sensors. Full specs in registry.                                   |
+| SB            | Q2S      | QuantumBalloon QB-200S  | Medium special purpose scientific balloon        | Altitude: 35,000 m, Payload: 2,000 kg      | **ID:** `AS-U-LTA-SB-Q2S-00803` <br> **Autonomy:** U. **Notes:** Scientific balloon with quantum sensor payload. Full specs in registry.                                     |
+| HB            | Q2A      | QuantumHybrid QH-200    | Medium hybrid lift airship                       | Volume: 200,000 m³, Payload: 30,000 kg     | **ID:** `AS-M-LTA-HB-Q2A-00804` <br> **Autonomy:** M. **Notes:** Hybrid airship with quantum optimization. Full specs in registry.                                      |
+| CB            | Q3H      | QuantumAirCargo QA-300H | Large high-capacity cargo airship                | Payload: 100,000 kg, Range: 10,000 km      | **ID:** `AS-U-LTA-CB-Q3H-00805` <br> **Autonomy:** U. **Notes:** High-capacity cargo airship with quantum logistics systems. Full specs in registry.                               |
+| QB            | Q2H      | QuantumLift QL-250H     | Medium high-performance quantum buoyancy craft   | Volume: 250,000 m³, Quantum buoyancy control | **ID:** `AS-U-LTA-QB-Q2H-00806` <br> **Autonomy:** U. **Notes:** Experimental craft using quantum principles for buoyancy. Full specs in registry.                                 |
 
-| **Sub-Type (ST)** | **MDL Code** | **Model Name**           | **Description**                                  | **Key Specifications**                     |
-| :---------------- | :----------- | :----------------------- | :----------------------------------------------- | :----------------------------------------- |
-| CO                | Q2A          | QuantumComSat QC-200     | Medium quantum communications satellite          | Mass: 350 kg, Global QKD coverage          |
-| NV                | Q2B          | QuantumNav QN-200        | Medium quantum navigation satellite              | Mass: 400 kg, 1 cm positioning accuracy    |
-| EO                | Q2H          | QuantumEarth QE-200H     | Medium high-performance quantum Earth observation| Mass: 600 kg, Resolution: 0.15 m           |
-| SC                | Q2S          | QuantumScience QS-200S   | Medium special purpose scientific satellite      | Mass: 500 kg, 15+ scientific instruments   |
-| CU                | Q1A          | QuantumCube QC-100       | Small quantum CubeSat                            | Mass: 12 kg (12U), Quantum payload         |
-| WX                | Q2B          | QuantumWeather QW-200    | Medium weather satellite                         | Mass: 3,200 kg, Advanced weather sensors   |
-| RS                | Q2A          | QuantumRelay QR-200      | Medium quantum relay satellite                   | Mass: 350 kg, Quantum repeater network     |
-| QS                | Q3H          | QuantumSat QS-300H       | Large high-performance quantum satellite         | Mass: 800 kg, Orbital quantum computer     |
+#### 3.2.9 Military Aircraft (MIL) Models
 
-#### 2.3.2 Orbital Platform/Vehicle (ORB) Models
+| Sub-Type (ST) | MDL Code | Model Name            | Description                               | Key Specifications                        | **GAIA-QAO ID Example & Catalog Notes**                                                                                                                                  |
+| :------------ | :------- | :---------------------- | :-------------------------------------------- | :---------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FJ            | Q2S      | QuantumFighter QF-200S  | Medium special purpose quantum fighter        | Speed: Mach 2.5, Supercruise, Quantum sensors | **ID:** `AS-M-MIL-FJ-Q2S-00010` <br> **Autonomy:** M. **Notes:** Advanced fighter with quantum-enhanced sensors and EW. Full specs in registry.                                 |
+| BM            | Q3S      | QuantumStrike QS-300S   | Large special purpose quantum bomber          | Range: 12,000 km, Payload: 30,000 kg      | **ID:** `AS-M-MIL-BM-Q3S-00901` <br> **Autonomy:** M. **Notes:** Long-range strategic bomber with quantum navigation/targeting. Full specs in registry.                           |
+| AT            | Q2A      | QuantumAttack QA-200    | Medium quantum attack aircraft                | Loiter: 6 hrs, Payload: 8,000 kg          | **ID:** `AS-M-MIL-AT-Q2A-00902` <br> **Autonomy:** M. **Notes:** Close air support/attack aircraft with quantum-assisted systems. Full specs in registry.                         |
+| TR            | Q1B      | QuantumTrainer QT-100   | Small quantum trainer                         | Advanced quantum simulation, HOTAS        | **ID:** `AS-M-MIL-TR-Q1B-00903` <br> **Autonomy:** M. **Notes:** Trainer aircraft with embedded quantum simulation capabilities. Full specs in registry.                           |
+| TP            | Q3L      | QuantumTransport QT-300L| Large long-range quantum transport            | Payload: 70,000 kg, Range: 10,000 km      | **ID:** `AS-M-MIL-TP-Q3L-00904` <br> **Autonomy:** M. **Notes:** Heavy military transport with quantum-optimized cargo handling/logistics. Full specs in registry.             |
+| TK            | Q3L      | QuantumTanker QT-300L   | Large long-range quantum tanker               | Fuel capacity: 150,000 kg, Range: 11,000 km| **ID:** `AS-M-MIL-TK-Q3L-00905` <br> **Autonomy:** M. **Notes:** Aerial refueling tanker with quantum flow optimization. Full specs in registry.                                |
+| MH            | Q2A      | QuantumHelicopter QH-200| Medium quantum military helicopter            | Payload: 5,000 kg, Range: 800 km          | **ID:** `AS-M-MIL-MH-Q2A-00906` <br> **Autonomy:** M. **Notes:** Multi-role military helicopter with quantum-enhanced avionics. Full specs in registry.                         |
+| UC            | Q2S      | QuantumCombat QC-200S   | Medium special purpose unmanned combat UCAV   | Endurance: 24 hrs, Payload: 2,500 kg      | **ID:** `AS-U-MIL-UC-Q2S-00907` <br> **Autonomy:** U. **Notes:** UCAV with quantum AI for autonomous missions. Full specs in registry.                                      |
+| QW            | Q3H      | QuantumWarfare QW-300H  | Large high-capability quantum warfare platform| Comprehensive quantum military systems    | **ID:** `AS-M-MIL-QW-Q3H-00908` <br> **Autonomy:** M. **Notes:** Command & control platform for quantum-centric warfare operations. Full specs in registry.                      |
 
-| **Sub-Type (ST)** | **MDL Code** | **Model Name**           | **Description**                                      | **Key Specifications**                        |
-| :---------------- | :----------- | :----------------------- | :--------------------------------------------------- | :-------------------------------------------- |
-| SS                | Q3A          | QuantumStation QS-300    | Large quantum space station                          | Mass: 80,000 kg, Crew: 6-12, Vol: 800 m³      |
-| SL                | Q2S          | QuantumLab QL-200S       | Medium special purpose space laboratory              | Mass: 20,000 kg, 20+ research facilities      |
-| CT                | Q2A          | QuantumCrew QC-200       | Medium quantum crew transport vehicle                | Mass: 16,000 kg, Crew: 4-6                    |
-| SM                | Q2B          | QuantumService QS-200    | Medium service module                                | Mass: 12,000 kg, 1-year autonomous operation  |
-| RM                | Q2S          | QuantumResearch QR-200S  | Medium special purpose research module               | Mass: 15,000 kg, Quantum research suite       |
-| HM                | Q2A          | QuantumHabitat QH-200    | Medium habitation module                             | Mass: 22,000 kg, Crew: 4, Volume: 200 m³      |
-| SV                | Q2A          | QuantumServicing QS-200  | Medium servicing vehicle                             | Mass: 8,000 kg, 5-year service life           |
-| QO                | Q3S          | QuantumOrbit QO-300S     | Large special purpose quantum orbital platform       | Mass: 30,000 kg, Comprehensive quantum facility|
+### 3.3 Space Systems (SP) Top-Level Object Models
 
-#### 2.3.3 Launch System (LCH) Models
+*(Note: The following Space System model list uses the full model details provided in the original "Expanded Model Registry." Each entry includes the new "GAIA-QAO ID Example & Catalog Notes" column.)*
 
-| **Sub-Type (ST)** | **MDL Code** | **Model Name**           | **Description**                                  | **Key Specifications**                       |
-| :---------------- | :----------- | :----------------------- | :----------------------------------------------- | :------------------------------------------- |
-| SL                | Q1A          | QuantumLaunch QL-100     | Small quantum-enhanced launch vehicle            | Payload to LEO: 2,000 kg, Height: 30 m       |
-| ML                | Q2B          | QuantumLaunch QL-200     | Medium quantum-enhanced launch vehicle           | Payload to LEO: 8,000 kg, Height: 50 m       |
-| HL                | Q3H          | QuantumLaunch QL-300H    | Heavy quantum-enhanced launch vehicle            | Payload to LEO: 25,000 kg, Height: 70 m      |
-| SH                | Q4A          | QuantumLaunch QL-400     | Super heavy quantum launch vehicle               | Payload to LEO: 100,000 kg, Height: 120 m    |
-| RU                | Q2B          | QuantumReuse QR-200      | Medium quantum-enhanced reusable launch vehicle  | Payload to LEO: 7,000 kg, Reuses: 30+        |
-| AL                | Q1S          | QuantumAirLaunch QA-100S | Small special purpose air-launched system        | Payload to LEO: 500 kg, Aircraft-launched    |
-| QL                | Q3S          | QuantumLaunch QL-300S    | Large special purpose quantum launch vehicle     | Payload to LEO: 20,000 kg, Quantum propulsion|
+#### 3.3.1 Satellite (SAT) Models
 
-#### 2.3.4 Probe (PRB) Models
+| Sub-Type (ST) | MDL Code | Model Name           | Description                                  | Key Specifications                     | **GAIA-QAO ID Example & Catalog Notes**                                                                                                                                  |
+| :------------ | :------- | :----------------------- | :----------------------------------------------- | :----------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CO            | Q2A      | QuantumComSat QC-200     | Medium quantum communications satellite          | Mass: 350 kg, Global QKD coverage          | **ID:** `SP-U-SAT-CO-Q2A-01001` <br> **Autonomy:** U. **Notes:** Quantum communications satellite for secure global links. Full specs in registry.                           |
+| NV            | Q2B      | QuantumNav QN-200        | Medium quantum navigation satellite              | Mass: 400 kg, 1 cm positioning accuracy    | **ID:** `SP-U-SAT-NV-Q2B-01002` <br> **Autonomy:** U. **Notes:** High-precision quantum navigation satellite. Full specs in registry.                                     |
+| EO            | Q2H      | QuantumEarth QE-200H     | Medium high-performance quantum Earth observation| Mass: 600 kg, Resolution: 0.15 m           | **ID:** `SP-U-SAT-EO-Q2H-01003` <br> **Autonomy:** U. **Notes:** Advanced Earth observation with quantum-enhanced imaging. Full specs in registry.                         |
+| SC            | Q2S      | QuantumScience QS-200S   | Medium special purpose scientific satellite      | Mass: 500 kg, 15+ scientific instruments   | **ID:** `SP-U-SAT-SC-Q2S-01004` <br> **Autonomy:** U. **Notes:** Scientific research satellite with quantum sensor suite. Full specs in registry.                           |
+| CU            | Q1A      | QuantumCube QC-100       | Small quantum CubeSat                            | Mass: 12 kg (12U), Quantum payload         | **ID:** `SP-U-SAT-CU-Q1A-01005` <br> **Autonomy:** U. **Notes:** CubeSat platform for quantum technology demonstration/experiments. Full specs in registry.                  |
+| WX            | Q2B      | QuantumWeather QW-200    | Medium weather satellite                         | Mass: 3,200 kg, Advanced weather sensors   | **ID:** `SP-U-SAT-WX-Q2B-01006` <br> **Autonomy:** U. **Notes:** Weather satellite with quantum-enhanced atmospheric sensors. Full specs in registry.                      |
+| RS            | Q2A      | QuantumRelay QR-200      | Medium quantum relay satellite                   | Mass: 350 kg, Quantum repeater network     | **ID:** `SP-U-SAT-RS-Q2A-01007` <br> **Autonomy:** U. **Notes:** Quantum communication relay for entanglement distribution. Full specs in registry.                           |
+| QS            | Q3H      | QuantumSat QS-300H       | Large high-performance quantum satellite         | Mass: 800 kg, Orbital quantum computer     | **ID:** `SP-U-SAT-QS-Q3H-01008` <br> **Autonomy:** U. **Notes:** Large satellite hosting an orbital quantum computing facility. Full specs in registry.                        |
 
-| **Sub-Type (ST)** | **MDL Code** | **Model Name**           | **Description**                                      | **Key Specifications**                       |
-| :---------------- | :----------- | :----------------------- | :--------------------------------------------------- | :------------------------------------------- |
-| LP                | Q2A          | QuantumLunar QL-200      | Medium quantum lunar probe                           | Mass: 1,200 kg, Lunar orbit + lander         |
-| MP                | Q2L          | QuantumMars QM-200L      | Medium long-duration quantum Mars probe              | Mass: 1,500 kg, Surface mission              |
-| VP                | Q2B          | QuantumVenus QV-200      | Medium quantum Venus probe                           | Mass: 1,300 kg, Atmospheric + surface        |
-| IP                | Q2A          | QuantumMercury QM-200    | Medium quantum inner planet probe                    | Mass: 1,100 kg, Mercury orbiter              |
-| GP                | Q3S          | QuantumJupiter QJ-300S   | Large special purpose quantum gas giant probe        | Mass: 2,800 kg, Orbiter + atmospheric        |
-| OP                | Q3L          | QuantumNeptune QN-300L   | Large long-range quantum outer planet probe          | Mass: 2,500 kg, Neptune system explorer      |
-| AP                | Q2A          | QuantumAsteroid QA-200   | Medium quantum asteroid probe                        | Mass: 1,000 kg, Sample return capability     |
-| SP                | Q2H          | QuantumSolar QS-200H     | Medium high-performance quantum solar probe          | Mass: 1,400 kg, Close solar approach         |
-| QP                | Q3S          | QuantumProbe QP-300S     | Large special purpose deep space quantum probe       | Mass: 2,500 kg, Deep space quantum comms     |
+#### 3.3.2 Orbital Platform/Vehicle (ORB) Models
 
-#### 2.3.5 Experimental (Space) (XPS) Models
+| Sub-Type (ST) | MDL Code | Model Name           | Description                                      | Key Specifications                        | **GAIA-QAO ID Example & Catalog Notes**                                                                                                                                  |
+| :------------ | :------- | :----------------------- | :--------------------------------------------------- | :-------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SS            | Q3A      | QuantumStation QS-300    | Large quantum space station                          | Mass: 80,000 kg, Crew: 6-12, Vol: 800 m³      | **ID:** `SP-M-ORB-SS-Q3A-01101` <br> **Autonomy:** M. **Notes:** Crewed space station with integrated quantum research labs. Full specs in registry.                             |
+| SL            | Q2S      | QuantumLab QL-200S       | Medium special purpose space laboratory              | Mass: 20,000 kg, 20+ research facilities      | **ID:** `SP-M-ORB-SL-Q2S-01102` <br> **Autonomy:** M. **Notes:** Dedicated orbital laboratory module for quantum experiments. Full specs in registry.                          |
+| CT            | Q2A      | QuantumCrew QC-200       | Medium quantum crew transport vehicle                | Mass: 16,000 kg, Crew: 4-6                    | **ID:** `SP-M-ORB-CT-Q2A-01103` <br> **Autonomy:** M. **Notes:** Crew transport vehicle with quantum navigation/life support. Full specs in registry.                     |
+| SM            | Q2B      | QuantumService QS-200    | Medium service module                                | Mass: 12,000 kg, 1-year autonomous operation  | **ID:** `SP-U-ORB-SM-Q2B-01104` <br> **Autonomy:** U. **Notes:** Autonomous service module with quantum system maintenance capabilities. Full specs in registry.            |
+| RM            | Q2S      | QuantumResearch QR-200S  | Medium special purpose research module               | Mass: 15,000 kg, Quantum research suite       | **ID:** `SP-M-ORB-RM-Q2S-01105` <br> **Autonomy:** M. **Notes:** Attachable research module for quantum physics in space. Full specs in registry.                           |
+| HM            | Q2A      | QuantumHabitat QH-200    | Medium habitation module                             | Mass: 22,000 kg, Crew: 4, Volume: 200 m³      | **ID:** `SP-M-ORB-HM-Q2A-01106` <br> **Autonomy:** M. **Notes:** Long-duration habitation module with quantum radiation shielding. Full specs in registry.                    |
+| SV            | Q2A      | QuantumServicing QS-200  | Medium servicing vehicle                             | Mass: 8,000 kg, 5-year service life           | **ID:** `SP-U-ORB-SV-Q2A-01107` <br> **Autonomy:** U. **Notes:** Autonomous vehicle for satellite servicing using quantum robotics. Full specs in registry.                |
+| QO            | Q3S      | QuantumOrbit QO-300S     | Large special purpose quantum orbital platform       | Mass: 30,000 kg, Comprehensive quantum facility| **ID:** `SP-U-ORB-QO-Q3S-01108` <br> **Autonomy:** U. **Notes:** Large uncrewed platform for advanced quantum technology development in orbit. Full specs in registry.    |
 
-| **Sub-Type (ST)** | **MDL Code** | **Model Name**           | **Description**                                  | **Key Specifications**                      |
-| :---------------- | :----------- | :----------------------- | :----------------------------------------------- | :------------------------------------------ |
-| TP                | P2A          | SpaceTech ST-200         | Medium technology platform                       | Mass: 1,500 kg, 10+ tech demonstrations     |
-| NP                | P2S          | PropulsionX PX-200S      | Medium special purpose propulsion testbed (space)| Mass: 2,000 kg, 5 experimental drives       |
-| QT                | P2H          | QuantumX QX-200H         | Medium high-performance quantum testbed (space)  | Mass: 1,800 kg, Quantum technology suite    |
-| SM                | P2A          | SpaceManufacturing SM-200| Medium in-space manufacturing demonstrator       | Mass: 2,200 kg, 3D printing, assembly       |
-| SR                | P1B          | SpaceRobotics SR-100     | Small robotic testbed                            | Mass: 800 kg, Advanced manipulators         |
-| SS                | P2A          | SpaceStructures SS-200   | Medium deployable structures demonstrator        | Mass: 1,600 kg, 50m deployable antenna      |
-| QT                | P3S          | QuantumX QX-300S         | Large special purpose quantum testbed (space)    | Mass: 3,000 kg, Advanced quantum experiments|
+#### 3.3.3 Launch System (LCH) Models
 
-#### 2.3.6 Space Defense (DEF) Models
+| Sub-Type (ST) | MDL Code | Model Name           | Description                                  | Key Specifications                       | **GAIA-QAO ID Example & Catalog Notes**                                                                                                                                  |
+| :------------ | :------- | :----------------------- | :----------------------------------------------- | :------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SL            | Q1A      | QuantumLaunch QL-100     | Small quantum-enhanced launch vehicle            | Payload to LEO: 2,000 kg, Height: 30 m       | **ID:** `SP-U-LCH-SL-Q1A-01201` <br> **Autonomy:** U. **Notes:** Small satellite launcher with quantum guidance systems. Full specs in registry.                               |
+| ML            | Q2B      | QuantumLaunch QL-200     | Medium quantum-enhanced launch vehicle           | Payload to LEO: 8,000 kg, Height: 50 m       | **ID:** `SP-U-LCH-ML-Q2B-01202` <br> **Autonomy:** U. **Notes:** Medium-lift launch vehicle with quantum trajectory optimization. Full specs in registry.                       |
+| HL            | Q3H      | QuantumLaunch QL-300H    | Heavy quantum-enhanced launch vehicle            | Payload to LEO: 25,000 kg, Height: 70 m      | **ID:** `SP-U-LCH-HL-Q3H-01203` <br> **Autonomy:** U. **Notes:** Heavy-lift launcher with advanced quantum control systems. Full specs in registry.                            |
+| SH            | Q4A      | QuantumLaunch QL-400     | Super heavy quantum launch vehicle               | Payload to LEO: 100,000 kg, Height: 120 m    | **ID:** `SP-U-LCH-SH-Q4A-01204` <br> **Autonomy:** U. **Notes:** Super-heavy lift for interplanetary missions, quantum systems integrated. Full specs in registry.        |
+| RU            | Q2B      | QuantumReuse QR-200      | Medium quantum-enhanced reusable launch vehicle  | Payload to LEO: 7,000 kg, Reuses: 30+        | **ID:** `SP-U-LCH-RU-Q2B-01205` <br> **Autonomy:** U. **Notes:** Reusable launch vehicle with quantum-assisted landing/recovery. Full specs in registry.                   |
+| AL            | Q1S      | QuantumAirLaunch QA-100S | Small special purpose air-launched system        | Payload to LEO: 500 kg, Aircraft-launched    | **ID:** `SP-U-LCH-AL-Q1S-01206` <br> **Autonomy:** U. **Notes:** Air-launched system for small payloads using quantum navigation. Full specs in registry.                     |
+| QL            | Q3S      | QuantumLaunch QL-300S    | Large special purpose quantum launch vehicle     | Payload to LEO: 20,000 kg, Quantum propulsion| **ID:** `SP-U-LCH-QL-Q3S-01207` <br> **Autonomy:** U. **Notes:** Launcher with experimental quantum propulsion elements. Full specs in registry.                              |
 
-| **Sub-Type (ST)** | **MDL Code** | **Model Name**             | **Description**                                  | **Key Specifications**                      |
-| :---------------- | :----------- | :------------------------- | :----------------------------------------------- | :------------------------------------------ |
-| SS                | Q2A          | QuantumSurveillance QS-200| Medium quantum space surveillance system         | Mass: 1,200 kg, Space domain awareness      |
-| SM                | Q2S          | QuantumDefense QD-200S     | Medium special purpose quantum missile defense   | Mass: 1,800 kg, Tracking and intercept      |
-| SC                | Q2H          | QuantumCommand QC-200H     | Medium high-performance quantum command & control| Mass: 2,000 kg, Secure quantum comms        |
-| SI                | Q2B          | QuantumIntelligence QI-200 | Medium quantum space intelligence system         | Mass: 1,500 kg, Multi-spectral intelligence |
-| QD                | Q3S          | QuantumDefense QD-300S     | Large special purpose quantum defense platform   | Mass: 3,000 kg, Comprehensive quantum suite |
+#### 3.3.4 Probe (PRB) Models
 
-### 2.4 Implementation Guidelines (Models)
+| Sub-Type (ST) | MDL Code | Model Name           | Description                                      | Key Specifications                       | **GAIA-QAO ID Example & Catalog Notes**                                                                                                                                  |
+| :------------ | :------- | :----------------------- | :--------------------------------------------------- | :------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LP            | Q2A      | QuantumLunar QL-200      | Medium quantum lunar probe                           | Mass: 1,200 kg, Lunar orbit + lander         | **ID:** `SP-U-PRB-LP-Q2A-01301` <br> **Autonomy:** U. **Notes:** Lunar exploration probe with quantum sensors and comms. Full specs in registry.                                |
+| MP            | Q2L      | QuantumMars QM-200L      | Medium long-duration quantum Mars probe              | Mass: 1,500 kg, Surface mission              | **ID:** `SP-U-PRB-MP-Q2L-01302` <br> **Autonomy:** U. **Notes:** Mars surface exploration with quantum analysis tools. Full specs in registry.                                 |
+| VP            | Q2B      | QuantumVenus QV-200      | Medium quantum Venus probe                           | Mass: 1,300 kg, Atmospheric + surface        | **ID:** `SP-U-PRB-VP-Q2B-01303` <br> **Autonomy:** U. **Notes:** Venus atmospheric and surface probe with quantum sensors. Full specs in registry.                               |
+| IP            | Q2A      | QuantumMercury QM-200    | Medium quantum inner planet probe                    | Mass: 1,100 kg, Mercury orbiter              | **ID:** `SP-U-PRB-IP-Q2A-01304` <br> **Autonomy:** U. **Notes:** Probe for Mercury observation with quantum magnetometers. Full specs in registry.                             |
+| GP            | Q3S      | QuantumJupiter QJ-300S   | Large special purpose quantum gas giant probe        | Mass: 2,800 kg, Orbiter + atmospheric        | **ID:** `SP-U-PRB-GP-Q3S-01305` <br> **Autonomy:** U. **Notes:** Gas giant exploration with quantum atmospheric sensors. Full specs in registry.                               |
+| OP            | Q3L      | QuantumNeptune QN-300L   | Large long-range quantum outer planet probe          | Mass: 2,500 kg, Neptune system explorer      | **ID:** `SP-U-PRB-OP-Q3L-01306` <br> **Autonomy:** U. **Notes:** Outer solar system probe with quantum-enhanced deep space comms. Full specs in registry.                     |
+| AP            | Q2A      | QuantumAsteroid QA-200   | Medium quantum asteroid probe                        | Mass: 1,000 kg, Sample return capability     | **ID:** `SP-U-PRB-AP-Q2A-01307` <br> **Autonomy:** U. **Notes:** Asteroid sample return mission with quantum material analysis. Full specs in registry.                        |
+| SP            | Q2H      | QuantumSolar QS-200H     | Medium high-performance quantum solar probe          | Mass: 1,400 kg, Close solar approach         | **ID:** `SP-U-PRB-SP-Q2H-01308` <br> **Autonomy:** U. **Notes:** Solar probe with quantum sensors for heliophysics. Full specs in registry.                                    |
+| QP            | Q3S      | QuantumProbe QP-300S     | Large special purpose deep space quantum probe       | Mass: 2,500 kg, Deep space quantum comms     | **ID:** `SP-U-PRB-QP-Q3S-01309` <br> **Autonomy:** U. **Notes:** Deep space probe testing advanced quantum communication technologies. Full specs in registry.                  |
 
-The implementation of models in the GAIA-QAO database registry is done through the `models` table. Each entry in this table represents a unique model and must include:
+#### 3.3.5 Experimental (Space) (XPS) Models
 
--   `model_code`: The 3-character MDL code (e.g., `Q1H`).
--   `subtype_id`: The ID of the sub-type to which it belongs (FK to `subtypes` table).
--   `autonomy_code`: The Autonomy Level code (`M` or `U`) inherent to this model (FK to `autonomy_levels`).
--   `name`: Descriptive name of the model (e.g., `AMPEL360 BWB-Q100`).
--   `description`: A brief description of the model.
--   `introduction_date` (optional): Date of model introduction.
--   `technical_specifications` (JSONB): A flexible field for storing detailed technical specifications, including quantum capabilities, dimensions, performance, etc.
+| Sub-Type (ST) | MDL Code | Model Name           | Description                                  | Key Specifications                      | **GAIA-QAO ID Example & Catalog Notes**                                                                                                                                  |
+| :------------ | :------- | :----------------------- | :----------------------------------------------- | :------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| TP            | P2A      | SpaceTech ST-200         | Medium technology platform                       | Mass: 1,500 kg, 10+ tech demonstrations     | **ID:** `SP-U-XPS-TP-P2A-01401` <br> **Autonomy:** U. **Notes:** Orbital platform for demonstrating various new space technologies. Full specs in registry.                    |
+| NP            | P2S      | PropulsionX PX-200S      | Medium special purpose propulsion testbed (space)| Mass: 2,000 kg, 5 experimental drives       | **ID:** `SP-U-XPS-NP-P2S-01402` <br> **Autonomy:** U. **Notes:** Testbed for experimental in-space propulsion systems, including quantum concepts. Full specs in registry. |
+| QT            | P2H      | QuantumX QX-200H         | Medium high-performance quantum testbed (space)  | Mass: 1,800 kg, Quantum technology suite    | **ID:** `SP-U-XPS-QT-P2H-01403` <br> **Autonomy:** U. **Notes:** Orbital testbed for quantum technologies in space environment. Full specs in registry.                      |
+| SM            | P2A      | SpaceManufacturing SM-200| Medium in-space manufacturing demonstrator       | Mass: 2,200 kg, 3D printing, assembly       | **ID:** `SP-U-XPS-SM-P2A-01404` <br> **Autonomy:** U. **Notes:** Demonstrator for in-orbit manufacturing and assembly techniques. Full specs in registry.                  |
+| SR            | P1B      | SpaceRobotics SR-100     | Small robotic testbed                            | Mass: 800 kg, Advanced manipulators         | **ID:** `SP-U-XPS-SR-P1B-01405` <br> **Autonomy:** U. **Notes:** Testbed for advanced space robotics and autonomous manipulation. Full specs in registry.                      |
+| SS            | P2A      | SpaceStructures SS-200   | Medium deployable structures demonstrator        | Mass: 1,600 kg, 50m deployable antenna      | **ID:** `SP-U-XPS-SS-P2A-01406` <br> **Autonomy:** U. **Notes:** Demonstrator for large deployable space structures. Full specs in registry.                               |
+| QT            | P3S      | QuantumX QX-300S         | Large special purpose quantum testbed (space)    | Mass: 3,000 kg, Advanced quantum experiments| **ID:** `SP-U-XPS-QT-P3S-01407` <br> **Autonomy:** U. **Notes:** Large orbital facility for comprehensive quantum experiments. Full specs in registry.                        |
 
-**Example SQL Insert (adapted to include `autonomy_code`):**
+#### 3.3.6 Space Defense (DEF) Models
+
+| Sub-Type (ST) | MDL Code | Model Name             | Description                                  | Key Specifications                      | **GAIA-QAO ID Example & Catalog Notes**                                                                                                                                  |
+| :------------ | :------- | :------------------------- | :----------------------------------------------- | :------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SS            | Q2A      | QuantumSurveillance QS-200| Medium quantum space surveillance system         | Mass: 1,200 kg, Space domain awareness      | **ID:** `SP-U-DEF-SS-Q2A-01501` <br> **Autonomy:** U. **Notes:** Space surveillance system with quantum sensors for enhanced domain awareness. Full specs in registry.        |
+| SM            | Q2S      | QuantumDefense QD-200S     | Medium special purpose quantum missile defense   | Mass: 1,800 kg, Tracking and intercept      | **ID:** `SP-U-DEF-SM-Q2S-01502` <br> **Autonomy:** U. **Notes:** Missile defense interceptor/tracker with quantum guidance. Full specs in registry.                         |
+| SC            | Q2H      | QuantumCommand QC-200H     | Medium high-performance quantum command & control| Mass: 2,000 kg, Secure quantum comms        | **ID:** `SP-U-DEF-SC-Q2H-01503` <br> **Autonomy:** U. **Notes:** Orbital command & control node with quantum-secure communications. Full specs in registry.                   |
+| SI            | Q2B      | QuantumIntelligence QI-200 | Medium quantum space intelligence system         | Mass: 1,500 kg, Multi-spectral intelligence | **ID:** `SP-U-DEF-SI-Q2B-01504` <br> **Autonomy:** U. **Notes:** Space-based intelligence gathering with quantum sensor arrays. Full specs in registry.                      |
+| QD            | Q3S      | QuantumDefense QD-300S     | Large special purpose quantum defense platform   | Mass: 3,000 kg, Comprehensive quantum suite | **ID:** `SP-U-DEF-QD-Q3S-01505` <br> **Autonomy:** U. **Notes:** Comprehensive orbital quantum defense platform. Full specs in registry.                                   |
+
+### 3.4 Implementation Guidelines (Models)
+
+The implementation of top-level object models in the GAIA-QAO database registry is done through the `models` table. Each entry represents a unique model and must include:
+-   `model_code`, `subtype_id`, `autonomy_code`, `name`, `description`, `technical_specifications` (JSONB), etc. as detailed in Part 5 (Database Schema).
+
+**Example SQL Insert:**
 ```sql
 INSERT INTO models (model_code, subtype_id, autonomy_code, name, description, introduction_date, technical_specifications) VALUES
-('Q1H',
-  (SELECT subtype_id FROM subtypes WHERE subtype_code = 'BW' AND class_code = 'PAX'),
-  'M', -- Autonomy Level for this PAX model
-  'AMPEL360 BWB-Q100',
-  'Small quantum-enhanced BWB passenger aircraft',
-  '2025-01-01',
-  '{"capacity": 100, "range_km": 5500, "cruise_speed_kmh": 850, "mtow_kg": 85000, "quantum_systems": ["navigation", "optimization", "communications"]}'
-);
+('Q1H', (SELECT subtype_id FROM subtypes WHERE subtype_code = 'BW' AND class_code = 'PAX'), 'M', 
+ 'AMPEL360 BWB-Q100', 'Small quantum-enhanced BWB passenger aircraft', '2025-01-01', 
+ '{"capacity": 100, "range_km": 5500, "cruise_speed_kmh": 850, "mtow_kg": 85000, "quantum_systems": ["navigation", "optimization", "communications"]}');
 ```
-Strict guidelines must be followed for assigning new MDL codes to ensure uniqueness and consistency within the hierarchical structure.
+Strict guidelines must be followed for assigning new MDL codes.
 
 ---
+## Part 4: Subsystem Identification & Registry
 
-## Part III: Configuration Management
+This part introduces the methodology for identifying and registering subsystems within the GAIA-QAO framework, complementing the top-level object identification.
 
-This part describes the Configuration Codes (CC) used to identify specific modifications or configurations of an object throughout its lifecycle.
+### 4.1 Defining Subsystem Type Codes (SSS)
 
-### 3.1 Configuration Code Structure
+Subsystems are major functional or physical components of a top-level object. A 3-character **Subsystem Type Code (SSS)** is used to classify them. This is distinct from the `ST` (Object Category Sub-Type) used for top-level objects. An initial proposed list of SSS codes can be found in Appendix F. Examples include:
+*   `FCS`: Flight Control System
+*   `NAV`: Navigation System
+*   `PROP`: Propulsion System
+*   `PWR`: Power System
+*   `AVS`: Avionics System (General)
+*   `STR`: Structural Assembly (e.g., Wing, Fuselage Section)
+*   `LND`: Landing Gear System
+*   `ECS`: Environmental Control System
+*   `COMM`: Communication System
+*   `PAYL`: Payload System (for ISR, SCI, SAT, etc.)
 
-Each Configuration Code (CC) follows a standardized 2-character format:
+### 4.2 Subsystem Model Coding (`MDLs`)
 
-```plaintext
-[T][N]
-```
+Similar to top-level objects, specific models of subsystems will also have a 3-character `MDLs` code (format `[G][N][V]`). This code identifies a particular make/model of a subsystem type.
+*   Example: An `FCS` (Flight Control System) might have a model `A1B` representing "AdvancedFlightCtrl MkIB".
+*   Example: A `PROP` (Propulsion System) for an aircraft might be `QJ1` for "QuantumJet Series 1".
 
-Where:
+### 4.3 Subsystem Serialization (`SERs`)
 
--   **T** (Type): A letter indicating the type of configuration.
--   **N** (Number/Letter): A number or letter indicating the specific version or variant within that type.
+Serialized subsystems (Line Replaceable Units - LRUs) will have a 5-character alphanumeric serial number `SERs`. Non-serialized or bulk subsystems might use a placeholder like `XXXXX` or be identified by their parent's serial and installation position.
 
-Configuration codes are optional in the object's full ID string (`DO-A-CCC-ST-MDL-SSSSS-CC`) but are maintained and managed in the `object_configurations` table of the registry.
+### 4.4 Example Subsystem Catalog Entries (Conceptual)
 
-### 3.2 Standard Configuration Types
+A dedicated `subsystem_models` table in the database (see Part 6) would store these.
 
-The following standard configuration types are proposed, applicable to most objects:
+| SSS Code | MDLs Code | Subsystem Model Name         | Description                                     | Key Specifications (Example)                 | **Example Subsystem ID Segment** |
+| :------- | :-------- | :--------------------------- | :---------------------------------------------- | :------------------------------------------- | :------------------------------- |
+| FCS      | A1B       | AdvancedFlightCtrl MkIB      | Triple-redundant digital flight control computer| Processing: 3x PowerPC, DO-178C Level A cert. | `FCS-A1B-S0001`                  |
+| NAV      | QN1       | QuantumNav Unit Series 1     | Quantum-enhanced inertial navigation system     | Accuracy: <1m/hr drift, Q-gyros, Q-accel.  | `NAV-QN1-S0002`                  |
+| PROP     | QE2H      | QuantumEngine MkII-H         | High-bypass turbofan with quantum combustion control | Thrust: 35,000 lbf, SFC: 0.52, Quantum Ctrl | `PROP-QE2H-E0101`                |
+| AVIO     | GCS7      | GAIA-CoreSystem Ver7         | Integrated Modular Avionics Core Processing Unit | ARINC653, 8x QuantumCore Processors         | `AVIO-GCS7-P0034`                |
+| PAYL     | QSI-03    | QuantumSIGINT Array Type 03  | Advanced Quantum Signals Intelligence Package   | Freq Range: 10MHz-40GHz, Quantum Decryption | `PAYL-QSI-X0007`                 |
+
+*(These are illustrative. A comprehensive subsystem model catalog would be extensive.)*
+
+### 4.5 Database Considerations for Subsystems
+*   A `subsystem_types` table for `SSS` codes (see Appendix F).
+*   A `subsystem_models` table for `MDLs` details.
+*   An `installed_subsystems` or similar table to link `subsystem_model` instances (with `SERs`) to `object_instances` (parent top-level objects), potentially including installation date, position, etc. This forms the basis of a configuration-managed Bill of Materials (BOM).
+
+---
+## Part 5: Configuration Management
+
+This part describes the Configuration Codes (CC) used to identify specific modifications or configurations of an object (both Top-Level Objects and potentially major Subsystems) throughout its lifecycle.
+
+### 5.1 Configuration Code Structure (`[T][N]`)
+Format: `[T][N]`
+-   **T** (Type): Letter indicating configuration type.
+-   **N** (Number/Letter): Specific version/variant.
+
+### 5.2 Standard Configuration Types
 
 | **Type Code (T)** | **Configuration Type**   | **Description**                                                  | **Examples** |
 | :---------------- | :----------------------- | :--------------------------------------------------------------- | :----------- |
@@ -820,11 +655,9 @@ The following standard configuration types are proposed, applicable to most obje
 | L                 | Life Extension           | Modifications for extending the object's operational life.       | L1, L2, L3   |
 | O                 | Operator-Specific        | Configuration specific to a particular operator or user.         | O1, O2, O3   |
 
-### 3.3 Domain-Specific Configuration Types
+### 5.3 Domain-Specific Configuration Types
 
-In addition to standard types, domain-specific types can be defined:
-
-#### 3.3.1 Air Systems (AS) Specific Configuration Types
+#### 5.3.1 Air Systems (AS) Specific Configuration Types
 
 | **Type Code (T)** | **Configuration Type** | **Description**                                    | **Examples** |
 | :---------------- | :--------------------- | :------------------------------------------------- | :----------- |
@@ -834,7 +667,7 @@ In addition to standard types, domain-specific types can be defined:
 | G                 | Landing Gear           | Landing gear modification.                         | G1, G2, G3   |
 | V                 | Avionics               | Avionics system upgrade.                           | V1, V2, V3   |
 
-#### 3.3.2 Space Systems (SP) Specific Configuration Types
+#### 5.3.2 Space Systems (SP) Specific Configuration Types
 
 | **Type Code (T)** | **Configuration Type** | **Description**                                      | **Examples** |
 | :---------------- | :--------------------- | :--------------------------------------------------- | :----------- |
@@ -844,1440 +677,1767 @@ In addition to standard types, domain-specific types can be defined:
 | X                 | Extended Mission       | Configuration for extended mission operations.       | X1, X2, X3   |
 | Z                 | Zero-G                 | Zero-gravity specific modification.                  | Z1, Z2, Z3   |
 
-### 3.4 Configuration Management in Registry
+### 5.4 Configuration Management in Registry
 
-Configuration codes are managed in the `object_configurations` database table. Each entry in this table links a specific configuration to an `instance_id` (a particular object instance).
-
-**Key fields of the `object_configurations` table:**
-- `configuration_id` (PK)
-- `instance_id` (FK to `object_instances`)
-- `configuration_code` (e.g., 'A1', 'Q2')
-- `name` (e.g., 'Initial Production', 'Quantum Systems Upgrade 2')
-- `description`
-- `effective_from` (start date of configuration effectiveness)
-- `effective_to` (end date, if configuration is superseded)
-- `configuration_details` (JSONB for specific configuration details)
-
-#### Configuration Evolution Examples:
-
-**Example 1: QuantumNarrow QN-200 Passenger Aircraft (AS-M-PAX-NB-Q2A-00001)**
-
-| **Full Instance ID**      | **CC Code** | **Configuration Description**           |
-| :------------------------ | :---------- | :------------------------------------ |
-| AS-M-PAX-NB-Q2A-00001     | A1          | Initial Production                    |
-| AS-M-PAX-NB-Q2A-00001     | B1          | Block 1 Upgrade (Enhanced Avionics)   |
-| AS-M-PAX-NB-Q2A-00001     | I2          | Interior Mod 2 (New seat layout)      |
-| AS-M-PAX-NB-Q2A-00001     | Q1          | Quantum Systems Upgrade 1 (Navigation)|
-| AS-M-PAX-NB-Q2A-00001     | L1          | Life Extension Program 1              |
-
-**Example 2: QuantumEarth QE-200H Satellite (SP-U-SAT-EO-Q2H-00005)**
-
-| **Full Instance ID**      | **CC Code** | **Configuration Description**           |
-| :------------------------ | :---------- | :------------------------------------ |
-| SP-U-SAT-EO-Q2H-00005     | A1          | Initial Orbital Deployment            |
-| SP-U-SAT-EO-Q2H-00005     | S1          | Special Mission 1 (Specific observation)|
-| SP-U-SAT-EO-Q2H-00005     | P1          | Propulsion Mod 1 (Orbit change)       |
-| SP-U-SAT-EO-Q2H-00005     | Q2          | Quantum Sensors Upgrade 2             |
-| SP-U-SAT-EO-Q2H-00005     | X1          | Configuration for Extended Mission 1  |
-
-#### Configuration Code Allocation Guidelines:
-
-1.  **Chronological Order**: Generally, numerical codes within a type (e.g., A1, A2) should follow the chronological order of implementation.
-2.  **Significance**: Use block upgrades (B-series) for significant changes affecting multiple systems.
-3.  **Specificity**: Use specific type codes (P, C, N, Q, etc.) when modifications are limited to particular systems.
-4.  **Documentation**: Each configuration must be thoroughly documented with effective dates and details of changes in the `configuration_details` (JSONB) field.
-5.  **Traceability**: Maintain traceability between configurations (e.g., which supersedes which) to track an object's evolution.
-6.  **Quantum Focus**: Use Q-series configurations to specifically track quantum technology upgrades.
+Configuration codes are managed in the `object_configurations` database table (for top-level objects) and potentially a similar `subsystem_configurations` table. Each entry links a configuration to a specific instance.
+Key fields: `instance_id`, `configuration_code`, `name`, `effective_from`, `configuration_details` (JSONB).
+(Configuration Evolution Examples and Allocation Guidelines as previously detailed).
 
 ---
+## Part 6: Database Schema
 
-## Part IV: Database Schema
+This part details the relational database schema for the GQOIS, updated to support both top-level objects and subsystems.
 
-This part details the relational database schema designed for the GAIA-QAO Object Identification System (GQOIS). It includes the definition of tables, relationships, views, and key functions.
-
-> **Note on the Schema:** The following SQL script is designed for PostgreSQL and includes the agreed-upon change where `autonomy_code` is an attribute of the `models` table.
+> **Note:** SQL for PostgreSQL. Includes `autonomy_code` in `models` (top-level objects).
 
 ```sql
 ---
--- GAIA-QAO Object Identification System Registry
--- Database Schema Version 1.2.0 (Reflects autonomy_code in models)
--- InfoCode: QAO-SYS-DBSC-003
-
--- Enable UUID extension (if not already enabled)
+-- GAIA-QAO DB Schema v1.3.0 (Includes Subsystem Identification)
+-- InfoCode: QAO-SYS-DBSC-004
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 -- =============================================
--- 4.1 Core ID Component Tables
+-- 6.1 Core ID Component Tables (Top-Level Objects)
 -- =============================================
-
--- Domains (DO)
-CREATE TABLE domains (
-  domain_code CHAR(2) PRIMARY KEY,
-  name VARCHAR(100) NOT NULL,
-  description TEXT,
-  altitude_boundary_meters INT,  -- For AS/SP boundary definition
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  is_active BOOLEAN DEFAULT TRUE
-);
-
--- Autonomy Levels (A)
-CREATE TABLE autonomy_levels (
-  autonomy_code CHAR(1) PRIMARY KEY,
-  name VARCHAR(100) NOT NULL,
-  description TEXT,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  is_active BOOLEAN DEFAULT TRUE
-);
-
--- Functional Classes (CCC)
-CREATE TABLE functional_classes (
-  class_code CHAR(3) PRIMARY KEY,
-  domain_code CHAR(2) NOT NULL REFERENCES domains(domain_code),
-  name VARCHAR(100) NOT NULL,
-  description TEXT,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  is_active BOOLEAN DEFAULT TRUE,
-  UNIQUE(domain_code, class_code)
-);
-
--- Sub-Types (ST)
-CREATE TABLE subtypes (
-  subtype_id SERIAL PRIMARY KEY,
-  subtype_code CHAR(2) NOT NULL,
+CREATE TABLE domains (domain_code CHAR(2) PRIMARY KEY, name VARCHAR(100) NOT NULL, ...);
+CREATE TABLE autonomy_levels (autonomy_code CHAR(1) PRIMARY KEY, name VARCHAR(100) NOT NULL, ...);
+CREATE TABLE functional_classes (class_code CHAR(3) PRIMARY KEY, domain_code CHAR(2) REFERENCES domains(domain_code), name VARCHAR(100) NOT NULL, ..., UNIQUE(domain_code, class_code));
+CREATE TABLE subtypes ( -- Renamed to object_category_subtypes for clarity
+  object_category_subtype_id SERIAL PRIMARY KEY,
+  st_code CHAR(2) NOT NULL, -- ST code for top-level object categories
   class_code CHAR(3) NOT NULL REFERENCES functional_classes(class_code),
-  name VARCHAR(100) NOT NULL,
-  description TEXT,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  is_active BOOLEAN DEFAULT TRUE,
-  UNIQUE(class_code, subtype_code)
+  name VARCHAR(100) NOT NULL, description TEXT, ...,
+  UNIQUE(class_code, st_code)
 );
-
--- Models/Variants (MDL)
-CREATE TABLE models (
+CREATE TABLE models ( -- For Top-Level Object Models
   model_id SERIAL PRIMARY KEY,
-  model_code CHAR(3) NOT NULL,
-  subtype_id INT NOT NULL REFERENCES subtypes(subtype_id),
-  autonomy_code CHAR(1) NOT NULL REFERENCES autonomy_levels(autonomy_code), -- Autonomy is an attribute of the model
-  name VARCHAR(100) NOT NULL,
-  description TEXT,
-  introduction_date DATE,
-  end_of_production_date DATE,
-  technical_specifications JSONB,  -- Flexible storage for model-specific specs
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  is_active BOOLEAN DEFAULT TRUE,
-  UNIQUE(subtype_id, model_code) -- A model code should be unique within a subtype
+  model_code CHAR(3) NOT NULL, -- MDL for top-level object
+  object_category_subtype_id INT NOT NULL REFERENCES object_category_subtypes(object_category_subtype_id),
+  autonomy_code CHAR(1) NOT NULL REFERENCES autonomy_levels(autonomy_code),
+  name VARCHAR(100) NOT NULL, technical_specifications JSONB, ...,
+  UNIQUE(object_category_subtype_id, model_code)
 );
 
 -- =============================================
--- 4.2 Object Instances and Configurations
+-- 6.2 Subsystem-Related Tables (NEW)
 -- =============================================
+CREATE TABLE subsystem_types ( -- For SSS codes
+  sss_code CHAR(3) PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  description TEXT, ...,
+  is_active BOOLEAN DEFAULT TRUE
+);
+CREATE TABLE subsystem_models ( -- For MDLs (Subsystem Models)
+  subsystem_model_id SERIAL PRIMARY KEY,
+  mdls_code CHAR(3) NOT NULL, -- MDL code for subsystem
+  sss_code CHAR(3) NOT NULL REFERENCES subsystem_types(sss_code),
+  name VARCHAR(100) NOT NULL,
+  manufacturer VARCHAR(100),
+  description TEXT,
+  technical_specifications JSONB, ...,
+  is_active BOOLEAN DEFAULT TRUE,
+  UNIQUE(sss_code, mdls_code)
+);
 
--- Object Instances (Serial Numbers)
-CREATE TABLE object_instances (
+-- =============================================
+-- 6.3 Object Instances and Configurations Tables
+-- =============================================
+CREATE TABLE object_instances ( -- Instances of Top-Level Objects
   instance_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   model_id INT NOT NULL REFERENCES models(model_id),
   serial_number CHAR(5) NOT NULL,
-  full_object_id VARCHAR(30) NOT NULL UNIQUE,  -- Complete DO-A-CCC-ST-MDL-SSSSS identifier
-  manufacture_date DATE,
-  status VARCHAR(50) NOT NULL DEFAULT 'active',  -- e.g., active, retired, destroyed, experimental
-  owner_organization VARCHAR(100),
-  location_current JSONB, -- Stores location; for AS can be airport/coordinates, for SP can be orbital elements (e.g., TLE) or celestial body coordinates.
-  commissioning_date DATE,
-  decommissioning_date DATE,
-  notes TEXT,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  UNIQUE(model_id, serial_number) -- Serial number is unique per model
+  full_object_id VARCHAR(30) NOT NULL UNIQUE,
+  location_current JSONB, -- For TLE, Lat/Lon/Alt etc.
+  ... , UNIQUE(model_id, serial_number)
 );
-
--- Object Configurations (Optional extension for configuration variants)
-CREATE TABLE object_configurations (
+CREATE TABLE object_configurations ( -- Configurations of Top-Level Objects
   configuration_id SERIAL PRIMARY KEY,
   instance_id UUID NOT NULL REFERENCES object_instances(instance_id),
-  configuration_code CHAR(2) NOT NULL, -- e.g., A1, Q2, IB
-  name VARCHAR(100) NOT NULL, -- e.g., "Initial Production", "Quantum Upgrade 1", "Interior Mod B"
-  description TEXT,
-  effective_from DATE NOT NULL,
-  effective_to DATE, -- Null if currently active
-  configuration_details JSONB,  -- Flexible storage for configuration specifics
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  is_active BOOLEAN DEFAULT TRUE, -- Indicates if this is the current configuration for the instance
-  UNIQUE(instance_id, configuration_code, effective_from) -- Prevents duplicate config codes for the same instance at the same time
+  configuration_code CHAR(2) NOT NULL, ...
 );
+CREATE TABLE installed_subsystems ( -- Links subsystem instances to parent object instances
+  installed_subsystem_id SERIAL PRIMARY KEY,
+  parent_object_instance_id UUID NOT NULL REFERENCES object_instances(instance_id),
+  subsystem_model_id INT NOT NULL REFERENCES subsystem_models(subsystem_model_id),
+  subsystem_serial_number VARCHAR(50), -- SERs, optional
+  installation_date DATE,
+  position_reference VARCHAR(100), -- e.g., "Left Wing Actuator Bay 1"
+  notes TEXT, ...,
+  UNIQUE(parent_object_instance_id, subsystem_model_id, subsystem_serial_number, position_reference) -- Ensure uniqueness
+);
+-- subsystem_configurations table could be added if subsystem configs are tracked independently.
 
 -- =============================================
--- 4.3 Registry Management Tables
+-- 6.4 Registry Management Tables (largely as before)
 -- =============================================
-
--- Users who can manage the registry
-CREATE TABLE registry_users (
-  user_id SERIAL PRIMARY KEY,
-  username VARCHAR(50) NOT NULL UNIQUE,
-  email VARCHAR(100) NOT NULL UNIQUE,
-  password_hash VARCHAR(255) NOT NULL, -- Store hashed passwords
-  full_name VARCHAR(100) NOT NULL,
-  organization VARCHAR(100),
-  role VARCHAR(50) NOT NULL,  -- e.g., admin, editor, viewer, requester
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  is_active BOOLEAN DEFAULT TRUE,
-  last_login_at TIMESTAMP WITH TIME ZONE
-);
-
--- Audit log for tracking changes to the registry
-CREATE TABLE registry_audit_log (
-  log_id SERIAL PRIMARY KEY,
-  user_id INT REFERENCES registry_users(user_id), -- Can be null for system actions
-  action_type VARCHAR(50) NOT NULL,  -- e.g., INSERT, UPDATE, DELETE, LOGIN_SUCCESS, LOGIN_FAIL
-  table_affected VARCHAR(50), -- Nullable if action is not DB-specific
-  record_id VARCHAR(255),      -- Primary key or relevant ID of affected record (can be UUID or INT)
-  old_values JSONB,
-  new_values JSONB,
-  action_timestamp TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  ip_address VARCHAR(45),
-  user_agent TEXT,
-  details TEXT -- For additional context or error messages
-);
-
--- ID allocation requests (for new models or blocks of serial numbers)
-CREATE TABLE id_allocation_requests (
-  request_id SERIAL PRIMARY KEY,
-  requester_id INT NOT NULL REFERENCES registry_users(user_id),
-  request_type VARCHAR(50) NOT NULL, -- e.g., 'NEW_MODEL', 'SERIAL_BLOCK'
-  -- Fields for new model definition (if request_type is 'NEW_MODEL')
-  domain_code_requested CHAR(2) REFERENCES domains(domain_code),             -- Must exist
-  class_code_requested CHAR(3) REFERENCES functional_classes(class_code), -- Must exist
-  subtype_code_requested CHAR(2), -- For existing or new subtype within the class
-  subtype_name_requested VARCHAR(100), -- If new subtype
-  subtype_description_requested TEXT, -- If new subtype
-  model_code_requested CHAR(3), -- Proposed model code
-  model_name_requested VARCHAR(100),
-  model_description_requested TEXT,
-  autonomy_code_requested CHAR(1) REFERENCES autonomy_levels(autonomy_code), -- For the new model
-  technical_specifications_proposed JSONB,
-  -- Fields for serial block (if request_type is 'SERIAL_BLOCK')
-  existing_model_id INT REFERENCES models(model_id),
-  quantity_requested INT, -- Number of serial numbers requested
-  -- Common fields
-  purpose TEXT NOT NULL,
-  status VARCHAR(50) NOT NULL DEFAULT 'pending',  -- e.g., pending, approved, rejected, partially_approved
-  reviewer_id INT REFERENCES registry_users(user_id),
-  review_notes TEXT,
-  allocated_ids JSONB,  -- Store allocated model codes or serial number ranges
-  requested_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  reviewed_at TIMESTAMP WITH TIME ZONE
-);
+CREATE TABLE registry_users (...);
+CREATE TABLE registry_audit_log (...);
+CREATE TABLE id_allocation_requests (...); -- May need updates for subsystem model requests
 
 -- =============================================
--- 4.4 Integration and Reference Tables
+-- 6.5 Integration and Reference Tables (largely as before)
 -- =============================================
-
--- ATA Chapter mapping for Air Systems
-CREATE TABLE ata_chapter_mapping (
-  mapping_id SERIAL PRIMARY KEY,
-  class_code CHAR(3), -- Can be null if mapping applies to a subtype directly
-  subtype_id INT REFERENCES subtypes(subtype_id), -- More specific mapping
-  ata_chapter VARCHAR(10) NOT NULL,
-  ata_chapter_name VARCHAR(100) NOT NULL,
-  mapping_notes TEXT,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  UNIQUE(subtype_id, ata_chapter),
-  UNIQUE(class_code, ata_chapter) -- Assuming a class-level mapping is also possible if subtype is null
-);
-
--- CCSDS mapping for Space Systems
-CREATE TABLE ccsds_mapping (
-  mapping_id SERIAL PRIMARY KEY,
-  class_code CHAR(3),
-  subtype_id INT REFERENCES subtypes(subtype_id),
-  ccsds_object_type VARCHAR(50) NOT NULL,
-  ccsds_description TEXT,
-  mapping_notes TEXT,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  UNIQUE(subtype_id, ccsds_object_type),
-  UNIQUE(class_code, ccsds_object_type)
-);
-
--- Federation nodes for distributed registry (Future capability)
-CREATE TABLE federation_nodes (
-  node_id SERIAL PRIMARY KEY,
-  node_code VARCHAR(20) NOT NULL UNIQUE,
-  node_name VARCHAR(100) NOT NULL,
-  node_url VARCHAR(255),
-  api_endpoint VARCHAR(255),
-  sync_protocol VARCHAR(50) DEFAULT 'GAIA-QAO-SYNC-V1',
-  sync_interval_seconds INT DEFAULT 3600,
-  last_sync_attempt_at TIMESTAMP WITH TIME ZONE,
-  last_successful_sync_at TIMESTAMP WITH TIME ZONE,
-  sync_status VARCHAR(50) DEFAULT 'inactive', -- e.g., active, inactive, error, syncing
-  public_key TEXT, -- For secure communication
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-  is_active BOOLEAN DEFAULT TRUE
-);
+CREATE TABLE ata_chapter_mapping (...); -- Might map to SSS codes too
+CREATE TABLE ccsds_mapping (...);
+CREATE TABLE federation_nodes (...);
 
 -- =============================================
--- 4.5 Views and Functions
+-- 6.6 Views and Functions (Will need updates)
 -- =============================================
+-- view_model_full_details (for top-level objects)
+-- view_object_instance_details (for top-level objects, may join to show key installed subsystems)
+-- NEW view_subsystem_details
+-- NEW view_installed_subsystem_details (joining parent object with subsystem details)
+-- construct_full_object_id (for top-level objects)
+-- NEW construct_full_subsystem_id (Parent_ID :: SSS-MDLs-SERs)
+-- (Other functions as before)
 
--- View for complete model details including hierarchy
-CREATE OR REPLACE VIEW view_model_full_details AS
-SELECT
-  m.model_id,
-  m.model_code,
-  m.name AS model_name,
-  m.description AS model_description,
-  m.autonomy_code,
-  al.name AS autonomy_name,
-  al.description AS autonomy_description,
-  st.subtype_id,
-  st.subtype_code,
-  st.name AS subtype_name,
-  st.description AS subtype_description,
-  fc.class_code AS functional_class_code,
-  fc.name AS functional_class_name,
-  fc.description AS functional_class_description,
-  d.domain_code AS domain_code,
-  d.name AS domain_name,
-  d.description AS domain_description,
-  m.introduction_date,
-  m.end_of_production_date,
-  m.technical_specifications,
-  m.is_active AS model_is_active,
-  CONCAT(d.domain_code, '-', m.autonomy_code, '-', fc.class_code, '-', st.subtype_code, '-', m.model_code) AS model_id_prefix
-FROM models m
-JOIN subtypes st ON m.subtype_id = st.subtype_id
-JOIN functional_classes fc ON st.class_code = fc.class_code
-JOIN domains d ON fc.domain_code = d.domain_code
-JOIN autonomy_levels al ON m.autonomy_code = al.autonomy_code;
-
--- View for object instances with full hierarchy and current configuration (if any)
-CREATE OR REPLACE VIEW view_object_instance_details AS
-SELECT
-  oi.instance_id,
-  oi.full_object_id,
-  oi.serial_number,
-  m.model_id,
-  m.model_code,
-  m.name AS model_name,
-  m.autonomy_code,
-  al.name AS autonomy_name,
-  st.subtype_code,
-  st.name AS subtype_name,
-  fc.class_code AS functional_class_code,
-  fc.name AS functional_class_name,
-  d.domain_code AS domain_code,
-  d.name AS domain_name,
-  oi.manufacture_date,
-  oi.status AS instance_status,
-  oi.owner_organization,
-  oi.location_current,
-  oi.commissioning_date,
-  oi.decommissioning_date,
-  oc.configuration_id AS current_configuration_id,
-  oc.configuration_code AS current_configuration_code,
-  oc.name AS current_configuration_name,
-  oc.effective_from AS current_configuration_effective_from,
-  oc.configuration_details AS current_configuration_details
-FROM object_instances oi
-JOIN models m ON oi.model_id = m.model_id
-JOIN subtypes st ON m.subtype_id = st.subtype_id
-JOIN functional_classes fc ON st.class_code = fc.class_code
-JOIN domains d ON fc.domain_code = d.domain_code
-JOIN autonomy_levels al ON m.autonomy_code = al.autonomy_code
-LEFT JOIN object_configurations oc ON oi.instance_id = oc.instance_id AND oc.is_active = TRUE AND (oc.effective_to IS NULL OR oc.effective_to > CURRENT_DATE);
-
-
--- Function to generate the next serial number for a given model
-CREATE OR REPLACE FUNCTION generate_next_serial_number(p_model_id INT)
-RETURNS CHAR(5) AS $$
-DECLARE
-    v_last_serial CHAR(5);
-    v_next_serial_num INT;
-    v_next_serial_char CHAR(5);
-BEGIN
-    SELECT serial_number INTO v_last_serial
-    FROM object_instances
-    WHERE model_id = p_model_id
-    ORDER BY serial_number DESC
-    LIMIT 1;
-
-    IF v_last_serial IS NULL THEN
-        v_next_serial_num := 1;
-    ELSE
-        v_next_serial_num := CAST(v_last_serial AS INT) + 1;
-    END IF;
-
-    IF v_next_serial_num > 99999 THEN
-        RAISE EXCEPTION 'Serial number limit reached for model_id %', p_model_id;
-    END IF;
-
-    v_next_serial_char := LPAD(CAST(v_next_serial_num AS VARCHAR), 5, '0');
-    RETURN v_next_serial_char;
-END;
-$$ LANGUAGE plpgsql;
-
--- Function to construct full_object_id
-CREATE OR REPLACE FUNCTION construct_full_object_id(p_model_id INT, p_serial_number CHAR(5))
-RETURNS VARCHAR(30) AS $$
-DECLARE
-    v_domain_code CHAR(2);
-    v_autonomy_code CHAR(1);
-    v_class_code CHAR(3);
-    v_subtype_code CHAR(2);
-    v_model_code CHAR(3);
-BEGIN
-    SELECT d.domain_code, m.autonomy_code, fc.class_code, st.subtype_code, m.model_code
-    INTO v_domain_code, v_autonomy_code, v_class_code, v_subtype_code, v_model_code
-    FROM models m
-    JOIN subtypes st ON m.subtype_id = st.subtype_id
-    JOIN functional_classes fc ON st.class_code = fc.class_code
-    JOIN domains d ON fc.domain_code = d.domain_code
-    WHERE m.model_id = p_model_id;
-
-    IF NOT FOUND THEN
-        RAISE EXCEPTION 'Model with ID % not found.', p_model_id;
-    END IF;
-
-    RETURN CONCAT(
-        v_domain_code, '-',
-        v_autonomy_code, '-',
-        v_class_code, '-',
-        v_subtype_code, '-',
-        v_model_code, '-',
-        p_serial_number
-    );
-END;
-$$ LANGUAGE plpgsql;
-
--- Trigger function to auto-set full_object_id on insert
-CREATE OR REPLACE FUNCTION trigger_set_full_object_id()
-RETURNS TRIGGER AS $$
-BEGIN
-  NEW.full_object_id = construct_full_object_id(NEW.model_id, NEW.serial_number);
-  RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
--- Trigger to apply the function
--- CREATE TRIGGER set_full_id_on_instance_insert
--- BEFORE INSERT ON object_instances
--- FOR EACH ROW
--- EXECUTE FUNCTION trigger_set_full_object_id();
-
--- Trigger to auto-update 'updated_at' timestamp
-CREATE OR REPLACE FUNCTION trigger_set_timestamp()
-RETURNS TRIGGER AS $$
-BEGIN
-  NEW.updated_at = NOW();
-  RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
--- Example of how to apply the 'updated_at' trigger (repeat for all relevant tables):
--- CREATE TRIGGER set_timestamp_models
--- BEFORE UPDATE ON models
--- FOR EACH ROW
--- EXECUTE FUNCTION trigger_set_timestamp();
-
-
--- Initial Data Population
-INSERT INTO domains (domain_code, name, description) VALUES
-('AS', 'Air System', 'Systems operating primarily in Earths atmosphere'),
-('SP', 'Space System', 'Systems operating primarily in space');
-
-INSERT INTO autonomy_levels (autonomy_code, name, description) VALUES
-('M', 'Manned/Semi-Autonomous', 'Systems designed for human operation or with human oversight (require crew if transporting humans).'),
-('U', 'Unmanned/Fully Autonomous', 'Systems designed for fully autonomous operation without human presence.');
-
-INSERT INTO functional_classes (class_code, domain_code, name, description) VALUES
-('PAX', 'AS', 'Passenger Transport', 'Aircraft designed primarily for passenger transportation'),
-('CGO', 'AS', 'Cargo Transport', 'Aircraft designed primarily for cargo transportation'),
-('ISR', 'AS', 'Intelligence, Surveillance, Reconnaissance', 'Aircraft for intelligence gathering, surveillance, and reconnaissance'),
-('SCI', 'AS', 'Scientific Research', 'Aircraft designed for scientific research and data collection'),
-('UTL', 'AS', 'Utility', 'Aircraft for utility purposes (agriculture, firefighting, etc.)'),
-('REC', 'AS', 'Recreational & Sport', 'Aircraft designed for recreational and sporting activities'),
-('XPR', 'AS', 'Experimental', 'Experimental aircraft and technology demonstrators'),
-('LTA', 'AS', 'Lighter Than Air', 'Lighter-than-air vehicles, including dirigibles and platforms'),
-('MIL', 'AS', 'Military Aircraft', 'Aircraft designed for military applications and combat operations'),
-('LCH', 'SP', 'Launch System', 'Systems designed to launch payloads into space'),
-('SAT', 'SP', 'Satellite', 'Orbital systems for various missions without human presence'),
-('ORB', 'SP', 'Orbital Platform/Vehicle', 'Crewed orbital systems, including stations and transport vehicles'),
-('PRB', 'SP', 'Probe', 'Systems designed for exploration beyond Earth orbit'),
-('XPS', 'SP', 'Experimental (Space)', 'Experimental space systems and technology demonstrators'),
-('DEF', 'SP', 'Space Defense', 'Systems designed for space defense and security applications');
-
--- Example INSERTs for subtypes (Full list in Appendix A)
-INSERT INTO subtypes (subtype_code, class_code, name, description) VALUES
-('NB', 'PAX', 'Narrow-Body Airliner', 'Single-aisle passenger aircraft typically for short to medium range routes.'),
-('BW', 'PAX', 'Blended Wing Body', 'Aircraft with blended wing body configuration for passenger transport.');
-
--- Example INSERTs for models (Full examples in Part II)
-INSERT INTO models (model_code, subtype_id, autonomy_code, name, description, technical_specifications) VALUES
-('Q2A', (SELECT subtype_id FROM subtypes WHERE subtype_code = 'NB' AND class_code = 'PAX'), 'M', 'QuantumNarrow QN-200', 'Medium quantum-enhanced narrow-body', '{"capacity": 180, "range_km": 5500}');
-INSERT INTO models (model_code, subtype_id, autonomy_code, name, description, technical_specifications) VALUES
-('Q1H', (SELECT subtype_id FROM subtypes WHERE subtype_code = 'BW' AND class_code = 'PAX'), 'M', 'AMPEL360 BWB-Q100', 'Small quantum-enhanced BWB passenger aircraft', '{"capacity": 100, "range_km": 5500, "cruise_speed_kmh": 850}');
+-- Initial Data Examples (Illustrative)
+INSERT INTO domains (domain_code, name) VALUES ('AS', 'Air System'), ('SP', 'Space System');
+INSERT INTO autonomy_levels (autonomy_code, name) VALUES ('M', 'Manned/Semi-Autonomous'), ('U', 'Unmanned/Fully Autonomous');
+INSERT INTO functional_classes (class_code, domain_code, name) VALUES ('PAX', 'AS', 'Passenger Transport');
+INSERT INTO object_category_subtypes (st_code, class_code, name) VALUES ('NB', 'PAX', 'Narrow-Body Airliner');
+INSERT INTO models (model_code, object_category_subtype_id, autonomy_code, name) VALUES 
+  ('Q2A', (SELECT object_category_subtype_id FROM object_category_subtypes WHERE st_code='NB' AND class_code='PAX'), 'M', 'QuantumNarrow QN-200');
+INSERT INTO subsystem_types (sss_code, name, description) VALUES ('FCS', 'Flight Control System', 'Systems managing flight control surfaces and stability.');
+INSERT INTO subsystem_models (mdls_code, sss_code, name, manufacturer) VALUES ('PFA', 'FCS', 'PFCC-Alpha', 'GAIA-Avionics');
 ```
 
 ---
-
-## Part V: Implementation Guidelines
-
-This part consolidates recommendations and next steps for the implementation of the GAIA-QAO system.
-
-### 5.1 Database Implementation
-
-1.  **Base Schema**: Utilize the SQL script detailed in Part IV as the foundation for creating the database (preferably PostgreSQL).
-2.  **Initial Population**: Populate catalog tables (`domains`, `autonomy_levels`, `functional_classes`, `subtypes`, etc.) with the defined data (see Appendix A for full subtype list).
-3.  **Model Registry**: Implement the model registry in the `models` table, ensuring each model has its `autonomy_code` defined (see Part II for full model examples).
-4.  **Configuration Tracking**: Implement configuration tracking in the `object_configurations` table.
-5.  **Validation and Constraints**:
-    *   Ensure all primary keys, foreign keys, and `UNIQUE` constraints are implemented.
-    *   Create additional validation rules at the application or database level (e.g., code formats, value ranges) if necessary.
-6.  **Indexes**: While PostgreSQL creates indexes for PKs and UNIQUE constraints, evaluate and add further indexes on columns frequently used in `WHERE`, `JOIN`, or `ORDER BY` clauses to optimize performance, especially for `object_instances`, `object_configurations`, and `registry_audit_log`.
-7.  **Functions and Triggers**: Implement the defined functions (`generate_next_serial_number`, `construct_full_object_id`) and triggers (`trigger_set_timestamp`, `trigger_set_full_object_id`). Apply `trigger_set_timestamp` to all relevant tables.
-8.  **Security**:
-    *   Implement password hashing for `registry_users.password_hash`.
-    *   Establish appropriate database permissions for user roles.
-9.  **Auditing**: Ensure `registry_audit_log` entries are made from the application logic for all relevant CRUD operations and security events.
-10. **Relationships**: Maintain and validate the correct relationships between models, instances, and configurations through application logic or triggers.
-
-### 5.2 User Interface (Recommendations)
-
-Development of a user interface (likely web-based) is recommended for interacting with the GAIA-QAO registry (distinct from GAIA-Q-UI which is a more advanced AI orchestration layer). This registry UI should include:
-
-1.  **Model Browser**:
-    *   An interface to browse the model registry (`models`).
-    *   Filter and search models by domain, class, sub-type, code, name, specifications.
-    *   View complete details for each model, including its technical specifications.
-2.  **Object Instance Management**:
-    *   Functionality to register new object instances (`object_instances`).
-    *   View and edit details of existing instances.
-    *   Search and filter instances by `full_object_id`, model, status, owner, etc.
-3.  **Configuration Management**:
-    *   Visualize the configuration timeline for an object instance.
-    *   Add, edit, and deactivate configurations (`object_configurations`).
-    *   Compare different configurations of the same object or model.
-4.  **Registry Administration**:
-    *   Interface for administrators to manage users (`registry_users`).
-    *   Process ID allocation requests (`id_allocation_requests`).
-    *   Manage catalog tables (domains, classes, etc.).
-    *   View audit logs (`registry_audit_log`).
-5.  **ID Validation Tool**:
-    *   A utility to validate the syntax and existence of GQOIS IDs against the registry.
-6.  **Reporting and Export**:
-    *   Ability to generate reports on registry content.
-    *   Export data in common formats (CSV, JSON, XML).
-7.  **Dashboard**:
-    *   Summary visualizations of registry status, pending requests, etc.
-
-### 5.3 Documentation (Meta-Documentation)
-
-This section describes how the GAIA-QAO system documentation itself (including this master document) is managed and maintained:
-
-1.  **Primary Format**: Markdown (`.md`) is the primary format for source documentation, allowing for readability and easy version control.
-2.  **Version Control**: All documentation will be managed under a version control system (e.g., Git), preferably in a dedicated repository within the GAIA-Q & AMPEL project.
-3.  **Structure**: The documentation will follow the structure defined in this Aerospace General Index (AGI). Major changes to the AGI structure must be discussed and approved.
-4.  **Tooling**:
-    *   Markdown editors.
-    *   Tools for rendering Markdown to HTML, PDF (e.g., Pandoc, static site generators like MkDocs, Jekyll, Hugo).
-    *   Tools for rendering Mermaid diagrams.
-5.  **Contributions**:
-    *   Guidelines for contributing to the documentation will be established (style, file naming conventions, Pull Request process).
-    *   Contributions will be reviewed by the Technical Oversight Committee or a designated documentation working group.
-6.  **Maintenance**:
-    *   The documentation will be updated to reflect changes in the GAIA-QAO system, database schema, or framework policies.
-    *   Periodic reviews will be conducted to ensure accuracy and relevance.
-7.  **Publication**:
-    *   Official documentation will be published on the GAIA-Q & AMPEL project documentation portal.
-    *   PDF versions may be generated for offline distribution.
-8.  **Relation to Documentation Framework (Part 0.3)**: This QAO system documentation is a key component of the "Core Knowledge Base" and "Aerospace Engineering Specifications" within the overall GAIA-Q & AMPEL documentation architecture.
-
-### 5.4 Next Steps (Consolidated)
-
-The following steps are recommended for the continued development and implementation of the GAIA-QAO system and the GAIA-Q & AMPEL framework:
-
-1.  **Finalize and Validate DB Schema**: Conduct thorough testing of the database schema (Part IV) and implement it.
-2.  **Develop Registry User Interface**: Begin development of the registry management interface (see 5.2).
-3.  **Develop ID Validation Tool**: Create a utility or API to validate IDs against the registry.
-4.  **Populate Model Registry**: Continue expanding and detailing the model registry (Part II) in the database with full model examples.
-5.  **Implement Checksum Algorithm (Optional but Recommended)**: Consider and implement a checksum mechanism for ID integrity verification.
-6.  **Integration with Technical Documentation**: Establish workflows to integrate the model and configuration registry with detailed technical documentation for each object (possibly using InfoCodes and COAFI).
-7.  **Develop Visualization Tools**: Create tools to visualize the model hierarchy and configuration evolution.
-8.  **Establish Governance Processes (Part 0.5)**: Formalize the Technical Oversight Committee and contribution/RFC processes.
-9.  **Launch Documentation Portal (Part 0.6, Phase 1)**: Deploy an initial version of the portal with base documentation.
-10. **Foster Community (Part 0.6, Phase 2)**: Recruit contributors and establish working groups.
-11. **Form Partnerships (Manifesto)**: Establish MoUs with academic nodes and industry partners for domain seeding and adoption.
-12. **Refine Semantic Taxonomy (Manifesto)**: Deepen the documentation taxonomy, aligned with GASToP & COAFI.
+## Part 7: GAIA-Q-UI System Specification
+*(Content as per v0.4.0 previously generated, with section numbers updated accordingly, e.g., 7.0, 7.1, etc. Cross-references to other Parts (like Part I for ID structure, Part IV for Registry) would now point to the renumbered Parts 2 and 6 respectively. Use Cases in its Appendix D remain.)*
 
 ---
-## Part VI: GAIA-Q-UI System Specification
+## Part 8: Implementation Guidelines (Overall System)
+*(Content as per previously generated "Part V/VII: Implementation Guidelines", with section numbers updated, e.g., 8.1, 8.2, etc.)*
 
-This part outlines the specification for GAIA-Q-UI, an intelligent user interface and AI orchestration layer for the GAIA-Q & AMPEL framework.
+### 8.1 Database Implementation
+(Points 1-10, now referencing Part 6 for DB Schema, and including setup for subsystem tables).
 
-*(This section incorporates GAIAQ-UI-SPEC-001, conceptual Version 0.4.0, reflecting latest feedback.)*
+### 8.2 User Interface Recommendations (Registry UI & GAIA-Q-UI)
+(Distinction between simple Registry UI and advanced GAIA-Q-UI maintained).
 
-**InfoCode Root:** `QAO-UIF` (Quantum Aerospace Object - User Interface Framework)
+### 8.3 Documentation (Meta-Documentation)
+(Points 1-8 as before).
 
-### 6.0 Introduction and Purpose (GAIA-Q-UI)
-
-GAIA-Q-UI is envisioned as a specialized, intelligent user interface and AI orchestration layer for the GAIA-Q & AMPEL Open Source Quantum Aerospace Framework. Its primary purpose is to provide a unified and intuitive access point for aerospace professionals to interact with diverse AI models, query the GAIA-QAO Object Registry (see Part I & IV), and leverage other federated services, all while ensuring AGAD-compliant traceability and InfoCode-tagged logging.
-
-This section outlines the specification for GAIA-Q-UI, covering its UI architecture, AI model routing logic, Master Control Program (MCP) event schemas, and AGAD/InfoCode integration.
-
-#### 6.0.1 Goals (GAIA-Q-UI)
-
-*   Democratize access to advanced AI tools for aerospace applications.
-*   Streamline workflows by integrating data, AI reasoning, and registry intelligence.
-*   Ensure all interactions are traceable, auditable, and compliant with GAIA-QAO standards.
-*   Provide a flexible and extensible platform for future AI model and service integrations.
-
-#### 6.0.2 Guiding Principle: Leveraging AI in Development (GAIA-Q-UI)
-In alignment with the GAIA-Q & AMPEL project's focus on practical AI implementation, the development of GAIA-Q-UI itself will actively explore and leverage AI/LLMs for tasks such as:
-*   Generating boilerplate code and UI component scaffolding (e.g., *using an LLM to generate Python boilerplate for API connectors based on OpenAPI specifications, or creating initial React component skeletons for the chat interface based on user flow descriptions*).
-*   Assisting in drafting and refining technical documentation and user guides.
-*   Creating synthetic data for testing UI interactions and AI model routing.
-*   Validating InfoCode structures and AGAD compliance patterns in logs and outputs (e.g., *employing an LLM to draft initial AGAD-compliant JSON log structures for new event types based on defined schemas*).
-*   Automating aspects of unit and integration testing (e.g., *using an LLM to draft initial user stories for new UI features based on high-level functional requirements, which can then inform test case generation*).
-
-### 6.1 UI Architecture Overview (GAIA-Q-UI)
-
-#### 6.1.1 Design Philosophy
-*   **Modularity:** Components will be designed modularly to allow for flexibility, scalability, and easier maintenance.
-*   **User-Centric:** Focus on aerospace-specific workflows and user needs, aiming for an intuitive and efficient experience. Detailed UX/UI mockups and user flow diagrams are a priority in the development roadmap (see Section 6.5).
-    *   *Conceptual UI Layout Example: A multi-panel dashboard is envisioned, potentially featuring a main chat/interaction panel on one side for queries and command input. A context-aware panel could display AI-generated insights, registry query results, or relevant documentation snippets. A dedicated, larger visualization panel could render telemetry data, schematics, 3D models, or quantum data visualizations, with tools for interaction and annotation. A typical interaction might see a user initiate a query in the main chat panel. As results are generated, key findings and data summaries would populate the context panel. The user could then select specific data points (e.g., a telemetry parameter) to be rendered in detail in the visualization panel, or refine their query in the chat panel for a multi-turn dialogue.*
-*   **Extensibility:** The architecture must easily accommodate new AI models, data types, and backend services.
-*   **Platform:** Initially proposed as a **web-based application** for broad accessibility, with potential for future specialized client applications if needed.
-*   **Responsiveness:** The UI should adapt to various screen sizes where practical.
-
-#### 6.1.2 Key UI Components
-```mermaid
-graph TD
-    User --> InputHandler["Input Handler & Pre-processor"]
-    InputHandler -- "Text, Voice (STT)" --> NLPModule["NLP & Intent Recognition"]
-    InputHandler -- "Image, Video" --> VisualMediaProcessor["Visual Media Processor"]
-    InputHandler -- "Schematics, CAD" --> EngineeringDataParser["Engineering Data Parser"]
-    InputHandler -- "Telemetry" --> TelemetryStreamProcessor["Telemetry Stream Processor"]
-    InputHandler -- "QuantumData" --> QuantumDataInterface["Quantum Data Interface"]
-
-    NLPModule --> QueryOrchestrator["Query & AI Orchestrator"]
-    VisualMediaProcessor --> QueryOrchestrator
-    EngineeringDataParser --> QueryOrchestrator
-    TelemetryStreamProcessor --> QueryOrchestrator
-    QuantumDataInterface --> QueryOrchestrator
-
-    QueryOrchestrator --> ModelRoutingEngine["AI Model Routing Engine"]
-    ModelRoutingEngine --> VisionGPT["VisionGPT API"]
-    ModelRoutingEngine --> QwenVL["Qwen-VL API"]
-    ModelRoutingEngine --> LLaVA["LLaVA API"]
-    ModelRoutingEngine --> OtherLLMs["Other LLM APIs"]
-    ModelRoutingEngine --> DomainSpecificModels["Domain-Specific AI APIs"]
-    ModelRoutingEngine --> QuantumAIModels["Quantum AI/Simulators API"]
-
-    VisionGPT --> ResultsAggregator["Results Aggregator & Formatter"]
-    QwenVL --> ResultsAggregator
-    LLaVA --> ResultsAggregator
-    OtherLLMs --> ResultsAggregator
-    DomainSpecificModels --> ResultsAggregator
-    QuantumAIModels --> ResultsAggregator
-
-    QueryOrchestrator --> RegistryInterface["GAIA-QAO Registry Interface"]
-    RegistryInterface --> ResultsAggregator
-
-    QueryOrchestrator --> MCPAgentInterface["MCP Agent Interface"]
-    MCPAgentInterface --> ResultsAggregator
-
-    ResultsAggregator --> OutputRenderer["Output Renderer & Display"]
-    OutputRenderer --> UserInterface["User Interface (Chat, Dashboards, Visualizations)"]
-    UserInterface --> User
-
-    SessionManager["Session Manager (AGAD/InfoCode)"] --> InputHandler
-    SessionManager --> QueryOrchestrator
-    SessionManager --> ResultsAggregator
-    SessionManager --> AuditLogger["Audit Logger"]
-
-    AuditLogger --> ExternalLogStore["External Log Store (AGAD Compliant)"]
-```
-
-**Component Descriptions:**
-1.  **User Interface (Chat, Dashboards, Visualizations):** Primary interaction layer. Will handle text, voice, file uploads. Includes dashboarding, specialized viewers.
-2.  **Input Handler & Pre-processor:** Receives and identifies input type, performs pre-processing.
-3.  **Specialized Processors/Parsers:** NLP & Intent Recognition, Visual Media Processor, Engineering DataParser, Telemetry Stream Processor, Quantum Data Interface.
-4.  **Query & AI Orchestrator:** Central coordination for user requests.
-5.  **AI Model Routing Engine:** Intelligently selects AI model(s).
-6.  **AI Model API Interfaces:** Standardized connectors.
-7.  **GAIA-QAO Registry Interface:** API client for GAIA-QAO Registry.
-8.  **MCP Agent Interface:** Handles communication with MCP-linked agents.
-9.  **Results Aggregator & Formatter:** Collects, synthesizes, and formats responses.
-10. **Output Renderer & Display:** Renders formatted results in the UI.
-11. **Session Manager (AGAD/InfoCode):** Manages traceable user sessions and InfoCodes.
-12. **Audit Logger:** Logs significant interactions for AGAD compliance.
-
-#### 6.1.3 Technology Stack Considerations
-*   **Frontend:** Modern web framework (e.g., React, Vue, Angular) with robust state management. Libraries for charting, data visualization, and potentially 3D rendering.
-*   **Backend/Orchestration:** Python (Flask/Django/FastAPI) or Node.js are common choices for AI orchestration due to library support. Could also explore microservices architecture.
-*   **Messaging Queue (Optional but Recommended):** For managing asynchronous tasks and communication between services (e.g., RabbitMQ, Kafka).
-*   **Database (for UI state/caching, not the main QAO registry):** A local or session-based database if needed for UI-specific data.
-
-#### 6.1.4 Performance, Scalability, and Reliability Considerations
-1.  **Latency Management:**
-    *   **Asynchronous Operations:** Employ message queues (e.g., RabbitMQ, Kafka) for long-running AI model inferences or complex orchestrations to avoid blocking the UI.
-    *   **Caching:** Implement caching strategies for frequently accessed registry data, common AI model query results (where appropriate and data freshness allows), and pre-processed inputs.
-    *   **Optimized Model Calls:** Batching requests to AI models where possible.
-2.  **Scalability:**
-    *   **Microservices Architecture (Backend):** Consider a microservices architecture for backend components (Orchestrator, Routing Engine, API Interfaces) to allow independent scaling.
-    *   **Load Balancing:** Implement load balancing for UI servers and backend AI model interaction services.
-    *   **Scalable AI Inference:** Leverage scalable cloud-based AI inference endpoints or ensure on-premise inference infrastructure can scale.
-3.  **Reliability & Fault Tolerance:**
-    *   **Retry Mechanisms:** Implement retry logic with exponential backoff for transient network issues or temporary AI model unavailability.
-    *   **Circuit Breakers:** Use circuit breaker patterns to prevent cascading failures when interacting with external services.
-    *   **Graceful Degradation:** Design the system to offer partial functionality if some AI models or services are temporarily down (e.g., registry queries still work even if a specific vision model is offline).
-    *   **Robust Error Handling:** Comprehensive error handling and reporting to users and system administrators.
-4.  **Real-time Data Processing (Telemetry):**
-    *   Utilize stream processing technologies (e.g., Apache Kafka Streams, Flink) if continuous, high-volume telemetry analysis is required.
-    *   Optimize data pipelines for low-latency processing.
-
-### 6.2 AI Model Routing Engine Logic (GAIA-Q-UI)
-
-#### 6.2.1 Input Analysis for Routing
-1.  **Data Type:** Image (e.g., satellite imagery, component photo, damage assessment), Video, Text (e.g., natural language query, technical document excerpt), Structured Data (e.g., telemetry log, JSON/XML data from sensors), Engineering Schematics/CAD (requires specialized parsing first).
-2.  **User Intent (derived from NLP):** Identification (e.g., "What is this component?"), Description (e.g., "Describe the status of..."), Comparison (e.g., "Compare telemetry from flight A and flight B"), Prediction/Forecasting (e.g., "Predict remaining useful life..."), Anomaly Detection, Querying specific knowledge (e.g., "What are the specs for MDL Q1H?").
-3.  **Context:** Current session information (previous queries, uploaded data), User role and permissions, Available AI models and their known capabilities/specializations, Metadata associated with uploaded files (e.g., sensor type for an image).
-4.  **Explicit Model Request (Optional):** Advanced users might specify a preferred model, which the engine can honor or override with justification.
-
-#### 6.2.2 Routing Logic Approach
-A **hybrid approach** is proposed:
-1.  **Rule-Based Pre-filtering:** Initial set of rules based on data type.
-2.  **Capability-Matching:** Maintain a metadata registry of AI models and their declared capabilities; match intent and data type against these.
-3.  **ML-Driven Selection (Future Enhancement):** A meta-learner model could be trained to predict the best model or sequence.
-4.  **Multi-Model Orchestration (Fan-out/Chaining):** Route to multiple models or chain outputs.
-
-#### 6.2.3 Model Selection Criteria (Examples)
-Accuracy/Performance for specific task types, Cost of inference, Inference speed/latency requirements, Data privacy considerations for the model, Specialization (e.g., a model trained on aerospace schematics).
-*Aerospace-specific metric examples:*
-*   *Target latency for real-time telemetry analysis feedback: < 200ms for initial alert, < 1s for detailed diagnostic suggestions.*
-*   *Minimum confidence threshold for critical system anomaly detection before escalating to human review: >95%.*
-*   *Cost per query constraints for routine GAIA-QAO registry lookups versus complex multi-modal analysis.*
-*   *Data residency and processing sovereignty requirements for models handling export-controlled technical data.*
-*(These aerospace-specific performance targets are initial estimates and will be refined based on specific use-case requirements, available infrastructure, and validated through rigorous benchmarking during system testing using simulated and real-world aerospace datasets.)*
-
-#### 6.2.4 Fallback and Error Handling
-If a primary model fails or returns low-confidence results, the engine should have logic to try an alternative model or inform the user.
-
-#### 6.2.5 Aerospace Task-Specific Model Prioritization (Examples)
-1.  **Component Identification from Image/Schematic:**
-    *   **Input:** Image of a part, P&ID/electrical schematic section.
-    *   **Models:** VisionGPT, Qwen-VL, LLaVA, or fine-tuned models.
-    *   **Criteria:** Part recognition accuracy, OCR, spatial reasoning.
-    *   **Orchestration:** OCR → Object Detection → LLM.
-2.  **Anomaly Detection in Telemetry Data:**
-    *   **Input:** Time-series telemetry log.
-    *   **Models:** Specialized time-series anomaly models (statistical, ML, quantum-inspired via QCM/MCP).
-    *   **Criteria:** Sensitivity, low false positives, XAI if available.
-3.  **Predictive Maintenance (RUL Estimation):**
-    *   **Input:** Historical operational data, maintenance logs, sensor readings.
-    *   **Models:** Predictive models (regression, survival analysis), LLMs for log interpretation.
-    *   **Criteria:** Prediction accuracy, diverse data handling, confidence intervals.
-4.  **Damage Assessment from Visual Data:**
-    *   **Input:** Image/video of damage (crack, dent).
-    *   **Models:** Vision models for defect detection/classification/quantification.
-    *   **Criteria:** Precision/recall for damage types, localization.
-5.  **Natural Language Query to GAIA-QAO Registry:** (see Part I for GQOIS ID structure)
-    *   **Input:** "Latest config for AS-M-PAX-BW-Q1H-00001?"
-    *   **Models:** LLM for intent parsing → structured query to `RegistryInterface`.
-    *   **Criteria:** Accuracy in intent recognition, entity extraction.
-6.  **Documentation/IPC Generation Support:**
-    *   **Input:** Engineering drawings, 3D models, part lists.
-    *   **Models:** Vision models, data extraction, LLMs for text.
-    *   **Criteria:** Part ID accuracy, consistency with GAIA-QAO registry, text coherence.
-
-#### 6.2.6 Handling Quantum-Specific Data and Models
-1.  **Quantum Data Input:** The `QuantumDataInterface` component will handle inputs such as algorithm parameters, quantum sensor data (gravimeters, magnetometers, quantum radar), and quantum simulation results.
-2.  **Routing to Quantum Resources:** The Model Routing Engine will identify queries/data for quantum processing, routing to "Quantum AI Models" (QAOA, QML), quantum simulators, or hardware via MCP/QCM.
-3.  **Visualization of Quantum Data:** The `OutputRenderer` will visualize quantum info (qubit probabilities, entanglement, energy landscapes). *Visualizations will aim to translate abstract quantum states into actionable insights for aerospace engineers, potentially using comparative dashboards, anomaly highlighting against classical expectations, or simplified state representations. User studies will be key to refining these. Specific strategies might include: using interactive Bloch sphere representations for visualizing qubit states with tooltips explaining superposition and phase; or employing comparative line graphs and heatmaps to show classical sensor output versus quantum sensor output for a given phenomenon, highlighting differences in sensitivity or noise.*
-4.  **Use Case Example:** A user uploads a complex logistics optimization problem. NLP identifies it as an optimization task. The Model Routing Engine deems it suitable for a QAOA solver, routes it to a QCM via MCP, receives results (optimal configuration, energy value), and the Output Renderer visualizes the solution and metrics.
-
-### 6.3 MCP Event Schemas (GAIA-Q-UI)
-
-Standardized JSON-based event schemas for interoperability with the Master Control Program (MCP) and linked agents.
-
-#### 6.3.1 General Event Structure
-```json
-{
-  "eventId": "uuid",
-  "eventTimestamp": "ISO8601_datetime",
-  "sourceSystem": "GAIA-Q-UI",
-  "sourceInfoCode": "QAO-UIF-SESSION-XXX",
-  "targetSystem": "MCP_AGENT_XYZ",
-  "eventType": "QUERY_REQUEST | DATA_SUBMISSION | ...",
-  "payloadSchemaVersion": "1.0",
-  "payload": { /* Event-specific data */ },
-  "securityContext": { /* Optional */ },
-  "traceability": { /* correlationId, parentEventId */ }
-}
-```
-
-#### 6.3.2 Example Event Types and Payloads
-1.  **`QUERY_REQUEST` (UI to MCP Agent):**
-    *   `eventType`: "MCP_AGENT_QUERY_REQUEST"
-    *   `payload`: `{"queryType": "RETRIEVE_MAINTENANCE_LOGS", "queryParameters": {"objectId": "AS-M-PAX-BW-Q1H-00001", "dateRange": {"start": "...", "end": "..."}}, "responseFormatPreference": "json_summary"}`
-2.  **`QUERY_RESPONSE` (MCP Agent to UI):**
-    *   `eventType`: "MCP_AGENT_QUERY_RESPONSE"
-    *   `payload`: `{"status": "SUCCESS" | "PARTIAL_SUCCESS" | "FAILURE", "results": [ /* array of results */ ], "errorMessage": "...", "metadata": {"dataSourcesConsulted": ["AGENT_A_DB"], "processingTimeMs": 1234}}`
-3.  **`DATA_SUBMISSION_FOR_ANALYSIS` (UI to Specialized AI Agent via MCP):**
-    *   `eventType`: "MCP_AGENT_DATA_ANALYSIS_REQUEST"
-    *   `payload`: `{"dataType": "TELEMETRY_STREAM", "dataReference": "s3_uri", "analysisType": "ANOMALY_DETECTION_QUANTUM_ALGO_X", "parameters": { /* ... */ }}`
-
-*(Further schemas for status updates, acknowledgments, errors, etc., will be defined.)*
-
-### 6.4 AGAD–InfoCode Trace Integration (GAIA-Q-UI)
-
-Ensuring traceability and auditability according to AGAD (Aerospace Global Archive & Discovery) principles and GAIA-QAO InfoCodes is a core requirement.
-
-#### 6.4.1 Session Management & InfoCoding
-1.  **Session Initiation:** Each user interaction with GAIA-Q-UI will be part of a traceable session. Upon session start, a unique Session InfoCode will be generated/assigned (e.g., `QAO-UIF-SESSION-YYYYMMDD-UUID`). User identity, timestamp, and initial context will be logged.
-2.  **Interaction InfoCoding:** Each significant user action (query submission, file upload) and system response (AI model output, registry result) within a session will be assigned a granular Interaction InfoCode, hierarchically linked to the parent Session InfoCode (e.g., `QAO-UIF-SESSION-YYYYMMDD-UUID.ACTION-001`, `QAO-UIF-SESSION-YYYYMMDD-UUID.AI_RESPONSE-001.MODEL-VISIONGPT`).
-
-#### 6.4.2 Log Structure and Content
-All logs generated by GAIA-Q-UI components will adhere to a standardized JSON structure:
-```json
-{
-  "logId": "uuid",
-  "timestamp": "ISO8601_datetime",
-  "sessionInfoCode": "QAO-UIF-SESSION-...",
-  "interactionInfoCode": "QAO-UIF-SESSION-...ACTION-...",
-  "component": "ModelRoutingEngine | QueryOrchestrator | ...",
-  "logLevel": "INFO | WARN | ERROR | DEBUG",
-  "userId": "user_id",
-  "eventCategory": "USER_QUERY | AI_MODEL_CALL | REGISTRY_ACCESS | MCP_EVENT | SYSTEM_HEALTH",
-  "eventDetails": {
-    "queryText": "...",
-    "modelInvoked": "VisionGPT",
-    "requestPayload": { /* ... */ },
-    "responsePayload": { /* ... */ },
-    "confidenceScore": 0.95,
-    "errorMessage": "...",
-    "durationMs": 150
-  },
-  "sourceIp": "user_ip_address",
-  "dataReferences": [
-    {"type": "UPLOADED_IMAGE", "location": "s3_uri_or_internal_id"},
-    {"type": "REGISTRY_QUERY_RESULT_CACHE", "id": "cache_id"}
-  ],
-  "complianceTags": ["AGAD_LEVEL_X", "COAFI_RELEVANT"]
-}
-```
-
-#### 6.4.3 Audit Trail Generation
-*   The `AuditLogger` component collects structured logs from all GAIA-Q-UI components.
-*   Logs are forwarded to a secure, immutable external log store meeting AGAD requirements for long-term archival and tamper-proofing.
-*   The system supports querying and retrieving audit trails based on Session InfoCode, User ID, timeframe, etc.
-
-#### 6.4.4 Data Lineage
-*   Where possible, InfoCodes and logs should help establish data lineage, tracing input transformation through various models and processes to the final output.
-
-### 6.5 Initial Development Roadmap & Next Steps (GAIA-Q-UI)
-
-The development of GAIA-Q-UI will follow an iterative and agile approach.
-
-0.  **Leveraging AI/LLMs in GAIA-Q-UI Development (Ongoing Principle):**
-    *   Actively use LLMs for code scaffolding, documentation drafting, test case generation, and validation of InfoCode/AGAD patterns throughout the development lifecycle (see Section 6.0.2 for examples).
-1.  **Phase 1: Foundation & Core MVP (Target: 3-6 Months)**
-    *   **6.5.1.1 Detailed UX/UI Mockups & Workflows:** Develop detailed wireframes, user personas, and user flow diagrams for key aerospace use cases (see Appendix D). *Incorporate an iterative feedback loop with target users (aerospace engineers) during this design phase.*
-    *   **6.5.1.2 Core Orchestration Backend:** Implement the Query & AI Orchestrator and initial rule-based AI Model Routing Engine.
-    *   **6.5.1.3 First AI Model Integration:** Integrate VisionGPT (or a selected alternative like Qwen-VL) for a core visual task (e.g., basic component identification from an image).
-    *   **6.5.1.4 GAIA-QAO Registry Interface:** Develop the API client for live registry queries (read-only initially), referencing ID structures from Part I.
-    *   **6.5.1.5 Session Management & Basic InfoCode Logging:** Establish the foundational traceability layer (session InfoCodes, basic interaction logging).
-    *   **6.5.1.6 Prototype UI Development:** Build an MVP of the chat interface, file upload/input handling, and the conceptual multi-panel layout described in Section 6.1.1.
-    *   **6.5.1.7 Security Framework - Initial Implementation:**
-        *   Implement strong Multi-Factor Authentication (MFA) and Core User Authentication mechanisms.
-        *   Secure all exposed API Endpoints (HTTPS by default, implement basic API key/token authentication).
-        *   Conduct an initial Data Encryption Review for data in transit and at rest (for temporary caches/UI state).
-        *   Establish basic Role-Based Access Control (RBAC) stubs.
-2.  **Phase 2: Expansion & Feature Enhancement (Target: 6-9 Months Post-MVP)**
-    *   Integrate additional AI models (LLMs, specialized aerospace models).
-    *   Enhance Model Routing Logic (refine rules, explore capability-matching).
-    *   Develop Dashboarding & Visualization capabilities for common data types.
-    *   Define Detailed MCP Event Schemas & implement initial Agent Integration for a pilot service.
-    *   Ensure Full AGAD-Compliant Audit Trail logging to external store.
-    *   Conduct Performance and Scalability Testing with initial benchmarks.
-    *   Conduct structured User Testing with aerospace professionals on the MVP and incorporate feedback.
-3.  **Phase 3: Quantum Integration & Advanced Features (Target: 9-15 Months Post-MVP)**
-    *   Implement Quantum Data Interface & Visualization for quantum-specific data.
-    *   Integrate Routing to Quantum AI/Simulators via a pilot QCM or quantum service.
-    *   Develop Advanced Multi-Model Orchestration (chaining, fan-out).
-    *   Begin R&D for ML-Driven Routing Engine component.
-    *   Implement Mature Security & Privacy Features based on detailed threat modeling.
-4.  **Ongoing:**
-    *   Community Review & Feedback.
-    *   Documentation updates.
-    *   Continuous integration and deployment (CI/CD) practices.
-
-### 6.6 Security and Data Privacy Framework (GAIA-Q-UI)
-
-Ensuring the security of data and the privacy of users and proprietary information is paramount for GAIA-Q-UI, especially within the aerospace domain. (Cross-reference to roadmap item 6.5.1.7 for initial implementation steps).
-
-#### 6.6.1 Data Security
-1.  **Data Encryption:**
-    *   **In Transit:** All communication (user client, GAIA-Q-UI backend, AI models, Registry, MCP) will use strong encryption (e.g., TLS 1.3+).
-    *   **At Rest:** Sensitive data cached or stored by GAIA-Q-UI components and in the AGAD log store will be encrypted.
-2.  **API Security:**
-    *   Robust authentication for all internal/external APIs (e.g., OAuth 2.0, restricted API keys).
-    *   Strict input validation on all endpoints.
-3.  **Infrastructure Security:**
-    *   Adherence to security best practices (network segmentation, firewalls, IDS/IPS).
-    *   Regular security audits and penetration testing.
-
-#### 6.6.2 Access Control
-1.  **User Authentication:** Strong multi-factor authentication (MFA).
-2.  **Role-Based Access Control (RBAC):**
-    *   Defined user roles (engineer, researcher, admin, auditor).
-    *   Role-based permissions for UI features, data types, AI models, registry info.
-    *   Admin management of roles/permissions.
-
-#### 6.6.3 Data Privacy
-1.  **Data Minimization:** Collect/process only necessary data.
-2.  **Anonymization/Pseudonymization:** Explored where feasible before sending to less trusted models or for general logging.
-3.  **Compliance:** Adherence to relevant data protection regulations (GDPR, CCPA) and aerospace data handling standards (ITAR, EAR – requiring careful scoping and potentially specialized deployments).
-4.  **Transparency:** Users informed about data use, model invocation, and interaction traceability.
-
-#### 6.6.4 Secure Development Lifecycle (SDL)
-*   Incorporate security throughout the SDLC: threat modeling, secure coding practices, regular security code reviews.
+### 8.4 Next Steps (Overall Project)
+(Points 1-12 as before, with "Populate Model Registry" now clearly referring to both top-level and subsystem models).
 
 ---
 ## Appendices
 
-### Appendix A: Complete Sub-Type Code Tables
-
-This appendix lists the defined Sub-Types (ST) for each Functional Class (CCC) within the Air Systems (AS) and Space Systems (SP) domains. Each sub-type has a unique two-character code within its functional class.
-
-#### A.1 Air Systems (AS) Sub-Types
-
-##### A.1.1 Passenger Transport (PAX) Sub-Types
-
-| **ST Code** | **Name**                 | **Description**                                                                 |
-| :---------- | :----------------------- | :------------------------------------------------------------------------------ |
-| NB          | Narrow-Body Airliner   | Single-aisle passenger aircraft typically for short to medium range routes.     |
-| WB          | Wide-Body Airliner     | Multi-aisle passenger aircraft typically for medium to long range routes.       |
-| RJ          | Regional Jet           | Smaller jet aircraft designed for regional routes.                              |
-| BJ          | Business Jet           | Aircraft designed for business and executive transportation.                    |
-| GA          | General Aviation       | Smaller piston or turboprop aircraft for private transportation.                |
-| VT          | eVTOL Air Taxi         | Electric vertical takeoff and landing aircraft for urban air mobility.          |
-| BW          | Blended Wing Body      | Aircraft with blended wing body configuration for passenger transport.          |
-| SS          | Supersonic Transport   | Passenger aircraft designed for supersonic flight.                              |
-| HS          | Hypersonic Transport   | Passenger aircraft designed for hypersonic flight.                              |
-| AM          | Air Mobility           | Broader advanced/urban/regional air mobility concepts, potentially including fixed-wing eSTOL or novel configurations not covered by eVTOL Air Taxi or traditional categories. |
-| HY          | Hybrid-Electric        | Passenger aircraft with hybrid-electric propulsion systems.                     |
-| QP          | Quantum-Powered        | Passenger aircraft with quantum-enhanced or quantum-derived propulsion/systems. |
-| SP          | Suborbital Passenger   | Aircraft designed for suborbital passenger flights.                             |
-
-##### A.1.2 Cargo Transport (CGO) Sub-Types
-
-| **ST Code** | **Name**                 | **Description**                                                                 |
-| :---------- | :----------------------- | :------------------------------------------------------------------------------ |
-| LC          | Light Cargo            | Small cargo aircraft for light freight.                                         |
-| MC          | Medium Cargo           | Medium-sized cargo aircraft for regional freight.                               |
-| HC          | Heavy Cargo            | Large cargo aircraft for intercontinental freight.                              |
-| FC          | Freighter Conversion   | Passenger aircraft converted to cargo use.                                      |
-| QD          | Quick Delivery         | Aircraft optimized for rapid delivery services.                                 |
-| VC          | VTOL Cargo             | Vertical takeoff and landing cargo aircraft.                                    |
-| UC          | Unmanned Cargo         | Unmanned cargo delivery aircraft/drones.                                        |
-| QC          | Quantum Cargo          | Cargo aircraft with quantum-enhanced systems for logistics or performance.    |
-
-##### A.1.3 Intelligence, Surveillance, Reconnaissance (ISR) Sub-Types
-
-| **ST Code** | **Name**                    | **Description**                                                                 |
-| :---------- | :-------------------------- | :------------------------------------------------------------------------------ |
-| UA          | Unmanned Aerial System    | Unmanned aircraft systems (UAS/drones) for ISR missions, often general purpose or platform type not otherwise specified. |
-| MA          | Maritime Patrol           | Aircraft designed for maritime surveillance and reconnaissance.                 |
-| SR          | Strategic Reconnaissance  | Aircraft for long-range, high-altitude strategic reconnaissance missions.       |
-| TR          | Tactical Reconnaissance   | Aircraft for shorter-range, battlefield tactical reconnaissance missions.       |
-| EW          | Electronic Warfare        | Aircraft specialized in electronic warfare (jamming, signals interception).     |
-| SI          | SIGINT Platform           | Platforms dedicated to Signals Intelligence collection.                         |
-| IM          | Imaging Platform          | Platforms specialized in various forms of imaging intelligence (EO/IR, SAR).    |
-| MS          | Multi-Sensor Platform     | Aircraft equipped with a diverse suite of integrated sensor systems.            |
-| QI          | Quantum ISR               | ISR platforms leveraging quantum sensors for enhanced detection/analysis.       |
-
-##### A.1.4 Scientific Research (SCI) Sub-Types
-
-| **ST Code** | **Name**                    | **Description**                                                                 |
-| :---------- | :-------------------------- | :------------------------------------------------------------------------------ |
-| AT          | Atmospheric Research      | Aircraft equipped for studying atmospheric conditions and composition.          |
-| OC          | Oceanographic Research    | Aircraft equipped for oceanographic surveys and data collection.                |
-| ER          | Earth Remote Sensing      | Aircraft for Earth observation and remote sensing (non-ISR focused).            |
-| WX          | Weather Research          | Aircraft specialized in meteorological research, including storm penetration.   |
-| CR          | Climate Research          | Aircraft for long-term climate monitoring and research.                         |
-| GS          | Geophysical Survey        | Aircraft for conducting geophysical surveys (magnetic, seismic, etc.).          |
-| MP          | Multi-Purpose Research    | Versatile aircraft platforms adaptable for various scientific research missions. |
-| QS          | Quantum Sensing (Science) | Aircraft utilizing quantum sensors for fundamental scientific research.         |
-
-##### A.1.5 Utility (UTL) Sub-Types
-
-| **ST Code** | **Name**                       | **Description**                                                                 |
-| :---------- | :----------------------------- | :------------------------------------------------------------------------------ |
-| FF          | Firefighting                   | Aircraft designed or modified for aerial firefighting operations.               |
-| AG          | Agricultural                   | Aircraft designed for agricultural operations (crop dusting, seeding).          |
-| SR          | Search and Rescue (SAR)        | Aircraft equipped for search and rescue missions.                               |
-| ME          | Medical (Air Ambulance)        | Aircraft configured for medical evacuation and patient transport.               |
-| PL          | Pipeline/Powerline Patrol    | Aircraft for infrastructure inspection and monitoring.                          |
-| SU          | Survey (Non-Scientific)        | Aircraft designed for aerial surveys (mapping, photogrammetry for civil use).   |
-| CP          | Civil Protection               | Aircraft for civil protection, disaster response, and humanitarian aid.         |
-| QU          | Quantum Utility                | Utility aircraft incorporating quantum-enhanced systems for specific tasks.     |
-
-##### A.1.6 Recreational & Sport (REC) Sub-Types
-
-| **ST Code** | **Name**                    | **Description**                                                                 |
-| :---------- | :-------------------------- | :------------------------------------------------------------------------------ |
-| GL          | Glider                      | Unpowered fixed-wing aircraft.                                                  |
-| MG          | Motor Glider                | Gliders with auxiliary power systems for self-launch or sustained flight.       |
-| UL          | Ultralight                  | Very light aircraft meeting specific regulatory ultralight criteria.            |
-| AC          | Aerobatic                   | Aircraft designed and stressed for aerobatic maneuvers.                         |
-| LS          | Light Sport Aircraft (LSA)| Aircraft meeting light-sport aircraft regulatory definitions.                   |
-| HB          | Homebuilt (Experimental Amateur-Built) | Aircraft built by individuals for non-commercial, recreational use.     |
-| JW          | Jetpack/Wingpack            | Personal flight systems like jetpacks or powered wingsuits.                   |
-| QR          | Quantum Recreational        | Recreational craft employing novel quantum-derived technologies.              |
-
-##### A.1.7 Experimental (Air) (XPR) Sub-Types
-
-| **ST Code** | **Name**                    | **Description**                                                                 |
-| :---------- | :-------------------------- | :------------------------------------------------------------------------------ |
-| TD          | Technology Demonstrator     | Aircraft primarily built to demonstrate new aerospace technologies.             |
-| HP          | High Performance            | Experimental aircraft focused on achieving high speeds, altitudes, or maneuverability. |
-| NP          | Novel Propulsion            | Aircraft serving as a testbed for new or unconventional propulsion systems.     |
-| NS          | Novel Structure/Materials   | Aircraft testing new structural designs or advanced materials.                  |
-| VT          | VTOL/STOL Testbed         | Experimental aircraft for testing vertical or short takeoff/landing concepts.   |
-| HY          | Hybrid Concept              | Aircraft demonstrating a hybrid combination of different technologies.          |
-| AT          | Autonomous Testbed          | Platforms specifically for testing and developing autonomous flight systems.    |
-| QT          | Quantum Testbed (Air)       | Airborne platforms for testing and validating quantum technologies.             |
-| HH          | Hypersonic/High-Speed     | Experimental aircraft designed for hypersonic flight research.                  |
-
-##### A.1.8 Lighter Than Air (LTA) Sub-Types
-
-| **ST Code** | **Name**                    | **Description**                                                                 |
-| :---------- | :-------------------------- | :------------------------------------------------------------------------------ |
-| AB          | Airship Blimp (Non-Rigid) | Non-rigid airships where the envelope shape is maintained by internal gas pressure. |
-| AR          | Airship Rigid               | Rigid airships with an internal structural framework.                           |
-| HA          | High-Altitude Platform (HAP)| Stratospheric airships or balloons for long-endurance missions (telecom, surveillance). |
-| SB          | Scientific Balloon          | Balloons used for scientific research at various altitudes.                     |
-| HB          | Hybrid Airship              | Vehicles that derive lift from both buoyant gas and aerodynamic lift.           |
-| CB          | Cargo Airship               | Airships designed primarily for transporting heavy or oversized cargo.          |
-| QB          | Quantum Buoyancy Craft      | LTA craft utilizing quantum principles for lift or buoyancy control.          |
-
-##### A.1.9 Military Aircraft (MIL) Sub-Types
-
-| **ST Code** | **Name**                    | **Description**                                                                 |
-| :---------- | :-------------------------- | :------------------------------------------------------------------------------ |
-| FJ          | Fighter Jet                 | Combat aircraft designed primarily for air-to-air combat.                       |
-| BM          | Bomber                      | Aircraft designed to attack ground and naval targets by dropping bombs.         |
-| AT          | Attack Aircraft             | Aircraft designed for attacking ground targets, often providing close air support. |
-| TR          | Trainer                     | Military aircraft used for training pilots and aircrew.                         |
-| TP          | Transport (Military)        | Military aircraft for transporting troops, cargo, and equipment.                |
-| TK          | Tanker (Aerial Refueling)   | Aircraft designed for in-flight refueling of other aircraft.                    |
-| MH          | Military Helicopter         | Rotary-wing aircraft for various military roles (attack, transport, utility).   |
-| UC          | Unmanned Combat Aerial Vehicle (UCAV) | Unmanned aircraft designed for combat operations.                       |
-| QW          | Quantum Warfare Platform    | Military aircraft incorporating quantum technologies for advanced capabilities. |
-
-#### A.2 Space Systems (SP) Sub-Types
-
-##### A.2.1 Satellite (SAT) Sub-Types
-
-| **ST Code** | **Name**                    | **Description**                                                                 |
-| :---------- | :-------------------------- | :------------------------------------------------------------------------------ |
-| CO          | Communications              | Satellites designed primarily for telecommunications services.                  |
-| NV          | Navigation                  | Satellites providing positioning, navigation, and timing (PNT) services.        |
-| EO          | Earth Observation           | Satellites for observing Earth's surface and atmosphere for various purposes.   |
-| SC          | Scientific                  | Satellites designed for scientific research and observation of space/Earth.     |
-| CU          | CubeSat/SmallSat            | Small, standardized satellites often used for research or constellations.     |
-| WX          | Weather                     | Satellites specifically designed for meteorological observation and forecasting. |
-| RS          | Relay System                | Satellites designed to relay communications between other space or ground assets. |
-| QS          | Quantum Satellite           | Satellites employing quantum technologies (QKD, quantum sensing, computing).    |
-
-##### A.2.2 Orbital Platform/Vehicle (ORB) Sub-Types
-
-| **ST Code** | **Name**                    | **Description**                                                                 |
-| :---------- | :-------------------------- | :------------------------------------------------------------------------------ |
-| SS          | Space Station               | Crewed orbital platforms for long-duration missions and research.               |
-| SL          | Space Laboratory            | Specialized orbital modules or platforms primarily for scientific research.     |
-| CT          | Crew Transport Vehicle      | Spacecraft designed for transporting crew to and from orbital destinations.     |
-| SM          | Service Module              | Modules providing essential services (power, propulsion, life support) to other orbital systems. |
-| RM          | Research Module             | Specialized modules attached to larger platforms for dedicated research.        |
-| HM          | Habitation Module           | Modules designed for crew living quarters on long-duration missions.          |
-| SV          | Servicing Vehicle           | Spacecraft designed for servicing, repairing, or refueling other satellites/platforms. |
-| QO          | Quantum Orbital Platform    | Orbital platforms dedicated to or significantly enhanced by quantum technologies. |
-
-##### A.2.3 Launch System (LCH) Sub-Types
-
-| **ST Code** | **Name**                    | **Description**                                                                 |
-| :---------- | :-------------------------- | :------------------------------------------------------------------------------ |
-| SL          | Small Launch Vehicle        | Launch systems for small payloads (e.g., < 2,000 kg to LEO).                    |
-| ML          | Medium Launch Vehicle       | Launch systems for medium payloads (e.g., 2,000 - 20,000 kg to LEO).            |
-| HL          | Heavy Launch Vehicle        | Launch systems for heavy payloads (e.g., > 20,000 kg to LEO).                   |
-| SH          | Super Heavy Launch Vehicle  | Launch systems for very large payloads, often for lunar/interplanetary missions. |
-| RU          | Reusable Launch System      | Launch systems with reusable stages or components.                              |
-| AL          | Air-Launched System         | Systems where the launch vehicle is carried and released from an aircraft.      |
-| QL          | Quantum Launch System       | Launch systems utilizing quantum principles for propulsion or guidance.         |
-
-##### A.2.4 Probe (PRB) Sub-Types
-
-| **ST Code** | **Name**                    | **Description**                                                                 |
-| :---------- | :-------------------------- | :------------------------------------------------------------------------------ |
-| LP          | Lunar Probe                 | Spacecraft designed for lunar exploration (orbiters, landers, rovers).        |
-| MP          | Mars Probe                  | Spacecraft designed for Mars exploration.                                       |
-| VP          | Venus Probe                 | Spacecraft designed for Venus exploration.                                      |
-| IP          | Inner Planet Probe          | Probes for Mercury and exploring the inner solar system.                        |
-| GP          | Gas Giant Probe             | Probes for Jupiter, Saturn, and other gas giant planets.                        |
-| OP          | Outer Planet Probe          | Probes for Uranus, Neptune, and beyond into the outer solar system.             |
-| AP          | Asteroid/Comet Probe        | Spacecraft for studying asteroids, comets, and other small solar system bodies. |
-| SP          | Solar Probe                 | Probes designed for close observation of the Sun and solar phenomena.           |
-| QP          | Quantum Probe               | Probes utilizing quantum sensors or communication for deep space exploration.   |
-
-##### A.2.5 Experimental (Space) (XPS) Sub-Types
-
-| **ST Code** | **Name**                    | **Description**                                                                 |
-| :---------- | :-------------------------- | :------------------------------------------------------------------------------ |
-| TP          | Technology Platform (Space) | Orbital platforms primarily for demonstrating new space technologies.           |
-| NP          | Novel Propulsion (Space)    | Spacecraft testing new or unconventional in-space propulsion systems.           |
-| QT          | Quantum Testbed (Space)     | Platforms for testing and validating quantum technologies in the space environment. |
-| SM          | Space Manufacturing         | Experiments or platforms for in-space manufacturing and assembly.               |
-| SR          | Space Robotics              | Testbeds for advanced robotic systems and manipulators in space.                |
-| SS          | Space Structures            | Experiments with deployable, inflatable, or novel space structures.           |
-
-##### A.2.6 Space Defense (DEF) Sub-Types
-
-| **ST Code** | **Name**                    | **Description**                                                                 |
-| :---------- | :-------------------------- | :------------------------------------------------------------------------------ |
-| SS          | Space Surveillance System   | Systems for space domain awareness, tracking objects in orbit.                  |
-| SM          | Space-Based Missile Defense | Satellites or systems contributing to missile defense architectures.            |
-| SC          | Space Command & Control     | Space-based assets for command, control, and communications for defense.      |
-| SI          | Space Intelligence System   | Satellites for gathering intelligence from or through space.                  |
-| QD          | Quantum Defense (Space)     | Space defense systems incorporating quantum technologies for enhanced capabilities. |
-
----
+### Appendix A: Top-Level Object Category Sub-Type (ST) Codes
+*(This appendix now ONLY lists ST codes for categorizing top-level objects, as fully detailed in previous complete generation. Example:)*
+#### A.1 Air Systems (AS) Object Category ST Codes
+##### A.1.1 Passenger Transport (PAX)
+| ST Code | Name                | Description                                      |
+| :------ | :------------------ | :----------------------------------------------- |
+| NB      | Narrow-Body Airliner| Single-aisle passenger aircraft.                 |
+| WB      | Wide-Body Airliner  | Multi-aisle passenger aircraft.                  |
+| ...     | ...                 | ...                                              |
 
 ### Appendix B: ID Examples
+#### B.1 Top-Level Object ID Examples
+(Illustrative examples of `DO-A-CCC-ST-MDL-SSSSS-CC` format, as previously shown).
+#### B.2 Subsystem ID Examples
+| Parent Object Example       | Subsystem Example SSS | Subsystem Example MDLs | Subsystem Example SERs | Complete Subsystem ID Example                  | Description of Subsystem                     |
+| :-------------------------- | :-------------------- | :--------------------- | :--------------------- | :--------------------------------------------- | :------------------------------------------- |
+| `AS-M-PAX-NB-Q2A-00101`     | FCS                   | PFA                    | S0001                  | `AS-M-PAX-NB-Q2A-00101::FCS-PFA-S0001`        | Primary Flight Control Computer Alpha, S/N S0001 |
+| `AS-M-PAX-NB-Q2A-00101`     | PROP                  | QE7                    | LFT01                  | `AS-M-PAX-NB-Q2A-00101::PROP-QE7-LFT01`       | Left QuantumEngine Mk7, S/N LFT01            |
+| `SP-U-SAT-CO-Q2A-00033`     | PAYL                  | QTR                    | P003A                  | `SP-U-SAT-CO-Q2A-00033::PAYL-QTR-P003A`       | Quantum Transponder Payload Assy, S/N P003A  |
 
-This appendix provides illustrative examples of complete GAIA-QAO Object IDs, demonstrating the hierarchical structure.
+### Appendix C: Database Schema Diagrams (Illustrative)
+*(Simplified ERDs showing key tables for Top-Level Objects and new Subsystem tables and their linkages, as sketched in Part 6.6 SQL comments).*
 
-| **Complete ID**           | **Domain** | **Autonomy** | **Functional Class** | **Sub-Type** | **Model** | **Serial No.** | **Description**                                                                    |
-| :------------------------ | :--------- | :----------- | :------------------- | :----------- | :-------- | :------------- | :--------------------------------------------------------------------------------- |
-| `AS-M-PAX-BW-Q1H-00001`   | AS         | M            | PAX                  | BW           | Q1H       | 00001          | AMPEL360 BWB-Q100 Blended Wing Body passenger aircraft, manned, serial #00001      |
-| `AS-U-ISR-QI-R2D-00015`   | AS         | U            | ISR                  | QI           | R2D       | 00015          | Quantum-enhanced ISR platform, unmanned, model R2D, serial #00015                  |
-| `SP-M-ORB-SS-I4S-00003`   | SP         | M            | ORB                  | SS           | I4S       | 00003          | Space station module, manned, model I4S, serial #00003                             |
-| `SP-U-SAT-QS-K7P-00022`   | SP         | U            | SAT                  | QS           | K7P       | 00022          | Quantum satellite, unmanned, model K7P, serial #00022                              |
-| `AS-M-XPR-QT-X15-00007`   | AS         | M            | XPR                  | QT           | X15       | 00007          | Quantum testbed experimental aircraft, manned, model X15, serial #00007            |
-| `AS-U-CGO-UC-D05-00100`   | AS         | U            | CGO                  | UC           | D05       | 00100          | Unmanned cargo drone, model D05, serial #00100                                     |
-| `SP-U-PRB-LP-L2A-00002`   | SP         | U            | PRB                  | LP           | L2A       | 00002          | Lunar probe, unmanned, model L2A (e.g., Lunar Orbiter Rev 2A), serial #00002       |
-| `AS-M-PAX-NB-Q2A-00001-B1`| AS         | M            | PAX                  | NB           | Q2A       | 00001          | QuantumNarrow QN-200, serial #00001, with Block 1 Upgrade configuration (B1)     |
-
----
-
-### Appendix C: Database Schema Diagrams
-
-This appendix contains Entity-Relationship Diagrams (ERDs) illustrating the structure and relationships of the GAIA-QAO database schema. The full SQL DDL is provided in Part IV.
-
-#### C.1 Core ID Component Tables and Relationships
-
-```mermaid
-erDiagram
-    domains {
-        char(2) domain_code PK
-        varchar(100) name
-        text description
-        int altitude_boundary_meters
-    }
-
-    autonomy_levels {
-        char(1) autonomy_code PK
-        varchar(100) name
-        text description
-    }
-
-    functional_classes {
-        char(3) class_code PK
-        char(2) domain_code FK
-        varchar(100) name
-        text description
-    }
-
-    subtypes {
-        int subtype_id PK
-        char(2) subtype_code
-        char(3) class_code FK
-        varchar(100) name
-        text description
-    }
-
-    models {
-        int model_id PK
-        char(3) model_code
-        int subtype_id FK
-        char(1) autonomy_code FK
-        varchar(100) name
-        text description
-        jsonb technical_specifications
-    }
-
-    domains ||--o{ functional_classes : "has"
-    autonomy_levels ||--o{ models : "defines_autonomy_for"
-    functional_classes ||--o{ subtypes : "has"
-    subtypes ||--o{ models : "has"
-```
-
-#### C.2 Object Instances and Configurations
-
-```mermaid
-erDiagram
-    models {
-        int model_id PK
-        char(3) model_code
-        varchar(100) name
-    }
-
-    object_instances {
-        uuid instance_id PK
-        int model_id FK
-        char(5) serial_number
-        varchar(30) full_object_id
-        varchar(50) status
-        jsonb location_current
-    }
-
-    object_configurations {
-        int configuration_id PK
-        uuid instance_id FK
-        char(2) configuration_code
-        varchar(100) name
-        date effective_from
-        date effective_to
-        jsonb configuration_details
-        boolean is_active
-    }
-
-    models ||--o{ object_instances : "is_instance_of"
-    object_instances ||--o{ object_configurations : "has_configurations"
-```
-
-#### C.3 Registry Management and Integration Tables
-
-```mermaid
-erDiagram
-    registry_users {
-        int user_id PK
-        varchar(50) username
-        varchar(100) email
-        varchar(50) role
-    }
-
-    registry_audit_log {
-        int log_id PK
-        int user_id FK
-        varchar(50) action_type
-        varchar(50) table_affected
-        timestamp action_timestamp
-    }
-
-    id_allocation_requests {
-        int request_id PK
-        int requester_id FK
-        varchar(50) request_type
-        varchar(50) status
-    }
-
-    ata_chapter_mapping {
-        int mapping_id PK
-        char(3) class_code FK "Can be NULL"
-        int subtype_id FK "Can be NULL"
-        varchar(10) ata_chapter
-    }
-
-    ccsds_mapping {
-        int mapping_id PK
-        char(3) class_code FK "Can be NULL"
-        int subtype_id FK "Can be NULL"
-        varchar(50) ccsds_object_type
-    }
-
-    federation_nodes {
-        int node_id PK
-        varchar(20) node_code
-        varchar(100) node_name
-    }
-
-    registry_users ||--o{ registry_audit_log : "performs"
-    registry_users ||--o{ id_allocation_requests : "submits"
-    functional_classes }o--|| ata_chapter_mapping : "maps_to_ata (class)"
-    subtypes }o--|| ata_chapter_mapping : "maps_to_ata (subtype)"
-    functional_classes }o--|| ccsds_mapping : "maps_to_ccsds (class)"
-    subtypes }o--|| ccsds_mapping : "maps_to_ccsds (subtype)"
-```
-*(Note: FK relationships to functional_classes and subtypes in mapping tables assume these tables exist in a broader diagram context or imply they link by class_code and subtype_id respectively. Attributes shown are illustrative of key fields.)*
-
----
 ### Appendix D: Illustrative Aerospace Use Cases for GAIA-Q-UI
+*(As previously detailed: In-Flight Anomaly, Quantum Sensor Integration, IPC Generation).*
 
-This appendix provides conceptual scenarios to illustrate how GAIA-Q-UI could be used by aerospace professionals.
+### Appendix E: Detailed Survey of Aerospace Software Technologies (Prose Report)
+*(Placeholder for the full prose version of the software landscape report, if desired).*
 
-#### D.1 Use Case: In-Flight Anomaly Diagnosis and Resolution Support
+### Appendix F: Subsystem Type (SSS) Codes List (Initial Proposal)
 
-**User:** Flight Operations Engineer / Maintenance Control Center (MCC) Engineer
-**Scenario:** An aircraft in flight (e.g., `AS-M-PAX-BW-Q1H-00001`) reports an unexpected engine vibration warning via live telemetry.
+This appendix provides an initial proposed list of 3-character Subsystem Type Codes (SSS) used in Tier 2 Subsystem Identification. This list is expected to evolve.
 
-**Interaction Flow with GAIA-Q-UI:**
-
-1.  **Input:**
-    *   Engineer: "Investigate EGT spike and vibration warning on `AS-M-PAX-BW-Q1H-00001`, Engine #2."
-    *   GAIA-Q-UI ingests live telemetry. Engineer uploads cockpit warning screenshot.
-2.  **Processing by GAIA-Q-UI:**
-    *   Session `QAO-UIF-SESSION-DATE-UUID1` initiated.
-    *   NLP parses query. Telemetry/Visual processors handle data.
-3.  **AI Model Routing & Data Retrieval:**
-    *   Telemetry to `AnomalyDetectionAI`. Screenshot to `VisionGPT`.
-    *   GAIA-QAO Registry queried for aircraft config, maintenance history, SBs.
-    *   Optional MCP Agent query for similar past incidents.
-4.  **Results Aggregation & Output:**
-    *   Synthesized summary: "Live telemetry for `AS-M-PAX-BW-Q1H-00001` (Eng #2, Config `Q2`) shows EGT spike correlated with 85Hz vibration. Cockpit: 'ENG2 VIB HI'. AI: potential turbine blade issue (Conf: 85%). Registry: recent sensor recalibration. No critical SBs."
-    *   Displayed with telemetry plots and interpreted warning.
-5.  **Further Interaction:**
-    *   Engineer: "Show AMM troubleshooting for turbine blade vibration."
-    *   GAIA-Q-UI routes to LLM with AMM access.
-
-#### D.2 Use Case: Preliminary Design Review Support for a Quantum Sensor
-
-**User:** Aerospace Systems Engineer
-**Scenario:** Evaluating integration of quantum gravimeter `MDL: QSX-01A` into UAS `AS-U-ISR-UA-Q2L-00077`.
-
-**Interaction Flow with GAIA-Q-UI:**
-
-1.  **Input:**
-    *   Engineer: "Analyze integration feasibility of `MDL: QSX-01A` into `AS-U-ISR-UA-Q2L-00077`. Power, weight, interference?"
-    *   Uploads: `QSX-01A_datasheet.pdf`, `UAS_payload_bay_schematic.dxf`, `UAS_power_spec.txt`.
-2.  **Processing by GAIA-Q-UI:**
-    *   Session `QAO-UIF-SESSION-DATE-UUID2` initiated.
-    *   Parsers extract data from PDF, DXF, TXT.
-3.  **AI Model Routing & Data Retrieval:**
-    *   Extracted parameters to LLM/domain-specific model for power/weight budget.
-    *   DXF/dimensions to CAD-aware vision model for physical fit.
-    *   Query specialized AI/knowledge base for EMI with UAS avionics (specs from Registry).
-4.  **Results Aggregation & Output:**
-    *   Structured summary: "Power: OK. Weight: OK. Physical Fit: OK (see diagram). Potential Interference: QSX-01A (X GHz) may need shielding for UAS GPS (Z MHz). EMI Confidence: 0.70."
-5.  **Further Interaction:**
-    *   Engineer: "Simulate sensitivity improvement with `QSX-01A` for geological survey profile Alpha."
-    *   GAIA-Q-UI routes to `QuantumAIModels` or MCP agent for mission modeling.
-
-#### D.3 Use Case: AI-Assisted Illustrated Parts Catalog (IPC) Page Generation
-
-**User:** Technical Publications Author / Maintenance Engineer
-**Scenario:** Generating a new IPC page for a recently modified hydraulic pump assembly (`MDL: HYP-Q2B`, Config `M2` - see Part III for config code details) for aircraft `AS-M-UTL-FF-Q2A-00050` (see Part I for full ID structure).
-
-**Interaction Flow with GAIA-Q-UI:**
-
-1.  **Input:**
-    *   Author: "Generate IPC page for `MDL: HYP-Q2B`, Config `M2`. Use schematic `SCHEM-HYP-Q2B-M2.svg` and 3D model `MODEL-HYP-Q2B-M2.step`. Cross-reference parts with `AS-M-UTL-FF-Q2A-00050` registry data."
-    *   Uploads: `.svg` schematic, `.step` 3D model file.
-2.  **Processing by GAIA-Q-UI:**
-    *   `SessionManager` starts session `QAO-UIF-SESSION-DATE-IPC1`.
-    *   `InputHandler` processes query and files. `EngineeringDataParser` analyzes SVG for text/lines and STEP for part geometry.
-3.  **AI Model Routing & Data Retrieval:**
-    *   `ModelRoutingEngine`:
-        *   SVG schematic to `VisionGPT` or specialized OCR/diagram understanding model to identify part callouts and connection lines.
-        *   STEP model to a CAD-aware vision model or geometry analysis tool to segment individual parts and derive an exploded view.
-    *   `QueryOrchestrator`:
-        *   For each identified part callout/segmented geometry, queries `GAIA-QAO RegistryInterface` using potential part numbers (extracted by OCR) or visual similarity (if models support it) to find matching `MDL` or `instance_id` (if serialized component) and retrieve (from `models` or `object_instances` tables in Part IV): Official Part Name, Part Number (PN), GAIA-QAO ID, ICY code / NSN, Vendor information.
-        *   Queries for `MDL: HYP-Q2B` (Config `M2`) specific assembly instructions or notes.
-4.  **Results Aggregation & Output:**
-    *   `ResultsAggregator` compiles:
-        *   A suggested figure number and title (e.g., "Figure 1: Hydraulic Pump Assembly - HYP-Q2B-M2 - Exploded View").
-        *   A generated or proposed exploded view image derived from the STEP model, with item numbers automatically assigned.
-        *   A parts list table with columns: Item No., Part Number, GAIA-QAO ID, Description/Nomenclature, Units per Assembly (UPA), Usable On Code (UOC) derived from `AS-M-UTL-FF-Q2A-00050` applicability.
-        *   LLM-generated draft for "Notes" or "Assembly Instructions" based on schematics and registry info.
-    *   `OutputRenderer` displays this in a structured format, perhaps with an interactive viewer for the exploded view.
-    *   **Example Output Snippet (IPC Parts List for HYP-Q2B-M2):**
-        ```
-        | Item | Part Number       | GAIA-QAO ID (Sub-assy) | Nomenclature        | UPA |
-        |------|-------------------|------------------------|---------------------|-----|
-        | 1    | XYZ-1001-02       | HYP-Q2B-CAS-001        | Casing, Pump        | 1   |
-        | 2    | ABC-5005          |                        | Seal, O-Ring        | 2   |
-        | 3    | QNT-SENSOR-V2     | MDL:QSEN-02B           | Quantum Pressure Snsr| 1   |
-        ```
-    *   **Figure Description Snippet:** "Figure 1 shows an exploded isometric view of the HYP-Q2B-M2 hydraulic pump assembly. Item numbers correspond to the parts list below. Ensure all O-rings (Item 2) are correctly seated before torquing casing bolts."
-5.  **Further Interaction & Refinement:**
-    *   Author: "Re-number item 5 to 7." "Add note: 'Torque item 3 to 25 Nm'."
-    *   GAIA-Q-UI processes edits, updates draft IPC page.
-    *   Final IPC page data (XML, SGML, etc.) can be exported, InfoCode-tagged.
+| SSS Code | Name                                  | Description                                                                      | Example Areas of Application      |
+| :------- | :------------------------------------ | :------------------------------------------------------------------------------- | :-------------------------------- |
+| **General Systems** |
+| STR      | Structure                             | Airframe, fuselage sections, wings, booms, pressure hulls, primary load paths    | Fuselage Barrel, Wing Assembly    |
+| PWR      | Power Generation & Distribution       | Electrical power generation, batteries, distribution buses, APUs                 | Main Generator, Battery Unit      |
+| HYD      | Hydraulic System                      | Hydraulic pumps, actuators, reservoirs, lines, fluid power                       | Hydraulic Pump, Actuator Assy     |
+| PNU      | Pneumatic System                      | Pneumatic generation, ducting, valves, air-driven components                   | Bleed Air Valve, Pneumatic Starter|
+| ECS      | Environmental Control System          | Cabin air conditioning, pressurization, oxygen systems, thermal control (cabin)| Air Cycle Machine, Oxygen Gen.  |
+| FUL      | Fuel System                           | Fuel tanks, pumps, lines, gauging, refueling systems                           | Fuel Pump, Tank Assembly          |
+| LND      | Landing Gear System                   | Main/nose landing gear, wheels, brakes, struts, retraction/extension mechanisms| Main Landing Gear Assy          |
+| ICE      | Ice & Rain Protection                 | Anti-icing, de-icing systems for wings, engines, probes                          | Wing Anti-Ice Valve             |
+| FPT      | Fire Protection                       | Fire detection and suppression systems for engines, APU, cargo, cabin          | Engine Fire Bottle              |
+| **Avionics & Control** |
+| FCS      | Flight Control System                 | Computers, sensors, actuators for primary/secondary flight controls            | Flight Control Computer, Actuator |
+| NAV      | Navigation System                     | INS, GPS, VOR/DME, star trackers, radio altimeters, air data computers         | Inertial Reference Unit, GPS Rx |
+| COMM     | Communication System                  | VHF/HF/UHF radios, SATCOM, datalinks, intercoms                                | VHF Radio, SATCOM Antenna         |
+| AVIO     | Avionics System (General/Integrated)  | Integrated modular avionics racks, core processing units, avionics buses       | IMA Cabinet, Core Processor     |
+| AUT      | Autopilot/Auto Flight System          | Autopilot computers, flight directors, auto-throttle systems                   | Autopilot Computer              |
+| IMS      | Information Management System         | Aircraft monitoring, health management, data recording, maintenance computers    | Health Monitoring Unit, FDR     |
+| DISP     | Display System                        | Cockpit displays (PFD, ND, MFD, EICAS), display processors                       | Multi-Function Display          |
+| **Propulsion** |
+| PROP     | Propulsion System (Overall)           | Complete engine assemblies, nacelles, thrust reversers (if engine unit)        | Turbofan Engine Assy            |
+| ENG      | Engine Core                           | Core engine components (compressor, combustor, turbine) - if broken down further | High-Pressure Turbine Module    |
+| FADEC    | Full Authority Digital Engine Control | Digital engine control units                                                     | FADEC Unit                      |
+| THR      | Thruster System (Space)               | Chemical thrusters, ion engines, hall thrusters for attitude/orbit control     | Reaction Control Thruster       |
+| **Payload & Mission Systems** |
+| PAYL     | Payload System                        | Mission-specific equipment: scientific instruments, sensor packages, cargo handling | Science Instrument, ISR Sensor  |
+| ISRS     | ISR Sensor Suite                      | Integrated suite of ISR sensors (EO/IR, SAR, SIGINT)                           | Multi-INT Sensor Pod            |
+| WPN      | Weapon System                         | Weapon pylons, launchers, targeting systems, armament controls                 | Missile Launcher Unit           |
+| **Space Specific** |
+| AOCS     | Attitude & Orbit Control System       | Reaction wheels, magnetorquers, sun sensors, star trackers for spacecraft      | Reaction Wheel Assy             |
+| TCH      | Thermal Control Hardware (Space)      | Radiators, heat pipes, MLI blankets for spacecraft thermal management          | Radiator Panel                  |
+| EPS      | Electrical Power System (Space)       | Solar arrays, batteries, power distribution units for spacecraft               | Solar Array Wing                |
 
 ---
 **Document Metadata Footer (Conceptual for Master Document)**
 
 **Status**: Iterative Draft
 **Master Document InfoCode**: QAO-DOC-MASTER-001
-**Version**: 0.5.0 (Consolidated Draft with GAIA-Q-UI Spec v0.4.0 & Full Tables)
+**Version**: 0.6.0 (Reflects Two-Tier ID System & Expanded Catalogs)
 **Compliance Scope**: GAIA-QAO v1.2, AGAD (principles), COAFI (alignment), MCP Sync (planned)
-**Keywords**: `[GAIA-QAO][Object ID][Quantum Aerospace][Open Source][Documentation Framework][AGI][Registry][Database Schema][Configuration Management][GAIA-Q-UI][AI Orchestration]`
+**Keywords**: `[GAIA-QAO][Object ID][Subsystems][Software Landscape][Quantum Aerospace][Open Source][AGI][Registry][Database Schema][Configuration Management][GAIA-Q-UI][AI Orchestration]`
 
 ---
 © Amedeo Pelliccia · GAIA-QAO – *Federated Quantum Aerospace Intelligence*
 
 > "Knowledge shared is future engineered."
 
+# Aerospace Technical Documentation - Table of Contents (AToC)
 
+## Disclaimer
+This document represents a GenAI-generated proposal for the GAIA-QAO Aerospace Documentation framework. It has not been validated through implementation in aerospace systems nor by aerospace certification bodies. The concepts are based on current industry trends, open source, quantum computing, and federated aerospace engineering.
 
+## Overview
+This Aerospace Table of Contents (AToC) provides a comprehensive framework for organizing technical documentation across air and space systems. It integrates the GAIA-QAO object identification system with standardized information codes to create a unified documentation structure.
 
-**Interaction Flow with GAIA-Q-UI:**
+## Document Parts Overview
 
-1.  **Input:**
-    *   Author: "Generate IPC page for `MDL: HYP-Q2B`, Config `M2`. Use schematic `SCHEM-HYP-Q2B-M2.svg` and 3D model `MODEL-HYP-Q2B-M2.step`. Cross-reference parts with `AS-M-UTL-FF-Q2A-00050` registry data."
-    *   Uploads: `.svg` schematic, `.step` 3D model file.
-2.  **Processing by GAIA-Q-UI:**
-    *   `SessionManager` starts session `QAO-UIF-SESSION-DATE-IPC1`.
-    *   `InputHandler` processes query and files. `EngineeringDataParser` analyzes SVG for text/lines and STEP for part geometry.
-3.  **AI Model Routing & Data Retrieval:**
-    *   `ModelRoutingEngine`:
-        *   SVG schematic to `VisionGPT` or specialized OCR/diagram understanding model to identify part callouts and connection lines.
-        *   STEP model to a CAD-aware vision model or geometry analysis tool to segment individual parts and derive an exploded view.
-    *   `QueryOrchestrator`:
-        *   For each identified part callout/segmented geometry, queries `GAIA-QAO RegistryInterface` using potential part numbers (extracted by OCR) or visual similarity (if models support it) to find matching `MDL` or `instance_id` (if serialized component) and retrieve (from `models` or `object_instances` tables in Part IV): Official Part Name, Part Number (PN), GAIA-QAO ID, ICY code / NSN, Vendor information.
-        *   Queries for `MDL: HYP-Q2B` (Config `M2`) specific assembly instructions or notes.
-4.  **Results Aggregation & Output:**
-    *   `ResultsAggregator` compiles:
-        *   Suggested figure number and title.
-        *   Generated/proposed exploded view image from STEP model with item numbers.
-        *   Parts list table: Item No., Part Number, GAIA-QAO ID, Nomenclature, Units per Assembly (UPA), Usable On Code (UOC).
-        *   LLM-generated draft for "Notes" or "Assembly Instructions."
-    *   `OutputRenderer` displays this in a structured format, with interactive viewer for exploded view.
-    *   **Example Output Snippet (IPC Parts List for HYP-Q2B-M2):**
-        ```
-        | Item | Part Number       | GAIA-QAO ID (Sub-assy) | Nomenclature        | UPA |
-        |------|-------------------|------------------------|---------------------|-----|
-        | 1    | XYZ-1001-02       | HYP-Q2B-CAS-001        | Casing, Pump        | 1   |
-        | 2    | ABC-5005          |                        | Seal, O-Ring        | 2   |
-        | 3    | QNT-SENSOR-V2     | MDL:QSEN-02B           | Quantum Pressure Snsr| 1   |
-        ```
-    *   **Figure Description Snippet:** "Figure 1 shows an exploded isometric view of the HYP-Q2B-M2 hydraulic pump assembly. Item numbers correspond to the parts list below. Ensure all O-rings (Item 2) are correctly seated before torquing casing bolts."
-5.  **Further Interaction & Refinement:**
-    *   Author: "Re-number item 5 to 7." "Add note: 'Torque item 3 to 25 Nm'."
-    *   GAIA-Q-UI processes edits, updates draft IPC page.
-    *   Final IPC page data (XML, SGML, etc.) can be exported, InfoCode-tagged.
+| Part | Title | Description |
+|------|-------|-------------|
+| Part 0 | Framework Overview | Vision, principles, documentation architecture, governance model |
+| Part I | Air Systems (ATA 00-99) | Comprehensive index of aircraft systems based on ATA chapter structure |
+| Part II | Space Systems (SS 00-99) | Comprehensive index of spacecraft systems and subsystems |
+| Part III | Common Nomenclature (CN) | Standardized terminology across aerospace domains |
+| Part IV | Governance & Best Practices (GB) | Documentation standards, review processes, and compliance |
+| Part V | Project Management (PM) | Project lifecycle, milestones, and management methodologies |
+| Part VI | Reference Standards (RS) | External standards, regulations, and certification requirements |
 
+## INFOCODE-INDEX
+
+The INFOCODE-INDEX provides a standardized way to classify aerospace technical documentation:
+
+### INFOCODE Structure: XXX-YYY-ZZZ
+
+- **XXX**: Document Type
+  - **FRM**: Framework Document
+  - **REQ**: Requirements Document
+  - **SPC**: Specification
+  - **DSN**: Design Document
+  - **TST**: Test Document
+  - **RPT**: Report
+  - **MNL**: Manual
+  - **TRN**: Training Material
+  - **STD**: Standard
+
+- **YYY**: Technical Domain
+  - **SYS**: Systems Engineering
+  - **STR**: Structures
+  - **PRO**: Propulsion
+  - **AVS**: Avionics
+  - **PWR**: Power Systems
+  - **THR**: Thermal
+  - **COM**: Communications
+  - **GNC**: Guidance, Navigation & Control
+  - **ENV**: Environmental Control
+  - **HUM**: Human Factors
+  - **SAF**: Safety
+  - **CYB**: Cybersecurity
+  - **QNT**: Quantum Technologies
+  - **SFT**: Software
+  - **INT**: Integration
+
+- **ZZZ**: Document Purpose
+  - **CON**: Concept
+  - **ARC**: Architecture
+  - **FUN**: Functional Description
+  - **ICD**: Interface Control
+  - **VER**: Verification
+  - **VAL**: Validation
+  - **CER**: Certification
+  - **OPS**: Operations
+  - **MNT**: Maintenance
+  - **TRB**: Troubleshooting
+  - **MOD**: Modification
+
+## GAIA-CO-ASD-LIB Standard
+
+### File Formats
+- Technical documentation: Markdown (.md) with embedded diagrams
+- Engineering drawings: SVG, PDF
+- 3D models: STEP, IGES
+- Simulation data: HDF5, CSV
+- Software: Language-appropriate formats with documentation
+
+### Naming Convention
+`[INFOCODE]-[OBJECT_ID]-[VERSION]-[STATUS].[EXT]`
+
+Example: `SPC-SYS-ICD-AS-M-PAX-NB-Q2A-00101-v1.0-DRAFT.md`
+
+### Metadata Requirements
+Each document must include:
+- Title
+- Author/Organization
+- Creation Date
+- Version
+- Status (DRAFT, REVIEW, APPROVED, DEPRECATED)
+- Security Classification
+- Related Documents
+- Keywords
+
+## Part I: Air Systems (ATA 00-99)
+
+### ATA 00: General
+- 00-00: General
+- 00-10: Standard Practices - Airframe
+- 00-20: Standard Practices - Powerplant
+- 00-30: Standard Practices - Structures
+- 00-40: Standard Practices - Systems
+- 00-50: Standard Practices - Avionics
+- 00-60: Standard Practices - Propeller/Rotor
+- 00-70: Standard Practices - Engine
+- 00-80: Standard Practices - Quantum Systems
+
+### ATA 20: Standard Practices - Airframe
+- 20-00: General
+- 20-10: Standard Practices
+- 20-20: Assembly and Disassembly
+- 20-30: Non-Destructive Inspection
+- 20-40: Jacking, Leveling, and Weighing
+- 20-50: Cleaning and Painting
+- 20-60: Quantum Material Treatments
+- 20-70: Fasteners
+
+### ATA 21: Air Conditioning
+- 21-00: General
+- 21-10: Compression
+- 21-20: Distribution
+- 21-30: Pressurization Control
+- 21-40: Heating
+- 21-50: Cooling
+- 21-60: Temperature Control
+- 21-70: Moisture/Air Contamination Control
+
+### ATA 22: Auto Flight
+- 22-00: General
+- 22-10: Autopilot
+- 22-20: Speed-Attitude Correction
+- 22-30: Auto Throttle
+- 22-40: System Monitor
+- 22-50: Quantum Navigation Augmentation
+- 22-60: Quantum Computing Units
+- 22-70: Quantum Sensing Integration
+
+### ATA 23: Communications
+- 23-00: General
+- 23-10: Speech Communications
+- 23-20: Data Transmission and Automatic Calling
+- 23-30: Passenger Address and Entertainment
+- 23-40: Interphone
+- 23-50: Audio Integrating
+- 23-60: Static Discharging
+- 23-70: Audio and Video Monitoring
+- 23-80: Quantum Encryption Systems
+- 23-90: Quantum Communication Links
+
+### ATA 24: Electrical Power
+- 24-00: General
+- 24-10: Generator Drive
+- 24-20: AC Generation
+- 24-30: DC Generation
+- 24-40: External Power
+- 24-50: AC Power Distribution
+- 24-60: DC Power Distribution
+- 24-70: Quantum Power Generation
+- 24-80: Quantum Energy Storage
+
+### ATA 25: Equipment/Furnishings
+- 25-00: General
+- 25-10: Flight Compartment
+- 25-20: Passenger Compartment
+- 25-30: Buffet/Galley
+- 25-40: Lavatories
+- 25-50: Cargo Compartments
+- 25-60: Emergency Equipment
+- 25-70: Quantum Environmental Monitoring
+
+### ATA 26: Fire Protection
+- 26-00: General
+- 26-10: Detection
+- 26-20: Extinguishing
+- 26-30: Explosion Suppression
+- 26-40: Quantum Fire Detection Systems
+- 26-50: Quantum Suppression Systems
+
+### ATA 27: Flight Controls
+- 27-00: General
+- 27-10: Aileron and Tab
+- 27-20: Rudder and Tab
+- 27-30: Elevator and Tab
+- 27-40: Horizontal Stabilizer
+- 27-50: Flaps
+- 27-60: Spoiler, Drag Devices, and Variable Aerodynamic Fairings
+- 27-70: Gust Lock and Damper
+- 27-80: Lift Augmenting
+- 27-90: Quantum-Enhanced Control Systems
+
+### ATA 28: Fuel
+- 28-00: General
+- 28-10: Storage
+- 28-20: Distribution
+- 28-30: Dump
+- 28-40: Indicating
+- 28-50: Quantum Fuel Optimization
+- 28-60: Alternative Fuel Systems
+
+### ATA 29: Hydraulic Power
+- 29-00: General
+- 29-10: Main
+- 29-20: Auxiliary
+- 29-30: Indicating
+- 29-40: Quantum Hydraulic Systems
+
+### ATA 30: Ice and Rain Protection
+- 30-00: General
+- 30-10: Airfoil
+- 30-20: Air Intakes
+- 30-30: Pitot and Static
+- 30-40: Windows, Windshields, and Doors
+- 30-50: Antennas and Radomes
+- 30-60: Propellers/Rotors
+- 30-70: Water Lines
+- 30-80: Detection
+- 30-90: Quantum De-icing Systems
+
+### ATA 31: Instruments
+- 31-00: General
+- 31-10: Instrument and Control Panels
+- 31-20: Independent Instruments
+- 31-30: Recorders
+- 31-40: Central Computers
+- 31-50: Central Warning Systems
+- 31-60: Central Display Systems
+- 31-70: Automatic Data Reporting Systems
+- 31-80: Quantum Instrumentation
+
+### ATA 32: Landing Gear
+- 32-00: General
+- 32-10: Main Gear and Doors
+- 32-20: Nose Gear and Doors
+- 32-30: Extension and Retraction
+- 32-40: Wheels and Brakes
+- 32-50: Steering
+- 32-60: Position and Warning
+- 32-70: Supplementary Gear
+- 32-80: Drag Devices
+- 32-90: Quantum Landing Systems
+
+### ATA 33: Lights
+- 33-00: General
+- 33-10: Flight Compartment
+- 33-20: Passenger Compartments
+- 33-30: Cargo and Service Compartments
+- 33-40: Exterior
+- 33-50: Emergency Lighting
+- 33-60: Quantum Lighting Systems
+
+### ATA 34: Navigation
+- 34-00: General
+- 34-10: Flight Environment Data
+- 34-20: Attitude and Direction
+- 34-30: Landing and Taxiing Aids
+- 34-40: Independent Position Determining
+- 34-50: Dependent Position Determining
+- 34-60: Flight Management Computing
+- 34-70: Quantum Navigation Systems
+- 34-80: Quantum Positioning Systems
+
+### ATA 35: Oxygen
+- 35-00: General
+- 35-10: Crew
+- 35-20: Passenger
+- 35-30: Portable
+- 35-40: Quantum Oxygen Generation
+
+### ATA 36: Pneumatic
+- 36-00: General
+- 36-10: Distribution
+- 36-20: Indicating
+- 36-30: Quantum Pneumatic Systems
+
+### ATA 38: Water/Waste
+- 38-00: General
+- 38-10: Potable
+- 38-20: Wash
+- 38-30: Waste Disposal
+- 38-40: Quantum Water Purification
+
+### ATA 45: Central Maintenance System (CMS)
+- 45-00: General
+- 45-10: Central Maintenance Computer
+- 45-20: Data Loading System
+- 45-30: Central Fault Display System
+- 45-40: Quantum Diagnostic Systems
+- 45-50: Quantum Predictive Maintenance
+
+### ATA 46: Information Systems
+- 46-00: General
+- 46-10: Airplane General Information Systems
+- 46-20: Network Systems
+- 46-30: Information Server Systems
+- 46-40: Quantum Computing Systems
+- 46-50: Quantum Information Processing
+- 46-60: Quantum Encryption
+
+### ATA 47: Nitrogen Generation System
+- 47-00: General
+- 47-10: Generation/Control
+- 47-20: Distribution
+- 47-30: Indicating
+- 47-40: Quantum Nitrogen Systems
+
+### ATA 49: Airborne Auxiliary Power
+- 49-00: General
+- 49-10: Power Plant
+- 49-20: Engine
+- 49-30: Engine Fuel and Control
+- 49-40: Ignition/Starting
+- 49-50: Air
+- 49-60: Engine Controls
+- 49-70: Indicating
+- 49-80: Exhaust
+- 49-90: Quantum Auxiliary Power
+
+### ATA 52: Doors
+- 52-00: General
+- 52-10: Passenger/Crew
+- 52-20: Emergency Exit
+- 52-30: Cargo
+- 52-40: Service
+- 52-50: Fixed Interior
+- 52-60: Entrance Stairs
+- 52-70: Door Warning
+- 52-80: Landing Gear
+- 52-90: Quantum Door Systems
+
+### ATA 53: Fuselage
+- 53-00: General
+- 53-10: Main Frame
+- 53-20: Auxiliary Structure
+- 53-30: Plates/Skin
+- 53-40: Attach Fittings
+- 53-50: Aerodynamic Fairings
+- 53-60: Quantum Structural Monitoring
+
+### ATA 54: Nacelles/Pylons
+- 54-00: General
+- 54-10: Nacelle Structure
+- 54-20: Pylon Structure
+- 54-30: Attach Fittings
+- 54-40: Quantum Nacelle Systems
+
+### ATA 55: Stabilizers
+- 55-00: General
+- 55-10: Horizontal Stabilizer
+- 55-20: Elevator
+- 55-30: Vertical Stabilizer
+- 55-40: Rudder
+- 55-50: Quantum Stabilizer Systems
+
+### ATA 56: Windows
+- 56-00: General
+- 56-10: Flight Compartment
+- 56-20: Passenger Compartment
+- 56-30: Door
+- 56-40: Inspection and Observation
+- 56-50: Quantum Window Systems
+
+### ATA 57: Wings
+- 57-00: General
+- 57-10: Center Wing
+- 57-20: Outer Wing
+- 57-30: Wing Tip
+- 57-40: Leading Edge and Leading Edge Devices
+- 57-50: Trailing Edge and Trailing Edge Devices
+- 57-60: Ailerons and Elevons
+- 57-70: Spoilers
+- 57-80: Wing Fold
+- 57-90: Quantum Wing Systems
+
+### ATA 61: Propellers/Propulsors
+- 61-00: General
+- 61-10: Propeller Assembly
+- 61-20: Controlling
+- 61-30: Braking
+- 61-40: Indicating
+- 61-50: Propulsor Duct
+- 61-60: Quantum Propeller Systems
+
+### ATA 71: Power Plant
+- 71-00: General
+- 71-10: Cowling
+- 71-20: Mounts
+- 71-30: Fire Seals
+- 71-40: Attach Fittings
+- 71-50: Electrical Harness
+- 71-60: Air Intakes
+- 71-70: Engine Drains
+- 71-80: Quantum Power Plant Systems
+
+### ATA 72: Engine
+- 72-00: General
+- 72-10: Reduction Gear and Shaft
+- 72-20: Air Inlet
+- 72-30: Compressor
+- 72-40: Combustion
+- 72-50: Turbine
+- 72-60: Accessory Drives
+- 72-70: Bypass
+- 72-80: Quantum Engine Systems
+
+### ATA 73: Engine Fuel and Control
+- 73-00: General
+- 73-10: Distribution
+- 73-20: Controlling
+- 73-30: Indicating
+- 73-40: Quantum Fuel Control Systems
+
+### ATA 74: Ignition
+- 74-00: General
+- 74-10: Electrical Power Supply
+- 74-20: Distribution
+- 74-30: Switching
+- 74-40: Quantum Ignition Systems
+
+### ATA 75: Air
+- 75-00: General
+- 75-10: Engine Anti-Icing
+- 75-20: Cooling
+- 75-30: Compressor Control
+- 75-40: Indicating
+- 75-50: Quantum Air Systems
+
+### ATA 76: Engine Controls
+- 76-00: General
+- 76-10: Power Control
+- 76-20: Emergency Shutdown
+- 76-30: Quantum Engine Control Systems
+
+### ATA 77: Engine Indicating
+- 77-00: General
+- 77-10: Power
+- 77-20: Temperature
+- 77-30: Analyzers
+- 77-40: Integrated Engine Instrument Systems
+- 77-50: Quantum Engine Monitoring
+
+### ATA 78: Exhaust
+- 78-00: General
+- 78-10: Collector/Nozzle
+- 78-20: Noise Suppressor
+- 78-30: Thrust Reverser
+- 78-40: Supplementary Air
+- 78-50: Quantum Exhaust Systems
+
+### ATA 79: Oil
+- 79-00: General
+- 79-10: Storage
+- 79-20: Distribution
+- 79-30: Indicating
+- 79-40: Quantum Oil Systems
+
+### ATA 80: Starting
+- 80-00: General
+- 80-10: Cranking
+- 80-20: Quantum Starting Systems
+
+### ATA 83: Accessory Gearboxes
+- 83-00: General
+- 83-10: Drive Shaft
+- 83-20: Quantum Gearbox Systems
+
+### ATA 85: Reciprocating Engine
+- 85-00: General
+- 85-10: Front Section
+- 85-20: Power Section
+- 85-30: Cylinder Section
+- 85-40: Quantum Reciprocating Systems
+
+## Part II: Space Systems (SS 00-99)
+
+### SS 01: Propulsion Systems
+- 01-1: Chemical Space Propulsion
+  - 01-1-1: Integrated Systems and Ancillary Technologies
+  - 01-1-2: Liquid Storable Propulsion
+  - 01-1-3: Liquid Cryogenic Propulsion
+  - 01-1-4: Solid Propulsion
+  - 01-1-5: Hybrid Propulsion
+  - 01-1-6: Gel Propulsion
+  - 01-1-7: Cold Gas Propulsion
+  - 01-1-8: Warm Gas Propulsion
+  - 01-1-9: Advanced Chemical Propulsion
+
+- 01-2: Electric Space Propulsion
+  - 01-2-1: Integrated Systems and Ancillary Technologies
+  - 01-2-2: Electrostatic Propulsion
+  - 01-2-3: Electromagnetic Propulsion
+  - 01-2-4: Electrothermal Propulsion
+
+- 01-4: Advanced Propulsion Technologies
+  - 01-4-1: Solar Sail Propulsion
+  - 01-4-3: Nuclear Thermal Propulsion
+  - 01-4-4: Solar Thermal Propulsion
+  - 01-4-5: Nuclear Electric Propulsion
+  - 01-4-7: Drag Sail Deorbit Systems
+
+### SS 02: Flight Computing and Avionics
+- 02-1: Flight Computing and Avionics Components
+  - 02-1-1: Radiation-Hardened Electronics
+  - 02-1-2: Electronic Packaging and Thermal Control
+  - 02-1-3: High-Performance Computing
+  - 02-1-4: Memory Technologies
+  - 02-1-5: Field-Programmable Gate Arrays
+  - 02-1-6: Application-Specific Integrated Circuits
+  - 02-1-7: Point-of-Load Power Converters
+  - 02-1-8: Wireless Avionics Technologies
+
+- 02-2: Flight Computing and Avionics Systems
+  - 02-2-1: Command and Data Handling Systems
+  - 02-2-4: Low-Power Computing
+  - 02-2-5: Spacecraft Data Bus Technologies
+  - 02-2-6: Data Acquisition Systems
+  - 02-2-7: Onboard Data Processing
+  - 02-2-8: Commercial Off-The-Shelf Electronics
+  - 02-2-9: Hardware Security Technologies
+
+### SS 03: Aerospace Power and Energy Storage
+- 03-1: Power Generation
+  - 03-1-1: Photovoltaic Power Generation
+  - 03-1-2: Radioisotope Heat Sources
+  - 03-1-3: Static Power Conversion
+  - 03-1-4: Dynamic Power Conversion
+  - 03-1-5: Mechanical Power Generation
+  - 03-1-6: Alternative Power Generation
+
+- 03-2: Energy Storage
+  - 03-2-1: Batteries
+  - 03-2-2: Fuel Cells
+  - 03-2-3: Alternative Energy Storage
+
+- 03-3: Power Management and Distribution
+  - 03-3-1: Power System Management
+  - 03-3-2: Power Distribution and Transmission
+  - 03-3-3: Power Regulation and Control
+  - 03-3-4: Power Electronics
+
+### SS 04: Robotic Systems (for Spacecraft Operations)
+- 04-3: Manipulation
+  - 04-3-1: Robotic Manipulators and End-Effectors
+  - 04-3-2: Grappling Mechanisms
+  - 04-3-3: Contact Dynamics Modeling
+  - 04-3-4: Sample Acquisition and Handling
+
+- 04-5: Autonomous Rendezvous and Docking
+  - 04-5-1: Relative Navigation Sensors
+  - 04-5-2: Rendezvous and Proximity Operations Algorithms
+  - 04-5-3: Integrated AR&D/RPOC Systems
+  - 04-5-4: Capture Sensors
+  - 04-5-5: Docking and Capture Mechanisms
+  - 04-5-6: Robotic Berthing
+  - 04-5-7: AR&D/RPOC Modeling and Simulation
+
+### SS 05: Communications, Navigation, and Information Systems
+- 05-1: Optical Communications
+  - 05-1-1: Optical Detectors
+  - 05-1-3: Space Optical Transmitters
+  - 05-1-4: Acquisition and Tracking
+  - 05-1-5: Atmospheric Mitigation
+  - 05-1-7: Optical Communication Modulation and Coding
+
+- 05-2: Radio Frequency Communications
+  - 05-2-1: Spectrum Efficient Technologies
+  - 05-2-2: Power Efficient Technologies
+  - 05-2-4: Flight and Ground Communications Systems
+  - 05-2-6: Antennas
+  - 05-2-7: Advanced RF Technologies
+
+- 05-3: Internetworking
+  - 05-3-1: Delay/Disruption Tolerant Networking
+  - 05-3-2: Adaptive Network Topology
+  - 05-3-3: Information Assurance
+  - 05-3-4: Network Management
+
+- 05-4: Position, Navigation, and Timing
+  - 05-4-1: Timekeeping and Time Distribution
+  - 05-4-2: Onboard Autonomous Navigation and Maneuvering
+
+- 05-5: Revolutionary Communications Technologies
+  - 05-5-2: Quantum Communications
+  - 05-5-3: Hybrid RF/Optical Technologies
+
+### SS 06: Human Health, Life Support, and Habitation Systems
+- 06-1: Environmental Control and Life Support Systems
+  - 06-1-1: Air Revitalization
+  - 06-1-2: Water Recovery and Management
+  - 06-1-3: Waste Management
+  - 06-1-4: Habitation Systems
+  - 06-1-5: ECLSS Modeling and Simulation
+
+- 06-2: Extravehicular Activity Systems
+  - 06-2-1: Pressure Garment
+  - 06-2-2: Portable Life Support System
+  - 06-2-3: EVA Information Systems
+
+- 06-4: Environmental Monitoring, Safety, and Emergency Response
+  - 06-4-1: Environmental Monitoring
+  - 06-4-2: Fire Detection and Suppression
+  - 06-4-3: Protective Equipment
+
+- 06-5: Radiation
+  - 06-5-3: Radiation Shielding
+  - 06-5-5: Radiation Dosimetry
+
+- 06-6: Human Factors and Performance
+  - 06-6-1: Human-System Integration
+  - 06-6-3: Behavioral Health and Performance
+
+### SS 07: Mission Infrastructure (Spacecraft-based elements)
+- 07-2: Sustainability and Supportability
+  - 07-2-1: Logistics Management
+  - 07-2-2: Maintenance Systems
+  - 07-2-3: Repair Systems
+  - 07-2-4: Assembly Systems
+  - 07-2-5: Dust Prevention and Mitigation
+
+- 07-3: Mission Operations and Safety
+  - 07-3-5: Planetary Protection
+
+### SS 08: Sensors and Instruments (Bus & Payload Interface)
+- 08-1: Remote Sensing Instruments/Sensors
+  - 08-1-1: Detectors and Focal Planes
+  - 08-1-2: Electronics
+
+- 08-3: In-Situ Instruments/Sensors
+  - 08-3-1: Particles and Fields
+  - 08-3-4: Physical Properties
+  - 08-3-6: Extreme Environments
+
+- 08-X: Payload Interface Systems
+  - 08-X-1: Payload Power Systems
+  - 08-X-2: Payload Data Systems
+  - 08-X-3: Payload Pointing Systems
+  - 08-X-4: Payload Thermal Systems
+
+### SS 09: Entry, Descent, and Landing (EDL) Systems
+- 09-1: Aeroassist and Atmospheric Entry
+  - 09-1-1: Thermal Protection Systems
+  - 09-1-2: Aerodynamic Decelerators
+  - 09-1-3: Small Body/Orbital Debris Entry Systems
+  - 09-1-4: Aerothermodynamics and Entry Modeling
+
+- 09-2: Descent
+  - 09-2-1: Parachutes
+  - 09-2-2: Supersonic Retropropulsion
+  - 09-2-3: Descent Modeling
+
+- 09-3: Landing
+  - 09-3-1: Touchdown Systems
+  - 09-3-2: Propulsion Systems for Landing
+  - 09-3-3: Landing Modeling
+
+- 09-4: Vehicle Systems
+  - 09-4-2: Separation Systems
+  - 09-4-6: Instrumentation and Health Monitoring
+
+- 09-5: EDL Guidance, Navigation, and Control
+  - 09-5-1: Guidance Algorithms
+  - 09-5-2: Navigation Systems
+  - 09-5-3: Control Systems
+  - 09-5-4: Hazard Detection and Avoidance
+  - 09-5-5: Terrain Relative Navigation
+  - 09-5-6: EDL Modeling and Simulation
+
+### SS 10: Autonomous Systems (Onboard Capabilities)
+- 10-1: Situational and Self Awareness
+  - 10-1-1: Sensing and Perception
+  - 10-1-2: State Estimation and Monitoring
+  - 10-1-3: Knowledge and Model Building
+  - 10-1-4: Hazard Assessment
+  - 10-1-5: Event and Trend Identification
+  - 10-1-6: Anomaly Detection
+
+- 10-2: Reasoning and Acting
+  - 10-2-1: Mission Planning and Execution
+  - 10-2-2: Activity and Resource Planning and Scheduling
+  - 10-2-3: Motion Planning
+  - 10-2-4: Execution and Control
+  - 10-2-5: Fault Diagnosis and Prognosis
+  - 10-2-6: Fault Response
+  - 10-2-7: Learning and Adapting
+
+- 10-3: Collaboration and Interaction
+  - 10-3-5: Human-System Integration
+
+- 10-4: Engineering and Integrity
+  - 10-4-1: Verification and Validation
+
+### SS 11: Software, Modeling, and Simulation (Flight SW)
+- 11-1: Flight Software
+  - 11-1-1: Flight Software Development Tools and Technologies
+  - 11-1-2: Flight Software Verification and Validation
+  - 11-1-5: Flight Software Architecture
+  - 11-1-6: Real-Time Software
+  - 11-1-7: Software Standards and Reuse
+  - 11-1-9: Flight Software Cybersecurity
+
+- 11-2: Modeling
+  - 11-2-1: Software Modeling
+  - 11-2-2: Integrated Hardware and Software Model
+
+- 11-3: Simulation
+  - 11-3-7: Onboard Simulation
+
+### SS 12: Materials, Structures, and Mechanical Systems
+- 12-1: Materials
+  - 12-1-1: Lightweight Structural Materials
+  - 12-1-3: Flexible Material Systems
+  - 12-1-4: Materials for Extreme Environments
+  - 12-1-5: Coatings
+  - 12-1-8: Smart Materials
+
+- 12-2: Structures
+  - 12-2-1: Lightweight Concepts
+  - 12-2-2: Design and Analysis Tools
+  - 12-2-5: Multifunctional Structures
+
+- 12-3: Mechanisms
+  - 12-3-1: Deployables, Docking, and Interfaces
+
+### SS 14: Thermal Management Systems
+- 14-1: Cryogenic Systems
+- 14-2: Thermal Control Systems
+- 14-3: Thermal Protection Systems
+
+### SS 17: Guidance, Navigation, and Control (GN&C)
+- 17-1: Guidance
+- 17-2: Navigation
+- 17-3: Control
+- 17-4: Rendezvous
+- 17-5: Attitude Determination and Control
+
+## Part III: Common Nomenclature (CN)
+
+### CN 01: General Terminology
+- 01-10: Aerospace Engineering Fundamentals
+- 01-20: Systems Engineering Terms
+- 01-30: Project Management Terminology
+- 01-40: Quantum Technology Terminology
+
+### CN 02: Air Systems Terminology
+- 02-10: Aircraft Structures
+- 02-20: Aircraft Propulsion
+- 02-30: Aircraft Systems
+- 02-40: Aircraft Operations
+
+### CN 03: Space Systems Terminology
+- 03-10: Spacecraft Structures
+- 03-20: Spacecraft Propulsion
+- 03-30: Spacecraft Systems
+- 03-40: Space Operations
+
+### CN 04: Quantum Systems Terminology
+- 04-10: Quantum Computing
+- 04-20: Quantum Sensing
+- 04-30: Quantum Communications
+- 04-40: Quantum Materials
+
+## Part IV: Governance & Best Practices (GB)
+
+### GB 01: Documentation Standards
+- 01-10: Document Structure and Format
+- 01-20: Revision Control
+- 01-30: Review Processes
+- 01-40: Approval Workflows
+
+### GB 02: Quality Assurance
+- 02-10: Quality Management System
+- 02-20: Verification Procedures
+- 02-30: Validation Methods
+- 02-40: Compliance Tracking
+
+### GB 03: Configuration Management
+- 03-10: Configuration Identification
+- 03-20: Change Control
+- 03-30: Configuration Status Accounting
+- 03-40: Configuration Audits
+
+### GB 04: Knowledge Management
+- 04-10: Knowledge Capture
+- 04-20: Lessons Learned
+- 04-30: Technical Data Management
+- 04-40: Intellectual Property
+
+## Part V: Project Management (PM)
+
+### PM 01: Project Lifecycle
+- 01-10: Concept Development
+- 01-20: Preliminary Design
+- 01-30: Detailed Design
+- 01-40: Implementation
+- 01-50: Testing and Verification
+- 01-60: Operations and Maintenance
+- 01-70: Decommissioning
+
+### PM 02: Project Planning
+- 02-10: Requirements Management
+- 02-20: Work Breakdown Structure
+- 02-30: Schedule Management
+- 02-40: Resource Planning
+- 02-50: Risk Management
+
+### PM 03: Project Execution
+- 03-10: Progress Monitoring
+- 03-20: Performance Measurement
+- 03-30: Issue Management
+- 03-40: Change Management
+
+### PM 04: Project Closure
+- 04-10: Acceptance Criteria
+- 04-20: Delivery and Handover
+- 04-30: Lessons Learned
+- 04-40: Project Archiving
+
+## Part VI: Reference Standards (RS)
+
+### RS 01: International Standards
+- 01-10: ISO Standards
+- 01-20: IEC Standards
+- 01-30: IEEE Standards
+- 01-40: ASTM Standards
+
+### RS 02: Aerospace Standards
+- 02-10: SAE Aerospace Standards
+- 02-20: RTCA Standards
+- 02-30: EUROCAE Standards
+- 02-40: ECSS Standards
+
+### RS 03: Military Standards
+- 03-10: MIL-STD Standards
+- 03-20: Defense Standards
+- 03-30: NATO Standards
+- 03-40: Security Standards
+
+### RS 04: Certification Requirements
+- 04-10: FAA Requirements
+- 04-20: EASA Requirements
+- 04-30: Space Agency Requirements
+- 04-40: Commercial Space Requirements
+
+### RS 05: Quantum Standards
+- 05-10: Quantum Computing Standards
+- 05-20: Quantum Communications Standards
+- 05-30: Quantum Security Standards
+- 05-40: Quantum Sensing Standards
+
+# 0.8 Standardized Documentation Structure (AGI for Systems)
+
+# Appendix G: Documentation Templates
+
+This appendix provides standardized templates for common document types within the GAIA-QAO framework. These templates ensure consistency and completeness across all documentation.
+
+## G.1 System Specification Template
+
+\`\`\`markdown
 ---
-**Document Metadata Footer (Conceptual for Master Document)**
-
-**Status**: Iterative Draft
-**Master Document InfoCode**: QAO-DOC-MASTER-001
-**Version**: 0.4.0 (Consolidated Draft with GAIA-Q-UI Spec v0.4.0)
-**Compliance Scope**: GAIA-QAO v1.2, AGAD (principles), COAFI (alignment), MCP Sync (planned)
-**Keywords**: `[GAIA-QAO][Object ID][Quantum Aerospace][Open Source][Documentation Framework][AGI][Registry][Database Schema][Configuration Management][GAIA-Q-UI][AI Orchestration]`
-
+title: "System Specification for [System Name]"
+infocode: "SPC-SYS-ARC"
+object_id: "[Object ID if applicable]"
+version: "1.0.0"
+date: "YYYY-MM-DD"
+status: "DRAFT"
+authors: ["Author Name"]
+security_classification: "INTERNAL"
+keywords: ["specification", "system", "requirements"]
 ---
-© Amedeo Pelliccia · GAIA-QAO – *Federated Quantum Aerospace Intelligence*
 
-> "Knowledge shared is future engineered."
+# System Specification: [System Name]
+
+## 1. Introduction
+
+### 1.1 Purpose
+[Brief description of the document's purpose]
+
+### 1.2 Scope
+[Define what is included and excluded]
+
+### 1.3 System Overview
+[High-level description of the system]
+
+### 1.4 Document Conventions
+[Explain any conventions used in the document]
+
+### 1.5 References
+[List related documents]
+
+## 2. System Description
+
+### 2.1 System Context
+[Describe how the system fits into the larger environment]
+
+### 2.2 System Functions
+[List and describe the main functions]
+
+### 2.3 User Characteristics
+[Describe the intended users]
+
+### 2.4 Constraints
+[List technical, regulatory, and other constraints]
+
+### 2.5 Assumptions and Dependencies
+[Document assumptions and dependencies]
+
+## 3. System Requirements
+
+### 3.1 Functional Requirements
+[List and describe functional requirements]
+
+### 3.2 Performance Requirements
+[Specify performance requirements]
+
+### 3.3 Interface Requirements
+[Describe external interfaces]
+
+### 3.4 Operational Requirements
+[Specify operational requirements]
+
+### 3.5 Resource Requirements
+[Describe resource needs]
+
+### 3.6 Security Requirements
+[Specify security requirements]
+
+### 3.7 Quality Attributes
+[Describe quality attributes]
+
+## 4. System Architecture
+
+### 4.1 Architectural Overview
+[Provide a high-level view of the architecture]
+
+### 4.2 Subsystem Decomposition
+[Break down the system into subsystems]
+
+### 4.3 Hardware Architecture
+[Describe the hardware architecture]
+
+### 4.4 Software Architecture
+[Describe the software architecture]
+
+### 4.5 Data Architecture
+[Describe the data architecture]
+
+### 4.6 Quantum Components
+[Describe any quantum-enhanced components]
+
+## 5. System Interfaces
+
+### 5.1 External Interfaces
+[Describe interfaces to external systems]
+
+### 5.2 Internal Interfaces
+[Describe interfaces between subsystems]
+
+### 5.3 User Interfaces
+[Describe user interfaces]
+
+## 6. System Behavior
+
+### 6.1 States and Modes
+[Describe system states and modes]
+
+### 6.2 Scenarios
+[Describe key operational scenarios]
+
+## 7. System Verification
+
+### 7.1 Verification Approach
+[Describe the verification approach]
+
+### 7.2 Verification Methods
+[List verification methods]
+
+### 7.3 Verification Matrix
+[Map requirements to verification methods]
+
+## 8. Appendices
+
+### Appendix A: Glossary
+[Define terms and acronyms]
+
+### Appendix B: Analysis Results
+[Include relevant analysis results]
+\`\`\`
+
+## G.2 Interface Control Document Template
+
+\`\`\`markdown
+---
+title: "Interface Control Document for [Interface Name]"
+infocode: "SPC-SYS-ICD"
+object_id: "[Object ID if applicable]"
+version: "1.0.0"
+date: "YYYY-MM-DD"
+status: "DRAFT"
+authors: ["Author Name"]
+security_classification: "INTERNAL"
+keywords: ["interface", "ICD", "integration"]
+---
+
+# Interface Control Document: [Interface Name]
+
+## 1. Introduction
+
+### 1.1 Purpose
+[Brief description of the document's purpose]
+
+### 1.2 Scope
+[Define what interfaces are included]
+
+### 1.3 Interface Overview
+[High-level description of the interface]
+
+### 1.4 References
+[List related documents]
+
+## 2. Interface Description
+
+### 2.1 Interface Diagram
+[Visual representation of the interface]
+
+### 2.2 Systems Overview
+[Brief description of the systems being interfaced]
+
+### 2.3 Interface Type
+[Mechanical, electrical, data, etc.]
+
+## 3. Interface Specification
+
+### 3.1 Physical Interface
+[Describe connectors, pinouts, dimensions, etc.]
+
+### 3.2 Electrical Interface
+[Describe voltage levels, current, etc.]
+
+### 3.3 Data Interface
+[Describe protocols, data formats, etc.]
+
+### 3.4 Timing Requirements
+[Describe timing constraints]
+
+### 3.5 Environmental Considerations
+[Describe environmental requirements]
+
+## 4. Interface Protocols
+
+### 4.1 Message Formats
+[Define message structures]
+
+### 4.2 Command Set
+[List and describe commands]
+
+### 4.3 Data Dictionary
+[Define data elements]
+
+### 4.4 State Diagrams
+[Show state transitions]
+
+### 4.5 Error Handling
+[Describe error detection and recovery]
+
+## 5. Interface Control
+
+### 5.1 Change Control Process
+[Describe how changes to the interface are managed]
+
+### 5.2 Verification Methods
+[Describe how the interface will be verified]
+
+## 6. Appendices
+
+### Appendix A: Glossary
+[Define terms and acronyms]
+
+### Appendix B: Interface History
+[Document the evolution of the interface]
+\`\`\`
+
+## G.3 Test Procedure Template
+
+\`\`\`markdown
+---
+title: "Test Procedure for [Test Name]"
+infocode: "TST-[DOMAIN]-VER"
+object_id: "[Object ID if applicable]"
+version: "1.0.0"
+date: "YYYY-MM-DD"
+status: "DRAFT"
+authors: ["Author Name"]
+security_classification: "INTERNAL"
+keywords: ["test", "verification", "procedure"]
+---
+
+# Test Procedure: [Test Name]
+
+## 1. Introduction
+
+### 1.1 Purpose
+[Brief description of the test's purpose]
+
+### 1.2 Scope
+[Define what is being tested]
+
+### 1.3 References
+[List related documents]
+
+## 2. Test Setup
+
+### 2.1 Test Equipment
+[List required equipment]
+
+### 2.2 Test Environment
+[Describe the test environment]
+
+### 2.3 Test Configuration
+[Describe the configuration of the system under test]
+
+### 2.4 Prerequisites
+[List conditions that must be met before testing]
+
+## 3. Test Procedure
+
+### 3.1 Test Initialization
+[Steps to prepare for the test]
+
+### 3.2 Test Execution
+[Detailed step-by-step instructions]
+
+### 3.3 Test Completion
+[Steps to conclude the test]
+
+## 4. Test Data
+
+### 4.1 Input Data
+[Describe test inputs]
+
+### 4.2 Expected Results
+[Describe expected outputs]
+
+### 4.3 Pass/Fail Criteria
+[Define criteria for test success]
+
+## 5. Data Recording
+
+### 5.1 Data Collection
+[Describe what data should be collected]
+
+### 5.2 Data Analysis
+[Describe how data should be analyzed]
+
+## 6. Appendices
+
+### Appendix A: Test Data Sheets
+[Templates for recording test data]
+
+### Appendix B: Troubleshooting Guide
+[Common issues and solutions]
+\`\`\`
+
+## G.4 Air System Documentation Template (ATA-Based)
+
+For air systems documentation, the following ATA chapter-based structure is recommended:
+
+\`\`\`markdown
+---
+title: "[Document Type] for [Aircraft Model]"
+infocode: "[XXX]-AVS-[ZZZ]"
+object_id: "AS-[A]-[CCC]-[ST]-[MDL]-[SSSSS]"
+version: "1.0.0"
+date: "YYYY-MM-DD"
+status: "DRAFT"
+authors: ["Author Name"]
+security_classification: "INTERNAL"
+keywords: ["aircraft", "documentation", "ATA"]
+---
+
+# [Document Type] for [Aircraft Model]
+
+## ATA XX: [System Name]
+
+### XX-00: General
+[General system description]
+
+### XX-10: [Subsystem Name]
+[Subsystem description]
+
+#### XX-10-1: [Component Name]
+[Component description]
+
+#### XX-10-2: [Component Name]
+[Component description]
+
+### XX-20: [Subsystem Name]
+[Subsystem description]
+
+[Continue with additional ATA chapters as needed]
+\`\`\`
+
+## G.5 Space System Documentation Template (SS-Based)
+
+For space systems documentation, the following SS-based structure is recommended:
+
+\`\`\`markdown
+---
+title: "[Document Type] for [Spacecraft Model]"
+infocode: "[XXX]-AVS-[ZZZ]"
+object_id: "SP-[A]-[CCC]-[ST]-[MDL]-[SSSSS]"
+version: "1.0.0"
+date: "YYYY-MM-DD"
+status: "DRAFT"
+authors: ["Author Name"]
+security_classification: "INTERNAL"
+keywords: ["spacecraft", "documentation", "SS"]
+---
+
+# [Document Type] for [Spacecraft Model]
+
+## SS XX: [System Name]
+
+### XX-Y: [Subsystem Name]
+[Subsystem description]
+
+#### XX-Y-Z: [Component Name]
+[Component description]
+
+[Continue with additional SS sections as needed]
+\`\`\`
+
+## G.6 Quantum System Documentation Template
+
+For quantum-enhanced systems, additional sections are recommended:
+
+\`\`\`markdown
+---
+title: "Quantum System Specification for [System Name]"
+infocode: "SPC-QNT-ARC"
+object_id: "[Object ID if applicable]"
+version: "1.0.0"
+date: "YYYY-MM-DD"
+status: "DRAFT"
+authors: ["Author Name"]
+security_classification: "INTERNAL"
+keywords: ["quantum", "specification"]
+---
+
+# Quantum System Specification: [System Name]
+
+## 1. Introduction
+[Standard introduction sections]
+
+## 2. Quantum System Overview
+
+### 2.1 Quantum Principles Applied
+[Describe the quantum principles leveraged]
+
+### 2.2 Quantum-Classical Boundaries
+[Define the interfaces between quantum and classical components]
+
+### 2.3 Quantum Advantage
+[Explain the benefits gained from quantum enhancement]
+
+## 3. Quantum Components
+
+### 3.1 Quantum Hardware
+[Describe quantum hardware elements]
+
+### 3.2 Quantum Algorithms
+[Describe quantum algorithms used]
+
+### 3.3 Quantum Error Correction
+[Describe error correction approaches]
+
+## 4. Quantum System Behavior
+
+### 4.1 Probabilistic Characteristics
+[Describe probabilistic aspects of system behavior]
+
+### 4.2 Measurement and Observation
+[Describe how quantum states are measured]
+
+### 4.3 Entanglement Management
+[If applicable, describe how entanglement is used and managed]
+
+## 5. Verification and Validation
+
+### 5.1 Quantum-Specific Verification Methods
+[Describe methods for verifying quantum components]
+
+### 5.2 Quantum Simulation Approach
+[Describe simulation approaches for quantum components]
+
+[Continue with standard sections]
+
+# 4.5 Documentation Standards
+
+## 4.5.1 INFOCODE-INDEX Implementation
+
+The INFOCODE-INDEX system provides a standardized way to classify all GAIA-QAO documentation using a three-part code structure: XXX-YYY-ZZZ. This section provides detailed guidance on implementing this classification system.
+
+### 4.5.1.1 Document Type (XXX) Selection
+
+When creating a new document, select the appropriate document type code based on the document's primary purpose:
+
+| Code | Document Type | When to Use |
+|------|--------------|-------------|
+| FRM | Framework Document | For documents that describe the GAIA-QAO framework itself |
+| REQ | Requirements Document | For capturing system, subsystem, or component requirements |
+| SPC | Specification | For detailed technical specifications of systems or interfaces |
+| DSN | Design Document | For design descriptions, rationales, and analyses |
+| TST | Test Document | For test plans, procedures, reports, and verification evidence |
+| RPT | Report | For analysis results, investigations, or studies |
+| MNL | Manual | For user, operation, or maintenance instructions |
+| TRN | Training Material | For educational and training resources |
+| STD | Standard | For standardized processes or methods |
+
+**Example**: A document describing the design of a quantum navigation system would use the `DSN` code.
+
+### 4.5.1.2 Technical Domain (YYY) Selection
+
+Select the technical domain code that best represents the primary subject area of the document:
+
+| Code | Technical Domain | When to Use |
+|------|-----------------|-------------|
+| SYS | Systems Engineering | For system-level engineering and integration topics |
+| STR | Structures | For structural components and analysis |
+| PRO | Propulsion | For propulsion systems and components |
+| AVS | Avionics | For electronic systems and components |
+| PWR | Power Systems | For power generation, storage, and distribution |
+| THR | Thermal | For thermal control and management |
+| COM | Communications | For communication systems and protocols |
+| GNC | Guidance, Navigation & Control | For GNC systems and algorithms |
+| ENV | Environmental Control | For life support and environmental systems |
+| HUM | Human Factors | For human-system interaction and ergonomics |
+| SAF | Safety | For safety analysis and critical systems |
+| CYB | Cybersecurity | For information security and protection |
+| QNT | Quantum Technologies | For quantum computing, sensing, and communications |
+| SFT | Software | For software architecture and implementation |
+| INT | Integration | For system integration and interfaces |
+
+**Example**: A document about quantum navigation would use the `QNT` or `GNC` code, depending on whether the focus is on the quantum technology itself or its application to navigation.
+
+### 4.5.1.3 Document Purpose (ZZZ) Selection
+
+Select the document purpose code that best describes the document's specific focus:
+
+| Code | Document Purpose | When to Use |
+|------|-----------------|-------------|
+| CON | Concept | For conceptual descriptions and explorations |
+| ARC | Architecture | For system or subsystem architecture descriptions |
+| FUN | Functional Description | For describing functional behavior and operations |
+| ICD | Interface Control | For defining interfaces between systems or components |
+| VER | Verification | For verification methods and results |
+| VAL | Validation | For validation methods and results |
+| CER | Certification | For certification processes and evidence |
+| OPS | Operations | For operational procedures and guidelines |
+| MNT | Maintenance | For maintenance procedures and guidelines |
+| TRB | Troubleshooting | For problem diagnosis and resolution |
+| MOD | Modification | For system modifications and upgrades |
+
+**Example**: A document describing the interfaces of a quantum navigation system would use the `ICD` code.
+
+### 4.5.1.4 Complete INFOCODE Examples
+
+| INFOCODE | Description |
+|----------|-------------|
+| REQ-SYS-FUN | System functional requirements document |
+| SPC-AVS-ICD | Avionics interface control specification |
+| DSN-QNT-ARC | Quantum technology architecture design document |
+| TST-GNC-VER | Guidance, navigation, and control verification test document |
+| MNL-ENV-OPS | Environmental control system operations manual |
+
+## 4.5.2 File Naming Conventions
+
+### 4.5.2.1 Standard Naming Pattern
+
+All GAIA-QAO documentation follows this standardized naming convention:
+
+\`\`\`
+[INFOCODE]-[OBJECT_ID]-[VERSION]-[STATUS].[EXT]
+\`\`\`
+
+Where:
+- **INFOCODE**: Document classification code (see section 4.5.1)
+- **OBJECT_ID**: GAIA-QAO object identifier (if applicable)
+- **VERSION**: Version number in semantic versioning format (vX.Y.Z)
+- **STATUS**: Document status (DRAFT, REVIEW, APPROVED, DEPRECATED)
+- **EXT**: File extension
+
+### 4.5.2.2 Examples
+
+| Filename | Description |
+|----------|-------------|
+| `SPC-SYS-ICD-AS-M-PAX-NB-Q2A-00101-v1.0-DRAFT.md` | Draft interface control specification for a narrow-body passenger aircraft (object ID: AS-M-PAX-NB-Q2A-00101), version 1.0 |
+| `DSN-QNT-ARC-SP-U-SAT-CO-Q2A-01001-v2.1-APPROVED.md` | Approved architecture design document for a quantum-enhanced communications satellite (object ID: SP-U-SAT-CO-Q2A-01001), version 2.1 |
+| `MNL-AVS-OPS-v1.3-APPROVED.md` | Approved operations manual for avionics systems (not tied to a specific object), version 1.3 |
+
+### 4.5.2.3 Special Cases
+
+- **Framework Documentation**: Documents describing the GAIA-QAO framework itself may omit the OBJECT_ID component.
+- **Multi-Object Documentation**: Documents covering multiple objects may use a higher-level object ID or omit the OBJECT_ID component and clarify scope in the metadata.
+- **Working Drafts**: During initial development, documents may use a simplified naming convention with a sequential draft number (e.g., `SPC-SYS-ICD-DRAFT-01.md`), but must adopt the full convention before formal review.
+
+## 4.5.3 Metadata Requirements
+
+### 4.5.3.1 Standard Metadata Header
+
+Each document must include a standardized metadata header in YAML format:
+
+\`\`\`yaml
+---
+title: "Full Document Title"
+infocode: "XXX-YYY-ZZZ"
+object_id: "DO-A-CCC-ST-MDL-SSSSS" # If applicable
+version: "X.Y.Z"
+date: "YYYY-MM-DD"
+status: "DRAFT|REVIEW|APPROVED|DEPRECATED"
+authors: ["Name", "Name"]
+contributors: ["Name", "Name"]
+security_classification: "PUBLIC|INTERNAL|CONFIDENTIAL|RESTRICTED"
+keywords: ["keyword1", "keyword2"]
+related_documents: ["DOC-ID-1", "DOC-ID-2"]
+change_log:
+  - version: "X.Y.Z"
+    date: "YYYY-MM-DD"
+    author: "Name"
+    description: "Description of changes"
+---
+\`\`\`
+
+### 4.5.3.2 Metadata Field Definitions
+
+| Field | Description | Required | Example |
+|-------|-------------|----------|---------|
+| title | Full document title | Yes | "Quantum Navigation System Interface Specification" |
+| infocode | Document classification code | Yes | "SPC-QNT-ICD" |
+| object_id | GAIA-QAO object identifier | No | "AS-M-PAX-NB-Q2A-00101" |
+| version | Semantic version number | Yes | "1.2.3" |
+| date | Document date (ISO format) | Yes | "2023-06-15" |
+| status | Document status | Yes | "APPROVED" |
+| authors | Primary authors | Yes | ["Jane Smith", "John Doe"] |
+| contributors | Additional contributors | No | ["Alice Johnson"] |
+| security_classification | Security level | Yes | "INTERNAL" |
+| keywords | Search terms | Yes | ["quantum", "navigation", "interface"] |
+| related_documents | Referenced documents | No | ["REQ-QNT-FUN-v1.0"] |
+| change_log | Version history | Yes | See example above |
+
+### 4.5.3.3 Status Definitions
+
+| Status | Definition | Implications |
+|--------|------------|-------------|
+| DRAFT | Initial creation and development | Not for implementation; subject to significant changes |
+| REVIEW | Under formal review | Not for implementation; subject to changes based on review feedback |
+| APPROVED | Officially approved for use | Authorized for implementation; changes require formal change control |
+| DEPRECATED | No longer current | Maintained for reference only; should not be used for new development |
+
+## 4.5.4 Document Control and Versioning
+
+### 4.5.4.1 Version Numbering
+
+GAIA-QAO documentation follows semantic versioning principles:
+
+- **Major version (X)**: Incremented for incompatible changes
+- **Minor version (Y)**: Incremented for new features in a backward-compatible manner
+- **Patch version (Z)**: Incremented for backward-compatible bug fixes
+
+### 4.5.4.2 Document Lifecycle
+
+Documents progress through a standardized lifecycle:
+
+1. **Creation**: Initial drafting with DRAFT status
+2. **Review**: Formal review process with REVIEW status
+3. **Approval**: Official approval with APPROVED status
+4. **Maintenance**: Updates and revisions as needed
+5. **Deprecation**: Transition to DEPRECATED status when superseded or obsolete
+
+### 4.5.4.3 Change Control Process
+
+1. **Change Request**: Submit a formal change request for approved documents
+2. **Impact Analysis**: Assess the impact of the proposed change
+3. **Review and Approval**: Obtain necessary approvals based on change significance
+4. **Implementation**: Update the document with a new version number
+5. **Notification**: Inform stakeholders of the change
+
+### 4.5.4.4 Version Control System Integration
+
+All GAIA-QAO documentation must be maintained in a version control system (e.g., Git) with the following practices:
+
+- Use branches for major revisions
+- Include meaningful commit messages
+- Tag releases with version numbers
+- Maintain a change log in both the document metadata and the version control system
+
+## 4.5.5 Document Structure Guidelines
+
+### 4.5.5.1 Standard Document Structure
+
+All technical documents should follow this consistent structure:
+
+1. **Front Matter**: Metadata header
+2. **Abstract/Executive Summary**: Brief overview (1-2 paragraphs)
+3. **Table of Contents**: For documents longer than 10 pages
+4. **Introduction**: Purpose, scope, audience, and document organization
+5. **Main Content**: Organized in a hierarchical structure
+6. **Conclusion/Summary**: Key takeaways
+7. **References**: Citations and related documents
+8. **Appendices**: Supplementary material
+9. **Glossary**: Definitions of terms and acronyms
+
+### 4.5.5.2 Heading Hierarchy
+
+Use a consistent heading hierarchy:
+
+- **Level 1**: Major sections (e.g., "1. Introduction")
+- **Level 2**: Subsections (e.g., "1.1 Purpose")
+- **Level 3**: Sub-subsections (e.g., "1.1.1 Document Scope")
+- **Level 4**: Detailed topics (use sparingly)
+- **Level 5**: Very detailed topics (avoid if possible)
+
+### 4.5.5.3 Content Guidelines
+
+- Use clear, concise language
+- Define acronyms on first use
+- Include diagrams and figures to illustrate complex concepts
+- Use tables for structured information
+- Provide examples where appropriate
+- Maintain consistent terminology throughout the document
+- Use active voice when possible
+- Include traceability to requirements where applicable
+\`\`\`
+
+## 3. Addition to Part VII: Implementation Guidelines
+
 
 
