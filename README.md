@@ -1,135 +1,184 @@
-# GAIA-QAO Aerospace General Index (AGI)
-© Amedeo Pelliccia · GAIA-QAO – *Federated Quantum Aerospace Intelligence*
+# GAIA-QAO Aerospace Documentation
+## Aerospace General Index (AGI) 
 
 ## Part 0: Framework Overview
     0.1 Vision Statement
-    0.2 Documentation Architecture
-    0.3 Key Components of the Documentation Framework
-    0.4 Governance Model for the Open Source Project
-    0.5 High-Level Implementation Strategy
-    0.6 Envisioned Potential Impact
+    0.2 Guiding Principles & Philosophy
+    0.3 Documentation Architecture
+    0.4 Key Components of the Documentation Framework
+    0.5 Governance Model for the Open Source Project
+    0.6 High-Level Implementation Strategy
+    0.7 Envisioned Potential Impact
 
-## Part I: Object Identification System
-    1.1 System Overview
-    1.2 ID Structure
-    1.3 Component Descriptions
-        1.3.1 Domain (DO)
-        1.3.2 Autonomy Level (A)
-        1.3.3 Functional Classes (CCC)
-        1.3.4 Sub-Types (ST)
-        1.3.5 Models/Variants (MDL)
-        1.3.6 Serial Numbers (SSSSS)
-        1.3.7 Configuration Codes (CC) - Optional
-    1.4 Database Implementation (General Overview)
-    1.5 ID Formation Process
-    1.6 Registry Management
-        1.6.1 ID Allocation Process
-        1.6.2 Federation Model
-        1.6.3 Standards Integration
-        1.6.4 Support for Quantum-Enhanced Systems
+## Part 1: Software Technology Landscape in Aerospace and Military Systems
+    1.1 Legacy and Traditional Programming Languages
+        1.1.1 Ada and Its Derivatives
+        1.1.2 C and Safety-Critical Subsets
+        1.1.3 Legacy Systems: FORTRAN and Assembly Language
+    1.2 Modern Languages and Development Approaches
+        1.2.1 C++ in Aerospace Applications
+        1.2.2 Python for Testing, Simulation, and Data Analysis
+        1.2.3 Model-Based Development and Code Generation
+    1.3 Certification Standards and Their Impact
+        1.3.1 DO-178C Levels and Software Assurance
+        1.3.2 Military Standards and Security Requirements
+        1.3.3 International and Domain-Specific Standards
+    1.4 Development Environments and Tools
+        1.4.1 Specialized IDEs for Aerospace
+        1.4.2 Verification and Validation Tools
+        1.4.3 Simulation Environments
+    1.5 Specialized Libraries and Frameworks
+        1.5.1 Real-Time Operating Systems
+        1.5.2 Communication Protocols and Middleware
+        1.5.3 Domain-Specific Application Frameworks
+    1.6 Domain-Specific Applications
+        1.6.1 Flight Control Systems
+        1.6.2 Navigation and Guidance Systems
+        1.6.3 Military-Specific Systems
+    1.7 Conclusion (on Software Technology Landscape)
 
-## Part II: Model Code Registry
-    2.1 Model Code Structure and Naming Convention
-    2.2 Air Systems (AS) Models
-        2.2.1 Passenger Transport (PAX) Models
-        2.2.2 Cargo Transport (CGO) Models
-        2.2.3 Intelligence, Surveillance, Reconnaissance (ISR) Models
-        2.2.4 Scientific Research (SCI) Models
-        2.2.5 Utility (UTL) Models
-        2.2.6 Recreational & Sport (REC) Models
-        2.2.7 Experimental (XPR) Models
-        2.2.8 Lighter Than Air (LTA) Models
-        2.2.9 Military Aircraft (MIL) Models
-    2.3 Space Systems (SP) Models
-        2.3.1 Satellite (SAT) Models
-        2.3.2 Orbital Platform/Vehicle (ORB) Models
-        2.3.3 Launch System (LCH) Models
-        2.3.4 Probe (PRB) Models
-        2.3.5 Experimental (Space) (XPS) Models
-        2.3.6 Space Defense (DEF) Models
-    2.4 Implementation Guidelines (Models)
+## Part 2: Object Identification System (Formerly Part I)
+    2.1 System Overview
+    2.2 ID Structure
+    2.3 Component Descriptions
+        2.3.1 Domain (DO)
+        2.3.2 Autonomy Level (A)
+        2.3.3 Functional Classes (CCC)
+        2.3.4 Sub-Types (ST)
+        2.3.5 Models/Variants (MDL)
+        2.3.6 Serial Numbers (SSSSS)
+        2.3.7 Configuration Codes (CC) - Optional
+    2.4 Database Implementation (General Overview)
+    2.5 ID Formation Process
+    2.6 Registry Management
+        2.6.1 ID Allocation Process
+        2.6.2 Federation Model
+        2.6.3 Standards Integration
+        2.6.4 Support for Quantum-Enhanced Systems
 
-## Part III: Configuration Management
-    3.1 Configuration Code Structure
-    3.2 Standard Configuration Types
-    3.3 Domain-Specific Configuration Types
-        3.3.1 Air Systems (AS) Specific Configuration Types
-        3.3.2 Space Systems (SP) Specific Configuration Types
-    3.4 Configuration Management in Registry
-        3.4.1 Configuration Evolution Examples
-        3.4.2 Configuration Code Allocation Guidelines
+## Part 3: Model Code Registry (Formerly Part II)
+    3.1 Model Code Structure and Naming Convention
+    3.2 Air Systems (AS) Models
+        3.2.1 Passenger Transport (PAX) Models
+        3.2.2 Cargo Transport (CGO) Models
+        3.2.3 Intelligence, Surveillance, Reconnaissance (ISR) Models
+        3.2.4 Scientific Research (SCI) Models
+        3.2.5 Utility (UTL) Models
+        3.2.6 Recreational & Sport (REC) Models
+        3.2.7 Experimental (XPR) Models
+        3.2.8 Lighter Than Air (LTA) Models
+        3.2.9 Military Aircraft (MIL) Models
+    3.3 Space Systems (SP) Models
+        3.3.1 Satellite (SAT) Models
+        3.3.2 Orbital Platform/Vehicle (ORB) Models
+        3.3.3 Launch System (LCH) Models
+        3.3.4 Probe (PRB) Models
+        3.3.5 Experimental (Space) (XPS) Models
+        3.3.6 Space Defense (DEF) Models
+    3.4 Implementation Guidelines (Models)
 
-## Part IV: Database Schema
-    4.1 Core ID Component Tables
-        4.1.1 domains
-        4.1.2 autonomy_levels
-        4.1.3 functional_classes
-        4.1.4 subtypes
-        4.1.5 models
-    4.2 Object Instances and Configurations Tables
-        4.2.1 object_instances
-        4.2.2 object_configurations
-    4.3 Registry Management Tables
-        4.3.1 registry_users
-        4.3.2 registry_audit_log
-        4.3.3 id_allocation_requests
-    4.4 Integration and Reference Tables
-        4.4.1 ata_chapter_mapping
-        4.4.2 ccsds_mapping
-        4.4.3 federation_nodes
-    4.5 Views and Functions
-        4.5.1 view_model_full_details
-        4.5.2 view_object_instance_details
-        4.5.3 generate_next_serial_number()
-        4.5.4 construct_full_object_id()
-        4.5.5 trigger_set_timestamp()
+## Part 4: Configuration Management (Formerly Part III)
+    4.1 Configuration Code Structure
+    4.2 Standard Configuration Types
+    4.3 Domain-Specific Configuration Types
+        4.3.1 Air Systems (AS) Specific Configuration Types
+        4.3.2 Space Systems (SP) Specific Configuration Types
+    4.4 Configuration Management in Registry
+        4.4.1 Configuration Evolution Examples
+        4.4.2 Configuration Code Allocation Guidelines
 
-## Part V: Implementation Guidelines
-    5.1 Database Implementation
-    5.2 User Interface (Recommendations for GAIA-QAO Registry)
-    5.3 Documentation (Meta-Documentation for GAIA-QAO System)
-    5.4 Next Steps (for GAIA-QAO System Implementation)
+## Part 5: Database Schema (Formerly Part IV)
+    5.1 Core ID Component Tables
+        5.1.1 domains
+        5.1.2 autonomy_levels
+        5.1.3 functional_classes
+        5.1.4 subtypes
+        5.1.5 models
+    5.2 Object Instances and Configurations Tables
+        5.2.1 object_instances
+        5.2.2 object_configurations
+    5.3 Registry Management Tables
+        5.3.1 registry_users
+        5.3.2 registry_audit_log
+        5.3.3 id_allocation_requests
+    5.4 Integration and Reference Tables
+        5.4.1 ata_chapter_mapping
+        5.4.2 ccsds_mapping
+        5.4.3 federation_nodes
+    5.5 Views and Functions
+        5.5.1 view_model_full_details
+        5.5.2 view_object_instance_details
+        5.5.3 generate_next_serial_number()
+        5.5.4 construct_full_object_id()
+        5.5.5 trigger_set_timestamp()
+        5.5.6 trigger_set_full_object_id()
+
+## Part 6: GAIA-Q-UI System Specification
+    6.0 Introduction and Purpose (GAIA-Q-UI)
+        6.0.1 Goals (GAIA-Q-UI)
+        6.0.2 Guiding Principle: Leveraging AI in Development (GAIA-Q-UI)
+    6.1 UI Architecture Overview (GAIA-Q-UI)
+        6.1.1 Design Philosophy
+        6.1.2 Key UI Components (with Mermaid diagram)
+        6.1.3 Technology Stack Considerations
+        6.1.4 Performance, Scalability, and Reliability Considerations
+    6.2 AI Model Routing Engine Logic (GAIA-Q-UI)
+        6.2.1 Input Analysis for Routing
+        6.2.2 Routing Logic Approach
+        6.2.3 Model Selection Criteria (Examples)
+        6.2.4 Fallback and Error Handling
+        6.2.5 Aerospace Task-Specific Model Prioritization (Examples)
+        6.2.6 Handling Quantum-Specific Data and Models
+    6.3 MCP Event Schemas (GAIA-Q-UI)
+        6.3.1 General Event Structure
+        6.3.2 Example Event Types and Payloads
+    6.4 AGAD–InfoCode Trace Integration (GAIA-Q-UI)
+        6.4.1 Session Management & InfoCoding
+        6.4.2 Log Structure and Content
+        6.4.3 Audit Trail Generation
+        6.4.4 Data Lineage
+    6.5 Initial Development Roadmap & Next Steps (GAIA-Q-UI)
+    6.6 Security and Data Privacy Framework (GAIA-Q-UI)
+        6.6.1 Data Security
+        6.6.2 Access Control
+        6.6.3 Data Privacy
+        6.6.4 Secure Development Lifecycle (SDL)
+
+## Part 7: Implementation Guidelines (General GAIA-QAO System - Formerly Part V)
+    7.1 Database Implementation (for GAIA-QAO Registry)
+    7.2 User Interface (Recommendations for GAIA-QAO Registry - distinct from GAIA-Q-UI)
+    7.3 Documentation (Meta-Documentation for GAIA-QAO System itself)
+    7.4 Next Steps (for GAIA-QAO System Implementation)
 
 ## Appendices
     Appendix A: Complete Sub-Type Code Tables
         A.1 Air Systems (AS) Sub-Types
             A.1.1 Passenger Transport (PAX) Sub-Types
-            A.1.2 Cargo Transport (CGO) Sub-Types
-            A.1.3 Intelligence, Surveillance, Reconnaissance (ISR) Sub-Types
-            A.1.4 Scientific Research (SCI) Sub-Types
-            A.1.5 Utility (UTL) Sub-Types
-            A.1.6 Recreational & Sport (REC) Sub-Types
-            A.1.7 Experimental (Air) (XPR) Sub-Types
-            A.1.8 Lighter Than Air (LTA) Sub-Types
-            A.1.9 Military Aircraft (MIL) Sub-Types
+            (etc. for all AS functional classes)
         A.2 Space Systems (SP) Sub-Types
             A.2.1 Satellite (SAT) Sub-Types
-            A.2.2 Orbital Platform/Vehicle (ORB) Sub-Types
-            A.2.3 Launch System (LCH) Sub-Types
-            A.2.4 Probe (PRB) Sub-Types
-            A.2.5 Experimental (Space) (XPS) Sub-Types
-            A.2.6 Space Defense (DEF) Sub-Types
+            (etc. for all SP functional classes)
     Appendix B: ID Examples
-    Appendix C: Database Schema Diagrams
+    Appendix C: Database Schema Diagrams (GAIA-QAO Registry)
         C.1 Core ID Component Tables and Relationships
         C.2 Object Instances and Configurations
         C.3 Registry Management and Integration Tables (Simplified)
-        C.4 Overall Database Schema Overview (Simplified)
+    Appendix D: Illustrative Aerospace Use Cases for GAIA-Q-UI
+        D.1 Use Case: In-Flight Anomaly Diagnosis and Resolution Support
+        D.2 Use Case: Preliminary Design Review Support for a Quantum Sensor
+        D.3 Use Case: AI-Assisted Illustrated Parts Catalog (IPC) Page Generation
+    Appendix E: Detailed Survey of Aerospace Software Technologies (Optional: The full prose report)
 
 ---
 **Document Metadata Footer (Conceptual for Master Document)**
 
 **Status**: Iterative Draft
 **Master Document InfoCode**: QAO-DOC-MASTER-001
-**Version**: (Reflects current state of GAIA-QAO documentation without GAIA-Q-UI spec integrated)
-**Compliance Scope**: GAIA-QAO v1.2, AGAD (principles), COAFI (alignment)
-**Keywords**: `[GAIA-QAO][Object ID][Quantum Aerospace][Open Source][Documentation Framework][AGI][Registry][Database Schema][Configuration Management]`
+**Version**: 0.5.1 (Reflects corrected AGI and integrated content)
+**Compliance Scope**: GAIA-QAO v1.2, AGAD (principles), COAFI (alignment), MCP Sync (planned)
+**Keywords**: `[GAIA-QAO][Object ID][Software Landscape][Quantum Aerospace][Open Source][Documentation Framework][AGI][Registry][Database Schema][Configuration Management][GAIA-Q-UI][AI Orchestration]`
 
 ---
-© Amedeo Pelliccia · GAIA-QAO – *Federated Quantum Aerospace Intelligence*
-
-> "Knowledge shared is future engineered."
-> 
 # GAIA-QAO Aerospace Documentation
 
 > **GENERAL DISCLAIMER:**
@@ -331,6 +380,7 @@ Domains represent the primary operational environment of the aerospace object.
 | :-------------- | :------------- | :------------------------------------------------------ | :--------------------------- |
 | AS              | Air System     | Systems operating primarily in Earth's atmosphere       | Below 30,000 meters          |
 | SP              | Space System   | Systems operating primarily in space                    | Above 30,000 meters          |
+*Note: This boundary is a general guideline representing the typical primary operational envelope. Specific models designated as 'AS' may have operational ceilings exceeding this altitude (e.g., high-altitude research aircraft or stratospheric platforms) but are still considered air systems due to their atmospheric operational nature and certification paths.*
 
 #### 1.3.2 Autonomy Level (A)
 
@@ -491,6 +541,7 @@ Where:
     -   `H`: High-performance variant.
     -   `L`: Long-range variant.
     -   `S`: Special purpose variant.
+    *(Note: If more than 26 variants are needed for a G/N combination, the V-code may be extended to alphanumeric sequences like A0-A9, B0-B9, or two-letter codes like AA, AB, etc., as defined by registry governance.)*
 
 Each Model (MDL) is also inherently associated with an **Autonomy Level (A)**, which is defined in the `models` table of the database (see Part IV) and forms part of the object's full ID.
 
@@ -935,7 +986,7 @@ CREATE TABLE object_instances (
   manufacture_date DATE,
   status VARCHAR(50) NOT NULL DEFAULT 'active',  -- e.g., active, retired, destroyed, experimental
   owner_organization VARCHAR(100),
-  location_current VARCHAR(100), -- Could be more structured (e.g., coordinates, airport code, orbital elements)
+  location_current JSONB, -- Stores location; for AS can be airport/coordinates, for SP can be orbital elements (e.g., TLE) or celestial body coordinates.
   commissioning_date DATE,
   decommissioning_date DATE,
   notes TEXT,
@@ -1207,6 +1258,21 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+-- Trigger function to auto-set full_object_id on insert
+CREATE OR REPLACE FUNCTION trigger_set_full_object_id()
+RETURNS TRIGGER AS $$
+BEGIN
+  NEW.full_object_id = construct_full_object_id(NEW.model_id, NEW.serial_number);
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+-- Trigger to apply the function
+-- CREATE TRIGGER set_full_id_on_instance_insert
+-- BEFORE INSERT ON object_instances
+-- FOR EACH ROW
+-- EXECUTE FUNCTION trigger_set_full_object_id();
+
 -- Trigger to auto-update 'updated_at' timestamp
 CREATE OR REPLACE FUNCTION trigger_set_timestamp()
 RETURNS TRIGGER AS $$
@@ -1216,7 +1282,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- Example of how to apply the trigger (repeat for all tables with 'updated_at'):
+-- Example of how to apply the 'updated_at' trigger (repeat for all relevant tables):
 -- CREATE TRIGGER set_timestamp_models
 -- BEFORE UPDATE ON models
 -- FOR EACH ROW
@@ -1248,8 +1314,17 @@ INSERT INTO functional_classes (class_code, domain_code, name, description) VALU
 ('PRB', 'SP', 'Probe', 'Systems designed for exploration beyond Earth orbit'),
 ('XPS', 'SP', 'Experimental (Space)', 'Experimental space systems and technology demonstrators'),
 ('DEF', 'SP', 'Space Defense', 'Systems designed for space defense and security applications');
--- (Further INSERT statements for subtypes and example models would be extensive and are omitted here for overall document brevity.
--- They would follow the pattern established in previous full lists, ensuring 'autonomy_code' is included in model inserts.)
+
+-- Example INSERTs for subtypes (Full list in Appendix A)
+INSERT INTO subtypes (subtype_code, class_code, name, description) VALUES
+('NB', 'PAX', 'Narrow-Body Airliner', 'Single-aisle passenger aircraft typically for short to medium range routes.'),
+('BW', 'PAX', 'Blended Wing Body', 'Aircraft with blended wing body configuration for passenger transport.');
+
+-- Example INSERTs for models (Full examples in Part II)
+INSERT INTO models (model_code, subtype_id, autonomy_code, name, description, technical_specifications) VALUES
+('Q2A', (SELECT subtype_id FROM subtypes WHERE subtype_code = 'NB' AND class_code = 'PAX'), 'M', 'QuantumNarrow QN-200', 'Medium quantum-enhanced narrow-body', '{"capacity": 180, "range_km": 5500}');
+INSERT INTO models (model_code, subtype_id, autonomy_code, name, description, technical_specifications) VALUES
+('Q1H', (SELECT subtype_id FROM subtypes WHERE subtype_code = 'BW' AND class_code = 'PAX'), 'M', 'AMPEL360 BWB-Q100', 'Small quantum-enhanced BWB passenger aircraft', '{"capacity": 100, "range_km": 5500, "cruise_speed_kmh": 850}');
 ```
 
 ---
@@ -1261,14 +1336,14 @@ This part consolidates recommendations and next steps for the implementation of 
 ### 5.1 Database Implementation
 
 1.  **Base Schema**: Utilize the SQL script detailed in Part IV as the foundation for creating the database (preferably PostgreSQL).
-2.  **Initial Population**: Populate catalog tables (`domains`, `autonomy_levels`, `functional_classes`, `subtypes`, etc.) with the defined data.
-3.  **Model Registry**: Implement the model registry in the `models` table, ensuring each model has its `autonomy_code` defined.
+2.  **Initial Population**: Populate catalog tables (`domains`, `autonomy_levels`, `functional_classes`, `subtypes`, etc.) with the defined data (see Appendix A for full subtype list).
+3.  **Model Registry**: Implement the model registry in the `models` table, ensuring each model has its `autonomy_code` defined (see Part II for full model examples).
 4.  **Configuration Tracking**: Implement configuration tracking in the `object_configurations` table.
 5.  **Validation and Constraints**:
     *   Ensure all primary keys, foreign keys, and `UNIQUE` constraints are implemented.
     *   Create additional validation rules at the application or database level (e.g., code formats, value ranges) if necessary.
 6.  **Indexes**: While PostgreSQL creates indexes for PKs and UNIQUE constraints, evaluate and add further indexes on columns frequently used in `WHERE`, `JOIN`, or `ORDER BY` clauses to optimize performance, especially for `object_instances`, `object_configurations`, and `registry_audit_log`.
-7.  **Functions and Triggers**: Implement the defined functions (`generate_next_serial_number`, `construct_full_object_id`) and triggers (`trigger_set_timestamp`). Consider a `BEFORE INSERT` trigger on `object_instances` to auto-populate `full_object_id` using the `construct_full_object_id` function. Apply `trigger_set_timestamp` to all relevant tables.
+7.  **Functions and Triggers**: Implement the defined functions (`generate_next_serial_number`, `construct_full_object_id`) and triggers (`trigger_set_timestamp`, `trigger_set_full_object_id`). Apply `trigger_set_timestamp` to all relevant tables.
 8.  **Security**:
     *   Implement password hashing for `registry_users.password_hash`.
     *   Establish appropriate database permissions for user roles.
@@ -1277,7 +1352,7 @@ This part consolidates recommendations and next steps for the implementation of 
 
 ### 5.2 User Interface (Recommendations)
 
-Development of a user interface (likely web-based) is recommended for interacting with the GAIA-QAO registry. This interface should include:
+Development of a user interface (likely web-based) is recommended for interacting with the GAIA-QAO registry (distinct from GAIA-Q-UI which is a more advanced AI orchestration layer). This registry UI should include:
 
 1.  **Model Browser**:
     *   An interface to browse the model registry (`models`).
@@ -1537,24 +1612,16 @@ Standardized JSON-based event schemas for interoperability with the Master Contr
 #### 6.3.1 General Event Structure
 ```json
 {
-  "eventId": "uuid", // Unique event identifier
+  "eventId": "uuid",
   "eventTimestamp": "ISO8601_datetime",
   "sourceSystem": "GAIA-Q-UI",
-  "sourceInfoCode": "QAO-UIF-SESSION-XXX", // InfoCode of the originating UI session/action
-  "targetSystem": "MCP_AGENT_XYZ", // or "MCP_CORE"
-  "eventType": "QUERY_REQUEST | DATA_SUBMISSION | STATUS_UPDATE | ...",
+  "sourceInfoCode": "QAO-UIF-SESSION-XXX",
+  "targetSystem": "MCP_AGENT_XYZ",
+  "eventType": "QUERY_REQUEST | DATA_SUBMISSION | ...",
   "payloadSchemaVersion": "1.0",
-  "payload": {
-    // Event-specific data structure
-  },
-  "securityContext": { // Optional
-    "userId": "user_id_from_ui",
-    "permissionsToken": "jwt_or_opaque_token"
-  },
-  "traceability": {
-    "correlationId": "uuid", // To correlate request/response pairs
-    "parentEventId": "uuid" // If this event is a child of another
-  }
+  "payload": { /* Event-specific data */ },
+  "securityContext": { /* Optional */ },
+  "traceability": { /* correlationId, parentEventId */ }
 }
 ```
 
@@ -1567,9 +1634,9 @@ Standardized JSON-based event schemas for interoperability with the Master Contr
     *   `payload`: `{"status": "SUCCESS" | "PARTIAL_SUCCESS" | "FAILURE", "results": [ /* array of results */ ], "errorMessage": "...", "metadata": {"dataSourcesConsulted": ["AGENT_A_DB"], "processingTimeMs": 1234}}`
 3.  **`DATA_SUBMISSION_FOR_ANALYSIS` (UI to Specialized AI Agent via MCP):**
     *   `eventType`: "MCP_AGENT_DATA_ANALYSIS_REQUEST"
-    *   `payload`: `{"dataType": "TELEMETRY_STREAM", "dataReference": "s3://bucket/path/to/telemetry.csv", "analysisType": "ANOMALY_DETECTION_QUANTUM_ALGO_X", "parameters": { /* ... */ }}`
+    *   `payload`: `{"dataType": "TELEMETRY_STREAM", "dataReference": "s3_uri", "analysisType": "ANOMALY_DETECTION_QUANTUM_ALGO_X", "parameters": { /* ... */ }}`
 
-*(Further event schemas for status updates, acknowledgments, errors, etc., will be defined.)*
+*(Further schemas for status updates, acknowledgments, errors, etc., will be defined.)*
 
 ### 6.4 AGAD–InfoCode Trace Integration (GAIA-Q-UI)
 
@@ -1707,7 +1774,7 @@ This appendix lists the defined Sub-Types (ST) for each Functional Class (CCC) w
 | BW          | Blended Wing Body      | Aircraft with blended wing body configuration for passenger transport.          |
 | SS          | Supersonic Transport   | Passenger aircraft designed for supersonic flight.                              |
 | HS          | Hypersonic Transport   | Passenger aircraft designed for hypersonic flight.                              |
-| AM          | Air Mobility           | Aircraft designed for urban/regional air mobility, distinct from eVTOLs.       |
+| AM          | Air Mobility           | Broader advanced/urban/regional air mobility concepts, potentially including fixed-wing eSTOL or novel configurations not covered by eVTOL Air Taxi or traditional categories. |
 | HY          | Hybrid-Electric        | Passenger aircraft with hybrid-electric propulsion systems.                     |
 | QP          | Quantum-Powered        | Passenger aircraft with quantum-enhanced or quantum-derived propulsion/systems. |
 | SP          | Suborbital Passenger   | Aircraft designed for suborbital passenger flights.                             |
@@ -1729,7 +1796,7 @@ This appendix lists the defined Sub-Types (ST) for each Functional Class (CCC) w
 
 | **ST Code** | **Name**                    | **Description**                                                                 |
 | :---------- | :-------------------------- | :------------------------------------------------------------------------------ |
-| UA          | Unmanned Aerial System    | Unmanned aircraft systems (UAS/drones) for ISR missions.                      |
+| UA          | Unmanned Aerial System    | Unmanned aircraft systems (UAS/drones) for ISR missions, often general purpose or platform type not otherwise specified. |
 | MA          | Maritime Patrol           | Aircraft designed for maritime surveillance and reconnaissance.                 |
 | SR          | Strategic Reconnaissance  | Aircraft for long-range, high-altitude strategic reconnaissance missions.       |
 | TR          | Tactical Reconnaissance   | Aircraft for shorter-range, battlefield tactical reconnaissance missions.       |
@@ -1980,6 +2047,7 @@ erDiagram
         char(5) serial_number
         varchar(30) full_object_id
         varchar(50) status
+        jsonb location_current
     }
 
     object_configurations {
@@ -1997,40 +2065,60 @@ erDiagram
     object_instances ||--o{ object_configurations : "has_configurations"
 ```
 
-#### C.3 Registry Management and Integration Tables (Simplified)
+#### C.3 Registry Management and Integration Tables
 
 ```mermaid
 erDiagram
     registry_users {
         int user_id PK
         varchar(50) username
+        varchar(100) email
+        varchar(50) role
     }
+
     registry_audit_log {
         int log_id PK
         int user_id FK
+        varchar(50) action_type
+        varchar(50) table_affected
+        timestamp action_timestamp
     }
+
     id_allocation_requests {
         int request_id PK
         int requester_id FK
+        varchar(50) request_type
+        varchar(50) status
     }
+
     ata_chapter_mapping {
         int mapping_id PK
-        char(3) class_code FK
+        char(3) class_code FK "Can be NULL"
+        int subtype_id FK "Can be NULL"
+        varchar(10) ata_chapter
     }
+
     ccsds_mapping {
         int mapping_id PK
-        char(3) class_code FK
+        char(3) class_code FK "Can be NULL"
+        int subtype_id FK "Can be NULL"
+        varchar(50) ccsds_object_type
     }
+
     federation_nodes {
         int node_id PK
         varchar(20) node_code
+        varchar(100) node_name
     }
 
     registry_users ||--o{ registry_audit_log : "performs"
     registry_users ||--o{ id_allocation_requests : "submits"
-    functional_classes }o--|| ata_chapter_mapping : "maps_to_ata"
-    functional_classes }o--|| ccsds_mapping : "maps_to_ccsds"
+    functional_classes }o--|| ata_chapter_mapping : "maps_to_ata (class)"
+    subtypes }o--|| ata_chapter_mapping : "maps_to_ata (subtype)"
+    functional_classes }o--|| ccsds_mapping : "maps_to_ccsds (class)"
+    subtypes }o--|| ccsds_mapping : "maps_to_ccsds (subtype)"
 ```
+*(Note: FK relationships to functional_classes and subtypes in mapping tables assume these tables exist in a broader diagram context or imply they link by class_code and subtype_id respectively. Attributes shown are illustrative of key fields.)*
 
 ---
 ### Appendix D: Illustrative Aerospace Use Cases for GAIA-Q-UI
@@ -2088,6 +2176,59 @@ This appendix provides conceptual scenarios to illustrate how GAIA-Q-UI could be
 
 **User:** Technical Publications Author / Maintenance Engineer
 **Scenario:** Generating a new IPC page for a recently modified hydraulic pump assembly (`MDL: HYP-Q2B`, Config `M2` - see Part III for config code details) for aircraft `AS-M-UTL-FF-Q2A-00050` (see Part I for full ID structure).
+
+**Interaction Flow with GAIA-Q-UI:**
+
+1.  **Input:**
+    *   Author: "Generate IPC page for `MDL: HYP-Q2B`, Config `M2`. Use schematic `SCHEM-HYP-Q2B-M2.svg` and 3D model `MODEL-HYP-Q2B-M2.step`. Cross-reference parts with `AS-M-UTL-FF-Q2A-00050` registry data."
+    *   Uploads: `.svg` schematic, `.step` 3D model file.
+2.  **Processing by GAIA-Q-UI:**
+    *   `SessionManager` starts session `QAO-UIF-SESSION-DATE-IPC1`.
+    *   `InputHandler` processes query and files. `EngineeringDataParser` analyzes SVG for text/lines and STEP for part geometry.
+3.  **AI Model Routing & Data Retrieval:**
+    *   `ModelRoutingEngine`:
+        *   SVG schematic to `VisionGPT` or specialized OCR/diagram understanding model to identify part callouts and connection lines.
+        *   STEP model to a CAD-aware vision model or geometry analysis tool to segment individual parts and derive an exploded view.
+    *   `QueryOrchestrator`:
+        *   For each identified part callout/segmented geometry, queries `GAIA-QAO RegistryInterface` using potential part numbers (extracted by OCR) or visual similarity (if models support it) to find matching `MDL` or `instance_id` (if serialized component) and retrieve (from `models` or `object_instances` tables in Part IV): Official Part Name, Part Number (PN), GAIA-QAO ID, ICY code / NSN, Vendor information.
+        *   Queries for `MDL: HYP-Q2B` (Config `M2`) specific assembly instructions or notes.
+4.  **Results Aggregation & Output:**
+    *   `ResultsAggregator` compiles:
+        *   A suggested figure number and title (e.g., "Figure 1: Hydraulic Pump Assembly - HYP-Q2B-M2 - Exploded View").
+        *   A generated or proposed exploded view image derived from the STEP model, with item numbers automatically assigned.
+        *   A parts list table with columns: Item No., Part Number, GAIA-QAO ID, Description/Nomenclature, Units per Assembly (UPA), Usable On Code (UOC) derived from `AS-M-UTL-FF-Q2A-00050` applicability.
+        *   LLM-generated draft for "Notes" or "Assembly Instructions" based on schematics and registry info.
+    *   `OutputRenderer` displays this in a structured format, perhaps with an interactive viewer for the exploded view.
+    *   **Example Output Snippet (IPC Parts List for HYP-Q2B-M2):**
+        ```
+        | Item | Part Number       | GAIA-QAO ID (Sub-assy) | Nomenclature        | UPA |
+        |------|-------------------|------------------------|---------------------|-----|
+        | 1    | XYZ-1001-02       | HYP-Q2B-CAS-001        | Casing, Pump        | 1   |
+        | 2    | ABC-5005          |                        | Seal, O-Ring        | 2   |
+        | 3    | QNT-SENSOR-V2     | MDL:QSEN-02B           | Quantum Pressure Snsr| 1   |
+        ```
+    *   **Figure Description Snippet:** "Figure 1 shows an exploded isometric view of the HYP-Q2B-M2 hydraulic pump assembly. Item numbers correspond to the parts list below. Ensure all O-rings (Item 2) are correctly seated before torquing casing bolts."
+5.  **Further Interaction & Refinement:**
+    *   Author: "Re-number item 5 to 7." "Add note: 'Torque item 3 to 25 Nm'."
+    *   GAIA-Q-UI processes edits, updates draft IPC page.
+    *   Final IPC page data (XML, SGML, etc.) can be exported, InfoCode-tagged.
+
+---
+**Document Metadata Footer (Conceptual for Master Document)**
+
+**Status**: Iterative Draft
+**Master Document InfoCode**: QAO-DOC-MASTER-001
+**Version**: 0.5.0 (Consolidated Draft with GAIA-Q-UI Spec v0.4.0 & Full Tables)
+**Compliance Scope**: GAIA-QAO v1.2, AGAD (principles), COAFI (alignment), MCP Sync (planned)
+**Keywords**: `[GAIA-QAO][Object ID][Quantum Aerospace][Open Source][Documentation Framework][AGI][Registry][Database Schema][Configuration Management][GAIA-Q-UI][AI Orchestration]`
+
+---
+© Amedeo Pelliccia · GAIA-QAO – *Federated Quantum Aerospace Intelligence*
+
+> "Knowledge shared is future engineered."
+
+
+
 
 **Interaction Flow with GAIA-Q-UI:**
 
