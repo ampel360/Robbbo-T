@@ -1,5 +1,6 @@
 # GAIA-QAO Aerospace Documentation
 ## Aerospace General Index (AGI) 
+[![Sponsor me](https://img.shields.io/badge/Sponsor-Robbbo--T-blue?logo=github)](https://github.com/sponsors/Robbbo-T)
 
 ![image](https://github.com/user-attachments/assets/73283d93-9f88-4985-b986-aa0f24102517)
 
