@@ -1356,121 +1356,165 @@ graph TD
     class SUT_COMPLEX SUT;
     class USER USER;:
 ```
-User (Human Operator/Designer): Interacts with the HIL Thinking environment via GAIA-Q-UI (Part 9) or specialized development/testing tools. Provides design inputs, mission objectives, test requirements, and monitors HIL execution.
-M1: Federated Semantic Memory: The persistent knowledge layer of the "Environment AI."
-GAIA-Engineering-KB (Part 0.4.1): Stores all GAIA-QAO documentation, standards, and specifications, accessible via semantic search.
-System Models & Ontologies (Parts 4, 5, 6, 8): Formal descriptions of GAIA-QAO objects, subsystems, their relationships, and operational parameters.
-Historical Operational & Test Data (Part 9.4): InfoCoded logs from previous HIL runs, flight tests, and operational deployments, providing a basis for learning and anomaly detection.
-Quantum System Parameters (Part 8 - QuantumParameters table): Versioned calibration data, performance metrics, and environmental sensitivities of quantum components.
-M2: Multi-Agent Cognitive Engine: The "brain" of the HIL Thinking environment, an instantiation of the "Assistant Alliance" (Part 1.1.3).
-AI Planning Agents: Generate test scenarios, mission profiles, and operational sequences based on objectives from the User and knowledge from M1.
-Anomaly Detection Agents: Monitor SUT telemetry and M3 data for deviations from expected behavior or known failure signatures stored in M1.
-Ethical Guardrail Agents (AMEDEO-L5): Enforce safety, security, and ethical constraints on generated test scenarios and SUT operations.
-Specialized AI Models: Domain-specific models for simulating quantum effects, predicting material stress, optimizing trajectories, etc.
-Model Refinement Logic: Updates models in M1 based on new data from HIL tests and real-world operations (learning loop).
-M3: Simulation & Real-World Bridge: The interface layer between the cognitive engine (M2) and the System Under Test (SUT).
-Digital Twin Management: Maintains and updates high-fidelity digital representations of the SUT.
-Environment Simulators: Model physical environments (atmospheric conditions, orbital mechanics, EM interference, thermal loads).
-Hardware Interface Emulators/Stimulators: Provide realistic electrical, mechanical, and data interfaces to the SUT (e.g., emulating ARINC 429 buses, SpaceWire links, GPS signals, quantum control pulses).
-Data Acquisition & Synchronization: Collects telemetry from the SUT and synchronizes it with simulation data.
-Abstraction Layer Management: Can operate at different levels of HIL (e.g., Model-in-the-Loop, Software-in-the-Loop, Processor-in-the-Loop, full Hardware-in-the-Loop).
-SUT (System Under Test): The GAIA-QAO aerospace object (or its subsystem/component) being evaluated.
-Can range from a single software module to a complete integrated aerospace vehicle.
-Includes classical subsystems (avionics, GNC, comms), quantum subsystems (QPUs, QSensors, QKD links), hardware interfaces, and all embedded software/firmware.
-Key Data Flows (Numbered in diagram):
 
-Objectives & Design Input: Human defines goals, specifies SUT configuration, and initiates HIL process.
-Test Scenarios & Control Logic: M2 generates test plans and control sequences for M3.
-Stimuli & Commands: M3 provides the SUT with simulated environmental inputs and operational commands.
-Telemetry & State Data: SUT responds and sends its state information back to M3.
-Processed Sensor/State Data: M3 processes, synchronizes, and forwards SUT data to M2.
-Insights, Alerts, Validation Status: M2 analyzes data, compares with M1 knowledge, and provides feedback to the User.
-Knowledge Updates & Model Refinement: M2 updates M1 with new learnings, refined models, and anomaly signatures.
-Context & Knowledge Retrieval: M2 continuously queries M1 for contextual information, system specifications, and historical data to inform its processing.
-This architecture enables a continuous feedback loop, where the system learns and adapts through rigorous, context-aware HIL validation.
+# HIL Thinking Architecture for GAIA-QAO
 
-3.2 Subsystem Integration Goals (HIL Thinking)
-The primary goal of HIL Thinking is to achieve deep semantic integration and validation across all subsystems of a GAIA-QAO object, especially those involving novel quantum technologies or complex AI. This means:
+## User (Human Operator/Designer)
 
-Interface Verification: Rigorously testing not just the physical and data-link layers of interfaces (as per ICDs - Appendix G.2), but also the semantic correctness of the information exchanged. Does subsystem A understand what subsystem B means?
-Emergent Behavior Analysis: Identifying and characterizing unexpected behaviors that arise from the interaction of multiple subsystems, particularly under stress or off-nominal conditions.
-Quantum-Classical Coherence: Validating the performance and stability of quantum subsystems (QPUs, QSensors) when integrated with their classical control, readout, and environmental support systems. This includes sensitivity to noise, timing precision, and data interpretation.
-AI Model Validation in Context: Testing AI algorithms (e.g., for autonomous navigation, target recognition, quantum circuit optimization) not in isolation, but as part of the full system loop, interacting with real or accurately simulated sensor data and actuator responses.
-End-to-End Mission Thread Testing: Simulating and validating complete operational mission scenarios, from sensor input through processing to actuator output, across multiple subsystems.
-Fault Injection and Resilience Testing: Systematically injecting faults (hardware failures, software bugs, environmental anomalies, quantum decoherence events) to verify system resilience, fault detection, and recovery mechanisms.
-3.3 Agent-Oriented Control Layers (HIL Thinking)
-Within the M2 Cognitive Engine, a layered, agent-oriented approach is envisioned for managing HIL scenarios and analyzing SUT behavior. This aligns with the "Assistant Alliance" concept (Part 1.1.3).
+Interacts with the HIL Thinking environment via **GAIA-Q-UI** (Part 9) or specialized development/testing tools.  
+Provides design inputs, mission objectives, test requirements, and monitors HIL execution.
 
-Strategic Layer Agents: Responsible for high-level mission planning, test campaign design, and interpreting overall validation success against top-level requirements (from SyRS - Appendix G.1). They interface with human operators for objective setting.
-Tactical Layer Agents: Decompose strategic goals into specific test sequences and operational phases. They might manage the orchestration of multiple SUT subsystems or coordinate the activities of specialized effector agents.
-Effector/Perceptor Agents:
-Effector Agents: Directly interact with M3 to command the SUT or the simulated environment (e.g., "initiate QPU calibration sequence," "simulate solar flare event," "execute evasive maneuver").
-Perceptor Agents: Process specific streams of telemetry from the SUT via M3 (e.g., "monitor Qubit T1 times," "track GPS accuracy," "analyze communication link QBER"). They transform raw data into semantically meaningful information for higher layers.
-Specialist Agents: Provide domain-specific expertise (e.g., quantum error correction modeling, aerodynamic simulation, RF interference analysis).
-Ethical Oversight Agent (AMEDEO-L5 Integration): Monitors all agent activities and proposed SUT actions against the GAIA-QAO ethical framework, with the ability to flag or veto unsafe/unethical operations.
-This agent architecture allows for modularity, scalability, and the integration of diverse AI capabilities into the HIL Thinking process.
+---
 
-3.4 Quantum-Ethical Alignment Protocol (QEAP) in HIL Thinking
-A specialized protocol and set of procedures within HIL Thinking focused on the unique challenges of quantum systems and AI ethics:
+## M1: Federated Semantic Memory
 
-Quantum State Verifiability: HIL scenarios must include procedures for cross-validating reported quantum states or performance metrics (e.g., fidelities, coherence) with theoretical models and, where possible, independent measurement techniques integrated into M3.
-Algorithmic Bias Detection (for Quantum AI): If AI is used to control quantum systems or interpret quantum data, HIL tests should be designed to probe for biases in the AI's behavior that could lead to suboptimal or unfair quantum outcomes (e.g., in resource allocation for a shared QPU).
-Sensitivity Analysis of Quantum Parameters: HIL should systematically explore the SUT's performance as key quantum parameters (e.g., noise levels, gate calibration errors) are varied by M3, to understand operational boundaries and failure points. This data feeds M1.
-Explainability of Quantum-AI Decisions: Where AI makes decisions based on quantum inputs, the HIL environment should facilitate the generation of explanations (even if approximate) for those decisions, linking them back to specific quantum phenomena or data features. GAIA-Q-UI (Part 9) should present these explanations.
-Ethical Boundary Testing for Quantum Systems: For future QAI with greater autonomy, QEAP involves designing HIL scenarios that specifically test adherence to AMEDEO-L5 principles when interacting with or controlling quantum resources. This includes scenarios of resource scarcity, conflicting objectives, or potential misuse of quantum capabilities.
-QEAP ensures that the development of quantum-enhanced aerospace systems is not only technically sound but also ethically robust.
+The persistent knowledge layer of the "Environment AI."
 
-3.5 Semantic Loop Telemetry (SLT)
-SLT is a core concept in HIL Thinking, going beyond raw telemetry. It involves:
+- **GAIA-Engineering-KB (Part 0.4.1):** Documentation, standards, specifications.
+- **System Models & Ontologies (Parts 4, 5, 6, 8):** Formal descriptions of GAIA-QAO objects and relations.
+- **Historical Operational & Test Data (Part 9.4):** InfoCoded logs from previous runs.
+- **Quantum System Parameters (Part 8):** Calibration data, performance metrics.
 
-Contextual Enrichment: Raw telemetry from the SUT (via M3) is immediately enriched by M2 with semantic metadata from M1. For example, a voltage reading from a QPU readout line is associated with the specific qubit ID (from Part 6), its last calibration date (from Part 8 QuantumParameters), the current quantum operation being performed, and the relevant requirements being tested.
-Real-time Interpretation: M2 agents perform real-time (or near real-time) interpretation of this enriched telemetry, identifying significant events, anomalies, or progress towards test objectives.
-Multi-Modal Data Fusion: SLT involves fusing data from diverse sources: SUT telemetry, simulation states from M3, environmental data, and even qualitative observations logged by human operators via GAIA-Q-UI.
-Feedback to SUT Design: Insights derived from SLT analysis during HIL are fed back not just to M1 for knowledge accumulation, but also directly into the SUT design and development process, enabling rapid iteration and improvement. This is a key aspect of the "continuous validation" philosophy.
-InfoCoded Traceability: All SLT records, interpretations, and derived insights are logged with GAIA-QAO InfoCodes (Part 10.3.1), ensuring full traceability from raw data to high-level validation conclusions.
-SLT transforms HIL from a simple stimulus-response test into a rich, sense-making process.
+---
 
-3.6 Digital Twin Sync Patterns (HIL Thinking)
-The M3 component of the HIL Thinking architecture relies heavily on Digital Twins (DTs) of the SUT and its environment. Effective synchronization between the physical SUT (if present) and its DT is crucial. Key sync patterns include:
+## M2: Multi-Agent Cognitive Engine
 
-State Mirroring (Physical-to-Digital): Continuously updating the DT's state based on telemetry from the physical SUT. This allows the DT to accurately reflect the real system's condition.
-Predictive Divergence (Digital-to-Physical/Alert): Running the DT slightly ahead of the physical SUT (or in parallel with "what-if" scenarios injected by M2) to predict potential future states or identify divergences that might indicate an impending anomaly in the physical system. M2 can then alert operators or trigger preemptive actions.
-Calibration Parameter Feedback (Physical-to-Digital-to-Model): Using data from physical SUT operation (especially for quantum components) to refine and calibrate models within the DT and within M1. For instance, observed drift in qubit frequencies updates the QPU model in the DT.
-Augmented Reality Overlay (Digital-onto-Physical View): For human operators interacting with physical HIL setups, GAIA-Q-UI could potentially overlay DT information (e.g., expected vs. actual sensor readings, thermal hotspots predicted by the DT) onto a view of the physical hardware.
-Model-Based Fault Injection (Digital-to-Physical Stimulus): Using the DT to identify critical failure points and then commanding M3 to inject corresponding fault stimuli into the physical SUT to test its resilience.
-These sync patterns ensure that the DT is not just a static model but a dynamic, learning representation that enhances the fidelity and value of HIL testing.
+The "brain" of the HIL Thinking environment (**Assistant Alliance**, Part 1.1.3).
 
-3.7 Failure Mode Modeling in HIL Thinking
-HIL Thinking places significant emphasis on systematically exploring and validating system responses to failure modes.
+- **AI Planning Agents**
+- **Anomaly Detection Agents**
+- **Ethical Guardrail Agents (AMEDEO-L5)**
+- **Specialized AI Models**
+- **Model Refinement Logic**
 
-FMECA-Driven Test Generation: Failure Modes, Effects, and Criticality Analysis (FMECA) results for the SUT (often a GAIA-QAO RPT document) are ingested into M1. M2 planning agents use this information to automatically (or semi-automatically) generate HIL test scenarios designed to trigger and observe these failure modes.
-Quantum-Specific Failure Modes: This includes modeling and testing for:
-Decoherence events (T1/T2 violations).
-Gate infidelity outside specified QPRs (Part G.6, Section 2.2).
-Readout errors.
-Calibration drift.
-Environmental susceptibility (e.g., impact of EM pulses or vibrations on quantum states).
-Cascading Failure Analysis: HIL scenarios are designed to investigate how failures in one subsystem (e.g., a cryocooler malfunction - CRY SSS type) can cascade and impact other subsystems, including quantum components.
-Safe State Validation: For critical failure modes, HIL tests verify that the SUT correctly transitions to a predefined safe state and that all recovery mechanisms function as designed.
-Unknown Unknowns (Fuzzing and Exploratory Testing): While FMECA covers known failure modes, M2 can also employ AI-driven exploratory testing or fuzzing techniques (injecting random or intelligently varied inputs/faults via M3) to try and uncover unforeseen failure modes or vulnerabilities. Discovered "unknown unknowns" are then characterized, added to M1, and inform future FMECA updates.
-3.8 Validation Modes within HIL Thinking
-HIL Thinking supports multiple validation modes, selectable based on project phase and objectives:
+---
 
-Nominal Performance Validation: Testing the SUT under expected operational conditions to verify it meets all functional and performance requirements (from SyRS - Appendix G.1, and QSPEC - Appendix G.6).
-Off-Nominal / Edge Case Validation: Pushing the SUT to the boundaries of its operational envelope (e.g., extreme temperatures, maximum data loads, borderline quantum parameters) to assess robustness.
-Degraded Mode Operation Validation: Simulating partial failures (e.g., loss of a redundant sensor, reduced QPU coherence) to verify that the SUT can continue to operate safely, albeit potentially with reduced capability.
-Interface Stress Testing: Flooding data interfaces with high traffic volumes or malformed packets to test their robustness and error handling.
-Long-Duration Stability Testing: Running extended HIL simulations to assess the long-term stability of the SUT, particularly for quantum components prone to drift. Calibration routines (QCA requirements in QSPEC) are tested as part of this.
-Certification Evidence Generation: Configuring HIL runs specifically to generate data and logs required for formal certification processes (e.g., DO-178C, DO-254), with all artifacts InfoCoded and traceable.
-3.9 HIL Thinking as AI-Ethical Ontology Anchor
-HIL Thinking provides a crucial grounding mechanism for the ethical AI principles (AMEDEO-L5) embedded within the GAIA-QAO framework and the "Environment AI."
+## M3: Simulation & Real-World Bridge
 
-Empirical Ethics Testing: The HIL environment (M3 orchestrated by M2 under ethical guardrails) allows for the empirical testing of AI agent behavior in simulated but realistic scenarios involving ethical dilemmas. For example, an autonomous GNC agent (Part 2.8.1) facing a choice between mission objectives and passenger safety can be evaluated.
-Consequence Modeling: The Digital Twin and simulation capabilities within M3 allow for modeling the potential consequences of different AI decisions, providing data for ethical deliberation and refinement of AI control policies in M2.
-Human Oversight and Intervention Practice: HIL scenarios can be used to train human operators (via GAIA-Q-UI) on how to effectively monitor, understand, and, if necessary, intervene in the operations of highly autonomous, AI-driven systems, especially those involving quantum elements.
-Building Trust through Verifiable Behavior: By demonstrating through auditable HIL tests (logged in M1) that AI systems operate within ethical and safety boundaries, HIL Thinking helps build trust among developers, operators, and regulatory bodies.
-Ontology Refinement: The process of designing HIL test cases for ethical validation helps refine the very ontology of "ethical behavior" for AI in aerospace and quantum contexts. What constitutes "non-maleficence" for a QPU resource scheduler? HIL Thinking provides a sandbox to explore such questions.
-In essence, HIL Thinking ensures that GAIA Intelligence is not just "smart" but also "wise" and "responsible," by constantly anchoring its cognitive and operational aspects in a validated understanding of physical reality and ethical imperatives.
+Interface between M2 and the System Under Test (SUT).
+
+- Digital Twin Management
+- Environment Simulators
+- Hardware Interface Emulators/Stimulators
+- Data Acquisition & Synchronization
+- MIL/SIL/PIL/HIL abstraction
+
+---
+
+## SUT: System Under Test
+
+GAIA-QAO aerospace object (or subsystem/component) under evaluation:
+
+- Classical subsystems (avionics, GNC, comms)
+- Quantum subsystems (QPU, QSensors, QKD)
+- Hardware interfaces
+- Embedded firmware/software
+
+---
+
+## Key Data Flows
+
+1. **Objectives & Design Input**
+2. **Test Scenarios & Control Logic**
+3. **Stimuli & Commands**
+4. **Telemetry & State Data**
+5. **Processed Sensor/State Data**
+6. **Insights, Alerts, Validation**
+7. **Knowledge Updates & Refinement**
+8. **Context & Knowledge Retrieval**
+
+---
+
+## 3.2 Subsystem Integration Goals
+
+- **Interface Verification**
+- **Emergent Behavior Analysis**
+- **Quantum-Classical Coherence**
+- **AI Model Validation in Context**
+- **Mission Thread Testing**
+- **Fault Injection & Resilience Testing**
+
+---
+
+## 3.3 Agent-Oriented Control Layers
+
+- **Strategic Layer Agents**
+- **Tactical Layer Agents**
+- **Effector Agents**
+- **Perceptor Agents**
+- **Specialist Agents**
+- **Ethical Oversight Agent (AMEDEO-L5)**
+
+---
+
+## 3.4 Quantum-Ethical Alignment Protocol (QEAP)
+
+- Quantum State Verifiability
+- Algorithmic Bias Detection
+- Sensitivity Analysis
+- Explainability of Quantum-AI Decisions
+- Ethical Boundary Testing
+
+---
+
+## 3.5 Semantic Loop Telemetry (SLT)
+
+- Contextual Enrichment
+- Real-Time Interpretation
+- Multi-Modal Data Fusion
+- Feedback to SUT Design
+- InfoCoded Traceability
+
+---
+
+## 3.6 Digital Twin Sync Patterns
+
+- State Mirroring
+- Predictive Divergence
+- Calibration Feedback
+- AR Overlay via GAIA-Q-UI
+- Fault Injection from DTs
+
+---
+
+## 3.7 Failure Mode Modeling
+
+- FMECA-Driven Scenario Generation
+- Quantum-Specific Failures (T1/T2, QPR drift)
+- Cascading Failures
+- Safe State Validation
+- Exploratory Testing and Fuzzing
+
+---
+
+## 3.8 Validation Modes
+
+- Nominal Performance
+- Edge Case/Off-Nominal
+- Degraded Mode
+- Interface Stress
+- Long-Duration Stability
+- Certification Evidence Generation
+
+---
+
+## 3.9 HIL Thinking as AI-Ethical Ontology Anchor
+
+- Empirical Ethics Testing
+- Consequence Modeling
+- Human Oversight Training
+- Verifiable Behavior via InfoCoded Logs
+- Ontology Refinement of “Ethical Behavior”
+
+---
+
+## Summary
+
+HIL Thinking enables **semantically aware**, **ethically governed**, and **technically rigorous** validation of GAIA-QAO systems, integrating simulation, real-time data, and modular AI agents into a continuous and auditable learning loop.
+⸻
+
+
+
 # GAIA-QAO Aerospace Documentation
 
 > **GENERAL DISCLAIMER:**
