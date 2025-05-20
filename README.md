@@ -257,590 +257,465 @@ graph TD
 5.  **Quantum-Ready Assurance:** Framework built for conventional, hybrid, and quantum-enhanced systems.
 6.  **Streamlined Regulatory Compliance:** Automated evidence generation, real-time auditable records.
 
----
-## Part 1: Programming Languages, Development Environments, and Libraries in Aerospace and Defense Software
-*(Summary: Details foundational software technologies for all GAIA-QAO sectors. Covers languages, IDEs, compilers, RTOS, frameworks, buses, and certification standards. Full prose report contains detailed analysis and tables.)*
-
-### 1.1 Introduction
-### 1.2 Common Programming Languages in Aerospace Systems
-    #### 1.2.1 Ada and SPARK: Design for Safety and High Integrity
-    #### 1.2.2 C and C++: Prevalence, Applications, and Safety Challenges
-    #### 1.2.3 Legacy Languages: Fortran, COBOL, JOVIAL and Modernization
-    #### 1.2.4 Emerging Languages: The Potential of Rust for Secure Systems
-    #### 1.2.5 Scripting and Specialized Languages: Python, HDL, and Others
-### 1.3 Development Environments and Toolchains
-    #### 1.3.1 Integrated Development Environments (IDEs)
-    #### 1.3.2 Compilers and Debuggers
-    #### 1.3.3 Static Analysis and Verification Tools
-    #### 1.3.4 Tool Qualification (DO-330 / ED-215)
-    #### 1.3.5 Configuration Management and Build Systems
-### 1.4 Real-Time Operating Systems and Avionics Frameworks
-    #### 1.4.1 ARINC 653 Partitioned RTOS
-    #### 1.4.2 Standardized APIs and Middleware (ARINC 653, FACE, DDS, CCSDS, GMSEC)
-    #### 1.4.3 Communication Libraries and Data Buses (MIL-STD-1553, ARINC 429, AFDX, SpaceWire, TTEthernet)
-    #### 1.4.4 Geospatial and Mission-Specific Libraries (SPICE for Space)
-### 1.5 Certification Standards and Their Impact
-    #### 1.5.1 DO-178C / ED-12C – Objectives, DALs, and Key Supplements
-    #### 1.5.2 DO-254 – Design Assurance for Airborne Electronic Hardware
-    #### 1.5.3 MIL-STD-498 and MIL-STD-882 (System Safety)
-    #### 1.5.4 NASA and ESA Standards (NPR 7150.2, ECSS)
-    #### 1.5.5 Addressing Multi-Core Processors: CAST-32A and AMC 20-193
-### 1.6 Civil vs. Military Systems: Key Differences
-    #### 1.6.1 Regulatory Oversight & Standards
-    #### 1.6.2 Security Imperatives
-    #### 1.6.3 Operational Requirements and Environment
-    #### 1.6.4 Impact on Technology Choices & Development Lifecycles
-### 1.7 Software in Domain-Specific Applications
-    #### 1.7.1 Embedded Systems: Flight Control, Engine Management, Navigation (Air & Space)
-    #### 1.7.2 Simulation Systems: Aerodynamics, Orbital Mechanics, Flight Training (Air & Space)
-    #### 1.7.3 Mission Planning Systems: Architectures, Geospatial Data, Backend Libraries (Air & Space)
-    #### 1.7.4 Ground Control Systems: UAV GCS, Spacecraft Operations, ATM
-### 1.8 Historical Evolution and Legacy Systems
-### 1.9 Conclusion and Strategic Recommendations
-    #### 1.9.1 Key Conclusions on Aerospace & Defense Software Ecosystem
-    #### 1.9.2 High-Level Recommendations for Technology Adoption and Standards Compliance
-### 1.10 References (Conceptual from Full Prose Report)
 
 ---
-## Part 2: Hardware-in-the-Loop (HIL) Thinking Specification
-    *(Summary: HIL Thinking is a core GAIA-QAO V&V methodology for Air and Space. Involves testing AI/autonomous systems against high-fidelity simulations and hardware responses. Full specification details principles, architecture, requirements, and roadmap.)*
-
-### 2.0 IDEA SUMMARY: Hardware-in-the-Loop (HIL) Thinking
-### 2.1 Introduction (to HIL Thinking Specification)
-### 2.2 Core Principles of HIL Thinking
-### 2.3 Implementation Example: AI-driven Anomaly Diagnosis (Air/Space)
-### 2.4 Active Inference Loop Architecture
-    *(Mermaid Diagram Placeholder - User to provide code for corrected diagram from Turn 141)*
-    ```mermaid
-    graph TD
-        subgraph "GAIA-Q AI Agent - Onboard or Ground"
-            A["Cognitive Core - Reasoning Engine"]
-            A_IM["Internal Models - Spacecraft Environment Fault Signatures"]
-        end
-
-        subgraph "HIL Interaction & Orchestration Layer"
-            B["HIL Query-Stimulus Formulation"]
-            C["Hardware-Simulator Command Translator"]
-            D["Feedback Ingestion & Pre-processor"]
-            E["Loop Orchestrator & Sequencer"]
-        end
-
-        subgraph "Hardware-in-the-Loop - HIL Testbed"
-            F["Space Env Simulator - Orbital Dynamics Thermal Radiation"]
-            G["Spacecraft Hardware - Physical EGSE-Flatsat or High-Fidelity Digital Twin"]
-            H["Sensor Simulators - Real Sensors Interface"]
-            I["Actuator Simulators - Real Actuators Interface"]
-        end
-
-        subgraph "Traceability & Learning Layer"
-            J["InfoCode Logger & AGAD Archiver"]
-            K["Performance Metrics & Verifier"]
-            L["Model Adaptation & Learning Module"]
-        end
-
-        A -- "1. Formulate Hypothesis - Test Query" --> B
-        B -- "2. Define HIL Scenario - Stimulus" --> E
-        E -- "3. Command HIL Setup" --> C
-        C -- "4. Execute Command on HW-Sim" --> G
-        F -- "Simulated Env Affects HW-DT" --> G
-        G -- "HW State to Sensors" --> H
-        G -- "HW Responds via Actuators" --> I
-        H -- "5. Raw Feedback - Sensor Data" --> D
-        I -- "5. Raw Feedback - Actuator State" --> D
-        D -- "6. Processed Feedback to AI" --> A
-        A -- "7. Update Reasoning & Internal Models" --> A_IM
-        A_IM -- "Influence Future Reasoning" --> A
-        A -- "8. Output Decision - Diagnosis - Plan" --> Out["Output to User-System"]
-
-        A -- "Log Reasoning" --> J
-        B -- "Log Query" --> J
-        C -- "Log Command" --> J
-        D -- "Log Feedback" --> J
-        E -- "Log Orchestration" --> J
-        A -- "Evaluate Against Metrics" --> K
-        K -- "Verification Results" --> A
-        A_IM -- "Update Models Based on Learning" --> L
-        L -- "Refined Models" --> A_IM
-    ```
-### 2.5 Technical Requirements for HIL Thinking
-    #### 2.5.1 AI Agent Architecture
-    #### 2.5.2 HIL Testbed / Simulator Integration
-    #### 2.5.3 Real-Time Feedback Ingestion & Processing
-    #### 2.5.4 Loop Orchestrator & Control
-    #### 2.5.5 Metric & Verifier Layer
-    #### 2.5.6 Traceability and Logging Infrastructure
-    #### 2.5.7 Digital Twin Synchronization
-    #### 2.5.8 Domain-Specific HIL Requirements (Air, Space, Quantum)
-### 2.6 Benefits of HIL Thinking
-### 2.7 Integration with GAIA-Q Architecture
-### 2.8 Implementation Roadmap for HIL Thinking
-### 2.9 Conclusion (HIL Thinking Specification)
-
+title: "GAIA‑QAO Aerospace General Index (AGI) – Master Index"
+version: "1.0" 
+status: "DRAFT"
+last_updated: 2025-05-21 
 ---
-## Part 3: Object Identification System (GQOIS)
-    *(Summary: Details GAIA-QAO Object ID system. Tier 1: Top-Level Objects (ID: DO-A-CCC-ST-MDL-SSSSS-CC). Tier 2: Subsystems (ID: {Parent_ID} :: SSS-MDLs-SERs-CCs). Defines components, formation, registry.)*
 
-### 3.1 System Overview
-### 3.2 Tier 1: Top-Level Object Identification
-    #### 3.2.1 Top-Level Object ID Structure (`DO-A-CCC-ST-MDL-SSSSS-CC`)
-    #### 3.2.2 Component Descriptions (DO, A-AssetClass, CCC-OrgCode, ST-ObjectType, MDL-ObjectModel, SSSSS-Serial, CC-Config)
-### 3.3 Tier 2: Subsystem Identification
-    #### 3.3.1 Subsystem ID Structure Concept (`{Parent_Tier_1_ID} :: SSS-MDLs-SERs-CCs`)
-    #### 3.3.2 Component Descriptions (SSS-SubsystemType, MDLs-SubsystemModel, SERs-SubsystemSerial, CCs-SubsystemConfig)
-### 3.4 Database Implementation (General Overview)
-### 3.5 ID Formation Process Examples (Air and Space Systems)
-    #### 3.5.1 Tier 1: Top-Level Object Formation
-    #### 3.5.2 Tier 2: Subsystem Formation
-### 3.6 Registry Management (Considerations for both Tiers)
+> **Purpose:** A definitive, hierarchical index that references every managed artifact (documents, datasets, standards, software, etc.) inside the GAIA‑QAO ecosystem. Each entry will ultimately resolve to a GAIA‑QAO `INFOCODE` or Object‑ID for traceability.
 
----
-## Part 4: Top-Level Object Model Registry
-    *(Summary: Catalogs GAIA-QAO Top-Level Object Models (MDL codes: [G][N][V]). Section 4.2 covers Air System (AS) models, Section 4.3 details Space System (SP) models. Illustrative examples incorporate green power and quantum enhancements.)*
+## Table of Contents
 
-### 4.1 Model Code Structure for Top-Level Objects (`[G][N][V]`)
-### 4.2 Air Systems (AS) Top-Level Object Models (Condensed Catalog)
-    #### 4.2.1 Passenger Transport (Object Type `ST=PAX`) Models
-    #### 4.2.2 Cargo Transport (Object Type `ST=CGO`) Models
-    #### 4.2.3 Intelligence, Surveillance, Reconnaissance (Object Type `ST=ISR`) Models
-    #### 4.2.4 Scientific Research (Object Type `ST=SCI` for AS) Models
-    #### 4.2.5 Utility (Object Type `ST=UTL`) Models
-    #### 4.2.6 Recreational & Sport (Object Type `ST=REC`) Models
-    #### 4.2.7 Experimental (Air) (Object Type `ST=XPR` for AS) Models
-    #### 4.2.8 Lighter Than Air (Object Type `ST=LTA`) Models
-    #### 4.2.9 Military Aircraft (Object Type `ST=MIL`) Models
-        *(Condensed examples: 1-2 lines per ST category)*
-### 4.3 Space Systems (SP) Top-Level Object Models (Condensed Catalog)
-    #### 4.3.1 Satellite (Object Type `ST=SAT`) Models
-    #### 4.3.2 Orbital Platform/Vehicle (Object Type `ST=ORB`) Models
-    #### 4.3.3 Launch System (Object Type `ST=LCH`) Models
-    #### 4.3.4 Probe (Object Type `ST=PRB`) Models
-    #### 4.3.5 Experimental (Space) (Object Type `ST=XPS`) Models
-    #### 4.3.6 Space Defense (Object Type `ST=DEF`) Models
-        *(Condensed examples: 1-2 lines per ST category)*
-### 4.4 Implementation Guidelines (Top-Level Object Models)
-
----
-## Part 5: Subsystem Identification & Registry
-    *(Summary: Details Tier 2 GQOIS for major subsystems. Defines SSS, MDLs (subsystems), and SERs codes. Includes examples for air/space subsystems, green power units, and quantum components.)*
-
-### 5.1 Defining Subsystem Type Codes (SSS)
-### 5.2 Subsystem Model Coding (`MDLs` for subsystems)
-### 5.3 Subsystem Serialization (`SERs` for subsystems)
-### 5.4 Example Subsystem Catalog Entries (AS, SP, Green, Quantum Examples)
-    #### 5.4.1 Avionics & Computing Subsystems
-    #### 5.4.2 Propulsion & Power Subsystems
-    #### 5.4.3 Structural & Mechanical Subsystems
-    #### 5.4.4 Payload & Mission-Specific Subsystems
-    #### 5.4.5 Quantum-Specific Subsystems
-### 5.5 Database Considerations for Subsystems
-
----
-## Part 6: Configuration Management
-    *(Summary: Defines Configuration Codes (CC, CCs) using [T][N] structure. Lists standard and domain-specific types. Outlines registry management.)*
-
-### 6.1 Configuration Code Structure (`[T][N]`)
-### 6.2 Standard Configuration Types (T Codes - Applicable to AS & SP)
-### 6.3 Domain-Specific Configurations
-    #### 6.3.1 Air Systems (AS) Specific Configuration Types
-    #### 6.3.2 Space Systems (SP) Specific Configuration Types
-### 6.4 Configuration Management in Registry
-
----
-## Part 7: Database Schema
-    *(Summary: Provides PostgreSQL DDL for GAIA-QAO Registry. Includes tables for Tier 1 & 2 components, instances, configurations, link tables, management/integration. Core ERD illustrates structure.)*
-
-### 7.1 Core ID Component Tables (Tier 1)
-### 7.2 Subsystem-Related Tables (Tier 2)
-### 7.3 Object Instances and Configurations Tables (Tier 1 & Tier 2)
-### 7.4 Registry Management Tables
-### 7.5 Integration and Reference Tables
-### 7.6 Views and Functions
-    *(Includes core ERD from Appendix C.1)*
-```mermaid
-erDiagram
-    domains { char(2) domain_code PK }
-    asset_classes { char(1) asset_class_code PK }
-    organizations { char(3) organization_code PK }
-    object_types { int object_type_id PK; char(3) object_type_code; char(2) domain_code FK; char(1) asset_class_code FK }
-    autonomy_levels { char(1) autonomy_code PK }
-    object_models { int model_id PK; char(3) model_code; int object_type_id FK; char(3) organization_code FK; char(1) autonomy_code FK }
-    subsystem_types { char(3) sss_code PK }
-    subsystem_models { int subsystem_model_id PK; varchar(5) subsystem_model_code; char(3) sss_code FK; char(3) manufacturer_org_code FK }
-    object_instances { uuid instance_id PK; int model_id FK }
-    subsystem_instances { uuid subsystem_instance_id PK; int subsystem_model_id FK }
-    object_configurations { int configuration_id PK; uuid instance_id FK }
-    subsystem_configurations { int subsystem_configuration_id PK; uuid subsystem_instance_id FK }
-    object_subsystem_installations { int installation_id PK; uuid parent_object_instance_id FK; uuid child_subsystem_instance_id FK }
-    domains ||--|{ object_types : defines_for
-    asset_classes ||--|{ object_types : defines_for
-    object_types ||--o{ object_models : categorizes
-    organizations ||--o{ object_models : developed_by
-    autonomy_levels ||--o{ object_models : has_inherent
-    subsystem_types ||--o{ subsystem_models : categorizes
-    organizations ||--o{ subsystem_models : manufactured_by
-    object_models ||--o{ object_instances : instance_of
-    subsystem_models ||--o{ subsystem_instances : instance_of
-    object_instances ||--o{ object_configurations : has_configs
-    subsystem_instances ||--o{ subsystem_configurations : has_configs
-    object_instances }o--o{ object_subsystem_installations : hosts
-    subsystem_instances }o--o{ object_subsystem_installations : installed_in
-```
-
----
-## Part 8: GAIA-Q-UI System Specification
-    *(Summary: Details GAIA-Q-UI for the GAIA-QAO framework. Covers UI architecture, AI model routing, MCP event schemas, and AGAD/InfoCode integration. Full spec is extensive.)*
-
-### 8.0 Introduction and Purpose (GAIA-Q-UI)
-    #### 8.0.1 Goals (GAIA-Q-UI)
-    #### 8.0.2 Guiding Principle: Leveraging AI in Development (GAIA-Q-UI)
-### 8.1 UI Architecture Overview (GAIA-Q-UI)
-    #### 8.1.1 Design Philosophy
-    #### 8.1.2 Key UI Components Diagram (Full diagram in detailed spec)
-    #### 8.1.3 Technology Stack Considerations
-    #### 8.1.4 Performance, Scalability, and Reliability Considerations
-### 8.2 AI Model Routing Engine Logic (GAIA-Q-UI)
-    #### 8.2.1 Input Analysis for Routing
-    #### 8.2.2 Routing Logic Approach
-    #### 8.2.3 Model Selection Criteria (Examples)
-    #### 8.2.4 Fallback and Error Handling
-    #### 8.2.5 Aerospace Task-Specific Model Prioritization (Examples for AS & SP)
-    #### 8.2.6 Handling Quantum-Specific Data and Models
-### 8.3 MCP Event Schemas (GAIA-Q-UI)
-    #### 8.3.1 General Event Structure
-    #### 8.3.2 Example Event Types and Payloads (AS & SP examples)
-### 8.4 AGAD–InfoCode Trace Integration (GAIA-Q-UI)
-    #### 8.4.1 Session Management & InfoCoding
-    #### 8.4.2 Log Structure and Content
-    #### 8.4.3 Audit Trail Generation
-    #### 8.4.4 Data Lineage
-### 8.5 Initial Development Roadmap & Next Steps (GAIA-Q-UI)
-### 8.6 Security and Data Privacy Framework (GAIA-Q-UI)
-    #### 8.6.1 Data Security
-    #### 8.6.2 Access Control
-    #### 8.6.3 Data Privacy & Sovereignty
-    #### 8.6.4 Secure Development Lifecycle (SDL)
-
----
-## Part 9: Implementation Guidelines (Overall System)
-    *(Summary: Provides guidelines for database setup, UI development, and Documentation Governance & Standards (GAIA-CO-ASD-LIB). Includes INFOCODE-INDEX and Standard AGI/AToC for Air (ATA) and Space (SS 00-99) System Technical Libraries.)*
-
-### 9.1 Database Implementation Guidelines
-### 9.2 User Interface Recommendations (Registry UI & GAIA-Q-UI)
-### 9.3 Documentation Governance & Standards (GAIA-CO-ASD-LIB)
-    #### 9.3.1 INFOCODE-INDEX System
-        ##### 9.3.1.1 Structure: PREFIX-DOMAIN-CATEGORY-ITEM_ID[-VERSION][-STATUS]
-        ##### 9.3.1.2 Component Definitions (PREFIX, DOMAIN, CATEGORY, ITEM_ID, etc.)
-        ##### 9.3.1.3 Example INFOCODEs
-    #### 9.3.2 GAIA-CO-ASD-LIB Standard Details (Content & Data Management)
-        ##### 9.3.2.1 File Formats & Data Exchange
-        ##### 9.3.2.2 File Naming Convention
-        ##### 9.3.2.3 Metadata Requirements (YAML Front-Matter)
-    #### 9.3.3 Document Lifecycle and Control
-        ##### 9.3.3.1 Versioning
-        ##### 9.3.3.2 Lifecycle States
-        ##### 9.3.3.3 Change Control
-        ##### 9.3.3.4 Version Control System (VCS)
-    #### 9.3.4 Standard AGI/AToC for System Technical Libraries
-        ##### 9.3.4.1 Top-Level Document Parts Overview
-        ##### 9.3.4.2 Detailed AToC for Part I: Air Systems (AS) Documentation (ATA-100 Based Structure)
-            *   ATA 00: GENERAL
-            *   ATA 05: TIME LIMITS/MAINTENANCE CHECKS
-            *   ATA 06: DIMENSIONS AND AREAS
-            *   ATA 07: LIFTING AND SHORING
-            *   ATA 08: LEVELING AND WEIGHING
-            *   ATA 09: TOWING AND TAXIING
-            *   ATA 10: PARKING, MOORING, STORAGE AND RETURN TO SERVICE
-            *   ATA 11: PLACARDS AND MARKINGS
-            *   ATA 12: SERVICING
-            *   ATA 18: VIBRATION AND NOISE ANALYSIS (HELICOPTER ONLY)
-            *   **AIRCRAFT SYSTEMS (ATA 20-49 + GAIA-QAO Specifics)**
-            *   ATA 20: STANDARD PRACTICES - AIRFRAME
-            *   ATA 21: AIR CONDITIONING AND PRESSURIZATION
-            *   ATA 22: AUTO FLIGHT
-            *   ATA 23: COMMUNICATIONS
-            *   ATA 24: ELECTRICAL POWER
-            *   ATA 25: EQUIPMENT/FURNISHINGS
-            *   ATA 26: FIRE PROTECTION
-            *   ATA 27: FLIGHT CONTROLS
-            *   ATA 28: FUEL
-            *   ATA 29: HYDRAULIC POWER
-            *   ATA 30: ICE AND RAIN PROTECTION
-            *   ATA 31: INDICATING/RECORDING SYSTEMS (INSTRUMENTS)
-            *   ATA 32: LANDING GEAR
-            *   ATA 33: LIGHTS
-            *   ATA 34: NAVIGATION
-            *   ATA 35: OXYGEN
-            *   ATA 36: PNEUMATIC
-            *   ATA 38: WATER/WASTE
-            *   ATA 45: CENTRAL MAINTENANCE SYSTEM (CMS)
-            *   ATA 46: INFORMATION SYSTEMS
-            *   ATA 47: INERT GAS SYSTEM (NITROGEN GENERATION)
-            *   ATA 49: AIRBORNE AUXILIARY POWER
-            *   **STRUCTURES (ATA 51-57)**
-            *   ATA 51: STANDARD PRACTICES AND STRUCTURES - GENERAL
-            *   ATA 52: DOORS
-            *   ATA 53: FUSELAGE
-            *   ATA 54: NACELLES/PYLONS
-            *   ATA 55: STABILIZERS
-            *   ATA 56: WINDOWS
-            *   ATA 57: WINGS
-            *   **PROPELLER/ROTOR (ATA 60-67)**
-            *   ATA 61: PROPELLERS/PROPULSORS
-            *   *(ATA 62-67 as applicable)*
-            *   **POWER PLANT (ATA 70-85)**
-            *   ATA 71: POWER PLANT - GENERAL
-            *   ATA 72: ENGINE (TURBINE/TURBOPROP)
-            *   ATA 73: ENGINE FUEL AND CONTROL
-            *   ATA 74: IGNITION
-            *   ATA 75: AIR (Engine Bleed Air)
-            *   ATA 76: ENGINE CONTROLS
-            *   ATA 77: ENGINE INDICATING
-            *   ATA 78: ENGINE EXHAUST
-            *   ATA 79: ENGINE OIL
-            *   ATA 80: STARTING
-            *   *(ATA 81-84 as applicable, e.g., 83 Accessory Gearboxes)*
-            *   ATA 85: RECIPROCATING ENGINE (If applicable for GreenTech/Hybrid)
-            *   **GAIA-QAO Specific ATA Extensions (Conceptual)**
-            *   ATA 100: SUSTAINABLE AVIATION FUELS (SAF) & HYDROGEN SYSTEMS
-            *   ATA 101: BATTERY & ELECTRIC PROPULSION SYSTEMS (Non-Primary for AS)
-            *   ATA 102: FUEL CELL SYSTEMS (AS Auxiliary or Propulsion)
-            *   ATA 103: LIFECYCLE CARBON FOOTPRINT & EMISSIONS (GA-SToP-CO₂)
-            *   ATA 200: QUANTUM GOVERNANCE & ASSURANCE SYSTEMS (AS Specific)
-        ##### 9.3.4.3 Detailed AToC for Part II: Space Systems (SP) Documentation (SS-based)
-            *   SS 00: General Space System Information & Introduction
-                *   SS 00.00: System Overview, Mission Objectives, GQOIS ID Breakdown
-                *   SS 00.10: Applicable Documents, Standards, and INFOCODE Index
-                *   SS 00.20: Terminology and Acronyms Specific to this Space System
-                *   SS 00.30: Safety Summary & Planetary Protection Plan
-            *   SS 01: Propulsion Systems
-                *   SS 01.00: General Description and Architecture
-                *   SS 01.1: Chemical Space Propulsion
-                *   SS 01.2: Electric Propulsion (EP)
-                *   SS 01.3: Green Propulsion (Space Specific)
-                *   SS 01.4: Advanced and Novel Propulsion Concepts
-            *   SS 02: Flight Computing and Avionics
-                *   SS 02.00: General Avionics Architecture & Philosophy
-                *   SS 02.1: Space Electronics Components
-                *   SS 02.2: Avionics Systems and Subsystems
-            *   SS 03: Aerospace Power and Energy Storage (Space Focus)
-                *   SS 03.00: General Power System Architecture for Spacecraft
-                *   SS 03.1: Power Generation in Space
-                *   SS 03.2: Energy Storage for Space Applications
-                *   SS 03.3: Power Management and Distribution (PMAD) for Spacecraft
-            *   SS 04: Robotic Systems (for Spacecraft Operations)
-                *   SS 04.00: General Robotic System Overview
-                *   SS 04.3: Manipulation
-                *   SS 04.5: Autonomous Rendezvous & Docking/Capture (AR&D)
-            *   SS 05: Communications, Navigation, and Information Systems (Space Focus)
-                *   SS 05.00: General System Overview
-                *   SS 05.1: Optical Communications
-                *   SS 05.2: Radio Frequency (RF) Communications
-                *   SS 05.3: Space Networking
-                *   SS 05.4: Position, Navigation, and Timing (PNT)
-                *   SS 05.5: Emerging Communications Technologies
-            *   SS 06: Human Health, Life Support, and Habitation Systems (Space Focus)
-                *   SS 06.00: General Overview
-                *   SS 06.1: Environmental Control and Life Support Systems (ECLSS)
-                *   SS 06.2: Extravehicular Activity (EVA) Systems
-            *   SS 07: Mission Infrastructure (Spacecraft-based elements for long duration/exploration)
-                *   SS 07.00: General Overview
-                *   SS 07.2: Long-Duration Mission Support Systems
-            *   SS 08: Sensors and Instruments (Bus & Payload Interface - Space Focus)
-                *   SS 08.00: General Overview, Payload Accommodation Philosophy
-                *   SS 08.1: Sensor Components and Focal Plane Technologies (Bus Sensors)
-                *   SS 08.3: Spacecraft Environment Sensors (Bus Health & GNC Related)
-                *   SS 08.X: Payload Support Systems (Bus-Provided Resources)
-            *   SS 09: Entry, Descent, and Landing (EDL) Systems
-                *   SS 09.00: General EDL System Overview
-                *   SS 09.1: Entry Phase Systems
-                *   SS 09.2: Descent Phase Systems
-                *   SS 09.3: Landing Phase Systems
-                *   SS 09.5: Advanced EDL GNC
-            *   SS 10: Autonomous Systems (Onboard Capabilities for Spacecraft)
-                *   SS 10.00: General Autonomy Architecture
-                *   SS 10.1: Awareness (Sensing and Perception)
-                *   SS 10.2: Reasoning and Acting (Planning, Decision Making, Execution)
-            *   SS 11: Software, Modeling, and Simulation (Flight SW & Onboard Models for Space)
-                *   SS 11.00: Overview and Software Development Standards
-                *   SS 11.1: Flight Software
-                *   SS 11.2: Onboard Models
-                *   SS 11.3: Onboard Simulation Capabilities
-            *   SS 12: Materials, Structures, and Mechanical Systems (Space Focus)
-                *   SS 12.00: General Overview
-                *   SS 12.1: Materials
-                *   SS 12.2: Structures
-                *   SS 12.3: Mechanical Systems
-            *   SS 13: Ground Support Equipment & Systems (Space Specific)
-                *   SS 13.00: Overview of GSE for Space Systems
-                *   SS 13.10: Launch Pad GSE & Umbilicals
-                *   SS 13.20: Spacecraft Assembly, Integration & Test (AIT) GSE
-                *   SS 13.30: Propellant & Fluid Servicing GSE
-                *   SS 13.40: Mission Control Center Hardware & Consoles
-                *   SS 13.50: Deep Space Network (DSN) Ground Station Equipment
-            *   SS 14: Thermal Management Systems (Space Focus)
-                *   SS 14.00: General Thermal Architecture
-                *   SS 14.1: Thermal Analysis, Modeling, and Testing
-                *   SS 14.2: Heat Acquisition and Transport
-                *   SS 14.3: Heat Rejection Systems
-                *   SS 14.4: Thermal Control Coatings and Surfaces
-                *   SS 14.5: Cryogenic Systems and Coolers
-                *   SS 14.6: Multi-Layer Insulation (MLI)
-            *   SS 15: System Safety (Space Specific Hazards & Mitigations)
-                *   SS 15.00: Overall System Safety Program Plan
-                *   SS 15.10: Hazard Analysis
-                *   SS 15.20: FMEA/FMECA, Fault Tree Analysis
-                *   SS 15.30: Launch, Range, and Re-entry Safety
-                *   SS 15.40: Space Debris Mitigation & End-of-Life Disposal Plan
-            *   SS 16: Integration, Assembly, Test & Verification (Space Specific)
-                *   SS 16.00: System Integration, Assembly, and Test (IAT) Plan
-                *   SS 16.10: Assembly and Integration Procedures (AIP)
-                *   SS 16.20: Verification and Validation (V&V) Philosophy and Approach
-                *   SS 16.30: Test Levels
-                *   SS 16.40: Environmental Test Campaigns
-            *   SS 17: Guidance, Navigation, and Control (GN&C for Spacecraft)
-                *   SS 17.00: General GNC System Architecture
-                *   SS 17.1: Attitude Determination and Control Systems (ADCS/ACS)
-                *   SS 17.2: Orbit Determination and Trajectory Control Systems
-                *   SS 17.3: Integrated GNC Systems
-                *   SS 17.4: Advanced GNC Technologies
-            *   SS 18: Mission Operations (Space Segment & Ground Interface)
-                *   SS 18.00: Mission Operations Concept (CONOPS)
-                *   SS 18.10: Telemetry, Tracking, and Command (TT&C) Operations
-                *   SS 18.20: Nominal Mission Timelines and Operational Sequences
-                *   SS 18.30: Contingency Operations and Anomaly Response Procedures
-                *   SS 18.40: Payload Operations Planning and Execution
-            *   SS 19: Quantum Systems & Payloads (Specific to GAIA-QAO Q-SPACE)
-                *   SS 19.00: Overview of Integrated Quantum Systems in Spacecraft
-                *   SS 19.10: Quantum Communication Payloads
-                *   SS 19.20: Quantum Sensing Payloads
-                *   SS 19.30: Onboard Quantum Computing/Processing Units
-                *   SS 19.40: Quantum System Environmental Considerations for Space
-                *   SS 19.50: Specific V&V and Calibration for Quantum Systems in Space
-            *   SS 20 - SS 99: Reserved for future expansion.
-        ##### 9.3.4.4 Detailed AToC for Part III: Common Nomenclature (CN)
-            * CN 01: General Terminology
-            * CN 02: Air Systems Terminology
-            * CN 03: Space Systems Terminology
-            * CN 04: Quantum Systems Terminology
-        ##### 9.3.4.5 Detailed AToC for Part IV: Governance & Best Practices (GB)
-            * GB 01: Documentation Standards
-            * GB 02: Quality Assurance
-            * GB 03: Configuration Management
-            * GB 04: Knowledge Management
-        ##### 9.3.4.6 Detailed AToC for Part V: Project Management (PM)
-            * PM 01: Project Lifecycle
-            * PM 02: Project Planning
-            * PM 03: Project Execution
-            * PM 04: Project Closure
-        ##### 9.3.4.7 Detailed AToC for Part VI: Reference Standards (RS)
-            * RS 01: International Standards
-            * RS 02: Aerospace Standards
-            * RS 03: Military Standards
-            * RS 04: Certification Requirements
-            * RS 05: Quantum Standards
-    9.4 Meta-Documentation (Management of this AGI document)
-    9.5 Next Steps (Overall Project Implementation)
-
-## Appendices
-    Appendix A: Top-Level Object Type (ST) Codes
-        A.1 Air Systems (AS) Object Types (ST Codes)
-        A.2 Space Systems (SP) Object Types (ST Codes)
-    Appendix B: ID Examples (General Focus)
-        B.1 Tier 1: Top-Level Object ID Examples
-        B.2 Tier 2: Subsystem ID Examples
-    Appendix C: Database Schema Diagrams (Illustrative)
-        C.1 Core ID Component Tables and Relationships
-    Appendix D: Illustrative Aerospace Use Cases for GAIA-Q-UI
-        D.1 Use Case: Anomaly Diagnosis
-        D.2 Use Case: Quantum System/Sensor Design Support
-        D.3 Use Case: AI-Assisted Technical Documentation Generation
-    Appendix E: Note on Detailed Survey of Aerospace Software Technologies
-    Appendix F: Subsystem Type (SSS) Codes List (Initial Proposal - General Focus)
-    Appendix G: Documentation Templates
-        G.1 System Specification Template
-            G.1.1 Document Control
-            G.1.2 Introduction
-            G.1.3 System Requirements
-            G.1.4 Verification and Validation (V&V) Overview
-            G.1.5 Appendix A (within G.1): Traceability Matrix
-        G.2 Interface Control Document (ICD) Template
-            G.2.1 Document Control
-            G.2.2 Introduction
-            G.2.3 Interface Definition
-            G.2.4 Interface Verification Matrix
-            G.2.5 Appendix A (within G.2): Connector Pinout Details
-            G.2.6 Appendix B (within G.2): Data Dictionary
-        G.3 Test Procedure Template
-            G.3.1 Document Control
-            G.3.2 Introduction
-            G.3.3 Test Requirements to be Verified
-            G.3.4 Test Setup
-            G.3.5 Test Execution Steps
-            G.3.6 Data Recording
-            G.3.7 Pass/Fail Criteria
-            G.3.8 Post-Test Procedures
-            G.3.9 Safety Precautions
-        G.4 Air System (ATA-based) Technical Document Template
-            G.4.1 Description and Operation
-            G.4.2 Maintenance Procedures
-            G.4.3 Troubleshooting
-            G.4.4 Appendix A (within G.4): Illustrations
-        G.5 Space System (SS-based) Technical Document Template
-            G.5.1 System Description and Operation
-            G.5.2 Operational Procedures
-            G.5.3 Telemetry and Telecommand List
-            G.5.4 FDIR & Contingency Procedures
-            G.5.5 Appendix A (within G.5): System Block Diagram
-            G.5.6 Appendix B (within G.5): Interface Summary
-        G.6 Quantum System Specification Template
-            G.6.1 Document Control
-            G.6.2 Introduction
-            G.6.3 Quantum Operational Principles and Architecture
-            G.6.4 Q-System Performance Specifications
-            G.6.5 Q-System Interface Requirements
-            G.6.6 Q-System Environmental Requirements
-            G.6.7 Q-System Software Requirements
-            G.6.8 Q-System V&V Approach
-            G.6.9 Appendix A (within G.6): Detailed Quantum Parameters
-            G.6.10 Appendix B (within G.6): Q-System Operational Concept
-        G.7 Project Management Plan (PMP) Template
-            G.7.0 Foundational Disambiguation: Components vs. Modules
-            G.7.1 Document Control (for PMP)
-            G.7.2 Revision History (for PMP)
-            G.7.3 Table of Contents (for PMP)
-            G.7.4 Introduction (PMP Section 1)
-            G.7.5 Project Scope Management (PMP Section 2)
-            G.7.6 Work Breakdown Structure (WBS) (PMP Section 3)
-            G.7.7 Project Organization & Stakeholders (PMP Section 4)
-            G.7.8 Schedule Management (PMP Section 5)
-            G.7.9 Cost Management (PMP Section 6)
-            G.7.10 Quality Management (PMP Section 7)
-            G.7.11 Resource Management (PMP Section 8)
-            G.7.12 Communication Management (PMP Section 9)
-            G.7.13 Risk Management (PMP Section 10)
-            G.7.14 Change Management (PMP Section 11)
-            G.7.15 Project Acceptance Criteria (PMP Section 12)
-            G.7.16 Supporting Documents & Appendices (for PMP)
+* [How to Use the AGI](#how-to-use-the-agi)
+* [I. GAIA‑QAO Framework & Foundational Principles (`AGI-000`)](#i-gaia-qao-framework--foundational-principles-agi-000)
+* [II. Core Engineering & Scientific Disciplines (`AGI-100`)](#ii-core-engineering--scientific-disciplines-agi-100)
+* [III. Aerodynamics & Flight Mechanics (`AGI-200`)](#iii-aerodynamics--flight-mechanics-agi-200)
+* [IV. Propulsion Systems (`AGI-300`)](#iv-propulsion-systems-agi-300)
+* [V. Aerospace Structures & Materials (`AGI-400`)](#v-aerospace-structures--materials-agi-400)
+* [VI. Avionics, Guidance, Navigation & Control (`AGI-500`)](#vi-avionics-guidance-navigation--control-agi-500)
+* [VII. Systems Design, Integration & Lifecycle Management (`AGI-600`)](#vii-systems-design-integration--lifecycle-management-agi-600)
+* [VIII. Aeronautical Systems (Aircraft) (`AGI-700`)](#viii-aeronautical-systems-aircraft-agi-700)
+* [IX. Astronautical Systems (Space Systems) (`AGI-800`)](#ix-astronautical-systems-space-systems-agi-800)
+* [X. Ground Support, Operations & Infrastructure (`AGI-900`)](#x-ground-support-operations--infrastructure-agi-900)
+* [XI. Cross‑Cutting Enablers & Considerations (`AGI-1000`)](#xi-cross-cutting-enablers--considerations-agi-1000)
+* [XII. Emerging Technologies & Future Outlook (`AGI-1100`)](#xii-emerging-technologies--future-outlook-agi-1100)
+* [XIII. GAIA‑QAO Specific Documentation & Projects (`AGI-1200`)](#xiii-gaia-qao-specific-documentation--projects-agi-1200)
+* [XIV. Abbreviations & Glossary (`AGI-1300`)](#xiv-abbreviations--glossary-agi-1300)
 
 ---
 
-> **GENERAL DISCLAIMER:**
-> This master document and all its parts represent an AI-generated proposal for the GAIA-Q & AMPEL framework and the GAIA-QAO object identification system. It has not been validated through implementation in aerospace systems nor by aerospace certification bodies. The concepts are based on current industry trends, open source, quantum computing, and federated aerospace engineering, as well as on the information provided.
+## How to Use the AGI
+
+1.  **Navigate** using the section codes (e.g., `AGI-210`) to locate domains quickly.
+2.  **Link/Resolve** each placeholder (`[INFOCODE: …]`, `[DOC: …]`, `[DATA: …]`, `[CATALOG: …]`, `[STD: …]`, `[LINK: …]`, `[REPOSITORY: …]`) to its concrete resource inside GAIA‑QAO as the content becomes available.
+3.  **Extend** by adding deeper Object‑IDs under any node—AGI is intentionally expandable.
+4.  **Maintain** consistency: update this file whenever you create or migrate resources so the index never lags behind reality.
 
 ---
-**Document Metadata Footer (Conceptual for Master Document)**
 
-**Status**: Iterative Draft (Granular Structurally Expanded Condensed General Version with Full AToC)
-**Master Document InfoCode**: QAO-SYS-AGI-MASTER-V0R8CSG2-DRAFT
-**Version**: 0.8.4-condensed-general-granular-struct-fullAToC.1
-**Focus**: GAIA-QAO General (Air, Space, Green Powered, Quantum Governed & Enhanced)
-**Compliance Scope**: GAIA-QAO v1.3 (GQOIS), AGAD (principles), COAFI (alignment), MCP Sync (planned)
-**Keywords**: `[GAIA-QAO][AGI][Object ID][Quantum Aerospace][Open Source][GreenTech][Air Systems][Space Systems][Documentation Framework][Registry][Database Schema][Configuration Management][GAIA-Q-UI][ATA Chapters][SS 00-99][INFOCODE]`
+## I. GAIA‑QAO Framework & Foundational Principles (`AGI-000`)
+
+### A. GAIA‑QAO Vision, Mission, and Governance (`AGI-001`)
+
+1.  Vision Statement (GAIA‑Q & AMPEL) `[INFOCODE: QAO-GEN-VIS-V1R0]`
+2.  Guiding Principles & Philosophy `[INFOCODE: QAO-GEN-PHL-V1R0]`
+3.  GAIA‑QAO Organizational Structure & Federated Modules `[INFOCODE: QAO-ORG-STR-V1R0]`
+4.  Governance Model and Contribution Guidelines `[INFOCODE: QAO-GOV-MDL-V1R0]`
+
+### B. GAIA‑QAO Documentation Architecture (`AGI-002`)
+
+1.  **Aerospace General Index (AGI)** – *this file* `[INFOCODE: QAO-SYS-AGI-MASTER]`
+2.  INFOCODE‑INDEX System Standard `[INFOCODE: QAO-SYS-STD-INFOCODE]`
+3.  GAIA‑CO‑ASD‑LIB Documentation Standard `[INFOCODE: QAO-SYS-STD-DOCLIB]`
+4.  Technical Publication Standard Language (TPSL) & Workflow (TPWD) `[INFOCODE: QAO-STD-PUB-TPSL]`
+
+### C. GAIA‑QAO Object Identification System (GQOIS) (`AGI-003`)
+
+1.  GQOIS Standard Document `[INFOCODE: QAO-SYS-STD-GQOIS]`
+2.  Top‑Level Object Model Registry `[LINK: RegistryUI]`
+3.  Subsystem Identification & Registry `[LINK: RegistryUI]`
+
+### D. GAIA‑QAO Core Technologies & Methodologies (`AGI-004`)
+
+1.  Hardware‑in‑the‑Loop (HIL) Thinking Specification `[INFOCODE: QAO-MTD-HIL-SPEC]`
+2.  Aerospace Generative Algorithm Development (AGAD) Framework `[INFOCODE: QAO-MTD-AGAD-FRM]`
+3.  GAIA‑Q‑UI System Specification `[INFOCODE: QAO-AUI-STD-GAIAQUI]`
+4.  Model‑Based Systems Engineering (MBSE) Approach `[INFOCODE: QAO-MTD-MBSE-GUIDE]`
+
+### E. Engineering Ethics, Sustainability, & Responsible Innovation (`AGI-005`)
+
+1.  GAIA‑QAO Ethical Charter for AI & Autonomy `[INFOCODE: QAO-ETH-AI-CHARTER]`
+2.  Sustainability Goals & Life‑Cycle Assessment Framework `[INFOCODE: QAO-SUS-LCA-FRM]`
+3.  Responsible Innovation Practices `[INFOCODE: QAO-GEN-RESINNO-V1R0]`
 
 ---
-© Amedeo Pelliccia · GAIA-QAO – *Federated Quantum Aerospace Intelligence*
 
-> "Knowledge shared is future engineered."
+## II. Core Engineering & Scientific Disciplines (`AGI-100`)
+
+### A. Mathematics & Physics (`AGI-110`)
+
+1.  Advanced Calculus & Differential Equations `[REF: Standard Texts, Libraries]`
+2.  Linear Algebra, Tensor Analysis & Applications `[REF: Standard Texts, Libraries]`
+3.  Numerical Methods & Computational Science `[INFOCODE: QAO-CMP-LIB-NUMERICAL]`
+4.  Probability, Statistics & Data Analysis `[INFOCODE: QAO-CMP-LIB-STATS]`
+5.  Classical Mechanics `[REF: Standard Texts]`
+6.  Thermodynamics & Heat Transfer `[INFOCODE: QAO-PHY-THD-GUIDE]`
+7.  Fluid Mechanics `[INFOCODE: QAO-PHY-FLD-GUIDE]`
+8.  Electromagnetism & Wave Propagation `[INFOCODE: QAO-PHY-ELM-GUIDE]`
+9.  Solid Mechanics `[INFOCODE: QAO-PHY-SLD-GUIDE]`
+
+### B. Computational Science & Engineering (`AGI-120`)
+
+1.  High‑Performance Computing (HPC) Resources `[INFOCODE: QAO-HPC-RES-GUIDE]`
+2.  Computational Fluid Dynamics (CFD) – Solvers & Best Practices `[INFOCODE: QAO-CFD-BPG-V1R0]`
+3.  Finite Element Analysis (FEA) – Solvers & Best Practices `[INFOCODE: QAO-FEA-BPG-V1R0]`
+4.  Simulation & Modeling Frameworks `[INFOCODE: QAO-SIM-FRM-OVERVIEW]`
+5.  Data Visualization Techniques & Tools `[INFOCODE: QAO-VIS-TOOL-GUIDE]`
+
+---
+
+## III. Aerodynamics & Flight Mechanics (`AGI-200`)
+
+### A. Fundamental Aerodynamics (`AGI-210`)
+
+1.  Incompressible & Compressible Flow Regimes `[DOC: AERO-FUND-001]`
+2.  Airfoil & Wing Theory `[DOC: AERO-WING-001]`
+3.  Boundary Layers & Turbulence `[DOC: AERO-BLT-001]`
+4.  Vortex Dynamics `[DOC: AERO-VRTX-001]`
+
+### B. High‑Speed Aerodynamics (`AGI-220`)
+
+1.  Transonic `[DOC: AERO-TRANSONIC-001]`
+2.  Supersonic `[DOC: AERO-SUPERSONIC-001]`
+3.  Hypersonic & Aerothermodynamics `[DOC: AERO-HYPERSONIC-001]`
+
+### C. Aircraft Flight Mechanics & Performance (`AGI-230`)
+
+1.  Equations of Motion & Performance Metrics `[DOC: FLMECH-PERF-001]`
+2.  Takeoff, Landing, Climb, Cruise, Descent `[DOC: FLMECH-OPER-001]`
+3.  Maneuvering Flight & Flight Envelope `[DOC: FLMECH-MANVR-001]`
+
+### D. Stability & Control (`AGI-240`)
+
+1.  Static Stability `[DOC: STABCON-STATIC-001]`
+2.  Dynamic Stability & Modes of Motion `[DOC: STABCON-DYNAMIC-001]`
+3.  Handling Qualities & Control Surface Design `[DOC: STABCON-HQ-001]`
+
+### E. Computational & Experimental Aerodynamics (`AGI-250`)
+
+1.  CFD Methodologies & Applications `[REF: AGI-120]`
+2.  Wind Tunnel Testing & Techniques `[DOC: AERO-EXP-WT-001]`
+3.  Flight Testing Principles & Data Analysis `[DOC: AERO-EXP-FLT-001]`
+
+### F. Specialized Aerodynamics (`AGI-260`)
+
+1.  Rotorcraft `[DOC: AERO-ROTOR-001]`
+2.  UAV/Drone `[DOC: AERO-UAV-001]`
+3.  Aeroacoustics `[DOC: AERO-ACOUSTIC-001]`
+4.  Bio‑Inspired Aerodynamics `[DOC: AERO-BIO-001]`
+
+---
+
+## IV. Propulsion Systems (`AGI-300`)
+
+### A. Fundamentals & Thermodynamic Cycles (`AGI-310`)
+
+1.  Propulsion Principles & Performance Metrics `[DOC: PROP-FUND-001]`
+2.  Brayton, Rankine, Otto, Diesel Cycles `[REF: AGI-110]`
+3.  Nozzle Theory & Thrust Generation `[DOC: PROP-NOZZLE-001]`
+
+### B. Air‑Breathing Propulsion (`AGI-320`)
+
+1.  Piston Engines & Propellers `[DOC: PROP-PISTON-001]`
+2.  Gas Turbine Engines `[DOC: PROP-GTE-001]`
+    *   Component Design `[DOC: PROP-GTECOMP-001]`
+3.  Ramjets & Scramjets `[DOC: PROP-RAMJET-001]`
+4.  Advanced Concepts (PDE, RDE) `[DOC: PROP-ADVAB-001]`
+
+### C. Rocket Propulsion (`AGI-330`)
+
+1.  Chemical Rockets `[DOC: PROP-CHEMROCKET-001]`
+2.  Electric Propulsion `[DOC: PROP-ELECROCKET-001]`
+3.  Nuclear Propulsion `[DOC: PROP-NUCROCKET-001]`
+4.  Advanced & Exotic Concepts `[DOC: PROP-ADVROCKET-001]`
+
+### D. Propellants, Fuels & Combustion (`AGI-340`)
+
+1.  Aviation & Rocket Propellants `[DATA: PROP-FUELDB-V1R0]`
+2.  Combustion Processes & Modeling `[DOC: PROP-COMBMODEL-001]`
+3.  Sustainable Aviation Fuels (SAF) & Green Propellants `[DOC: PROP-SAF-001]`
+
+### E. Propulsion Integration & Testing (`AGI-350`)
+
+1.  Engine‑Airframe/Spaceframe Integration `[DOC: PROP-INTG-001]`
+2.  Propulsion Test Facilities & Methods `[DOC: PROP-TEST-001]`
+3.  Thermal Management & Emissions Control `[DOC: PROP-THERMALEMIT-001]`
+
+---
+
+## V. Aerospace Structures & Materials (`AGI-400`)
+
+### A. Structural Mechanics & Analysis (`AGI-410`)
+
+1.  Stress, Strain, Elasticity & Failure `[REF: AGI-110]`
+2.  Beams, Plates, Shells `[DOC: STRUCT-ANL-BPS-001]`
+3.  FEA for Structures `[REF: AGI-120]`
+4.  Stability & Buckling `[DOC: STRUCT-STAB-001]`
+5.  Vibration & Aeroelasticity `[DOC: STRUCT-VIBROAERO-001]`
+6.  Fatigue & Fracture Mechanics `[DOC: STRUCT-FATFRAC-001]`
+
+### B. Aerospace Materials (`AGI-420`)
+
+1.  Metallic Alloys `[DATA: MATL-METALDB-V1R0]`
+2.  Composite Materials & Manufacturing `[DATA: MATL-COMPDB-V1R0]`
+3.  Ceramics, Polymers & Advanced Materials `[DATA: MATL-ADVDB-V1R0]`
+4.  Material Characterization & Testing Standards `[STD: MATL-TEST-STD-001]`
+
+### C. Structural Design & Manufacturing (`AGI-430`)
+
+1.  Load Analysis & Design Philosophies `[DOC: STRUCT-DESPHIL-001]`
+2.  Manufacturing Processes `[DOC: MANUF-PROC-001]`
+3.  NDT & Inspection `[DOC: NDT-INSPECT-001]`
+
+### D. Thermal Protection Systems & Extreme Environments (`AGI-440`)
+
+1.  TPS Design & Materials `[DOC: TPS-DESIGN-001]`
+2.  Structural Behavior in Extremes `[DOC: STRUCT-EXTREME-001]`
+
+---
+
+## VI. Avionics, Guidance, Navigation & Control (`AGI-500`)
+
+### A. Avionics Systems & Architecture (`AGI-510`)
+
+1.  Communication Systems `[DOC: AV-COMM-001]`
+2.  Navigation Systems `[DOC: AV-NAV-001]`
+3.  Surveillance Systems `[DOC: AV-SURV-001]`
+4.  Flight Management & Autopilot `[DOC: AV-FMSAUTO-001]`
+5.  Cockpit Displays & HMI `[DOC: AV-HMI-001]`
+6.  Data Buses & Networks `[STD: AV-DATABUS-STD-001]`
+7.  Integrated Modular Avionics `[DOC: AV-IMA-001]`
+
+### B. Guidance, Navigation & Control Theory (`AGI-520`)
+
+1.  Control Theory `[DOC: GNC-THEORY-001]`
+2.  State Estimation & Filtering `[DOC: GNC-KALMAN-001]`
+3.  Trajectory Optimization & Guidance Laws `[DOC: GNC-TRAJOPT-001]`
+
+### C. GNC Implementation & Hardware (`AGI-530`)
+
+1.  Sensors `[DATA: SENSOR-SPECDB-V1R0]`
+2.  Actuation Systems `[DOC: ACTUATOR-SYS-001]`
+3.  Embedded Systems & RT Software `[DOC: SW-EMBEDDED-001]`
+
+### D. Specialized GNC Applications (`AGI-540`)
+
+1.  UAV/Drone GNC `[DOC: GNC-UAV-001]`
+2.  Spacecraft AOCS `[DOC: GNC-AOCS-001]`
+3.  Launch Vehicle GNC `[DOC: GNC-LAUNCH-001]`
+4.  Autonomous Rendezvous & Docking `[DOC: GNC-ARD-001]`
+
+---
+
+## VII. Systems Design, Integration & Lifecycle Management (`AGI-600`)
+
+### A. Systems Engineering Principles (`AGI-610`)
+
+1.  Requirements Engineering `[DOC: SE-REQ-001]`
+2.  System Architecture & MBSE `[DOC: SE-ARCH-MBSE-001]`
+3.  Verification & Validation `[DOC: SE-VV-001]`
+4.  Risk, Configuration & Interface Management `[DOC: SE-MGMT-001]`
+
+### B. Aerospace Vehicle Design Lifecycle (`AGI-620`)
+
+1.  Conceptual & Preliminary Design `[DOC: DES-CONCEPT-001]`
+2.  Detailed Design, Analysis & Optimization `[DOC: DES-DETAIL-001]`
+3.  Trade Studies & Decision Analysis `[DOC: DES-TRADE-001]`
+
+### C. Manufacturing, Assembly & Testing (`AGI-630`)
+
+1.  Production Planning & Automation `[DOC: MANUF-PLAN-001]`
+2.  System‑Level Integration & Ground Testing `[DOC: TEST-GROUND-001]`
+3.  Flight Testing & Qualification `[DOC: TEST-FLIGHT-001]`
+
+### D. Operations, Sustainment & End‑of‑Life (`AGI-640`)
+
+1.  RMS `[DOC: RMS-001]`
+2.  Prognostics & Health Management `[DOC: PHM-001]`
+3.  MRO Practices `[DOC: MRO-001]`
+4.  Decommissioning & Disposal Strategies `[DOC: EOL-STRAT-001]`
+
+---
+
+## VIII. Aeronautical Systems (Aircraft) (`AGI-700`)
+
+### A. Fixed‑Wing Aircraft (`AGI-710`)
+
+1.  Types & Classifications `[CATALOG: AC-TYPE-FIXED]`
+2.  Design Features & Performance Characteristics `[DOC: AC-FIXED-DESIGN-001]`
+
+### B. Rotorcraft (`AGI-720`)
+
+1.  Types & Classifications `[CATALOG: AC-TYPE-ROTOR]`
+2.  Design Features & Aeromechanics `[DOC: AC-ROTOR-DESIGN-001]`
+
+### C. LTA & V/STOL Systems (`AGI-730`)
+
+1.  Airships, Aerostats `[CATALOG: AC-TYPE-LTA]`
+2.  Powered Lift & AAM/eVTOL `[CATALOG: AC-TYPE-VSTOL]`
+    *   AAM Concepts `[DOC: AC-AAM-CONCEPT-001]`
+
+### D. Aircraft Subsystems (`AGI-740`)
+
+1.  Landing Gear, ECS, Hydraulic, Electrical, Fuel, Ice/Fire Protection `[DOC: AC-SUBSYS-OVERVIEW-001]`
+    *   Example: Landing Gear `[DOC: AC-SUBSYS-LG-001]`
+
+---
+
+## IX. Astronautical Systems (Space Systems) (`AGI-800`)
+
+### A. Orbital Mechanics & Astrodynamics (`AGI-810`)
+
+1.  Two‑Body Problem & Maneuvers `[DOC: SPACE-ORBMECH-001]`
+2.  Perturbations & Interplanetary Trajectories `[DOC: SPACE-ASTRODYN-001]`
+
+### B. Spacecraft Design & Subsystems (`AGI-820`)
+
+1.  Mission Types `[CATALOG: SC-TYPE-MISSION]`
+2.  Subsystems Overview `[DOC: SC-SUBSYS-OVERVIEW-001]`
+    *   Example: ADCS `[DOC: SC-SUBSYS-ADCS-001]`
+
+### C. Launch Systems & Operations (`AGI-830`)
+
+1.  Launch Vehicle Types `[CATALOG: LV-TYPE]`
+2.  Launch Site Operations `[DOC: LV-OPS-GROUND-001]`
+3.  Ascent Dynamics `[DOC: LV-ASCENT-001]`
+
+### D. Human Spaceflight (`AGI-840`)
+
+1.  ECLSS `[DOC: HUMAN-ECLSS-001]`
+2.  EVA Systems `[DOC: HUMAN-EVA-001]`
+3.  Habitats & Stations `[DOC: HUMAN-HABITAT-001]`
+4.  Crewed Spacecraft Design `[DOC: HUMAN-SC-DESIGN-001]`
+
+### E. Space Environment & Mitigation (`AGI-850`)
+
+1.  Radiation, MMOD, Plasma, AO `[DOC: SPACE-ENV-EFFECTS-001]`
+2.  Space Debris & SSA `[DOC: SPACE-DEBRIS-SSA-001]`
+3.  Planetary Protection `[STD: PLANPROT-STD-001]`
+
+---
+
+## X. Ground Support, Operations & Infrastructure (`AGI-900`)
+
+### A. Airports & ATM (`AGI-910`)
+
+1.  Airport Design & Ops `[DOC: AIRPORT-DESIGN-OPS-001]`
+2.  ATC & ATM Systems `[DOC: ATM-SYS-001]`
+3.  UTM `[DOC: UTM-SYS-001]`
+
+### B. Spaceports & Mission Operations (`AGI-920`)
+
+1.  Launch Complex Design `[DOC: SPACEPORT-DESIGN-001]`
+2.  Mission Control & Ground Networks `[DOC: MCC-GROUNDNET-001]`
+3.  Spacecraft Operations `[DOC: SC-OPS-001]`
+
+### C. Test & Evaluation Infrastructure (`AGI-930`)
+
+1.  Wind Tunnels, Propulsion Stands `[CATALOG: TEST-FACILITIES]`
+2.  Environmental Chambers `[CATALOG: ENVTEST-FACILITIES]`
+3.  Launch & Flight Test Ranges `[CATALOG: RANGE-FACILITIES]`
+
+---
+
+## XI. Cross‑Cutting Enablers & Considerations (`AGI-1000`)
+
+### A. Environment, Human Factors & Safety (`AGI-1010`)
+
+1.  Atmospheric Science & Space Weather `[DOC: ENVSCI-001]`
+2.  Human Factors Engineering `[DOC: HF-ERGONOMICS-001]`
+3.  Aerospace Medicine & Physiology `[DOC: AROMED-001]`
+4.  Safety Management Systems (SMS) & Risk Assessment `[DOC: SAFETY-SMS-RISK-001]`
+5.  Accident Investigation & Prevention `[DOC: ACCIDENT-INVEST-001]`
+
+### B. Regulatory, Policy, Economic & Legal (`AGI-1020`)
+
+1.  Aviation & Space Law, Treaties, Conventions `[DOC: LEGAL-AEROSPACE-001]`
+2.  National & International Regulatory Bodies (FAA, EASA, ICAO, UNCOPUOS) `[LINKS: REG-BODIES]`
+3.  Certification Standards & Air/Spaceworthiness `[STD: CERT-STD-OVERVIEW]`
+4.  Export Control, Intellectual Property & Technology Transfer `[DOC: LEGAL-IP-EXPORT-001]`
+5.  Aerospace Economics, Market Analysis & Program Management `[DOC: ECON-PROGRAMMGMT-001]`
+
+### C. Digital Transformation & Cybersecurity (`AGI-1030`)
+
+1.  Digital Twin & Model‑Based Engineering `[DOC: DIGITAL-TWIN-MBE-001]`
+2.  Big Data, AI & Machine Learning in Aerospace `[DOC: AI-ML-AEROSPACE-001]`
+3.  Cybersecurity for Aerospace Systems & Infrastructure `[DOC: CYBERSEC-AERO-001]`
+4.  Internet of Things (IoT) & Connectivity in Aerospace `[DOC: IOT-AERO-001]`
+
+---
+
+## XII. Emerging Technologies & Future Outlook (`AGI-1100`)
+
+### A. Sustainable Aerospace (`AGI-1110`)
+
+1.  Electric & Hybrid‑Electric Propulsion `[DOC: FUTURE-ELECPROP-001]`
+2.  Hydrogen Technologies `[DOC: FUTURE-H2-TECH-001]`
+3.  Advanced SAF & Green Propellants `[REF: AGI-340]`
+4.  Novel Vehicle Configurations `[DOC: FUTURE-CONFIG-001]`
+5.  Circular Economy & Lifecycle Sustainability `[REF: AGI-005]`
+
+### B. Advanced Materials & Manufacturing (`AGI-1120`)
+
+1.  Self‑Healing Materials, 4D Printing, Metamaterials `[DOC: FUTURE-MATL-MANUF-001]`
+2.  Large‑Scale Additive Manufacturing & In‑Space Manufacturing `[DOC: FUTURE-AM-ISM-001]`
+
+### C. Autonomous Systems & AI Advancement (`AGI-1130`)
+
+1.  Advanced Autonomous Operations `[DOC: FUTURE-AUTONOMY-001]`
+2.  Explainable AI (XAI) & Trustworthy AI `[DOC: FUTURE-XAI-TRUST-001]`
+3.  Swarm Technologies & Collaborative Robotics `[DOC: FUTURE-SWARM-001]`
+
+### D. Next‑Gen Space Exploration & Utilization (`AGI-1140`)
+
+1.  On‑Orbit Servicing, Assembly & Manufacturing (OSAM) `[DOC: FUTURE-OSAM-001]`
+2.  In‑Situ Resource Utilization (ISRU) & Lunar/Martian Economy `[DOC: FUTURE-ISRU-001]`
+3.  Advanced Space Transportation `[REF: AGI-330]`
+
+### E. Quantum Technologies in Aerospace (`AGI-1150`)
+
+1.  Quantum Computing Applications `[DOC: FUTURE-QUANTCOMP-001]`
+2.  Quantum Sensing & Metrology `[DOC: FUTURE-QUANTSENS-001]`
+3.  Quantum Communication & Cryptography `[DOC: FUTURE-QUANTCOMM-001]`
+
+### F. Hypersonic Technologies (`AGI-1160`)
+
+1.  Hypersonic Vehicle Design `[DOC: FUTURE-HYPERSONIC-VEH-001]`
+2.  Enabling Technologies for Hypersonics `[DOC: FUTURE-HYPERSONIC-TECH-001]`
+
+---
+
+## XIII. GAIA‑QAO Specific Documentation & Projects (`AGI-1200`)
+
+### A. GAIA‑QAO Internal Standards & Procedures (`AGI-1210`)
+
+1.  Project Management Procedures `[INFOCODE: QAO-PRM-PROCD-00X]`
+2.  Data Management & Sharing Protocols `[INFOCODE: QAO-DAT-PROT-00X]`
+3.  Approved Tooling & Software `[INFOCODE: QAO-TOOL-STACK-00X]`
+
+### B. Flagship Projects & Initiatives (`AGI-1220`)
+
+1.  **AMPEL360 BWB‑Q100 Project** `[INFOCODE: AMPEL360-INDEX]`
+    *   Technical Description Manual `[INFOCODE: AMPEL360-TDM]`
+    *   System Architecture `[INFOCODE: AMPEL360-ARCH]`
+    *   Ops & Maintenance Manuals `[INFOCODE: AMPEL360-OPS]`
+    *   Subsystem Design Docs `[INFOCODE: AMPEL360-SUBSYS-…]`
+2.  **AMPEL360plus (Interplanetary) Project** `[INFOCODE: AMPEL360P-INDEX]`
+    *   Conceptual Design `[INFOCODE: AMPEL360P-CD]`
+    *   Technology Demonstrator `[INFOCODE: AMPEL360P-TECHDEM]`
+3.  *[Other GAIA-QAO Projects Placeholder]* `[INFOCODE: QAO-PROJ-OTHER-INDEX]`
+
+### C. Research Outputs & Publications (`AGI-1230`)
+
+1.  Peer‑Reviewed Papers `[REPOSITORY: QAO-PUB-JOURNAL]`
+2.  Conference Proceedings `[REPOSITORY: QAO-PUB-CONF]`
+3.  Technical Reports & White Papers `[REPOSITORY: QAO-REP-TECH]`
+
+### D. Datasets & Models (`AGI-1240`)
+
+1.  Curated Aerospace Datasets `[REPOSITORY: QAO-DATA-CURATED]`
+2.  Validated Simulation Models `[REPOSITORY: QAO-MODEL-VALIDATED]`
+3.  Open‑Source Libraries `[REPOSITORY: QAO-CODE-OPEN]`
+
+---
+
+## XIV. Abbreviations & Glossary (`AGI-1300`)
+
+1.  Master List of Abbreviations & Acronyms `[INFOCODE: QAO-GEN-ABBR-MASTER]`
+2.  GAIA‑QAO Glossary of Terms `[INFOCODE: QAO-GEN-GLOS-MASTER]`
 ```
 
 
