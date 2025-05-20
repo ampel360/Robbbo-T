@@ -718,6 +718,7 @@ last_updated: 2025-05-21
 2.  GAIA‑QAO Glossary of Terms `[INFOCODE: QAO-GEN-GLOS-MASTER]`
 
 
+```markdown
 ---
 title: "Aircraft Technical Description Manual: AMPEL360 BWB-Q100 (Comprehensive - Full ATA Chapter Outlines)"
 version: "1.2"
@@ -890,7 +891,7 @@ change_log:
         *   [20-50 Aircraft Cleaning & Painting](#ata20-50)
         *   [20-60 Quantum Material Treatments (Conceptual)](#ata20-60)
         *   [20-70 Welding, Brazing, Soldering](#ata20-70)
-        *   [20-80 Jacking, Shoring, Hoisting - Standard Practices](#ata20-80)
+        *   [20-80 Sealing and Adhesives - General Practices](#ata20-80) <!-- Added from previous full outline -->
     *   [ATA 21 - AIR CONDITIONING & PRESSURIZATION](#ata21)
         *   [21-00 General Description and Operation](#ata21-00)
         *   [21-10 Compression (Air Supply)](#ata21-10)
@@ -1100,7 +1101,7 @@ change_log:
         *   [49-40 APU Air System](#ata49-40)
         *   [49-50 APU Engine Exhaust](#ata49-50)
         *   [49-60 APU Engine Oil System](#ata49-60)
-        *   [49-70 APU Indicating System](#ata49-70) <!-- Corrected from 47-70 -->
+        *   [49-70 APU Indicating System](#ata49-70)
         *   [49-80 APU Compartment & Installation](#ata49-80)
         *   [49-90 Fuel Cell APU (Conceptual)](#ata49-90)
     *   [ATA 51 - STRUCTURES (General, BWB Philosophy)](#ata51)
@@ -1362,49 +1363,71 @@ The **00-00 (General Description and Operation)** section establishes the founda
       *   Detailed breakdown of the GAIA-QAO Aircraft Model ID: `AS-M-PAX-BW-Q1H`, explaining each segment (Air System - Manned - Passenger - Blended Wing - Quantum Generation 1 - Airframe Variant H).
       *   Explanation of the GAIA-QAO Object ID for the model and how specific aircraft instances will be identified (e.g., `AS-M-PAX-BW-Q1H-SSSSS-CC`).
       *   Serial number effectivity range and major configuration items covered by this version of the manual.
-
+      *   ```markdown
 # ATA 00-10 – Aircraft Identification (GAIA-QAO Prototype AS-M-PAX-BW-Q1H)
 
-&#x20;*Figure: An artistic rendering of the GAIA-QAO prototype (Model **AS-M-PAX-BW-Q1H**) illustrating its blended wing body design.* This prototype serves as the baseline model for the GAIA-QAO program’s internal flight testing and certification. It is a **house prototype variant H** airframe, meaning it is company-owned and not in external service. The following sections detail the aircraft’s model code breakdown, unique identification format, and configuration features in accordance with ATA 00-10 documentation standards.
+&#x20;*Figure 00-10-1: An artistic rendering of the GAIA-QAO prototype (Model **AS-M-PAX-BW-Q1H**) illustrating its blended wing body design.*
+
+This section provides the specific identification details for the AMPEL360 BWB-Q100 aircraft, adhering to the GAIA-QAO Object Identification System (GQOIS). This prototype serves as the baseline model for the GAIA-QAO program’s internal flight testing, systems development, and initial certification efforts. It is a **house prototype variant H** airframe, signifying its primary use for internal research, development, and validation within the GAIA-QAO consortium.
 
 ## Aircraft Model Code Breakdown (AS-M-PAX-BW-Q1H)
 
-The GAIA-QAO prototype is identified by the model code **AS-M-PAX-BW-Q1H**. Each segment of this code denotes a specific classification or feature of the aircraft:
+The GAIA-QAO prototype aircraft is uniquely identified by the model code **`AS-M-PAX-BW-Q1H`**. Each segment of this code has a specific meaning as defined by the GQOIS standard (`INFOCODE: QAO-SYS-STD-GQOIS`):
 
-* **AS** – *Air System*, indicating an aerospace vehicle (aircraft platform).
-* **M** – *Manned*, indicating a crewed aircraft (pilot onboard, not unmanned).
-* **PAX** – *Passenger*, denoting a passenger-carrying role/design.
-* **BW** – *Blended Wing*, indicating a blended wing body airframe design (wing and fuselage integrated into one structure).
-* **Q1** – *Quantum-enhanced, Generation 1*, signifying incorporation of first-generation quantum technology (e.g. quantum sensors or computing) in the aircraft’s systems.
-* **H** – *Airframe Variant H* (house prototype variant), identifying this as the “H” variant used in-house. Variant H is the baseline prototype configuration reserved for internal R\&D and certification.
+*   **`AS`** – **Domain:** Air System. This designates the object as an aerospace vehicle primarily designed for atmospheric flight.
+*   **`M`** – **Autonomy Level:** Manned. This indicates that the aircraft is designed to be operated by an onboard human flight crew.
+*   **`PAX`** – **Functional Class:** Passenger. This defines the primary intended role of the aircraft as passenger transport.
+*   **`BW`** – **Object Category Sub-Type:** Blended Wing. This specifies the airframe configuration, indicating a Blended Wing Body design where the wing and fuselage are integrated into a single lifting structure.
+*   **`Q1`** – **Generation/Technology Level:** Quantum-enhanced, Generation 1. This signifies that the aircraft model incorporates first-generation GAIA-QAO defined quantum technologies (e.g., quantum sensors, quantum computing interfaces, quantum communication systems).
+*   **`H`** – **Model Variant/Version:** Airframe Variant H. This character identifies a specific design iteration or baseline configuration within the `Q1` generation of this BWB passenger aircraft. For this document, `H` designates the "House Prototype" configuration.
 
-## GAIA-QAO Object Identification Structure
+## GAIA-QAO Object Identification Structure for Instances
 
-Individual aircraft instances in the GAIA-QAO program use an extended identification code. The format is `AS-M-PAX-BW-Q1H-SSSSS-CC`, which appends a serial number and configuration code to the model ID:
+While `AS-M-PAX-BW-Q1H` defines the model type, individual aircraft instances manufactured or brought into the GAIA-QAO program utilize an extended identification code based on the Tier 1 GQOIS structure:
 
-* `AS-M-PAX-BW-Q1H` – The base model code (as defined above for the prototype).
-* `SSSSS` – 5-digit *Serial Number* of the aircraft (unique identifier for each unit).
-* `CC` – 2-character *Configuration Code* for the specific build or configuration of that unit.
+**`AS-M-PAX-BW-Q1H-[SSSSS]-[CC]`**
 
-For example, the first prototype in this series could be identified as **AS-M-PAX-BW-Q1H-00001-00** (where **00001** is the serial number and **00** is a configuration code denoting the baseline configuration). This structured code uniquely identifies the aircraft model and instance, and is used in documentation and tracking of the prototype.
+Where:
+*   `AS-M-PAX-BW-Q1H`: The base model code as defined above.
+*   `[SSSSS]`: A 5-digit **Serial Number** that uniquely identifies each physical airframe (e.g., `00001`, `00002`).
+*   `[CC]`: A 2-character **Configuration Code** that denotes a specific build standard, major modification state, or experimental setup of that particular aircraft instance (e.g., `AA` for baseline prototype, `AB` for a subsequent test configuration).
 
-## Applicability and Effectivity (Baseline Prototype)
+**Example Instance ID:**
+The first house prototype aircraft, which is the primary subject of the initial design and testing phase, could be identified as:
+**`AS-M-PAX-BW-Q1H-00001-AA`**
+(Serial Number `00001`, Configuration `AA` - Baseline Prototype).
 
-This document section applies **only to the baseline GAIA-QAO prototype configuration**. There is a single airframe in this configuration, designated with Serial Number **00001**. The prototype is considered *house property*, intended for exclusive use in internal test campaigns and regulatory certification phases. In other words, **Serial Number 00001** is the only unit covered by this documentation, and it represents the company’s internal prototype used for test and certification purposes (not operated by external customers or airlines).
+This structured code is used across all GAIA-QAO documentation, databases (DIKE repository, QAOChain), and lifecycle management systems to ensure unambiguous identification and traceability of each aircraft instance.
 
-## Major Configuration Inclusions (Baseline Features)
+## Applicability and Effectivity (Baseline Prototype Focus)
 
-This prototype aircraft includes several major systems and features in its baseline configuration. The following key inclusions are covered by this version of the documentation:
+Unless otherwise specified, the technical descriptions within this manual (Version 1.2) apply primarily to the **baseline GAIA-QAO house prototype configuration of the AMPEL360 BWB-Q100**, specifically identified as:
 
-* **QAOA v1.0 Flight Control System:** The aircraft is equipped with the QAOA v1.0 certified flight control system (an advanced control software suite leveraging quantum-optimized algorithms for enhanced stability and performance).
-* **AMEDEO Ethical Governance Layer:** An *AMEDEO* AI governance layer is enabled on this prototype, providing an ethical oversight mechanism in the autonomous decision-making processes (ensuring compliance with predetermined safety and ethical constraints during automated operations).
-* **Quantum-Inertial Sensor Suite:** A state-of-the-art quantum inertial measurement unit (IMU) is installed, allowing extremely precise navigation and attitude sensing **without reliance on GPS**. This quantum sensor suite uses quantum interferometry to achieve high accuracy, enabling navigation even in GPS-denied environments.
-* **BWB-H Structural Configuration:** The airframe employs the Blended Wing Body design, variant H. This *BWB-H* configuration is the specific structural layout of the GAIA-QAO prototype, featuring a seamless wing-fuselage integration for improved aerodynamic efficiency. Variant H corresponds to the house prototype’s structural design tweaks (e.g., internal bracing and layout unique to this unit).
-* **Full Telemetry & Digital Twin Synchronization:** The prototype has full telemetry instrumentation and real-time **digital twin** synchronization enabled. In practice, a live digital twin (virtual replica of the aircraft) is maintained in parallel with the physical aircraft, updated continuously with sensor and flight data. This allows engineers to monitor the aircraft’s performance in real time and run virtual tests/analysis concurrently during flights.
+*   **Model:** `AS-M-PAX-BW-Q1H`
+*   **Applicable Instance (for initial detailed design review context):** `AS-M-PAX-BW-Q1H-00001-AA`
 
-This ATA 00-10 Aircraft Identification section thereby establishes the identity and scope of the GAIA-QAO prototype **AS-M-PAX-BW-Q1H**. It ensures that all documentation users understand the exact model definition, the instance identification scheme, and the specific configuration features and limitations applicable to this baseline test aircraft. All subsequent documentation sections for the GAIA-QAO program will reference this identification to ensure consistency and clarity regarding the prototype unit in question.
+This prototype is owned and operated by the GAIA-QAO consortium for internal research, development, technology demonstration, and to support initial certification activities. It is not intended for commercial airline service in its current prototype configuration. Future production variants or significantly modified experimental configurations will be identified with different configuration codes (`CC`) or potentially new model variant codes (`H` suffix changed) and may be covered by revisions or supplements to this manual.
+
+## Major Configuration Inclusions (Baseline Prototype - Variant H, Config AA)
+
+The baseline prototype (`AS-M-PAX-BW-Q1H-00001-AA`) includes the following key systems and features which are central to its design and are described throughout this manual:
+
+*   **Blended Wing Body (BWB-H) Airframe:** The specific structural design, material composition, and aerodynamic configuration of the "House Prototype" variant.
+*   **Hybrid-Electric Distributed Propulsion System:** Comprising turbine generators and electrically driven distributed propulsors as detailed in ATA 61 and ATA 70-series chapters.
+*   **Quantum Navigation System (QNS):** As detailed in ATA 34-70, featuring quantum gyroscopes and accelerometers for GPS-independent navigation.
+*   **Onboard Quantum Processing Units (QPUs):** As detailed in ATA 46-40, for optimization and advanced computational tasks.
+*   **Quantum Key Distribution (QKD) System:** As detailed in ATA 23-80, for secure communications.
+*   **Quantum Structural Monitoring (QSM) System:** As detailed in ATA 53-60, with embedded quantum sensors for airframe health monitoring.
+*   **Quantum Diagnostic Systems (QDS):** As detailed in ATA 45-40, for advanced predictive maintenance.
+*   **Advanced Fly-By-Wire (FBW) Flight Control System:** Tailored for BWB stability and control, with interfaces for quantum sensor data integration (ATA 27).
+*   **Integrated Modular Avionics (IMA) Architecture:** Hosting classical and interfacing with quantum avionic functions (ATA 42).
+*   **Full Telemetry & Digital Twin Synchronization Capability:** Enabling real-time monitoring and data collection for analysis and digital twin alignment.
+*   **QAOA v1.0 Flight Control Augmentation Software:** (If applicable as a distinct software load) Leveraging quantum-inspired optimization algorithms.
+*   **AMEDEO Ethical AI Governance Layer (Conceptual):** Software and protocol layer ensuring AI decision-making (especially in autonomous modes or PHM) adheres to predefined ethical and safety principles.
+
+This ATA 00-10 section, therefore, establishes the precise identity and baseline configuration scope for the AMPEL360 BWB-Q100 as described in this Technical Description Manual. All subsequent chapters refer to this baseline unless specific effectivity for a different configuration is explicitly stated.
+
 ```
-
   *   **00-20 Manual Organization and Use:** <a name="ata00-20"></a>
       *   Explanation of the ATA 100 chaptering system as applied to the AMPEL360 BWB-Q100.
       *   Guidance on how BWB-specific systems and quantum-enhanced technologies are integrated into the standard ATA structure (e.g., dedicated sub-sections like -XX-80, -XX-90 for quantum features, or adaptation of existing chapters).
@@ -1894,46 +1917,77 @@ This ATA 00-10 Aircraft Identification section thereby establishes the identity 
       *   Approved procedures, materials (filler metals, fluxes), and specialized technician qualifications for these joining methods.
       *   Post-joining inspection and NDT requirements.
   *   **20-80 Sealing and Adhesives - General Practices:** <a name="ata20-80"></a>
-      *   Standard practices for the application of aerospace sealants (e.g., aerodynamic smoothing, pressure sealing, corrosion prevention, fuel tank sealing).
-      *   Surface preparation, sealant mixing and application, curing requirements.
-      *   General practices for structural adhesive bonding (if not covered in 20-20), focusing on quality control and process validation.
+      *   Standard practices for the application of aerospace sealants (e.g., aerodynamic smoothing, pressure sealing, corrosion prevention, fuel tank sealing). Types of sealants (e.g., polysulfide, polyurethane, silicone).
+      *   Surface preparation, sealant mixing and application techniques (e.g., fillet, faying surface, injection sealing), curing requirements (time, temperature, humidity).
+      *   General practices for structural adhesive bonding (if not covered in 20-20 or SRM), focusing on quality control, process validation, and NDT of bonded joints.
+
 ---
 ### ATA 21 - AIR CONDITIONING & PRESSURIZATION <a name="ata21"></a>
 
-  *   **21-00 General Description and Operation:**
-      *   Overview of the Environmental Control System (ECS) for the AMPEL360 BWB-Q100, responsible for providing a controlled atmospheric environment for passengers and crew, and for cooling avionics and other equipment.
-      *   System architecture philosophy, considering the large cabin volume and unique shape of the BWB. Emphasis on energy efficiency and quiet operation.
-  *   **21-10 Compression (Air Supply):**
-      *   Source of bleed air (e.g., from engine compressors if applicable in hybrid system, APU) or description of dedicated electrical air compressors (EACs) if a "no-bleed" architecture is adopted.
-      *   Regulation and control of compressed air supply to the ECS packs.
-  *   **21-20 Distribution (Conditioned Air):**
-      *   Description of ducting, manifolds, and valves for distributing conditioned air to the flight compartment, passenger cabin zones, cargo compartments (if conditioned), and equipment cooling.
-      *   Specific challenges and solutions for air distribution within the wide BWB cabin to ensure uniform temperature and ventilation.
-      *   Air filtration systems (e.g., HEPA, potential for advanced UVC or other purification).
-  *   **21-30 Pressurization Control:**
-      *   Description of the automatic pressurization control system, including controllers, outflow valve(s), positive and negative pressure relief valves.
-      *   Cabin altitude scheduling, rate of change control, and emergency depressurization capabilities.
-      *   Manual pressurization control.
-  *   **21-40 Heating:**
-      *   Sources of heat (e.g., heat exchangers using engine bleed air, electric heaters).
-      *   Temperature control systems for maintaining desired cabin and flight compartment temperatures.
-  *   **21-50 Cooling:**
-      *   Description of air conditioning packs (e.g., air cycle machines - ACMs, vapor cycle systems - VCSs).
-      *   Refrigeration cycle, heat exchangers, condensers, evaporators.
-      *   Cooling performance and control.
-  *   **21-60 Temperature Control:**
-      *   Automatic temperature control system, zone temperature sensors, temperature selectors for flight crew and potentially cabin zones.
-      *   Integration with the overall ECS logic.
-  *   **21-70 Moisture/Humidity Control:**
-      *   Systems for controlling cabin humidity levels (e.g., water separators, humidifiers).
-  *   **21-80 Quantum-Enhanced Air Quality Monitoring (Conceptual):**
-      *   *If designed:* Detailed description of any integrated quantum sensors (e.g., quantum cascade lasers for trace gas detection, quantum-dot based pathogen sensors) for ultra-sensitive, real-time monitoring of cabin air quality.
-      *   Parameters monitored (e.g., CO2, O2, VOCs, ozone, specific contaminants, microbial presence).
-      *   How this data integrates with the ECS controllers for adaptive air purification, optimized fresh air intake, or early warning of air quality issues.
-      *   Interface with **ATA 45 CMS** for logging and diagnostics.
-  *   **21-90 Equipment Cooling:**
-      *   Systems for cooling avionics bays, galleys, QPUs (supplementing dedicated cryogenic systems), and other heat-generating equipment using conditioned air or dedicated cooling loops.
-
+  *   **21-00 General Description and Operation:** <a name="ata21-00"></a>
+      *   Overview of the Environmental Control System (ECS) for the AMPEL360 BWB-Q100, responsible for providing a controlled atmospheric environment (temperature, pressure, ventilation, humidity) for passengers and crew, and for cooling or heating designated avionics and equipment compartments.
+      *   System architecture philosophy, considering the large cabin volume and unique shape of the BWB, and prioritizing energy efficiency, low noise, and high air quality.
+      *   Major modes of operation (e.g., ground, flight, smoke removal).
+  *   **21-10 Compression (Air Supply):** <a name="ata21-10"></a>
+      *   **Air Source:**
+          *   Primary: Description of dedicated, electrically driven compressors (EACs) if a "no-bleed" or "more electric" architecture is adopted. Number, type, and location of EACs. Power source (**ATA 24**).
+          *   Alternative/Backup: Engine bleed air (from prime mover compressors - **ATA 75** if applicable in hybrid system for ECS) or APU bleed air (**ATA 49**). Description of bleed air control valves, pressure regulators, and precoolers.
+      *   **Regulation and Control:** System for controlling the flow and pressure of compressed air supplied to the ECS packs.
+  *   **21-20 Distribution (Conditioned Air):** <a name="ata21-20"></a>
+      *   **Ducting System:** Layout, materials (e.g., lightweight composites, insulated aluminum), and sizing of ducting for distributing conditioned air from the ECS packs to:
+          *   Flight Compartment (individual crewmember outlets, windshield defogging).
+          *   Passenger Cabin Zones (e.g., multiple temperature control zones within the wide BWB cabin, overhead gaspers, sidewall diffusers, floor-level distribution).
+          *   Galleys and Lavatories.
+          *   Cargo Compartments (if conditioned - **ATA 25**).
+          *   Equipment Cooling Ducts (**ATA 21-90**).
+      *   **Airflow Control Valves:** Modulating valves, shutoff valves, check valves within the distribution network.
+      *   **Recirculation System:** Fans and filters for recirculating a portion of cabin air to improve energy efficiency. Ratio of fresh to recirculated air.
+      *   **Air Filtration:** High-Efficiency Particulate Air (HEPA) filters. Potential for advanced UVC (Ultraviolet-C) sterilization units or other air purification technologies (e.g., PCO - Photocatalytic Oxidation) to enhance cabin air quality.
+  *   **21-30 Pressurization Control:** <a name="ata21-30"></a>
+      *   **Automatic Pressurization Control System:** Description of the redundant digital controllers managing cabin pressure.
+      *   **Outflow Valve(s):** Location, design, and actuation (typically electric motor driven) of the primary outflow valve(s) used to regulate cabin air discharge and thus control cabin pressure. BWB may require multiple or specially designed outflow valves.
+      *   **Cabin Altitude Scheduling:** Programmed schedule for cabin altitude relative to aircraft altitude (e.g., maintaining an 8,000 ft equivalent cabin, or lower for improved comfort).
+      *   **Rate of Change Control:** Limiting the rate of cabin pressure change during climb and descent for passenger comfort.
+      *   **Safety Valves:** Positive pressure relief valves (to prevent overpressure) and negative pressure relief valves (to prevent excessive negative differential pressure).
+      *   **Manual Pressurization Control:** Backup system for flight crew to manually control the outflow valve(s).
+      *   **Ditching/Emergency Depressurization Mode:** Rapid depressurization capability.
+  *   **21-40 Heating:** <a name="ata21-40"></a>
+      *   **Heat Sources:**
+          *   Heat from the compression stage of ECS packs (Air Cycle Machines).
+          *   Electric heaters (if a "no-bleed" system or for supplemental heating).
+          *   Potentially, waste heat recovery from other systems (e.g., power electronics, fuel cells - **ATA 71**).
+      *   **Temperature Control System:** Integration with **ATA 21-60**.
+  *   **21-50 Cooling:** <a name="ata21-50"></a>
+      *   **Air Conditioning Packs (ACPs):**
+          *   Number and location of ACPs.
+          *   Type: Advanced Air Cycle Machines (ACMs) (e.g., multi-stage compressors and turbines, high-efficiency heat exchangers) or Vapor Cycle Systems (VCSs) for ground cooling or supplemental cooling.
+          *   Refrigeration cycle components: compressors, turbines, heat exchangers (primary, secondary, reheaters, condensers, evaporators), water extractors.
+      *   **Cooling Performance and Control:** Capacity to meet cooling demands under various ambient conditions and internal heat loads.
+  *   **21-60 Temperature Control:** <a name="ata21-60"></a>
+      *   **Automatic Temperature Control System:** Digital controllers managing cabin and flight compartment temperatures.
+      *   **Zone Control:** Capability for multiple independent temperature control zones within the BWB passenger cabin.
+      *   **Temperature Sensors:** Location in cockpit, cabin zones, and ECS ducts.
+      *   **Temperature Selectors:** Flight crew and potentially cabin crew interfaces for selecting desired temperatures.
+      *   **Mixing Valves/Trim Air System:** System for mixing hot and cold air to achieve precise temperature control in different zones.
+  *   **21-70 Moisture/Humidity Control:** <a name="ata21-70"></a>
+      *   **Water Separators:** Components in the ACPs to remove condensed moisture from the conditioned air, preventing fogging and maintaining comfortable humidity.
+      *   **Humidification System:** (If installed, for long flights or dry environments) System to add moisture to cabin air. Water source and humidification technology.
+      *   Cabin humidity sensors and control logic.
+  *   **21-80 Quantum-Enhanced Air Quality Monitoring (Conceptual Design Consideration):** <a name="ata21-80"></a>
+      *   *If this advanced feature is incorporated:*
+      *   **Sensor Technology:** Detailed description of the integrated quantum sensors:
+          *   Quantum Cascade Laser (QCL) based spectrometers for real-time detection and quantification of trace gases (e.g., CO, CO2, O3, NOx, VOCs, specific fuel/hydraulic vapors).
+          *   Quantum-dot based fluorescent sensors or other nanophotonic sensors for detection of airborne particulates, allergens, bacteria, or viruses with high sensitivity and specificity.
+      *   **Monitored Parameters & Performance:** Target detection limits (ppb, ppt levels for certain contaminants).
+      *   **Integration & Adaptive Control:** How this ultra-sensitive air quality data is fed into the ECS control logic to:
+          *   Dynamically adjust fresh air ratio and filtration/purification levels.
+          *   Provide early warnings of contamination events or air quality degradation to crew and **ATA 45 CMS**.
+          *   Potentially identify the source of internal air contamination.
+      *   Calibration and maintenance requirements for these quantum air quality sensors.
+  *   **21-90 Equipment Cooling:** <a name="ata21-90"></a>
+      *   Dedicated provisions for cooling heat-generating electronic equipment in avionics bays, instrument panels, and potentially IFE servers or power electronics for hybrid systems.
+      *   Methods: Forced air cooling using conditioned air from the ECS, dedicated cooling fans, or liquid cooling loops for very high heat load components (e.g., QPUs - primary cooling detailed in **ATA 46**, but ECS might provide ambient conditioning for the QPU compartment).
+      *   Temperature monitoring and overheat protection for equipment bays.
 ---
 ### ATA 22 - AUTO FLIGHT (Including Quantum Enhancements) <a name="ata22"></a>
 
