@@ -716,24 +716,7 @@ last_updated: 2025-05-21
 
 1.  Master List of Abbreviations & Acronyms `[INFOCODE: QAO-GEN-ABBR-MASTER]`
 2.  GAIA‑QAO Glossary of Terms `[INFOCODE: QAO-GEN-GLOS-MASTER]`
-```
-Okay, this is a significant undertaking! I will now generate the **complete** "Technical Description Manual" outline for the AMPEL360 BWB-Q100, ensuring all ATA chapters listed in the expanded Table of Contents are fleshed out with descriptive outlines. Placeholders like "*(As previously detailed...)*" will be replaced with the actual content or new descriptive outlines.
 
-The document will be authored by Amedeo Pelliccia, and titles will be structured for hyperlinkability in Markdown.
-
-Given the length, this will be a substantial output.
-
-```markdown
-# Technical Description Manual
-## AMPEL360 BWB-Q100
-
-**(GAIA-QAO Model ID: AS-M-PAX-BW-Q1H)**
-
-**Authored by: Amedeo Pelliccia**
-
----
-
-## Front Matter
 
 ### 1. Title Page <a name="title-page"></a>
 
