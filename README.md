@@ -1,3 +1,16 @@
+---
+title: GAIA‑QA Ontogenesis
+identifier: GAIA-QAO-ONTOGENESIS-0001
+type: Ontological Genesis Manifesto
+status: Active
+originator: Amedeo Pelliccia (Robbbo-T)
+date_activated: 2025-05-28
+activation_phase: AGAD 0.0
+infocode: QAO-GENESIS-CORE-SEED
+references:
+  - GAIA-QAO-MANIFESTO-FOUNDATIONAL-v1.0
+ciphr_signature: "🕊 Beautiness Assembled by Quantum Computing Agents | Tending Visible Hands in Flight Toward Co-evolution"
+---
 **Author:** Amedeo Pelliccia  
 © GAIA-QAO / Quantum Aerospace Organization  
 [![Sponsor me](https://img.shields.io/badge/Sponsor-Robbbo--T-blue?logo=github)](https://github.com/sponsors/Robbbo-T)
@@ -7,23 +20,6 @@
     <img src="https://github.com/Robbbo-T/assets/raw/main/QAO-LOGO.png" alt="GAIA-QAO Logo" width="150"/>
   </a>
 </p>
----
-
-title: GAIA‑QA Ontogenesis
-identifier: GAIA-QAO-ONTOGENESIS-0001
-type: Ontological Genesis Manifesto
-status: Active
-originator: Amedeo Pelliccia (Robbbo-T)
-date\_activated: 2025-05-28
-activation\_phase: AGAD 0.0
-infocode: QAO-GENESIS-CORE-SEED
-references:
-
-* GAIA-QAO-MANIFESTO-FOUNDATIONAL-v1.0
-* GAIA-QTD-SPEC-v1.1
-* AMEDEO-TRUST-CORE
-  ciphr\_signature: "🕊 Beautiness Assembled by Quantum Computing Agents | Tending Visible Hands in Flight Toward Co-evolution"
-
 ---
 
 # 🧬 GAIA‑QA Ontogenesis
