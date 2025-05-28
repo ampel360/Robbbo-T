@@ -20,7 +20,7 @@ ciphr_signature: "🕊 Beautiness Assembled by Quantum Computing Agents | Tendin
     <img src="https://github.com/Robbbo-T/assets/raw/main/QAO-LOGO.png" alt="GAIA-QAO Logo" width="150"/>
   </a>
 </p>
----
+
 
 # 🧬 GAIA‑QA Ontogenesis
 
