@@ -172,7 +172,7 @@ GAIA-QAO employs a modular, multi-layer architecture:
      npm install
      ```
 3. **Configuration**  
-   - Adjust platform configs in `config/` (see [integration_analysis.md](../Technical/integration_analysis.md)).
+   - Adjust platform configs in `config/` (see [integration_analysis.md](../Technical/integration_analysis.md).
    - For quantum backends, set up provider credentials in `.env`.
 
 ## Security & Encryption
