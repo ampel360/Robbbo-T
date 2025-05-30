@@ -27,7 +27,8 @@ backend-fastapi/
 Los routers están organizados por dominio funcional y conectados en `main.py`. Actualmente incluye:
 
 - `users`: gestión de identidades
-- [Próximamente] `content`, `telemetry`, `audit`, `gaia-tokens`, etc.
+- `semantic-query`: búsqueda semántica, RAG y estadísticas
+- `digital-twin`: integración de gemelos digitales y sistemas de producción industrial
 
 ---
 
@@ -1060,4 +1061,23 @@ We'll identify the **best-performing parameter** from each aircraft category and
 
 | Metric               | Hybrid Baseline | AMPEL360 Q100    | Improvement |
 | -------------------- | --------------- | ---------------- | ----------- |
-| **Fuel Consumption** | 2.2 L/100km/pax | 1.43 L/100km/pax
+| **Fuel Consumption** | 2.2 L/100km/pax | 1.43 L/100km/pax | **-35%**    |
+| **CO2 Emissions**    | 98 g/pax-km     | 64 g/pax-km      | **-35%**    |
+| **NOx Emissions**    | 19.6 g/kN       | 11.4 g/kN        | **-42%**    |
+| **Cruise Speed**     | Mach 0.82       | Mach 0.95        | **+16%**    |
+| **Range**            | 6,390 km        | 7,800 km         | **+22%**    |
+| **Noise Level**      | 85.8 EPNdB      | 68.6 EPNdB       | **-20%**    |
+
+---
+
+## 🎯 Next Steps: Quantum Parameter Validation
+
+1. **CFD Modeling** – Quantum aerodynamic validation
+2. **Materials Testing** – Quantum composite prototyping
+3. **Propulsion Simulation** – Quantum interaction modeling
+4. **Systems Integration** – Agent coordination testing
+5. **Regulatory Framework** – Quantum certification standards
+
+---
+
+This parametric foundation provides the baseline for quantum enhancement, ensuring traceability and credibility in AMPEL360 BWB Q100’s revolutionary performance.
