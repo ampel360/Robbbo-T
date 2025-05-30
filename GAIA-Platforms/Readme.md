@@ -98,6 +98,26 @@ flowchart TD
   EXP --> E3["GAIA QAF – Planetary Cleaning Fleet (Deployed)"]
 ```
 
+### Concept Descriptions
+
+| Node                                       | Description                                                                                                                                                    |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **GAIA AIR – Atmospheric Systems**         | Division dedicated to sustainable aerospace solutions for Earth’s atmosphere, including advanced propulsion, civil programs, and ethical transport frameworks. |
+| **GAIA SPACE – Interplanetary Systems**    | Initiatives for exploration, logistics, and habitation beyond Earth, guided by strict ethical expansion protocols.                                             |
+| **GAIA GREENTECH – Environmental Systems** | Core hub for clean‑tech research, renewable energy, and environmental stewardship projects.                                                                    |
+| **GAIA QAF – Quantum Autonomous Fleet**    | Newly introduced quantum‑enhanced autonomous fleet tasked with cleaning, protecting, and regenerating ecosystems on Earth and in space.                        |
+| **COAFI – Canonical Index**                | Master index governing the structure and traceability of all GAIA documentation assets.                                                                        |
+| **CD‑COATFI‑AERODCP – Civil Framework**    | Implementation framework prioritizing advanced technology in civil aerospace development.                                                                      |
+| **QAO – Quantum Orchestration**            | Engine that coordinates quantum resources and algorithms across the GAIA ecosystem.                                                                            |
+| **AMEDEO – Ethical Execution**             | Ontology ensuring that every GAIA operation adheres to rigorous ethical and safety standards.                                                                  |
+| **AMPEL – Semantic Programming**           | Semantic layer that enables federated systems to communicate and reason over shared data models.                                                               |
+| **Federated Ethics Programs**              | Cross‑domain initiatives establishing unified ethical guidelines and compliance mechanisms.                                                                    |
+| **Aerospace‑to‑Civil Spin‑Offs**           | Programs translating aerospace innovations into high‑impact civil and green‑tech products.                                                                     |
+| **Scientific Research Collaboration**      | Open research network fostering knowledge exchange and joint development with external partners.                                                               |
+| **GAIA OCEAN – Sustainable Maritime**      | Forthcoming expansion applying GAIA principles to maritime sustainability and oceanic research.                                                                |
+| **GAIA URBAN – Smart Cities**              | Upcoming module for integrating AI‑driven sustainability and quantum infrastructure into urban environments.                                                   |
+| **GAIA QAF – Planetary Cleaning Fleet**    | Deployed extension of QAF focusing on large‑scale planetary remediation and protection missions.                                                               |
+
 ---
 
 # GP‑ToC – GAIA Platforms Canonical Overview
@@ -169,6 +189,5 @@ flowchart TD
 ---
 
 *Status: README revision v2.0 – updated to include GAIA QAF integration and Mermaid diagram enhancement.*
-
 
 
