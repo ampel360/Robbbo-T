@@ -66,7 +66,7 @@ flowchart TD
   A --> GREENTECH[GAIA GREENTECH – Environmental Systems]
   A --> FOUNDATIONS[Foundational Engines and Frameworks]
   A --> CROSS[Cross-Domain Initiatives]
-  A --> EXP[Upcoming Expansions]
+  A --> EXP[Expansions & Deployments]
 
   AIR --> AIR1[General Architecture]
   AIR --> AIR2[Sustainable Propulsion]
@@ -95,7 +95,7 @@ flowchart TD
 
   EXP --> E1["GAIA OCEAN – Sustainable Maritime (Coming Soon)"]
   EXP --> E2["GAIA URBAN – Smart Cities (Coming Soon)"]
-  EXP --> E3["GAIA QAF – Planetary Cleaning Fleet (Deployed)"]
+  EXP --> E3["GAIA QAF – Planetary Cleaning Fleet (Recently Deployed)"]
 ```
 
 ### Concept Descriptions
@@ -116,7 +116,7 @@ flowchart TD
 | **Scientific Research Collaboration**      | Open research network fostering knowledge exchange and joint development with external partners.                                                               |
 | **GAIA OCEAN – Sustainable Maritime**      | Forthcoming expansion applying GAIA principles to maritime sustainability and oceanic research.                                                                |
 | **GAIA URBAN – Smart Cities**              | Upcoming module for integrating AI‑driven sustainability and quantum infrastructure into urban environments.                                                   |
-| **GAIA QAF – Planetary Cleaning Fleet**    | Deployed extension of QAF focusing on large‑scale planetary remediation and protection missions.                                                               |
+| **GAIA QAF – Planetary Cleaning Fleet**    | Operational mission subset of GAIA QAF focused on planetary‑scale remediation; recently deployed and now entering optimization phase.                          |
 
 ---
 
