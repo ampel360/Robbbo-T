@@ -190,4 +190,3 @@ flowchart TD
 
 *Status: README revision v2.0 – updated to include GAIA QAF integration and Mermaid diagram enhancement.*
 
-
