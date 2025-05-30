@@ -51,7 +51,7 @@ class MemoryItem(BaseModel):
     embedding: List[float]
     metadata: Dict[str, Any] = Field(default_factory=dict)
     created_at: datetime = Field(default_factory=datetime.now)
-    updated_at: datetime = Field(default_factory=datetime.now)
+    updated_at: datetime = Field(default_factory(datetime.now)
     
 class MemoryQuery(BaseModel):
     """Query parameters for memory retrieval"""
@@ -917,6 +917,38 @@ class MemoryService:
         return {
             "ontology_id": ontology_id,
             "data": "Sample ontology data"
+        }
+
+    async def executePhiMode(self, request: dict) -> dict:
+        """
+        Execute ϕ-mode logic
+        
+        Args:
+            request: Request data for ϕ-mode execution
+            
+        Returns:
+            Response data indicating the result of the ϕ-mode execution
+        """
+        # Placeholder implementation for ϕ-mode execution logic
+        return {
+            "request": request,
+            "status": "ϕ-mode executed"
+        }
+
+    async def executeEthicalPromptimization(self, request: dict) -> dict:
+        """
+        Execute promptimización ético-paramétrica logic
+        
+        Args:
+            request: Request data for promptimización ético-paramétrica
+            
+        Returns:
+            Response data indicating the result of the promptimización ético-paramétrica
+        """
+        # Placeholder implementation for promptimización ético-paramétrica
+        return {
+            "request": request,
+            "status": "promptimización ético-paramétrica executed"
         }
 
 # Singleton instance for easy import
