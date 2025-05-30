@@ -3954,6 +3954,108 @@ To put the BWB-Q100’s size and shape into context, we compare it with several 
           *   Key equipment bay access doors/panels.
       *   Cross-references to **ATA 52 (Doors)** and specific system ATA chapters for detailed descriptions of access points.
 
+# ATA 06 – Dimensions & Areas – AMPEL360 BWB-Q100
+
+## 06-20 Fuselage Station Definitions
+
+&#x20;*Example of fuselage station lines along an aircraft fuselage (FS 0 at nose). Stations are measured from a nose datum aft along the body.*
+The **AMPEL360 BWB-Q100** uses a longitudinal station system to locate features along its blended wing body. **Fuselage Station (FS)** 0 is defined at the nose tip, with station values increasing towards the aft end of the aircraft. Stationing is measured in millimeters for precision (e.g. FS 1000 = 1000 mm). Stations are placed at regular intervals (commonly every 1000 mm or 1 m) to simplify locating structural frames and components. This uniform spacing allows for consistent reference of subsystems along the length of the aircraft.
+
+Key **fuselage break zones** correspond to major structural sections or bulkheads. These are reference points where the airframe may be conceptually split for manufacturing or structural analysis. Notable fuselage station reference points include:
+
+* **FS 0 (0 m)** – Nose tip datum (forward extremity of the aircraft).
+* **FS 3000 (\~3.0 m)** – Forward pressure bulkhead / cockpit aft wall.
+* **FS 15000 (\~15.0 m)** – Aft pressure bulkhead (end of passenger cabin).
+* **FS 26000 (\~26.0 m)** – Aft end of aircraft structure (tail trailing edge extremity).
+
+In this BWB configuration, the nose section (FS 0–\~5000) contains the cockpit and avionics, the centerbody section (FS 5000–\~18000) contains the passenger cabin and wing blend, and the aft section (FS 18000–26000) includes engine integration and rear spar structure. These station definitions and break zones facilitate clear reference in design documents and comply with ATA iSpec 2200 conventions for nonnegative station numbering.
+
+## 06-30 Wing Geometry & Wing Stations
+
+The **wing geometry** of the BWB-Q100 is defined by a smoothly blended centerbody and outboard wing sections. The aircraft’s total wingspan is approximately **42 m** tip-to-tip. The wing planform features moderate sweep and taper, transitioning from a thick inner section (which houses the cabin) to a thinner outer section. Table 1 summarizes the key wing geometric parameters:
+
+| **Wing Parameter**           | **Value**            | **Notes**                                                                                                                                                |
+| ---------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Span (overall width)         | \~42 m               | Tip-to-tip distance (full wingspan)                                                                                                                      |
+| Mean Aerodynamic Chord (MAC) | \~8 m                | Approx. average chord; MAC ≈ 8 m, located near BL 10000 (10 m from center) with its leading edge around FS 7000–8000 (7–8 m aft of nose) for this design |
+| Sweep (quarter-chord)        | \~30°                | Wing sweep angle at 25% chord (moderate sweep for transonic cruise)                                                                                      |
+| Dihedral                     | \~5°                 | Wing upward angle for roll stability (outer wing rises \~5°)                                                                                             |
+| Taper Ratio (tip/root chord) | \~0.15               | Strong taper; tip chord is \~15% of inner wing chord (low taper typical for BWB designs)                                                                 |
+| Wing Reference Plane Angle   | \~0° (at centerbody) | Wing datum relative to horizontal; centerbody aligned horizontally, dihedral applied outboard                                                            |
+
+**Wing Stations (WS)** are used to locate positions along the half-span (from aircraft centerline outward). Wing station 0 is at the aircraft centerline (BL 0), and wing station values increase outward along the right/left wing. Key wing station references include:
+
+* **WS 0** – Wing root at centerline (plane of symmetry).
+* **WS 8000 (\~8.0 m)** – *Kink Station*: semi-span location where the passenger cabin/centerbody ends and the outboard wing begins. The front and rear wing spars originate here. This divide marks the **inner wing** (blended centerbody) vs. **outer wing** sections.
+* **WS 21000 (21.0 m)** – Wing tip reference (half-span of 21 m). This is the outermost wing station, terminating at the tip chord.
+
+The wing’s planform is highly blended: the inner wing has a large root chord integrated with the fuselage, providing lift and volume for the cabin, while the outer wing is more slender. The quarter-chord sweep of \~30° and mild dihedral (\~5°) give the BWB-Q100 stable cruise performance and ground clearance at the tips. **Mean Aerodynamic Chord (MAC)** is used for performance and weight reference; for this aircraft the MAC is on the order of 8 m and is located significantly inboard (around the wing kink region). The MAC spans a substantial portion of the centerbody, reflecting the large chord of the blended wing. (By comparison, larger BWB designs often feature even greater sweep \~35° and very low taper ratios \~0.1, underlining the BWB-Q100’s moderate design values.) All wing stations and geometry adhere to GAIA-PLATFORMS conventions for documenting wing layouts in ATA 06.
+
+## 06-40 Landing Gear Geometry
+
+The **AMPEL360 BWB-Q100** employs a tricycle landing gear configuration, consisting of two main gear units and one nose gear. The landing gear geometry is defined by the **track**, **wheelbase**, and the positioning of gear attachment points:
+
+* **Main Gear Track:** \~**10 m** – the lateral distance between left and right main gear wheel contact points (track gauge). This wide track provides lateral stability against tipping. The main gear struts are mounted in the lower centerbody/inner wing region, roughly around Butt Line ±5000 (±5.0 m from centerline).
+* **Wheelbase:** \~**12 m** – the longitudinal distance from the nose gear to the main gear axle line. The nose gear is positioned toward the front of the fuselage (around FS 3000–4000), while the main gear are aft near the wing spar (around FS 15000). This \~12 m wheelbase ensures adequate longitudinal stability and prevents premature nose drop during landing.
+
+The three gear contact points form a broad triangular **gear footprint** on the ground. The geometric **center-of-gear** (centroid of the triangle) lies near FS 11000 (≈11.0 m aft of nose) on the aircraft centerline. This point is the nominal ground reference for weight and balance – the aircraft’s center of gravity (CG) is designed to fall slightly forward of this centroid for stability. The nose gear, at BL 0, carries a smaller load and primarily provides steering, whereas the main gears at BL ±5000 support the majority of aircraft weight.
+
+Internally, the **gear layout** is integrated into reinforced structural zones. The main gear attach to a robust **center-wing gearbox** structure spanning the lower centerbody. This **main gear bay** (around FS 14000–16000, BL ≈ ±5000) is a strengthened zone that distributes landing loads into the wing spars and center fuselage structure. Similarly, the **nose gear bay** (around FS 3000, BL 0) is built into the nose section with structural reinforcements tying into frames and longerons in the forward fuselage. These **gear load zones** are designed to absorb high impact forces from landing and taxi operations. The result is a landing gear geometry that provides stable ground handling and meets certification requirements for tipping angles and load factors. All dimensional parameters (track, wheelbase, gear span) conform to the ATA 06 documentation standards for landing gear layout, ensuring clarity in ground footprint and structural interfaces.
+
+## 06-50 Volume and Surface Area Distribution
+
+This section breaks down the BWB-Q100’s internal volumes and external surface areas by major category, reflecting the aircraft’s blended-wing design and usage of space.
+
+**Volume Distribution:** The BWB’s airframe provides a broad internal volume within the centerbody. Major compartment volumes are summarized in Table 2.
+
+**Table 2 – Major Internal Volumes** (approximate values, based on geometry and layout)
+
+| **Compartment**            | **Volume (m³)** | **Description / Location**                                                                                                                                                                                                                                                                                         |
+| -------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Passenger Cabin            | \~**240**       | Pressurized volume for passengers and crew. Encompasses the broad centerbody from approx. FS 3000 to FS 15000. The BWB wide-body cabin spans the inner wing section, providing space for seating in a single large deck.                                                                                           |
+| Cargo Hold                 | \~**50**        | Unpressurized (or semi-pressurized) volume for cargo and baggage. Located aft of the passenger cabin and in outboard wing roots. The cargo space is distributed in available cavities (e.g. in the aft centerbody, and potentially below the cabin floor if structural depth allows).                              |
+| Fuel Tanks (Wing Integral) | \~**60**        | Fuel storage volume within wing structure. Integral tanks span much of the outer wing and portions of the centerbody wing volume. The BWB design’s thick wing sections allow significant fuel volume in multiple cells. Total fuel capacity volume is on the order of 60 m³, sufficient for the design range.      |
+| Avionics & Systems Bays    | \~**5**         | Volume for avionics and systems equipment. Primarily in the nose (avionics bay below cockpit floor) and scattered equipment bays in the centerbody (e.g. electronics racks, environmental control systems). While small in total (a few cubic meters), these bays are strategically placed for maintenance access. |
+
+*Notes:* Cabin volume is comparatively large due to the BWB’s extensive width, enabling a spacious layout for a \~100-passenger capacity. Cargo volume is somewhat limited by the shallow depth of outboard wing areas, but the design still allocates dedicated cargo bays. Fuel volume benefits from the blended wing’s thick profile, which allows more fuel storage than a conventional tube-and-wing of similar size. Avionics volume is concentrated in the nose for short wiring runs to the cockpit.
+
+**Surface Area Distribution:** The external **wetted area** of the aircraft is primarily the wing-body outer surface. Internally, major structural panels include the cabin floor and pressure bulkheads. Table 3 details the approximate areas of key structural surfaces.
+
+**Table 3 – Surface Areas of Major Structural Panels** (approximate)
+
+| **Surface/Panel**              | **Area (m²)** | **Description**                                                                                                                                                                                                                                                          |
+| ------------------------------ | ------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Wing-Body Outer Skin – *Upper* |     \~**640** | External upper surface of the blended wing body (wetted area). This stretches from the nose leading edge over the crown of the aircraft to the trailing edge. The large area reflects the broad wingspan and centerbody (reducing wetted area vs. conventional designs). |
+| Wing-Body Outer Skin – *Lower* |     \~**620** | External lower surface of the aircraft. Slightly smaller than the upper surface (flatter belly and cutouts for wheel wells). Extends from the nose underside to the trailing edge. Both upper and lower surfaces constitute the primary aerodynamic wetted area.         |
+| Cabin Main Deck Floor          |     \~**120** | Internal floor area of the passenger cabin. Spans the width of the centerbody and the length of the cabin. This floor panel separates the cabin from below-floor systems/cargo space. It is a primary structural panel supporting seating and payload.                   |
+| Forward Pressure Bulkhead      |      \~**20** | Curved structural partition at the front of the pressurized cabin (around FS 3000). Often nearly circular/elliptical in shape due to the nose contour. Seals the cabin and carries pressure loads.                                                                       |
+| Aft Pressure Bulkhead          |      \~**40** | Structural partition at the aft end of the cabin (around FS 15000). Typically larger and more oval in shape due to the wider cross-section at the cabin rear. Closes off the pressurized volume and bears pressure and structural loads from the rear.                   |
+
+In total, the external surface area (upper + lower \~1260 m²) is significantly less than a comparable tube-and-wing aircraft of similar capacity, highlighting a drag-reducing benefit of the BWB shape. The distribution of surface area also affects maintenance (inspection areas) and weight (skin thickness varies by area class). The cabin floor and pressure bulkheads are key internal structures – their areas indicate the size of these components which must withstand cabin pressure and support loads. All values above are derived from the aircraft’s 3D geometry and scaled assumptions (span, length, thickness), appropriate for preliminary design documentation in the GAIA system.
+
+## 06-60 Aircraft Coordinate System
+
+&#x20;*Aircraft coordinate system illustrating waterline (vertical) references. WL 0 is a baseline (ground line), with WL values increasing upward.*
+All aircraft geometry is defined within a consistent **Cartesian coordinate system**. The AMPEL360 BWB-Q100 uses the standard aviation axes: longitudinal *X*-axis (fuselage station), lateral *Y*-axis (buttline), and vertical *Z*-axis (waterline). The coordinate origin and orientation follow ATA 06 conventions for a blended wing body:
+
+* **X-Axis (Longitudinal, FS):** Origin at the nose datum. The X-axis runs along the length of the aircraft, with *FS 0 at the nose tip* and X values increasing toward the rear (aft) of the aircraft. Thus, a higher FS number denotes a location farther aft. (Note: This direction is opposite the usual *flight* X-axis direction; here positive X points rearward along the fuselage for station numbering convenience.)
+* **Y-Axis (Lateral, Butt Line):** Origin at the aircraft centerline. The Y-axis runs horizontally to left/right. *BL 0* is on the center plane; values increase positively to the right (starboard) side and negatively to the left (port) side. For example, BL +5000 indicates 5.0 m to the right of center, and BL –5000 is the corresponding point to the left. This symmetry is used for wing stations and any lateral measurements.
+* **Z-Axis (Vertical, Water Line):** Origin at a reference horizontal plane (the **baseline**). For the BWB-Q100, *WL 0 is defined at ground level* when the aircraft is on level ground (landing gear extended). Vertical coordinates (waterlines) increase upward from this baseline. All major structural and system elevations are given as WL values above this reference plane. (Using ground as WL 0 ensures most aircraft points have positive WL values, simplifying documentation.)
+
+All coordinate values are typically recorded in millimeters (mm) in the format (FS, BL, WL). For instance, using this system:
+
+* **Nose Tip:** *FS 0, BL 0, WL 2500* – The nose tip is the reference origin in X and Y, and sits about 2.5 m above ground.
+* **Nose Gear Contact:** *FS 3000, BL 0, WL 0* – The nose landing gear touches the ground \~3.0 m behind the nose, on the centerline, at the baseline (ground).
+* **Main Gear Contact (Left/Right):** *FS 15000, BL ±5000, WL 0* – The main wheels contact the ground \~15.0 m aft of the nose, \~5.0 m to each side of center, at ground level.
+* **Wing Tip:** *FS 18000, BL 21000, WL 2000* – The wing tip (approximate trailing edge corner) is located \~18.0 m aft of the nose, at the outer half-span of 21.0 m, and about 2.0 m above the baseline (due to wing dihedral and static ground attitude).
+
+These examples demonstrate the mapping of physical points to the coordinate system. Engineers and maintenance personnel use this coordinate scheme to precisely locate components and reference design drawings. It is a right-handed system when considering +X aft, +Y to starboard, +Z up. The axes and station definitions here align with global aviation standards and the GAIA-PLATFORMS documentation requirements, ensuring unambiguous communication of geometry in the AMPEL360 BWB-Q100 program.
+
+---
+
+**Status:** Draft • **Filename:** AMPEL360\_BWB-Q100\_ATA06.md • **Version:** 0.1 • **InfoCode:** AMP360-06
+
+
 ---
 ### ATA 07 - LIFTING AND SHORING <a name="ata07"></a>
 
