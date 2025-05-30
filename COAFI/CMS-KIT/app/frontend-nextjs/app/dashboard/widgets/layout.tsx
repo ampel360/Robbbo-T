@@ -5,6 +5,10 @@ import TokensWidget from "./widgets/TokensWidget";
 import NodeStatusWidget from "./widgets/NodeStatusWidget"; 
 import TelemetryWidget from "./widgets/Telemetrywidget";    
 import AIInsightsWidget from "./widgets/AIInsightswidget";  
+import DocumentInterdependenciesWidget from "./widgets/DocumentInterdependenciesWidget";
+import DocumentStatusWidget from "./widgets/DocumentStatusWidget";
+import UpdateRelatedDocumentsWidget from "./widgets/UpdateRelatedDocumentsWidget";
+import IntegrateVersionControlWidget from "./widgets/IntegrateVersionControlWidget";
 
 export const metadata: Metadata = {
   title: "Dashboard | COAFI",
@@ -25,6 +29,10 @@ export default function DashboardLayout({
         <NodeStatusWidget />
         <TelemetryWidget />
         <AIInsightsWidget />
+        <DocumentInterdependenciesWidget />
+        <DocumentStatusWidget />
+        <UpdateRelatedDocumentsWidget />
+        <IntegrateVersionControlWidget />
       </aside>
 
       {/* Contenido principal */}

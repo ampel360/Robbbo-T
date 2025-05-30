@@ -64,6 +64,7 @@ class MemoryQuery(BaseModel):
     min_similarity: float = 0.7
     max_results: int = 20
     include_metadata: bool = True
+    user_id: Optional[str] = None  # Added for secure contexts
     
 class MemoryResult(BaseModel):
     """Result from memory retrieval"""
@@ -107,6 +108,10 @@ class PineconeConfig(BaseModel):
     index_name: str
     namespace: str = "coafi-memory"
     vector_dimension: int = 1536
+
+# Custom exception for MemoryService
+class MemoryServiceError(Exception):
+    pass
 
 # Main Memory Service
 class MemoryService:
@@ -321,6 +326,10 @@ class MemoryService:
                     await self._set_in_cache(cache_key, embedding)
                 
                 return embedding
+            except openai.RateLimitError as e:
+                backoff_time = 5  # Example backoff time, can be adjusted
+                await asyncio.sleep(backoff_time)
+                logger.warning(f"OpenAI rate limit exceeded. Retrying after {backoff_time} seconds...")
             except Exception as e:
                 logger.warning(f"OpenAI embedding failed: {e}. Trying XAI API...")
         
@@ -441,7 +450,7 @@ class MemoryService:
             
         except Exception as e:
             logger.error(f"Failed to store in pgvector: {e}")
-            raise
+            raise MemoryServiceError(f"Failed to store in pgvector: {e}")
     
     async def _store_in_pinecone(self, item: MemoryItem) -> str:
         """Store memory item in Pinecone"""
@@ -463,7 +472,7 @@ class MemoryService:
             
         except Exception as e:
             logger.error(f"Failed to store in Pinecone: {e}")
-            raise
+            raise MemoryServiceError(f"Failed to store in Pinecone: {e}")
     
     async def query_memory(self, query: MemoryQuery) -> Tuple[List[MemoryResult], MemoryStats]:
         """
@@ -559,6 +568,10 @@ class MemoryService:
                     where_clauses.append("metadata->>'mood_id' = %s")
                     params.append(query.mood_id)
                 
+                if query.user_id:
+                    where_clauses.append("metadata->>'user_id' = %s")
+                    params.append(query.user_id)
+                
                 where_clause = " AND ".join(where_clauses)
                 if where_clause:
                     where_clause = f"AND {where_clause}"
@@ -597,7 +610,7 @@ class MemoryService:
             
         except Exception as e:
             logger.error(f"Failed to query pgvector: {e}")
-            raise
+            raise MemoryServiceError(f"Failed to query pgvector: {e}")
     
     async def _query_pinecone(self, query: MemoryQuery) -> List[MemoryResult]:
         """Query Pinecone for similar vectors"""
@@ -613,6 +626,9 @@ class MemoryService:
             
             if query.mood_id:
                 filter_dict["mood_id"] = {"$eq": query.mood_id}
+            
+            if query.user_id:
+                filter_dict["user_id"] = {"$eq": query.user_id}
             
             # Execute query
             query_response = self.pinecone_index.query(
@@ -644,7 +660,7 @@ class MemoryService:
             
         except Exception as e:
             logger.error(f"Failed to query Pinecone: {e}")
-            raise
+            raise MemoryServiceError(f"Failed to query Pinecone: {e}")
     
     async def _query_mock(self, query: MemoryQuery) -> List[MemoryResult]:
         """Query mock database for similar vectors"""
@@ -664,7 +680,12 @@ class MemoryService:
                 "folder_id": query.folder_id or "default_folder",
                 "conversation_id": query.conversation_id or f"conv_{i}",
                 "mood_id": query.mood_id,
-                "tags": ["aerospace", "documentation", "technical"]
+                "user_id": query.user_id,
+                "tags": ["aerospace", "documentation", "technical"],
+                "infoCode": "GAIA-COAFI-MEM-QX-001",
+                "object_id": "OBJ-2025-AMPEL360-29-01",
+                "agent_trace": "ACE-AMP-001",
+                "semantic_link": "qao://memory/29-01-0003"
             }
             
             results.append(MemoryResult(
@@ -757,7 +778,7 @@ class MemoryService:
             
         except Exception as e:
             logger.error(f"Failed to generate RAG response: {e}")
-            raise
+            raise MemoryServiceError(f"Failed to generate RAG response: {e}")
 
     async def adjust_license(self, license_id: str, feedback: Dict[str, Any]) -> str:
         """
@@ -915,7 +936,7 @@ def cosine_similarity(vec1: List[float], vec2: List[float]) -> float:
     if len(vec1) != len(vec2):
         raise ValueError(f"Vector dimensions don't match: {len(vec1)} vs {len(vec2)}")
     
-    dot_product = sum(a * b for a in zip(vec1, vec2))
+    dot_product = sum(a * b for a, b in zip(vec1, vec2))
     magnitude1 = sum(a * a for a in vec1) ** 0.5
     magnitude2 = sum(b * b for b in vec2) ** 0.5
     
