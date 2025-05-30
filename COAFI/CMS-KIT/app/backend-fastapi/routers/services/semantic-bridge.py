@@ -88,8 +88,8 @@ class MemoryItemResponse(BaseModel):
     success: bool
     id: Optional[str] = None
     error: Optional[str] = None
-    request_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    timestamp: str = Field(default_factory=lambda: datetime.now().isoformat())
+    request_id: str = Field(default_factory(lambda: str(uuid.uuid4())))
+    timestamp: str = Field(default_factory(lambda: datetime.now().isoformat()))
 
 class MemoryCleanupRequest(BaseModel):
     """Request model for memory cleanup operations"""
@@ -102,7 +102,7 @@ class MemoryCleanupResponse(BaseModel):
     success: bool
     stats: Optional[Dict[str, Any]] = None
     error: Optional[str] = None
-    request_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    request_id: str = Field(default_factory(lambda: str(uuid.uuid4())))
     timestamp: str = Field(default_factory(lambda: datetime.now().isoformat()))
 
 class SystemStatsResponse(BaseModel):
