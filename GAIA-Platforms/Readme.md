@@ -65,8 +65,8 @@ flowchart TD
   A --> SPACE[GAIA SPACE – Interplanetary Systems]
   A --> GREENTECH[GAIA GREENTECH – Environmental Systems]
   A --> FOUNDATIONS[Foundational Engines and Frameworks]
-  A --> CROSS[Cross‑Domain Initiatives]
-  A --> EXPANSIONS[Upcoming Expansions]
+  A --> CROSS[Cross-Domain Initiatives]
+  A --> EXP[Upcoming Expansions]
 
   AIR --> AIR1[General Architecture]
   AIR --> AIR2[Sustainable Propulsion]
@@ -84,18 +84,18 @@ flowchart TD
   GREENTECH --> GREEN4[GAIA QAF – Quantum Autonomous Fleet]
 
   FOUNDATIONS --> F1[COAFI – Canonical Index]
-  FOUNDATIONS --> F2[CD‑COATFI‑AERODCP – Civil Framework]
+  FOUNDATIONS --> F2[CD-COATFI-AERODCP – Civil Framework]
   FOUNDATIONS --> F3[QAO – Quantum Orchestration]
   FOUNDATIONS --> F4[AMEDEO – Ethical Execution]
   FOUNDATIONS --> F5[AMPEL – Semantic Programming]
 
   CROSS --> C1[Federated Ethics Programs]
-  CROSS --> C2[Aerospace‑to‑Civil Spin‑Offs]
+  CROSS --> C2[Aerospace-to-Civil Spin-Offs]
   CROSS --> C3[Scientific Research Collaboration]
 
-  EXPANSIONS --> E1[GAIA OCEAN – Sustainable Maritime (Coming Soon)]
-  EXPANSIONS --> E2[GAIA URBAN – Smart Cities (Coming Soon)]
-  EXPANSIONS --> E3[GAIA QAF – Planetary Cleaning Fleet (Deployed)]
+  EXP --> E1["GAIA OCEAN – Sustainable Maritime (Coming Soon)"]
+  EXP --> E2["GAIA URBAN – Smart Cities (Coming Soon)"]
+  EXP --> E3["GAIA QAF – Planetary Cleaning Fleet (Deployed)"]
 ```
 
 ---
@@ -169,9 +169,6 @@ flowchart TD
 ---
 
 *Status: README revision v2.0 – updated to include GAIA QAF integration and Mermaid diagram enhancement.*
-
-
----
 
 
 
