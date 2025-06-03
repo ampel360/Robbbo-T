@@ -387,703 +387,88 @@ flowchart TD
 
 ---
 
-## 1. JSON Schema (Draft 2020-12)
+![image](https://github.com/user-attachments/assets/ffd894aa-a56e-4a84-b47e-aecce53efb23)
 
-```json
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "InventionDisclosureDocument",
-  "type": "object",
-  "properties": {
-    "schema_version": { "type": "string" },
-    "document_id": { "type": "string" },
-    "digital_signature": { "type": "string" },
-    "content_hash": { "type": "string" },
-    "compliance_tags": {
-      "type": "array",
-      "items": { "type": "string" }
-    },
-    "valid_from": { "type": "string", "format": "date" },
-    "valid_until": { "type": "string", "format": "date" },
-    "audit_trail": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "timestamp": { "type": "string", "format": "date-time" },
-          "actor": { "type": "string" },
-          "action": { "type": "string" },
-          "details": { "type": "string" }
-        },
-        "required": ["timestamp", "actor", "action"]
-      }
-    },
-    "attachments": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": { "type": "string" },
-          "url": { "type": "string", "format": "uri" },
-          "type": { "type": "string" }
-        },
-        "required": ["name", "url", "type"]
-      }
-    },
-    "external_references": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "system": { "type": "string" },
-          "ref": { "type": "string" },
-          "description": { "type": "string" }
-        },
-        "required": ["system", "ref"]
-      }
-    },
-    "document_metadata": {
-      "type": "object",
-      "properties": {
-        "gaia_infocode_id": { "type": "string" },
-        "document_type": { "type": "string" },
-        "version": { "type": "string" },
-        "status": { "type": "string" },
-        "submission_date": { "type": "string", "format": "date" },
-        "last_updated": { "type": "string", "format": "date" },
-        "originator_module": { "type": "string" },
-        "primary_author": { "type": "string" },
-        "related_agad_phases": {
-          "type": "array",
-          "items": { "type": "string" }
-        },
-        "keywords_expanded": {
-          "type": "array",
-          "items": { "type": "string" }
-        },
-        "version_history": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "version": { "type": "string" },
-              "date": { "type": "string", "format": "date" },
-              "author": { "type": "string" },
-              "changes": { "type": "string" }
-            },
-            "required": ["version", "date", "author", "changes"]
-          }
-        }
-      },
-      "required": ["gaia_infocode_id", "document_type", "version", "status", "submission_date", "last_updated", "originator_module", "primary_author", "related_agad_phases", "keywords_expanded", "version_history"]
-    },
-    "table_of_contents_structure": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": { "type": "string" },
-          "title": { "type": "string" }
-        },
-        "required": ["id", "title"]
-      }
-    },
-    "invention_disclosure_title": { "type": "string" },
-    "abstract": { "type": "string" },
-    "technical_field": {
-      "type": "object",
-      "properties": {
-        "primary": { "type": "string" },
-        "secondary": {
-          "type": "array",
-          "items": { "type": "string" }
-        }
-      },
-      "required": ["primary", "secondary"]
-    },
-    "background_art": {
-      "type": "object",
-      "properties": {
-        "context": { "type": "string" },
-        "technologies_leveraged_with_context": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "technology": { "type": "string" },
-              "relevance": { "type": "string" }
-            },
-            "required": ["technology", "relevance"]
-          }
-        },
-        "problem_solved_statement": { "type": "string" }
-      },
-      "required": ["context", "technologies_leveraged_with_context", "problem_solved_statement"]
-    },
-    "summary_of_invention": {
-      "type": "object",
-      "properties": {
-        "introduction": { "type": "string" },
-        "key_elements_detailed": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "element_id": { "type": "string" },
-              "name": { "type": "string" },
-              "description": { "type": "string" },
-              "principle_of_operation": { "type": "string" },
-              "key_benefits_derived": {
-                "type": "array",
-                "items": { "type": "string" }
-              },
-              "relevant_gaia_application_layers": {
-                "type": "array",
-                "items": { "type": "string" }
-              },
-              "relevant_ata_chapters": {
-                "type": "array",
-                "items": { "type": "string" }
-              }
-            },
-            "required": ["element_id", "name", "description", "principle_of_operation", "key_benefits_derived", "relevant_gaia_application_layers", "relevant_ata_chapters"]
-          }
-        }
-      },
-      "required": ["introduction", "key_elements_detailed"]
-    },
-    "claims_section": {
-      "type": "object",
-      "properties": {
-        "claim_strategy_overview": { "type": "string" },
-        "independent_claims": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "claim_number": { "type": "integer" },
-              "text": { "type": "string" },
-              "elements": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "label": { "type": "string" },
-                    "feature": { "type": "string" }
-                  },
-                  "required": ["label", "feature"]
-                }
-              }
-            },
-            "required": ["claim_number", "text", "elements"]
-          }
-        },
-        "dependent_claims": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "claim_number": { "type": "integer" },
-              "depends_on": { "type": "integer" },
-              "text": { "type": "string" }
-            },
-            "required": ["claim_number", "depends_on", "text"]
-          }
-        }
-      },
-      "required": ["claim_strategy_overview", "independent_claims", "dependent_claims"]
-    },
-    "functional_block_diagram_textual": {
-      "type": "object",
-      "properties": {
-        "main_aerothermal_flow_path": {
-          "type": "array",
-          "items": { "type": "string" }
-        },
-        "control_and_management_systems": {
-          "type": "array",
-          "items": { "type": "string" }
-        },
-        "key_energy_flows": {
-          "type": "array",
-          "items": { "type": "string" }
-        }
-      },
-      "required": ["main_aerothermal_flow_path", "control_and_management_systems", "key_energy_flows"]
-    },
-    "potential_applications": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "application": { "type": "string" },
-          "suitability_notes": { "type": "string" }
-        },
-        "required": ["application", "suitability_notes"]
-      }
-    }
-  },
-  "required": [
-    "document_metadata",
-    "table_of_contents_structure",
-    "invention_disclosure_title",
-    "abstract",
-    "technical_field",
-    "background_art",
-    "summary_of_invention",
-    "claims_section",
-    "functional_block_diagram_textual",
-    "potential_applications"
-  ]
-}
-```
+### Fan Module — **Tabla unificada DPM\&A**
+
+*(Design · Process · Manufacturing · Assembly & Maintenance)*
+
+| Item ID                       | Tolerancias críticas<sup>†</sup>                                                                        | Proceso de fabricación → controles de calidad                                                                                                                                                                                          | Instrucciones de montaje / torque                                                                                                                             | Tips de mantenimiento predictivo                                                       |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| **1.1 Hub principal (árbol)** | Ø asiento de rodamiento ±0,015 mm<br/>Run-out axial < 0,05 mm<br/>Paralelismo ranuras dovetail ±0,02 mm | 1. Forja cerrada Ti-6Al-4V → normalizado<br/>2. Mecanizado CNC 5 ejes (torno-fresadora)<br/>3. Shot-peening (intensidad 6–8 A)<br/>4. Nital etch + inspección FPI<br/>**QC:** CMM 100 %, dureza 36–40 HRC                              | - Aplicar grasa MoS₂ grado aero en espigas.<br/>- Par de brida principal: **680 N·m** (lubricado).                                                            | - Bañado FPI cada 1 000 h.<br/>- Medir run-out; discrepancia > 0,02 mm ⇒ rectificado.  |
+| **1.2 Pala fan grafeno-CFRP** | Peso unitario ±5 g<br/>Eje neutro ±0,2 mm<br/>Ángulo raíz ±0,15°                                        | 1. AFP automático (cinta unidireccional + capas ±45°).<br/>2. Embebido sensor FBG.<br/>3. Autoclave 180 °C /6 bar/120 min.<br/>4. Recorte láser 5 axes.<br/>5. Ensayo ultrasonidos phased-array.<br/>**QC:** balanceo por par ≤ 3 g•cm | - Insertar pala en dovetail con grasa seca.<br/>- Colocar anillo retenedor (1.3), torque por tornillo **35 N·m**.<br/>- Gap radial con liner: 0,50 ± 0,15 mm. | - Verificar peso y FBG al cofre C-check.<br/>- Desgaste borde ataque > 0,4 mm ⇒ retip. |
+| **1.3 Anillo retenedor**      | Planicidad ≤0,03 mm                                                                                     | Torneado CNC + anodizado duro 25 µm                                                                                                                                                                                                    | Par tornillos M10 → **45 N·m** cruzado en estrella                                                                                                            | Sustituir cada 4 remociones de palas.                                                  |
+| **1.4 Spinner**               | Concentricidad punta ≤0,1 mm                                                                            | Impresión 3D continuo-fibra → curado UV → clear-coat cerámico                                                                                                                                                                          | 8 tornillos Inconel M6, **9 N·m**                                                                                                                             | Revisar fisuras UV cada 600 h.                                                         |
+| **1.5 Carcasa & liner**       | Ø interior +0,10/-0,05 mm<br/>Ovalidad < 0,08 mm                                                        | Cilindro Al-Li FSW → bruñido→ spray Kevlar abradable 2 mm                                                                                                                                                                              | Montaje con feeler-gauge; clearance 0,5 mm                                                                                                                    | Reaplicar liner cuando desgaste > 1 mm.                                                |
+| **1.6 Tip rub strip**         | Espesor 2,00 ± 0,10 mm                                                                                  | Moldeo compresión PEEK/CF → usinado contorno                                                                                                                                                                                           | Encaje a presión; sin torque                                                                                                                                  | Revisar elongación > 8 % ⇒ cambiar.                                                    |
+| **1.7 Mallado antihielo**     | Resistencia/metro 18 ± 1 Ω                                                                              | Serigrafía nanotinta → curado 120 °C                                                                                                                                                                                                   | Conector AMP M83513 20 N·cm                                                                                                                                   | Prueba resistencia cada 800 h.                                                         |
+| **1.8 Arnés sensor**          | Atenuación FBG < 0,4 dB                                                                                 | Encapsulado epoxy grado aero                                                                                                                                                                                                           | Route con separador 5 mm de superficies calientes                                                                                                             | Revisar mapa FBG en cada A-check.                                                      |
+| **1.9 Amortiguador AFMD**     | Frec. natural 280 ± 10 Hz                                                                               | Micro-fundición W → vulcanizado NBR                                                                                                                                                                                                    | Clip-on sin torque                                                                                                                                            | Sustituir si Δmasa > 5 %.                                                              |
+| **1.10 Tornillería**          | Rosca 6H<br/>Coaxialidad ≤ 0,03 mm                                                                      | Torneado CNC → shot-peen → MoS₂ coat                                                                                                                                                                                                   | Ver tabla torques NAS-A                                                                                                                                       | Aplicar pasta MoS₂ a 35 % cada reutilización.                                          |
+| **1.11 Etiqueta DMP**         | Lectura NFC ≥ 30 mm                                                                                     | Encapsulado epoxy grado RT-95                                                                                                                                                                                                          | Encolar con adhesivo F900 -40→120 °C                                                                                                                          | Escanear en cada evento GQOIS.                                                         |
+
+<sup>†</sup>*Todas las tolerancias se refieren a condición «sin pintar / sin recubrimiento» a 20 °C.*
 
 ---
 
-## 2. TypeScript/JavaScript Runtime Validator
-
-For robust runtime validation, use [ajv](https://ajv.js.org/) (Another JSON Schema Validator):
-
-```typescript
-import Ajv from "ajv";
-import schema from "./InventionDisclosureDocument.schema.json"; // Save the JSON schema above as this file
-
-const ajv = new Ajv({ allErrors: true });
-const validate = ajv.compile(schema);
-
-export function validateInventionDisclosureDocument(data: unknown): boolean {
-  const valid = validate(data);
-  if (!valid) {
-    console.error(validate.errors);
-  }
-  return valid as boolean;
-}
-```
-
----
-
-## 3. C Struct Representation
-
-For embedded or mission-critical C code:
-
-```c
-// NOTE: For arrays/strings, use fixed sizes as appropriate for your system.
-// For complex nested structures, use pointers and allocate as needed.
-
-typedef struct {
-    char version[8];
-    char date[20];
-    char author[64];
-    char changes[256];
-} VersionHistory;
-
-typedef struct {
-    char gaia_infocode_id[64];
-    char document_type[32];
-    char version[8];
-    char status[32];
-    char submission_date[20];
-    char last_updated[20];
-    char originator_module[64];
-    char primary_author[64];
-    // Arrays: related_agad_phases, keywords_expanded, version_history...
-} DocumentMetadata;
-
-typedef struct {
-    char id[32];
-    char title[128];
-} TableOfContentsEntry;
-
-// ... define other structs as per schema
-
-typedef struct {
-    DocumentMetadata document_metadata;
-    TableOfContentsEntry table_of_contents_structure[16];
-    char invention_disclosure_title[256];
-    char abstract[2048];
-    // ... rest of the fields
-} InventionDisclosureDocument;
-```
-*For C, use fixed-size arrays and consider memory alignment/padding for embedded.*
-
----
-
-## 4. Rust Struct Representation
-
-For high-assurance Rust codebases (with `serde` for JSON support):
-
-```rust
-use serde::{Serialize, Deserialize};
-
-#[derive(Serialize, Deserialize)]
-pub struct VersionHistory {
-    pub version: String,
-    pub date: String,
-    pub author: String,
-    pub changes: String,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct DocumentMetadata {
-    pub gaia_infocode_id: String,
-    pub document_type: String,
-    pub version: String,
-    pub status: String,
-    pub submission_date: String,
-    pub last_updated: String,
-    pub originator_module: String,
-    pub primary_author: String,
-    pub related_agad_phases: Vec<String>,
-    pub keywords_expanded: Vec<String>,
-    pub version_history: Vec<VersionHistory>,
-}
-
-// ...other nested structs...
-
-#[derive(Serialize, Deserialize)]
-pub struct InventionDisclosureDocument {
-    pub schema_version: Option<String>,
-    pub document_id: Option<String>,
-    // ...other optional fields...
-    pub document_metadata: DocumentMetadata,
-    // ...rest of the fields...
-}
-```
-*Use `Option<T>` for optional fields, `Vec<T>` for arrays. With Serde, you can derive robust JSON (de)serializers and validators.*
-
----
-
-## 5. Rust JSON Schema and Validation
-
-You can auto-generate JSON Schema and runtime validation with the [`schemars`](https://docs.rs/schemars/latest/schemars/) and [`serde_json`](https://docs.rs/serde_json/latest/serde_json/) crates:
-
-```rust
-use schemars::JsonSchema;
-use serde::{Serialize, Deserialize};
-
-#[derive(Serialize, Deserialize, JsonSchema)]
-pub struct InventionDisclosureDocument { /* ...fields... */ }
-
-// To generate JSON schema:
-let schema = schemars::schema_for!(InventionDisclosureDocument);
-println!("{}", serde_json::to_string_pretty(&schema).unwrap());
-```
-
----
-
-## 6. C++ Struct Representation
-
-```cpp
-#include <string>
-#include <vector>
-
-struct VersionHistory {
-    std::string version;
-    std::string date;
-    std::string author;
-    std::string changes;
-};
-
-struct DocumentMetadata {
-    std::string gaia_infocode_id;
-    std::string document_type;
-    std::string version;
-    std::string status;
-    std::string submission_date;
-    std::string last_updated;
-    std::string originator_module;
-    std::string primary_author;
-    std::vector<std::string> related_agad_phases;
-    std::vector<std::string> keywords_expanded;
-    std::vector<VersionHistory> version_history;
-};
-
-// ...other structs...
-
-struct InventionDisclosureDocument {
-    std::string schema_version;
-    std::string document_id;
-    // ...other optional fields...
-    DocumentMetadata document_metadata;
-    // ...rest of the fields...
-};
-```
-*For C++, use STL containers and modern C++ idioms for safety and clarity.*
-
----
-
-### Summary Table
-
-| Language    | Serialization         | Validation/Schema                         |
-|-------------|----------------------|-------------------------------------------|
-| TypeScript  | JSON Schema + AJV    | [ajv](https://ajv.js.org/)                |
-| Rust        | `serde`, `schemars`  | `schemars`, `serde_json`                  |
-| C           | Manual               | Use external JSON-C, or hand-written      |
-| C++         | STL/Boost/Manual     | [nlohmann/json](https://github.com/nlohmann/json) + custom |
-
----
-
-If you want concrete code for any single platform (full implementation, project boilerplate, or integration with a validation/build pipeline), just specify your preference!
-
-## Potential Applications
-
-- Next-gen sustainable commercial aircraft (e.g., GAIA BWB-Q100)
-- Advanced Urban Air Mobility (UAM) requiring quiet, zero-emission propulsion
-- Heavy-lift scientific/industrial drones with extended mission profiles
-- Stationary power generation in remote or environmentally sensitive areas
-
----
-
-## Submission, Authorship & Intellectual Property
-
-**Submitted By**:  
-_Amedeo Pelliccia_  
-Aerospace Engineer | Quantum Systems Architect | Founder, GAIA-QAO
-
-**Submission Date**: [Submission Date]
-
-**Intellectual Property Notice**:  
-All designs, concepts, algorithms, and associated IP detailed herein are the original work and property of Amedeo Pelliccia. Unauthorized use, reproduction, or distribution is prohibited.
-
----
-
-_End of Invention Disclosure Document_
-
-**design Method**
-
-### AMPEL360 BWB Q100 – Best-in-Class Parametric Configuration Analysis
-
-**GenAI Proposal Status:** This document compiles real aircraft performance data to establish optimal baseline parameters for quantum enhancement.
-
----
-
-## Methodology: Best-of-Breed Parameter Assembly
-
-We'll identify the **best-performing parameter** from each aircraft category and create a hybrid "super-aircraft" baseline, then apply quantum enhancement to each parameter.
-
-## 📊 Compiled Best Performance Parameters
-
-### Fuel Efficiency & Range
-
-| Parameter            | Best Value      | Source Aircraft | Specification                          |
-| -------------------- | --------------- | --------------- | -------------------------------------- |
-| **Fuel Consumption** | 2.2 L/100km/pax | Airbus A220-100 | 108-133 passengers, PW1500G engines    |
-| **Range**            | 6,390 km        | Airbus A220-100 | Maximum range with full passenger load |
-| **Fuel Capacity**    | 21,805 L        | Boeing 737-800  | Extended range configuration           |
-
-### Aerodynamic Performance
-
-| Parameter           | Best Value           | Source Aircraft | Specification                     |
-| ------------------- | -------------------- | --------------- | --------------------------------- |
-| **Cruise Speed**    | Mach 0.82            | Airbus A220-100 | Maximum cruise speed              |
-| **Service Ceiling** | 12,500 m (41,000 ft) | Airbus A220-100 | Maximum operational altitude      |
-| **L/D Ratio**       | \~19:1               | Boeing 787-8    | Best lift-to-drag ratio in cruise |
-
-### Environmental Performance
-
-| Parameter         | Best Value  | Source Aircraft | Specification                      |
-| ----------------- | ----------- | --------------- | ---------------------------------- |
-| **CO2 Emissions** | 98 g/pax-km | Airbus A220-100 | Lowest CO2 per passenger-kilometer |
-| **NOx Emissions** | 19.6 g/kN   | PW1500G Engine  | Latest-generation geared turbofan  |
-| **Noise Level**   | 85.8 EPNdB  | Airbus A220-100 | Approach noise certification       |
-
-### Structural & Weight Performance
-
-| Parameter              | Best Value          | Source Aircraft | Specification                     |
-| ---------------------- | ------------------- | --------------- | --------------------------------- |
-| **Empty Weight Ratio** | 0.54                | Airbus A220-100 | OEW/MTOW ratio                    |
-| **Composite Usage**    | 50%                 | Boeing 787-8    | Percentage of composite materials |
-| **Cabin Pressure**     | 6,000 ft equivalent | Boeing 787-8    | Lowest cabin altitude             |
-
-### Operational Performance
-
-| Parameter                | Best Value | Source Aircraft | Specification                |
-| ------------------------ | ---------- | --------------- | ---------------------------- |
-| **Runway Length**        | 1,463 m    | Airbus A220-100 | Minimum takeoff distance     |
-| **Turnaround Time**      | 25 minutes | Boeing 737-800  | Optimized ground operations  |
-| **Dispatch Reliability** | 99.4%      | Airbus A220-100 | Industry-leading reliability |
-
----
-
-## 🔬 Quantum Enhancement Framework
-
-### Phase 1: Quantum-Enhanced Parameters
-
-| Parameter           | Baseline (Best-in-Class) | Quantum Enhancement Target  | Enhancement Method                  |
-| ------------------- | ------------------------ | --------------------------- | ----------------------------------- |
-| **Fuel Efficiency** | 2.2 L/100km/pax          | **1.43 L/100km/pax (-35%)** | Quantum field propulsion assistance |
-| **L/D Ratio**       | 19:1                     | **24:1 (+26%)**             | Quantum boundary layer control      |
-| **CO2 Emissions**   | 98 g/pax-km              | **64 g/pax-km (-35%)**      | Quantum combustion optimization     |
-| **NOx Emissions**   | 19.6 g/kN                | **11.4 g/kN (-42%)**        | Quantum molecular manipulation      |
-| **Cruise Speed**    | Mach 0.82                | **Mach 0.95 (+16%)**        | Quantum drag reduction fields       |
-
-### Phase 2: Novel Quantum Parameters
-
-| Parameter                | Quantum Innovation              | Target Performance       | Agent Context      |
-| ------------------------ | ------------------------------- | ------------------------ | ------------------ |
-| **Quantum Coherence**    | Field stability monitoring      | **99.8% uptime**         | Q-Navigation Agent |
-| **Energy Recovery**      | Quantum field energy harvesting | **15% energy recovery**  | Q-Efficiency Agent |
-| **Structural Integrity** | Quantum material enhancement    | **40% weight reduction** | Q-Materials Agent  |
-| **Passenger Comfort**    | Quantum noise cancellation      | **-20 dB cabin noise**   | Q-Comfort Agent    |
-
----
-
-## 🤖 Agent-Contextual Enhancement Strategy
-
-### Primary Quantum Agents
-
-1. **Q-Propulsion Agent**
-
-   * **Context:** Fuel efficiency
-   * **Parameters:** Thrust vectoring, combustion
-   * **Target:** 35% fuel reduction
-
-2. **Q-Aerodynamics Agent**
-
-   * **Context:** Drag reduction, lift
-   * **Parameters:** Boundary control
-   * **Target:** L/D 24:1
-
-3. **Q-Materials Agent**
-
-   * **Context:** Structural optimization
-   * **Parameters:** Quantum composites
-   * **Target:** 40% weight reduction
-
-4. **Q-Environmental Agent**
-
-   * **Context:** Emissions control
-   * **Parameters:** Molecular combustion
-   * **Target:** 42% NOx, 35% CO2 reduction
-
-### Secondary Enhancement Agents
-
-5. **Q-Navigation Agent**
-
-   * **Context:** Route optimization
-   * **Target:** 8% efficiency increase
-
-6. **Q-Maintenance Agent**
-
-   * **Context:** Predictive maintenance
-   * **Target:** 60% cost reduction
-
----
-
-## 📈 Integrated Performance Projection
-
-| Metric               | Hybrid Baseline | AMPEL360 Q100    | Improvement |
-| -------------------- | --------------- | ---------------- | ----------- |
-| **Fuel Consumption** | 2.2 L/100km/pax | 1.43 L/100km/pax | **-35%**    |
-| **CO2 Emissions**    | 98 g/pax-km     | 64 g/pax-km      | **-35%**    |
-| **NOx Emissions**    | 19.6 g/kN       | 11.4 g/kN        | **-42%**    |
-| **Cruise Speed**     | Mach 0.82       | Mach 0.95        | **+16%**    |
-| **Range**            | 6,390 km        | 7,800 km         | **+22%**    |
-| **Noise Level**      | 85.8 EPNdB      | 68.6 EPNdB       | **-20%**    |
-
----
-
-## 🎯 Next Steps: Quantum Parameter Validation
-
-1. **CFD Modeling** – Quantum aerodynamic validation
-2. **Materials Testing** – Quantum composite prototyping
-3. **Propulsion Simulation** – Quantum interaction modeling
-4. **Systems Integration** – Agent coordination testing
-5. **Regulatory Framework** – Quantum certification standards
-
----
-
-This parametric foundation provides the baseline for quantum enhancement, ensuring traceability and credibility in AMPEL360 BWB Q100’s revolutionary performance.
-
-
-# GAIA-QAO Industry 5.0 Assurance Principle
-
-**No Flight Without QAO Assurance**
-
-**Document Code:** GAIA-QAO-INDUSTRY5-VISION-ASSURANCE-2025-001  
-**Version:** 1.0  
-**Status:** OFFICIAL DRAFT  
-**Classification:** TRUSTED / AUDITABLE / SEMANTIC  
-**Maintainer:** @Gaia-QAO-GOVERNANCE  
-**InfoCode:** GP-QAO-INDUSTRY5-ASSURANCE-001
-
----
-
-## Executive Statement
-
-> In the GAIA-QAO vision of **Industry 5.0 for aerospace**, the boundary between physical and digital is gone. No component, subsystem, or aircraft is allowed to fly—literally or operationally—without QAO (Quantum Aerospace Organization) assurance across its lifecycle.
+#### Leyenda rápida de controles
+
+| Símbolo          | Ensayo / Equipo                                   |
+| ---------------- | ------------------------------------------------- |
+| **CMM**          | Máquina de medición por coordenadas               |
+| **FPI**          | Inspección por líquidos penetrantes fluorescentes |
+| **FBG**          | Sensor de rejilla de Bragg en fibra óptica        |
+| **Shot-peening** | Granallado controlado para mejorar fatiga         |
+
+> **Integración en BOM**
 >
-> **Every object, from a mechanical fastener to a complete modular station, must be digitally, semantically, and quantum-assured.** There are no “anonymous” flights. Every part’s history, compliance, and operational fitness must always be knowable, provable, and auditable.
+> * Copia este bloque como sub-árbol en tu EBOM (Nx → `/boms/fan_module.yaml`).
+> * Los *Item ID* se alinean con los números del render (columna 1).
+> * Añade columnas de coste, proveedor y nº de parte interno cuando cierres RFQ.
+
+![image](https://github.com/user-attachments/assets/32c60a89-26a9-48a1-a7d4-e87f3e2e3989)
+
+### Compressor Module — **Tabla unificada DPM\&A**
+
+*(Design · Process · Manufacturing · Assembly & Maintenance)*
+*Assembly ID:* **GQ-AIR-TURB-COMP-02** (corresponde al Nº 2 del diagrama)
+
+| Item ID                                    | Tolerancias críticas<sup>†</sup>                                                       | Proceso de fabricación → controles de calidad                                                                                                   | Instrucciones de montaje / torque                                             | Tips de mantenimiento predictivo                      |
+| ------------------------------------------ | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------- |
+| **2.1 Eje rotor (shaft)**                  | Ø muñón rodamiento ±0,010 mm<br/>Run-out < 0,03 mm<br/>Concentricidad spline ±0,015 mm | Forja Inconel 718 → Solubilizado + precipitación<br/>CNC 5-ejes / rectificado Ø<br/>Shot-peening (7–9 A)<br/>**QC:** CMM 100 %, Barkhausen, FPI | Aplicar pasta MoS₂; insertar en soporte magnético; par tuerca M24 **720 N·m** | Medir run-out cada 1 200 h; Δ>0,015 mm ⇒ rectificado  |
+| **2.2 Disco compresor (hub-disk)**         | Espesor disco ±0,05 mm<br/>Paralelismo caras 0,02 mm                                   | Fresado 5-ejes Ti-6Al-4V → bruñido<br/>Balanceo dinámico G≤0,4<br/>**QC:** ultrasonidos phased-array                                            | Fijar al eje con 6 pernos M12: **110 N·m** + Loctite 271                      | Balanceo en línea cada C-check                        |
+| **2.3 Impeler A (etapa 1)**                | Peso ±3 g<br/>Ángulo pala ±0,2°                                                        | Impresión 3D SLM Al-Li → HIP + mecanizado de acabado<br/>Shot-peening ligero<br/>**QC:** CT scan 100 %                                          | Encaje con cono Morse + chaveta; torque tuerca M16 **140 N·m**                | Desgaste pala >0,3 mm ⇒ pulido o sustitución          |
+| **2.4 Tornillería retenedora (8 uds)**     | Rosca 6H<br/>Coaxialidad ≤0,02 mm                                                      | Torneado Inconel 718 → recubrimiento MoS₂                                                                                                       | Par **42 N·m** en cruz                                                        | Cambiar a la 5.ª reutilización                        |
+| **2.5 Impeler B (etapa 2)**                | Igual 2.3                                                                              | Misma ruta proceso que 2.3                                                                                                                      | Misma fijación pero tuerca M14 **120 N·m**                                    | Idem impeler A                                        |
+| **2.6 Clip antiliberación**                | Elasticidad 85 ± 5 N                                                                   | Corte láser Inconel X750 → tratamiento térmico 700 °C/8 h                                                                                       | Insertar en ranura; sin torque                                                | Sustituir si pierde >10 % elasticidad                 |
+| **2.7 Anillo separador estator**           | Planicidad ≤0,04 mm                                                                    | Torneado Al-Li → anodizado duro 30 µm                                                                                                           | Ajuste flotante; 4 espárragos M8 **26 N·m**                                   | Verificar corrosión cada 2 Años                       |
+| **2.8 Cojinete magnético**                 | Juego radial 0,04 ± 0,01 mm                                                            | Bobinado Cu-Ag 99,9 % → impregnación epoxi<br/>Rectificado cara pole shoes<br/>**QC:** prueba HV hipot 1 kV                                     | Acoplar al housing con prensa en caliente 120 °C                              | Monitorizar señal vib; Δ>4 µm ⇒ recalibrar            |
+| **2.9 Cáliz bronce (rodete axial)**        | Diámetro interior ±0,02 mm                                                             | Fundición centrifugada Cu-Sn 12 → torneado CNC → bruñido                                                                                        | Calzar a presión; sin tornillos                                               | Medir desgaste; ΔØ>0,05 mm ⇒ reemplazar               |
+| **2.10 Carcasa frontal**                   | Ø interior +0,06/-0,02 mm<br/>Ovalidad < 0,05 mm                                       | FSW Al-Li monolítica → tratamiento shot-peen → anodizado                                                                                        | Unir a carcasa trasera con 16 pernos M10 **60 N·m**                           | Inspección FPI uniones cada 4 000 h                   |
+| **2.11 Sensor ACLS (presión/temperatura)** | Calibración ±0,2 % FS                                                                  | Ensamblaje MEMS SiC → encapsulado Ti-grade-2                                                                                                    | Conector hermético ¼-28 UNEF, torque **8 N·m**                                | Auto-diagnóstico cada 500 h; reemplazar ciclo 6 000 h |
+
+<sup>†</sup>*Tolerancias «sin recubrimiento» a 20 °C — excepto indicación contraria.*
 
 ---
 
-## Core Principle: Zero Uncertified Flight
+#### Leyenda QC / Ensayos
 
-No element—bolt, sensor, software module, or full system—flies without:
+| Símbolo | Descripción                        |
+| ------- | ---------------------------------- |
+| **CMM** | Coordinate-Measuring Machine       |
+| **FPI** | Fluorescent Penetrant Inspection   |
+| **CT**  | Tomografía computarizada (rayos X) |
+| **HIP** | Hot-Isostatic Pressing             |
 
-- **QAO certification before integration**
-- **Continuous, real-time digital twin monitoring**
-- **Immutable, auditable compliance status**
+> **Integración EBOM / MBOM**
+>
+> * Inserta esta tabla en `/boms/compressor_module.yaml`.
+> * Los *Item ID* enlazan con las etiquetas numéricas de los renders (impeler A = nº 3, etc.).
+> * Añade coste, lead-time y proveedor cuando consolides RFQ.
 
-*If it’s not QAO-assured, it doesn’t fly. Period.*
+![image](https://github.com/user-attachments/assets/df2ad653-cb3b-46e2-af41-4b4d44d54fd7)
 
----
-
-## The Power of the GAIA-QAO Assurance Chain
-
-- **End-to-End Traceability:** From factory to decommission—every object embeds a digital identity (DIKE), quantum sensor data, and a living audit trail.
-- **Semantic & Quantum Provenance:** Every part is globally registered, quantum-logged, and mapped to its live digital twin—enabling real-time predictive analytics and anomaly detection.
-- **Active, Ethical, and Regulatory Compliance:** All compliance data is transparent and accessible. The AMEDEO trust layer guarantees ethical and legal conformance at every step.
-
----
-
-## Strategic and Operational Impact
-
-- **No blind spots:** Full transparency in manufacturing, maintenance, and flight operations.
-- **AI-driven certification:** Automated, adaptive validation for both legacy and quantum-enhanced platforms.
-- **Accelerated audits:** Instant incident investigation, lifecycle reporting, and regulatory compliance.
-- **Federated collaboration:** Trusted, secure, and actionable data for all partners and authorities.
-
----
-
-## The GAIA-QAO Industry 5.0 Mandate
-
-> “No part flies alone. No assembly is certified without its digital soul.
-> The journey from design to decommission is now a seamless flow of intelligence, assurance, and trust.”
-
----
-
-## Implementation Foundations
-
-- **DIKE Object Identification:** Unique, standards-compliant identifiers.
-- **Digital Twin Integration:** Live operational twins for all parts and systems.
-- **Quantum/IoT Sensorization:** Real-time, continuous monitoring and event logging.
-- **Automated Documentation:** Dynamic generation and storage of all certification artifacts.
-- **Blockchain Audit Trails:** Immutable and federated event history (QAOChain).
-
----
-
-## Visionary Outcomes
-
-- **Air/Spaceworthiness Reimagined:** Trust and compliance are built in, not bolted on.
-- **Aerospace as a Living System:** Every object senses, remembers, and proves its journey.
-- **Quantum-Ready:** Engineered for classical, hybrid, and future quantum operations.
-
----
-
-## Closing
-
-The **GAIA-QAO Industry 5.0 Assurance Principle** is the cornerstone of the new aerospace era:  
-*Nothing—no matter how small or large—takes flight without the QAO assurance signature.*  
-This is how safety, transparency, and responsible innovation become absolute:
-**No flight without assurance. No future without trust.**
-
----
-
-> _This document is a living conceptual master index for GAIA-QAO Aerospace Documentation, integrating object identification, digital twins, compliance frameworks, and Industry 5.0 governance. See the Aerospace General Index (AGI) for the complete technical architecture, schemas, and implementation strategy._
-
-
----
+**To be continued**
 
 ## Quantum Aerospace Organization Structure
 
