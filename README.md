@@ -225,113 +225,109 @@ GAIA-QAO Open Innovation License v1.0 (see [LICENSE](LICENSE) for details)
 
 ---
 
-> **Zero-Impact Sustainable Turbofan Engine**  
-> *A Synergistic Integration of Advanced Materials, Intelligent Control, Quantum Sensing, and Full Lifecycle Recyclability*
+Okay, I will now detail the **Accessory Gearbox / Power Systems Module** and then the **Control Systems / Quantum Interface Module**.
+
+```markdown
+# Zero-Impact Sustainable Turbofan Engine
+
+## A Synergistic Integration of Advanced Materials, Intelligent Control, Quantum Sensing, and Full Lifecycle Recyclability
 
 ---
 
 ## Document Metadata
 
-| Field                   | Value                                                      |
-|-------------------------|------------------------------------------------------------|
-| **GAIA Infocode ID**    | GAIA-QENT-TECH-TURBOFAN-ZEROIMPACT-DISC-V1                |
-| **Document Type**       | Invention Disclosure                                       |
-| **Version**             | 1.1                                                        |
-| **Status**              | Internal Review Draft                                      |
-| **Submission Date**     | 2025-05-28                                                 |
-| **Last Updated**        | 2025-05-28                                                 |
-| **Originator Module**   | GAIA-Q-AIR & GAIA-Q-GreenTech                              |
-| **Primary Author**      | Amedeo Pelliccia                                           |
-| **Related AGAD Phases** | AGAD 1–3 (Concept to Analytical Modeling)                  |
+| Field                   | Value                                                                                                                                                                    |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **GAIA Infocode ID**    | GAIA-QENT-TECH-TURBOFAN-ZEROIMPACT-DISC-V1                                                                                                                               |
+| **Document Type**       | Invention Disclosure                                                                                                                                                     |
+| **Version**             | 1.1                                                                                                                                                                      |
+| **Status**              | Internal Review Draft                                                                                                                                                    |
+| **Submission Date**     | 2025-05-28                                                                                                                                                               |
+| **Last Updated**        | 2025-05-28                                                                                                                                                               |
+| **Originator Module**   | GAIA-Q-AIR & GAIA-Q-GreenTech                                                                                                                                            |
+| **Primary Author**      | Amedeo Pelliccia                                                                                                                                                         |
+| **Related AGAD Phases** | AGAD 1–3 (Concept to Analytical Modeling)                                                                                                                                |
 | **Keywords**            | Sustainable Aviation, Zero-Emission, Quantum Sensing, AI, Circular Economy, Hydrogen Power, Graphene Composites, Magnetic Bearings, Digital Thread, Lifecycle Management |
 
 ---
 
 ## Technical Field
 
-- **Primary**: Aerospace engineering — sustainable and intelligent turbofan engine design and operation  
-- **Secondary**:  
-  - Advanced materials science  
-  - Quantum sensing applications  
-  - Artificial intelligence in control systems  
-  - Renewable energy systems for propulsion  
-  - Circular economy principles in complex machinery  
+*   **Primary**: Aerospace engineering — sustainable and intelligent turbofan engine design and operation
+*   **Secondary**:
+    *   Advanced materials science
+    *   Quantum sensing applications
+    *   Artificial intelligence in control systems
+    *   Renewable energy systems for propulsion
+    *   Circular economy principles in complex machinery
 
 ---
 
 ## Background & Problem Statement
 
-Despite progress in sustainable aviation fuels, lightweight materials, and efficient cycles, a **holistic, integrated approach** for truly net-zero propulsion is lacking. Existing solutions do not fully leverage advanced materials, quantum sensing, intelligent controls, green hydrogen combustion, comprehensive energy recovery, and complete lifecycle circularity.
+Despite progress in sustainable aviation fuels, lightweight materials, and efficient cycles, a **holistic, integrated approach** for truly net‑zero propulsion is lacking. Existing solutions do not fully leverage advanced materials, quantum sensing, intelligent controls, green hydrogen combustion, comprehensive energy recovery, and complete lifecycle circularity.
 
 ---
 
 ## Technologies Leveraged
 
-- **Graphene/Nano Composites**: Recycled graphene for superior strength-to-weight, durability, and embedded sensing.
-- **Active Magnetic Bearings**: Frictionless, oil-free, dynamically controlled.
-- **Quantum Sensors**: Ultra-sensitive, real-time monitoring of strain, temperature, and fatigue.
-- **Hybrid Green Hydrogen Combustion**: Ultra-lean, AI-optimized, oxygen-enriched, with advanced NOx suppression.
-- **Multi-Stage Heat Recovery**: Thermoelectric and Rankine systems for maximal energy capture.
-- **AI Engine Process Management**: Predictive, adaptive control for efficiency and health.
-- **Digital Material Passports**: Blockchain-based for traceability and recycling.
+*   **Graphene/Nano Composites**: Recycled graphene for superior strength‑to‑weight, durability, and embedded sensing.
+*   **Active Magnetic Bearings**: Frictionless, oil‑free, dynamically controlled.
+*   **Quantum Sensors**: Ultra‑sensitive, real‑time monitoring of strain, temperature, and fatigue.
+*   **Hybrid Green Hydrogen Combustion**: Ultra‑lean, AI‑optimized, oxygen‑enriched, with advanced NOx suppression.
+*   **Multi-Stage Heat Recovery**: Thermoelectric and Rankine systems for maximal energy capture.
+*   **AI Engine Process Management**: Predictive, adaptive control for efficiency and health.
+*   **Digital Material Passports**: Blockchain‑based for traceability and recycling.
 
 ---
 
 ## Summary of the Invention
 
-**The Zero-Impact Sustainable Turbofan Engine** integrates advanced materials, quantum sensors, adaptive AI, green hydrogen combustion, multi-stage energy recovery, and modular design with digital material passports, achieving true net-zero impact and full circularity.
+The **Zero‑Impact Sustainable Turbofan Engine** integrates advanced materials, quantum sensors, adaptive AI, green hydrogen combustion, multi‑stage energy recovery, and modular design with digital material passports, achieving true net‑zero impact and full circularity.
 
 ### Core Innovations
 
-#### 1. Advanced Material Composition with Embedded Quantum Sensing (KEM_001)
-- Graphene/nano-composite structures with distributed quantum sensors (NV centers, quantum dots).
-- Enables high-fidelity, real-time health monitoring and predictive maintenance.
-
-#### 2. Hybrid Green Hydrogen Combustion System (KEM_002)
-- Multi-mode chamber for green H₂ with air/oxygen enrichment.
-- AI-optimized mixing, plasma ignition, catalytic NOx suppression.
-
-#### 3. Self-Adjusting Active Magnetic Bearing System (KEM_003)
-- Main shafts on active, vibration-damped, oil-free magnetic bearings.
-- Quantum gyroscopes/accelerometers for ultra-precision.
-
-#### 4. Multi-Stage Thermal Energy Recovery System (KEM_004)
-- Thermoelectric generators and Rankine cycle for waste heat.
-- Supplemental electrical/mechanical power generation.
-
-#### 5. AI-Governed Adaptive Bypass & Variable Geometry Intake (KEM_005)
-- AI adjusts bypass ratio and intake geometry in real-time for optimal performance.
-
-#### 6. Nanofiltration Exhaust Nozzle System (KEM_006)
-- Advanced filtration (nano, electrostatic, catalytic) for near-zero emissions.
-
-#### 7. Zero-Emission Lubrication & Sealing (KEM_007)
-- Solid-state/ionic lubricants or captured water; advanced seals.
-
-#### 8. Modular Design with Digital Material Passports (KEM_008)
-- Swappable modules, each tracked on a blockchain DMP for full lifecycle traceability.
-
-#### 9. Onboard Edge Neural Network & Quantum-Classical Interface (KEM_009)
-- Radiation-hardened edge AI system, fusing quantum and classical sensor data for real-time adaptive control and diagnostics.
+1.  **Advanced Material Composition with Embedded Quantum Sensing (KEM\_001)**
+    Graphene/nano‑composite structures with distributed quantum sensors (NV centers, quantum dots).
+    Enables high‑fidelity, real‑time health monitoring and predictive maintenance.
+2.  **Hybrid Green Hydrogen Combustion System (KEM\_002)**
+    Multi‑mode chamber for green H₂ with air/oxygen enrichment.
+    AI‑optimized mixing, plasma ignition, catalytic NOx suppression.
+3.  **Self‑Adjusting Active Magnetic Bearing System (KEM\_003)**
+    Main shafts on active, vibration‑damped, oil‑free magnetic bearings.
+    Quantum gyroscopes/accelerometers for ultra‑precision.
+4.  **Multi‑Stage Thermal Energy Recovery System (KEM\_004)**
+    Thermoelectric generators and Rankine cycle for waste heat.
+    Supplemental electrical/mechanical power generation.
+5.  **AI‑Governed Adaptive Bypass & Variable Geometry Intake (KEM\_005)**
+    AI adjusts bypass ratio and intake geometry in real time for optimal performance.
+6.  **Nanofiltration Exhaust Nozzle System (KEM\_006)**
+    Advanced filtration (nano, electrostatic, catalytic) for near‑zero emissions.
+7.  **Zero‑Emission Lubrication & Sealing (KEM\_007)**
+    Solid‑state/ionic lubricants or captured water; advanced seals.
+8.  **Modular Design with Digital Material Passports (KEM\_008)**
+    Swappable modules, each tracked on a blockchain DMP for full lifecycle traceability.
+9.  **Onboard Edge Neural Network & Quantum‑Classical Interface (KEM\_009)**
+    Radiation‑hardened edge AI system, fusing quantum and classical sensor data for real‑time adaptive control and diagnostics.
 
 ---
 
 ## Key Features
 
-- **Quantum-Integrated Predictive Maintenance**: Embedded quantum sensors + AI for early fault detection.
-- **Full Spectrum Circularity**: Modular design, digital passports, maximized reuse/recycling.
-- **Adaptive Intelligent Energy Efficiency**: AI-optimized combustion, bypass, intake, and energy recovery.
-- **Frictionless, Zero-Lube Operation**: Magnetic bearings eliminate oil systems.
+*   Quantum‑Integrated Predictive Maintenance
+*   Full Spectrum Circularity
+*   Adaptive Intelligent Energy Efficiency
+*   Frictionless, Zero‑Lube Operation
 
 ---
 
 ## Advantages Overview
 
-- **Sustainability & Net-Zero**: Green H₂, full energy recovery, advanced filtration, circular material economy.
-- **Reduced Maintenance**: Magnetic bearings + AI diagnostics = less downtime and longer life.
-- **Complete Disassembly & Recyclability**: Modular, blockchain-tracked lifecycle for all parts.
-- **Superior Efficiency**: Frictionless mechanics, hybrid combustion, AI controls.
-- **Enhanced Safety**: Quantum health monitoring, AI control, advanced diagnostics.
+*   Sustainability & Net‑Zero
+*   Reduced Maintenance
+*   Complete Disassembly & Recyclability
+*   Superior Efficiency
+*   Enhanced Safety
 
 ---
 
@@ -339,53 +335,343 @@ Despite progress in sustainable aviation fuels, lightweight materials, and effic
 
 ### Independent Claim
 
-> **Claim 1**:  
-A zero-impact turbofan engine for aeronautical applications, comprising:
->
-> - (a) Graphene-based composite structures with embedded quantum sensors;
-> - (b) AI-optimized hybrid green hydrogen combustion chamber with dynamic oxygen enrichment and NOx mitigation;
-> - (c) Main shaft supported by active, oil-free magnetic bearings;
-> - (d) Multi-stage thermal energy recovery;
-> - (e) AI-governed adaptive bypass and variable intake;
-> - (f) Nanofiltration exhaust nozzle system;
-> - (g) Modular architecture with blockchain-tracked digital material passports;
-> - (h) Onboard edge AI/quantum-classical interface for real-time control and predictive maintenance.
+> **Claim 1** – Zero‑impact turbofan engine comprising:
+> (a) Graphene composite structures with quantum sensors;
+> (b) AI‑optimized green‑hydrogen combustion chamber;
+> (c) Active magnetic bearings;
+> (d) Multi‑stage thermal energy recovery;
+> (e) AI‑governed adaptive bypass/intake;
+> (f) Nanofiltration exhaust nozzle;
+> (g) Modular, blockchain‑tracked design;
+> (h) Onboard edge AI & quantum‑classical interface.
 
-### Dependent Claims (Examples)
-
-- **Claim 2**: Quantum sensors include NV centers and quantum dot strain sensors for advanced health monitoring.
-- **Claim 3**: Multi-stage energy recovery uses TEGs and Rankine cycles.
-- **Claim 4**: AI control uses reinforcement learning for multi-objective optimization.
-- **Claim 5**: Digital passports are blockchain-secured, tracking provenance, recycling, and lifecycle.
-- **Claim 6**: Ancillary lubrication with solid-state or magnetic fluid seals.
-- **Claim 7**: Combustion with plasma-assisted ignition.
-- **Claim 8**: Quantum-Classical Interface for sensor data fusion.
+*Dependent claims 2–8 follow as drafted.*
 
 ---
 
-## Functional Block Diagram
+## Functional Block Diagram (Overall Engine Modules)
+
+![Overall Engine Modules Exploded View](https://github.com/user-attachments/assets/ffd894aa-a56e-4a84-b47e-aecce53efb23)
 
 ```mermaid
 flowchart TD
-    A[Intake: Variable Geometry - AI Controlled] --> B[Compressor - Graphene Composite, Magnetic Bearings]
-    B --> C[Combustion Chamber - H2/Air/O2, Plasma, AI Control]
-    C --> D[Turbine - Graphene Composite, Magnetic Bearings]
-    D --> E[Thermal Recovery Module 1 - TEGs]
-    E --> F[Adaptive Bypass Duct - AI Controlled]
-    F --> G[Thermal Recovery Module 2 - Rankine, Heat Exchange]
-    G --> H[Exhaust Nozzle - Nanofiltration, Noise Reduction]
-    subgraph Control_and_Management
-        I[Onboard Edge AI]
-        J[Quantum Sensor Network and QCI]
-        K[Magnetic Bearing Control]
-        L[H2 Fuel Management]
-        M[O2 Enrichment Control]
-        N[Electrical Power Management]
-        O[Digital Material Passport System]
+    A[Intake: Variable Geometry] --> B[Compressor]
+    B --> C[Combustion Chamber]
+    C --> D[Turbine]
+    D --> E[TEG Heat Recovery]
+    E --> F[Adaptive Bypass]
+    F --> G[Rankine Heat Recovery]
+    G --> H[Exhaust Nozzle]
+    subgraph Control
+        I[Edge AI]
+        J[Quantum Sensors]
+        K[Magnetic Bearing Ctrl]
+        L[H2 Fuel Mgmt]
+        M[O2 Enrichment]
+        N[Power Mgmt]
+        O[DMP System]
     end
 ```
 
 ---
+
+## Module Breakdown: DPM&A (Design, Process, Manufacturing, Assembly & Maintenance)
+
+### 1. Fan Module — DPM&A (ASD‑STE100 Compliant)
+
+*Assembly ID:* **GQ-AIR-TURB-FAN-01**&emsp;*Call-outs 1 → 11 (refer to image)*&emsp;*FSC:* **2840**
+
+![Exploded Fan Module](https://github.com/user-attachments/assets/cc17fbfb-bdbd-45af-85e7-6b94095641a0)
+
+| Item ID                       | Critical Tolerances†                                                              | Manufacturing Process → Quality Checks                                                                                                         | Assembly Instructions / Torque                                                                                                   | Predictive Maintenance Tips                                                                 |
+| :---------------------------- | :-------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |
+| **1.1 Main Hub (Shaft)**      | Bearing seat Ø ±0.015 mm<br>Axial run-out < 0.05 mm<br>Dovetail slot parallelism ±0.02 mm | 1. Closed-die forging Ti-6Al-4V → normalized<br>2. CNC 5-axis machining (lathe-mill)<br>3. Shot-peening (intensity 6–8 A)<br>4. Nital etch + FPI inspection<br>QC: CMM 100%, hardness 36–40 HRC | - Apply aerospace-grade MoS₂ grease to journals.<br>- Main flange torque: 680 N·m (lubricated).                                       | - FPI bath every 1000 h.<br>- Measure run-out; discrepancy > 0.02 mm ⇒ regrind.            |
+| **1.2 Graphene-CFRP Fan Blade** | Unit weight ±5 g<br>Neutral axis ±0.2 mm<br>Root angle ±0.15°                       | 1. Automatic Fiber Placement (unidirectional tape + ±45° layers).<br>2. Embedded FBG sensor.<br>3. Autoclave 180°C / 6 bar / 120 min.<br>4. 5-axis laser trimming.<br>5. Phased-array ultrasonic testing.<br>QC: couple balancing ≤ 3 g•cm | - Insert blade into dovetail with dry grease.<br>- Install retainer ring (1.3), torque per bolt 35 N·m.<br>- Radial gap with liner: 0.50 ± 0.15 mm. | - Verify weight and FBG at C-check.<br>- Leading edge wear > 0.4 mm ⇒ re-tip.               |
+| **1.3 Retainer Ring**         | Flatness ≤0.03 mm                                                                 | CNC turning + hard anodizing 25 µm                                                                                                           | M10 bolts torque → 45 N·m in a star pattern                                                                                        | Replace every 4 blade removal cycles.                                                       |
+| **1.4 Spinner**               | Tip concentricity ≤0.1 mm                                                         | Continuous fiber 3D printing → UV curing → ceramic clear-coat                                                                                | 8 Inconel M6 bolts, 9 N·m                                                                                                          | Check for UV cracks every 600 h.                                                            |
+| **1.5 Casing & Liner**        | Inner Ø +0.10/-0.05 mm<br>Ovality < 0.08 mm                                        | Al-Li FSW cylinder → honing → 2 mm abradable Kevlar spray                                                                                        | Assemble with feeler gauge; clearance 0.5 mm                                                                                       | Reapply liner when wear > 1 mm.                                                             |
+| **1.6 Tip Rub Strip**         | Thickness 2.00 ± 0.10 mm                                                          | PEEK/CF compression molding → contour machining                                                                                              | Press-fit; no torque                                                                                                               | Check elongation > 8% ⇒ replace.                                                            |
+| **1.7 Anti-icing Mesh**       | Resistance/meter 18 ± 1 Ω                                                         | Nano-ink screen printing → 120°C curing                                                                                                      | AMP M83513 connector 20 N·cm                                                                                                       | Test resistance every 800 h.                                                                |
+| **1.8 Sensor Harness**        | FBG attenuation < 0.4 dB                                                          | Aerospace-grade epoxy encapsulation                                                                                                            | Route with 5 mm standoff from hot surfaces                                                                                         | Check FBG map at each A-check.                                                              |
+| **1.9 AFMD Damper**           | Natural freq. 280 ± 10 Hz                                                         | W micro-casting → NBR vulcanization                                                                                                            | Clip-on without torque                                                                                                             | Replace if Δmass > 5%.                                                                      |
+| **1.10 Fasteners**            | Thread 6H<br>Coaxiality ≤ 0.03 mm                                                  | CNC turning → shot-peening → MoS₂ coat                                                                                                         | See NAS-A torque table                                                                                                             | Apply MoS₂ paste at 35% for each reuse.                                                     |
+| **1.11 DMP Tag (RFID)**       | Read distance ≥ 30 mm                                                             | RT-95 grade epoxy encapsulation                                                                                                                | Bond with F900 adhesive -40→120°C                                                                                                  | Scan at every GQOIS event.                                                                  |
+
+†All tolerances refer to "unpainted/uncoated" condition at 20°C.
+
+#### Fan Module - Quick Controls Legend
+
+| Symbol       | Test / Equipment                          |
+| :----------- | :---------------------------------------- |
+| CMM          | Coordinate Measuring Machine              |
+| FPI          | Fluorescent Penetrant Inspection          |
+| FBG          | Fiber Bragg Grating Sensor                |
+| Shot-peening | Controlled shot blasting to improve fatigue |
+
+#### Fan Module - BOM Integration
+
+*   Copy this block as a sub-tree in your EBOM (e.g., `/boms/fan_module.yaml`).
+*   Item IDs align with the render call-outs.
+*   Add columns for cost, supplier, and internal part number when RFQ is finalized.
+
+---
+
+### 2. Compressor Module — DPM&A
+
+*Assembly ID: GQ-AIR-TURB-COMP-02 (corresponds to Nº 2 of the overall engine diagram)*
+
+| Item ID                            | Critical Tolerances†                                                                   | Manufacturing Process → Quality Checks                                                                                                 | Assembly Instructions / Torque                                                                    | Predictive Maintenance Tips                                                             |
+| :--------------------------------- | :------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |
+| **2.1 Rotor Shaft**                | Bearing journal Ø ±0.010 mm<br>Run-out < 0.03 mm<br>Spline concentricity ±0.015 mm      | Inconel 718 forging → Solution + precipitation<br>CNC 5-axis / Ø grinding<br>Shot-peening (7–9 A)<br>QC: CMM 100%, Barkhausen, FPI           | Apply MoS₂ paste; insert into magnetic bearing; M24 nut torque 720 N·m                           | Measure run-out every 1200 h; Δ>0.015 mm ⇒ regrind                                          |
+| **2.2 Compressor Disc (Hub-Disk)** | Disc thickness ±0.05 mm<br>Face parallelism 0.02 mm                                     | 5-axis milling Ti-6Al-4V → honing<br>Dynamic balancing G≤0.4<br>QC: phased-array ultrasound                                                 | Fasten to shaft with 6 M12 bolts: 110 N·m + Loctite 271                                            | Online balancing every C-check                                                              |
+| **2.3 Impeller A (Stage 1)**       | Weight ±3 g<br>Blade angle ±0.2°                                                         | SLM 3D printing Al-Li → HIP + finish machining<br>Light shot-peening<br>QC: CT scan 100%                                                      | Morse taper fit + key; M16 nut torque 140 N·m                                                     | Blade wear >0.3 mm ⇒ polish or replace                                                      |
+| **2.4 Retaining Fasteners (8 pcs)**| Thread 6H<br>Coaxiality ≤0.02 mm                                                         | Inconel 718 turning → MoS₂ coating                                                                                                         | Torque 42 N·m in a cross-pattern                                                                  | Replace on 5th reuse                                                                        |
+| **2.5 Impeller B (Stage 2)**       | Same as 2.3                                                                            | Same process route as 2.3                                                                                                                    | Same fastening but M14 nut 120 N·m                                                                | Ditto impeller A                                                                            |
+| **2.6 Anti-Release Clip**          | Elasticity 85 ± 5 N                                                                    | Inconel X750 laser cutting → heat treatment 700°C/8 h                                                                                        | Insert into groove; no torque                                                                     | Replace if elasticity loss >10%                                                             |
+| **2.7 Stator Spacer Ring**         | Flatness ≤0.04 mm                                                                      | Al-Li turning → hard anodizing 30 µm                                                                                                         | Floating fit; 4 M8 studs 26 N·m                                                                   | Check for corrosion every 2 years                                                           |
+| **2.8 Magnetic Bearing**           | Radial clearance 0.04 ± 0.01 mm                                                          | 99.9% Cu-Ag winding → epoxy impregnation<br>Pole shoe face grinding<br>QC: HV hipot test 1 kV                                               | Hot press fit into housing at 120°C                                                               | Monitor vibration signal; Δ>4 µm ⇒ recalibrate                                              |
+| **2.9 Bronze Bushing (Axial Thrust)**| Inner diameter ±0.02 mm                                                                  | Centrifugal casting Cu-Sn 12 → CNC turning → honing                                                                                            | Press fit; no screws                                                                              | Measure wear; ΔØ>0.05 mm ⇒ replace                                                          |
+| **2.10 Front Casing**              | Inner Ø +0.06/-0.02 mm<br>Ovality < 0.05 mm                                               | Monolithic Al-Li FSW → shot-peen treatment → anodizing                                                                                       | Join to rear casing with 16 M10 bolts 60 N·m                                                      | FPI inspection of joints every 4000 h                                                       |
+| **2.11 ACLS Sensor (Pressure/Temp)**| Calibration ±0.2% FS                                                                    | SiC MEMS assembly → Ti-grade-2 encapsulation                                                                                                 | Hermetic connector ¼-28 UNEF, torque 8 N·m                                                        | Self-diagnostics every 500 h; replace cycle 6000 h                                        |
+
+†Tolerances "uncoated" at 20°C — unless otherwise indicated.
+
+#### Compressor Module - QC / Tests Legend
+
+| Symbol | Description                      |
+| :----- | :------------------------------- |
+| CMM    | Coordinate-Measuring Machine     |
+| FPI    | Fluorescent Penetrant Inspection |
+| CT     | Computed Tomography (X-ray)      |
+| HIP    | Hot-Isostatic Pressing           |
+| SLM    | Selective Laser Melting          |
+| FSW    | Friction Stir Welding            |
+
+#### Compressor Module - EBOM / MBOM Integration
+
+*   Insert this table into `/boms/compressor_module.yaml`.
+*   Item IDs link to the numerical labels in the renders (if available for this module).
+*   Add cost, lead-time, and supplier when consolidating RFQ.
+
+---
+
+### 3. Combustion Chamber Module — DPM&A
+*Assembly ID: GQ-AIR-TURB-COMB-03 (corresponds to No. 3 in the main engine diagram)*
+
+![Exploded Combustion Chamber Module Placeholder](https://via.placeholder.com/800x400.png?text=Combustion+Module+Exploded+View)
+
+| Item ID                                  | Critical Tolerances†                                                              | Manufacturing Process → Quality Checks                                                                                                                               | Assembly Instructions / Torque                                                                                                | Predictive Maintenance Tips                                                                                                |
+| :--------------------------------------- | :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- |
+| **3.1 Combustion Liner (Inner/Outer)** | Wall thickness ±0.05 mm<br>Cooling hole Ø & angle ±0.02 mm / ±0.1°<br>Concentricity ±0.1 mm | CMC (Ceramic Matrix Composite) filament winding or SLM of high-temp alloy (e.g., Haynes 282/Inconel 625)<br>Laser drilling of cooling holes<br>Thermal Barrier Coating (TBC) application (e.g., YSZ)<br>QC: CT scan for internal geometry, NDT for TBC bond, airflow test for cooling holes | - Carefully align inner and outer liners.<br>- Secure with high-temp fasteners (e.g., Waspaloy bolts) to casing, torque 25 N·m.<br>- Ensure proper sealing with diffuser case. | - Borescope inspection every 500 cycles for cracks, TBC spallation, or coking.<br>- Monitor liner temperature via embedded quantum sensors for hotspots. Replace if degradation exceeds limits. |
+| **3.2 Fuel Injector Nozzles (Set of X)** | Orifice Ø ±0.005 mm<br>Spray angle ±1°<br>Flow rate ±1% at test pressure             | Micro-machining of high-temp alloy<br>Swirl vane assembly (if applicable)<br>Flow testing and spray pattern analysis for each nozzle<br>QC: Laser doppler anemometry for spray characteristics, CMM for geometry | - Install injectors into designated ports on combustor casing.<br>- Torque to 15 N·m using calibrated wrench.<br>- Connect fuel lines and ensure leak-proof connections.       | - Monitor fuel flow and spray patterns (indirectly via combustion stability sensors).<br>- Clean or replace injectors every 2000 cycles or if performance degrades (e.g., uneven EGT). |
+| **3.3 Igniter Plugs (Set of 2)**         | Electrode gap ±0.05 mm<br>Insulation resistance >1 GΩ at 500°C                    | Ceramic insulator manufacturing<br>High-temp alloy electrode assembly<br>QC: Spark test, insulation resistance test at temperature                                         | - Screw igniters into ports, torque to 18 N·m.<br>- Connect ignition leads securely.                                               | - Check spark energy and electrode wear every 1000 cycles.<br>- Replace igniters every 4000 cycles or if misfires occur.       |
+| **3.4 Swirler Assembly**                 | Vane angle ±0.2°<br>Airflow passage consistency ±2%                                 | SLM of high-temp alloy or precision casting<br>QC: Airflow testing, CMM for vane geometry                                                                            | - Integrate with fuel nozzle assembly or mount directly to combustor dome.<br>- Ensure proper alignment for optimal air-fuel mixing. | - Inspect for erosion or distortion during major overhauls.                                                                |
+| **3.5 Combustor Casing/Diffuser**      | Flange flatness ±0.05 mm<br>Mounting hole positions ±0.05 mm                        | Forging or casting of high-strength, heat-resistant alloy (e.g., Inconel 718)<br>Precision machining of interfaces<br>QC: CMM for dimensions, FPI for surface defects         | - Mount to compressor discharge casing and turbine inlet casing using specified bolt patterns and torque values (e.g., M8 bolts, 40 N·m).<br>- Ensure proper gasket/seal installation. | - Inspect for cracks or distortion at interfaces during major overhauls.<br>- Monitor casing temperature with external sensors. |
+| **3.6 Plasma Ignition System (H₂)**    | Electrode integrity<br>Power supply output (kV, freq.) ±5%                         | Specialized electrode material (e.g., Tungsten-based)<br>High-voltage power electronics assembly<br>QC: Output waveform analysis, dielectric strength test                | - Mount electrodes within combustor ensuring proper gap and insulation.<br>- Connect HV leads with appropriate shielding and grounding. | - Monitor ignition success rate and energy output.<br>- Inspect electrodes for wear/erosion every 1000 cycles.              |
+| **3.7 NOx Suppression Catalyst (if applicable)** | Cell density ±5%<br>Coating uniformity                                          | Ceramic or metallic substrate fabrication<br>Washcoat application with catalytic materials (e.g., Platinum group metals on zeolites)<br>QC: SEM for coating, activity test | - Integrate into exhaust path section of the combustor or immediately downstream.<br>- Ensure proper sealing to prevent bypass.      | - Monitor NOx emissions continuously.<br>- Perform regeneration or replacement based on performance degradation or poisoning. |
+| **3.8 Quantum Temperature/Strain Sensors (Embedded)** | Sensor response calibration ±0.1% FS                                         | Micro-fabrication of NV-diamond or quantum dot sensors<br>Integration into CMC liner or coating<br>QC: Calibration against reference standards across temperature range | - Integrated during liner manufacturing.<br>- Ensure robust electrical/optical connections for data retrieval.                   | - Continuous self-diagnostics.<br>- Recalibrate sensor network during major overhauls if drift is detected.                   |
+
+†Tolerances "uncoated" at 20°C — unless otherwise indicated.
+
+#### Combustion Chamber Module - QC / Tests Legend
+
+| Symbol | Description                                      |
+| :----- | :----------------------------------------------- |
+| CMM    | Coordinate-Measuring Machine                     |
+| FPI    | Fluorescent Penetrant Inspection                 |
+| CT     | Computed Tomography (X-ray)                      |
+| NDT    | Non-Destructive Testing (general)                |
+| SLM    | Selective Laser Melting                          |
+| SEM    | Scanning Electron Microscope                     |
+| EGT    | Exhaust Gas Temperature                          |
+| CMC    | Ceramic Matrix Composite                         |
+| TBC    | Thermal Barrier Coating                          |
+
+#### Combustion Chamber Module - EBOM / MBOM Integration
+
+*   Insert this table into `/boms/combustion_module.yaml`.
+*   Item IDs link to the numerical labels in the renders (if available for this module).
+*   Add cost, lead-time, and supplier when consolidating RFQ.
+
+---
+
+### 4. Turbine Module — DPM&A
+*Assembly ID: GQ-AIR-TURB-TRBN-04 (corresponds to No. 4 in the main engine diagram)*
+
+![Exploded Turbine Module Placeholder](https://via.placeholder.com/800x400.png?text=Turbine+Module+Exploded+View)
+
+| Item ID                               | Critical Tolerances†                                                                             | Manufacturing Process → Quality Checks                                                                                                                                                           | Assembly Instructions / Torque                                                                                                                                  | Predictive Maintenance Tips                                                                                                                                         |
+| :------------------------------------ | :----------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **4.1 Turbine Rotor Disc (HPT/LPT)**  | Bore Ø ±0.005 mm<br>Blade slot (fir-tree) profile ±0.01 mm<br>Dynamic balance G≤0.25                 | Powder metallurgy (PM) superalloy (e.g., Rene N5, Udimet 720LI) → HIP → Isothermal forging → Machining (EDM for fir-trees)<br>QC: CMM, FPI, Ultrasonic testing (UT), X-Ray for internal defects       | - Mount disc onto turbine shaft with interference fit (cryogenic or thermal shrink).<br>- Secure with locknut, torque to 1200 N·m (HPT), 900 N·m (LPT).               | - Monitor disc for creep and low-cycle fatigue (LCF) via embedded quantum strain sensors.<br>- Eddy current inspection of fir-trees every 3000 cycles. Replace at life limit. |
+| **4.2 Turbine Blades (HPT/LPT - Set)**| Airfoil profile ±0.02 mm<br>Cooling passage geometry ±0.03 mm<br>Weight per set ±2g                   | Single-crystal (SX) casting for HPT blades (e.g., CMSX-4/PWA1484) or Directionally solidified (DS) for LPT.<br>Laser drilling of film cooling holes.<br>TBC & Bond Coat application.<br>QC: X-Ray for grain structure, Airflow test for cooling, CMM for profile, FPI for cracks. | - Insert blades into fir-tree slots on the disc.<br>- Secure with retaining plates/rivets if applicable.<br>- Ensure even spacing and freedom of movement (tip clearance). | - Visually inspect for cracking, burning, TBC spallation, and tip rub every 500 cycles.<br>- Quantum sensor data for blade temperature and creep. Replace damaged blades or full set. |
+| **4.3 Nozzle Guide Vanes (NGV - Stator Set)** | Airfoil profile ±0.03 mm<br>Throat area ±1%<br>Cooling passage geometry (if cooled) ±0.03 mm     | Investment casting of superalloys (e.g., MAR-M247 for HPT NGV).<br>Machining of platforms and attachment points.<br>TBC application if needed.<br>QC: Airflow testing for throat area, CMM, FPI.       | - Assemble NGV segments into turbine casing.<br>- Ensure correct orientation and sealing between segments and with casing.<br>- Torque retaining bolts to 30 N·m.      | - Inspect for cracking, erosion, and bowing every 1000 cycles.<br>- Monitor for cooling effectiveness if applicable. Replace damaged segments.                                |
+| **4.4 Turbine Shaft (connects to Compressor/Fan)** | Bearing journal Ø ±0.005 mm<br>Concentricity end-to-end < 0.02 mm<br>Spline profile ±0.01 mm | High-strength steel or Ni-based superalloy forging (e.g. Inconel 718).<br>Precision grinding of journals and splines.<br>Dynamic balancing.<br>QC: CMM, Magnetic Particle Inspection (MPI), UT. | - Couple to compressor/fan shaft via spline or bolted flange.<br>- Torque coupling bolts to specified values (e.g., 250 N·m).<br>- Install magnetic bearing components.      | - Monitor shaft for vibration and run-out using proximity probes linked to magnetic bearing control.<br>- Inspect splines for wear during major overhauls.                      |
+| **4.5 Turbine Casing (HPT/LPT)**      | Inner Ø (shroud path) ±0.05 mm<br>Flange flatness ±0.03 mm<br>Active clearance control response time | Casting or fabrication from high-temp alloys (e.g., Inconel 625).<br>Machining of internal paths and flanges.<br>Integration of abradable seals and active clearance control (ACC) actuators.<br>QC: CMM, FPI. | - Assemble casing halves around rotor assembly.<br>- Torque casing bolts in sequence to 60 N·m.<br>- Connect ACC system and calibrate.                                    | - Monitor turbine tip clearances via ACC system and embedded sensors.<br>- Inspect casing for distortion, cracks, and seal wear during overhauls.                               |
+| **4.6 Heat Shields / Seals**          | Gap control ±0.1 mm<br>Material integrity at temp.                                                   | Sheet metal forming (e.g., Haynes 188) or CMC components.<br>Honeycomb or brush seals.<br>QC: Dimensional checks, material certs.                                                    | - Install heat shields and seals at designated inter-stage and casing locations.<br>- Ensure proper fit and sealing effectiveness.                                   | - Inspect for thermal distortion, cracking, and wear of seals.<br>- Replace seals if leakage exceeds limits.                                                              |
+| **4.7 Variable Geometry Turbine Nozzles (VGTN - if applicable)** | Vane angle control ±0.1°<br>Actuator response time <50ms                                | Similar to NGV but with pivoting mechanism and actuators.<br>Precision linkage and bearings.<br>QC: Actuation tests, position feedback accuracy.                                            | - Assemble VGTN assembly into turbine casing.<br>- Connect actuators to FADEC control system.<br>- Calibrate vane angles across operational range.                 | - Monitor VGTN actuator performance and vane position accuracy.<br>- Inspect linkage for wear and sticking during C-checks. Lubricate or replace components as needed.      |
+| **4.8 Quantum Creep/Fatigue/Temp Sensors (Blades/Discs)** | Calibration ±0.1% FS                                                                 | Integrated during blade/disc manufacturing (e.g., embedded NV-diamond fibers or surface-deposited QDs).<br>Robust high-temp optical/electrical connections.<br>QC: Sensor response verification at temp. | - Connections made during rotor assembly.<br>- Data lines routed through shaft or wirelessly transmitted.                                                                | - Continuous monitoring and data logging for AI-based prognostic health management (PHM).<br>- Recalibrate during major overhauls.                                      |
+
+†Tolerances "uncoated" at 20°C — unless otherwise indicated.
+
+#### Turbine Module - QC / Tests Legend
+
+| Symbol | Description                                      |
+| :----- | :----------------------------------------------- |
+| CMM    | Coordinate-Measuring Machine                     |
+| FPI    | Fluorescent Penetrant Inspection                 |
+| UT     | Ultrasonic Testing                               |
+| PM     | Powder Metallurgy                                |
+| HIP    | Hot-Isostatic Pressing                           |
+| EDM    | Electrical Discharge Machining                   |
+| SX/DS  | Single Crystal / Directionally Solidified        |
+| TBC    | Thermal Barrier Coating                          |
+| MPI    | Magnetic Particle Inspection                     |
+| ACC    | Active Clearance Control                         |
+| VGTN   | Variable Geometry Turbine Nozzles                |
+| QD     | Quantum Dots                                     |
+
+#### Turbine Module - EBOM / MBOM Integration
+
+*   Insert this table into `/boms/turbine_module.yaml`.
+*   Item IDs link to the numerical labels in the renders (if available for this module).
+*   Add cost, lead-time, and supplier when consolidating RFQ.
+
+---
+
+### 5. Exhaust Nozzle / Filtration & Heat Recovery Module — DPM&A
+*Assembly ID: GQ-AIR-TURB-EXH-05 (corresponds to No. 5 in the main engine diagram)*
+
+![Exploded Exhaust Module Placeholder](https://via.placeholder.com/800x400.png?text=Exhaust+Module+Exploded+View)
+
+| Item ID                                        | Critical Tolerances†                                                                       | Manufacturing Process → Quality Checks                                                                                                                                                              | Assembly Instructions / Torque                                                                                                                               | Predictive Maintenance Tips                                                                                                                                    |
+| :--------------------------------------------- | :----------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **5.1 Exhaust Cone / Center Body**             | Profile accuracy ±0.5 mm<br>Surface finish Ra < 1.6 µm                                      | Lightweight, heat-resistant alloy (e.g., Titanium alloy or CMC) fabrication.<br>Spin forming or multi-piece welded assembly.<br>QC: CMM for profile, surface roughness check.                             | - Bolt to turbine rear frame or casing.<br>- Ensure aerodynamic sealing.<br>- Torque M10 bolts to 50 N·m.                                                      | - Inspect for cracks, distortion, or erosion every 1000 cycles.<br>- Monitor for abnormal vibration signatures.                                                   |
+| **5.2 Variable Area Nozzle (VAN) Mechanism (if applicable)** | Throat area control ±0.5%<br>Actuator response time <100ms<br>Sealing effectiveness | High-temp alloy flaps/petals.<br>Robust actuation system (hydraulic/electric) with position feedback.<br>High-temp bearings and linkages.<br>QC: Actuation range and speed test, leakage test.             | - Assemble flaps and linkage to exhaust casing.<br>- Connect actuators to FADEC.<br>- Calibrate nozzle area vs. command.                                       | - Monitor actuator performance and position accuracy.<br>- Inspect seals, bearings, and linkages for wear and smooth operation during C-checks. Lubricate as required. |
+| **5.3 Nanofiltration Unit (Particulate)**      | Filtration efficiency >99.9% for PM2.5<br>Pressure drop < X kPa at max flow<br>Structural integrity at temp. | Ceramic or metallic foam/fiber substrate with nano-porous coating.<br>Modular cartridge design.<br>QC: Porosity analysis, filtration efficiency test (DOP test), flow vs. pressure drop test. | - Install filter cartridges into designated housing within the exhaust duct.<br>- Ensure airtight sealing of cartridges.<br>- Torque access panel bolts to 20 N·m. | - Monitor pressure drop across filter unit; high ΔP indicates clogging.<br>- Perform backflush/regeneration cycle as prompted by AI or replace cartridges every 500-1000 cycles. |
+| **5.4 Catalytic Converter (Gaseous Emissions - e.g., CO, UHC)** | Conversion efficiency >95% for target pollutants<br>Light-off temperature < Y °C       | Honeycomb or plate-type ceramic/metallic substrate.<br>Washcoat with precious metal catalysts (e.g., Pt, Pd, Rh).<br>QC: Catalyst loading verification, activity test, thermal shock resistance.      | - Integrate into exhaust duct, typically upstream of final nozzle.<br>- Ensure proper sealing to prevent exhaust bypass.<br>- Support structure to manage thermal expansion. | - Monitor downstream emissions for catalyst effectiveness.<br>- Inspect for physical damage or catalyst poisoning/sintering during major inspections. Replace if performance degrades significantly. |
+| **5.5 Thermoelectric Generator (TEG) Arrays**  | Power output per module ±5% at ΔT<br>Hot/cold side interface thermal resistance < Z K/W    | Bi₂Te₃, Skutterudite, or other advanced TEG material modules.<br>High-conductivity ceramic plates for electrical insulation and thermal conduction.<br>Robust electrical interconnections.<br>QC: Seebeck coefficient, ZT value, power output test. | - Mount TEG modules onto designated hot surfaces of exhaust duct/casing.<br>- Ensure good thermal contact with heat transfer medium (e.g., thermal paste, graphite sheet).<br>- Connect cooling system (e.g., bypass air, liquid cooling loop) to cold side.<br>- Wire modules in series/parallel to power management unit. | - Monitor power output and efficiency.<br>- Check for degradation of thermal interfaces or TEG material (e.g., increased internal resistance).<br>- Clean heat exchanger surfaces as needed. |
+| **5.6 Rankine Cycle Heat Exchanger (Waste Heat Recovery)** | Heat transfer effectiveness >85%<br>Pressure containment (working fluid)                    | Compact plate-fin or microchannel heat exchanger design from high-temp alloys.<br>Working fluid (e.g., organic fluid) loop components (pump, turbine, condenser).<br>QC: Pressure test, leak test, heat transfer performance test. | - Integrate heat exchanger into a high-temperature section of the exhaust flow.<br>- Connect working fluid lines, ensuring leak-tight fittings.<br>- Install micro-turbine and generator for power conversion. | - Monitor working fluid parameters (pressure, temperature, flow rate).<br>- Inspect heat exchanger for fouling or leaks.<br>- Service Rankine cycle pump and turbine as per manufacturer's schedule. |
+| **5.7 Acoustic Liners / Noise Reduction Elements** | Noise attenuation target (dB) per octave band                                            | Perforated face sheets with honeycomb or bulk absorber core (e.g., Kevlar, fiberglass).<br>Optimized for target frequencies.<br>QC: Acoustic impedance test, material property verification.              | - Install acoustic liners within exhaust duct walls.<br>- Ensure secure attachment and no loose parts.                                                       | - Visually inspect for damage, delamination, or contamination (e.g., oil soaking) which can degrade acoustic performance. Replace damaged sections.                     |
+| **5.8 Exhaust Ducting & Structure**            | Dimensional stability at high temp.<br>Flange connections leak-proof                         | Lightweight, heat-resistant alloys (e.g., Ti-alloys, Ni-superalloys) or CMCs.<br>Welded or bolted segmented construction.<br>QC: Dimensional CMM, weld NDT (X-ray, FPI).                        | - Assemble duct sections, ensuring alignment and proper gasket usage.<br>- Torque flange bolts to specified values (e.g., M8, 35 N·m).                              | - Inspect for cracks, distortion, and leaks at joints during every A-check and C-check.<br>- Monitor for signs of fretting or wear at mounting points.                    |
+
+†Tolerances "uncoated" at 20°C — unless otherwise indicated.
+
+#### Exhaust Module - QC / Tests Legend
+
+| Symbol | Description                                      |
+| :----- | :----------------------------------------------- |
+| CMM    | Coordinate-Measuring Machine                     |
+| Ra     | Surface Roughness Average                        |
+| VAN    | Variable Area Nozzle                             |
+| PM2.5  | Particulate Matter < 2.5 micrometers             |
+| DOP    | Dispersed Oil Particulate (for filter testing)   |
+| ΔP     | Pressure Drop                                    |
+| UHC    | Unburned Hydrocarbons                            |
+| TEG    | Thermoelectric Generator                         |
+| ZT     | Thermoelectric Figure of Merit                   |
+| ΔT     | Temperature Difference                           |
+| CMC    | Ceramic Matrix Composite                         |
+| NDT    | Non-Destructive Testing                          |
+
+#### Exhaust Module - EBOM / MBOM Integration
+
+*   Insert this table into `/boms/exhaust_module.yaml`.
+*   Item IDs link to the numerical labels in the renders (if available for this module).
+*   Add cost, lead-time, and supplier when consolidating RFQ.
+
+---
+
+### 6. Accessory Gearbox & Power Systems Module — DPM&A
+*Assembly ID: GQ-AIR-TURB-AGPS-06*
+
+![Accessory Gearbox Module Placeholder](https://via.placeholder.com/800x400.png?text=Accessory+Gearbox+Module+Exploded+View)
+
+| Item ID                                       | Critical Tolerances†                                                                                             | Manufacturing Process → Quality Checks                                                                                                                                                             | Assembly Instructions / Torque                                                                                                                                                                  | Predictive Maintenance Tips                                                                                                                                                            |
+| :-------------------------------------------- | :--------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **6.1 Gearbox Housing**                       | Mounting face flatness ±0.02 mm<br>Bearing bore Ø & position ±0.01 mm                                              | Lightweight alloy casting (e.g., Magnesium or Aluminum alloy).<br>Precision machining of bores and faces.<br>QC: CMM for dimensions, FPI for cracks, pressure test for leaks.                         | - Mount to engine core interface pad.<br>- Torque mounting bolts (e.g., M10) to 55 N·m in sequence.<br>- Ensure proper alignment with power takeoff shaft.                                             | - Inspect for leaks and cracks during A-checks.<br>- Monitor vibration levels using dedicated sensors.<br>- Check mounting bolt torque during C-checks.                                          |
+| **6.2 Main Drive Gear & Shaft (PTO from Engine Core)** | Gear tooth profile (AGMA Class 10-12)<br>Shaft run-out < 0.015 mm                                             | High-strength steel (e.g., AMS 6414/9310) forging.<br>Gear cutting, grinding, and surface hardening (carburizing/nitriding).<br>Spline machining.<br>QC: Gear metrology, NDT (MPI), hardness testing. | - Couple to engine core PTO shaft (e.g., via spline).<br>- Ensure proper lubrication of splines if required (though aiming for oil-free).<br>- Verify backlash and contact pattern with driven gears. | - Monitor gear health via vibration analysis and debris monitoring (if any lubrication system exists, even sealed-for-life).<br>- Inspect splines for wear during major overhauls.           |
+| **6.3 Accessory Drive Gears (Set)**           | Gear tooth profile (AGMA Class 10-12)<br>Bore Ø for bearings ±0.005 mm                                             | Similar to main drive gear: high-strength steel, precision forming and finishing.<br>QC: Gear metrology, NDT.                                                                                      | - Mount gears onto their respective shafts.<br>- Install bearings (potentially magnetic or specialized solid-lube for oil-free).<br>- Verify backlash and gear mesh.                                  | - Similar to main drive gear: vibration analysis for wear/damage.<br>- No oil to check, but bearing condition monitoring is crucial (temperature, vibration via quantum sensors if possible). |
+| **6.4 Integrated Starter-Generator (ISG)**    | Output voltage/current regulation ±1%<br>Shaft alignment to drive gear < 0.02 mm                                   | High-efficiency permanent magnet motor/generator design.<br>Power electronics for AC/DC conversion and control.<br>Composite or lightweight alloy housing.<br>QC: Performance test (power, efficiency, regulation), insulation test, vibration test. | - Mount ISG to designated AGB pad.<br>- Align shaft and couple to drive gear.<br>- Connect power cables and control wiring to PMU and FADEC.<br>- Torque mounting bolts to 40 N·m.            | - Monitor electrical performance (voltage, current, temperature).<br>- Check bearing condition (if not fully magnetic) via vibration/temp.<br>- Inspect connectors for integrity.                 |
+| **6.5 Hydrogen Fuel Pump (if AGB driven)**    | Flow rate & pressure output ±2%<br>Seal integrity (cryogenic if liquid H₂)                                       | Specialized materials for cryogenic H₂ compatibility (if LH₂).<br>High-precision pump elements (e.g., centrifugal, positive displacement).<br>Seal technology for H₂.<br>QC: Flow/pressure test across operating range, leak test, material certs. | - Mount to AGB pad.<br>- Couple to drive gear.<br>- Connect H₂ fuel lines with appropriate high-pressure, H₂-compatible fittings.<br>- Torque mounting bolts to 30 N·m.                     | - Monitor pump performance (flow, pressure, power consumption).<br>- Check for H₂ leaks using dedicated sensors.<br>- Inspect seals and bearings (if applicable) per schedule.              |
+| **6.6 Oxygen Enrichment System Pump/Compressor (if AGB driven)** | Flow rate & pressure output ±2%<br>Oxygen compatibility of materials                                            | Oil-free design with oxygen-compatible materials (e.g., Monel, specialized polymers).<br>QC: Performance test, material cleanliness for O₂ service, leak test.                                  | - Mount to AGB pad.<br>- Couple to drive gear.<br>- Connect O₂ lines (ensure cleanliness).<br>- Torque mounting bolts to 30 N·m.                                                            | - Monitor system performance.<br>- Check for O₂ leaks.<br>- Adhere to strict cleanliness protocols during maintenance.                                                                |
+| **6.7 Power Management Unit (PMU) / Generator Control Unit (GCU)** | Electrical protection trip times ±5ms<br>Output power quality (harmonics, stability) | Radiation-hardened electronics.<br>Advanced control algorithms for power distribution and fault protection.<br>Sealed enclosure with EMI shielding.<br>QC: Full functional test, environmental stress screening (ESS). | - Mount in a vibration-damped, environmentally controlled location (may be separate from AGB).<br>- Connect to ISG, batteries, TEGs, Rankine system, and aircraft electrical bus.                 | - Continuous BITE (Built-In Test Equipment) monitoring.<br>- Check software updates.<br>- Inspect connectors and wiring for integrity.                                              |
+| **6.8 High-Density Battery Pack (for transient power/starting)** | Capacity degradation < X% per Y cycles<br>Charge/discharge rate capability                                   | Advanced Li-S, Solid-State, or other high energy density cells.<br>Battery Management System (BMS) with cell balancing and thermal control.<br>Lightweight composite casing.<br>QC: Capacity test, cycle life test, safety tests (nail penetration, overcharge). | - Mount in a dedicated, ventilated, and fire-protected bay.<br>- Connect to PMU via high-current connectors.<br>- Integrate with thermal management system.                           | - Monitor State of Health (SOH) and State of Charge (SOC) via BMS.<br>- Perform capacity checks periodically.<br>- Inspect for cell swelling or leaks.                                 |
+| **6.9 Solid-State Lubrication System Components (if localized use)** | Lubricant delivery consistency                                                                 | Micro-dispensers for solid lubricants (e.g., MoS₂, WS₂, graphene platelets) or ionic liquids if used for specific components (e.g., non-magnetic bearings in accessories).<br>QC: Dispenser calibration, lubricant quality. | - Integrate where absolutely necessary if fully magnetic bearings are not feasible for all AGB components.<br>- Ensure precise delivery to target areas.                       | - Monitor lubricant reservoir levels (if any).<br>- Inspect target components for evidence of proper lubrication and wear.                                                         |
+
+†Tolerances "uncoated" at 20°C — unless otherwise indicated.
+
+#### Accessory Gearbox & Power Systems - QC / Tests Legend
+
+| Symbol | Description                                      |
+| :----- | :----------------------------------------------- |
+| CMM    | Coordinate-Measuring Machine                     |
+| FPI    | Fluorescent Penetrant Inspection                 |
+| AGMA   | American Gear Manufacturers Association          |
+| NDT    | Non-Destructive Testing                          |
+| MPI    | Magnetic Particle Inspection                     |
+| ISG    | Integrated Starter-Generator                     |
+| PMU    | Power Management Unit                            |
+| GCU    | Generator Control Unit                           |
+| BITE   | Built-In Test Equipment                          |
+| BMS    | Battery Management System                        |
+| SOH/SOC| State of Health / State of Charge                |
+| ESS    | Environmental Stress Screening                   |
+
+#### Accessory Gearbox & Power Systems - EBOM / MBOM Integration
+
+*   Insert this table into `/boms/accessory_power_module.yaml`.
+*   Item IDs link to the numerical labels in the renders (if available for this module).
+*   Add cost, lead-time, and supplier when consolidating RFQ.
+
+---
+
+### 7. Control Systems & Quantum Interface Module — DPM&A
+*Assembly ID: GQ-AIR-TURB-CTRL-07*
+
+![Control Systems Module Placeholder](https://via.placeholder.com/800x400.png?text=Control+Systems+Module+Exploded+View)
+
+| Item ID                                                 | Critical Tolerances† / Key Specs                                                                           | Manufacturing Process → Quality Checks                                                                                                                                                                                            | Assembly Instructions / Torque                                                                                                                                                           | Predictive Maintenance Tips                                                                                                                                                           |
+| :------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **7.1 Full Authority Digital Engine Control (FADEC) Unit(s)** | Processing speed > X MIPS<br>Memory capacity > Y GB<br>I/O channel count & type<br>Redundancy architecture (e.g., dual/triple channel) | Radiation-hardened multi-core processors.<br>High-reliability memory (ECC).<br>ARINC standard communication interfaces (e.g., 429, 664).<br>DO-178C/ED-12C Level A software development.<br>Sealed, passively or actively cooled enclosure with EMI shielding.<br>QC: Full functional test, HASS/HALT, software V&V. | - Mount in environmentally controlled avionics bay or engine-mounted vibration-isolated enclosure.<br>- Connect to all engine sensors, actuators, fuel system, ignition, ISG, PMU, QCI, and aircraft systems.<br>- Ensure proper grounding and shielding of all connections. | - Continuous BITE and health monitoring.<br>- Monitor for error codes and performance anomalies.<br>- Regular software updates as per service bulletins.<br>- Inspect connectors and harnesses. |
+| **7.2 Edge AI Processing Unit (for adaptive control/PHM)** | TOPS > Z<br>Power consumption < W Watts<br>Latency for inference < L ms                                     | Specialized AI accelerator hardware (GPU, TPU, Neuromorphic).<br>Radiation-tolerant design.<br>Optimized software stack for AI models.<br>Secure boot and encrypted model storage.<br>QC: Performance benchmarking, thermal testing, software validation. | - Typically co-located or integrated with FADEC or QCI.<br>- High-bandwidth, low-latency connection to FADEC and QCI.<br>- Ensure adequate cooling.                                                 | - Monitor AI model performance and accuracy.<br>- Update AI models as improved versions become available or as new data is gathered.<br>- Monitor hardware health (temp, power).           |
+| **7.3 Quantum Sensor Interface (QSI) / Quantum-Classical Interface (QCI)** | Data acquisition rate > R Samples/sec per channel<br>Signal-to-noise ratio (SNR) for quantum sensor signals<br>Synchronization accuracy with classical sensors < S ns | Specialized analog front-end for quantum sensor signals (e.g., NV centers, QDs).<br>High-speed ADCs/TDCs.<br>FPGA/ASIC for real-time signal processing and data fusion pre-processing.<br>Optical fiber interfaces for quantum sensor data.<br>QC: Signal integrity tests, calibration against reference quantum sources, timing accuracy tests. | - Mount close to quantum sensor clusters or use robust optical fiber routing.<br>- Connect to quantum sensors and classical sensor network.<br>- High-bandwidth data link to Edge AI unit and/or FADEC. | - Monitor signal quality from quantum sensors.<br>- Perform periodic recalibration of sensor interfaces.<br>- Inspect optical fiber connections for integrity and cleanliness.                  |
+| **7.4 Engine Sensor Suite (Classical: Pressure, Temp, Speed, Vibration)** | Accuracy ±A% FS<br>Response time < T ms<br>Environmental survivability (temp, vibration)                    | MEMS, thermocouple, RTD, optical, eddy current technologies.<br>Harsh environment packaging.<br>QC: Calibration against traceable standards, environmental testing (DO-160).                                            | - Install sensors at designated locations on engine modules.<br>- Torque fittings/bolts to specified values.<br>- Route harnesses carefully, ensuring strain relief and EMI protection.<br>- Connect to FADEC/QCI data acquisition units. | - Continuous monitoring by FADEC.<br>- Perform sensor health checks and plausibility checks.<br>- Replace sensors that are out of calibration, failed, or show erratic behavior.        |
+| **7.5 Actuator Suite (Fuel Metering, VGV, VSV, ACC, VAN, etc.)** | Positional accuracy ±P%<br>Slew rate > V deg/sec or mm/sec<br>Force/torque output                                 | Electro-mechanical, electro-hydraulic, or direct-drive electric actuators.<br>High-reliability motors, gearboxes, position sensors (LVDT, RVDT, encoders).<br>QC: Functional test (stroke, speed, force), endurance testing. | - Mount actuators to their respective components.<br>- Connect mechanical linkages.<br>- Connect electrical power and control signals to FADEC.<br>- Perform rigging and calibration procedures.         | - Monitor actuator performance (position feedback, current draw, response time).<br>- Inspect for wear, leaks (if hydraulic), and backlash in linkages.<br>- Lubricate or replace as needed. |
+| **7.6 Engine Health Monitoring Unit (EHMU) Data Storage & Transmission** | Storage capacity > C TB<br>Data download speed > D Gbps                                                     | Solid-state, radiation-tolerant, high-capacity non-volatile memory.<br>Secure data encryption.<br>Wireless or wired data offload interface (e.g., ARINC 615A, Wi-Fi, 5G).<br>QC: Data integrity tests, read/write speed tests, environmental tests. | - Typically integrated with FADEC or as a separate LRU.<br>- Connect to FADEC/QCI for data logging.                                                                                       | - Monitor storage health and available capacity.<br>- Perform regular data downloads for ground-based analysis and fleet monitoring.<br>- Ensure data security protocols are maintained.     |
+| **7.7 Fiber Optic Network (for Quantum & High-Speed Data)** | Bandwidth > B Gbps per link<br>Attenuation < α dB/km<br>Connector loss < β dB                                   | Radiation-hardened, vibration-resistant fiber optic cables and connectors (e.g., ARINC 801, MIL-PRF-29504).<br>WDM components if used.<br>QC: Optical Time Domain Reflectometer (OTDR) tests, insertion loss tests. | - Route fiber optic cables with care, respecting bend radius limits and providing protection from chafing and high temperatures.<br>- Clean connectors meticulously before mating.                 | - Periodically inspect fiber optic cables and connectors for damage or contamination.<br>- Perform OTDR checks if signal degradation is suspected.                                  |
+
+†Tolerances "uncoated" at 20°C — unless otherwise indicated. Key specs are illustrative.
+
+#### Control Systems & Quantum Interface - QC / Tests Legend
+
+| Symbol   | Description                                      |
+| :------- | :----------------------------------------------- |
+| MIPS     | Million Instructions Per Second                  |
+| TOPS     | Tera Operations Per Second                       |
+| ECC      | Error Correcting Code                            |
+| ARINC    | Aeronautical Radio, Incorporated                 |
+| DO-178C  | Software Considerations in Airborne Systems      |
+| HASS/HALT| Highly Accelerated Stress Screen/Test            |
+| V&V      | Verification & Validation                        |
+| QCI      | Quantum-Classical Interface                      |
+| ADC/TDC  | Analog-to-Digital/Time-to-Digital Converter      |
+| FPGA/ASIC| Field-Programmable Gate Array / Application-Specific Integrated Circuit |
+| FS       | Full Scale                                       |
+| LVDT/RVDT| Linear/Rotary Variable Differential Transformer  |
+| LRU      | Line Replaceable Unit                            |
+| WDM      | Wavelength Division Multiplexing                 |
+| EMI      | Electro-Magnetic Interference                    |
+
+#### Control Systems & Quantum Interface - EBOM / MBOM Integration
+
+*   Insert this table into `/boms/control_systems_module.yaml`.
+*   Item IDs link to the numerical labels in the renders (if available for this module).
+*   Add cost, lead-time, and supplier when consolidating RFQ.
+
+---
+
+*(This largely completes the core engine operational modules. Further sections could detail Overall Engine Assembly, Testing & Certification, Lifecycle Management & Circularity Plan, or specific Digital Twin & DMP implementation details.)*
+```
 
 ![image](https://github.com/user-attachments/assets/ffd894aa-a56e-4a84-b47e-aecce53efb23)
 
@@ -468,7 +754,7 @@ flowchart TD
 
 ![image](https://github.com/user-attachments/assets/df2ad653-cb3b-46e2-af41-4b4d44d54fd7)
 
-**To be continued**
+```
 
 ## Quantum Aerospace Organization Structure
 
