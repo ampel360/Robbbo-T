@@ -225,9 +225,7 @@ GAIA-QAO Open Innovation License v1.0 (see [LICENSE](LICENSE) for details)
 
 ---
 
-Okay, I will now detail the **Accessory Gearbox / Power Systems Module** and then the **Control Systems / Quantum Interface Module**.
 
-```markdown
 # Zero-Impact Sustainable Turbofan Engine
 
 ## A Synergistic Integration of Advanced Materials, Intelligent Control, Quantum Sensing, and Full Lifecycle Recyclability
