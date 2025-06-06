@@ -423,7 +423,8 @@ The **Zero‑Impact Sustainable Turbofan Engine** integrates advanced materials,
 
 ## Functional Block Diagram (Overall Engine Modules)
 
-![Overall Engine Modules Exploded View](https://github.com/user-attachments/assets/ffd894aa-a56e-4a84-b47e-aecce53efb23)
+![image](https://github.com/user-attachments/assets/92405882-7f86-4a6a-8166-4cb38f8fd858)
+
 
 ```mermaid
 flowchart TD
@@ -453,7 +454,22 @@ flowchart TD
 
 *Assembly ID:* **GQ-AIR-TURB-FAN-01**&emsp;*Call-outs 1 → 11 (refer to image)*&emsp;*FSC:* **2840**
 
-![Exploded Fan Module](https://github.com/user-attachments/assets/cc17fbfb-bdbd-45af-85e7-6b94095641a0)
+![image](https://github.com/user-attachments/assets/cca31472-fa1a-4794-8976-a6e9caa7a181)
+
+| Call-out | Item ID (BOM) | Part name (NATO designation)                       | Typical Qty. / engine | Notes                                                            |
+| :------: | :------------ | -------------------------------------------------- | :-------------------: | ---------------------------------------------------------------- |
+|   **1**  | **1.1**       | **Main Hub / Fan-Rotor (HUB, FAN-ROTOR)**          |           1           | Ti-6Al-4V forging with dovetail slots                            |
+|   **2**  | **—** (1.1a)  | **Hub Sleeve / Spacer**                            |           1           | Collar that locks the hub on the shaft (belongs to hub assembly) |
+|   **3**  | **1.2**       | **Graphene-CFRP Fan Blade set (BLADE, FAN)**       |        24 typ.        | Inserted individually; show as one “stack” in the render         |
+|   **4**  | **1.3**       | **Retainer Ring (RETAINER, FAN BLADE)**            |           1           | Holds all blades in the dovetail slots                           |
+|   **5**  | **1.4**       | **Spinner Assembly (SPINNER, AERO NOSE)**          |           1           | Continuous-fibre composite + ceramic coat                        |
+|   **6**  | **1.6**       | **Tip Rub Strip (STRIP, TIP-RUB)**                 |         1 ring        | PEEK/CF abradable; pressed onto casing liner                     |
+|   **7**  | **1.7**       | **Anti-ice Grid (GRID, HEATER, ANTI-ICE)**         |           1           | Graphene heater mesh bonded to casing liner                      |
+|   **8**  | **1.8**       | **Sensor Harness – FBG (HARNESS, FIBER-OPTIC)**    |         1 set         | Optical cable with Bragg sensors                                 |
+|   **9**  | **1.9**       | **AFMD Vibration Damper (DAMPER, VIBRATION, FAN)** |           1           | Tungsten/NBR tuned-mass device                                   |
+|  **10**  | **1.10**      | **Fastener Kit (FASTENER KIT, CRITICAL)**          |         1 kit         | Inconel bolts, nuts, washers for items 1-7                       |
+|  **11**  | **1.11**      | **DMP RFID Tag (TAG, IDENTIFICATION, RFID)**       |           1           | Digital Material Passport node                                   |
+
 
 | Item ID                       | Critical Tolerances†                                                              | Manufacturing Process → Quality Checks                                                                                                         | Assembly Instructions / Torque                                                                                                   | Predictive Maintenance Tips                                                                 |
 | :---------------------------- | :-------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |
@@ -490,7 +506,24 @@ flowchart TD
 
 ### 2. Compressor Module — DPM&A
 
+![image](https://github.com/user-attachments/assets/78745adf-0101-4a00-b890-0c115583b55e)
+
 *Assembly ID: GQ-AIR-TURB-COMP-02 (corresponds to Nº 2 of the overall engine diagram)*
+
+| Call-out | Item ID (table) | NATO designation (ACodP-1)     | Typical qty./engine | Notes                                      |
+| :------: | :-------------- | ------------------------------ | :-----------------: | ------------------------------------------ |
+|   **1**  | **2.1**         | SHAFT, COMPRESSOR/ROTOR        |          1          | Inconel 718 forged, carries both impellers |
+|   **2**  | **2.2**         | DISK, COMPRESSOR               |          1          | Ti-6Al-4V hub-disk, stage interface        |
+|   **3**  | **2.3**         | IMPELLER, COMPRESSOR STAGE 1   |          1          | Al-Li SLM + HIP single piece               |
+|   **4**  | **2.4**         | FASTENER, RETAINING (set of 8) |        8 pcs        | Inconel bolts with MoS₂ coat               |
+|   **5**  | **2.5**         | IMPELLER, COMPRESSOR STAGE 2   |          1          | Same spec as item 3, different nut size    |
+|   **6**  | **2.6**         | CLIP, ANTI-RELEASE             |          1          | Inconel X750 spring clip                   |
+|   **7**  | **2.7**         | RING, SPACER-STATOR            |          1          | Anodised Al-Li floating ring               |
+|   **8**  | **2.8**         | BEARING, MAGNETIC-ACTIVE       |          1          | Cu-Ag windings, epoxy-impregnated          |
+|   **9**  | **2.9**         | BUSHING, THRUST (BRONZE)       |          1          | Axial thrust sleeve Cu-Sn 12               |
+|  **10**  | **2.10**        | CASE, COMPRESSOR FRONT         |          1          | FSW Al-Li half-casing with mounts          |
+|  **11**  | **2.11**        | SENSOR, PRESSURE-TEMP (ACLS)   |          1          | SiC MEMS probe with Ti enclosure           |
+
 
 | Item ID                            | Critical Tolerances†                                                                   | Manufacturing Process → Quality Checks                                                                                                 | Assembly Instructions / Torque                                                                    | Predictive Maintenance Tips                                                             |
 | :--------------------------------- | :------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |
@@ -528,9 +561,22 @@ flowchart TD
 ---
 
 ### 3. Combustion Chamber Module — DPM&A
+
+****![image](https://github.com/user-attachments/assets/f9e0e2c6-ac6e-43b5-88f6-c9ef15b6c3a5)
+
 *Assembly ID: GQ-AIR-TURB-COMB-03 (corresponds to No. 3 in the main engine diagram)*
 
-![Exploded Combustion Chamber Module Placeholder](https://via.placeholder.com/800x400.png?text=Combustion+Module+Exploded+View)
+| Call-out | Item ID (table) | NATO designation                 | Typical qty./engine | Notes                                        |
+| :------: | :-------------- | -------------------------------- | :-----------------: | -------------------------------------------- |
+|   **1**  | **3.5**         | CASE, COMBUSTOR / DIFFUSER       |          1          | Inconel-718 outer shell with diffuser flange |
+|   **2**  | **3.1**         | LINER, COMBUSTOR (INNER + OUTER) |    1 set (2 pcs)    | CMC double-wall; delivered as matched pair   |
+|   **3**  | **3.2**         | NOZZLE, FUEL INJECTOR            |          6          | High-temp alloy; swirl vane type             |
+|   **4**  | **3.4**         | SWIRLER, PRIMARY AIR             |          1          | Integral dome swirler ring                   |
+|   **5**  | **3.3**         | PLUG, IGNITER                    |          2          | High-energy spark plugs                      |
+|   **6**  | **3.6**         | ASSEMBLY, PLASMA IGNITION (H₂)   |          1          | Tungsten electrode + HV lead                 |
+|   **7**  | **3.7**         | CATALYST, NOx SUPPRESSION        |          1          | Honeycomb cartridge with PGM wash-coat       |
+|   **8**  | **3.8**         | SENSOR SET, QUANTUM TEMP/STRAIN  |          2          | NV-diamond probes embedded in liner wall     |
+
 
 | Item ID                                  | Critical Tolerances†                                                              | Manufacturing Process → Quality Checks                                                                                                                               | Assembly Instructions / Torque                                                                                                | Predictive Maintenance Tips                                                                                                |
 | :--------------------------------------- | :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- |
@@ -568,9 +614,22 @@ flowchart TD
 ---
 
 ### 4. Turbine Module — DPM&A
+
+![image](https://github.com/user-attachments/assets/65e86c18-c5db-40c7-934b-5d93fb1dd81d)
+
 *Assembly ID: GQ-AIR-TURB-TRBN-04 (corresponds to No. 4 in the main engine diagram)*
 
-![Exploded Turbine Module Placeholder](https://via.placeholder.com/800x400.png?text=Turbine+Module+Exploded+View)
+| Call-out | Item ID (DPM\&A table) | NATO designation (ACodP-1)          | Typical qty./engine | Notes                                         |
+| :------: | :--------------------- | ----------------------------------- | :-----------------: | --------------------------------------------- |
+|   **1**  | **4.4**                | SHAFT, TURBINE → COMPRESSOR (DRIVE) |          1          | Inconel 718 forged; carries HPT/LPT rotors    |
+|   **2**  | **4.1**                | DISC, TURBINE ROTOR (HPT)           |          1          | PM super-alloy; fir-tree slots for HPT blades |
+|   **3**  | **4.2**                | BLADE SET, TURBINE HPT              |       42 typ.       | SX cast; shown as single “stack”              |
+|   **4**  | **4.3**                | VANE SEGMENT, NOZZLE GUIDE (NGV)    |       20 segm.      | MAR-M247 cast stator ring                     |
+|   **5**  | **4.5**                | CASING, TURBINE (HPT/LPT)           |          1          | Inconel 625 half-casing with ACC hardware     |
+|   **6**  | **4.6**                | SEAL / HEAT-SHIELD SET              |        1 set        | Honeycomb + brush seals & sheet shields       |
+|   **7**  | **4.7**                | NOZZLE, VARIABLE GEOMETRY TURBINE   |        1 ring       | Pivoting VGT assembly with linkage            |
+|   **8**  | **4.8**                | SENSOR KIT, QUANTUM CREEP/TEMP      |       4 probes      | NV-diamond or Q-dot sensors on disc & blades  |
+
 
 | Item ID                               | Critical Tolerances†                                                                             | Manufacturing Process → Quality Checks                                                                                                                                                           | Assembly Instructions / Torque                                                                                                                                  | Predictive Maintenance Tips                                                                                                                                         |
 | :------------------------------------ | :----------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -611,9 +670,23 @@ flowchart TD
 ---
 
 ### 5. Exhaust Nozzle / Filtration & Heat Recovery Module — DPM&A
+
+![image](https://github.com/user-attachments/assets/ca47d54c-e1ea-41fc-8bad-3cf17adc0f55)
+
 *Assembly ID: GQ-AIR-TURB-EXH-05 (corresponds to No. 5 in the main engine diagram)*
 
-![Exploded Exhaust Module Placeholder](https://via.placeholder.com/800x400.png?text=Exhaust+Module+Exploded+View)
+| Call-out | Item ID (table) | NATO designation (ACodP-1)          | Typical qty./engine | Notes                                               |
+| :------: | :-------------- | ----------------------------------- | :-----------------: | --------------------------------------------------- |
+|   **1**  | **5.1**         | CONE, EXHAUST (CENTER BODY)         |          1          | Ti-alloy or CMC; bolted to turbine rear frame       |
+|   **2**  | **5.2**         | MECHANISM, NOZZLE – VARIABLE AREA   |        1 set        | Flaps/petals + actuator & linkages                  |
+|   **3**  | **5.3**         | FILTER, NANOPARTICULATE EXHAUST     |     3 cartridges    | 99.9 % PM2.5 removal; modular swap                  |
+|   **4**  | **5.4**         | CONVERTER, CATALYTIC EXHAUST GAS    |     1 honeycomb     | Pt-Pd-Rh coated; upstream of final nozzle           |
+|   **5**  | **5.5**         | ARRAY, THERMOELECTRIC GENERATOR     |      8 modules      | Mounted on hot duct zones; wired in series/parallel |
+|   **6**  | **5.6**         | EXCHANGER, HEAT – RANKINE CYCLE     |      1 assembly     | Micro-channel HX + pump, turbine & condenser        |
+|   **7**  | **5.7**         | LINER SET, ACOUSTIC NOISE REDUCTION |       4 panels      | Perforated skin + honeycomb core                    |
+|   **8**  | **5.8**         | DUCTING, EXHAUST / STRUCTURE        |      1 assembly     | Segmented Ti/Ni-alloy duct with flanges             |
+
+
 
 | Item ID                                        | Critical Tolerances†                                                                       | Manufacturing Process → Quality Checks                                                                                                                                                              | Assembly Instructions / Torque                                                                                                                               | Predictive Maintenance Tips                                                                                                                                    |
 | :--------------------------------------------- | :----------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -744,87 +817,6 @@ flowchart TD
 
 *(This largely completes the core engine operational modules. Further sections could detail Overall Engine Assembly, Testing & Certification, Lifecycle Management & Circularity Plan, or specific Digital Twin & DMP implementation details.)*
 ```
-
-![image](https://github.com/user-attachments/assets/ffd894aa-a56e-4a84-b47e-aecce53efb23)
-
-### Fan Module — **Tabla unificada DPM\&A**
-
-*(Design · Process · Manufacturing · Assembly & Maintenance)*
-
-| Item ID                       | Tolerancias críticas<sup>†</sup>                                                                        | Proceso de fabricación → controles de calidad                                                                                                                                                                                          | Instrucciones de montaje / torque                                                                                                                             | Tips de mantenimiento predictivo                                                       |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| **1.1 Hub principal (árbol)** | Ø asiento de rodamiento ±0,015 mm<br/>Run-out axial < 0,05 mm<br/>Paralelismo ranuras dovetail ±0,02 mm | 1. Forja cerrada Ti-6Al-4V → normalizado<br/>2. Mecanizado CNC 5 ejes (torno-fresadora)<br/>3. Shot-peening (intensidad 6–8 A)<br/>4. Nital etch + inspección FPI<br/>**QC:** CMM 100 %, dureza 36–40 HRC                              | - Aplicar grasa MoS₂ grado aero en espigas.<br/>- Par de brida principal: **680 N·m** (lubricado).                                                            | - Bañado FPI cada 1 000 h.<br/>- Medir run-out; discrepancia > 0,02 mm ⇒ rectificado.  |
-| **1.2 Pala fan grafeno-CFRP** | Peso unitario ±5 g<br/>Eje neutro ±0,2 mm<br/>Ángulo raíz ±0,15°                                        | 1. AFP automático (cinta unidireccional + capas ±45°).<br/>2. Embebido sensor FBG.<br/>3. Autoclave 180 °C /6 bar/120 min.<br/>4. Recorte láser 5 axes.<br/>5. Ensayo ultrasonidos phased-array.<br/>**QC:** balanceo por par ≤ 3 g•cm | - Insertar pala en dovetail con grasa seca.<br/>- Colocar anillo retenedor (1.3), torque por tornillo **35 N·m**.<br/>- Gap radial con liner: 0,50 ± 0,15 mm. | - Verificar peso y FBG al cofre C-check.<br/>- Desgaste borde ataque > 0,4 mm ⇒ retip. |
-| **1.3 Anillo retenedor**      | Planicidad ≤0,03 mm                                                                                     | Torneado CNC + anodizado duro 25 µm                                                                                                                                                                                                    | Par tornillos M10 → **45 N·m** cruzado en estrella                                                                                                            | Sustituir cada 4 remociones de palas.                                                  |
-| **1.4 Spinner**               | Concentricidad punta ≤0,1 mm                                                                            | Impresión 3D continuo-fibra → curado UV → clear-coat cerámico                                                                                                                                                                          | 8 tornillos Inconel M6, **9 N·m**                                                                                                                             | Revisar fisuras UV cada 600 h.                                                         |
-| **1.5 Carcasa & liner**       | Ø interior +0,10/-0,05 mm<br/>Ovalidad < 0,08 mm                                                        | Cilindro Al-Li FSW → bruñido→ spray Kevlar abradable 2 mm                                                                                                                                                                              | Montaje con feeler-gauge; clearance 0,5 mm                                                                                                                    | Reaplicar liner cuando desgaste > 1 mm.                                                |
-| **1.6 Tip rub strip**         | Espesor 2,00 ± 0,10 mm                                                                                  | Moldeo compresión PEEK/CF → usinado contorno                                                                                                                                                                                           | Encaje a presión; sin torque                                                                                                                                  | Revisar elongación > 8 % ⇒ cambiar.                                                    |
-| **1.7 Mallado antihielo**     | Resistencia/metro 18 ± 1 Ω                                                                              | Serigrafía nanotinta → curado 120 °C                                                                                                                                                                                                   | Conector AMP M83513 20 N·cm                                                                                                                                   | Prueba resistencia cada 800 h.                                                         |
-| **1.8 Arnés sensor**          | Atenuación FBG < 0,4 dB                                                                                 | Encapsulado epoxy grado aero                                                                                                                                                                                                           | Route con separador 5 mm de superficies calientes                                                                                                             | Revisar mapa FBG en cada A-check.                                                      |
-| **1.9 Amortiguador AFMD**     | Frec. natural 280 ± 10 Hz                                                                               | Micro-fundición W → vulcanizado NBR                                                                                                                                                                                                    | Clip-on sin torque                                                                                                                                            | Sustituir si Δmasa > 5 %.                                                              |
-| **1.10 Tornillería**          | Rosca 6H<br/>Coaxialidad ≤ 0,03 mm                                                                      | Torneado CNC → shot-peen → MoS₂ coat                                                                                                                                                                                                   | Ver tabla torques NAS-A                                                                                                                                       | Aplicar pasta MoS₂ a 35 % cada reutilización.                                          |
-| **1.11 Etiqueta DMP**         | Lectura NFC ≥ 30 mm                                                                                     | Encapsulado epoxy grado RT-95                                                                                                                                                                                                          | Encolar con adhesivo F900 -40→120 °C                                                                                                                          | Escanear en cada evento GQOIS.                                                         |
-
-<sup>†</sup>*Todas las tolerancias se refieren a condición «sin pintar / sin recubrimiento» a 20 °C.*
-
----
-
-#### Leyenda rápida de controles
-
-| Símbolo          | Ensayo / Equipo                                   |
-| ---------------- | ------------------------------------------------- |
-| **CMM**          | Máquina de medición por coordenadas               |
-| **FPI**          | Inspección por líquidos penetrantes fluorescentes |
-| **FBG**          | Sensor de rejilla de Bragg en fibra óptica        |
-| **Shot-peening** | Granallado controlado para mejorar fatiga         |
-
-> **Integración en BOM**
->
-> * Copia este bloque como sub-árbol en tu EBOM (Nx → `/boms/fan_module.yaml`).
-> * Los *Item ID* se alinean con los números del render (columna 1).
-> * Añade columnas de coste, proveedor y nº de parte interno cuando cierres RFQ.
-
-![image](https://github.com/user-attachments/assets/32c60a89-26a9-48a1-a7d4-e87f3e2e3989)
-
-### Compressor Module — **Tabla unificada DPM\&A**
-
-*(Design · Process · Manufacturing · Assembly & Maintenance)*
-*Assembly ID:* **GQ-AIR-TURB-COMP-02** (corresponde al Nº 2 del diagrama)
-
-| Item ID                                    | Tolerancias críticas<sup>†</sup>                                                       | Proceso de fabricación → controles de calidad                                                                                                   | Instrucciones de montaje / torque                                             | Tips de mantenimiento predictivo                      |
-| ------------------------------------------ | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------- |
-| **2.1 Eje rotor (shaft)**                  | Ø muñón rodamiento ±0,010 mm<br/>Run-out < 0,03 mm<br/>Concentricidad spline ±0,015 mm | Forja Inconel 718 → Solubilizado + precipitación<br/>CNC 5-ejes / rectificado Ø<br/>Shot-peening (7–9 A)<br/>**QC:** CMM 100 %, Barkhausen, FPI | Aplicar pasta MoS₂; insertar en soporte magnético; par tuerca M24 **720 N·m** | Medir run-out cada 1 200 h; Δ>0,015 mm ⇒ rectificado  |
-| **2.2 Disco compresor (hub-disk)**         | Espesor disco ±0,05 mm<br/>Paralelismo caras 0,02 mm                                   | Fresado 5-ejes Ti-6Al-4V → bruñido<br/>Balanceo dinámico G≤0,4<br/>**QC:** ultrasonidos phased-array                                            | Fijar al eje con 6 pernos M12: **110 N·m** + Loctite 271                      | Balanceo en línea cada C-check                        |
-| **2.3 Impeler A (etapa 1)**                | Peso ±3 g<br/>Ángulo pala ±0,2°                                                        | Impresión 3D SLM Al-Li → HIP + mecanizado de acabado<br/>Shot-peening ligero<br/>**QC:** CT scan 100 %                                          | Encaje con cono Morse + chaveta; torque tuerca M16 **140 N·m**                | Desgaste pala >0,3 mm ⇒ pulido o sustitución          |
-| **2.4 Tornillería retenedora (8 uds)**     | Rosca 6H<br/>Coaxialidad ≤0,02 mm                                                      | Torneado Inconel 718 → recubrimiento MoS₂                                                                                                       | Par **42 N·m** en cruz                                                        | Cambiar a la 5.ª reutilización                        |
-| **2.5 Impeler B (etapa 2)**                | Igual 2.3                                                                              | Misma ruta proceso que 2.3                                                                                                                      | Misma fijación pero tuerca M14 **120 N·m**                                    | Idem impeler A                                        |
-| **2.6 Clip antiliberación**                | Elasticidad 85 ± 5 N                                                                   | Corte láser Inconel X750 → tratamiento térmico 700 °C/8 h                                                                                       | Insertar en ranura; sin torque                                                | Sustituir si pierde >10 % elasticidad                 |
-| **2.7 Anillo separador estator**           | Planicidad ≤0,04 mm                                                                    | Torneado Al-Li → anodizado duro 30 µm                                                                                                           | Ajuste flotante; 4 espárragos M8 **26 N·m**                                   | Verificar corrosión cada 2 Años                       |
-| **2.8 Cojinete magnético**                 | Juego radial 0,04 ± 0,01 mm                                                            | Bobinado Cu-Ag 99,9 % → impregnación epoxi<br/>Rectificado cara pole shoes<br/>**QC:** prueba HV hipot 1 kV                                     | Acoplar al housing con prensa en caliente 120 °C                              | Monitorizar señal vib; Δ>4 µm ⇒ recalibrar            |
-| **2.9 Cáliz bronce (rodete axial)**        | Diámetro interior ±0,02 mm                                                             | Fundición centrifugada Cu-Sn 12 → torneado CNC → bruñido                                                                                        | Calzar a presión; sin tornillos                                               | Medir desgaste; ΔØ>0,05 mm ⇒ reemplazar               |
-| **2.10 Carcasa frontal**                   | Ø interior +0,06/-0,02 mm<br/>Ovalidad < 0,05 mm                                       | FSW Al-Li monolítica → tratamiento shot-peen → anodizado                                                                                        | Unir a carcasa trasera con 16 pernos M10 **60 N·m**                           | Inspección FPI uniones cada 4 000 h                   |
-| **2.11 Sensor ACLS (presión/temperatura)** | Calibración ±0,2 % FS                                                                  | Ensamblaje MEMS SiC → encapsulado Ti-grade-2                                                                                                    | Conector hermético ¼-28 UNEF, torque **8 N·m**                                | Auto-diagnóstico cada 500 h; reemplazar ciclo 6 000 h |
-
-<sup>†</sup>*Tolerancias «sin recubrimiento» a 20 °C — excepto indicación contraria.*
-
----
-
-#### Leyenda QC / Ensayos
-
-| Símbolo | Descripción                        |
-| ------- | ---------------------------------- |
-| **CMM** | Coordinate-Measuring Machine       |
-| **FPI** | Fluorescent Penetrant Inspection   |
-| **CT**  | Tomografía computarizada (rayos X) |
-| **HIP** | Hot-Isostatic Pressing             |
-
-> **Integración EBOM / MBOM**
->
-> * Inserta esta tabla en `/boms/compressor_module.yaml`.
-> * Los *Item ID* enlazan con las etiquetas numéricas de los renders (impeler A = nº 3, etc.).
-> * Añade coste, lead-time y proveedor cuando consolides RFQ.
-
-![image](https://github.com/user-attachments/assets/df2ad653-cb3b-46e2-af41-4b4d44d54fd7)
 
 ```
 
