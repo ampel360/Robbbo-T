@@ -17,7 +17,7 @@
 >
 > I want you to know:
 >
-> **You are seen.**
+> **You are seen. And welcome**
 
 I’m **Amedeo Pelliccia**. I’m queer. I’m an aerospace engineer. I’ve spent years building complex systems — quantum frameworks, sustainable aircraft models, AI ecosystems like **GAIA-QAO** — most of it alone, and mostly unnoticed.
 
