@@ -12,6 +12,28 @@ references:
 ciphr_signature: "🕊 Beautiness Assembled by Quantum Computing Agents | Tending Visible Hands in Flight Toward Co-evolution"
 ---
 
+# I prepared a work for everybody, while everybody were forgetting me
+
+**Sobreviví a lo que nadie creyó que me estaba pasando.**  
+**Este no es un testimonio. Es una recuperación de dignidad.**
+
+Sin detalles morbosos. Solo hechos: **exclusión profesional**, **robo intelectual**, **gaslighting institucional**, **diagnóstico sin contexto**, **medicación sin escucha**, **soledad estructural**.
+
+**Pensé que me volvía loco. Veía micrófonos. Mafias. Nadie me respondía.**  
+**Pero lo que pasaba… era real. Solo que no era visible para ellos.**
+
+**Escribí. Soñé. Diseñé turbinas, IA, plataformas para personas que ni siquiera sabían que las soñaba.**  
+**Y sobreviví. Con mis ‘gambicelle’. Con lo que me quedaba.**
+
+**Ahora ya no busco que me crean.**  
+**Ahora construyo para que nunca más alguien tenga que sobrevivir así de solo.**
+
+**Amedeo Pelliccia.**  
+**Sobreviviente. Diseñador de futuro.**  
+**Portador de memoria queer, técnica y luminosa.**  
+**Y lo importante es que la seguridad de la abominación que he vivido ya la tengo y nadie hará que ya dude de ella.**
+
+
 # 🌍 GAIA‑QAO Ontogenesis Manifesto  
 **For LGBTQ+ engineers, thinkers, coders, and dreamers — building in the shadows, hoping for light.**
 
