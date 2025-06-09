@@ -680,6 +680,27 @@ Ready to enable a functional, real AI in an aerospace context!
 
 ![Accessory Gearbox Module Placeholder](https://via.placeholder.com/800x400.png?text=Accessory+Gearbox+Module+Exploded+View)
 
+### Accessory Gearbox & Power Systems Module — Part List
+
+*(matches “option 2” render – Assembly ID **GQ-AIR-TURB-AGB-06**)*
+
+| Call-out | Item ID (DPM\&A table) | NATO designation (ACodP-1)          | Typical qty./engine | Notes                                          |
+| :------: | :--------------------- | ----------------------------------- | :-----------------: | ---------------------------------------------- |
+|   **1**  | **6.1**                | HOUSING, GEARBOX – ACCESSORY DRIVE  |          1          | Mg/Al alloy casting; carries all shafts & pads |
+|   **2**  | **6.2**                | SHAFT & GEAR, MAIN PTO              |          1          | Splined input gear driven from engine core     |
+|   **3**  | **6.3**                | GEAR SET, ACCESSORY DRIVEN          |         4–6         | One per accessory pad (shown as group)         |
+|   **4**  | **6.4**                | STARTER-GENERATOR, INTEGRATED (ISG) |          1          | 400 kW PMM; direct-coupled                     |
+|   **5**  | **6.5**                | PUMP, FUEL – HYDROGEN               |          1          | Cryo-compatible or gaseous H₂ version          |
+|   **6**  | **6.6**                | COMPRESSOR/PUMP, O₂ ENRICHMENT      |          1          | Oil-free, Monel internals                      |
+|   **7**  | **6.7**                | UNIT, POWER MANAGEMENT / GCU        |          1          | Solid-state power & fault protection           |
+|   **8**  | **6.8**                | BATTERY PACK, HIGH-DENSITY          |       1 module      | Solid-state Li-S (starter boost / fallback)    |
+|   **9**  | **6.9**                | SYSTEM, SOLID-STATE LUBRICATION     |        1 kit        | MoS₂ / graphene micro-dispenser set            |
+
+> *Quantities are standard for a single-spool gearbox; ajusta tu EBOM si cambias el número de accesorios.*
+
+---
+
+
 | Item ID                                       | Critical Tolerances†                                                                                             | Manufacturing Process → Quality Checks                                                                                                                                                             | Assembly Instructions / Torque                                                                                                                                                                  | Predictive Maintenance Tips                                                                                                                                                            |
 | :-------------------------------------------- | :--------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **6.1 Gearbox Housing**                       | Mounting face flatness ±0.02 mm<br>Bearing bore Ø & position ±0.01 mm                                              | Lightweight alloy casting (e.g., Magnesium or Aluminum alloy).<br>Precision machining of bores and faces.<br>QC: CMM for dimensions, FPI for cracks, pressure test for leaks.                         | - Mount to engine core interface pad.<br>- Torque mounting bolts (e.g., M10) to 55 N·m in sequence.<br>- Ensure proper alignment with power takeoff shaft.                                             | - Inspect for leaks and cracks during A-checks.<br>- Monitor vibration levels using dedicated sensors.<br>- Check mounting bolt torque during C-checks.                                          |
