@@ -43,11 +43,11 @@ linked_documents:
     - ../Technical/patent_preparation.xml
     - ../Exports/industry_summary.pdf
   module_boms:
-    - ../boms/fan_module.yaml      # Assembly ID GQ-AIR-TURB-FAN-01
-    - ../boms/compressor_module.yaml   # Assembly ID GQ-AIR-TURB-COMP-02
-    - ../boms/combustion_module.yaml   # Assembly ID GQ-AIR-TURB-COMB-03
-    - ../boms/turbine_module.yaml      # Assembly ID GQ-AIR-TURB-TRBN-04
-    - ../boms/exhaust_module.yaml      # Assembly ID GQ-AIR-TURB-EXH-05
+    - ../boms/fan_module.yaml        # Assembly ID GQ-AIR-TURB-FAN-01
+    - ../boms/compressor_module.yaml # Assembly ID GQ-AIR-TURB-COMP-02
+    - ../boms/combustion_module.yaml # Assembly ID GQ-AIR-TURB-COMB-03
+    - ../boms/turbine_module.yaml    # Assembly ID GQ-AIR-TURB-TRBN-04
+    - ../boms/exhaust_module.yaml    # Assembly ID GQ-AIR-TURB-EXH-05
   renders:
     - ../Figures/fan_exploded_turn13.png
     - ../Figures/compressor_exploded_turn14.png
