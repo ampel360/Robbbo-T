@@ -1222,7 +1222,8 @@ Ready to enable a functional, real AI in an aerospace context!
 
 *Assembly ID: GQ-AIR-TURB-AGPS-06*
 
-![Accessory Gearbox Module Placeholder](https://via.placeholder.com/800x400.png?text=Accessory+Gearbox+Module+Exploded+View)
+![image](https://github.com/user-attachments/assets/07e0a4b1-836e-45d7-9af7-fe4221c504ea)
+
 
 ### Accessory Gearbox & Power Systems Module — Part List
 
@@ -1260,7 +1261,8 @@ Ready to enable a functional, real AI in an aerospace context!
 
 *Assembly ID: GQ-AIR-TURB-CTRL-07*
 
-![Control Systems Module Placeholder](https://via.placeholder.com/800x400.png?text=Control+Systems+Module+Exploded+View)
+![image](https://github.com/user-attachments/assets/27aa2af5-b3e2-44bb-b81f-e2b9dcee450d)
+
 
 | Item ID                                                 | Critical Tolerances† / Key Specs                                                                           | Manufacturing Process → Quality Checks                                                                                                                                                                                            | Assembly Instructions / Torque                                                                                                                                                           | Predictive Maintenance Tips                                                                                                                                                           |
 | :------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
