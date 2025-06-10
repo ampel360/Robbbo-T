@@ -1,4 +1,9 @@
-# 🚀 GAIA-QAO Aerospace Innovation Ecosystem
+### GAIA-QAO Zero-Impact Turbofan
+
+<details>
+<parameter name="old_str">### GAIA-QAO Zero-Impact Turbofan
+
+<details># 🚀 GAIA-QAO Aerospace Innovation Ecosystem
 ## Master Technical Documentation Portal
 
 <p align="center">
@@ -58,7 +63,8 @@
 - [🔬 Technical Specifications](#technical-specifications)
 
 ### **Implementation & Maintenance**
-- [⚙️ Zero-Impact Turbofan DPM&A](#zero-impact-turbofan-dpma)
+- [⚙️ Advanced Turbofan Propulsion](#advanced-turbofan-propulsion)
+- [🛡️ NATO/Military Compliance](#nato-military-compliance)
 - [🔧 Service Bulletin Structure](#service-bulletin-structure)
 - [📈 Performance Metrics](#performance-metrics)
 
@@ -411,6 +417,8 @@ A turbofan is a **Brayton cycle** thermal engine where an internal gas turbine c
 
 ### GAIA-QAO Zero-Impact Turbofan
 
+> **Note**: For detailed NATO-compliant specifications with NSN codes and ASD-STE100 documentation, see the [NATO/Military Compliance section](#nato-military-compliance).
+
 <details>
 <summary><strong>📋 Complete Module Specifications</strong></summary>
 
@@ -526,16 +534,21 @@ A turbofan is a **Brayton cycle** thermal engine where an internal gas turbine c
 
 | Term/Acronym | Definition |
 |--------------|------------|
+| **ACodP-1** | Allied Codification Publication (NATO nomenclature standard) |
 | **AGAD** | Aerospace Generative Algorithm Development |
 | **AGB** | Accessory Gearbox |
+| **ASD-STE100** | Aerospace and Defence Simplified Technical English |
 | **ATA** | Air Transport Association (documentation standard) |
 | **BITE** | Built-In Test Equipment |
 | **BPR** | Bypass Ratio (ratio of bypass to core flow) |
 | **BWB** | Blended Wing Body |
 | **CMC** | Ceramic Matrix Composite |
+| **CMM** | Coordinate Measuring Machine |
 | **DIKE** | Data Identifiable Knowledge Entity |
 | **FADEC** | Full Authority Digital Engine Control |
+| **FBG** | Fiber Bragg Grating (sensor) |
 | **FPI** | Fluorescent Penetrant Inspection |
+| **FSC** | Federal Supply Classification |
 | **GAIA-QAO** | Quantum Aerospace Organization |
 | **GQOIS** | GAIA-QAO Object Identification System |
 | **GTF** | Geared Turbofan |
@@ -544,12 +557,17 @@ A turbofan is a **Brayton cycle** thermal engine where an internal gas turbine c
 | **IMA** | Integrated Modular Avionics |
 | **ISG** | Integrated Starter-Generator |
 | **MBSE** | Model-Based Systems Engineering |
+| **NBR** | Nitrile Butadiene Rubber |
+| **NSN** | National Stock Number (NATO) |
 | **OPR** | Overall Pressure Ratio |
+| **OTDR** | Optical Time Domain Reflectometer |
+| **PEEK** | Polyetheretherketone (high-performance polymer) |
 | **QKD** | Quantum Key Distribution |
 | **QPU** | Quantum Processing Unit |
 | **SAF** | Sustainable Aviation Fuel |
 | **SFC** | Specific Fuel Consumption |
 | **SLM** | Selective Laser Melting |
+| **STE** | Simplified Technical English |
 | **TEG** | Thermoelectric Generator |
 | **TRL** | Technology Readiness Level |
 | **TSFC** | Thrust Specific Fuel Consumption |
@@ -632,6 +650,78 @@ icd_template:
 - **Materials Science**: NASA Glenn Research Center
 - **Sustainable Fuels**: Shell Aviation, Neste
 - **Certification**: FAA CLEEN Program, EASA Clean Sky
+
+---
+
+## 🛡️ NATO/Military Compliance Documentation {#nato-military-compliance}
+
+### Overview
+
+This section provides ASD-STE100 (Simplified Technical English) compliant documentation for military and NATO logistics systems. All specifications follow:
+- **ACodP-1** NATO nomenclature standards
+- **NSN** (National Stock Number) coding
+- **FSC** (Federal Supply Classification) categorization
+- **ASD-STE100** Simplified Technical English rules
+
+### Documentation Structure
+
+Each module includes:
+1. **Executive Overview** - For program managers and stakeholders
+2. **Detailed Technical Specifications** - For engineers and technicians
+3. **NATO Compliance Tables** - For military logistics and procurement
+
+---
+
+### Fan Module — Detailed NATO Specifications
+
+**Assembly ID:** GQ-AIR-TURB-FAN-01  
+**FSC:** 2840 (Gas Turbine and Jet Engine Components)
+
+<details>
+<summary><strong>📋 ASD-STE100 Compliant Technical Data (Click to expand)</strong></summary>
+
+#### Component Specifications Table
+
+| Call-out | NSN | NATO Designation | Critical Tolerances¹ | Process & Quality Checks | Assembly Torque/Instruction | Preventive Maintenance |
+|:--------:|-----|------------------|---------------------|-------------------------|----------------------------|----------------------|
+| **1** | 2840-00-106-6056 | HUB, FAN-ROTOR | Bearing seat Ø ±0.015 mm<br>Axial run-out < 0.05 mm | Forge Ti-6Al-4V. Machine on 5-axis machine. Shot-peen 6–8 A. Do fluorescent penetrant inspection (FPI). Check 100% on CMM. | Apply MoS₂ grease to journals. Tighten M24 nut to 680 N·m (lubricated). | Do FPI each 1,000 h. If run-out > 0.02 mm, regrind shaft. |
+| **2** | 2840-01-252-4080 | BLADE, FAN | Weight ±5 g<br>Root angle ±0.15° | Lay up by automatic fiber placement. Cure 180°C / 6 bar. Trim with five-axis laser. Check by ultrasonic test. Balance pair ≤ 3 g·cm. | Fit blade in dovetail with dry grease. Tighten retainer ring bolts to 35 N·m. Keep radial gap to liner 0.50 ±0.15 mm. | Check weight and FBG sensor at each C-check. If leading-edge wear > 0.4 mm, repair tip. |
+| **3** | 2840-00-113-4032 | RETAINER, FAN BLADE | Flatness ≤ 0.03 mm | Turn titanium ring. Anodize 25 µm. | Tighten six M10 bolts to 45 N·m in star pattern. | Replace ring after four blade removal cycles. |
+| **4** | 2840-01-497-8305 | SPINNER ASSEMBLY | Tip run-out ≤ 0.10 mm | Print with continuous carbon fiber. UV cure. Apply ceramic clear coat. | Tighten eight M6 bolts to 9 N·m. | Inspect spinner with UV light each 600 h. |
+| **5** | 2840-01-250-6143 | CASE, FAN WITH LINER | Inner Ø +0.10/-0.05 mm<br>Ovality < 0.08 mm | Weld Al-Li case by friction-stir. Hone bore. Spray 2 mm Kevlar liner. | Use feeler gauge. Keep clearance 0.5 mm. | Renew liner if wear > 1 mm. |
+| **6** | 2840-20-001-6001 | STRIP, TIP-RUB | Thickness 2.00 ± 0.10 mm | Mould PEEK/CF. Finish machine profile. | Press strip into tip groove; no bolts. | Replace strip if elongation > 8%. |
+| **7** | 2840-20-001-6002 | GRID, HEATER, ANTI-ICE | Resistance 18 ± 1 Ω·m⁻¹ | Screen-print graphene ink. Cure 120°C. | Connect AMP plug. Tighten to 0.2 N·m. | Measure resistance each 800 h. |
+| **8** | 5995-20-001-6003 | HARNESS, SENSOR | Attenuation < 0.4 dB | Pot fiber-optic harness in epoxy. Test with OTDR. | Route 5 mm from hot surfaces. | Check FBG map each A-check. |
+| **9** | 2840-20-001-6004 | DAMPER, VIBRATION | Natural frequency 280 ± 10 Hz | Cast tungsten mass. Vulcanize NBR shell. | Clip damper on blade root; no torque. | Replace damper if mass change > 5%. |
+| **10** | 5305-20-001-6005 | FASTENER KIT | Thread class 6H<br>Coax ≤ 0.03 mm | Machine Inconel screws. Shot-peen. Coat with MoS₂. | Use torque table NAS-A for each size. | Re-apply MoS₂ before each reuse. |
+| **11** | 7690-20-001-6006 | TAG, RFID | Read distance ≥ 30 mm | Encapsulate RFID in epoxy RT-95. | Bond tag with F900 adhesive (-40°C → 120°C). | Scan tag at every GQOIS event. |
+
+¹ All limits apply to bare parts at 20°C.
+
+#### ASD-STE100 Compliance Notes
+- Sentences are short and imperative
+- Only approved STE words are used
+- Each instruction tells **what** and **how**, one action per sentence
+- Technical terms follow ACodP-1 nomenclature
+
+</details>
+
+### Executive Summary - Fan Module
+
+For program management and overview purposes, the Fan Module (GQ-AIR-TURB-FAN-01) represents a critical propulsion component featuring:
+- **Advanced Materials**: Ti-6Al-4V hub with graphene-enhanced CFRP blades
+- **Quantum Integration**: Embedded FBG sensors with quantum readout capability
+- **NATO Standardization**: Full NSN coding for military logistics compatibility
+- **Predictive Maintenance**: AI-driven health monitoring via GQOIS tracking
+
+### Upcoming Module Documentation
+
+The following modules will be documented in similar ASD-STE100 format:
+- **Compressor Module** (GQ-AIR-TURB-COMP-02)
+- **Combustion Chamber Module** (GQ-AIR-TURB-COMB-03)
+- **Turbine Module** (GQ-AIR-TURB-TRBN-04)
+- **Exhaust Module** (GQ-AIR-TURB-EXH-05)
+- **Accessory Gearbox Module** (GQ-AIR-TURB-AGPS-06)
 
 ---
 
