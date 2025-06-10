@@ -203,12 +203,6 @@ El motor se presenta como una evolución disruptiva del turbofan:
 - Eficiencia y fiabilidad superiores.
 - Máxima adaptabilidad y facilidad de certificación futura.
 
----
-
-> ¿Deseas un documento formal con diagramas (SysML/MBSE), ciclo térmico, criterios de certificación y mapas de flujo energético para adjuntar a tu solicitud de patente?  
-> Es posible generarlo con diagramas Mermaid, tablas de ciclo e integración técnica.
-
----
 
 **Referencias**:  
 [1]: https://www.nasa.gov/directorates/stmd/niac/niac-studies/hydrogen-hybrid-power-for-aviation-sustainable-systems-hy2pass/?utm_source=chatgpt.com  
@@ -221,37 +215,90 @@ El motor se presenta como una evolución disruptiva del turbofan:
 
 ---
 
+
+### System Overview
+
+**Actors:**
+- **Piloto:** Human-in-the-loop, initiates hybrid system startup.
+- **FADEC:** Central embedded controller (likely multicore, real-time OS, possibly RTEMS/VxWorks or bare metal), integrating both combustion and electrical subsystems.
+- **Turbofan:** Hybrid engine, H₂/O₂ combustion primary, mechanical and electric drive.
+- **BusEnergia:** Power distribution, fuel cell integration, inverter/rectifier management, auxiliary drive controller.
+- **Sensores:** High-rate, multi-modal sensor suite (including quantum/AI-augmented for predictive diagnostics).
+
+---
+
+### Technical Flow
+
+1. **Pilot Initiation:**
+   - Pilot command triggers FADEC via secure, debounced input (redundant ARINC 429/AFDX or MIL-STD-1553 bus).
+2. **FADEC Startup Logic:**
+   - State machine initializes primary H₂/O₂ combustion (controls cryogenic valves, spark/ignition, mixture).
+   - Parallel start of fuel cell and electrical bus (power relays, soft-start on inverters, BMS checks).
+3. **Telemetry & Feedback:**
+   - Turbofan provides initial RPM/temperature via high-speed serial or CAN-FD.
+   - BusEnergia reports electrical status (voltage, current, isolation faults).
+   - Sensors provide environmental and operational data (direct memory-mapped DMA, low-latency interrupt driven).
+4. **Real-Time Control Loop:**
+   - FADEC executes deterministic algorithm (fixed-cycle, <1 ms jitter) for fuel/air mixture, load balancing, and bus integration.
+   - PID/advanced model-predictive algorithms optimize H₂/O₂ ratio, manage dual-source (combustion + electric) thrust.
+   - Power split managed dynamically—mechanical vs. electric, depending on load and predictive conditions.
+5. **System Feedback:**
+   - FADEC adjusts valve positions, electric motor PWM/inverter commands, and auxiliary loads.
+   - Reports system status to pilot, ensuring all fault domains are monitored and fail-operational logic is active.
+
+---
+
+### Implementation Suggestions
+
+- **Low-level Code:** Use C/C++/Rust for hard real-time control. Inline assembly for critical timing (e.g., valve actuation, sensor readout).
+- **Safety/Certification:** Partition code (DO-178C DAL A/B) for critical control vs. non-critical telemetry. Use formal verification for core logic.
+- **AI/Quantum Sensors:** Integrate using DSP coprocessor or FPGA softcores, streaming data to main FADEC for fusion and anomaly detection.
+- **Testing:** HIL (Hardware-in-the-Loop) for deterministic loop timing and failure injection.
+
+---
+
+### Extended Mermaid Diagram (with technical clarifications)
+
 ```mermaid
 sequenceDiagram
     participant Piloto
-    participant FADEC as "FADEC / Computadora de Control"
-    participant Turbofan as "Motor Turbofán Híbrido"
-    participant BusEnergia as "Bus Eléctrico"
-    participant Sensores as "Sensores IA/Cuánticos"
+    participant FADEC as "FADEC (RT Embedded Control)"
+    participant Turbofan as "Hybrid Turbofan Engine"
+    participant BusEnergia as "Electric Power Bus"
+    participant Sensores as "AI/Quantum Sensors"
 
-    Piloto->>FADEC: Solicita arranque del sistema híbrido
-    FADEC->>Turbofan: Activa combustión H₂/O₂ primaria
-    FADEC->>BusEnergia: Enciende celda\nde combustible
-    Turbofan-->>FADEC: Telemetría inicial (rpm, temp)
-    BusEnergia-->>FADEC: Estado de salida eléctrica
-    Sensores-->>FADEC: Parámetros de condición (presión, temp, vibración, etc)
-    FADEC->>FADEC: Calcula proporción óptima H₂/O₂ y reparto potencia eléctrica/mecánica
-    FADEC-->>Turbofan: Ajuste control de valvulería (combustión)
-    FADEC-->>BusEnergia: Ajuste flujo eléctrico e integración fan/motores auxiliares
-    FADEC->>Piloto: Notifica “Sistema operativo híbrido estable”
+    Piloto->>FADEC: Start hybrid system (redundant bus)
+    FADEC->>Turbofan: Activate H₂/O₂ primary combustion (valves/ignition)
+    FADEC->>BusEnergia: Power-on fuel cell & bus (inverter/relay control)
+    Turbofan-->>FADEC: Initial telemetry (rpm, temp) (CAN/Serial)
+    BusEnergia-->>FADEC: Electrical output status (voltage, BMS)
+    Sensores-->>FADEC: Condition parameters (pressure, temp, vibration)
+    FADEC->>FADEC: Compute optimal ratios & power split (real-time loop)
+    FADEC-->>Turbofan: Adjust combustion control (valve/PWM)
+    FADEC-->>BusEnergia: Adjust electric flow, integrate fans/aux motors
+    FADEC->>Piloto: Notify: "Hybrid system stable & operational"
 ```
 
----
 
 ## Technical Annex: MBSE & Integration
 
 ### MBSE Overview
 
-This platform leverages Model-Based Systems Engineering (MBSE) principles for the entire lifecycle:
+This platform implements Model-Based Systems Engineering (MBSE) across the full development lifecycle, supporting deterministic, safety-critical, and high-performance aerospace systems.
 
-- **SysML v2 Models**: System requirements, architecture, and traceability from concept to test.
-- **Digital Twin**: Real-time, bidirectional connection between physical assets and their digital representations.
-- **Simulation Integration**: Multiphysics, quantum-accelerated, and AI-driven co-simulation.
+#### Key Elements
+
+- **SysML v2 Models**:  
+  - System requirements, architecture, and behavioral representations are defined in SysML v2, enabling rigorous traceability (requirements ↔ design ↔ verification).
+  - Example: Block Definition Diagrams (BDD) clarify system decomposition and interfaces.
+
+- **Digital Twin**:  
+  - Real-time, bidirectional linkage between physical assets (e.g., Turbofan, FuelCellSystem) and their digital counterparts.
+  - Enables predictive maintenance, operational optimization, and in-situ testing/validation.
+
+- **Simulation Integration**:  
+  - Multiphysics solvers (CFD, FEA), quantum-accelerated computation (e.g., for optimization, molecular dynamics), and AI-driven co-simulation are orchestrated within the digital thread.
+  - Supports scenario-based verification, including HIL/SIL (Hardware-/Software-in-the-Loop) and virtual certification.
 
 #### Example: SysML Block Definition Diagram
 
@@ -270,19 +317,50 @@ classDiagram
     }
     Turbofan "1" -- "1" FuelCellSystem : integrates
 ```
+- **Interpretation**:  
+  - The Turbofan integrates a FuelCellSystem, which itself encapsulates both SOFC (Solid Oxide Fuel Cell) and PEM (Proton Exchange Membrane) modules.
+  - Each block can be traced to physical components and control logic, supporting V&V and compliance.
+
+---
 
 ### Integration with PLM/ALM
 
-- Full digital thread from BOM to compliance/certification
-- Automated traceability matrix generation
-- Secure, hash-based artifact verification
+- **Digital Thread**:  
+  - End-to-end artifact traceability from BOM (Bill of Materials) to compliance/certification documentation.
+  - PLM/ALM platforms interface through secure APIs, maintaining a single source of truth.
+
+- **Automated Traceability Matrix**:  
+  - Generation of matrices mapping requirements to implementation and test results, supporting audits and regulatory submissions.
+  - Supports change impact analysis and regression management.
+
+- **Secure Artifact Verification**:  
+  - All digital artifacts (models, source, binaries, test evidence) are hash-verified (e.g., SHA-256) to ensure authenticity and support chain-of-custody requirements.
+
+---
 
 ### Compliance References
 
-- **Aerospace**: DO-178C, DO-254, ARP4754A, ISO 21434
-- **AI/Software**: ISO/IEC 25010, EN 50128, SAE ARP6316
+- **Aerospace Safety & Certification**:
+  - DO-178C (Software), DO-254 (Hardware), ARP4754A (System Development), ISO 21434 (Automotive/Aerospace Cybersecurity)
+- **AI & Software Quality**:
+  - ISO/IEC 25010 (Software Quality Models), EN 50128 (Railway Software), SAE ARP6316 (AI System Safety)
 
 ---
+
+### Engineering Integration Guidance
+
+- **Toolchain**:  
+  - Use open standards (SysML v2, FMI, OSLC) for model exchange and tool interoperability.
+  - Automate model/code/test synchronization using CI/CD pipelines.
+
+- **Example Workflow**:  
+  1. SysML model authored in modeling tool (e.g., Cameo, Capella).
+  2. Model artifacts exported and versioned in PLM.
+  3. Digital twin runs co-simulations, feeding results to ALM for verification.
+  4. Compliance documentation generated automatically, supporting traceability and certification readiness.
+
+---
+
 
 ## 🤝 Colaboración
 
