@@ -60,6 +60,21 @@ ata:
     - QUAChain_hash: "recap100_hash_xyz"
     - git_tag: "v1.0.0"
 ```
+```mermaid
+flowchart TD
+    A[Priority Systems]
+    A --> DT[Gemelo digital básico<br/>Digital_Twin]
+    A --> Q[Blockchain – trazabilidad<br/>QUAChain]
+    A --> IM[Medición de impacto ambiental<br/>Impact_Metrics]
+```
+```mermaid
+flowchart TD
+    Q[Aplicaciones cuánticas]
+    Q --> NAV[Sensores cuánticos de precisión<br/>Navigation]
+    Q --> COM[Encriptación cuántica<br/>Communication]
+    Q --> OPT[Algoritmos cuánticos para eficiencia<br/>Optimization]
+```
+
 ## Comprehensive Hyperlinkable Index
 
 ```mermaid
@@ -98,6 +113,7 @@ flowchart TD
     click CERT "#certification-strategy" "Certification Strategy"
     click AI "#ai--autonomy" "AI & Autonomy"
 ```
+
 
 ### Quick Navigation
 - [General & Airframe (ATA 00-20)](#general--airframe-ata-00-20)
