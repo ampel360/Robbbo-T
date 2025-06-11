@@ -1,5 +1,42 @@
 ## Comprehensive Hyperlinkable Index
 
+```mermaid
+flowchart TD
+    NAV[Comprehensive<br/>Hyperlinkable Index]
+    QUICK_NAV[Quick Navigation]
+    SPECIAL_TOPICS["Special Topics"]
+    ATA_00_20["General & Airframe<br/>(ATA 00-20)"]
+    ATA_21_49["Aircraft Systems<br/>(ATA 21-49)"]
+    ATA_51_80["Structures & Power Plant<br/>(ATA 51-80)"]
+    ATA_91_116["Special Chapters<br/>(ATA 91-116)"]
+    APPENDICES[Appendices]
+
+    NAV --> QUICK_NAV
+    NAV --> SPECIAL_TOPICS
+    NAV --> ATA_00_20
+    NAV --> ATA_21_49
+    NAV --> ATA_51_80
+    NAV --> ATA_91_116
+    NAV --> APPENDICES
+
+    SPECIAL_TOPICS --> QS[Quantum Systems Overview]
+    SPECIAL_TOPICS --> WASM[WebAssembly Integration]
+    SPECIAL_TOPICS --> HYDROGEN[Hydrogen Infrastructure]
+    SPECIAL_TOPICS --> CERT[Certification Strategy]
+    SPECIAL_TOPICS --> AI[AI & Autonomy]
+
+    click ATA_00_20 "#general--airframe-ata-00-20" "General & Airframe (ATA 00-20)"
+    click ATA_21_49 "#aircraft-systems-ata-21-49" "Aircraft Systems (ATA 21-49)"
+    click ATA_51_80 "#structures--power-plant-ata-51-80" "Structures & Power Plant (ATA 51-80)"
+    click ATA_91_116 "#special-chapters-ata-91-116" "Special Chapters (ATA 91-116)"
+    click APPENDICES "#appendices" "Appendices"
+    click QS "#quantum-systems-overview" "Quantum Systems Overview"
+    click WASM "#webassembly-integration" "WebAssembly Integration"
+    click HYDROGEN "#hydrogen-infrastructure" "Hydrogen Infrastructure"
+    click CERT "#certification-strategy" "Certification Strategy"
+    click AI "#ai--autonomy" "AI & Autonomy"
+```
+
 ### Quick Navigation
 - [General & Airframe (ATA 00-20)](#general--airframe-ata-00-20)
 - [Aircraft Systems (ATA 21-49)](#aircraft-systems-ata-21-49)
