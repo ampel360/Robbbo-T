@@ -1,21 +1,3 @@
-# AMPEL360 BWB-Q100 Technical Description Manual
-**GAIA-QAO Document ID:** TDM-BWB-Q100-001  
-**Version:** 2.0.0  
-**Classification:** GAIA-QAO Internal Use  
-**Last Updated:** 2025-01-20
-
----
-
-## Document Control
-
-| Revision | Date | Author | Description |
-|----------|------|--------|-------------|
-| 1.0.0 | 2024-06-15 | GAIA-QAO Tech Team | Initial Release |
-| 1.1.0 | 2024-09-20 | A. Pelliccia | Added Quantum Systems |
-| 2.0.0 | 2025-01-20 | GAIA-QAO Tech Team | Complete ATA Structure |
-
----
-
 ## Comprehensive Hyperlinkable Index
 
 ### Quick Navigation
@@ -24,7 +6,6 @@
 - [Structures & Power Plant (ATA 51-80)](#structures--power-plant-ata-51-80)
 - [Special Chapters (ATA 91-116)](#special-chapters-ata-91-116)
 - [Appendices](#appendices)
-- [Special Topics](#special-topics)
 
 ### Special Topics
 - [Quantum Systems Overview](#quantum-systems-overview)
