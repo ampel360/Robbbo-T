@@ -1958,13 +1958,13 @@ AFDX Dual-Star  ↔  IMA / CMS / CMP / CPC
 
 
 ### 12.2 Architecture Scheme  
-![image](https://github.com/user-attachments/assets/b0313317-82e1-4d87-a6df-42d99e621488)
+![image](https://github.com/user-attachments/assets/ab4a5b47-66be-4a5f-8121-e5b72677f3f9)
+
+
+![image](https://github.com/user-attachments/assets/d22f2c0a-3474-4014-b31c-73ce4e99adb4)
+
 
 ```
-Scheme](sandbox:/mnt/data/A_two-section_comparison_table_image_provides_data.png)
-
----
-
 ### **End of ATA 21-00-00**
 ```
 
