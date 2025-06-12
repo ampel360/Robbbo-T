@@ -1816,206 +1816,157 @@ This chapter establishes standard practices for airframe maintenance and repair.
 
 # AIRCRAFT SYSTEMS (ATA 21-49)
 
-## ATA 21 - AIR CONDITIONING & PRESSURIZATION [✅]
+## ATA 21 — AIR-CONDITIONING & PRESSURISATION ✅
 
-### 21-00-00: General
+# **ATA 21-00-00 — AIR-CONDITIONING, GENERAL**  
+_AMPEL 360 BWB Q100 Electric Environmental Control System (ECS)_
 
-# 21‑00‑00 : Environmental Control System (ECS) — *General*
-
-| Field            | Value                                                                                                                |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Program**      | **AMPEL360 BWB Q100**                                                                                                |
-| **Module ID**    | **GAIA‑AIR‑Q100‑ECS‑M02**                                                                                            |
-| **Status**       | **Approved**                                                                                                         |
-| **Last‑Updated** | **2025‑06‑12**                                                                                                       |
-| **Owner**        | Amedeo Pelliccia (NIE Y0940932Q)                                                                                     |
-| **Traceability** | DIKE Ledger → QUAChain SHA‑256: `e8b6…`                                                                              |
-| **Compliance**   | CS‑25 §831/841/1309, FAR 25.1309, DO‑160G (Sec 4, 5, 16, 21), ISO 14001, DO‑178C‑DAL B (controllers), DO‑330, DO‑254 |
-| **Auditability** | MBSE artefacts & source code stored in Git (`/src/ecs/`) with CI → CD pipeline                                       |
+> **Scope.** Chapter 21-00-00 gives the top-level description of the AMPEL 360 ECS: architecture, operating principles, controls/indications, safety precautions, servicing requirements and scheduled maintenance.  Sub-chapters 21-10 … 21-80 (Cooling, Heating, Pressurisation, etc.) reference this information.
 
 ---
 
-## Resumen Ejecutivo
+## 1 · References  
 
-El AMPEL360 incorpora un **sistema de control ambiental totalmente eléctrico** (*all‑electric ECS*) que prescinde del sangrado de motor (*bleed‑less*). Los compresores brushless y los lazos de gestión térmica se alimentan desde barras **HVDC 540 V** y son gobernados por controladores **IMA/WASM** desplegados en la plataforma **GAIA‑AIR‑Q100**.
-El enfoque reduce consumo de combustible, simplifica el mantenimiento y elimina la posible contaminación de cabina, alineando la aeronave con los objetivos **Net‑Zero 2050** de la OACI.
-
----
-
-## Alcance y Objetivos
-
-1. **Eliminar el bleed de motor** — reducir pérdidas termodinámicas y complejidad de conductos calientes.
-2. **Electricidad como único vector energético** — compresores síncronos de imanes permanentes y bombas térmicas CO₂ transcríticas.
-3. **Control inteligente** — algoritmos IA/ML (RL) compilados a **WebAssembly** que corren en núcleos **QIL‑B** (*Quantum‑In‑the‑Loop*) con *hot‑swap* de modelos.
-4. **Sostenibilidad y trazabilidad** — cadena completa *cradle‑to‑grave* registrada en **QUAChain** (materiales, energía, reciclaje).
-5. **Certificabilidad y mantenibilidad** — artefactos listos para auditorías DO‑178C/DO‑160G; módulos ECS‑Ctrl con cobertura estructural ≥ 90 %.
+| Doc-ID | Title / Source | Applicability |
+|--------|----------------|---------------|
+| **CS-25 §831/841/1309** | EASA Certification Specifications (Large Aeroplanes) | System safety & pressurisation |
+| **FAR 25.1309** | FAA – Equipment & Installations | Safety-analysis methodology |
+| **RTCA DO-160G** | Environmental Conditions & Test Procedures | Equipment qualification |
+| **RTCA DO-178C DAL-B** | Software Considerations in Airborne Systems | WASM controllers |
+| **MIL-STD-704F (mod.)** | Electrical Power Characteristics, ±540 V HVDC | Power quality |
+| **S1000D 5.0** | Technical-Publications Specification | XML data modules |
+| **ATA iSpec 2200** | Aircraft-Maintenance Data Std. | Ch 21 structure |
 
 ---
 
-## Fases del Proyecto y Cronograma
+## 2 · System Description  
 
-| Fase                           | Hitos principales                       | Inicio  | Fin     | Entregables                  |
-| ------------------------------ | --------------------------------------- | ------- | ------- | ---------------------------- |
-| **0. Concepto**                | Trade‑off *bleed* vs. *electric*        | 2025‑02 | 2025‑04 | Concept dossier V1           |
-| **1. Requisitos & MBSE**       | Bloques SysML, PSSA preliminar          | 2025‑04 | 2025‑07 | SDD‑ECS‑001, ARP‑4754A docs  |
-| **2. Diseño Preliminar (PDR)** | Cálculo térmico, arquitectura eléctrica | 2025‑07 | 2025‑10 | PDR Report, FMEA             |
-| **3. Diseño Crítico (CDR)**    | Esquemáticos HW, diseño SW DO‑178C      | 2025‑10 | 2026‑02 | CDR Report, evidencias SOI‑1 |
-| **4. V\&V**                    | Bancos HIL, cámara climática, DO‑160    | 2026‑02 | 2027‑01 | Test reports, SOI‑2/3        |
-| **5. Certificación**           | Cumplimiento EASA/FAA, TIA sign‑off     | 2027‑01 | 2027‑09 | Paquetes 8110‑3              |
-| **6. Entrada en servicio**     | Conformidad final & formación           | 2027‑09 | 2027‑12 | MMEL, AMM, IPC               |
-
----
-
-## Stack Tecnológico y Herramientas
-
-* **Hardware**: Barra HVDC 540 V, inversores SiC, bomba térmica CO₂ TC, sensórica CAN‑FD/AFDX.
-* **Runtime SW**: **WASI‑RT** determinista sobre IMA (Q7‑ARM Cortex‑A72).
-* **Model‑Based Tools**: Capella + Arcadia, MATLAB Simscape Thermal, ANSYS TwinBuilder.
-* **Coprocesador cuántico**: **QIL‑B v3** (5 qubits superconductores) para optimización en línea del mixing aire fresco/recirculado.
-* **CI/CD**: GitLab CI (review apps), QEMU container para pruebas WASM/ARM, SonarQube MISRA‑C++.
-* **Trazabilidad**: Hooks DIKE → notarización QUAChain.
+| Item | Description |
+|------|-------------|
+| **Primary function** | Condition, pressurise & ventilate the cabin/flight-deck via a fully-electric bleed-less architecture. |
+| **Air source** | Ambient outside air, compressed by an 80 kW brushless electric compressor (±540 V HVDC). |
+| **Thermal management** | 45 kW trans-critical **CO₂ heat-pump** rejects ≈ 85 kW sensible heat to wing-root exchangers. |
+| **Control layer** | Deterministic **WebAssembly** (WASI-RT) on triple-redundant IMA; certified DAL-B. |
+| **Optimisation layer** | **QIL-B v3 quantum co-processor** (5 qubits) minimises fresh/recirc mix energy. |
+| **Electrical power** | Dual 125 kVA converters feed main & standby ±540 V HVDC buses. |
+| **Data interface** | AFDX (ARINC 664) dual-star Ethernet + legacy ARINC 429. |
+| **Diagnostics** | AI digital-twin; MTBF > 25 000 h, MTTR ≤ 30 min (LRU concept). |
 
 ---
 
-## Pipeline de Integración y Certificación
+## 3 · Principles of Operation  
 
-```yaml
-# .gitlab-ci.yml — extracto
-stages: [build, test, analysis, flight‑test, cert]
-variables:
-  TARGET: ginebra/ecs‑wasm:1.2
+1. **Compression stage** – Ambient → plenum → variable-speed compressor (≤ 60 krpm).  
+2. **Cooling/heating stage** – Discharge air through **CO₂ gas-cooler**; cycle auto-reverses for heat/cool.  
+3. **Distribution stage** – Mixed air to cabin manifolds **0.8 kg s⁻¹ @ 23 °C**; ≈ 45 % recirc via HEPA/ULPA.  
+4. **Control & monitoring** – WASM loops @ 20 ms; quantum optimiser updates set-points every 2 s.  
+5. **Pressurisation interface** – Conditioned air to Cabin-Pressure Controllers (ATA 21-31).
 
-build:
-  script: wasm‑pack build --release
-  artifacts:
-    paths: [pkg/]
+---
 
-analysis:
-  image: sonarsource/sonar‑scanner‑cli
-  script: sonar-scanner -Dsonar.projectKey=ecs
+## 4 · Controls, Indicators & Interfaces  
 
-flight‑test:
-  needs: [build, analysis]
-  script: ./hil_runner.sh --profile DO160G
+| Location | Control / Indication | Function |
+|----------|---------------------|----------|
+| **Overhead A/C panel** | Zone temp selectors, PACK 1/2, RECIRC FAN, PACK FLOW (HI/NORM/LO) | Primary crew interface |
+| **EICAS / ICDS** | ECS synoptic page, status messages | System health |
+| **Maintenance port** | Q-Link Ethernet | Log download, WASM patch |
+| **Cabin panels** | Temp selectors, gasper fans | Pax comfort |
 
-cert:
-  when: manual
-  script: ./gen_8110_3.sh --rev $CI_COMMIT_SHA
+---
+
+## 5 · Safety Precautions  
+
+* **High voltage** ±540 V DC – isolate & prove dead.  
+* **CO₂ refrigerant** – vent, wear O₂ monitor.  
+* **Rotating machinery** – 200 s spin-down.  
+* **Hot surfaces** – gas-cooler ≤ 150 °C.  
+* **Quantum EMC** – keep radios ≥ 30 cm away.
+
+---
+
+## 6 · Ground Servicing  
+
+| Task | Interval | Standard | Notes |
+|------|----------|----------|-------|
+| Inlet screen visual check | DAILY | — | FOD / ice |
+| HEPA cartridge change | 1 000 FH | AMM 21-38-11 | Dual-cart |
+| CO₂ charge & leak-test | 4 000 FH / 24 MO | SAE J2197 | R-744 ≥ 99.9 % |
+| HVDC insulation test | 6 000 FH | AMM 24-27-00 | Meg ≥ 10 MΩ |
+| WASM checksum verify | Each SW load | AMM 21-00-00 | SHA-256 |
+
+---
+
+## 7 · Scheduled Maintenance (extract)  
+
+| ATA Ref | Task No. | Description | Interval | Skill |
+|---------|----------|-------------|----------|-------|
+| 21-00-00-210-801-A | Inspect compressor bearings | 8 000 FH | ENG |
+| 21-00-00-220-802-B | Quantum optimiser test | 2 000 FH | AVN |
+| 21-00-00-290-803-A | Trend data download | 1 000 FH | AVN |
+| 21-00-00-740-804-C | CO₂ heat-pump overhaul | 12 000 FH / 72 MO | ENG |
+| 21-00-00-940-805-Z | De-act / re-act | As req’d | ENG/AVN |
+
+---
+
+## 8 · Fault-Isolation (abbrev.)  
+
+1. **PACK 1 OVHT** → check amps, T-sensor T21-S816, CO₂ ΔT self-test.  
+2. **RECIRC FAN 2 FAULT** → isolate, read AFDX 21.223, inspect contactor K21-F2.
+
+---
+
+## 9 · Wiring & Schematic Overview  
+
+```
+
+HVDC ±540 V  ← 125 kVA Converter → BUS
+├─ Compressor Inverter → COMP-E
+├─ Heat-Pump Inverter → HP-CO₂
+└─ IMA Rack (WASM + QIL-B)
+
+AFDX Dual-Star  ↔  IMA / CMS / CMP / CPC
+
 ```
 
 ---
 
-## Documentación Técnica Esperada
+## 10 · Digital-Twin & Analytics  
 
-* **SDD‑ECS‑001** — diseño detallado e interfaces.
-* **PSSA & SSA** — evaluaciones de seguridad (ARP‑4761).
-* **EVTT‑TR‑21** — informes de ensayos medioambientales (DO‑160G).
-* **SOI packages** (1‑4) — evidencias DO‑178C de las particiones ECS‑Ctrl.
-* **LCA report** — evaluación de ciclo de vida (ISO 14040).
+* **Live stream** 42 sensors @ 1 Hz → SATCOM Ku.  
+* **GBM model** retrained every 100 FH; failure P < 1 × 10⁻⁵ / FH.  
+* **QUAChain** hashes LRU replacements for ESG trace.
 
 ---
 
-## Gestión y Gobernanza
+## 11 · System Improvements vs Legacy  
 
-* **Roles**: *System Owner* (A. Pelliccia), *Chief Thermal Eng.*, *Avionic SW Lead*, *Certification Mgr.*
-* **Decision Board**: reuniones quincenales; actas auto‑subidas a DIKE.
-* **KPIs**: COP ≥ 3.5 @ ISA+15 °C, MTBF > 25 000 h, cobertura DO‑178C ≥ 90 %, λ catastrófico ≤ 10⁻⁷ h⁻¹.
-
----
-
-## Registro de Módulos Críticos
-
-| ID             | Nombre                       | DAL | WASM Crate   | Interfaz HW    | Hash (SHA‑256) |
-| -------------- | ---------------------------- | --- | ------------ | -------------- | -------------- |
-| **ECS‑Ctrl‑P** | Cabin Pressure & Mix Control | B   | `ecs_press`  | 2× I2C, CAN‑FD | `a47c…`        |
-| **ECS‑Ctrl‑T** | Thermal Loop Management      | B   | `ecs_therm`  | SPI, HVDC PWM  | `9e1b…`        |
-| **ECS‑Mon‑H**  | Health Monitoring            | C   | `ecs_health` | UART‑DMA       | `cf54…`        |
+| Feature | Legacy A320 Bleed | 787 Bleed-less | **AMPEL 360** |
+|---------|------------------|---------------|---------------|
+| Engine bleed loss | 3–5 % SFC | Eliminated | **Eliminated** |
+| Bus voltage | 270 V DC | 270 V DC | **540 V DC** |
+| Software assurance | DAL-C | DAL-C | **DAL-B (WASM)** |
+| Predictive maintenance | Limited | Basic | **Quantum digital-twin** |
+| ESG traceability | Low | Medium | **Blockchain** |
 
 ---
 
-## Roadmap de Priorización de Certificación
+## 12 · Illustrated Infographic & Architecture Scheme  
 
-| Área                                                                         | Impacto en la **ruta crítica de certificación**   | Riesgo técnico                                                    | Madurez actual (TRL)       | Esfuerzo estimado (persona‑meses) | **Prioridad** |
-| ---------------------------------------------------------------------------- | ------------------------------------------------- | ----------------------------------------------------------------- | -------------------------- | --------------------------------- | ------------- |
-| **Plan de ensayos DO‑160G**<br>(Secs 4, 5, 16, 21 + deep‑freeze & vibration) | **Alta** — habilita SOI‑2/3 y emisión de TIA      | Medio‑bajo (procedimientos conocidos; HVDC + WASM añaden matices) | TRL 6 (banco HIL validado) | 6–8                               | **1**         |
-| Optimización **masa & potencia** del ciclo CO₂                               | Media‑alta — incide en análisis CS‑25 §1309 y LCA | Medio (modelos calibrados, falta validación vuelo)                | TRL 5–6                    | 4–6                               | **2**         |
-| Integración **co‑procesador cuántico QIL‑B**                                 | Baja–media (mejora incremental post‑TIA)          | **Alta** (tecnología emergente, escasa guía DO‑330)               | TRL 4–5                    | 7–10                              | **3**         |
-
-### Justificación prioridad 1 — Plan de ensayos DO‑160G
-
-1. **Exigencia reglamentaria directa** — pruebas ambientales obligatorias antes de vuelo de certificación.
-2. **Sinergia V\&V** — bancos HIL DO‑160G generan cobertura DO‑178C (SOI‑2/3).
-3. **Riesgo agenda** — laboratorios climáticos y vibración con lead‑time > 6 meses.
-
----
-
-## Próximos pasos concretos
-
-| Plazo          | Acción                                                                                                | Responsable                          | Output clave              |
-| -------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------- |
-| **T + 2 sem**  | Finalizar *Test Requirements Document* **(TRD‑ECS‑DO160G‑v1.0)** con matriz Req ↔ Test                | Certification Mgr. + Avionic SW Lead | TRD firmado en DIKE       |
-| **T + 1 mes**  | Reservar slots en laboratorio (temp‑altitud, vibración, RF) y aprobar *Procedure Qualification*       | Chief Thermal Eng.                   | POs firmadas + PQ reports |
-| **T + 6 sem**  | Ejecutar campaña preliminar (engineering samples) para caracterizar márgenes HVDC/SiC                 | Test Team                            | Engineering Test Report   |
-| **T + 10 sem** | Analizar resultados, actualizar modelos WASM/HIL y generar *Conformity Matrix* **CM‑DO160G‑ECS‑v1.0** | System Owner (A. Pelliccia)          | CM emitida en DIKE        |
-
----
-
-## Updated schematic — Illustrative Performance Data
-
-*El diagrama adjunto muestra un ECS eléctrico sin *bleed* con valores representativos de masa‑flujo (kg s⁻¹) y potencia (kW) para una plataforma narrow‑body (\~180 pax).*
-
-![image](https://github.com/user-attachments/assets/085b7e37-01a0-4a07-aaca-f816732ec737)
+### 12.1 Infographic  
+![image](https://github.com/user-attachments/assets/feef9157-7b55-40c1-8d2a-0e5082e20220)
 
 
-### Metadata Figura F1
+### 12.2 Architecture Scheme  
+![image](https://github.com/user-attachments/assets/b0313317-82e1-4d87-a6df-42d99e621488)
 
-```yaml
-id: F1
-file_name: A_technical_schematic_diagram_illustrates_an_all-e.png
-format: PNG
-resolution: 1152 × 768 px
-creation_date: 2025‑06‑12
-version: v0.9.2
-creator: OpenAI ChatGPT (generación DALL‑E, prompt ajustado por A. Pelliccia)
-license: CC‑BY‑SA 4.0 (uso interno AMPEL360)
-description: "Side‑view schematic of an all‑electric, bleed‑less ECS with illustrative mass‑flow (kg/s) and power (kW) values for a single‑aisle aircraft. Airflow in blue, refrigerant in orange, HVDC 540 V supply indicated."
-figures_in_document_reference: true
-hash_sha256: bdbc4e7f-ff89-4157-b4e8-b4599bc9809a
 ```
-
-| Parámetro                            | Valor                  | Fuente / Justificación                      |
-| ------------------------------------ | ---------------------- | ------------------------------------------- |
-| Outside‑air intake                   | **1 kg s⁻¹**           | A320 pack flow — aviation.stackexchange.com |
-| Compressor motor power               | **80 kW**              | Optimización ECS — mdpi.com                 |
-| Refrigeration Cycle 1 heat‑rejection | **≈ 85 kW**            | ΔT≈60 K a 1 kg s⁻¹                          |
-| Refrigerant compressor               | **45 kW**              | \~55 % demanda principal                    |
-| Refrigeration Cycle 2 evaporator     | **20 kW**              | Hot‑day, one‑pack‑inop                      |
-| Cabin supply flow                    | **0.8 kg s⁻¹ @ 23 °C** | ≥ 0.25 kg s⁻¹ / 50 pax — ncbi.nlm.nih.gov   |
-| Exhaust / ram‑air                    | **0.2 kg s⁻¹**         | Purga motor & HX                            |
+Scheme](sandbox:/mnt/data/A_two-section_comparison_table_image_provides_data.png)
 
 ---
 
-## Integration & Certification Highlights
-
-* **Pressurization & Ventilation** — cumplimiento 25.831/25.1309; lógica dual‑pack; ∆CO₂ ≤ 0.5 %.
-* **Power Quality** — ±270/540 V; ensayos DO‑160G Sec 16; control WASM DAL‑B.
-* **Thermal Management** — ducto ram‑air → 85 kW @ ISA+38 °C; LRUs accesibles < 10 min.
-* **Maintainability / BIT** — sensores IMU/vibro/temp; MTTR ≤ 30 min.
-* **Digital Traceability** — artefactos MBSE + binarios WASM firmados; CI con suite DO‑330.
-* **Safety** — carga ECS < 4 % potencia crucero; ventilación batería‑solo ≥ 30 min; FHA λ< 10⁻⁹ h⁻¹.
-
----
-
-### Próximos pasos estratégicos
-
-1. **Emitir TRD‑ECS‑DO160G‑v1.0** y abrir reserva de laboratorio (Ruta crítica).
-
-2. Iniciar **optimización masa‑potencia** vía *Digital Twin* conectado a HIL.
-
-3. **Emitir TRD‑ECS‑DO160G‑v1.0** y abrir reserva de laboratorio (Ruta crítica).
-
-4. Iniciar **optimización masa‑potencia** vía *Digital Twin*
-
+### **End of ATA 21-00-00**
+```
 
 **Status:** Approved  
 **Last Updated:** 2025-01-20
