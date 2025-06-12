@@ -1964,7 +1964,8 @@ cert:
 
 *El diagrama adjunto muestra un ECS eléctrico sin *bleed* con valores representativos de masa‑flujo (kg s⁻¹) y potencia (kW) para una plataforma narrow‑body (\~180 pax).*
 
-![F1 — ECS Bleedless Schematic](A_technical_schematic_diagram_illustrates_an_all-e.png)
+![image](https://github.com/user-attachments/assets/085b7e37-01a0-4a07-aaca-f816732ec737)
+
 
 ### Metadata Figura F1
 
