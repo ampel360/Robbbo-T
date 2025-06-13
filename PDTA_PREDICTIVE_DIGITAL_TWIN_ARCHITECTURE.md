@@ -870,7 +870,7 @@ This comprehensive set of ECS vapor-cycle optimization algorithms equips the AMP
 
 ---
 
-
+```markdown
 AFDX Virtual Link Configuration Optimization
 AFDX Network Architecture Overview
 The AMPEL360 BWB-Q100 implements ARINC 664 Part 7 (AFDX) for deterministic, fault-tolerant avionics communication with guaranteed Quality of Service (QoS).
