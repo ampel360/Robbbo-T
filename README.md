@@ -2327,6 +2327,58 @@ Provide those, plus preferred spreadsheet format (XLSX or CSV + Jupyter) and Git
 - PID control loops
 - Response time <30 sec
 
+## 21-20-02-00 · Zone-Temperature Control  
+*(Three-Zone Architecture – Cockpit, Forward/Centre Cabin, Aft Cabin)*  
+
+| Zone | Control Authority<br>(ΔT from datum) | Primary Actuators | Control Law | Target Response (t<90 %) |
+|------|--------------------------------------|-------------------|-------------|--------------------------|
+| **Cockpit** | **± 10 °C** | 2-way motorised trim-air valve + dedicated supply damper | PID (fast) with direct-acting gain | **< 30 s** |
+| **Forward / Centre Cabin** | **± 5 °C** | Common 2-way trim-air valve per zone + VAV diffusers | PID (cascaded) tracking datum | **< 30 s** |
+| **Aft Cabin** | **± 5 °C** | 2-way trim-air valve + VAV diffusers | PID (cascaded) tracking datum | **< 30 s** |
+
+### A · Control-System Topology  
+1. **Datum** (master set-point) originates in the Pack Controller; cabin zones request ± ΔT trim via CAN-FD.  
+2. Each zone has:  
+   * **Mixed-air temperature sensor** (Pt1000, ± 0.1 °C accuracy).  
+   * **Motorised trim-air valve** (step ≤ 1 ° crank, < 500 ms actuation).  
+   * **Local PID loop** executed in the IMA/WASM partition (DAL B).  
+3. Cockpit loop uses **higher proportional gain** and reduced integral time to meet the wider ± 10 °C band and avionics heat transients.  
+4. For cabins, a **cascade** adds a slower integral “comfort” loop on VAV diffusers to smooth drafts while preserving the < 30 s 90 % t response.
+
+### B · Key Design Targets  
+* **Temperature settling (t<sub>90 %</sub>)**: ≤ 30 s after a 3 °C step input (FAA AC 25-16).  
+* **Steady-state error**: ≤ ± 0.2 °C (cockpit) / ≤ ± 0.5 °C (cabins).  
+* **Valve stroke life**: ≥ 1 × 10⁶ cycles (DO-254 durability, RTCA environmental).  
+* **Sensor MTBF**: ≥ 60 000 h (@ 55 °C, 70 % RH).  
+
+### C · Validation & Certification Plan  
+| Test ID | Objective | Method | Acceptance |
+|---------|-----------|--------|------------|
+| TC-01 | t<sub>90 %</sub> confirmation (cockpit) | Climatic chamber, 3 °C hot-step | t<90 % ≤ 30 s, overshoot ≤ 1 °C |
+| TC-02 | Steady-state accuracy | 8-h soak at ISA + 15 °C | ± 0.2 °C cockpit, ± 0.5 °C cabins |
+| TC-03 | Fail-safe valve position | Command loss @ 45 000 ft | Valve cruises to 25 % open within 2 s |
+| TC-04 | SW/HW HIL robustness | 1 000 random set-point jumps | No watchdog reset, ΔT trace within limits |
+
+### D · Open Items / Data Needed  
+1. **Datum definition** – exact supply-air reference temperature range.  
+2. **Valve Cv & stroke limits** per manufacturer to finalise PID coefficients.  
+3. **Sensor placement** drawings to confirm thermal lag assumptions (< 2 s).  
+4. **Cabin heat-load profiles** (sun-load, equipment, pax metabolism) for CFD–PID co-simulation.
+
+![image](https://github.com/user-attachments/assets/6a7beefe-b11f-4af8-9ada-b6e839e99d64)
+
+---
+
+### Next Engineering Actions  
+1. **Tune PID gains** in HIL bench using the manufacturer’s valve/actuator dynamic model.  
+2. **Generate SRS 21-20-02 v0.1** with REQ → TEST matrix (can push to same Git branch).  
+3. **Update CFD / thermal-network model** to inject zone step-load disturbances and verify < 30 s settling.  
+
+> **Recommendation**: finalise Items 1-3 above before locking the valve part number into the procurement list; the < 30 s target is aggressive and valve hysteresis can be the limiting factor.
+
+*Prepared by – ECS Controls Group* *13 Jun 2025*
+
+
 ### 21-20-03-00: Cabin Air Recirculation
 
 | Parameter | Value | Notes |
@@ -2335,6 +2387,59 @@ Provide those, plus preferred spreadsheet format (XLSX or CSV + Jupyter) and Git
 | **HEPA Efficiency** | 99.97% | 0.3 μm particles |
 | **UV-C Sterilization** | 254 nm | 99.9% pathogens |
 | **Replacement** | 2000 FH | Or contamination |
+
+
+## 21-20-03-00 · Cabin-Air Recirculation  
+*(Recirc / Filtration / Sterilisation Sub-System)*  
+
+| Parameter | Baseline Value | Notes & Operational Flexibility |
+|-----------|---------------|----------------------------------|
+| **Recirculation Ratio** | **50 %** | Fully adjustable (0 – 60 %) via ECS controller for smoke-removal, ground A/C or high-humidity ops |
+| **Air-change Rate** | **20–30 ACH** | Entire cabin volume replaced every **2–3 min** (ISA cruise) |
+| **HEPA Efficiency** | **99.97 % @ 0.3 µm** | True-HEPA class; higher capture efficiency outside MPPS |
+| **UV-C Sterilisation** | 254 nm, **99.9 % pathogen inactivation** | Inline germicidal chambers in recirc loop; auto-off on access door open |
+| **Scheduled Replacement** | **2 000 FH** (filter & lamp) | On-condition swap earlier if differential-pressure > 6 kPa or contamination detected |
+
+### A · Functional Overview  
+1. **Mixed-flow concept** – *Pack* delivers 100 % fresh, sterile bleed-less air; recirc fans draw cabin return air → **HEPA** → **UV-C** → mix manifold (50 / 50 nominal).  
+2. **Flex mode** – ECS controller can drive recirc ratio to 0 % (smoke clearance) or 60 % (energy-saving on ground A/C).  
+3. **Pathogen barrier** – Dual layer: mechanical capture (HEPA) + photonic inactivation (UV-C).  
+
+### B · Performance Benchmarks  
+| Metric | Target | Compliance Rationale |
+|--------|--------|----------------------|
+| Particulate removal | ≥ 99.97 % @ 0.3 µm | Meets / exceeds ISO 29463-1 Class H14 |
+| Viral load reduction | ≥ 3-log (99.9 %) | ASTM E3135-18 (UV disinfection) |
+| Airflow degradation | < 10 % at 1 000 FH | Monitored by ΔP sensors; triggers maintenance alert |
+| Ozone emission | < 0.05 ppm | UV-C chamber lined with TiO₂ catalyst; FAR 25.832 compliant |
+
+### C · Validation & Certification Plan  
+| Test ID | Objective | Method | Acceptance |
+|---------|-----------|--------|------------|
+| CR-01 | HEPA efficiency | Sodium-fluorescein aerosol test @ 0.3 µm | ≥ 99.97 % penetration |
+| CR-02 | UV-C kill rate | MS2 bacteriophage challenge | ≥ 99.9 % log-reduction |
+| CR-03 | Recirc ratio control | HIL + flow-bench 0–60 % set-points | Error ≤ ±3 % |
+| CR-04 | Filter life | Dust-loading to 2 000 FH equivalent | ΔP < 1.8 kPa rise |
+
+### D · Open Items / Data Needed  
+1. **Cabin volumetric flow** by phase of flight (taxi, climb, cruise) for ACH trace.  
+2. **UV-C lamp degradation curve** (output vs FH) to refine replacement threshold.  
+3. **CFD model** with pathogen source terms for worst-case dispersion study.  
+
+![image](https://github.com/user-attachments/assets/2ad30d94-390d-4dcc-9a3e-8f0bbe6829da)
+
+---
+
+#### Next Engineering Actions  
+1. **Integrate HEPA ΔP sensors** into IMA/WASM partition and link to cockpit CAS message “FILTER CLOG”.  
+2. **Draft SRS 21-20-03 v0.1** (REQ→TEST matrix) and push to `ecs/recirc` branch.  
+3. **Set up lab rig** for UV-C dose mapping and ozone measurement (ASTM D5156).  
+
+> **Recommendation:** lock filter P/N only after CR-04 dust-loading results; differential-pressure margin is critical for the all-electric compressor power budget.
+
+*Prepared by – ECS Air-Quality Team* *13 Jun 2025*
+```
+
 
 ### 21-30-00: Pressurization Control
 
