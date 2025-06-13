@@ -2,14 +2,6 @@
 
 ## Executive Summary
 
-This document outlines a comprehensive predictive design architecture for the AMPEL360 BWB-Q100 aircraft, structured around a hybrid cloud-edge computing model integrating multidisciplinary optimization (MDO), AI/ML models, and quantum computing modules under strict compliance with DO-178C DAL-B standards. The digital twin architecture supports all phases of the aircraft lifecycle, from advanced design to in-service anomaly detection and fleet analytics.
-
----
-
-## Architecture Tiers# Predictive Design Architecture for AMPEL360 BWB-Q100 Digital Twin
-
-## Executive Summary
-
 This document outlines a comprehensive predictive design architecture for the AMPEL360 BWB-Q100 aircraft, structured around a hybrid cloud-edge computing model integrating multidisciplinary optimization (MDO), AI/ML modules, and quantum computing under strict DO-178C DAL-B compliance. The digital twin framework supports the full aircraft lifecycle—from advanced design phases through in‑service anomaly detection and fleet‑wide analytics.
 
 ---
@@ -47,7 +39,7 @@ This document outlines a comprehensive predictive design architecture for the AM
 * **ONNX runtime execution**
 * **AFDX deterministic interface** (1–10 Hz sensor rates)
 * **Anomaly detection & margin evaluation**
-* **Sub‑50 ms advisory inference**
+* **Sub 50 ms advisory inference**
 
 ### Tier 3: Cloud Orchestration
 
@@ -133,6 +125,9 @@ This document outlines a comprehensive predictive design architecture for the AM
 5. [Cross-Domain MDO Convergence with OpenMDAO](#cross-domain-mdo-convergence-with-openmdao)
 
 ---
+
+(*Module sections begin below and are structured for traceability and reuse.*)
+
 
 **# AFDX Virtual Link Configuration Optimization
 
