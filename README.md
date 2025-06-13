@@ -2213,6 +2213,108 @@ _(see linked blueprint diagram; shows inlet door, HEPA module, mix manifold and 
 | **Center Cabin** | 6 × 6" | 3 × 8" | CFRP |
 | **Aft Cabin** | 4 × 6" | 2 × 8" | CFRP |
 
+# AMPEL360 BWB-Q100  
+**Air-Distribution System Design Package**  
+*(ATA 21-20-00 / -01)*  
+
+---
+
+## 1 · Design Mass-Flow Allocation  
+
+| Zone | Occupancy | **Total Flow** (kg · s⁻¹) | **Fresh** (kg · s⁻¹) | **Recirc.** (kg · s⁻¹) | Key Rationale |
+|------|-----------|---------------------------|----------------------|------------------------|---------------|
+| Cockpit | 2 – 4 crew | **0.08** | 0.08 | 0.00 | 100 % fresh for avionics cooling & crew alertness |
+| Forward Cabin | ≈ 24 pax | **0.27** | 0.13 | 0.14 | Mirrors Aft Cabin for modularity |
+| Centre Cabin | ≈ 52 pax | **0.58** | 0.26 | 0.32 | Largest passenger zone in BWB |
+| Aft Cabin | ≈ 24 pax | **0.27** | 0.13 | 0.14 | Symmetric with Forward Cabin |
+| **System Total** | 100 – 104 | **1.20** | **0.60** | **0.60** | 50 / 50 fresh-to-recirc mix |
+
+*Basis: 20 CFM · person⁻¹ comfort target; FAR 25.831 compliance.*
+
+---
+
+## 2 · Pressure-Loss Modelling Inputs  
+*(Darcy–Weisbach parameters for supply runs)*  
+
+| Zone | Material | Eff. Length **L** (m) | ΣK (fittings) | Rel. Roughness **ε** (mm) | Design Velocity **V** (m · s⁻¹) |
+|------|----------|-----------------------|---------------|---------------------------|---------------------------------|
+| Cockpit | Al alloy | 15.0 | 7.0 | 0.050 | 4.6 |
+| Forward Cabin | CFRP | 10.0 | 4.5 | 0.005 | 5.5 |
+| Centre Cabin | CFRP | 5.0 | 2.5 | 0.005 | 4.8 |
+| Aft Cabin | CFRP | 10.0 | 4.5 | 0.005 | 5.5 |
+
+> **ΔP equation**  
+> \[
+> \Delta P = \left(f\;\frac{L}{D} + \Sigma K\right)\,\frac{\rho V^{2}}{2},
+> \qquad \rho \approx 1.1\;\text{kg · m}^{-3}
+> \]
+
+---
+
+## 3 · Acoustic & Thermal Specifications  
+
+### 3.1  Noise Targets (ECS contribution)
+
+| Area | Criterion | dBA Limit | Note |
+|------|-----------|-----------|------|
+| Cockpit | NC-45 | ≤ 50 dBA | Allows avionics fan background |
+| Passenger Cabins | **NC-35** | **40 – 45 dBA** | Premium comfort benchmark |
+
+### 3.2  Duct Insulation
+
+| Duct | Location | Driver | Thickness | Function |
+|------|----------|--------|-----------|----------|
+| Supply | Crown & sidewalls | Condensation control | **25 mm / 1 in** | Prevents external condensation on 13 °C air lines |
+| Return | Cabin zones | Acoustic | **13 mm / 0.5 in** | Noise attenuation; minor ΔT so condensation not critical |
+
+Fire standard: **FAR 25.856(a)** compliant closed-cell elastomeric foam.
+
+---
+
+## 4 · Cross-Section Check (Geometry Confirmation)  
+
+| Zone | Supply Ducts | Return Ducts | Material | Supply Area (in²) | Return Area (in²) | Supply : Return |
+|------|--------------|--------------|----------|-------------------|-------------------|-----------------|
+| Cockpit | 2 × 4 in | 1 × 6 in | Al alloy | **25.1** | **28.3** | 0.89 |
+| Forward Cabin | 4 × 6 in | 2 × 8 in | CFRP | **113.1** | **100.5** | 1.12 |
+| Centre Cabin | 6 × 6 in | 3 × 8 in | CFRP | **169.6** | **150.8** | 1.12 |
+| Aft Cabin | 4 × 6 in | 2 × 8 in | CFRP | **113.1** | **100.5** | 1.12 |
+
+*(A = n π D² / 4 ; 1 in² ≈ 6.45 cm²)*  
+
+---
+
+## 5 · Next Engineering Actions  
+
+| # | Work-Stream | Output | Schedule Impact |
+|---|-------------|--------|-----------------|
+| **1** | **Velocity / ΔP validation** | Parametric XLSX + Python sheet (auto-CI) | Evidence for SOI-2/3 |
+| **2** | SRS 21-20-01 v0.3 | Markdown & PDF with full REQ→DESIGN trace | Aligns disciplines; audit ready |
+| **3** | CFD / Digital-Twin case | OpenFOAM template & scripts | De-risk “dead-zones” pre-flight |
+| **4** | DO-160G Test-Plan (TRD v1.0) | Procedure & lab-Gantt | Secures scarce chamber slots |
+
+**Data still needed**  
+1. Design flow-rates per zone (confirmed)  
+2. CATIA extract: lengths + bends per duct size  
+3. Target cabin dBA limits & insulation space constraints  
+
+Provide those, plus preferred spreadsheet format (XLSX or CSV + Jupyter) and Git branch, and the artefacts will be delivered within **48 h**.
+
+![image](https://github.com/user-attachments/assets/b550b422-2503-4389-93d0-3f6feb1830cd)
+
+---
+
+### Strategic Note
+
+> *Prioritise Work-Stream 1 — the flow-rate & ΔP plan.*  
+> It locks fan sizing, valve Cv, insulation mass and the electric-compressor power budget — areas regulators scrutinise first on an **all-electric ECS**.
+
+---  
+
+*Prepared by: Lead ECS Engineering Team — AMPEL360 Program*  
+*Date: 13 June 2025*
+
+
 ### 21-20-02-00: Zone Temperature Control
 
 **Three-Zone System:**
