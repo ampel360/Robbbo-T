@@ -1995,6 +1995,120 @@ The AMPEL360 features an all-electric environmental control system (ECS) with no
 | **Mass Flow** | 4.5 kg/s | 5.0 kg/s | <3.0 kg/s |
 | **Power Draw** | 250 kW | 300 kW | >280 kW |
 
+Below is a **starter template**—fully ATA-compliant in both layout and naming—for **Chapter 21-10-00 “Compression”** and its first sub-chapter **21-10-01-00 “Cabin Air Compressor System.”**
+Use it as the skeleton into which design data, design‐for-maintenance details, and test results can be progressively inserted.
+
+---
+
+## ATA 21-10-00 — Compression (General)
+
+| Section                               | Purpose                                                                                                                   |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **21-10-00-1 Description**            | Overall role of the compression sub-system within the bleed-less ECS and interfaces to 21-20 (Cooling) & 21-30 (Heating). |
+| **21-10-00-2 Architecture**           | Block diagram, power & data busses, functional redundancy.                                                                |
+| **21-10-00-3 Limits & Targets**       | Envelope charts (pressure, flow, temp, power vs. altitude / OAT).                                                         |
+| **21-10-00-4 Controls & Indications** | Crew panels, synoptic page, maintenance ports.                                                                            |
+| **21-10-00-5 Safety**                 | Failure-classification matrix in support of §25.1309 analysis.                                                            |
+| **21-10-00-6 Servicing**              | Ground tasks common to all 21-10 sub-chapters (filters, screens, lubrication).                                            |
+| **21-10-00-7 Maintenance Checks**     | MPD extract & task intervals.                                                                                             |
+| **21-10-00-8 Wiring & Plumbing**      | HVDC harness list, hydraulic diagrams, quick-disconnects.                                                                 |
+| **21-10-00-9 Troubleshooting**        | High-level fault-isolation logic (links to 21-10-01/02 FIM).                                                              |
+
+---
+
+## 21-10-01-00 — Cabin Air Compressor System
+
+### 1  System Architecture
+
+| Component               | Qty | Capacity / Rating      | Location                   | Notes                      |
+| ----------------------- | --- | ---------------------- | -------------------------- | -------------------------- |
+| **Main Compressors**    | 2   | 2 .5 kg s⁻¹ each       | Belly fairing              | Counter-rotating impellers |
+| **Backup Compressor**   | 1   | 1 .5 kg s⁻¹            | Aft equipment bay          | Auto-start on main loss    |
+| **Motor Drives (HVDC)** | 3   | 150 kW each            | Integrated with compressor | 540 V ±5 %                 |
+| **Controllers (WASM)**  | 3   | Triple-redundant DAL-B | E/E bay                    | 20 ms control loop         |
+
+### 2  Normal Operating Parameters
+
+| Parameter                 | Normal      | Maximum     | Caution / Warning |
+| ------------------------- | ----------- | ----------- | ----------------- |
+| **Discharge Pressure**    | 35 psi      | 45 psi      | ≥ 42 psi          |
+| **Discharge Temperature** | 180 °C      | 230 °C      | ≥ 210 °C          |
+| **Mass Flow**             | 4 .5 kg s⁻¹ | 5 .0 kg s⁻¹ | ≤ 3 .0 kg s⁻¹     |
+| **Power Draw**            | 250 kW      | 300 kW      | ≥ 280 kW          |
+
+*Thresholds above feed EICAS alerts → PACK OVHT, LOW FLOW, COMP OVLD.*
+
+### 3  Control & Monitoring
+
+* **Primary Loop** – deterministic WebAssembly routine (DAL-B) adjusts motor-drive torque, inlet guide vane (IGV) angle and bleed-off valve to hold setpoints.
+* **Optimisation Layer** – QIL-B quantum co-processor refines IGV schedule every 2 s for minimum specific power.
+* **Built-In Test (BIT)** – on ground, a 90-s automatic check runs compressor acceleration, leak scan, and sensor health.
+
+### 4  Safety & Failure Modes
+
+| Failure Case                       | Detecting Function     | Flight Deck Effect | Corrective Action                          |
+| ---------------------------------- | ---------------------- | ------------------ | ------------------------------------------ |
+| Motor over-current > 280 kW (3 s)  | WASM limit-check       | ECAM “COMP OVLD”   | Reduce pack flow; if persisting, COMP OFF  |
+| Discharge temp ≥ 210 °C            | Dual RTD majority vote | ECAM “PACK OVHT”   | Auto-bypass opens; if > 220 °C, COMP trips |
+| Flow < 3 kg s⁻¹ with demand > 75 % | Mass-flow sensor       | ECAM “LOW FLOW”    | Backup compressor auto-starts              |
+
+### 5  Scheduled Maintenance Extract
+
+| Task No.         | Description                                  | Interval          | Skill | Ref.         |
+| ---------------- | -------------------------------------------- | ----------------- | ----- | ------------ |
+| 21-10-01-210-001 | Visual inspect impeller blades via borescope | 4 000 FH          | ENG   | AMM 21-10-01 |
+| 21-10-01-220-002 | Functional test of IGV servo & resolver      | 2 000 FH          | AVN   | AMM 21-10-01 |
+| 21-10-01-290-003 | Data download & trending (digital-twin)      | 1 000 FH          | AVN   | AMM 21-10-00 |
+| 21-10-01-750-004 | Overhaul main compressor cartridge           | 12 000 FH / 72 MO | ENG   | CMM          |
+
+### 6  Illustrated Infographic
+
+The blueprint below can be inserted as Figure 21-10-01-A to give technicians a one-glance view of the hardware lineup **and** the “red-line” operating limits:
+
+![image](https://github.com/user-attachments/assets/44e9c559-e9a6-4bd1-b4a8-c769efbd42e8)
+
+
+*(High-resolution PNG, 300 dpi, suitable for S1000D data-module illustrations.)*
+
+---
+
+### 7  Interface Map (signal & power)
+
+```
+±540 V HVDC ─┬─> Motor Drive #1 ─┐
+             ├─> Motor Drive #2 ─┤─> Main Compressors (2×) → CO₂ heat-pump
+             └─> Motor Drive #3 ─┘
+AFDX dual-star <──> IMA rack <──> WASM controllers
+ARINC 429     <──> EICAS / Maintenance Port
+Pressure/Temp sensors → Controller vote-logic (2-oo-3)
+```
+
+---
+
+### 8  Data Module Metadata (S1000D 5.0)
+
+```xml
+<dmCode>
+  <modelIdentCode>AMPEL360</modelIdentCode>
+  <systemDiffCode>21-10-01</systemDiffCode>
+  <systemCode>21</systemCode>
+  <subSystemCode>10</subSystemCode>
+  <subSubSystemCode>01</subSubSystemCode>
+  <itemLocationCode>00</itemLocationCode>
+</dmCode>
+<issueInfo>
+  <issueNumber>001</issueNumber>
+  <inWork>false</inWork>
+</issueInfo>
+```
+
+*Ready for import into your CSDB; images referenced via `<dmRef>` elements.*
+
+---
+
+![image](https://github.com/user-attachments/assets/9ded92b0-d06f-4211-8f27-a55f6681faba)
+
+
 ### 21-10-02-00: Emergency Pressurization
 
 **RAM Air System:**
