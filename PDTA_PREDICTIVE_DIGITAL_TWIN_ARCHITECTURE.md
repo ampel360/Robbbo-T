@@ -1354,6 +1354,81 @@ if __name__ == "__main__":
         print(f" Built problem type: {type(prob)}")
     except Exception as e:
         print(f"Error: {e}")
+```
+## Integración de DIKE/QUAChain en Cada Submódulo
 
+Para asegurar trazabilidad inmutable y verificación criptográfica en todo el ciclo de vida, cada submódulo (AFDX VL Optimization, Edge-Cloud Sync, ML Model Versioning, Advisory Failover y MDO Framework) deberá registrar en su **Registro de Módulos Críticos** el hash generado por DIKE/QUAChain correspondiente a cada versión crítica.
+
+**Ejemplo de Entradas de Registro**:
+
+| Módulo                    | Versión | Git Tag | Hash DIKE/QUAChain                       | Registro ID      |
+| ------------------------- | ------- | ------- | ---------------------------------------- | ---------------- |
+| Advisory Failover         | 1.4.2   | v1.4.2  | 3f9b2c8d5a6e7f8d9c0b1a2e3d4f5a6b7c8d9e0f | AE-CORE-202506   |
+| MDO Convergence Framework | 1.0.0   | v1.0.0  | a7c6d5e4f3b2a1908e7d6c5b4a3f2e1d0c9b8a7f | AMPEL-CMO-202506 |
+
+## Acoplamiento con ATA Chapters
+
+Para garantizar alineación normativa, se propone la siguiente asignación de capítulos ATA:
+
+| Funcionalidad             | Módulo                   | ATA Chapter |
+| ------------------------- | ------------------------ | ----------- |
+| AFDX VL Optimization      | AFDX VL Optimization     | 42          |
+| Edge-Cloud Sync           | Edge-Cloud Sync          | 46          |
+| ML Model Versioning       | Model Registry & Version | 31 / 45     |
+| Advisory Failover         | Failover Mechanisms      | 22          |
+| MDO Framework Convergence | MDO Framework            | 00–06       |
+
+## Conversión a S1000D y Exportación CI/CD
+
+* **Generación Automática de Data Modules (DM)** en formato S1000D v5.0 o SCORM:
+
+  * Utilizar plantillas XSLT para transformación de Markdown/YAML → XML S1000D.
+  * Incluir metadatos de proyecto (versión, hash DIKE) en `<dataModule>`.
+* **Pipeline CI/CD**:
+
+  ```yaml
+  name: Export_S1000D
+  on: [push]
+  jobs:
+    build_export:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: Generar Data Modules
+          run: |
+            python scripts/gen_s1000d.py --input docs/ --output dist/s1000d/
+        - name: Empaquetar módulo
+          run: |
+            zip -r dist/export_${{ github.sha }}.zip dist/s1000d/
+        - name: Publicar artefacto
+          uses: actions/upload-artifact@v2
+          with:
+            name: s1000d-export
+            path: dist/export_${{ github.sha }}.zip
+  ```
+
+  * El contenedor `.zip` se versiona con el SHA de Git e incluye el hash DIKE en el nombre.
+
+## Simuladores de Validación (HIL)
+
+Se propone un **Testbed** HIL/virtual que permita ejecutar escenarios de fallo en cada submódulo:
+
+* **Pérdida de SATCOM** en Edge-Cloud Sync.
+* **Fallo de Virtual Link (VL)** en AFDX VL Optimization.
+* **Divergencia de Convergencia** en MDO Framework.
+* **Inconsistencias en Versiones** en Model Registry.
+* **Desconexión de Backup** en Advisory Failover.
+
+Cada escenario se define en un script Docker+Python que emula el fallo y captura métricas para validación automática.
+
+## Auditorías Cruzadas
+
+Para garantizar independencia y calidad de validación, se establecerá un sistema de **revisión rotativa**:
+
+* Equipos de MDO revisan subsistemas AFDX y Advisory.
+* Equipos de AFDX revisan subsistemas Model Registry y HIL.
+* Equipos de Advisory revisan subsistemas MDO y Edge-Cloud.
+
+Cada auditoría genera un informe en Confluence vinculado al ticket JIRA original, con trazabilidad de cambios y hash DIKE de la versión auditada.
 
 
