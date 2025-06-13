@@ -2109,13 +2109,96 @@ Pressure/Temp sensors → Controller vote-logic (2-oo-3)
 ![image](https://github.com/user-attachments/assets/9ded92b0-d06f-4211-8f27-a55f6681faba)
 
 
-### 21-10-02-00: Emergency Pressurization
+# **ATA 21-10-02 — EMERGENCY PRESSURISATION – RAM-AIR SYSTEM**  
+_AMPEL360 BWB Q100 Electric ECS_
 
-**RAM Air System:**
-- Automatic deployment <25,000 ft
-- Manual override available
-- 0.5 kg/s @ 250 KIAS
-- HEPA filtered
+> **Purpose.** Provides an alternate source of ventilation and partial pressurisation in the event the normal electric compressor pack(s) are inoperative. The ram-air inlet utilises outside dynamic pressure to supply a modest airflow through the environmental control ducting, ensuring crew/passenger survivability, smoke clearance and electronic-bay cooling at altitudes ≤ 25 000 ft.
+
+---
+
+## 1  System Architecture  
+
+| Component | Qty | Nominal Capacity | Location |
+|-----------|-----|------------------|----------|
+| **Ram-Air Inlet Door** (spring-loaded, fail-safe open) | 1 | 0.5 kg s⁻¹ @ 250 KIAS | Lower LH fuselage |
+| **Ram-Air Check Valve** (one-way) | 1 | 1.0 kg s⁻¹ max | Aft of inlet door |
+| **HEPA Filter Module** (200 cm² media) | 1 | 98 % @ 0.3 µm | E/E bay plenum |
+| **Mix Manifold** (blends ram & recirc) | 1 | 0.7 kg s⁻¹ | Between recirc fans |
+| **By-Pass Shut-off Valve (BSOV)** | 1 | Full close / Full open < 1 s | Downstream of manifold |
+| **Differential-Pressure Transducer (ΔP_CAB/AMB)** | 2 | – 0.1 to +0.2 MPa | CPC rack |
+| **Ram-Air Control Module (RACM)** | 3 | Triple-redundant, DAL-B | IMA rack |
+
+---
+
+## 2  Operating Parameters  
+
+| Parameter | Nominal | Red-Line / Caution | Notes |
+|-----------|---------|--------------------|-------|
+| **Activation Altitude** | Auto deploy **≤ 25 000 ft** | Inhibited > 26 000 ft | WOW logic bypass on ground test |
+| **Mass Flow Rate** | **0.5 kg s⁻¹** @ 250 KIAS | < 0.35 kg s⁻¹ → CABIN PRESS LOW caution | Flow rises proportionally with dynamic pressure |
+| **Cabin ΔP with RAM only** | 0 to **– 0.01 MPa** (slightly negative) | – 0.02 MPa → MASKS ON ECAM | CPC limits outflow to minimise negative pressure |
+| **HEPA Differential ΔP** | 0.5 kPa clean | 2.0 kPa → FILTER CLOG alert | Replace element |
+| **Door Cycling Limit** | 5 000 ops | 6 000 ops structural inspection | Monitored by RACM |
+
+---
+
+## 3  Control & Indication  
+
+| Control/Indication | Function |
+|--------------------|----------|
+| **AUTO Ram-Air Pushbutton (OHP)** | ARM (lights out) / MAN OPEN (blue ON) / FAULT (amber) |
+| **EICAS Message** | *RAM AIR ON* when door > 10° open |
+| **Cabin Pressure Controllers (CPC)** | Auto-close outflow valves to maintain residual ΔP |
+| **IMA / RACM Logic** | • Auto-deploy when **Cabin Alt > 14 000 ft** **AND** Packs = OFF  
+|                        | • Auto-stow on ground or if Packs restored & ΔP stable |
+| **Maintenance Port Data** | Door cycles, ΔP trends, filter hours |
+
+---
+
+## 4  Sequence of Operation  
+
+1. **Detection** – Packs fail or are selected OFF; Cabin Alt rises.  
+2. **Auto-Deploy** – At **Cab Alt ≥ 14 000 ft** *and* **Aircraft Alt ≤ 25 000 ft**, RACM energises the Ram-Air Door actuator → Door to FULL OPEN (≈ 2 s).  
+3. **Flow Establishes** – Dynamic pressure forces ambient air through inlet, check valve and HEPA filter to mix manifold.  
+4. **CPC Reaction** – Outflow valves modulate to maintain near-ambient cabin pressure (prevents rapid depressurisation).  
+5. **Manual Override** – Crew may push **MAN OPEN** for immediate deployment or **CLOSE** (packs restored, smoke removal complete).  
+6. **Stow** – On descent below **10 000 ft** or when Packs supply > 0.5 kg s⁻¹, RACM commands door closed and re-latches.
+
+---
+
+## 5  Safety Precautions  
+
+* **No Positive Pressurisation** – Ram-air cannot sustain positive ΔP; masks may be required above **10 000 ft** cabin.  
+* **High-Velocity Inlet** – Stand clear; ingestion hazard at > 200 KIAS during maintenance tests.  
+* **Filter Handling** – HEPA element rated for bio-hazards; wear FFP3 respirator when removing.  
+
+---
+
+## 6  Servicing & Inspection  
+
+| Task | Interval | Procedure | Skill |
+|------|----------|-----------|-------|
+| Visual inspect ram-air door seal & hinge | **Daily** transit | AMM 21-10-02-210-001-A | ENG |
+| HEPA filter differential-pressure reading | **Every 500 FH** | AMM 21-10-02-720-003-B | AVN |
+| Door actuator lubrication | **1 000 FH / 12 MO** | AMM 21-10-02-290-005-A | ENG |
+| Racm logic self-test (BITE) | **2 000 FH** | AMM 21-10-02-740-007-B | AVN |
+| Door hinge detailed NDT | **6 000 FH / 48 MO** | AMM 21-10-02-220-010-C | ENG |
+
+Legend: **ENG** – Air-conditioning technician **AVN** – Avionics technician
+
+---
+
+### Figure 21-10-02-A — _Emergency RAM-Air Flow Schematic_  
+_(see linked blueprint diagram; shows inlet door, HEPA module, mix manifold and control lines colour-coded per ATA 21 convention)_
+
+![image](https://github.com/user-attachments/assets/831ba047-b11d-4100-ab57-4dd5afbfa340)
+
+![image](https://github.com/user-attachments/assets/254665be-e83b-4eef-a5a5-56cdc4e0a253)
+
+
+> **Change log:** Initial release v0.9 – aligns with S1000D DM-21-10-02-00-A-9210-010A-00001-00B.
+
+
 
 ### 21-20-00: Distribution
 
