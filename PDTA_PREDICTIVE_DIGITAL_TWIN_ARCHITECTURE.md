@@ -39,7 +39,7 @@ This document outlines a comprehensive predictive design architecture for the AM
 * **ONNX runtime execution**
 * **AFDX deterministic interface** (1–10 Hz sensor rates)
 * **Anomaly detection & margin evaluation**
-* **Sub 50 ms advisory inference**
+* **Sub‑50 ms advisory inference**
 
 ### Tier 3: Cloud Orchestration
 
@@ -124,12 +124,10 @@ This document outlines a comprehensive predictive design architecture for the AM
 4. [Advisory System Failover Mechanisms](#advisory-system-failover-mechanisms)
 5. [Cross-Domain MDO Convergence with OpenMDAO](#cross-domain-mdo-convergence-with-openmdao)
 
----
-
-(*Module sections begin below and are structured for traceability and reuse.*)
+(*See appended sections for complete technical modules.*)
 
 
-**# AFDX Virtual Link Configuration Optimization
+# AFDX Virtual Link Configuration Optimization
 
 ## Executive Summary
 
