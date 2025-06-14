@@ -1,5 +1,299 @@
+# **AMPEL360 BWB-Q100 Technical Documentation Manual**
+**Document ID:** AMP-BWBQ100-TDM-R1.0
+**Revision:** 1.0 (Final Design Release)
+**Date:** October 26, 2023
+**Classification:** Proprietary, For Engineering & Certification Review Only
 
-**Status**: Approved**Master Document InfoCode**: QAO-DOC-MASTER-001**Version**: 1.0.0**Compliance Scope**: GAIA-QAO v1.2, AGAD (principles), COAFI (alignment), MCP Sync**Keywords**: `[GAIA-QAO][Object ID][Documentation Standards][AToC][INFOCODE-INDEX][Technical Manuals][Quantum Aerospace]`
+---
+
+### **Table of Contents**
+
+1.  **General Aircraft Description**
+    1.1. Purpose and Role
+    1.2. General Configuration
+    1.3. Propulsion System Overview
+    1.4. Principal Materials of Construction
+
+2.  **Aerodynamic Design**
+    2.1. Airfoil Design Philosophy & Sections
+    2.2. Aerodynamic Performance Characteristics
+    2.3. Flight Control Surfaces
+    2.4. Static and Dynamic Stability
+
+3.  **Structural Design**
+    3.1. Airframe Structural Layout
+    3.2. Material Application and Selection Rationale
+    3.3. Structural Analysis Summary
+
+4.  **Propulsion System**
+    4.1. Engine Selection and Specification
+    4.2. Engine Integration and Nacelle Design
+    4.3. Thrust and Performance Data
+    4.4. Fuel System Architecture
+
+5.  **Avionics and Flight Control**
+    5.1. Flight Control System (FCS) Architecture
+    5.2. AIMS (Aircraft Information Management System)
+    5.3. Navigation and Surveillance
+    5.4. System Redundancy Philosophy
+
+6.  **Landing Gear Configuration**
+    6.1. System Layout and Geometry
+    6.2. Retraction and Extension System
+    6.3. Shock Absorption and Load Analysis
+
+7.  **Systems Architecture**
+    7.1. Electrical Power System
+    7.2. Hydraulic Power System
+    7.3. Environmental Control System (ECS)
+    7.4. Ice and Rain Protection System
+
+8.  **Performance Specifications**
+    8.1. Design Weights and Capacities
+    8.2. Mission Performance Summary
+
+9.  **Maintenance Manual Overview**
+    9.1. Maintenance Philosophy (MSG-3)
+    9.2. Scheduled Maintenance Program
+    9.3. Structural Health Monitoring (SHM)
+
+10. **Compliance & Standards**
+    10.1. Certification Basis
+    10.2. Addressing Novel Design Aspects
+    10.3. Documentation Standards
+
+---
+
+### **1. General Aircraft Description**
+
+**1.1. Purpose and Role**
+The AMPEL360 BWB-Q100 is a new-generation, short-to-medium-range commercial transport aircraft designed to serve the 100-seat regional market. The primary design objectives are a 30% reduction in fuel burn per seat-kilometer, a 50% reduction in perceived noise on the ground (below ICAO Chapter 14 limits), and enhanced passenger comfort compared to conventional tube-and-wing aircraft in its class.
+
+**1.2. General Configuration**
+The aircraft features a Blended Wing Body (BWB) configuration, where the fuselage, center wing, and outer wings form a single, continuous lifting surface. This eliminates the distinct fuselage-wing join, significantly reducing interference drag. The pressurized cabin is accommodated within the wide, flattened centerbody. The empennage is eliminated, with yaw, pitch, and roll control provided by integrated flight control surfaces on the wing's trailing edge.
+
+**1.3. Propulsion System Overview**
+Propulsion is provided by two high-bypass ratio, ultra-quiet geared turbofan engines mounted on the aft upper surface of the centerbody. This over-wing placement shields engine noise from the ground, enhances aerodynamic efficiency by utilizing the Boundary Layer Ingestion (BLI) principle, and reduces the risk of Foreign Object Debris (FOD) ingestion.
+
+**1.4. Principal Materials of Construction**
+The airframe is approximately 75% composite by structural weight.
+*   **Primary Structure (Centerbody, Wing Skins, Spars):** Carbon Fiber Reinforced Polymer (CFRP) - specifically, Toughened Epoxy/IM7 Carbon Fiber pre-preg systems.
+*   **High-Stress Fittings, Engine Mounts, Landing Gear:** Titanium alloy (Ti-6Al-4V).
+*   **Leading Edges:** Thermoplastic composites for superior impact resistance and facilitating electro-thermal ice protection.
+*   **Cabin Floor Structure:** GLARE (Glass Laminate Aluminum Reinforced Epoxy) for fatigue resistance and damage tolerance.
+
+### **2. Aerodynamic Design**
+
+**2.1. Airfoil Design Philosophy & Sections**
+The BWB-Q100 employs a set of computationally optimized, variable airfoils along the span.
+*   **Centerbody (Root):** AMP-BWB-R04 - A thick (16% t/c), low-camber airfoil designed for high lift and accommodating the cabin volume.
+*   **Mid-Span:** AMP-BWB-M08 - A supercritical airfoil optimized for efficient cruise at Mach 0.82.
+*   **Wing Tip:** AMP-BWB-T15s - A reflex-loaded, washout-optimized section for low-speed stability and control authority, featuring a slight negative camber at the trailing edge to ensure longitudinal stability.
+
+**2.2. Aerodynamic Performance Characteristics**
+The integrated design achieves a significantly higher lift-to-drag (L/D) ratio than legacy aircraft. Computational Fluid Dynamics (CFD) analysis and wind tunnel verification show:
+*   **Maximum L/D Ratio:** 23.5
+*   **Cruise L/D Ratio (M 0.82, FL390):** 21.0
+
+**Lift/Drag Polar (Cruise Configuration)**
+```
+        ^ L/D
+       25 |           +
+          |         *   *
+       20 +       *       *
+          |      *         *
+       15 +     *           *
+          |    *
+       10 +   *
+          |  *
+        5 + *
+          |*
+        0 +---------------------> Drag Coefficient (Cd)
+```
+
+**2.3. Flight Control Surfaces**
+Control is achieved without a conventional tail assembly.
+*   **Pitch & Roll:** Twenty (10 per side) inboard and mid-span elevon segments provide redundant and fine-tuned control.
+*   **Yaw & Rudder Function:** Achieved via differential deflection of four outboard split-drag rudders that open to create drag on one side.
+*   **High-Lift Devices:** Full-span plain flaps and leading-edge Kruger flaps on the outboard sections ensure low stall speeds and good field performance.
+*   **Spoilers:** Eight multi-function spoiler panels on the upper surface for roll augmentation, speed braking, and lift dumping on landing.
+
+**DIAGRAM: Control Surface Layout**
+```
+             /---------------------------------------\
+            /       [Spoiler Panels]                 \
+  (Nose)   |                                           | [Split Drag Rudder]
+<==========|      [Inboard/Mid-Span Elevons]           | [Outboard Elevon]
+           |                                           |
+            \       [Kruger Flaps - Leading Edge]      /
+             \---------------------------------------/
+```
+
+**2.4. Static and Dynamic Stability**
+The aircraft is statically stable in pitch due to the reflexed airfoil design. However, it exhibits neutral to slightly negative static margins in yaw and is dynamically unstable in the spiral mode. This is a common characteristic of tailless designs and is fully compensated for by the quadruplex-redundant digital Fly-by-Wire Flight Control System (FCS).
+
+### **3. Structural Design**
+
+**3.1. Airframe Structural Layout**
+The internal structure deviates from conventional semi-monocoque design. The pressurized centerbody is supported by a multi-spar and rib combination forming a load-bearing grid. This "honeycomb" truss structure efficiently manages pressurization loads in the non-cylindrical cabin and distributes wing loads across the airframe. The outer wings transition to a more conventional two-spar design.
+
+**DIAGRAM: Internal Structural Concept (Top-Down View)**
+```
+          /================================\   <-- Front Spar
+         / | | | | | | | | | | | | | | | | |\
+        /  | | | | | | | | | | | | | | | | | \
+       |=====================================|  <-- Mid Spar (Cabin Rear)
+       |   P R E S S U R I Z E D   C A B I N   |
+       |               (Grid of spars/ribs)  |
+       |=====================================|  <-- Aft Spar
+        \  | | | | | | | | | | | | | | | | | /
+         \ | | | | | | | | | | | | | | | | |/
+          \================================/   <-- Rear Spar
+```
+
+**3.2. Material Application and Selection Rationale**
+*   **CFRP (T800/M21 Epoxy):** Chosen for its high strength-to-weight ratio and ability to be molded into the complex aerodynamic contours of the BWB. Automated Fiber Placement (AFP) is used for precision and repeatability.
+*   **Titanium (Ti-6Al-4V):** Used for the main landing gear bogie beams and engine pylon structures due to its superior fatigue life, strength, and corrosion resistance at elevated temperatures.
+*   **Lightning Strike Protection:** A fine bronze mesh is co-cured into the outermost CFRP layer to dissipate electrical energy from lightning strikes, protecting the underlying structure and internal systems.
+
+**3.3. Structural Analysis Summary**
+Finite Element Analysis (FEA) has been the primary tool for structural validation. Key load cases analyzed include:
+*   **Limit Load:** 2.5g maneuver, -1.0g maneuver, max gust velocity.
+*   **Ultimate Load:** 1.5x Limit Load (no failure).
+*   **Fatigue Analysis:** Pressurization cycles (50,000 cycles goal), landing/takeoff cycles.
+*   **Damage Tolerance:** Analysis of crack propagation from simulated manufacturing defects or in-service damage, confirming inspection intervals.
+
+### **4. Propulsion System**
+
+**4.1. Engine Selection and Specification**
+*   **Engine Type:** Pratt & Whitney PW1921G-JM Geared Turbofan (hypothetical variant).
+*   **Bypass Ratio:** 12:1
+*   **Max Takeoff Thrust (Sea Level, Static):** 21,000 lbf (93.4 kN) per engine.
+*   **Thrust Specific Fuel Consumption (TSFC) at Cruise:** 0.51 lb/lbf·h.
+
+**4.2. Engine Integration and Nacelle Design**
+The engines are mounted on short, blended pylons on the aft-upper fuselage. The nacelles are acoustically treated with advanced perforated liners. The inlet is shaped to provide uniform airflow during various angles of attack and to minimize Boundary Layer Ingestion distortion.
+
+**4.3. Fuel System Architecture**
+Fuel is stored in integral tanks within the wing box structure, outboard of the pressurized cabin section. The system comprises:
+*   **Main Tanks (2):** Left and Right wings.
+*   **Collector Tanks (2):** Ensures uninterrupted fuel flow to engines.
+*   **Trim Tank (1):** Aft centerbody tank used for automated Center of Gravity (CoG) management during cruise to optimize trim drag. Fuel is transferred to/from the main tanks by the FCS.
+
+### **5. Avionics and Flight Control**
+
+**5.1. Flight Control System (FCS) Architecture**
+A full-authority, three-axis digital Fly-by-Wire (FBW) system is employed.
+*   **Primary Flight Computers (PFCs):** 4x independent computers running dissimilar software in a 3+1 command/monitor configuration.
+*   **Actuation:** Primarily Electro-Hydrostatic Actuators (EHAs) for major control surfaces to reduce hydraulic piping and weight. Conventional hydraulic actuators are retained for landing gear and brakes.
+*   **Control Laws:** Feature flight envelope protection (angle-of-attack, load factor, high-speed), gust load alleviation, and automatic trim.
+
+**5.2. AIMS (Aircraft Information Management System)**
+An integrated modular avionics (IMA) suite forms the core of the AIMS.
+*   **Flight Deck Displays:** Six 15-inch landscape LCDs providing Primary Flight Display (PFD), Navigation Display (ND), Engine Indicating and Crew Alerting System (EICAS), and multifunction displays.
+*   **Features:** Synthetic Vision System (SVS), electronic flight bag (EFB) functionality, advanced FMS with 4D trajectory planning.
+
+**5.3. Navigation and Surveillance**
+*   **Navigation:** Triple-redundant Inertial Reference System (IRS) with GPS updating (GBAS/SBAS capable), RNP 0.1 compliant.
+*   **Surveillance:** TCAS II Change 7.1, ADS-B In/Out, Weather Radar with predictive wind shear detection.
+
+**5.4. System Redundancy Philosophy**
+Quadruple redundancy for the FCS. Triple redundancy for hydraulic, electrical, and navigation systems. Dissimilar hardware and software are used in critical systems to mitigate common-mode failures.
+
+### **6. Landing Gear Configuration**
+
+**6.1. System Layout and Geometry**
+*   **Type:** Retractable tricycle configuration.
+*   **Nose Gear:** Twin-wheel, steerable (+/- 75 degrees), forward retracting.
+*   **Main Gear (2):** Four-wheel bogies, located on heavily reinforced ribs aft of the main cabin pressure bulkhead. They retract inwards and slightly forward into the wing/body fairing.
+
+**6.2. Retraction and Extension System**
+The system is hydraulically actuated and electrically controlled. A free-fall mechanism allows for gravity-assisted extension in the event of total hydraulic or electrical failure.
+
+**6.3. Shock Absorption and Load Analysis**
+Oleo-pneumatic shock struts are used on all gears. Load analysis is based on FAR Part 25 requirements, including a max sink rate of 10 ft/s at Maximum Landing Weight (MLW) and severe crosswind conditions. Carbon-carbon brakes provide high-performance, low-fade braking.
+
+### **7. Systems Architecture**
+
+**7.1. Electrical Power System**
+*   **Primary Power:** Two 115 kVA Integrated Drive Generators (IDGs), one on each engine.
+*   **Auxiliary Power:** One 90 kVA APU generator, usable on the ground and up to FL250.
+*   **Emergency Power:** Ram Air Turbine (RAT) providing essential flight control and instrument power.
+*   **Architecture:** 28V DC and variable frequency 115V AC power, managed by two primary electrical distribution buses.
+
+**7.2. Hydraulic Power System**
+Three independent 3000-psi systems (Green, Blue, Yellow).
+*   **Green & Yellow:** Powered by engine-driven pumps (EDPs).
+*   **Blue:** Powered by AC motor pumps (ACMPs) for redundancy.
+*   The system powers flight control actuators (where non-EHA), landing gear, brakes, and spoilers.
+
+**7.3. Environmental Control System (ECS)**
+Two main ECS packs use bleed air from the engine compressors or APU. The system provides cabin pressurization (max differential 8.6 psi), temperature control across three distinct cabin zones, and equipment cooling.
+
+**7.4. Ice and Rain Protection System**
+*   **Wing Leading Edges:** Electro-thermal heating mats embedded in the thermoplastic composite structure.
+*   **Engine Inlets:** Hot bleed air anti-icing.
+*   **Pitot/Static Probes, AoA Vanes:** Electrically heated.
+
+### **8. Performance Specifications**
+
+**8.1. Design Weights and Capacities**
+| Parameter | Value |
+| :--- | :--- |
+| **Passengers (Typical 2-class)** | 100 (12 Business, 88 Economy) |
+| **Max Takeoff Weight (MTOW)** | 48,500 kg (106,925 lbs) |
+| **Max Landing Weight (MLW)** | 44,000 kg (97,000 lbs) |
+| **Operating Empty Weight (OEW)** | 28,500 kg (62,830 lbs) |
+| **Max Fuel Capacity**| 14,000 kg (30,865 lbs) |
+| **Max Payload** | 12,000 kg (26,455 lbs) |
+
+**8.2. Mission Performance Summary**
+| Parameter | Value | Conditions |
+| :--- | :--- | :--- |
+| **Design Range** | 2,200 nm (4,075 km) | With 100 pax + reserves |
+| **Max Cruise Speed** | Mach 0.84 | |
+| **Typical Cruise Speed** | Mach 0.82 | |
+| **Service Ceiling** | 41,000 ft | |
+| **Stall Speed (V_s, MLW, flaps down)** | 112 KIAS | |
+| **Takeoff Field Length (MTOW, ISA, SL)** | 1,450 m (4,750 ft) | |
+| **Landing Field Length (MLW, ISA, SL)** | 1,350 m (4,430 ft) | |
+
+### **9. Maintenance Manual Overview**
+
+**9.1. Maintenance Philosophy (MSG-3)**
+The maintenance program is developed in accordance with Maintenance Steering Group-3 (MSG-3) logic. The focus is on on-condition maintenance and reliability-centered maintenance, minimizing out-of-service time.
+
+**9.2. Scheduled Maintenance Program**
+| Check | Interval (Flight Hours / Cycles / Days) | Scope |
+| :--- | :--- | :--- |
+| **Line Check**| Every 48 Hours | Visual inspection, fluid levels, tire pressure |
+| **A Check** | 750 FH / 500 FC | Detailed zonal inspection, systems tests |
+| **C Check** | 8,500 FH / 5,000 FC / 24 Months | Heavy structural inspection, component overhaul/replacement |
+| **D Check** | 12 Years | Major structural overhaul, full strip-down |
+
+**9.3. Structural Health Monitoring (SHM)**
+An integrated network of fiber optic sensors (Fiber Bragg Grating) is co-cured into the composite primary structure. This SHM system provides real-time strain and temperature data to the central maintenance computer, enabling early detection of fatigue or damage and supporting the transition to condition-based structural inspection.
+
+### **10. Compliance & Standards**
+
+**10.1. Certification Basis**
+The AMPEL360 BWB-Q100 is designed for concurrent certification under:
+*   **FAA:** Federal Aviation Regulations (FAR) Part 25.
+*   **EASA:** Certification Specifications (CS) CS-25.
+*   **ICAO:** Compliance with relevant Annexes for international operation (e.g., Annex 8 - Airworthiness, Annex 16 - Environmental Protection).
+
+**10.2. Addressing Novel Design Aspects**
+Due to the unconventional BWB configuration, "Special Conditions" and "Issue Papers" have been proactively developed with regulatory authorities to address:
+*   **Non-Cylindrical Pressurization:** Validated through extensive FEA and full-scale fatigue testing of a representative centerbody section.
+*   **Emergency Evacuation:** Door placement and slide design validated by digital human modeling and physical mock-up trials to meet the 90-second evacuation rule.
+*   **Stall Characteristics:** The FCS incorporates stall protection that provides conventional stick-shaker and pusher feedback to the crew, ensuring safe handling qualities despite the unique aerodynamic behavior.
+*   **FBW System Integrity:** Compliance demonstrated through rigorous formal methods, simulation, hardware-in-the-loop testing, and failure mode and effects analysis (FMEA).
+
+**10.3. Documentation Standards**
+All technical documentation, including this manual, adheres to the ATA iSpec 2200 standard for formatting and data exchange, ensuring compatibility with airline maintenance and operational systems worldwide.
+
+***
+**[End of Document]**
 
 ---
 
@@ -1825,742 +2119,306 @@ This chapter establishes standard practices for airframe maintenance and repair.
 
 ---
 
-# AIRCRAFT SYSTEMS (ATA 21-49)
+# AIRCRAFT SYSTEMS (ATA 21–49)
 
-## ATA 21 — AIR-CONDITIONING & PRESSURISATION ✅
+## ATA 21 – Air Conditioning & Pressurization `[✅]`
 
-# **ATA 21-00-00 — AIR-CONDITIONING, GENERAL**  
-_AMPEL 360 BWB Q100 Electric Environmental Control System (ECS)_
+### 21-00-00 General
 
-> **Scope.** Chapter 21-00-00 gives the top-level description of the AMPEL 360 ECS: architecture, operating principles, controls/indications, safety precautions, servicing requirements and scheduled maintenance.  Sub-chapters 21-10 … 21-80 (Cooling, Heating, Pressurisation, etc.) reference this information.
+**Status:** Approved&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;**Revision:** 4.2.0&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;**Effective Date:** 2025-03-25
 
----
+#### 21-00-00-01 System Description
 
-## 1 · References  
+This chapter provides comprehensive descriptive information, maintenance procedures, repair standards, and fault isolation guidance for the Environmental Control System (ECS). The AMPEL360 BWB-Q100 is equipped with an all-electric, bleed-less architecture designed for maximum efficiency, passenger comfort, and superior air quality.
 
-| Doc-ID | Title / Source | Applicability |
-|--------|----------------|---------------|
-| **CS-25 §831/841/1309** | EASA Certification Specifications (Large Aeroplanes) | System safety & pressurisation |
-| **FAR 25.1309** | FAA – Equipment & Installations | Safety-analysis methodology |
-| **RTCA DO-160G** | Environmental Conditions & Test Procedures | Equipment qualification |
-| **RTCA DO-178C DAL-B** | Software Considerations in Airborne Systems | WASM controllers |
-| **MIL-STD-704F (mod.)** | Electrical Power Characteristics, ±540 V HVDC | Power quality |
-| **S1000D 5.0** | Technical-Publications Specification | XML data modules |
-| **ATA iSpec 2200** | Aircraft-Maintenance Data Std. | Ch 21 structure |
+- The system utilizes two independent “packs,” each with an electric **Cabin-Air Compressor (CAC)** and an **R744 (CO₂) vapour-cycle heat-pump**.
+- No pneumatic bleed air from the engines is required.
+- Control is via dedicated **WebAssembly (WASM)** modules on the Integrated Modular Avionics (IMA) platform.
 
----
+**Key Features:**
+- **All-Electric:** Reduces engine load, improves fuel efficiency.
+- **Bleedless:** Prevents contaminants from entering cabin air.
+- **High-Efficiency R744 Refrigerant:** Uses CO₂ (GWP=1) in a transcritical vapor-cycle for both heating and cooling.
+- **Predictive Health Monitoring:** Integrated with CMS for CBM+.
 
-## 2 · System Description  
+#### 21-00-00-05 List of Figures
 
-| Item | Description |
-|------|-------------|
-| **Primary function** | Condition, pressurise & ventilate the cabin/flight-deck via a fully-electric bleed-less architecture. |
-| **Air source** | Ambient outside air, compressed by an 80 kW brushless electric compressor (±540 V HVDC). |
-| **Thermal management** | 45 kW trans-critical **CO₂ heat-pump** rejects ≈ 85 kW sensible heat to wing-root exchangers. |
-| **Control layer** | Deterministic **WebAssembly** (WASI-RT) on triple-redundant IMA; certified DAL-B. |
-| **Optimisation layer** | **QIL-B v3 quantum co-processor** (5 qubits) minimises fresh/recirc mix energy. |
-| **Electrical power** | Dual 125 kVA converters feed main & standby ±540 V HVDC buses. |
-| **Data interface** | AFDX (ARINC 664) dual-star Ethernet + legacy ARINC 429. |
-| **Diagnostics** | AI digital-twin; MTBF > 25 000 h, MTTR ≤ 30 min (LRU concept). |
+- **Figure 21-00-01:** ECS System Schematic Overview
+- **Figure 21-10-01:** Cabin Air Compressor (CAC) LRU
+- **Figure 21-20-01:** Cabin Air Distribution Duct Layout
+- **Figure 21-30-01:** Outflow Valve Assembly
+- **Figure 21-50-01:** Vapor Cycle Pack Assembly
 
 ---
 
-## 3 · Principles of Operation  
+### 21-10-00 Compression
 
-1. **Compression stage** – Ambient → plenum → variable-speed compressor (≤ 60 krpm).  
-2. **Cooling/heating stage** – Discharge air through **CO₂ gas-cooler**; cycle auto-reverses for heat/cool.  
-3. **Distribution stage** – Mixed air to cabin manifolds **0.8 kg s⁻¹ @ 23 °C**; ≈ 45 % recirc via HEPA/ULPA.  
-4. **Control & monitoring** – WASM loops @ 20 ms; quantum optimiser updates set-points every 2 s.  
-5. **Pressurisation interface** – Conditioned air to Cabin-Pressure Controllers (ATA 21-31).
+#### 21-10-01 Cabin Air Compressor (CAC) System
 
----
+**1. System Description**
 
-## 4 · Controls, Indicators & Interfaces  
+The compression system consists of two main electric, oil-free centrifugal compressors (CACs) and one backup CAC. They draw air via NACA inlets, powered by the ±540 V HVDC bus, under ECS WASM control.
 
-| Location | Control / Indication | Function |
-|----------|---------------------|----------|
-| **Overhead A/C panel** | Zone temp selectors, PACK 1/2, RECIRC FAN, PACK FLOW (HI/NORM/LO) | Primary crew interface |
-| **EICAS / ICDS** | ECS synoptic page, status messages | System health |
-| **Maintenance port** | Q-Link Ethernet | Log download, WASM patch |
-| **Cabin panels** | Temp selectors, gasper fans | Pax comfort |
+**2. Illustrated Parts Catalog (IPC) – CAC Installation**
 
----
+| Item | Part Number         | Description                       | Qty per A/C |
+|------|---------------------|-----------------------------------|-------------|
+| 10   | A2110-CAC-001-M     | COMPRESSOR ASSEMBLY, Main (LRU)   | 2           |
+| 15   | A2110-CAC-001-B     | COMPRESSOR ASSEMBLY, Backup (LRU) | 1           |
+| 20   | A2110-CTRL-001      | CONTROLLER, CAC (LRU)             | 3           |
+| 30   | HW-BLT-T10-M8       | BOLT, Mounting, Titanium          | 24          |
+| 40   | HW-WSH-LKW-M8       | WASHER, Lock                      | 24          |
+| 50   | A2110-DMPT-001      | VIBRATION DAMPER, Mount           | 12          |
+| 60   | A2110-CLMP-V12      | CLAMP, V-Band, Inlet Duct         | 3           |
+| 70   | A2110-CLMP-V10      | CLAMP, V-Band, Outlet Duct        | 3           |
 
-## 5 · Safety Precautions  
+**3. Maintenance Procedures**
 
-* **High voltage** ±540 V DC – isolate & prove dead.  
-* **CO₂ refrigerant** – vent, wear O₂ monitor.  
-* **Rotating machinery** – 200 s spin-down.  
-* **Hot surfaces** – gas-cooler ≤ 150 °C.  
-* **Quantum EMC** – keep radios ≥ 30 cm away.
+##### Task 21-10-01-801: Removal of Main CAC
 
----
+1. **Job Set-up**
+    - Open, tag, lock out:  
+      - `CB-ELEC-P24-ECS-CAC1`  
+      - `CB-ELEC-P24-ECS-CAC1-CTRL`
+    - On CMS, select `MAINTENANCE MODE > ECS > DEACTIVATE CAC 1`
+    - Tag ECS controls with “DO NOT OPERATE”
+2. **Procedure**
+    - Access CAC in forward lower E/E bay (Zone 121).
+    - **WARNING:** Confirm HVDC power is off and zero at P1.
+    - Disconnect P1 (power), D1 (data), install protective caps.
+    - Remove V-band clamps (inlet: 60, outlet: 70).
+    - Support CAC with maintenance jack.
+    - **CAUTION:** Ensure CAC is supported to avoid injury/damage.
+    - Remove 8 mounting bolts (30) and 8 lock washers (40).
+    - Lower CAC and place on cradle.
 
-## 6 · Ground Servicing  
+##### Task 21-10-01-802: Installation of Main CAC
 
-| Task | Interval | Standard | Notes |
-|------|----------|----------|-------|
-| Inlet screen visual check | DAILY | — | FOD / ice |
-| HEPA cartridge change | 1 000 FH | AMM 21-38-11 | Dual-cart |
-| CO₂ charge & leak-test | 4 000 FH / 24 MO | SAE J2197 | R-744 ≥ 99.9 % |
-| HVDC insulation test | 6 000 FH | AMM 24-27-00 | Meg ≥ 10 MΩ |
-| WASM checksum verify | Each SW load | AMM 21-00-00 | SHA-256 |
+1. **Job Set-up**
+    - Verify replacement CAC part/serial numbers.
+    - Inspect unit and aircraft mounting.
+2. **Procedure**
+    - Raise CAC into position.
+    - Align, install bolts (30) and washers (40). Torque: **25 Nm (18.4 ft-lb)**.
+    - Connect ducts, install V-band clamps (60, 70).
+    - Attach electrical connectors P1, D1.
+3. **Close-up**
+    - Remove tools/objects, tags.
+    - On CMS, `MAINTENANCE MODE > ECS > ACTIVATE CAC 1`.
+    - Close circuit breakers.
+    - Perform CAC BITE test (**AMM Task 21-10-02-751**).
 
----
+##### Task 21-10-02-751: CAC BITE Test
 
-## 7 · Scheduled Maintenance (extract)  
+- On CMS: `MAINTENANCE MODE > ECS > CAC SYSTEM > BITE TEST`
+- Select CAC, initiate test. System checks power, vibration, comms.
+- `PASS`/`FAIL` status displayed. Refer to FIM if `FAIL`.
 
-| ATA Ref | Task No. | Description | Interval | Skill |
-|---------|----------|-------------|----------|-------|
-| 21-00-00-210-801-A | Inspect compressor bearings | 8 000 FH | ENG |
-| 21-00-00-220-802-B | Quantum optimiser test | 2 000 FH | AVN |
-| 21-00-00-290-803-A | Trend data download | 1 000 FH | AVN |
-| 21-00-00-740-804-C | CO₂ heat-pump overhaul | 12 000 FH / 72 MO | ENG |
-| 21-00-00-940-805-Z | De-act / re-act | As req’d | ENG/AVN |
+**4. Repair Procedures**
 
----
+- LRUs only; no field repair. Refer to **CMM 21-10-01** for overhaul.
 
-## 8 · Fault-Isolation (abbrev.)  
+**5. Fault Isolation**
 
-1. **PACK 1 OVHT** → check amps, T-sensor T21-S816, CO₂ ΔT self-test.  
-2. **RECIRC FAN 2 FAULT** → isolate, read AFDX 21.223, inspect contactor K21-F2.
-
----
-
-## 9 · Wiring & Schematic Overview  
-
-```
-
-HVDC ±540 V  ← 125 kVA Converter → BUS
-├─ Compressor Inverter → COMP-E
-├─ Heat-Pump Inverter → HP-CO₂
-└─ IMA Rack (WASM + QIL-B)
-
-AFDX Dual-Star  ↔  IMA / CMS / CMP / CPC
-
-```
-
----
-
-## 10 · Digital-Twin & Analytics  
-
-* **Live stream** 42 sensors @ 1 Hz → SATCOM Ku.  
-* **GBM model** retrained every 100 FH; failure P < 1 × 10⁻⁵ / FH.  
-* **QUAChain** hashes LRU replacements for ESG trace.
+| Fault Message (EICAS)        | Probable Cause                         | FIM Reference               |
+|-----------------------------|----------------------------------------|-----------------------------|
+| `ECS - PACK 1 COMP FAULT`   | CAC 1 Controller, Motor, or Power      | TSM 21-10-00-FIM-01         |
+| `ECS - PACK 1 LOW FLOW`     | Inlet obstruction, CAC degradation     | TSM 21-10-00-FIM-02         |
 
 ---
 
-## 11 · System Improvements vs Legacy  
+### 21-20-00 Distribution
 
-| Feature | Legacy A320 Bleed | 787 Bleed-less | **AMPEL 360** |
-|---------|------------------|---------------|---------------|
-| Engine bleed loss | 3–5 % SFC | Eliminated | **Eliminated** |
-| Bus voltage | 270 V DC | 270 V DC | **540 V DC** |
-| Software assurance | DAL-C | DAL-C | **DAL-B (WASM)** |
-| Predictive maintenance | Limited | Basic | **Quantum digital-twin** |
-| ESG traceability | Low | Medium | **Blockchain** |
+#### 21-20-01 Air Distribution System
 
----
+**1. System Description**
 
-## 12 · Illustrated Infographic & Architecture Scheme  
+- Conditioned air flows to a mixing manifold, blended with filtered, recirculated air.
+- Three zones (Cockpit, Fwd, Aft) via CFRP ducts (main: 10", branch: 6").
+- Two HEPA/UV-C filter modules for recirculated air.
 
-### 12.1 Infographic  
-![image](https://github.com/user-attachments/assets/feef9157-7b55-40c1-8d2a-0e5082e20220)
+**2. IPC – Ducting & Filters**
 
+| Item | Part Number         | Description                      | Qty per Zone   |
+|------|---------------------|----------------------------------|---------------|
+| 10   | A2120-DUCT-S10      | DUCT, Supply, Main               | 1             |
+| 20   | A2120-DUCT-B06      | DUCT, Branch, 6-inch             | 4–6           |
+| 30   | A2120-CLMP-V10      | CLAMP, V-Band, 10-inch           | 8             |
+| 40   | A2120-SEAL-10       | SEAL, Duct, 10-inch              | 8             |
+| 50   | A2120-FILT-MOD-01   | FILTER MODULE, HEPA/UV-C (LRU)   | 2 (per A/C)   |
 
-### 12.2 Architecture Scheme  
-![image](https://github.com/user-attachments/assets/ab4a5b47-66be-4a5f-8121-e5b72677f3f9)
+**3. Maintenance Procedures**
 
+##### Task 21-20-01-201: Inspection of Cabin Distribution Ducts (C-Check)
 
-![image](https://github.com/user-attachments/assets/d22f2c0a-3474-4014-b31c-73ce4e99adb4)
+- Remove panels in zones 211, 221, 231.
+- Inspect ducts, clamps, supports for security, damage, proper sealing, moisture.
+- Reinstall panels.
 
+##### Task 21-20-01-701: Replacement of HEPA/UV-C Filter Module
 
-```
-### **End of ATA 21-00-00**
-```
+1. **Job Set-up**
+    - On CMS, deactivate fan. Tag circuit breaker.
+2. **Procedure**
+    - Access filter housing, open access door.
+    - **CAUTION:** Wear gloves/eye protection.
+    - Remove old filter, inspect housing.
+    - Install new filter, secure door.
+3. **Close-up**
+    - Remove tags, reactivate fan, reset filter life counter on CMS.
 
-**Status:** Approved  
-**Last Updated:** 2025-01-20
+**4. Repair Procedures**
 
-The AMPEL360 features an all-electric environmental control system (ECS) with no engine bleed extraction.
+- Minor CFRP cracks/punctures (<2 cm): composite patch per **SRM 57-10-05**.
+- Damage beyond limits: replace duct segment.
 
-### 21-10-00: Compression
+**5. Fault Isolation**
 
-### 21-10-01-00: Cabin Air Compressor System
-
-#### 1. System Architecture
-
-| Component | Quantity | Capacity | Location |
-|-----------|----------|----------|----------|
-| **Main Compressors** | 2 | 2.5 kg/s each | Belly fairing |
-| **Backup Compressor** | 1 | 1.5 kg/s | Aft equipment |
-| **Motor Drive** | 3 | 150 kW each | Integrated |
-| **Controller** | 3 | Triple redundant | E/E bay |
-
-#### 2. Operating Parameters
-
-| Parameter | Normal | Maximum | Warning |
-|-----------|--------|---------|---------|
-| **Discharge Pressure** | 35 psi | 45 psi | >42 psi |
-| **Discharge Temp** | 180°C | 230°C | >210°C |
-| **Mass Flow** | 4.5 kg/s | 5.0 kg/s | <3.0 kg/s |
-| **Power Draw** | 250 kW | 300 kW | >280 kW |
-
-Below is a **starter template**—fully ATA-compliant in both layout and naming—for **Chapter 21-10-00 “Compression”** and its first sub-chapter **21-10-01-00 “Cabin Air Compressor System.”**
-Use it as the skeleton into which design data, design‐for-maintenance details, and test results can be progressively inserted.
+| Fault Message (EICAS)            | Probable Cause                | FIM Reference           |
+|----------------------------------|-------------------------------|-------------------------|
+| `ECS - RECIRC FAN 1 FAULT`       | Fan or filter fault           | TSM 21-20-00-FIM-01     |
+| `CABIN - AIR QUALITY LOW`        | UV-C lamp, filter overdue     | TSM 21-20-00-FIM-02     |
 
 ---
 
-## ATA 21-10-00 — Compression (General)
+### 21-30-00 Pressurization Control
 
-| Section                               | Purpose                                                                                                                   |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| **21-10-00-1 Description**            | Overall role of the compression sub-system within the bleed-less ECS and interfaces to 21-20 (Cooling) & 21-30 (Heating). |
-| **21-10-00-2 Architecture**           | Block diagram, power & data busses, functional redundancy.                                                                |
-| **21-10-00-3 Limits & Targets**       | Envelope charts (pressure, flow, temp, power vs. altitude / OAT).                                                         |
-| **21-10-00-4 Controls & Indications** | Crew panels, synoptic page, maintenance ports.                                                                            |
-| **21-10-00-5 Safety**                 | Failure-classification matrix in support of §25.1309 analysis.                                                            |
-| **21-10-00-6 Servicing**              | Ground tasks common to all 21-10 sub-chapters (filters, screens, lubrication).                                            |
-| **21-10-00-7 Maintenance Checks**     | MPD extract & task intervals.                                                                                             |
-| **21-10-00-8 Wiring & Plumbing**      | HVDC harness list, hydraulic diagrams, quick-disconnects.                                                                 |
-| **21-10-00-9 Troubleshooting**        | High-level fault-isolation logic (links to 21-10-01/02 FIM).                                                              |
+#### 21-30-01 Pressurization Control System
 
----
+**1. System Description**
 
-## 21-10-01-00 — Cabin Air Compressor System
+- Two digital Cabin Pressure Controllers (CPCs) modulate two Outflow Valves (OFVs).
+- Receives data from ADIRUs and FMS.
+- Maintains 6,000 ft cabin altitude at cruise.
+- Includes positive/negative relief valves.
 
-### 1  System Architecture
+**2. IPC – Pressurization**
 
-| Component               | Qty | Capacity / Rating      | Location                   | Notes                      |
-| ----------------------- | --- | ---------------------- | -------------------------- | -------------------------- |
-| **Main Compressors**    | 2   | 2 .5 kg s⁻¹ each       | Belly fairing              | Counter-rotating impellers |
-| **Backup Compressor**   | 1   | 1 .5 kg s⁻¹            | Aft equipment bay          | Auto-start on main loss    |
-| **Motor Drives (HVDC)** | 3   | 150 kW each            | Integrated with compressor | 540 V ±5 %                 |
-| **Controllers (WASM)**  | 3   | Triple-redundant DAL-B | E/E bay                    | 20 ms control loop         |
+| Item | Part Number         | Description                        | Qty per A/C   |
+|------|---------------------|------------------------------------|---------------|
+| 10   | A2130-CPC-001       | CONTROLLER, Cabin Pressure (LRU)   | 2             |
+| 20   | A2130-OFV-001       | VALVE, Outflow Assembly (LRU)      | 2             |
+| 30   | A2130-PRV-POS       | VALVE, Positive Pressure Relief    | 1             |
+| 40   | A2130-PRV-NEG       | VALVE, Negative Pressure Relief    | 1             |
 
-### 2  Normal Operating Parameters
+**3. Maintenance Procedures**
 
-| Parameter                 | Normal      | Maximum     | Caution / Warning |
-| ------------------------- | ----------- | ----------- | ----------------- |
-| **Discharge Pressure**    | 35 psi      | 45 psi      | ≥ 42 psi          |
-| **Discharge Temperature** | 180 °C      | 230 °C      | ≥ 210 °C          |
-| **Mass Flow**             | 4 .5 kg s⁻¹ | 5 .0 kg s⁻¹ | ≤ 3 .0 kg s⁻¹     |
-| **Power Draw**            | 250 kW      | 300 kW      | ≥ 280 kW          |
+##### Task 21-30-01-751: Functional Test of Pressurization System (C-Check)
 
-*Thresholds above feed EICAS alerts → PACK OVHT, LOW FLOW, COMP OVLD.*
+- Ensure electrical power, cabin doors closed.
+- Connect Cabin Pressure Test Set.
+- Program test profile, monitor CMS.
+- Verify auto control, OFV modulation, cabin altitude, controller switchover.
 
-### 3  Control & Monitoring
+##### Task 21-30-01-752: Bench Test of Pressure Relief Valves (24 Months)
 
-* **Primary Loop** – deterministic WebAssembly routine (DAL-B) adjusts motor-drive torque, inlet guide vane (IGV) angle and bleed-off valve to hold setpoints.
-* **Optimisation Layer** – QIL-B quantum co-processor refines IGV schedule every 2 s for minimum specific power.
-* **Built-In Test (BIT)** – on ground, a 90-s automatic check runs compressor acceleration, leak scan, and sensor health.
+- Remove valves, test opening at +9.2 psi (pos), –0.5 psi (neg).
+- Certify and reinstall with new seals.
 
-### 4  Safety & Failure Modes
+**4. Repair Procedures**
 
-| Failure Case                       | Detecting Function     | Flight Deck Effect | Corrective Action                          |
-| ---------------------------------- | ---------------------- | ------------------ | ------------------------------------------ |
-| Motor over-current > 280 kW (3 s)  | WASM limit-check       | ECAM “COMP OVLD”   | Reduce pack flow; if persisting, COMP OFF  |
-| Discharge temp ≥ 210 °C            | Dual RTD majority vote | ECAM “PACK OVHT”   | Auto-bypass opens; if > 220 °C, COMP trips |
-| Flow < 3 kg s⁻¹ with demand > 75 % | Mass-flow sensor       | ECAM “LOW FLOW”    | Backup compressor auto-starts              |
+- CPC/OFV: LRU only. Relief valve seals per **SRM 21-30-05**.
 
-### 5  Scheduled Maintenance Extract
+**5. Fault Isolation**
 
-| Task No.         | Description                                  | Interval          | Skill | Ref.         |
-| ---------------- | -------------------------------------------- | ----------------- | ----- | ------------ |
-| 21-10-01-210-001 | Visual inspect impeller blades via borescope | 4 000 FH          | ENG   | AMM 21-10-01 |
-| 21-10-01-220-002 | Functional test of IGV servo & resolver      | 2 000 FH          | AVN   | AMM 21-10-01 |
-| 21-10-01-290-003 | Data download & trending (digital-twin)      | 1 000 FH          | AVN   | AMM 21-10-00 |
-| 21-10-01-750-004 | Overhaul main compressor cartridge           | 12 000 FH / 72 MO | ENG   | CMM          |
-
-### 6  Illustrated Infographic
-
-The blueprint below can be inserted as Figure 21-10-01-A to give technicians a one-glance view of the hardware lineup **and** the “red-line” operating limits:
-
-![image](https://github.com/user-attachments/assets/44e9c559-e9a6-4bd1-b4a8-c769efbd42e8)
-
-
-*(High-resolution PNG, 300 dpi, suitable for S1000D data-module illustrations.)*
+| Fault Message (EICAS)        | Probable Cause                       | FIM Reference          |
+|------------------------------|--------------------------------------|------------------------|
+| `PRESS - CABIN ALT HI`       | OFV stuck, duct leak, low inflow     | TSM 21-30-00-FIM-01    |
+| `PRESS - SYS 1 FAULT`        | CPC 1 or sensor fault                | TSM 21-30-00-FIM-02    |
 
 ---
 
-### 7  Interface Map (signal & power)
+### 21-40-00 Heating
 
-```
-±540 V HVDC ─┬─> Motor Drive #1 ─┐
-             ├─> Motor Drive #2 ─┤─> Main Compressors (2×) → CO₂ heat-pump
-             └─> Motor Drive #3 ─┘
-AFDX dual-star <──> IMA rack <──> WASM controllers
-ARINC 429     <──> EICAS / Maintenance Port
-Pressure/Temp sensors → Controller vote-logic (2-oo-3)
-```
+#### 21-40-01 Heating System
 
----
+**1. System Description**
 
-### 8  Data Module Metadata (S1000D 5.0)
+- Two R744 vapor-cycle systems in heat pump mode.
+- Supplemental 50 kW resistance heater (**A2140-HEAT-001**) in mixing manifold.
 
-```xml
-<dmCode>
-  <modelIdentCode>AMPEL360</modelIdentCode>
-  <systemDiffCode>21-10-01</systemDiffCode>
-  <systemCode>21</systemCode>
-  <subSystemCode>10</subSystemCode>
-  <subSubSystemCode>01</subSubSystemCode>
-  <itemLocationCode>00</itemLocationCode>
-</dmCode>
-<issueInfo>
-  <issueNumber>001</issueNumber>
-  <inWork>false</inWork>
-</issueInfo>
-```
+**2. Maintenance Procedures**
 
-*Ready for import into your CSDB; images referenced via `<dmRef>` elements.*
+##### Task 21-40-01-751: Functional Test of Heating Systems (A-Check)
+
+- On CMS: `MAINTENANCE MODE > ECS > HEATING TEST`
+- Test heat pump mode (high temp demand, verify temp rise and power draw).
+- Test supplemental heater (verify rapid temp rise and 50 kW draw).
+- Return all controls OFF after testing.
 
 ---
 
-![image](https://github.com/user-attachments/assets/9ded92b0-d06f-4211-8f27-a55f6681faba)
+### 21-50-00 Cooling
 
+#### 21-50-01 Cooling System
 
-# **ATA 21-10-02 — EMERGENCY PRESSURISATION – RAM-AIR SYSTEM**  
-_AMPEL360 BWB Q100 Electric ECS_
+**1. System Description**
 
-> **Purpose.** Provides an alternate source of ventilation and partial pressurisation in the event the normal electric compressor pack(s) are inoperative. The ram-air inlet utilises outside dynamic pressure to supply a modest airflow through the environmental control ducting, ensuring crew/passenger survivability, smoke clearance and electronic-bay cooling at altitudes ≤ 25 000 ft.
+- Two vapor-cycle packs (**A2150-PACK-001**) using R744 (CO₂).
+- Heat rejected via ram air exchangers.
 
----
+**2. Maintenance Procedures**
 
-## 1  System Architecture  
+##### Task 21-50-01-401: Performance Trend Analysis (A-Check)
 
-| Component | Qty | Nominal Capacity | Location |
-|-----------|-----|------------------|----------|
-| **Ram-Air Inlet Door** (spring-loaded, fail-safe open) | 1 | 0.5 kg s⁻¹ @ 250 KIAS | Lower LH fuselage |
-| **Ram-Air Check Valve** (one-way) | 1 | 1.0 kg s⁻¹ max | Aft of inlet door |
-| **HEPA Filter Module** (200 cm² media) | 1 | 98 % @ 0.3 µm | E/E bay plenum |
-| **Mix Manifold** (blends ram & recirc) | 1 | 0.7 kg s⁻¹ | Between recirc fans |
-| **By-Pass Shut-off Valve (BSOV)** | 1 | Full close / Full open < 1 s | Downstream of manifold |
-| **Differential-Pressure Transducer (ΔP_CAB/AMB)** | 2 | – 0.1 to +0.2 MPa | CPC rack |
-| **Ram-Air Control Module (RACM)** | 3 | Triple-redundant, DAL-B | IMA rack |
+- On CMS: `PROGNOSTICS > ECS > COOLING PACK HEALTH`
+- Review COP trends, investigate >15% degradation.
 
----
+##### Task 21-50-01-501: Refrigerant Servicing (On-Condition)
 
-## 2  Operating Parameters  
-
-| Parameter | Nominal | Red-Line / Caution | Notes |
-|-----------|---------|--------------------|-------|
-| **Activation Altitude** | Auto deploy **≤ 25 000 ft** | Inhibited > 26 000 ft | WOW logic bypass on ground test |
-| **Mass Flow Rate** | **0.5 kg s⁻¹** @ 250 KIAS | < 0.35 kg s⁻¹ → CABIN PRESS LOW caution | Flow rises proportionally with dynamic pressure |
-| **Cabin ΔP with RAM only** | 0 to **– 0.01 MPa** (slightly negative) | – 0.02 MPa → MASKS ON ECAM | CPC limits outflow to minimise negative pressure |
-| **HEPA Differential ΔP** | 0.5 kPa clean | 2.0 kPa → FILTER CLOG alert | Replace element |
-| **Door Cycling Limit** | 5 000 ops | 6 000 ops structural inspection | Monitored by RACM |
+- **WARNING:** R744 system at up to 1500 psi. Service only if leak detected.
+- For servicing, see **CMM 21-50-01**.
 
 ---
 
-## 3  Control & Indication  
+### 21-60-00 Temperature Control
 
-| Control/Indication | Function |
-|--------------------|----------|
-| **AUTO Ram-Air Pushbutton (OHP)** | ARM (lights out) / MAN OPEN (blue ON) / FAULT (amber) |
-| **EICAS Message** | *RAM AIR ON* when door > 10° open |
-| **Cabin Pressure Controllers (CPC)** | Auto-close outflow valves to maintain residual ΔP |
-| **IMA / RACM Logic** | • Auto-deploy when **Cabin Alt > 14 000 ft** **AND** Packs = OFF  
-|                        | • Auto-stow on ground or if Packs restored & ΔP stable |
-| **Maintenance Port Data** | Door cycles, ΔP trends, filter hours |
+#### 21-60-01 Temperature Control System
 
----
+**1. System Description**
 
-## 4  Sequence of Operation  
+- Three zones (Cockpit, Fwd, Aft) with smart trim air valves (**A2160-VALV-TRM**).
+- Redundant temp sensors (**A2160-SENS-TEMP**).
 
-1. **Detection** – Packs fail or are selected OFF; Cabin Alt rises.  
-2. **Auto-Deploy** – At **Cab Alt ≥ 14 000 ft** *and* **Aircraft Alt ≤ 25 000 ft**, RACM energises the Ram-Air Door actuator → Door to FULL OPEN (≈ 2 s).  
-3. **Flow Establishes** – Dynamic pressure forces ambient air through inlet, check valve and HEPA filter to mix manifold.  
-4. **CPC Reaction** – Outflow valves modulate to maintain near-ambient cabin pressure (prevents rapid depressurisation).  
-5. **Manual Override** – Crew may push **MAN OPEN** for immediate deployment or **CLOSE** (packs restored, smoke removal complete).  
-6. **Stow** – On descent below **10 000 ft** or when Packs supply > 0.5 kg s⁻¹, RACM commands door closed and re-latches.
+**2. Maintenance Procedures**
 
----
+##### Task 21-60-01-751: BITE Test of Trim Air Valves (A-Check)
 
-## 5  Safety Precautions  
+- On CMS: `MAINTENANCE MODE > ECS > TEMP CONTROL > TRIM VALVE TEST`
+- Command cycle, check feedback, note any failures.
 
-* **No Positive Pressurisation** – Ram-air cannot sustain positive ΔP; masks may be required above **10 000 ft** cabin.  
-* **High-Velocity Inlet** – Stand clear; ingestion hazard at > 200 KIAS during maintenance tests.  
-* **Filter Handling** – HEPA element rated for bio-hazards; wear FFP3 respirator when removing.  
+##### Task 21-60-01-721: Calibration of Zone Temperature Sensors (C-Check)
+
+- Stable ambient, ECS OFF.
+- On CMS: `MAINTENANCE MODE > ECS > TEMP SENSOR CALIBRATION`
+- Allow readings to stabilize, identify outliers >0.5°C, calibrate as needed.
 
 ---
 
-## 6  Servicing & Inspection  
+### 21-70-00 Moisture Control
 
-| Task | Interval | Procedure | Skill |
-|------|----------|-----------|-------|
-| Visual inspect ram-air door seal & hinge | **Daily** transit | AMM 21-10-02-210-001-A | ENG |
-| HEPA filter differential-pressure reading | **Every 500 FH** | AMM 21-10-02-720-003-B | AVN |
-| Door actuator lubrication | **1 000 FH / 12 MO** | AMM 21-10-02-290-005-A | ENG |
-| Racm logic self-test (BITE) | **2 000 FH** | AMM 21-10-02-740-007-B | AVN |
-| Door hinge detailed NDT | **6 000 FH / 48 MO** | AMM 21-10-02-220-010-C | ENG |
+#### 21-70-01 Moisture Control System
 
-Legend: **ENG** – Air-conditioning technician **AVN** – Avionics technician
+**1. System Description**
 
----
+- Dehumidification via water separators in ECS packs; overboard drain.
+- Humidification via ultrasonic atomizer (**A2170-HUMID-01**), maintains 20–30% RH.
 
-### Figure 21-10-02-A — _Emergency RAM-Air Flow Schematic_  
-_(see linked blueprint diagram; shows inlet door, HEPA module, mix manifold and control lines colour-coded per ATA 21 convention)_
+**2. Maintenance Procedures**
 
-![image](https://github.com/user-attachments/assets/831ba047-b11d-4100-ab57-4dd5afbfa340)
+##### Task 21-70-01-201: Inspection of Water Separator Drains (A-Check)
 
-![image](https://github.com/user-attachments/assets/254665be-e83b-4eef-a5a5-56cdc4e0a253)
+- Run ECS cooling for 10 min, check for water at drain masts, confirm lines are clear.
 
+##### Task 21-70-01-711: Cleaning of Humidifier Nozzles (C-Check)
 
-> **Change log:** Initial release v0.9 – aligns with S1000D DM-21-10-02-00-A-9210-010A-00001-00B.
-
-
-
-### 21-20-00: Distribution
-
-### 21-20-01-00: Air Distribution Ducting
-
-#### 1. Duct Network
-
-| Zone | Supply Ducts | Return Ducts | Material |
-|------|--------------|--------------|----------|
-| **Cockpit** | 2 × 4" | 1 × 6" | Al alloy |
-| **Forward Cabin** | 4 × 6" | 2 × 8" | CFRP |
-| **Center Cabin** | 6 × 6" | 3 × 8" | CFRP |
-| **Aft Cabin** | 4 × 6" | 2 × 8" | CFRP |
-
-# AMPEL360 BWB-Q100  
-**Air-Distribution System Design Package**  
-*(ATA 21-20-00 / -01)*  
+- Deactivate humidifier, tag breaker.
+- Remove, clean atomizer cartridges in ultrasonic bath.
+- Reinstall, reactivate, verify operation via CMS.
 
 ---
 
-## 1 · Design Mass-Flow Allocation  
-
-| Zone | Occupancy | **Total Flow** (kg · s⁻¹) | **Fresh** (kg · s⁻¹) | **Recirc.** (kg · s⁻¹) | Key Rationale |
-|------|-----------|---------------------------|----------------------|------------------------|---------------|
-| Cockpit | 2 – 4 crew | **0.08** | 0.08 | 0.00 | 100 % fresh for avionics cooling & crew alertness |
-| Forward Cabin | ≈ 24 pax | **0.27** | 0.13 | 0.14 | Mirrors Aft Cabin for modularity |
-| Centre Cabin | ≈ 52 pax | **0.58** | 0.26 | 0.32 | Largest passenger zone in BWB |
-| Aft Cabin | ≈ 24 pax | **0.27** | 0.13 | 0.14 | Symmetric with Forward Cabin |
-| **System Total** | 100 – 104 | **1.20** | **0.60** | **0.60** | 50 / 50 fresh-to-recirc mix |
-
-*Basis: 20 CFM · person⁻¹ comfort target; FAR 25.831 compliance.*
-
----
-
-## 2 · Pressure-Loss Modelling Inputs  
-*(Darcy–Weisbach parameters for supply runs)*  
-
-| Zone | Material | Eff. Length **L** (m) | ΣK (fittings) | Rel. Roughness **ε** (mm) | Design Velocity **V** (m · s⁻¹) |
-|------|----------|-----------------------|---------------|---------------------------|---------------------------------|
-| Cockpit | Al alloy | 15.0 | 7.0 | 0.050 | 4.6 |
-| Forward Cabin | CFRP | 10.0 | 4.5 | 0.005 | 5.5 |
-| Centre Cabin | CFRP | 5.0 | 2.5 | 0.005 | 4.8 |
-| Aft Cabin | CFRP | 10.0 | 4.5 | 0.005 | 5.5 |
-
-> **ΔP equation**  
-> \[
-> \Delta P = \left(f\;\frac{L}{D} + \Sigma K\right)\,\frac{\rho V^{2}}{2},
-> \qquad \rho \approx 1.1\;\text{kg · m}^{-3}
-> \]
-
----
-
-## 3 · Acoustic & Thermal Specifications  
-
-### 3.1  Noise Targets (ECS contribution)
-
-| Area | Criterion | dBA Limit | Note |
-|------|-----------|-----------|------|
-| Cockpit | NC-45 | ≤ 50 dBA | Allows avionics fan background |
-| Passenger Cabins | **NC-35** | **40 – 45 dBA** | Premium comfort benchmark |
-
-### 3.2  Duct Insulation
-
-| Duct | Location | Driver | Thickness | Function |
-|------|----------|--------|-----------|----------|
-| Supply | Crown & sidewalls | Condensation control | **25 mm / 1 in** | Prevents external condensation on 13 °C air lines |
-| Return | Cabin zones | Acoustic | **13 mm / 0.5 in** | Noise attenuation; minor ΔT so condensation not critical |
-
-Fire standard: **FAR 25.856(a)** compliant closed-cell elastomeric foam.
-
----
-
-## 4 · Cross-Section Check (Geometry Confirmation)  
-
-| Zone | Supply Ducts | Return Ducts | Material | Supply Area (in²) | Return Area (in²) | Supply : Return |
-|------|--------------|--------------|----------|-------------------|-------------------|-----------------|
-| Cockpit | 2 × 4 in | 1 × 6 in | Al alloy | **25.1** | **28.3** | 0.89 |
-| Forward Cabin | 4 × 6 in | 2 × 8 in | CFRP | **113.1** | **100.5** | 1.12 |
-| Centre Cabin | 6 × 6 in | 3 × 8 in | CFRP | **169.6** | **150.8** | 1.12 |
-| Aft Cabin | 4 × 6 in | 2 × 8 in | CFRP | **113.1** | **100.5** | 1.12 |
-
-*(A = n π D² / 4 ; 1 in² ≈ 6.45 cm²)*  
-
----
-
-## 5 · Next Engineering Actions  
-
-| # | Work-Stream | Output | Schedule Impact |
-|---|-------------|--------|-----------------|
-| **1** | **Velocity / ΔP validation** | Parametric XLSX + Python sheet (auto-CI) | Evidence for SOI-2/3 |
-| **2** | SRS 21-20-01 v0.3 | Markdown & PDF with full REQ→DESIGN trace | Aligns disciplines; audit ready |
-| **3** | CFD / Digital-Twin case | OpenFOAM template & scripts | De-risk “dead-zones” pre-flight |
-| **4** | DO-160G Test-Plan (TRD v1.0) | Procedure & lab-Gantt | Secures scarce chamber slots |
-
-**Data still needed**  
-1. Design flow-rates per zone (confirmed)  
-2. CATIA extract: lengths + bends per duct size  
-3. Target cabin dBA limits & insulation space constraints  
-
-Provide those, plus preferred spreadsheet format (XLSX or CSV + Jupyter) and Git branch, and the artefacts will be delivered within **48 h**.
-
-![image](https://github.com/user-attachments/assets/b550b422-2503-4389-93d0-3f6feb1830cd)
-
----
-
-### Strategic Note
-
-> *Prioritise Work-Stream 1 — the flow-rate & ΔP plan.*  
-> It locks fan sizing, valve Cv, insulation mass and the electric-compressor power budget — areas regulators scrutinise first on an **all-electric ECS**.
-
----  
-
-*Prepared by: Lead ECS Engineering Team — AMPEL360 Program*  
-*Date: 13 June 2025*
-
-
-### 21-20-02-00: Zone Temperature Control
-
-**Three-Zone System:**
-1. Cockpit: ±10°C from datum
-2. Forward/Center: ±5°C from datum
-3. Aft cabin: ±5°C from datum
-
-**Mixing Units:**
-- Motorized valves
-- PID control loops
-- Response time <30 sec
-
-## 21-20-02-00 · Zone-Temperature Control  
-*(Three-Zone Architecture – Cockpit, Forward/Centre Cabin, Aft Cabin)*  
-
-| Zone | Control Authority<br>(ΔT from datum) | Primary Actuators | Control Law | Target Response (t<90 %) |
-|------|--------------------------------------|-------------------|-------------|--------------------------|
-| **Cockpit** | **± 10 °C** | 2-way motorised trim-air valve + dedicated supply damper | PID (fast) with direct-acting gain | **< 30 s** |
-| **Forward / Centre Cabin** | **± 5 °C** | Common 2-way trim-air valve per zone + VAV diffusers | PID (cascaded) tracking datum | **< 30 s** |
-| **Aft Cabin** | **± 5 °C** | 2-way trim-air valve + VAV diffusers | PID (cascaded) tracking datum | **< 30 s** |
-
-### A · Control-System Topology  
-1. **Datum** (master set-point) originates in the Pack Controller; cabin zones request ± ΔT trim via CAN-FD.  
-2. Each zone has:  
-   * **Mixed-air temperature sensor** (Pt1000, ± 0.1 °C accuracy).  
-   * **Motorised trim-air valve** (step ≤ 1 ° crank, < 500 ms actuation).  
-   * **Local PID loop** executed in the IMA/WASM partition (DAL B).  
-3. Cockpit loop uses **higher proportional gain** and reduced integral time to meet the wider ± 10 °C band and avionics heat transients.  
-4. For cabins, a **cascade** adds a slower integral “comfort” loop on VAV diffusers to smooth drafts while preserving the < 30 s 90 % t response.
-
-### B · Key Design Targets  
-* **Temperature settling (t<sub>90 %</sub>)**: ≤ 30 s after a 3 °C step input (FAA AC 25-16).  
-* **Steady-state error**: ≤ ± 0.2 °C (cockpit) / ≤ ± 0.5 °C (cabins).  
-* **Valve stroke life**: ≥ 1 × 10⁶ cycles (DO-254 durability, RTCA environmental).  
-* **Sensor MTBF**: ≥ 60 000 h (@ 55 °C, 70 % RH).  
-
-### C · Validation & Certification Plan  
-| Test ID | Objective | Method | Acceptance |
-|---------|-----------|--------|------------|
-| TC-01 | t<sub>90 %</sub> confirmation (cockpit) | Climatic chamber, 3 °C hot-step | t<90 % ≤ 30 s, overshoot ≤ 1 °C |
-| TC-02 | Steady-state accuracy | 8-h soak at ISA + 15 °C | ± 0.2 °C cockpit, ± 0.5 °C cabins |
-| TC-03 | Fail-safe valve position | Command loss @ 45 000 ft | Valve cruises to 25 % open within 2 s |
-| TC-04 | SW/HW HIL robustness | 1 000 random set-point jumps | No watchdog reset, ΔT trace within limits |
-
-### D · Open Items / Data Needed  
-1. **Datum definition** – exact supply-air reference temperature range.  
-2. **Valve Cv & stroke limits** per manufacturer to finalise PID coefficients.  
-3. **Sensor placement** drawings to confirm thermal lag assumptions (< 2 s).  
-4. **Cabin heat-load profiles** (sun-load, equipment, pax metabolism) for CFD–PID co-simulation.
-
-![image](https://github.com/user-attachments/assets/6a7beefe-b11f-4af8-9ada-b6e839e99d64)
-
----
-
-### Next Engineering Actions  
-1. **Tune PID gains** in HIL bench using the manufacturer’s valve/actuator dynamic model.  
-2. **Generate SRS 21-20-02 v0.1** with REQ → TEST matrix (can push to same Git branch).  
-3. **Update CFD / thermal-network model** to inject zone step-load disturbances and verify < 30 s settling.  
-
-> **Recommendation**: finalise Items 1-3 above before locking the valve part number into the procurement list; the < 30 s target is aggressive and valve hysteresis can be the limiting factor.
-
-*Prepared by – ECS Controls Group* *13 Jun 2025*
-
-
-### 21-20-03-00: Cabin Air Recirculation
-
-| Parameter | Value | Notes |
-|-----------|-------|-------|
-| **Recirc Ratio** | 50% | Adjustable |
-| **HEPA Efficiency** | 99.97% | 0.3 μm particles |
-| **UV-C Sterilization** | 254 nm | 99.9% pathogens |
-| **Replacement** | 2000 FH | Or contamination |
-
-
-## 21-20-03-00 · Cabin-Air Recirculation  
-*(Recirc / Filtration / Sterilisation Sub-System)*  
-
-| Parameter | Baseline Value | Notes & Operational Flexibility |
-|-----------|---------------|----------------------------------|
-| **Recirculation Ratio** | **50 %** | Fully adjustable (0 – 60 %) via ECS controller for smoke-removal, ground A/C or high-humidity ops |
-| **Air-change Rate** | **20–30 ACH** | Entire cabin volume replaced every **2–3 min** (ISA cruise) |
-| **HEPA Efficiency** | **99.97 % @ 0.3 µm** | True-HEPA class; higher capture efficiency outside MPPS |
-| **UV-C Sterilisation** | 254 nm, **99.9 % pathogen inactivation** | Inline germicidal chambers in recirc loop; auto-off on access door open |
-| **Scheduled Replacement** | **2 000 FH** (filter & lamp) | On-condition swap earlier if differential-pressure > 6 kPa or contamination detected |
-
-### A · Functional Overview  
-1. **Mixed-flow concept** – *Pack* delivers 100 % fresh, sterile bleed-less air; recirc fans draw cabin return air → **HEPA** → **UV-C** → mix manifold (50 / 50 nominal).  
-2. **Flex mode** – ECS controller can drive recirc ratio to 0 % (smoke clearance) or 60 % (energy-saving on ground A/C).  
-3. **Pathogen barrier** – Dual layer: mechanical capture (HEPA) + photonic inactivation (UV-C).  
-
-### B · Performance Benchmarks  
-| Metric | Target | Compliance Rationale |
-|--------|--------|----------------------|
-| Particulate removal | ≥ 99.97 % @ 0.3 µm | Meets / exceeds ISO 29463-1 Class H14 |
-| Viral load reduction | ≥ 3-log (99.9 %) | ASTM E3135-18 (UV disinfection) |
-| Airflow degradation | < 10 % at 1 000 FH | Monitored by ΔP sensors; triggers maintenance alert |
-| Ozone emission | < 0.05 ppm | UV-C chamber lined with TiO₂ catalyst; FAR 25.832 compliant |
-
-### C · Validation & Certification Plan  
-| Test ID | Objective | Method | Acceptance |
-|---------|-----------|--------|------------|
-| CR-01 | HEPA efficiency | Sodium-fluorescein aerosol test @ 0.3 µm | ≥ 99.97 % penetration |
-| CR-02 | UV-C kill rate | MS2 bacteriophage challenge | ≥ 99.9 % log-reduction |
-| CR-03 | Recirc ratio control | HIL + flow-bench 0–60 % set-points | Error ≤ ±3 % |
-| CR-04 | Filter life | Dust-loading to 2 000 FH equivalent | ΔP < 1.8 kPa rise |
-
-### D · Open Items / Data Needed  
-1. **Cabin volumetric flow** by phase of flight (taxi, climb, cruise) for ACH trace.  
-2. **UV-C lamp degradation curve** (output vs FH) to refine replacement threshold.  
-3. **CFD model** with pathogen source terms for worst-case dispersion study.  
-
-![image](https://github.com/user-attachments/assets/2ad30d94-390d-4dcc-9a3e-8f0bbe6829da)
-
----
-
-#### Next Engineering Actions  
-1. **Integrate HEPA ΔP sensors** into IMA/WASM partition and link to cockpit CAS message “FILTER CLOG”.  
-2. **Draft SRS 21-20-03 v0.1** (REQ→TEST matrix) and push to `ecs/recirc` branch.  
-3. **Set up lab rig** for UV-C dose mapping and ozone measurement (ASTM D5156).  
-
-> **Recommendation:** lock filter P/N only after CR-04 dust-loading results; differential-pressure margin is critical for the all-electric compressor power budget.
-
-*Prepared by – ECS Air-Quality Team* *13 Jun 2025*
-
-
-
-### 21-30-00: Pressurization Control
-
-### 21-30-01-00: Pressure Controllers and Sensors
-
-#### 1. Controller Architecture
-
-- Triple redundant channels
-- Voting logic 2/3
-- Automatic changeover
-- Manual backup mode
-
-#### 2. Sensor Suite
-
-| Sensor | Quantity | Range | Accuracy |
-|--------|----------|-------|----------|
-| **Cabin Altitude** | 6 | 0-45k ft | ±50 ft |
-| **Differential** | 4 | 0-12 psi | ±0.1 psi |
-| **Rate** | 4 | ±4k fpm | ±50 fpm |
-
-### 21-30-02-00: Outflow Valve Operation
-
-**Main Outflow Valves (2):**
-- Butterfly type, 10" diameter
-- Electric actuators
-- Position feedback ±0.5°
-- Full travel 3 seconds
-
-### 21-30-03-00: Safety and Relief Valves
-
-| Valve | Setting | Flow Capacity | Test Interval |
-|-------|---------|---------------|---------------|
-| **Positive Relief** | 9.2 psi | 3 kg/s | 12 months |
-| **Negative Relief** | -0.5 psi | 2 kg/s | 12 months |
-| **Dump Valve** | Manual | 5 kg/s | 6 months |
-
-### 21-40-00: Heating
-
-### 21-40-01-00: Electric Heating Elements
-
-| Zone | Heater Power | Control | Protection |
-|------|--------------|---------|------------|
-| **Supply Ducts** | 50 kW total | Staged | Overheat 120°C |
-| **Floor** | 20 kW | Zones | GFCI |
-| **Sidewall** | 10 kW | Local | Thermal fuse |
-
-### 21-40-02-00: Waste Heat Recovery Integration
-
-**Heat Sources:**
-- Battery cooling loop: 20 kW available
-- Power electronics: 30 kW available
-- Fuel cell exhaust: 40 kW available
-
-**Integration:**
-- Liquid-air heat exchangers
-- Automatic source selection
-- Temperature optimization
-
-### 21-50-00: Cooling
-
-### 21-50-01-00: Vapor Cycle Cooling System
-
-#### 1. System Components
-
-| Component | Quantity | Capacity | Refrigerant |
-|-----------|----------|----------|-------------|
-| **Packs** | 2 | 40 kW each | R-1234yf |
-| **Compressors** | 4 | Scroll type | Hermetic |
-| **Condensers** | 2 | RAM air | Enhanced fins |
-| **Evaporators** | 2 | Cabin air | Anti-ice |
-
-### 21-50-02-00: Ram Air Heat Exchangers
-
-- Primary: 1.2 m² frontal area
-- Secondary: 0.8 m² frontal area
-- Automatic inlet modulation
-- Ice protection heating
-
-### 21-60-00: Temperature Control
-
-### 21-60-01-00: Automatic Temperature Control
-
-**Control Logic:**
-1. Zone temperature sensing (±0.2°C)
-2. Predictive algorithms
-3. Occupancy-based adjustment
-4. Solar load compensation
-
-### 21-60-02-00: Manual Override Systems
-
-- Cockpit: Full authority ±15°C
-- Cabin: FA panel ±5°C
-- Maintenance: Direct valve control
-
-### 21-70-00: Moisture Control
-
-### 21-70-01-00: Humidity Control Systems
-
-| Parameter | Range | Control Method |
-|-----------|-------|----------------|
-| **Cabin RH** | 25-40% | Water injection |
-| **Cockpit RH** | 30-50% | Local humidifier |
-| **Avionics** | <30% | Desiccant |
-
-### 21-70-02-00: Condensation Management
-
-- Insulation blankets with vapor barriers
-- Drain systems at low points
-- Heated zones at cold spots
-- Automatic purge cycles
+***(End of Chapter 21)***
 
 ---
 
