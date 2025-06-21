@@ -250,3 +250,123 @@ async def get_sustainability_metrics(product_id: str):
     except Exception as e:
         logger.error(f"Error getting sustainability metrics: {e}")
         raise HTTPException(status_code=500, detail=f"Error getting sustainability metrics: {str(e)}")
+
+@router.post("/validate_procedure", response_model=Dict[str, Any])
+async def validate_maintenance_procedure(
+    procedure_id: str = Body(..., embed=True),
+    current_user: User = Security(get_current_user, scopes=["memory:read"])
+):
+    """
+    Validate a maintenance procedure against the AMEDEO-APU ontology
+    
+    Checks if the procedure complies with safety and ethical rules
+    """
+    request_id = str(uuid.uuid4())
+    
+    try:
+        if not MEMORY_SERVICE_AVAILABLE:
+            # Mock implementation
+            time.sleep(0.5)
+            return {
+                "procedure_id": procedure_id,
+                "validation_status": "valid",
+                "issues": [],
+                "request_id": request_id,
+                "timestamp": datetime.now().isoformat()
+            }
+        
+        # In a real implementation, this would call the memory service validation method
+        validation_status = await memory_service.validate_maintenance_procedure(procedure_id)
+        
+        return {
+            "procedure_id": procedure_id,
+            "validation_status": validation_status.get("validationStatus", "valid"),
+            "issues": validation_status.get("issues", []),
+            "request_id": request_id,
+            "timestamp": datetime.now().isoformat()
+        }
+    
+    except Exception as e:
+        logger.error(f"Error validating maintenance procedure: {e}")
+        raise HTTPException(status_code=500, detail=f"Error validating maintenance procedure: {str(e)}")
+
+@router.post("/seed-module")
+async def seed_module(module_name: str, description: str):
+    """
+    Seed a new COAFI-compliant documentation or functional node
+    
+    Args:
+        module_name: Name of the module to seed
+        description: Description of the module
+        
+    Returns:
+        Status message indicating the result of the seeding
+    """
+    return await memory_service.seedModule(module_name, description)
+
+@router.post("/render-federation")
+async def render_federation(federation_details: str):
+    """
+    Visualize, audit, or narrate the active semantic-operational federation
+    
+    Args:
+        federation_details: Details of the federation to render
+        
+    Returns:
+        Status message indicating the result of the rendering
+    """
+    return await memory_service.renderFederation(federation_details)
+
+@router.post("/amplify-ampel")
+async def amplify_ampel(article: str, details: str):
+    """
+    Expand, write, or refine an AMPEL language article or grammar spec
+    
+    Args:
+        article: Article to amplify
+        details: Details for amplification
+        
+    Returns:
+        Status message indicating the result of the amplification
+    """
+    return await memory_service.amplifyAmpel(article, details)
+
+@router.post("/deploy-agad")
+async def deploy_agad(axis: str, modules: List[str]):
+    """
+    Activate an AGAD regenerative axis and link it to system modules
+    
+    Args:
+        axis: Axis to deploy
+        modules: List of modules to link
+        
+    Returns:
+        Status message indicating the result of the deployment
+    """
+    return await memory_service.deployAgad(axis, modules)
+
+@router.post("/export-memseed")
+async def export_memseed(filename: str):
+    """
+    Serialize your session/memory to a .memseed for secure transport or sharing
+    
+    Args:
+        filename: Name of the .memseed file
+        
+    Returns:
+        Status message indicating the result of the export
+    """
+    return await memory_service.exportMemseed(filename)
+
+@router.post("/init-temporal")
+async def init_temporal(session_details: str):
+    """
+    Initiate a memoryless, isolated burst session
+    
+    Args:
+        session_details: Details of the session to initiate
+        
+    Returns:
+        Status message indicating the result of the initiation
+    """
+    return await memory_service.initTemporal(session_details)

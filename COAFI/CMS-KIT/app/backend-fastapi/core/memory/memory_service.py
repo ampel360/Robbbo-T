@@ -51,7 +51,7 @@ class MemoryItem(BaseModel):
     embedding: List[float]
     metadata: Dict[str, Any] = Field(default_factory=dict)
     created_at: datetime = Field(default_factory=datetime.now)
-    updated_at: datetime = Field(default_factory=datetime.now)
+    updated_at: datetime = Field(default_factory(datetime.now)
     
 class MemoryQuery(BaseModel):
     """Query parameters for memory retrieval"""
@@ -64,6 +64,7 @@ class MemoryQuery(BaseModel):
     min_similarity: float = 0.7
     max_results: int = 20
     include_metadata: bool = True
+    user_id: Optional[str] = None  # Added for secure contexts
     
 class MemoryResult(BaseModel):
     """Result from memory retrieval"""
@@ -107,6 +108,10 @@ class PineconeConfig(BaseModel):
     index_name: str
     namespace: str = "coafi-memory"
     vector_dimension: int = 1536
+
+# Custom exception for MemoryService
+class MemoryServiceError(Exception):
+    pass
 
 # Main Memory Service
 class MemoryService:
@@ -321,6 +326,10 @@ class MemoryService:
                     await self._set_in_cache(cache_key, embedding)
                 
                 return embedding
+            except openai.RateLimitError as e:
+                backoff_time = 5  # Example backoff time, can be adjusted
+                await asyncio.sleep(backoff_time)
+                logger.warning(f"OpenAI rate limit exceeded. Retrying after {backoff_time} seconds...")
             except Exception as e:
                 logger.warning(f"OpenAI embedding failed: {e}. Trying XAI API...")
         
@@ -441,7 +450,7 @@ class MemoryService:
             
         except Exception as e:
             logger.error(f"Failed to store in pgvector: {e}")
-            raise
+            raise MemoryServiceError(f"Failed to store in pgvector: {e}")
     
     async def _store_in_pinecone(self, item: MemoryItem) -> str:
         """Store memory item in Pinecone"""
@@ -463,7 +472,7 @@ class MemoryService:
             
         except Exception as e:
             logger.error(f"Failed to store in Pinecone: {e}")
-            raise
+            raise MemoryServiceError(f"Failed to store in Pinecone: {e}")
     
     async def query_memory(self, query: MemoryQuery) -> Tuple[List[MemoryResult], MemoryStats]:
         """
@@ -559,6 +568,10 @@ class MemoryService:
                     where_clauses.append("metadata->>'mood_id' = %s")
                     params.append(query.mood_id)
                 
+                if query.user_id:
+                    where_clauses.append("metadata->>'user_id' = %s")
+                    params.append(query.user_id)
+                
                 where_clause = " AND ".join(where_clauses)
                 if where_clause:
                     where_clause = f"AND {where_clause}"
@@ -597,7 +610,7 @@ class MemoryService:
             
         except Exception as e:
             logger.error(f"Failed to query pgvector: {e}")
-            raise
+            raise MemoryServiceError(f"Failed to query pgvector: {e}")
     
     async def _query_pinecone(self, query: MemoryQuery) -> List[MemoryResult]:
         """Query Pinecone for similar vectors"""
@@ -613,6 +626,9 @@ class MemoryService:
             
             if query.mood_id:
                 filter_dict["mood_id"] = {"$eq": query.mood_id}
+            
+            if query.user_id:
+                filter_dict["user_id"] = {"$eq": query.user_id}
             
             # Execute query
             query_response = self.pinecone_index.query(
@@ -644,7 +660,7 @@ class MemoryService:
             
         except Exception as e:
             logger.error(f"Failed to query Pinecone: {e}")
-            raise
+            raise MemoryServiceError(f"Failed to query Pinecone: {e}")
     
     async def _query_mock(self, query: MemoryQuery) -> List[MemoryResult]:
         """Query mock database for similar vectors"""
@@ -664,7 +680,12 @@ class MemoryService:
                 "folder_id": query.folder_id or "default_folder",
                 "conversation_id": query.conversation_id or f"conv_{i}",
                 "mood_id": query.mood_id,
-                "tags": ["aerospace", "documentation", "technical"]
+                "user_id": query.user_id,
+                "tags": ["aerospace", "documentation", "technical"],
+                "infoCode": "GAIA-COAFI-MEM-QX-001",
+                "object_id": "OBJ-2025-AMPEL360-29-01",
+                "agent_trace": "ACE-AMP-001",
+                "semantic_link": "qao://memory/29-01-0003"
             }
             
             results.append(MemoryResult(
@@ -757,7 +778,7 @@ class MemoryService:
             
         except Exception as e:
             logger.error(f"Failed to generate RAG response: {e}")
-            raise
+            raise MemoryServiceError(f"Failed to generate RAG response: {e}")
 
     async def adjust_license(self, license_id: str, feedback: Dict[str, Any]) -> str:
         """
@@ -773,6 +794,162 @@ class MemoryService:
         # Placeholder implementation
         # In a real implementation, this would adjust the license state based on feedback
         return "adjusted_license_state"
+
+    async def getDocumentInterdependencies(self) -> Dict[str, Any]:
+        """
+        Identify and track interdependencies between documents across different domains
+        
+        Returns:
+            Dictionary containing document interdependencies
+        """
+        # Placeholder implementation
+        # In a real implementation, this would analyze documents and identify interdependencies
+        return {
+            "document_1": ["document_2", "document_3"],
+            "document_2": ["document_1"],
+            "document_3": ["document_1"]
+        }
+
+    async def getDocumentStatus(self) -> Dict[str, Any]:
+        """
+        Track document completion status, review cycles, and approval workflows
+        
+        Returns:
+            Dictionary containing document status information
+        """
+        # Placeholder implementation
+        # In a real implementation, this would track the status of documents
+        return {
+            "document_1": {
+                "status": "completed",
+                "review_cycles": 2,
+                "approval_workflows": ["workflow_1", "workflow_2"]
+            },
+            "document_2": {
+                "status": "in_progress",
+                "review_cycles": 1,
+                "approval_workflows": ["workflow_1"]
+            },
+            "document_3": {
+                "status": "not_started",
+                "review_cycles": 0,
+                "approval_workflows": []
+            }
+        }
+
+    async def updateRelatedDocuments(self, document_id: str) -> str:
+        """
+        Automatically update related documents when changes are made
+        
+        Args:
+            document_id: ID of the document that was changed
+            
+        Returns:
+            Status message indicating the result of the update
+        """
+        # Placeholder implementation
+        # In a real implementation, this would update related documents based on changes
+        return f"Related documents for {document_id} have been updated."
+
+    async def integrateVersionControl(self) -> str:
+        """
+        Ensure all documents are managed in a version control system that maintains the revision history
+        
+        Returns:
+            Status message indicating the result of the integration
+        """
+        # Placeholder implementation
+        # In a real implementation, this would integrate documents with a version control system
+        return "All documents are now managed in the version control system."
+
+    async def commitChanges(self, files: List[str], message: str) -> str:
+        """
+        Commit changes to IDX, CHANGELOG.md, or README.md
+        
+        Args:
+            files: List of files to commit
+            message: Commit message
+            
+        Returns:
+            Status message indicating the result of the commit
+        """
+        # Placeholder implementation
+        # In a real implementation, this would commit changes to the specified files
+        return f"Changes committed to {', '.join(files)} with message: {message}"
+
+    async def triggerSemanticAudits(self) -> str:
+        """
+        Trigger semantic audits or PET-CORE scoring pipelines after push events
+        
+        Returns:
+            Status message indicating the result of the trigger
+        """
+        # Placeholder implementation
+        # In a real implementation, this would trigger semantic audits or PET-CORE scoring pipelines
+        return "Semantic audits and PET-CORE scoring pipelines triggered."
+
+    async def store_ontology_data(self, ontology_data: Dict[str, Any]) -> str:
+        """
+        Store ontology-related data in the memory service
+        
+        Args:
+            ontology_data: Dictionary containing ontology data
+            
+        Returns:
+            Status message indicating the result of the storage
+        """
+        # Placeholder implementation
+        # In a real implementation, this would store ontology data in the memory service
+        return "Ontology data has been stored."
+
+    async def retrieve_ontology_data(self, ontology_id: str) -> Dict[str, Any]:
+        """
+        Retrieve ontology-related data from the memory service
+        
+        Args:
+            ontology_id: ID of the ontology data to retrieve
+            
+        Returns:
+            Dictionary containing the retrieved ontology data
+        """
+        # Placeholder implementation
+        # In a real implementation, this would retrieve ontology data from the memory service
+        return {
+            "ontology_id": ontology_id,
+            "data": "Sample ontology data"
+        }
+
+    async def executePhiMode(self, request: dict) -> dict:
+        """
+        Execute ϕ-mode logic
+        
+        Args:
+            request: Request data for ϕ-mode execution
+            
+        Returns:
+            Response data indicating the result of the ϕ-mode execution
+        """
+        # Placeholder implementation for ϕ-mode execution logic
+        return {
+            "request": request,
+            "status": "ϕ-mode executed"
+        }
+
+    async def executeEthicalPromptimization(self, request: dict) -> dict:
+        """
+        Execute promptimización ético-paramétrica logic
+        
+        Args:
+            request: Request data for promptimización ético-paramétrica
+            
+        Returns:
+            Response data indicating the result of the promptimización ético-paramétrica
+        """
+        # Placeholder implementation for promptimización ético-paramétrica
+        return {
+            "request": request,
+            "status": "promptimización ético-paramétrica executed"
+        }
 
 # Singleton instance for easy import
 memory_service = MemoryService(

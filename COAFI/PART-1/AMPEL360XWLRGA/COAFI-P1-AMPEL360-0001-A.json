@@ -730,6 +730,144 @@
           "notes": "References specific system cert plans."
         }
       ]
+    },
+    "ATA_101": {
+      "chapter_number": "101",
+      "system_name": "General Data Module",
+      "overall_status": "Definition",
+      "pdr_milestone": { "status": "Not Started", "date": null },
+      "cdr_milestone": { "status": "Not Started", "date": null },
+      "pbs_link": null,
+      "bom_link": null,
+      "requires_cad_model": false,
+      "documents": [
+        {
+          "in": "001",
+          "dmc": "GP-AM-AMPEL-0100-00-001-A",
+          "document_title": "GP-AM-00 General Document - Intro & General",
+          "document_filename": "GP-AM-AMPEL-0100-00-001-A.xml",
+          "document_type": "coafiGeneralDm",
+          "status": "Draft",
+          "revision": "0.1",
+          "date_issued": "2024-12-08",
+          "notes": "Initial Draft Creation."
+        }
+      ]
+    },
+    "ATA_102": {
+      "chapter_number": "102",
+      "system_name": "Design Document",
+      "overall_status": "Definition",
+      "pdr_milestone": { "status": "Not Started", "date": null },
+      "cdr_milestone": { "status": "Not Started", "date": null },
+      "pbs_link": null,
+      "bom_link": null,
+      "requires_cad_model": false,
+      "documents": [
+        {
+          "in": "001",
+          "dmc": "GP-CM-BITT-ARCH-001-A",
+          "document_title": "Detailed Design - BlockThread Identificated Tree (BITT) Architecture",
+          "document_filename": "GP-CM-BITT-ARCH-001-A.xml",
+          "document_type": "coafiDesignDoc",
+          "status": "Draft",
+          "revision": "0.1",
+          "date_issued": "2024-12-08",
+          "notes": "Initial Draft of BITT Architecture Design."
+        }
+      ]
+    },
+    "ATA_103": {
+      "chapter_number": "103",
+      "system_name": "Robotics Cooperating Systems",
+      "overall_status": "Definition",
+      "pdr_milestone": { "status": "Not Started", "date": null },
+      "cdr_milestone": { "status": "Not Started", "date": null },
+      "pbs_link": null,
+      "bom_link": null,
+      "requires_cad_model": false,
+      "documents": [
+        {
+          "in": "001",
+          "dmc": "GP-GB-RCOS-PL1-WING-001-A",
+          "document_title": "Robotics Cooperating System Description - Wing Box Assembly Cell 3",
+          "document_filename": "GP-GB-RCOS-PL1-WING-001-A.xml",
+          "document_type": "coafiRcosDoc",
+          "status": "Approved",
+          "revision": "1.0",
+          "date_issued": "2025-06-15",
+          "notes": "Approved for production use."
+        }
+      ]
+    },
+    "ATA_104": {
+      "chapter_number": "104",
+      "system_name": "Post Production Services",
+      "overall_status": "Definition",
+      "pdr_milestone": { "status": "Not Started", "date": null },
+      "cdr_milestone": { "status": "Not Started", "date": null },
+      "pbs_link": null,
+      "bom_link": null,
+      "requires_cad_model": false,
+      "documents": [
+        {
+          "in": "001",
+          "dmc": "GP-PM-AMPEL-MAINT-PLAN-GOLD-001-A",
+          "document_title": "AMPEL360XWLRGA - Gold Maintenance Service Plan",
+          "document_filename": "GP-PM-AMPEL-MAINT-PLAN-GOLD-001-A.xml",
+          "document_type": "coafiPpscDoc",
+          "status": "Approved",
+          "revision": "1.0",
+          "date_issued": "2026-01-10",
+          "notes": "Initial release of Gold Maintenance Plan."
+        }
+      ]
+    },
+    "ATA_105": {
+      "chapter_number": "105",
+      "system_name": "Predictive Maint / Quantum Opt",
+      "overall_status": "Definition",
+      "pdr_milestone": { "status": "Not Started", "date": null },
+      "cdr_milestone": { "status": "Not Started", "date": null },
+      "pbs_link": null,
+      "bom_link": null,
+      "requires_cad_model": false,
+      "documents": [
+        {
+          "in": "001",
+          "dmc": "GP-CM-QCOPT-SCHED-ALGO-001-A",
+          "document_title": "QCOPT - QAOA Algorithm Design for HPC Resource Scheduling",
+          "document_filename": "GP-CM-QCOPT-SCHED-ALGO-001-A.xml",
+          "document_type": "coafiPdmQcoptDoc",
+          "status": "beingTested",
+          "revision": "0.2",
+          "date_issued": "2025-11-01",
+          "notes": "Refined QAOA implementation details."
+        }
+      ]
+    },
+    "ATA_106": {
+      "chapter_number": "106",
+      "system_name": "End of Life Protocol",
+      "overall_status": "Definition",
+      "pdr_milestone": { "status": "Not Started", "date": null },
+      "cdr_milestone": { "status": "Not Started", "date": null },
+      "pbs_link": null,
+      "bom_link": null,
+      "requires_cad_model": false,
+      "documents": [
+        {
+          "in": "001",
+          "dmc": "GP-PM-EOL-SENSOR-TEMP-001-A",
+          "document_title": "Dignified Component Functional End of Life Protocol - Temperature Sensors (XYZ-T1)",
+          "document_filename": "GP-PM-EOL-SENSOR-TEMP-001-A.xml",
+          "document_type": "coafiDcFuncEolDoc",
+          "status": "Approved",
+          "revision": "1.0",
+          "date_issued": "2027-03-20",
+          "notes": "Initial Approved EoL Protocol for Temperature Sensors."
+        }
+      ]
     }
   }
 }

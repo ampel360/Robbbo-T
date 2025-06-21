@@ -575,6 +575,58 @@ def run_memory_cleanup(cleanup_type, similarity_threshold, folder_id=None):
         logger.error(f"Error running cleanup: {e}")
         return {"success": False, "error": str(e)}
 
+def fetch_document_interdependencies():
+    """Fetch document interdependencies from API"""
+    try:
+        response = requests.get(f"{FASTAPI_URL}/document-interdependencies")
+        if response.status_code == 200:
+            return response.json()
+        else:
+            logger.error(f"Error fetching document interdependencies: {response.status_code}")
+            return {}
+    except Exception as e:
+        logger.error(f"Error fetching document interdependencies: {e}")
+        return {}
+
+def fetch_document_status():
+    """Fetch document status from API"""
+    try:
+        response = requests.get(f"{FASTAPI_URL}/document-status")
+        if response.status_code == 200:
+            return response.json()
+        else:
+            logger.error(f"Error fetching document status: {response.status_code}")
+            return {}
+    except Exception as e:
+        logger.error(f"Error fetching document status: {e}")
+        return {}
+
+def fetch_update_related_documents():
+    """Fetch update related documents from API"""
+    try:
+        response = requests.get(f"{FASTAPI_URL}/update-related-documents")
+        if response.status_code == 200:
+            return response.json()
+        else:
+            logger.error(f"Error fetching update related documents: {response.status_code}")
+            return {}
+    except Exception as e:
+        logger.error(f"Error fetching update related documents: {e}")
+        return {}
+
+def fetch_integrate_version_control():
+    """Fetch integrate version control from API"""
+    try:
+        response = requests.get(f"{FASTAPI_URL}/integrate-version-control")
+        if response.status_code == 200:
+            return response.json()
+        else:
+            logger.error(f"Error fetching integrate version control: {response.status_code}")
+            return {}
+    except Exception as e:
+        logger.error(f"Error fetching integrate version control: {e}")
+        return {}
+
 # Callbacks
 @app.callback(
     [
@@ -1040,6 +1092,70 @@ def adjust_license(n_clicks, license_id, feedback):
             html.H4("Error Adjusting License", className="text-danger"),
             html.P(str(e))
         ])
+
+@app.callback(
+    Output("document-interdependencies", "children"),
+    [Input("refresh-interval-component", "n_intervals")]
+)
+def update_document_interdependencies(n_intervals):
+    """Update document interdependencies display"""
+    try:
+        interdependencies = fetch_document_interdependencies()
+        return html.Div([
+            html.H5("Document Interdependencies"),
+            html.Pre(json.dumps(interdependencies, indent=2))
+        ])
+    except Exception as e:
+        logger.error(f"Error updating document interdependencies: {e}")
+        return html.P(f"Error fetching document interdependencies: {str(e)}", className="text-danger")
+
+@app.callback(
+    Output("document-status", "children"),
+    [Input("refresh-interval-component", "n_intervals")]
+)
+def update_document_status(n_intervals):
+    """Update document status display"""
+    try:
+        status = fetch_document_status()
+        return html.Div([
+            html.H5("Document Status"),
+            html.Pre(json.dumps(status, indent=2))
+        ])
+    except Exception as e:
+        logger.error(f"Error updating document status: {e}")
+        return html.P(f"Error fetching document status: {str(e)}", className="text-danger")
+
+@app.callback(
+    Output("update-related-documents", "children"),
+    [Input("refresh-interval-component", "n_intervals")]
+)
+def update_related_documents(n_intervals):
+    """Update related documents display"""
+    try:
+        updates = fetch_update_related_documents()
+        return html.Div([
+            html.H5("Update Related Documents"),
+            html.Pre(json.dumps(updates, indent=2))
+        ])
+    except Exception as e:
+        logger.error(f"Error updating related documents: {e}")
+        return html.P(f"Error fetching related documents: {str(e)}", className="text-danger")
+
+@app.callback(
+    Output("integrate-version-control", "children"),
+    [Input("refresh-interval-component", "n_intervals")]
+)
+def update_integrate_version_control(n_intervals):
+    """Update integrate version control display"""
+    try:
+        version_control = fetch_integrate_version_control()
+        return html.Div([
+            html.H5("Integrate Version Control"),
+            html.Pre(json.dumps(version_control, indent=2))
+        ])
+    except Exception as e:
+        logger.error(f"Error updating integrate version control: {e}")
+        return html.P(f"Error fetching integrate version control: {str(e)}", className="text-danger")
 
 # Run the app
 if __name__ == "__main__":

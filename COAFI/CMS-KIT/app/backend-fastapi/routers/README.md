@@ -59,6 +59,90 @@ Router central para operaciones de búsqueda semántica, generación de embeddin
 
 ---
 
+### 📄 `document-interdependencies` – Interdependencias de Documentos
+
+Router para identificar y rastrear interdependencias entre documentos en diferentes dominios.
+
+**Endpoints disponibles:**
+
+| Método | Ruta                         | Descripción                                               | Seguridad         |
+|--------|------------------------------|-----------------------------------------------------------|-------------------|
+| GET    | `/document-interdependencies`| Identificar y rastrear interdependencias entre documentos | Requiere token    |
+
+---
+
+### 📄 `document-status` – Estado de Documentos
+
+Router para rastrear el estado de finalización de documentos, ciclos de revisión y flujos de aprobación.
+
+**Endpoints disponibles:**
+
+| Método | Ruta                         | Descripción                                               | Seguridad         |
+|--------|------------------------------|-----------------------------------------------------------|-------------------|
+| GET    | `/document-status`           | Rastrear el estado de finalización de documentos          | Requiere token    |
+
+---
+
+### 📄 `update-related-documents` – Actualización de Documentos Relacionados
+
+Router para actualizar automáticamente los documentos relacionados cuando se realizan cambios.
+
+**Endpoints disponibles:**
+
+| Método | Ruta                         | Descripción                                               | Seguridad         |
+|--------|------------------------------|-----------------------------------------------------------|-------------------|
+| POST   | `/update-related-documents`  | Actualizar automáticamente los documentos relacionados    | Requiere token    |
+
+---
+
+### 📄 `integrate-version-control` – Integración de Control de Versiones
+
+Router para asegurar que todos los documentos se gestionen en un sistema de control de versiones que mantenga el historial de revisiones.
+
+**Endpoints disponibles:**
+
+| Método | Ruta                         | Descripción                                               | Seguridad         |
+|--------|------------------------------|-----------------------------------------------------------|-------------------|
+| POST   | `/integrate-version-control` | Asegurar la gestión de documentos en un sistema de control de versiones | Requiere token    |
+
+---
+
+### 📄 `generate-document` – Generación de Documentos Técnicos
+
+Router para generar documentos técnicos estándar en cumplimiento con la industria aeroespacial.
+
+**Endpoints disponibles:**
+
+| Método | Ruta                         | Descripción                                               | Seguridad         |
+|--------|------------------------------|-----------------------------------------------------------|-------------------|
+| POST   | `/generate-document`         | Generar un documento técnico estándar                     | Requiere token    |
+
+**Ejemplo de solicitud:**
+
+```json
+{
+  "title": "Technical Reference Document",
+  "content": "This is the content of the technical reference document.",
+  "metadata": {
+    "author": "John Doe",
+    "date": "2023-01-01",
+    "version": "1.0"
+  }
+}
+```
+
+**Ejemplo de respuesta:**
+
+```json
+{
+  "document_id": "doc-12345",
+  "status": "generated",
+  "url": "http://example.com/documents/doc-12345"
+}
+```
+
+---
+
 ## 🎯 Objetivo General
 
 > Desacoplar y escalar funcionalidades del backend para permitir:
